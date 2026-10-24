@@ -1,0 +1,61 @@
+# Environment variables & local secrets
+.env
+*.env.local
+
+# PID files & runtime state
+*.pid
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+*/.venv/
+*/venv/
+
+# Python cache & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+*.log
+*/*.log
+
+# Audio outputs & test data
+output_audio/
+*.wav
+*.mp3
+studio/data/
+VieNeu-TTS/output-test.wav
+
+# HuggingFace & PyTorch Cache
+.cache/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo

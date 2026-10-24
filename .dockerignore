@@ -1,0 +1,32 @@
+# AI Audio Platform - Docker ignore
+.git
+.gitignore
+*.md
+LICENSE
+.env
+.env.example
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+
+# Virtual environments
+.venv
+venv
+env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
