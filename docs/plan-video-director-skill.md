@@ -18,20 +18,21 @@ Repo `audio/` sẽ chứa nhiều channel, mỗi channel có thư mục riêng v
 
 ---
 
-## Open Questions
+## Decisions (Resolved)
 
-> [!IMPORTANT]
-> **Word-level timing**: VieNeu-TTS API hiện tại (`/v1/audio/speech` endpoint) trả về audio file. Để có word-level timestamps (biết chính xác từ nào bắt đầu ở giây thứ mấy), cần thêm bước **forced alignment**. Bạn muốn:
-> 1. Dùng Whisper (hoặc whisper.cpp) để transcribe lại audio → lấy word timestamps?
-> 2. Hay VieNeu-TTS có endpoint riêng trả timestamps mà tôi chưa biết?
-> 3. Hay dùng phương pháp ước lượng dựa trên PACE (từ/giây) như gem2 gốc?
+> [!TIP]
+> **Word-level timing — ĐÃ CHỐT: Whisper**
+> Dùng Whisper (Python `openai-whisper` hoặc `whisper.cpp`) để transcribe lại audio → lấy word-level timestamps. Lý do:
+> - Chạy đa nền tảng (Windows + Ubuntu)
+> - Tận dụng GPU khi có (CUDA)
+> - Độ chính xác cao nhất cho timeline
+> - Fallback sang CPU khi không có GPU
 
-> [!IMPORTANT]
-> **B-roll tự động**: Khi bạn nói "1 đoạn audio có thể chèn nhiều B-roll", agent sẽ cần logic để:
-> - Phân tích nội dung narration → xác định các "visual beats" (mỗi ý/hình ảnh cần 1 B-roll)
-> - Gán thời lượng B-roll dựa trên word timing
->
-> Bạn muốn agent tự quyết định số B-roll cho mỗi scene, hay bạn review và chỉnh?
+> [!TIP]
+> **B-roll planning — ĐÃ CHỐT: Auto + Review**
+> - Agent **tự động** phân tích narration content và quyết định số lượng, thời lượng B-roll dựa trên Whisper timestamps
+> - Hệ thống xuất **file JSON review** (`broll-plan.json`) + hiển thị dạng timeline/table để user **REVIEW và CHỈNH SỬA** trước khi tạo asset prompts
+> - Chỉ sau khi user approve broll-plan mới tiến hành Phase 4 (Asset Prompts)
 
 ---
 
