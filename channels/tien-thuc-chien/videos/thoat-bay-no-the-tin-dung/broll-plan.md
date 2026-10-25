@@ -1,5 +1,5 @@
 # B-roll Plan — thoat-bay-no-the-tin-dung
-Kênh: Tiền Thực Chiến | Trạng thái: DRAFT (chờ @approve-broll) | Chiến lược: Hybrid Cost-Saver
+Kênh: Tiền Thực Chiến | Trạng thái: ✅ APPROVED | Chiến lược: Hybrid Cost-Saver
 Tổng số cảnh: 81 | Tổng B-roll: 81 | Tổng thời lượng hình ảnh: 409s (~6.82 phút)
 
 | Beat | Số cảnh | AIV | GFX (Remotion) | IMG (Ken Burns) |
