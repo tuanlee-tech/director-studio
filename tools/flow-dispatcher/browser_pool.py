@@ -115,6 +115,104 @@ def get_active_tabs(port):
     return []
 
 
+def _win32_spawn_interactive(cmd_list):
+    """
+    Sử dụng trực tiếp Win32 CreateProcessW với lpDesktop='Default'
+    để ép buộc cửa sổ GUI hiển thị trên màn hình tương tác thực tế của người dùng,
+    bất kể tiến trình gọi đang chạy ở background hay sandbox desktop nào.
+    """
+    import ctypes
+    from ctypes import wintypes
+
+    class STARTUPINFOW(ctypes.Structure):
+        _fields_ = [
+            ("cb", wintypes.DWORD),
+            ("lpReserved", wintypes.LPWSTR),
+            ("lpDesktop", wintypes.LPWSTR),
+            ("lpTitle", wintypes.LPWSTR),
+            ("dwX", wintypes.DWORD),
+            ("dwY", wintypes.DWORD),
+            ("dwXSize", wintypes.DWORD),
+            ("dwYSize", wintypes.DWORD),
+            ("dwXCountChars", wintypes.DWORD),
+            ("dwYCountChars", wintypes.DWORD),
+            ("dwFillAttribute", wintypes.DWORD),
+            ("dwFlags", wintypes.DWORD),
+            ("wShowWindow", wintypes.WORD),
+            ("cbReserved2", wintypes.WORD),
+            ("lpReserved2", ctypes.c_char_p),
+            ("hStdInput", wintypes.HANDLE),
+            ("hStdOutput", wintypes.HANDLE),
+            ("hStdError", wintypes.HANDLE),
+        ]
+
+    class PROCESS_INFORMATION(ctypes.Structure):
+        _fields_ = [
+            ("hProcess", wintypes.HANDLE),
+            ("hThread", wintypes.HANDLE),
+            ("dwProcessId", wintypes.DWORD),
+            ("dwThreadId", wintypes.DWORD),
+        ]
+
+    kernel32 = ctypes.windll.kernel32
+
+    # Ghép chuỗi command line chuẩn Windows
+    parts = []
+    for arg in cmd_list:
+        if " " in arg and not arg.startswith('"'):
+            parts.append(f'"{arg}"')
+        else:
+            parts.append(arg)
+    cmd_line = " ".join(parts)
+
+    si = STARTUPINFOW()
+    si.cb = ctypes.sizeof(STARTUPINFOW)
+    si.lpDesktop = "Default"
+    si.dwFlags = 1  # STARTF_USESHOWWINDOW
+    si.wShowWindow = 1  # SW_SHOWNORMAL
+
+    pi = PROCESS_INFORMATION()
+
+    # Thử CREATE_BREAKAWAY_FROM_JOB (0x01000000) | DETACHED_PROCESS (0x00000008)
+    creation_flags = 0x01000000 | 0x00000008
+    success = kernel32.CreateProcessW(
+        None,
+        cmd_line,
+        None,
+        None,
+        False,
+        creation_flags,
+        None,
+        None,
+        ctypes.byref(si),
+        ctypes.byref(pi),
+    )
+
+    if not success:
+        # Fallback sang CREATE_NEW_PROCESS_GROUP
+        creation_flags = 0x00000200
+        success = kernel32.CreateProcessW(
+            None,
+            cmd_line,
+            None,
+            None,
+            False,
+            creation_flags,
+            None,
+            None,
+            ctypes.byref(si),
+            ctypes.byref(pi),
+        )
+
+    if success:
+        kernel32.CloseHandle(pi.hProcess)
+        kernel32.CloseHandle(pi.hThread)
+        return True, pi.dwProcessId
+    else:
+        err = kernel32.GetLastError()
+        return False, f"Win32 Error: {err}"
+
+
 def launch_account(account_id, project_url=None):
     """Khởi động 1 cửa sổ Chrome với Profile riêng và Debug Port tương ứng."""
     chrome_path = find_chrome_executable()
@@ -163,20 +261,12 @@ def launch_account(account_id, project_url=None):
     print(f"   • Target URL     : {target_url}")
     print("=" * 72)
 
-    # Spawn Chrome với breakaway và desktop tương tác
+    # Spawn Chrome với Win32 Desktop tương tác (Default) trên Windows
     if sys.platform == "win32":
-        si = subprocess.STARTUPINFO()
-        si.lpDesktop = r"WinSta0\Default"
-
-        # Thử CREATE_BREAKAWAY_FROM_JOB + DETACHED_PROCESS để Chrome không bị kill khi parent đóng
-        # CREATE_BREAKAWAY_FROM_JOB = 0x01000000, DETACHED_PROCESS = 0x00000008
-        try:
-            flags = 0x01000000 | 0x00000008
-            subprocess.Popen(cmd, creationflags=flags, startupinfo=si)
-        except PermissionError:
-            # Nếu đang trong Job Object không cho phép breakaway, fallback dùng CREATE_NEW_PROCESS_GROUP
-            flags = subprocess.CREATE_NEW_PROCESS_GROUP
-            subprocess.Popen(cmd, creationflags=flags, startupinfo=si)
+        ok, res = _win32_spawn_interactive(cmd)
+        if not ok:
+            print(f"⚠️ Win32 spawn failed ({res}), falling back to subprocess.Popen")
+            subprocess.Popen(cmd, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
     else:
         subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
 
