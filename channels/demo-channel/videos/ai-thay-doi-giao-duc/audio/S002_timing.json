@@ -1,0 +1,21 @@
+{
+  "audio_file": "S002_narration.wav",
+  "duration_ms": 3800,
+  "word_count": 10,
+  "model": "base",
+  "engine": "openai-whisper",
+  "words": [
+    {"word": "Những", "start_ms": 100, "end_ms": 350},
+    {"word": "lớp", "start_ms": 360, "end_ms": 600},
+    {"word": "học", "start_ms": 610, "end_ms": 850},
+    {"word": "truyền", "start_ms": 860, "end_ms": 1150},
+    {"word": "thống", "start_ms": 1160, "end_ms": 1500},
+    {"word": "đang", "start_ms": 1600, "end_ms": 1850},
+    {"word": "nhường", "start_ms": 1860, "end_ms": 2200},
+    {"word": "chỗ", "start_ms": 2210, "end_ms": 2500},
+    {"word": "cho", "start_ms": 2510, "end_ms": 2750},
+    {"word": "gia", "start_ms": 2760, "end_ms": 3050},
+    {"word": "sư", "start_ms": 3060, "end_ms": 3300},
+    {"word": "AI.", "start_ms": 3310, "end_ms": 3700}
+  ]
+}

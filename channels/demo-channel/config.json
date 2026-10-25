@@ -1,0 +1,27 @@
+{
+  "active_channel": "demo-channel",
+  "active_video": "ai-thay-doi-giao-duc",
+  "default_voice": "Hải Đăng",
+  "default_pace": 4,
+  "tts_engine": "vieneu",
+  "tts_api_url": "http://localhost:8000",
+  "whisper_model": "base",
+  "whisper_language": "vi",
+  "language": "vi",
+  "video_duration_target_minutes": 8,
+  "static_image_exempt_from_duration": true,
+  "subtitle_format": "srt",
+  "subtitle_group_size": 4,
+  "style_lock": "Cinematic documentary style, dramatic rim lighting with cool cyan and deep navy tones, realistic 8k textures, atmospheric depth, modern technology aesthetic, clean composition, high detail, Unreal Engine 5 render feel, professional color grading.",
+  "negative_list": [
+    "cartoon",
+    "low quality",
+    "anime",
+    "text",
+    "watermark",
+    "blurry",
+    "deformed hands",
+    "extra fingers",
+    "distorted face"
+  ]
+}

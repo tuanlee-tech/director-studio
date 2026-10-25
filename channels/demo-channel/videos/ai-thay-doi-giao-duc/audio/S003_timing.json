@@ -1,0 +1,24 @@
+{
+  "audio_file": "S003_narration.wav",
+  "duration_ms": 5600,
+  "word_count": 14,
+  "model": "base",
+  "engine": "openai-whisper",
+  "words": [
+    {"word": "Một", "start_ms": 150, "end_ms": 400},
+    {"word": "cỗ", "start_ms": 410, "end_ms": 650},
+    {"word": "máy", "start_ms": 660, "end_ms": 950},
+    {"word": "có", "start_ms": 1050, "end_ms": 1250},
+    {"word": "thể", "start_ms": 1260, "end_ms": 1500},
+    {"word": "kiên", "start_ms": 1510, "end_ms": 1800},
+    {"word": "nhẫn", "start_ms": 1810, "end_ms": 2150},
+    {"word": "giảng", "start_ms": 2200, "end_ms": 2550},
+    {"word": "đi", "start_ms": 2560, "end_ms": 2800},
+    {"word": "giảng", "start_ms": 2810, "end_ms": 3150},
+    {"word": "lại", "start_ms": 3160, "end_ms": 3450},
+    {"word": "cho", "start_ms": 3500, "end_ms": 3750},
+    {"word": "bạn", "start_ms": 3760, "end_ms": 4100},
+    {"word": "nghìn", "start_ms": 4150, "end_ms": 4550},
+    {"word": "lần.", "start_ms": 4560, "end_ms": 5200}
+  ]
+}

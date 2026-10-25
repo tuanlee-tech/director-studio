@@ -1,0 +1,64 @@
+{
+  "channel": "demo-channel",
+  "video_slug": "ai-thay-doi-giao-duc",
+  "status": "APPROVED",
+  "total_scenes": 3,
+  "total_brolls": 4,
+  "total_duration_seconds": 16,
+  "scenes": [
+    {
+      "scene_id": "S001",
+      "beat": "Hook",
+      "audio_duration_ms": 5800,
+      "audio_file": "S001_narration.wav",
+      "narration": "Bạn có nhận ra, cách chúng ta học tập hôm nay đã hoàn toàn thay đổi?",
+      "brolls": [
+        {
+          "broll_id": "S001-A",
+          "type": "AIV",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Cận cảnh học sinh nhìn vào màn hình hologram phát sáng giữa đêm, biểu cảm tò mò ngạc nhiên.",
+          "camera": "CU, ngang mắt, slow push-in",
+          "storyboard_panels": 3
+        }
+      ]
+    },
+    {
+      "scene_id": "S002",
+      "beat": "Vấn đề",
+      "audio_duration_ms": 3800,
+      "audio_file": "S002_narration.wav",
+      "narration": "Những lớp học truyền thống đang nhường chỗ cho gia sư AI.",
+      "brolls": [
+        {
+          "broll_id": "S002-A",
+          "type": "AIV",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Lớp học truyền thống bảng đen dần mờ đi và chuyển dịch sang không gian số ánh sáng xanh.",
+          "camera": "WS, góc ngang, match cut",
+          "storyboard_panels": 2
+        }
+      ]
+    },
+    {
+      "scene_id": "S003",
+      "beat": "Cơ chế lõi",
+      "audio_duration_ms": 5600,
+      "audio_file": "S003_narration.wav",
+      "narration": "Một cỗ máy có thể kiên nhẫn giảng đi giảng lại cho bạn nghìn lần.",
+      "brolls": [
+        {
+          "broll_id": "S003-A",
+          "type": "AIV",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Giao diện AI avatar 3D kiên nhẫn vẽ lại đồ thị toán học trực quan theo chuyển động tay người học.",
+          "camera": "MCU, góc 45 độ, tracking chậm",
+          "storyboard_panels": 3
+        }
+      ]
+    }
+  ]
+}

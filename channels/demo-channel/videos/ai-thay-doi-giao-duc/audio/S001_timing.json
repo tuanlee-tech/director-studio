@@ -1,0 +1,25 @@
+{
+  "audio_file": "S001_narration.wav",
+  "duration_ms": 5800,
+  "word_count": 15,
+  "model": "base",
+  "engine": "openai-whisper",
+  "words": [
+    {"word": "Bạn", "start_ms": 120, "end_ms": 350},
+    {"word": "có", "start_ms": 360, "end_ms": 520},
+    {"word": "nhận", "start_ms": 530, "end_ms": 780},
+    {"word": "ra,", "start_ms": 790, "end_ms": 1100},
+    {"word": "cách", "start_ms": 1250, "end_ms": 1500},
+    {"word": "chúng", "start_ms": 1510, "end_ms": 1750},
+    {"word": "ta", "start_ms": 1760, "end_ms": 1950},
+    {"word": "học", "start_ms": 1960, "end_ms": 2200},
+    {"word": "tập", "start_ms": 2210, "end_ms": 2550},
+    {"word": "hôm", "start_ms": 2600, "end_ms": 2850},
+    {"word": "nay", "start_ms": 2860, "end_ms": 3200},
+    {"word": "đã", "start_ms": 3350, "end_ms": 3600},
+    {"word": "hoàn", "start_ms": 3610, "end_ms": 3950},
+    {"word": "toàn", "start_ms": 3960, "end_ms": 4350},
+    {"word": "thay", "start_ms": 4400, "end_ms": 4750},
+    {"word": "đổi?", "start_ms": 4760, "end_ms": 5500}
+  ]
+}
