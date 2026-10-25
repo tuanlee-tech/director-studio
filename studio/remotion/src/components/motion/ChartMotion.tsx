@@ -1,5 +1,12 @@
 import React from "react";
 import { interpolate, useCurrentFrame, spring, useVideoConfig } from "remotion";
+import { loadFont } from "@remotion/google-fonts/BeVietnamPro";
+
+const { fontFamily } = loadFont("normal", {
+  weights: ["600", "700", "800"],
+  subsets: ["vietnamese", "latin"],
+  ignoreTooManyRequestsWarning: true,
+});
 
 interface ChartBar {
   label: string;
@@ -35,6 +42,8 @@ export const ChartMotion: React.FC<ChartMotionProps> = ({
 
   const maxValue = Math.max(...bars.map((b) => b.value), 50);
 
+  const displayTitle = title.replace(/^ChartMotion:\s*/i, "").trim();
+
   return (
     <div
       style={{
@@ -47,7 +56,7 @@ export const ChartMotion: React.FC<ChartMotionProps> = ({
         backgroundColor: "#080c16",
         background: "radial-gradient(ellipse at center, #111a2e 0%, #080c16 85%)",
         color: "#ffffff",
-        fontFamily: "Inter, 'SF Pro Display', sans-serif",
+        fontFamily,
         padding: "40px 80px",
       }}
     >
@@ -58,10 +67,11 @@ export const ChartMotion: React.FC<ChartMotionProps> = ({
           color: "#f8fafc",
           marginBottom: 48,
           letterSpacing: "-0.02em",
+          fontFamily,
           textShadow: "0 4px 20px rgba(0,0,0,0.6)",
         }}
       >
-        {title}
+        {displayTitle}
       </h2>
 
       <div

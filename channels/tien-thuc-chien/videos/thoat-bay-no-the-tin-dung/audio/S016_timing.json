@@ -1,94 +1,100 @@
 {
   "audio_file": "S016_narration.wav",
   "duration_ms": 3840,
-  "word_count": 17,
+  "word_count": 18,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Tháng",
       "start_ms": 0,
-      "end_ms": 200
+      "end_ms": 306
     },
     {
       "word": "sau,",
-      "start_ms": 200,
-      "end_ms": 400
+      "start_ms": 306,
+      "end_ms": 490
     },
     {
-      "word": "bắt",
-      "start_ms": 780,
-      "end_ms": 860
+      "word": "bạn",
+      "start_ms": 490,
+      "end_ms": 674
     },
     {
       "word": "lại",
-      "start_ms": 860,
-      "end_ms": 940
+      "start_ms": 674,
+      "end_ms": 858
     },
     {
-      "word": "kiếp",
-      "start_ms": 940,
-      "end_ms": 1120
+      "word": "tiếp",
+      "start_ms": 858,
+      "end_ms": 1103
     },
     {
       "word": "tục",
-      "start_ms": 1120,
-      "end_ms": 1260
+      "start_ms": 1103,
+      "end_ms": 1287
     },
     {
-      "word": "Webtae",
-      "start_ms": 1260,
-      "end_ms": 1780
+      "word": "quẹt",
+      "start_ms": 1287,
+      "end_ms": 1532
+    },
+    {
+      "word": "thẻ",
+      "start_ms": 1532,
+      "end_ms": 1716
     },
     {
       "word": "để",
-      "start_ms": 1780,
-      "end_ms": 1940
+      "start_ms": 1716,
+      "end_ms": 1838
     },
     {
-      "word": "buu",
-      "start_ms": 1940,
-      "end_ms": 2180
+      "word": "bù",
+      "start_ms": 1838,
+      "end_ms": 1960
     },
     {
-      "word": "và",
-      "start_ms": 2180,
-      "end_ms": 2280
+      "word": "vào",
+      "start_ms": 1960,
+      "end_ms": 2144
     },
     {
-      "word": "khoảng",
-      "start_ms": 2280,
-      "end_ms": 2480
+      "word": "khoản",
+      "start_ms": 2144,
+      "end_ms": 2450
     },
     {
-      "word": "trên",
-      "start_ms": 2480,
-      "end_ms": 2680
+      "word": "tiền",
+      "start_ms": 2450,
+      "end_ms": 2695
     },
     {
       "word": "lương",
-      "start_ms": 2680,
-      "end_ms": 2960
+      "start_ms": 2695,
+      "end_ms": 3001
     },
     {
       "word": "vừa",
-      "start_ms": 2960,
-      "end_ms": 3180
+      "start_ms": 3001,
+      "end_ms": 3185
     },
     {
       "word": "bị",
-      "start_ms": 3180,
-      "end_ms": 3300
+      "start_ms": 3185,
+      "end_ms": 3307
     },
     {
-      "word": "ha",
-      "start_ms": 3300,
-      "end_ms": 3500
+      "word": "hao",
+      "start_ms": 3307,
+      "end_ms": 3491
     },
     {
-      "word": "hút.",
-      "start_ms": 3500,
-      "end_ms": 3680
+      "word": "hụt.",
+      "start_ms": 3491,
+      "end_ms": 3675
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

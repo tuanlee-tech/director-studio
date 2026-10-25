@@ -11,12 +11,12 @@
       "end_ms": 180
     },
     {
-      "word": "giờ",
+      "word": "dừng",
       "start_ms": 180,
       "end_ms": 260
     },
     {
-      "word": "ngại",
+      "word": "lại",
       "start_ms": 260,
       "end_ms": 400
     },
@@ -31,12 +31,12 @@
       "end_ms": 800
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 1220,
       "end_ms": 1360
     },
     {
-      "word": "tính",
+      "word": "tín",
       "start_ms": 1360,
       "end_ms": 1520
     },
@@ -46,12 +46,12 @@
       "end_ms": 1740
     },
     {
-      "word": "có",
+      "word": "còn",
       "start_ms": 1740,
       "end_ms": 1840
     },
     {
-      "word": "nắp",
+      "word": "áp",
       "start_ms": 1840,
       "end_ms": 1980
     },
@@ -71,12 +71,12 @@
       "end_ms": 2560
     },
     {
-      "word": "tình",
+      "word": "tính",
       "start_ms": 2560,
       "end_ms": 2780
     },
     {
-      "word": "lái",
+      "word": "lãi",
       "start_ms": 2780,
       "end_ms": 3000
     },
@@ -106,7 +106,7 @@
       "end_ms": 4200
     },
     {
-      "word": "dào",
+      "word": "giao",
       "start_ms": 4200,
       "end_ms": 4340
     },
@@ -115,5 +115,6 @@
       "start_ms": 4340,
       "end_ms": 4540
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

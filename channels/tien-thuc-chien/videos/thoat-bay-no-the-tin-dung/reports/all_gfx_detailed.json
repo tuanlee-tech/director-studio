@@ -1,0 +1,310 @@
+[
+  {
+    "scene_id": "S006",
+    "beat": "Bóc thực trạng",
+    "narration": "Ngân hàng chào đón bạn với lời hứa miễn lãi bốn mươi lăm ngày đầy hấp dẫn.",
+    "component": "MotionGraphic",
+    "description": "AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi"
+  },
+  {
+    "scene_id": "S008",
+    "beat": "Bóc thực trạng",
+    "narration": "Khi quẹt thẻ, não bộ không hề cảm nhận nỗi đau mất tiền như khi rút từng tờ tiền mặt ra khỏi ví.",
+    "component": "SplitComparison",
+    "description": "SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa"
+  },
+  {
+    "scene_id": "S010",
+    "beat": "Bóc thực trạng",
+    "narration": "Đó chính là cạm bẫy tâm lý đầu tiên: ngộ nhận hạn mức tín dụng của ngân hàng là tài sản của chính mình.",
+    "component": "MotionGraphic",
+    "description": "AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn"
+  },
+  {
+    "scene_id": "S013",
+    "beat": "Bóc thực trạng",
+    "narration": "Thay vì thanh toán toàn bộ, bạn nhìn thấy dòng chữ cứu cánh màu xanh: số tiền thanh toán tối thiểu.",
+    "component": "FocusCard",
+    "description": "FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh"
+  },
+  {
+    "scene_id": "S014",
+    "beat": "Bóc thực trạng",
+    "narration": "Chỉ cần trả một triệu đồng, bạn đã được xem là hoàn thành nghĩa vụ của kỳ sao kê tháng đó.",
+    "component": "CounterNumber",
+    "description": "CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'"
+  },
+  {
+    "scene_id": "S017",
+    "beat": "Bóc thực trạng",
+    "narration": "Vòng lặp chi tiêu trước, trả nợ sau bắt đầu cuốn phăng mọi kế hoạch tích lũy và tiết kiệm của bạn.",
+    "component": "LoopDiagram",
+    "description": "LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp"
+  },
+  {
+    "scene_id": "S018",
+    "beat": "Bóc thực trạng",
+    "narration": "Sau một năm, con số dư nợ đã âm thầm tăng vọt từ mười lăm triệu lên bốn mươi triệu đồng.",
+    "component": "ChartMotion",
+    "description": "ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng"
+  },
+  {
+    "scene_id": "S023",
+    "beat": "Bóc thực trạng",
+    "narration": "Nhưng việc trốn tránh không làm khoản nợ biến mất, nó chỉ khiến lãi mẹ đẻ lãi con nhanh hơn.",
+    "component": "TreeGrowth",
+    "description": "TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương"
+  },
+  {
+    "scene_id": "S025",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Bây giờ, chúng ta hãy cùng đặt bút tính toán chính xác cái giá phải trả cho khoản nợ bốn mươi triệu này.",
+    "component": "IntroCard",
+    "description": "IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'"
+  },
+  {
+    "scene_id": "S026",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Lãi suất thẻ tín dụng hiện nay lên tới ba mươi lăm phần trăm một năm.",
+    "component": "CounterNumber",
+    "description": "CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo"
+  },
+  {
+    "scene_id": "S027",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Đây là mức lãi suất cao gấp năm đến sáu lần so với lãi suất vay thế chấp mua nhà hay mua xe.",
+    "component": "BarChart",
+    "description": "BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt"
+  },
+  {
+    "scene_id": "S028",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Với bốn mươi triệu nợ, mỗi tháng tiền lãi phát sinh đã hơn một triệu đồng.",
+    "component": "CounterNumber",
+    "description": "CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng"
+  },
+  {
+    "scene_id": "S029",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Khoản thanh toán tối thiểu năm phần trăm mà ngân hàng yêu cầu chỉ vừa đủ để bù đắp phần tiền lãi này.",
+    "component": "PieChart",
+    "description": "PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)"
+  },
+  {
+    "scene_id": "S030",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Điều đó có nghĩa là dư nợ gốc bốn mươi triệu của bạn gần như đứng yên, không hề suy giảm theo thời gian.",
+    "component": "ChartMotion",
+    "description": "ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng"
+  },
+  {
+    "scene_id": "S031",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Nếu chỉ trả tối thiểu, bạn sẽ mất hơn mười năm để trả dứt điểm khoản nợ này.",
+    "component": "TimelineSlider",
+    "description": "TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036"
+  },
+  {
+    "scene_id": "S032",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Tổng số tiền trả cho ngân hàng có thể lên tới hơn tám mươi triệu đồng, tức gấp đôi số nợ gốc.",
+    "component": "SplitComparison",
+    "description": "SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng"
+  },
+  {
+    "scene_id": "S033",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Đó chính là sức mạnh tàn phá của kỳ quan thứ tám: lãi kép ngược.",
+    "component": "Infographic",
+    "description": "Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản"
+  },
+  {
+    "scene_id": "S034",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Khi đầu tư, lãi kép giúp bạn nhân tài sản lên gấp nhiều lần, nhưng khi vay nợ, nó sẽ nuốt chửng thu nhập.",
+    "component": "SplitComparison",
+    "description": "SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ"
+  },
+  {
+    "scene_id": "S035",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Chưa dừng lại ở đó, thẻ tín dụng còn áp dụng cơ chế tính lãi lùi từ ngày phát sinh giao dịch.",
+    "component": "CalendarAnimation",
+    "description": "CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên"
+  },
+  {
+    "scene_id": "S036",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Chỉ cần thiếu một nghìn đồng đến hạn, toàn bộ số tiền quẹt đều bị tính lãi.",
+    "component": "AlertBox",
+    "description": "AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu"
+  },
+  {
+    "scene_id": "S037",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Thêm vào đó là phí phạt chậm trả từ bốn đến sáu phần trăm, tối thiểu một trăm đến hai trăm nghìn đồng.",
+    "component": "StackFee",
+    "description": "StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau"
+  },
+  {
+    "scene_id": "S038",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Các khoản phí phạt này gộp lại sẽ bào mòn sạch sẽ thặng dư từ lương của bạn.",
+    "component": "DrainWater",
+    "description": "DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn"
+  },
+  {
+    "scene_id": "S042",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Bạn chi mười triệu đồng để nhận lại một trăm nghìn hoàn tiền, nhưng lại phải chịu phí thường niên cả triệu đồng.",
+    "component": "SplitComparison",
+    "description": "SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu"
+  },
+  {
+    "scene_id": "S044",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Với lương mười hai triệu, bốn mươi triệu nợ tương đương hơn ba tháng làm việc không công.",
+    "component": "MonthCalendar",
+    "description": "MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'"
+  },
+  {
+    "scene_id": "S045",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Nếu giữ nguyên thói quen này, nguy cơ nhảy sang nhóm nợ chú ý và nợ xấu hệ thống rất cao.",
+    "component": "CreditScoreMeter",
+    "description": "CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3"
+  },
+  {
+    "scene_id": "S048",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Khoản đầu tư có lợi nhuận cao nhất lúc này chính là xóa sạch khoản nợ lãi suất ba mươi lăm phần trăm.",
+    "component": "BadgeGraphic",
+    "description": "BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'"
+  },
+  {
+    "scene_id": "S049",
+    "beat": "Số liệu & Bẫy tâm lý",
+    "narration": "Không kênh đầu tư an toàn nào mang lại lợi nhuận ba mươi lăm phần trăm năm.",
+    "component": "ComparisonTable",
+    "description": "ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%"
+  },
+  {
+    "scene_id": "S050",
+    "beat": "Tương phản",
+    "narration": "Để bạn thấy rõ sự khác biệt, hãy so sánh hai con đường của hai người cùng có mức lương mười hai triệu.",
+    "component": "SplitComparison",
+    "description": "SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)"
+  },
+  {
+    "scene_id": "S053",
+    "beat": "Tương phản",
+    "narration": "Sau một năm, khoản nợ của anh ta phình to lên mức sáu mươi triệu đồng cùng với sự căng thẳng tột cùng.",
+    "component": "CounterNumber",
+    "description": "CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu"
+  },
+  {
+    "scene_id": "S057",
+    "beat": "Tương phản",
+    "narration": "Mỗi tháng cô ấy kiên quyết trích bốn triệu đồng từ lương mười hai triệu để dồn toàn lực trả dứt nợ gốc.",
+    "component": "ProgressBar",
+    "description": "ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng"
+  },
+  {
+    "scene_id": "S059",
+    "beat": "Tương phản",
+    "narration": "Và khi bước sang tháng thứ mười một, cô ấy hoàn toàn sạch nợ, sở hữu quỹ dự phòng và bắt đầu tích sản.",
+    "component": "MilestoneUnlocked",
+    "description": "MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng"
+  },
+  {
+    "scene_id": "S060",
+    "beat": "Tương phản",
+    "narration": "Cùng điểm xuất phát và thu nhập, lựa chọn tư duy khác nhau tạo ra hai số phận tài chính đối lập.",
+    "component": "SplitComparison",
+    "description": "SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi"
+  },
+  {
+    "scene_id": "S062",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Nếu bạn đã sẵn sàng chọn tự do, đây là quy trình bốn bước thực chiến để xóa sạch bốn mươi triệu nợ thẻ.",
+    "component": "StepFlow",
+    "description": "StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên"
+  },
+  {
+    "scene_id": "S063",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Bước một: Cắt mỏ neo tâm lý, phong tỏa ngay lập tức chiếc thẻ tín dụng và xóa liên kết khỏi điện thoại.",
+    "component": "StepHeader",
+    "description": "StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý"
+  },
+  {
+    "scene_id": "S065",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Hủy mọi liên kết thẻ trên sàn thương mại điện tử và ứng dụng mua sắm để chặn đứng việc quẹt thẻ.",
+    "component": "AppUnlink",
+    "description": "AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm"
+  },
+  {
+    "scene_id": "S066",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Bước hai: Lập bản đồ nợ và áp dụng chiến lược hòn tuyết lăn hoặc tuyết lở để thanh toán dứt điểm.",
+    "component": "StepHeader",
+    "description": "StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball"
+  },
+  {
+    "scene_id": "S068",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Tập trung trả dứt điểm chiếc thẻ có lãi suất cao nhất hoặc dư nợ nhỏ nhất trước.",
+    "component": "TargetHighlight",
+    "description": "TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt"
+  },
+  {
+    "scene_id": "S069",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Chiến thắng nhỏ từ việc xóa sổ một chiếc thẻ sẽ tiếp thêm động lực tâm lý mạnh mẽ cho cả chặng đường.",
+    "component": "BadgeUnlock",
+    "description": "BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ"
+  },
+  {
+    "scene_id": "S070",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Bước ba: Tái cấu trúc ngân sách chi tiêu theo công thức kỷ luật trên mức lương mười hai triệu đồng.",
+    "component": "StepHeader",
+    "description": "StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu"
+  },
+  {
+    "scene_id": "S071",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Ngay khi lương về, trích tự động bốn triệu đồng, tức ba mươi ba phần trăm, chuyển thẳng vào tài khoản trả nợ.",
+    "component": "SalarySplit",
+    "description": "SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ"
+  },
+  {
+    "scene_id": "S072",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Tám triệu còn lại dành cho nhu cầu thiết yếu gồm tiền nhà, ăn uống và xăng xe.",
+    "component": "BudgetEnvelope",
+    "description": "BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr"
+  },
+  {
+    "scene_id": "S074",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Bước bốn: Thiết lập quỹ khẩn cấp mini hai triệu đồng để không bao giờ phải quẹt thẻ trở lại.",
+    "component": "StepHeader",
+    "description": "StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu"
+  },
+  {
+    "scene_id": "S076",
+    "beat": "Lộ trình giải pháp",
+    "narration": "Với kế hoạch bốn triệu mỗi tháng, chỉ sau đúng mười tháng, bạn sẽ chính thức sạch nợ hoàn toàn.",
+    "component": "CountdownMonths",
+    "description": "CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh"
+  },
+  {
+    "scene_id": "S080",
+    "beat": "Kết bình yên",
+    "narration": "Bạn bắt đầu có thể trích tiền mua chứng chỉ quỹ, xây dựng quỹ khẩn cấp lớn và tích sản đều đặn.",
+    "component": "AssetTree",
+    "description": "AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy"
+  }
+]

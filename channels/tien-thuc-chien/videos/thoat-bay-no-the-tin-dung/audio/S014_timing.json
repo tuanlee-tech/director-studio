@@ -21,13 +21,13 @@
       "end_ms": 520
     },
     {
-      "word": "một",
+      "word": "1",
       "start_ms": 520,
-      "end_ms": 660
+      "end_ms": 720
     },
     {
-      "word": "chủ",
-      "start_ms": 660,
+      "word": "triệu",
+      "start_ms": 720,
       "end_ms": 920
     },
     {
@@ -71,7 +71,7 @@
       "end_ms": 2520
     },
     {
-      "word": "nhớ",
+      "word": "nghĩa",
       "start_ms": 2520,
       "end_ms": 2700
     },
@@ -91,17 +91,17 @@
       "end_ms": 3400
     },
     {
-      "word": "sau",
+      "word": "sao",
       "start_ms": 3400,
       "end_ms": 3620
     },
     {
-      "word": "kỳ",
+      "word": "kê",
       "start_ms": 3620,
       "end_ms": 3940
     },
     {
-      "word": "thằng",
+      "word": "tháng",
       "start_ms": 3940,
       "end_ms": 4080
     },
@@ -110,5 +110,6 @@
       "start_ms": 4080,
       "end_ms": 4200
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

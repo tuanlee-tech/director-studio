@@ -16,7 +16,7 @@
       "end_ms": 380
     },
     {
-      "word": "trao",
+      "word": "chào",
       "start_ms": 380,
       "end_ms": 680
     },
@@ -41,32 +41,32 @@
       "end_ms": 1400
     },
     {
-      "word": "hướng",
+      "word": "hứa",
       "start_ms": 1400,
       "end_ms": 1660
     },
     {
-      "word": "miếng",
+      "word": "miễn",
       "start_ms": 1660,
       "end_ms": 1800
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 1800,
       "end_ms": 1940
     },
     {
       "word": "45",
       "start_ms": 1940,
-      "end_ms": 2240
+      "end_ms": 2370
     },
     {
       "word": "ngày",
-      "start_ms": 2240,
+      "start_ms": 2370,
       "end_ms": 2800
     },
     {
-      "word": "đẩy",
+      "word": "đầy",
       "start_ms": 2800,
       "end_ms": 2960
     },
@@ -80,5 +80,6 @@
       "start_ms": 3100,
       "end_ms": 3320
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

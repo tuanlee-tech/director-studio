@@ -21,7 +21,7 @@
       "end_ms": 580
     },
     {
-      "word": "giới",
+      "word": "dứt",
       "start_ms": 580,
       "end_ms": 740
     },
@@ -36,7 +36,7 @@
       "end_ms": 1100
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 1100,
       "end_ms": 1280
     },
@@ -46,12 +46,12 @@
       "end_ms": 1520
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 1520,
       "end_ms": 1660
     },
     {
-      "word": "xuất",
+      "word": "suất",
       "start_ms": 1660,
       "end_ms": 1880
     },
@@ -61,7 +61,7 @@
       "end_ms": 2140
     },
     {
-      "word": "nhất,",
+      "word": "nhất",
       "start_ms": 2140,
       "end_ms": 2280
     },
@@ -95,5 +95,6 @@
       "start_ms": 3460,
       "end_ms": 3680
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

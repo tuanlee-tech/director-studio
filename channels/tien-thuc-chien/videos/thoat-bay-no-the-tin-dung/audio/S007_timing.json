@@ -11,7 +11,7 @@
       "end_ms": 220
     },
     {
-      "word": "và",
+      "word": "bắt",
       "start_ms": 220,
       "end_ms": 300
     },
@@ -21,12 +21,12 @@
       "end_ms": 480
     },
     {
-      "word": "quét",
+      "word": "quẹt",
       "start_ms": 480,
       "end_ms": 700
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 700,
       "end_ms": 980
     },
@@ -46,7 +46,7 @@
       "end_ms": 1600
     },
     {
-      "word": "âm",
+      "word": "ăn",
       "start_ms": 1600,
       "end_ms": 1800
     },
@@ -76,7 +76,7 @@
       "end_ms": 3060
     },
     {
-      "word": "đầu",
+      "word": "đồ",
       "start_ms": 3060,
       "end_ms": 3200
     },
@@ -106,7 +106,7 @@
       "end_ms": 4300
     },
     {
-      "word": "rù",
+      "word": "du",
       "start_ms": 4300,
       "end_ms": 4420
     },
@@ -116,9 +116,10 @@
       "end_ms": 4600
     },
     {
-      "word": "nán.",
+      "word": "ngắn.",
       "start_ms": 4600,
       "end_ms": 4800
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

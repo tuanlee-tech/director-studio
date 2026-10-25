@@ -6,12 +6,12 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Tảm",
+      "word": "Tám",
       "start_ms": 0,
       "end_ms": 220
     },
     {
-      "word": "chụp",
+      "word": "triệu",
       "start_ms": 220,
       "end_ms": 400
     },
@@ -86,7 +86,7 @@
       "end_ms": 3300
     },
     {
-      "word": "sang",
+      "word": "xăng",
       "start_ms": 3300,
       "end_ms": 3440
     },
@@ -95,5 +95,6 @@
       "start_ms": 3440,
       "end_ms": 3740
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

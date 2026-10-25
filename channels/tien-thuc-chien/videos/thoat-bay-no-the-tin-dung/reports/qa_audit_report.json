@@ -1,0 +1,73 @@
+{
+  "channel": "tien-thuc-chien",
+  "video_slug": "thoat-bay-no-the-tin-dung",
+  "timestamp": "2026-10-26 00:27:39",
+  "passed": true,
+  "total_checks": 6,
+  "passed_checks": 6,
+  "failed_checks": 0,
+  "warning_checks": 0,
+  "checks": [
+    {
+      "category": "Assets",
+      "name": "Asset Coverage & File Integrity",
+      "passed": true,
+      "details": "100% Assets hợp lệ: 37 files (AIV: 5, IMG: 32) đều nguyên vẹn, > 50KB và đúng metadata ffprobe/PIL",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Naming",
+      "name": "File Naming & Anti-Alias Standardization",
+      "passed": true,
+      "details": "100% File trong assets/ (47 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Character",
+      "name": "Character Continuity & Narration Gender Alignment",
+      "passed": true,
+      "details": "Khớp 100% nhân vật & lời thoại Narration: Nam MC (9 cảnh), Người A Nam (S051-S054), Người B Nữ (S055-S058)",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "OCR & Watermark",
+      "name": "RapidOCR Technical Text & Filename Leak Scan",
+      "passed": true,
+      "details": "100% Ảnh sạch (37 files), không bị rò rỉ bất kỳ filename leak hay watermark nào",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Remotion",
+      "name": "Remotion & GFX 8 Mandatory Rules",
+      "passed": true,
+      "details": "100% Tuân thủ 8 Điều luật Remotion & Motion Graphics (44/44 GFX dedicated, 0 prefix leaks, glassy subtitle)",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Audio",
+      "name": "Audio & Word Timing Synchronization",
+      "passed": true,
+      "details": "100% Audio & Timing đồng bộ: 81/81 cảnh đầy đủ WAV và JSON timing, 0 cảnh bị cắt âm",
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "summary_stats": {
+    "total_visual_sequences": 81,
+    "aiv_count": 5,
+    "img_count": 32,
+    "gfx_count": 44,
+    "verified_assets_count": 37,
+    "valid_media_files": 47,
+    "clean_images_count": 37,
+    "tainted_images_count": 0,
+    "audio_valid_scenes": 81
+  }
+}

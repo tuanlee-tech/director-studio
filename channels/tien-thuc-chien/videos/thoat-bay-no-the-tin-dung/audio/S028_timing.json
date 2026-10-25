@@ -1,28 +1,23 @@
 {
   "audio_file": "S028_narration.wav",
   "duration_ms": 3040,
-  "word_count": 16,
+  "word_count": 15,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Bởi",
+      "word": "Với",
       "start_ms": 0,
       "end_ms": 220
     },
     {
-      "word": "mối",
+      "word": "40",
       "start_ms": 220,
-      "end_ms": 360
+      "end_ms": 430
     },
     {
-      "word": "mấy",
-      "start_ms": 360,
-      "end_ms": 460
-    },
-    {
-      "word": "chiều",
-      "start_ms": 460,
+      "word": "triệu",
+      "start_ms": 430,
       "end_ms": 640
     },
     {
@@ -41,7 +36,7 @@
       "end_ms": 1400
     },
     {
-      "word": "biển",
+      "word": "tiền",
       "start_ms": 1400,
       "end_ms": 1640
     },
@@ -71,13 +66,13 @@
       "end_ms": 2400
     },
     {
-      "word": "một",
+      "word": "1",
       "start_ms": 2400,
-      "end_ms": 2560
+      "end_ms": 2540
     },
     {
-      "word": "chiều",
-      "start_ms": 2560,
+      "word": "triệu",
+      "start_ms": 2540,
       "end_ms": 2680
     },
     {
@@ -85,5 +80,6 @@
       "start_ms": 2680,
       "end_ms": 2860
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

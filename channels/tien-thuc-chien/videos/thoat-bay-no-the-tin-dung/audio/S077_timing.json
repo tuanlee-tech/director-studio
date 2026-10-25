@@ -8,15 +8,15 @@
     {
       "word": "10",
       "start_ms": 0,
-      "end_ms": 240
+      "end_ms": 210
     },
     {
       "word": "tháng",
-      "start_ms": 240,
+      "start_ms": 210,
       "end_ms": 420
     },
     {
-      "word": "kỳ",
+      "word": "kỷ",
       "start_ms": 420,
       "end_ms": 560
     },
@@ -31,7 +31,7 @@
       "end_ms": 920
     },
     {
-      "word": "ngủy",
+      "word": "ngủi",
       "start_ms": 920,
       "end_ms": 1220
     },
@@ -41,7 +41,7 @@
       "end_ms": 1440
     },
     {
-      "word": "đối",
+      "word": "đổi",
       "start_ms": 1440,
       "end_ms": 1640
     },
@@ -71,12 +71,12 @@
       "end_ms": 2460
     },
     {
-      "word": "tháng",
+      "word": "thanh",
       "start_ms": 2460,
       "end_ms": 2780
     },
     {
-      "word": "thẳng",
+      "word": "thản",
       "start_ms": 2780,
       "end_ms": 3080
     },
@@ -95,5 +95,6 @@
       "start_ms": 3480,
       "end_ms": 3780
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

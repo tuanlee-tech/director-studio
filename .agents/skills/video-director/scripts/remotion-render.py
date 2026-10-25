@@ -117,12 +117,34 @@ def main():
     temp_props = remotion_dir / f"temp_props_{slug}.json"
     temp_props.write_text(json.dumps(comp_data, ensure_ascii=False), encoding="utf-8")
 
+    # Clean up old output or leftover progress files to avoid Windows NTFS EPERM rename issue
+    if output_file.exists():
+        try:
+            output_file.unlink()
+        except Exception as e:
+            try:
+                subprocess.run(["powershell", "-Command", f"Remove-Item -Path '{output_file}' -Force"], check=False)
+            except Exception:
+                print(f"⚠️ Không thể xóa file video cũ: {e}")
+
+    for prog_file in video_dir.glob("*.remotion-in-progress"):
+        try:
+            prog_file.unlink()
+        except Exception:
+            try:
+                subprocess.run(["powershell", "-Command", f"Remove-Item -Path '{prog_file}' -Force"], check=False)
+            except Exception:
+                pass
+
     cmd = [
         "npx", "remotion", "render",
         "src/index.ts", "MainVideo",
         str(output_file),
         f"--props={temp_props.name}",
-        "--overwrite"
+        "--overwrite",
+        "--gl=angle",
+        "--concurrency=4",
+        "--timeout=60000"
     ]
 
     if args.frames:
@@ -161,9 +183,10 @@ def main():
                 pct = int((curr / total) * 100) if total > 0 else 0
                 bar = "█" * (pct // 5) + "░" * (20 - (pct // 5))
                 print(f"\r  [{bar}] {pct}% ({curr}/{total} frames) ", end="", flush=True)
-
-            elif "%" in line_str and "Render" in line_str:
-                print(f"  {line_str}")
+            elif "Rendered" in line_str or ("Bundling" in line_str and "%" in line_str):
+                pass
+            else:
+                print(f"\n  {line_str}")
 
         proc.wait()
         print("\n" + "-" * 72)

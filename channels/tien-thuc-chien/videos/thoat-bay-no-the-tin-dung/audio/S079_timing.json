@@ -11,18 +11,18 @@
       "end_ms": 200
     },
     {
-      "word": "liêng",
+      "word": "lương",
       "start_ms": 200,
       "end_ms": 420
     },
     {
       "word": "12",
       "start_ms": 420,
-      "end_ms": 620
+      "end_ms": 640
     },
     {
       "word": "triệu",
-      "start_ms": 620,
+      "start_ms": 640,
       "end_ms": 860
     },
     {
@@ -76,7 +76,7 @@
       "end_ms": 2520
     },
     {
-      "word": "phụng",
+      "word": "phục",
       "start_ms": 2880,
       "end_ms": 3060
     },
@@ -115,5 +115,6 @@
       "start_ms": 4100,
       "end_ms": 4320
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

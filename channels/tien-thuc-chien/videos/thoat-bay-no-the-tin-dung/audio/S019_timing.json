@@ -26,7 +26,7 @@
       "end_ms": 600
     },
     {
-      "word": "tạm",
+      "word": "tám",
       "start_ms": 600,
       "end_ms": 860
     },
@@ -41,17 +41,17 @@
       "end_ms": 1260
     },
     {
-      "word": "và",
+      "word": "vả,",
       "start_ms": 1260,
       "end_ms": 1420
     },
     {
-      "word": "những",
+      "word": "nhưng",
       "start_ms": 1420,
       "end_ms": 1980
     },
     {
-      "word": "tiếng",
+      "word": "tiền",
       "start_ms": 1980,
       "end_ms": 2260
     },
@@ -101,7 +101,7 @@
       "end_ms": 3840
     },
     {
-      "word": "truyền",
+      "word": "chuyển",
       "start_ms": 3840,
       "end_ms": 4100
     },
@@ -111,7 +111,7 @@
       "end_ms": 4200
     },
     {
-      "word": "chả",
+      "word": "trả",
       "start_ms": 4200,
       "end_ms": 4360
     },
@@ -120,5 +120,6 @@
       "start_ms": 4360,
       "end_ms": 4540
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

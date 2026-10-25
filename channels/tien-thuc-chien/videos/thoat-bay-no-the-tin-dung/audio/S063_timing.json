@@ -11,12 +11,12 @@
       "end_ms": 260
     },
     {
-      "word": "1,",
+      "word": "một:",
       "start_ms": 260,
       "end_ms": 480
     },
     {
-      "word": "cách",
+      "word": "Cắt",
       "start_ms": 860,
       "end_ms": 1000
     },
@@ -26,7 +26,7 @@
       "end_ms": 1240
     },
     {
-      "word": "nèo",
+      "word": "neo",
       "start_ms": 1240,
       "end_ms": 1480
     },
@@ -46,7 +46,7 @@
       "end_ms": 2320
     },
     {
-      "word": "toảng",
+      "word": "tỏa",
       "start_ms": 2320,
       "end_ms": 2600
     },
@@ -66,12 +66,12 @@
       "end_ms": 3020
     },
     {
-      "word": "chứ",
+      "word": "chiếc",
       "start_ms": 3020,
       "end_ms": 3160
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 3160,
       "end_ms": 3320
     },
@@ -91,7 +91,7 @@
       "end_ms": 4040
     },
     {
-      "word": "soá",
+      "word": "xóa",
       "start_ms": 4040,
       "end_ms": 4340
     },
@@ -106,7 +106,7 @@
       "end_ms": 4740
     },
     {
-      "word": "khởi",
+      "word": "khỏi",
       "start_ms": 4740,
       "end_ms": 4920
     },
@@ -120,5 +120,6 @@
       "start_ms": 5020,
       "end_ms": 5260
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

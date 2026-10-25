@@ -83,10 +83,10 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
 .v-screen{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;background:#060810}
 .v-screen img,.v-screen video{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
 .v-karaoke{position:absolute;bottom:40px;left:0;width:100%;text-align:center;padding:0 20px;pointer-events:none;z-index:10}
-.v-karaoke-box{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;background:rgba(10,15,30,.85);padding:10px 24px;border-radius:14px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px)}
-.v-word{font-size:1.8rem;font-weight:800;color:#94a3b8;transition:.08s}
+.v-karaoke-box{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;background:transparent;border:none;padding:0}
+.v-word{font-size:1.8rem;font-weight:800;color:#e2e8f0;transition:.08s;text-shadow:0 2px 6px rgba(0,0,0,0.95), 0 0 12px rgba(0,0,0,0.9), -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000}
 .v-word.spoken{color:#fff}
-.v-word.active{color:#facc15;transform:scale(1.12);text-shadow:0 0 16px rgba(250,204,21,.8)}
+.v-word.active{color:#facc15;transform:scale(1.12);text-shadow:0 0 22px rgba(250,204,21,.95), 0 2px 6px rgba(0,0,0,0.95), -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000}
 .v-controls{display:flex;align-items:center;gap:1rem;padding:.8rem 1.2rem;background:var(--bg2);border-top:1px solid var(--brd)}
 .v-controls button{background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer}
 .v-slider{flex:1;-webkit-appearance:none;height:6px;border-radius:3px;background:var(--brd);outline:none;cursor:pointer}
@@ -204,13 +204,32 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
                 <button class="btn bs" onclick="loadVideoCatalog()" style="margin-top:16px">🔄 Tải lại</button>
             </div>
             <div style="display:flex;gap:.8rem;align-items:center;margin-top:16px">
+                <span id="vBgmBadge" style="font-size:.78rem;padding:3px 10px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:6px;color:#93c5fd;display:none">🎵 BGM</span>
                 <span id="vStatusBadge" style="font-size:.78rem;color:var(--t2)"></span>
                 <button class="btn bp" id="btnRender" onclick="startRenderVideo()" style="background:linear-gradient(135deg,#10b981,#059669);font-weight:700">🚀 Xuất MP4 Video</button>
             </div>
         </div>
 
-        <!-- Remotion Web Player Container -->
-        <div class="v-player-container">
+        <!-- View Mode Switcher -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;background:var(--bg2);padding:6px 12px;border-radius:8px;border:1px solid var(--brd)">
+            <div style="display:flex;gap:6px">
+                <button id="btnViewTimeline" class="btn bp" onclick="switchVideoView('timeline')" style="font-size:.78rem;padding:4px 12px">🎞️ Remotion Studio Timeline (Iframe Chuyên Nghiệp)</button>
+                <button id="btnViewPlayer" class="btn bs" onclick="switchVideoView('player')" style="font-size:.78rem;padding:4px 12px">⚡ Trình phát nhanh (HTML5 Preview)</button>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-size:.75rem;color:var(--t2)">Timeline Port: <b>3100</b></span>
+                <button class="btn bs" onclick="reloadRemotionIframe()" style="font-size:.75rem;padding:3px 8px">🔄 Reload</button>
+                <a href="http://localhost:3100" target="_blank" class="btn bs" style="font-size:.75rem;padding:3px 10px;text-decoration:none">↗️ Mở toàn màn hình</a>
+            </div>
+        </div>
+
+        <!-- Remotion Official Studio Timeline (Iframe) -->
+        <div id="remotionStudioWrap" style="width:100%;height:840px;border:1px solid var(--brd);border-radius:var(--r);overflow:hidden;margin-bottom:1.5rem;box-shadow:0 12px 40px rgba(0,0,0,.6);background:#0b0f19">
+            <iframe id="remotionFrame" src="http://localhost:3100" style="width:100%;height:100%;border:none;background:#05070f" allow="autoplay; fullscreen; clipboard-write"></iframe>
+        </div>
+
+        <!-- Remotion Web Player Container (HTML5 Fallback) -->
+        <div class="v-player-container" id="vPlayerFallback" style="display:none">
             <div class="v-screen" id="vScreen">
                 <img id="vImg" src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80" style="display:block">
                 <video id="vVid" style="display:none" playsinline></video>
@@ -225,6 +244,7 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
             </div>
 
             <audio id="vAudioNarration"></audio>
+            <audio id="vAudioBgm" loop></audio>
 
             <!-- Video Player Controls -->
             <div class="v-controls">
@@ -323,11 +343,14 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
 <script>
 const SL={healthy:'Running',starting:'Starting...',stopped:'Stopped',unhealthy:'Unhealthy',unknown:'Unknown',error:'Error'};
 
-function switchTab(tabId){
+function switchTab(tabId, el){
     document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    event.target.classList.add('active');
+    const content = document.getElementById(tabId);
+    if (content) content.classList.add('active');
+    const targetBtn = el || (typeof event !== 'undefined' && event?.target?.classList?.contains('nav-tab') ? event.target : document.querySelector(`.nav-tab[onclick*="${tabId}"]`));
+    if (targetBtn) targetBtn.classList.add('active');
+    try { localStorage.setItem('selected_tab', tabId); } catch(e){}
     if(tabId==='tab-video'){loadVideoCatalog();}
     if(tabId==='tab-flow'){loadFlowAccounts();syncFlowVideoSelects();}
 }
@@ -414,6 +437,14 @@ loadSvc();loadSys();
 setInterval(loadSvc,15000);
 setInterval(loadSys,60000);
 
+// Khôi phục tab đã lưu từ localStorage khi F5
+const savedTab = localStorage.getItem('selected_tab');
+if (savedTab && document.getElementById(savedTab)) {
+    switchTab(savedTab);
+} else {
+    loadVideoCatalog();
+}
+
 // --- Remotion Studio Video Player & Renderer Logic ---
 let currentCatalog = [];
 let currentVideoData = null;
@@ -443,6 +474,12 @@ async function loadVideoCatalog(){
             selCh.appendChild(opt);
         });
 
+        // Khôi phục kênh đã chọn từ localStorage
+        const savedCh = localStorage.getItem('selected_channel');
+        if (savedCh && currentCatalog.some(c => c.name === savedCh)) {
+            selCh.value = savedCh;
+        }
+
         onChannelChange();
     } catch(e) {
         console.error("Error loading video catalog:", e);
@@ -451,6 +488,8 @@ async function loadVideoCatalog(){
 
 function onChannelChange(){
     const chName = document.getElementById('selChannel').value;
+    try { localStorage.setItem('selected_channel', chName); } catch(e){}
+
     const ch = currentCatalog.find(c => c.name === chName);
     const selVid = document.getElementById('selVideo');
     selVid.innerHTML = '';
@@ -462,6 +501,13 @@ function onChannelChange(){
             opt.textContent = `${v.slug} ${v.final_video_exists ? '✅' : ''}`;
             selVid.appendChild(opt);
         });
+
+        // Khôi phục video slug đã chọn từ localStorage
+        const savedSlug = localStorage.getItem('selected_slug_' + chName) || localStorage.getItem('selected_slug');
+        if (savedSlug && ch.videos.some(v => v.slug === savedSlug)) {
+            selVid.value = savedSlug;
+        }
+
         onVideoChange();
     } else {
         selVid.innerHTML = '<option value="">(Chưa có video nào)</option>';
@@ -469,16 +515,62 @@ function onChannelChange(){
     }
 }
 
+function switchVideoView(mode) {
+    const wrap = document.getElementById('remotionStudioWrap');
+    const fallback = document.getElementById('vPlayerFallback');
+    const btnT = document.getElementById('btnViewTimeline');
+    const btnP = document.getElementById('btnViewPlayer');
+    if (mode === 'timeline') {
+        wrap.style.display = 'block';
+        fallback.style.display = 'none';
+        btnT.className = 'btn bp';
+        btnP.className = 'btn bs';
+    } else {
+        wrap.style.display = 'none';
+        fallback.style.display = 'block';
+        btnT.className = 'btn bs';
+        btnP.className = 'btn bp';
+    }
+}
+
+let reloadTimer = null;
+function reloadRemotionIframe() {
+    clearTimeout(reloadTimer);
+    reloadTimer = setTimeout(() => {
+        const frame = document.getElementById('remotionFrame');
+        if (frame) {
+            frame.src = 'http://localhost:3100/?t=' + Date.now();
+        }
+    }, 150);
+}
+
 async function onVideoChange(){
     const ch = document.getElementById('selChannel').value;
     const slug = document.getElementById('selVideo').value;
     if (!ch || !slug) return;
+
+    try {
+        localStorage.setItem('selected_channel', ch);
+        localStorage.setItem('selected_slug_' + ch, slug);
+        localStorage.setItem('selected_slug', slug);
+    } catch(e){}
 
     pauseVideo();
     playbackTime = 0;
 
     const badge = document.getElementById('vStatusBadge');
     badge.textContent = '⏳ Đang tải timeline...';
+
+    // Tự động đồng bộ props và reload Remotion Studio Iframe
+    fetch('/api/sync-remotion-props', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ channel: ch, slug: slug })
+    }).then(r => r.json()).then(res => {
+        if (res && res.status === 'ok') {
+            reloadRemotionIframe();
+        }
+    }).catch(e => console.warn('Sync props warn:', e));
 
     try {
         const res = await fetch(`/api/video-data/${ch}/${slug}`);
@@ -487,6 +579,17 @@ async function onVideoChange(){
         if (data.status === 'ok') {
             currentVideoData = data.composition;
             badge.textContent = `✅ ${currentVideoData.sequences.length} cảnh · ${Math.round(currentVideoData.total_duration_seconds)}s`;
+            const bgmBadge = document.getElementById('vBgmBadge');
+            if (bgmBadge) {
+                if (currentVideoData.bgm_url) {
+                    const trackName = currentVideoData.bgm_url.split('/').pop();
+                    const volPercent = Math.round((currentVideoData.bgm_volume || 0.1) * 100);
+                    bgmBadge.innerHTML = `🎵 BGM: <b>${trackName}</b> (${volPercent}%)`;
+                    bgmBadge.style.display = 'inline-block';
+                } else {
+                    bgmBadge.style.display = 'none';
+                }
+            }
             renderTimelineBeats();
             updatePlayerAtTime(0);
         } else {
@@ -635,6 +738,10 @@ function updateKaraokeSubtitle(seq, currentFrame, fps){
 function onScrub(val){
     playbackTime = parseFloat(val);
     updatePlayerAtTime(playbackTime);
+    const vBgm = document.getElementById('vAudioBgm');
+    if (vBgm && vBgm.duration) {
+        vBgm.currentTime = playbackTime % vBgm.duration;
+    }
 }
 
 function togglePlay(){
@@ -650,6 +757,23 @@ function playVideo(){
     isPlaying = true;
     document.getElementById('vBtnPlay').textContent = '⏸️';
     playStartTime = performance.now() - (playbackTime * 1000);
+
+    // Phát BGM nhẹ nhàng không lời
+    if (currentVideoData.bgm_url) {
+        const vBgm = document.getElementById('vAudioBgm');
+        if (vBgm) {
+            const targetSrc = currentVideoData.bgm_url.startsWith('http') ? currentVideoData.bgm_url : window.location.origin + currentVideoData.bgm_url;
+            if (vBgm.src !== targetSrc) {
+                vBgm.src = targetSrc;
+            }
+            vBgm.volume = currentVideoData.bgm_volume || 0.10;
+            if (vBgm.duration) {
+                vBgm.currentTime = playbackTime % vBgm.duration;
+            }
+            vBgm.play().catch(e => console.warn('BGM play warn:', e));
+        }
+    }
+
     requestAnimationFrame(renderLoop);
 }
 
@@ -658,8 +782,10 @@ function pauseVideo(){
     document.getElementById('vBtnPlay').textContent = '▶️';
     const vVid = document.getElementById('vVid');
     const vAudio = document.getElementById('vAudioNarration');
+    const vBgm = document.getElementById('vAudioBgm');
     if (vVid) vVid.pause();
     if (vAudio) vAudio.pause();
+    if (vBgm) vBgm.pause();
 }
 
 function renderLoop(now){

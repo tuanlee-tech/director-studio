@@ -1,0 +1,81 @@
+S001 | Type: AIV | Comp: Video | Title:  | Desc: Chàng trai sốc nhìn số dư nợ 40 triệu đồng trong app ngân hàng, mồ hôi rơi
+S002 | Type: AIV | Comp: Video | Title:  | Desc: Cảnh quẹt thẻ thanh toán hào nhoáng tại quầy bar sang chảnh giữa ánh đèn lung linh
+S003 | Type: AIV | Comp: Video | Title:  | Desc: Chiếc mỏ neo kim loại khổng lồ gắn vào chiếc ví da kéo chìm dần xuống đáy biển sâu
+S004 | Type: AIV | Comp: Video | Title:  | Desc: Chàng trai đại diện kênh bước vào giữa khung hình, xua tan làn sương mù, giơ tay đưa ra lộ trình
+S005 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật vui mừng cầm thẻ tín dụng mạ vàng lấp lánh mới toanh, ánh sáng rực rỡ
+S006 | Type: GFX | Comp: MotionGraphic | Title: AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi | Desc: AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi
+S007 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhóm bạn trẻ ăn uống sang chảnh tại nhà hàng, ly cocktail và đồ công nghệ trên bàn
+S008 | Type: GFX | Comp: SplitComparison | Title: SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa | Desc: SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa
+S009 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật soi gương thấy mình diện vest đại gia trong khi túi quần xẹp lép
+S010 | Type: GFX | Comp: MotionGraphic | Title: AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn | Desc: AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn
+S011 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật hoảng hốt trợn tròn mắt nhìn thông báo sao kê ngân hàng đỏ rực 15 triệu
+S012 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật ngồi gục đầu trước bàn làm việc ngập tràn hóa đơn và biên lai
+S013 | Type: GFX | Comp: FocusCard | Title: FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh | Desc: FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh
+S014 | Type: GFX | Comp: CounterNumber | Title: CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ' | Desc: CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'
+S015 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật thở phào nhưng chân đang lún sâu vào vũng cát lầy nợ nần
+S016 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật ngập ngừng quẹt thẻ tại siêu thị để mua đồ ăn thiết yếu cuối tháng
+S017 | Type: GFX | Comp: LoopDiagram | Title: LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp | Desc: LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp
+S018 | Type: GFX | Comp: ChartMotion | Title: ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng | Desc: ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng
+S019 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật cặm cụi gõ phím làm việc, bóng ngân hàng vươn tay rút sạch tiền lương
+S020 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật còng lưng kéo chiếc thẻ tín dụng khổng lồ như một cỗ xe bò nặng trĩu
+S021 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Màn hình điện thoại rung bần bật trong đêm tối, thông báo đòi nợ sáng rực
+S022 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Ngón tay run rẩy lướt qua icon ứng dụng ngân hàng nhưng không dám bấm vào
+S023 | Type: GFX | Comp: TreeGrowth | Title: TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương | Desc: TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương
+S024 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật quay người lại, đối diện với tấm bảng đen phân tích, ánh mắt quyết tâm
+S025 | Type: GFX | Comp: IntroCard | Title: IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu' | Desc: IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'
+S026 | Type: GFX | Comp: CounterNumber | Title: CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo | Desc: CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo
+S027 | Type: GFX | Comp: BarChart | Title: BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt | Desc: BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt
+S028 | Type: GFX | Comp: CounterNumber | Title: CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng | Desc: CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng
+S029 | Type: GFX | Comp: PieChart | Title: PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%) | Desc: PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)
+S030 | Type: GFX | Comp: ChartMotion | Title: ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng | Desc: ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng
+S031 | Type: GFX | Comp: TimelineSlider | Title: TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036 | Desc: TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036
+S032 | Type: GFX | Comp: SplitComparison | Title: SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng | Desc: SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng
+S033 | Type: GFX | Comp: Infographic | Title: Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản | Desc: Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản
+S034 | Type: GFX | Comp: SplitComparison | Title: SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ | Desc: SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ
+S035 | Type: GFX | Comp: CalendarAnimation | Title: CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên | Desc: CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên
+S036 | Type: GFX | Comp: AlertBox | Title: AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu | Desc: AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu
+S037 | Type: GFX | Comp: StackFee | Title: StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau | Desc: StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau
+S038 | Type: GFX | Comp: DrainWater | Title: DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn | Desc: DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn
+S039 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Chiếc máy quẹt thẻ POS phát ra ánh sáng tím mờ ảo đầy ma mị và cám dỗ
+S040 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Chạm nhẹ Apple Pay trong 1 giây đặt cạnh chiếc đồng hồ cát chảy vô tận
+S041 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Chiếc thẻ bạch kim Platinum bóng bẩy đặt cạnh vài đồng xu lẻ tiền hoàn
+S042 | Type: GFX | Comp: SplitComparison | Title: SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu | Desc: SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu
+S043 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Cán cân công lý: một bên là công thức toán học, một bên là cảm xúc bốc đồng
+S044 | Type: GFX | Comp: MonthCalendar | Title: MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng' | Desc: MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'
+S045 | Type: GFX | Comp: CreditScoreMeter | Title: CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3 | Desc: CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3
+S046 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Cánh cửa ngân hàng đóng sầm lại trước mặt nhân vật, khóa dây xích nặng nề
+S047 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật đứng nhìn qua cửa sổ đón ánh bình minh, gông cùm rỉ sét rơi xuống
+S048 | Type: GFX | Comp: BadgeGraphic | Title: BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ' | Desc: BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'
+S049 | Type: GFX | Comp: ComparisonTable | Title: ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35% | Desc: ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%
+S050 | Type: GFX | Comp: SplitComparison | Title: SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải) | Desc: SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)
+S051 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Người A vô tư quẹt thẻ gọi đồ uống tại quán cà phê sang trọng cùng bạn bè
+S052 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Người A mải mê chụp ảnh check-in sang chảnh bên những món đồ mới mua
+S053 | Type: GFX | Comp: CounterNumber | Title: CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu | Desc: CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu
+S054 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Người A ôm đầu trằn trọc mất ngủ giữa đêm tối, chuông điện thoại nhấp nháy
+S055 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Người B ngồi bên bàn làm việc, ánh mắt kiên nghị cầm bút tính toán chi tiêu
+S056 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Những phong bì tiền mặt dán nhãn 'Ăn uống', 'Tiền nhà' ngăn nắp trên bàn Người B
+S057 | Type: GFX | Comp: ProgressBar | Title: ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng | Desc: ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng
+S058 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Người B tự nấu bữa cơm đơn giản tại nhà, nụ cười nhẹ nhõm và an yên
+S059 | Type: GFX | Comp: MilestoneUnlocked | Title: MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng | Desc: MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng
+S060 | Type: GFX | Comp: SplitComparison | Title: SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi | Desc: SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi
+S061 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Ngã ba đường với hai biển chỉ dẫn: 'Nợ nần lo âu' vs 'Kỷ luật tự do'
+S062 | Type: GFX | Comp: StepFlow | Title: StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên | Desc: StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên
+S063 | Type: GFX | Comp: StepHeader | Title: StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý | Desc: StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý
+S064 | Type: AIV | Comp: Video | Title:  | Desc: Cận cảnh chiếc kéo kim loại sắc bén dứt khoát cắt đôi chiếc thẻ tín dụng mạ vàng, tia sáng phát ra biểu thị sự giải phóng
+S065 | Type: GFX | Comp: AppUnlink | Title: AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm | Desc: AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm
+S066 | Type: GFX | Comp: StepHeader | Title: StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball | Desc: StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball
+S067 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Trang sổ tay ghi chi tiết từng dòng: Tên ngân hàng, Dư nợ, Lãi suất thẻ
+S068 | Type: GFX | Comp: TargetHighlight | Title: TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt | Desc: TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt
+S069 | Type: GFX | Comp: BadgeUnlock | Title: BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ | Desc: BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ
+S070 | Type: GFX | Comp: StepHeader | Title: StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu | Desc: StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu
+S071 | Type: GFX | Comp: SalarySplit | Title: SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ | Desc: SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ
+S072 | Type: GFX | Comp: BudgetEnvelope | Title: BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr | Desc: BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr
+S073 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Chiếc ví da mộc mạc chỉ đựng vừa đủ số tiền mặt chi tiêu trong 1 tuần
+S074 | Type: GFX | Comp: StepHeader | Title: StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu | Desc: StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu
+S075 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Chiếc khiên kim loại màu xanh mint bảo vệ chiếc ví trước sự cố hỏng xe bất ngờ
+S076 | Type: GFX | Comp: CountdownMonths | Title: CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh | Desc: CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh
+S077 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật bước đi tự tin trên con đường rộng mở ngập tràn ánh nắng ban mai
+S078 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Gánh nặng đá tảng trên lưng tan biến thành những cánh chim bay vút lên bầu trời
+S079 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật thảnh thơi thưởng thức tách trà nóng, ví tiền nguyên vẹn trên bàn
+S080 | Type: GFX | Comp: AssetTree | Title: AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy | Desc: AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy
+S081 | Type: IMG | Comp: KenBurnsImage | Title:  | Desc: Nhân vật đứng trên đỉnh đồi lộng gió, logo Tiền Thực Chiến hiện lên trang nhã

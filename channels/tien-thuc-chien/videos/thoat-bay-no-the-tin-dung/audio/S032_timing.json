@@ -26,12 +26,12 @@
       "end_ms": 880
     },
     {
-      "word": "trong",
+      "word": "cho",
       "start_ms": 880,
       "end_ms": 1040
     },
     {
-      "word": "gần",
+      "word": "ngân",
       "start_ms": 1040,
       "end_ms": 1180
     },
@@ -68,11 +68,11 @@
     {
       "word": "80",
       "start_ms": 2460,
-      "end_ms": 2780
+      "end_ms": 2730
     },
     {
       "word": "triệu",
-      "start_ms": 2780,
+      "start_ms": 2730,
       "end_ms": 3000
     },
     {
@@ -86,7 +86,7 @@
       "end_ms": 3700
     },
     {
-      "word": "cấp",
+      "word": "gấp",
       "start_ms": 3700,
       "end_ms": 3900
     },
@@ -106,9 +106,10 @@
       "end_ms": 4460
     },
     {
-      "word": "góc.",
+      "word": "gốc.",
       "start_ms": 4460,
       "end_ms": 4660
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

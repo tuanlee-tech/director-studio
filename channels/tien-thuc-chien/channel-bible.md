@@ -56,26 +56,32 @@
 - Từ / kiểu câu CẤM: "anh Ba", "ông chú", "người anh em", "ngồi xuống rót chén trà", "tạt gáo nước lạnh", "thuế lười", "thuế sĩ diện", "vặt lông", miệt thị sở thích cá nhân vô cớ, hứa hẹn "đổi đời nhanh".
 
 ## 4. Visual
-- Bảng màu (hex): Trắng nền (#FFFFFF), Xanh lá (#00B050), Vàng rực (#FFC000), Đỏ gắt (#FF0000), Trang phục Navy/Xám (#1C3A5A).
-- Ánh sáng: Phẳng (Flat), sáng rực rỡ, không bóng đổ phức tạp.
-- Khung hình / ống kính mặc định: Bố cục chia đôi (Split-screen) tương phản. Nhân vật nửa người (Mid-shot) chiếm 1/3 - 1/2 khung hình, nhường chỗ cho text/icon.
-- Chất liệu: 2D vector cartoon, nét viền đen đậm, màu sắc bão hòa cao (Vyond/comic style).
-- Nhân vật / biểu tượng lặp lại: 1 nam thanh niên (đại diện kênh) mặc polo xám/áo sơ mi xanh nhạt, biểu cảm phóng đại (sốc, tức giận, tự tin). Icon: mũi tên đỏ chĩa xuống, cọc tiền vàng, thẻ tín dụng.
+- Bảng màu (hex): Trắng nền (#FFFFFF), Xanh lá (#00B050 / #10B981), Vàng rực (#FFE600 / #FACC15), Đỏ gắt (#FF4D4F / #EF4444), Navy/Đen (#050814 / #0F172A), Sơ mi trắng (#FFFFFF), Áo xám than (#334155).
+- Ánh sáng: Ánh sáng điện ảnh mềm mại, tự nhiên hoặc ánh sáng phòng làm việc ấm cúng (Cinematic warm ambient light, soft natural daylight).
+- Khung hình / ống kính mặc định: Bố cục chia đôi (Split-screen) tương phản hoặc cận cảnh/nửa người (Medium shot, Waist-up) tập trung vào hành động và biểu cảm nhân vật.
+- Chất liệu: Semi-realistic digital illustration, Modern Graphic Novel style, nét mực đen tinh tế (`fine defined ink line art`), đổ bóng cel-shading mềm mại kết hợp chuyển sắc nhẹ nhàng.
+- Nhân vật đại diện kênh: Nam thanh niên Việt Nam 26-28 tuổi, trí thức, gần gũi, tóc đen textured rẽ mái nhẹ, đeo kính mắt gọng vuông đen mỏng (`thin black-rimmed glasses`). Trang phục: Áo sơ mi trắng có thẻ nhân viên đeo cổ (hoặc áo nỉ cổ tròn xám than). Cố định và tham chiếu bằng file: `channels/tien-thuc-chien/characters/master_anchor.png`.
 
-## 5. STYLE DESCRIPTOR (tiếng Anh, 60–90 từ, dùng nguyên văn trong MỌI prompt ảnh/video)
-2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism.
+## 5. STYLE DESCRIPTOR (tiếng Anh, STYLE LOCK BẮT BUỘC dùng nguyên văn trong MỌI prompt ảnh/video)
+Semi-realistic digital illustration, modern graphic novel art style, clean fine black line art, soft smooth cel-shading, warm natural skin tones. Relatable Vietnamese young professional man, 27 years old, short textured black hair, modern thin rectangular black-rimmed eyeglasses. Wearing a crisp clean white collared shirt with a dark lanyard ID badge. Cinematic soft lighting, warm ambient atmosphere, clean uncluttered composition. No 3D render, no CGI, no photorealism, no flat chibi caricature, no cartoon exaggeration.
 
 ## 6. NEGATIVE LIST
-- Photorealism, 3D render, CGI, claymation.
+- Photorealism, 3D render, CGI, Unreal Engine.
+- Flat 2D cartoon, Vyond style, chibi, exaggerated caricature.
 - Watercolor, messy sketches, oil painting.
 - Text, letters, typography, watermarks, signature.
 - Distorted faces, extra fingers, anatomical errors.
-- Messy backgrounds, dark or moody lighting, complex gradients.
+- Messy backgrounds, dark or moody horror lighting, noisy artifacts.
 
-## 7. Nhận diện
-- Prompt logo: A minimalist channel logo featuring a vibrant mint green shield overlapping with a gold coin and a subtle red downward arrow in the background. 2D flat vector cartoon style, thick black outlines, vibrant solid colors. Clean composition, white background, no text, highly recognizable at a small scale.
-- Prompt banner (2560x1440): YouTube channel banner (2560x1440). 2D flat vector cartoon illustration, Vyond animation style. In the center safe area, a confident 28-year-old man in a grey polo shirt holding a mint green shield. Surround him with floating financial icons: gold coins, a red downward arrow, a broken credit card. Flat shading, thick black outlines, highly saturated colors. Solid off-white background with subtle geometric vector shapes. No text.
-- Quy tắc thumbnail (số chữ tối đa, vùng an toàn): Tối đa 3-5 từ (font to, siêu đậm, in hoa, có viền/bóng). Tuyệt đối không đặt chữ/chi tiết quan trọng ở góc dưới cùng bên phải và cách các cạnh rìa 10%.
+## 7. Nhận diện & Bộ Quy Chuẩn Thumbnail
+- Nhân vật mỏ neo (Master Anchor): File `channels/tien-thuc-chien/characters/master_anchor.png` (2752x1536). Luôn đính kèm vào ô đầu tiên của 5 cửa sổ Google Flow để warm-up đồng nhất tạo hình nhân vật cho toàn bộ các cảnh trong video.
+- Bộ 9 biểu cảm Vox Style: 9 file PNG trong suốt tại `channels/tien-thuc-chien/characters/` (`cutting.png`, `shock.png`, `confident.png`, `stress.png`, `thinking.png`, `warning.png`, `pointing.png`, `holding_card.png`, `celebrating.png`, `stop.png`).
+- Quy tắc thiết kế Thumbnail:
+  1. **Vị trí nhân vật**: Đặt ở **bên trái** (Góc đứng 3/4 hướng mắt vào tiêu đề bên phải), bọc viền sticker trắng nổi khối + đổ bóng điện ảnh kiểu Vox Style.
+  2. **Tiêu đề chữ lớn**: Đặt ở **bên phải**, font `Be Vietnam Pro` in hoa siêu đậm 2 màu tương phản (Vàng chanh #FFE600 & Trắng sáng #FFFFFF), viền đen dày và đổ bóng 3D.
+  3. **Mốc lộ trình**: Dải so sánh tương phản `DƯ NỢ 40 TRIỆU` (Đỏ) ➔ `SAU 10 THÁNG: 0 ĐỒNG!` (Xanh lục bảo).
+  4. **Vùng an toàn (Safe Zone)**: Góc dưới bên phải chừa trống để không bị nhãn thời lượng video của YouTube đè lên.
+  5. **Công cụ kết xuất tự động**: Dùng lệnh `python tools/render_thumbnail.py --pose <tên_pose> --position left` để render ra file PNG 1920x1080 chuẩn nét trong 3 giây.
 
 ## 8. Ràng buộc sản xuất (giữ nguyên)
 Cảnh AI video chỉ có 4s / 6s / 8s / 10s. Không lặp clip, không kéo giãn.

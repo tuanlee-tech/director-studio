@@ -1,0 +1,12 @@
+# WARM-UP PROMPT KHÓA NHÂN VẬT THAM CHIẾU TRÊN GOOGLE FLOW
+# (Dùng ngay sau khi kéo thả file master_anchor.png vào canvas của 5 tài khoản)
+
+=== BẢN ĐẦY ĐỦ (KHUYÊN DÙNG ĐỂ KHÓA TỐI ĐA CHI TIẾT) ===
+[CHARACTER & STYLE ANCHOR INITIALIZATION]
+This reference image establishes the primary character identity and visual style for this entire project.
+- Character: A 27-year-old Vietnamese professional man, short textured black hair with a casual side-part fringe, modern thin black-rimmed rectangular eyeglasses, clean-shaven, handsome intellectual appearance. Wearing a crisp white collared button-down shirt with a dark lanyard ID badge.
+- Art Style: Semi-realistic digital illustration, modern graphic novel art style, clean fine black line art, soft cel-shading, warm natural skin tones. Soft natural studio lighting, neutral clean background.
+Acknowledge this character anchor by generating a close-up portrait of this exact man smiling warmly at the camera, perfectly preserving his facial features, glasses, hair texture, and artistic style.
+
+=== BẢN NGẮN GỌN (CHO Ô PROMPT GIỚI HẠN KÝ TỰ) ===
+Using the exact character from the uploaded reference image: a 27-year-old Vietnamese professional man with short textured black hair, thin black rectangular glasses, and white collared shirt with lanyard ID. Maintain 100% facial and stylistic consistency in semi-realistic graphic novel illustration style. Generate a confident portrait of him looking at the camera.

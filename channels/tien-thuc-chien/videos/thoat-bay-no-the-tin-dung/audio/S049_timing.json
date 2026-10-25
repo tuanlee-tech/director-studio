@@ -1,12 +1,12 @@
 {
   "audio_file": "S049_narration.wav",
   "duration_ms": 3600,
-  "word_count": 14,
+  "word_count": 13,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "không",
+      "word": "Không",
       "start_ms": 0,
       "end_ms": 220
     },
@@ -16,17 +16,17 @@
       "end_ms": 460
     },
     {
-      "word": "đối",
+      "word": "đầu",
       "start_ms": 460,
       "end_ms": 540
     },
     {
-      "word": "cứ",
+      "word": "tư",
       "start_ms": 540,
       "end_ms": 640
     },
     {
-      "word": "ăn",
+      "word": "an",
       "start_ms": 640,
       "end_ms": 820
     },
@@ -51,23 +51,18 @@
       "end_ms": 2020
     },
     {
-      "word": "lựa",
+      "word": "lợi",
       "start_ms": 2020,
       "end_ms": 2220
     },
     {
-      "word": "nhận",
+      "word": "nhuận",
       "start_ms": 2220,
       "end_ms": 2360
     },
     {
-      "word": "35",
+      "word": "35%",
       "start_ms": 2360,
-      "end_ms": 2700
-    },
-    {
-      "word": "%",
-      "start_ms": 2700,
       "end_ms": 3080
     },
     {
@@ -75,5 +70,6 @@
       "start_ms": 3080,
       "end_ms": 3360
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

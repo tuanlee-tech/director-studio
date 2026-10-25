@@ -1,6 +1,13 @@
 import React from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { WordTiming } from "../types";
+import { loadFont } from "@remotion/google-fonts/BeVietnamPro";
+
+const { fontFamily } = loadFont("normal", {
+  weights: ["400", "700", "800", "900"],
+  subsets: ["vietnamese", "latin"],
+  ignoreTooManyRequestsWarning: true,
+});
 
 interface KaraokeSubtitleProps {
   words?: WordTiming[];
@@ -20,22 +27,23 @@ export const KaraokeSubtitle: React.FC<KaraokeSubtitleProps> = ({ words, fullTex
           position: "absolute",
           bottom: 110,
           width: "100%",
-          textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           padding: "0 60px",
           pointerEvents: "none",
         }}
       >
         <span
           style={{
-            fontFamily: "Inter, 'SF Pro Display', sans-serif",
-            fontSize: 48,
+            fontFamily,
+            fontSize: 46,
             fontWeight: 800,
             color: "#ffffff",
-            textShadow: "0 4px 16px rgba(0,0,0,0.85), 0 2px 4px rgba(0,0,0,0.9)",
-            backgroundColor: "rgba(15, 23, 42, 0.75)",
-            padding: "8px 24px",
-            borderRadius: 12,
-            letterSpacing: "-0.02em",
+            textShadow:
+              "0 2px 6px rgba(0,0,0,0.95), 0 0 14px rgba(0,0,0,0.85), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9), 2px 2px 0 rgba(0,0,0,0.9)",
+            letterSpacing: "0.01em",
+            textAlign: "center",
           }}
         >
           {fullText}
@@ -49,16 +57,16 @@ export const KaraokeSubtitle: React.FC<KaraokeSubtitleProps> = ({ words, fullTex
     (w) => currentMs >= w.start_ms && currentMs <= w.end_ms
   );
 
-  // Chọn cửa sổ 6 từ xung quanh từ đang đọc
+  // Chọn cửa sổ 5 từ xung quanh từ đang đọc
   let startIndex = 0;
   if (activeWordIndex !== -1) {
-    startIndex = Math.max(0, Math.floor(activeWordIndex / 6) * 6);
+    startIndex = Math.max(0, Math.floor(activeWordIndex / 5) * 5);
   } else {
     // Nếu nằm giữa 2 từ
     const nextIdx = words.findIndex((w) => currentMs < w.start_ms);
-    startIndex = nextIdx !== -1 ? Math.max(0, Math.floor(nextIdx / 6) * 6) : Math.max(0, words.length - 6);
+    startIndex = nextIdx !== -1 ? Math.max(0, Math.floor(nextIdx / 5) * 5) : Math.max(0, words.length - 5);
   }
-  const currentChunk = words.slice(startIndex, startIndex + 6);
+  const currentChunk = words.slice(startIndex, startIndex + 5);
 
   return (
     <div
@@ -78,27 +86,24 @@ export const KaraokeSubtitle: React.FC<KaraokeSubtitleProps> = ({ words, fullTex
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "12px",
-          backgroundColor: "rgba(10, 15, 29, 0.78)",
-          padding: "12px 28px",
-          borderRadius: 18,
-          backdropFilter: "blur(8px)",
-          border: "1px solid rgba(255, 255, 255, 0.12)",
-          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.6)",
+          alignItems: "center",
+          gap: "6px 13px",
         }}
       >
         {currentChunk.map((w, idx) => {
           const isSpoken = currentMs >= w.start_ms;
           const isCurrent = currentMs >= w.start_ms && currentMs <= w.end_ms;
 
-          let color = "#94a3b8"; // Chưa đọc: xám
+          let color = "#e2e8f0"; // Chưa đọc: trắng ngà nhẹ
           let scale = 1.0;
-          let shadow = "none";
+          let shadow =
+            "0 2px 6px rgba(0,0,0,0.95), 0 0 12px rgba(0,0,0,0.9), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9), 2px 2px 0 rgba(0,0,0,0.9)";
 
           if (isCurrent) {
             color = "#facc15"; // Đang đọc: vàng rực
-            scale = 1.12;
-            shadow = "0 0 20px rgba(250, 204, 21, 0.8), 0 2px 4px rgba(0,0,0,0.9)";
+            scale = 1.1;
+            shadow =
+              "0 0 24px rgba(250, 204, 21, 0.95), 0 2px 6px rgba(0,0,0,0.95), -2px -2px 0 rgba(0,0,0,0.95), 2px -2px 0 rgba(0,0,0,0.95), -2px 2px 0 rgba(0,0,0,0.95), 2px 2px 0 rgba(0,0,0,0.95)";
           } else if (isSpoken) {
             color = "#ffffff"; // Đã đọc: trắng
             scale = 1.0;
@@ -108,7 +113,7 @@ export const KaraokeSubtitle: React.FC<KaraokeSubtitleProps> = ({ words, fullTex
             <span
               key={`${w.word}-${idx}`}
               style={{
-                fontFamily: "Inter, 'Segoe UI', sans-serif",
+                fontFamily,
                 fontSize: 46,
                 fontWeight: 900,
                 color,
@@ -116,7 +121,8 @@ export const KaraokeSubtitle: React.FC<KaraokeSubtitleProps> = ({ words, fullTex
                 transition: "all 0.08s ease-out",
                 textShadow: shadow,
                 display: "inline-block",
-                letterSpacing: "-0.01em",
+                padding: "0 2px",
+                letterSpacing: "0.01em",
               }}
             >
               {w.word}

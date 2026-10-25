@@ -11,7 +11,7 @@
       "end_ms": 280
     },
     {
-      "word": "ngơ",
+      "word": "ngỡ",
       "start_ms": 280,
       "end_ms": 460
     },
@@ -31,7 +31,7 @@
       "end_ms": 1080
     },
     {
-      "word": "dầu",
+      "word": "giàu",
       "start_ms": 1080,
       "end_ms": 1320
     },
@@ -85,5 +85,6 @@
       "start_ms": 2960,
       "end_ms": 3220
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

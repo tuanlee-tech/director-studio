@@ -36,7 +36,7 @@
       "end_ms": 1460
     },
     {
-      "word": "yệt",
+      "word": "liệt",
       "start_ms": 1460,
       "end_ms": 1640
     },
@@ -46,12 +46,12 @@
       "end_ms": 1860
     },
     {
-      "word": "chình",
+      "word": "chính",
       "start_ms": 1860,
       "end_ms": 2040
     },
     {
-      "word": "sát",
+      "word": "xác",
       "start_ms": 2040,
       "end_ms": 2280
     },
@@ -76,12 +76,12 @@
       "end_ms": 3020
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 3020,
       "end_ms": 3140
     },
     {
-      "word": "xuất",
+      "word": "suất",
       "start_ms": 3140,
       "end_ms": 3380
     },
@@ -91,7 +91,7 @@
       "end_ms": 3520
     },
     {
-      "word": "tình",
+      "word": "từng",
       "start_ms": 3520,
       "end_ms": 3720
     },
@@ -111,12 +111,12 @@
       "end_ms": 4340
     },
     {
-      "word": "quân",
+      "word": "cuốn",
       "start_ms": 4340,
       "end_ms": 4500
     },
     {
-      "word": "số",
+      "word": "sổ",
       "start_ms": 4500,
       "end_ms": 4620
     },
@@ -125,5 +125,6 @@
       "start_ms": 4620,
       "end_ms": 4860
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

@@ -1,0 +1,310 @@
+[
+  {
+    "scene_id": "S006",
+    "component": "MotionGraphic",
+    "title": "AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi",
+    "desc": "AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi",
+    "narration": ""
+  },
+  {
+    "scene_id": "S008",
+    "component": "SplitComparison",
+    "title": "SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa",
+    "desc": "SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa",
+    "narration": ""
+  },
+  {
+    "scene_id": "S010",
+    "component": "MotionGraphic",
+    "title": "AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn",
+    "desc": "AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn",
+    "narration": ""
+  },
+  {
+    "scene_id": "S013",
+    "component": "FocusCard",
+    "title": "FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh",
+    "desc": "FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh",
+    "narration": ""
+  },
+  {
+    "scene_id": "S014",
+    "component": "CounterNumber",
+    "title": "CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'",
+    "desc": "CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'",
+    "narration": ""
+  },
+  {
+    "scene_id": "S017",
+    "component": "LoopDiagram",
+    "title": "LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp",
+    "desc": "LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp",
+    "narration": ""
+  },
+  {
+    "scene_id": "S018",
+    "component": "ChartMotion",
+    "title": "ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng",
+    "desc": "ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng",
+    "narration": ""
+  },
+  {
+    "scene_id": "S023",
+    "component": "TreeGrowth",
+    "title": "TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương",
+    "desc": "TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương",
+    "narration": ""
+  },
+  {
+    "scene_id": "S025",
+    "component": "IntroCard",
+    "title": "IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'",
+    "desc": "IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'",
+    "narration": ""
+  },
+  {
+    "scene_id": "S026",
+    "component": "CounterNumber",
+    "title": "CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo",
+    "desc": "CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo",
+    "narration": ""
+  },
+  {
+    "scene_id": "S027",
+    "component": "BarChart",
+    "title": "BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt",
+    "desc": "BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt",
+    "narration": ""
+  },
+  {
+    "scene_id": "S028",
+    "component": "CounterNumber",
+    "title": "CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng",
+    "desc": "CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng",
+    "narration": ""
+  },
+  {
+    "scene_id": "S029",
+    "component": "PieChart",
+    "title": "PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)",
+    "desc": "PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)",
+    "narration": ""
+  },
+  {
+    "scene_id": "S030",
+    "component": "ChartMotion",
+    "title": "ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng",
+    "desc": "ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng",
+    "narration": ""
+  },
+  {
+    "scene_id": "S031",
+    "component": "TimelineSlider",
+    "title": "TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036",
+    "desc": "TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036",
+    "narration": ""
+  },
+  {
+    "scene_id": "S032",
+    "component": "SplitComparison",
+    "title": "SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng",
+    "desc": "SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng",
+    "narration": ""
+  },
+  {
+    "scene_id": "S033",
+    "component": "Infographic",
+    "title": "Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản",
+    "desc": "Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản",
+    "narration": ""
+  },
+  {
+    "scene_id": "S034",
+    "component": "SplitComparison",
+    "title": "SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ",
+    "desc": "SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ",
+    "narration": ""
+  },
+  {
+    "scene_id": "S035",
+    "component": "CalendarAnimation",
+    "title": "CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên",
+    "desc": "CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên",
+    "narration": ""
+  },
+  {
+    "scene_id": "S036",
+    "component": "AlertBox",
+    "title": "AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu",
+    "desc": "AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu",
+    "narration": ""
+  },
+  {
+    "scene_id": "S037",
+    "component": "StackFee",
+    "title": "StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau",
+    "desc": "StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau",
+    "narration": ""
+  },
+  {
+    "scene_id": "S038",
+    "component": "DrainWater",
+    "title": "DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn",
+    "desc": "DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn",
+    "narration": ""
+  },
+  {
+    "scene_id": "S042",
+    "component": "SplitComparison",
+    "title": "SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu",
+    "desc": "SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu",
+    "narration": ""
+  },
+  {
+    "scene_id": "S044",
+    "component": "MonthCalendar",
+    "title": "MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'",
+    "desc": "MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'",
+    "narration": ""
+  },
+  {
+    "scene_id": "S045",
+    "component": "CreditScoreMeter",
+    "title": "CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3",
+    "desc": "CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3",
+    "narration": ""
+  },
+  {
+    "scene_id": "S048",
+    "component": "BadgeGraphic",
+    "title": "BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'",
+    "desc": "BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'",
+    "narration": ""
+  },
+  {
+    "scene_id": "S049",
+    "component": "ComparisonTable",
+    "title": "ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%",
+    "desc": "ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%",
+    "narration": ""
+  },
+  {
+    "scene_id": "S050",
+    "component": "SplitComparison",
+    "title": "SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)",
+    "desc": "SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)",
+    "narration": ""
+  },
+  {
+    "scene_id": "S053",
+    "component": "CounterNumber",
+    "title": "CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu",
+    "desc": "CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu",
+    "narration": ""
+  },
+  {
+    "scene_id": "S057",
+    "component": "ProgressBar",
+    "title": "ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng",
+    "desc": "ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng",
+    "narration": ""
+  },
+  {
+    "scene_id": "S059",
+    "component": "MilestoneUnlocked",
+    "title": "MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng",
+    "desc": "MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng",
+    "narration": ""
+  },
+  {
+    "scene_id": "S060",
+    "component": "SplitComparison",
+    "title": "SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi",
+    "desc": "SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi",
+    "narration": ""
+  },
+  {
+    "scene_id": "S062",
+    "component": "StepFlow",
+    "title": "StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên",
+    "desc": "StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên",
+    "narration": ""
+  },
+  {
+    "scene_id": "S063",
+    "component": "StepHeader",
+    "title": "StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý",
+    "desc": "StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý",
+    "narration": ""
+  },
+  {
+    "scene_id": "S065",
+    "component": "AppUnlink",
+    "title": "AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm",
+    "desc": "AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm",
+    "narration": ""
+  },
+  {
+    "scene_id": "S066",
+    "component": "StepHeader",
+    "title": "StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball",
+    "desc": "StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball",
+    "narration": ""
+  },
+  {
+    "scene_id": "S068",
+    "component": "TargetHighlight",
+    "title": "TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt",
+    "desc": "TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt",
+    "narration": ""
+  },
+  {
+    "scene_id": "S069",
+    "component": "BadgeUnlock",
+    "title": "BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ",
+    "desc": "BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ",
+    "narration": ""
+  },
+  {
+    "scene_id": "S070",
+    "component": "StepHeader",
+    "title": "StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu",
+    "desc": "StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu",
+    "narration": ""
+  },
+  {
+    "scene_id": "S071",
+    "component": "SalarySplit",
+    "title": "SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ",
+    "desc": "SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ",
+    "narration": ""
+  },
+  {
+    "scene_id": "S072",
+    "component": "BudgetEnvelope",
+    "title": "BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr",
+    "desc": "BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr",
+    "narration": ""
+  },
+  {
+    "scene_id": "S074",
+    "component": "StepHeader",
+    "title": "StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu",
+    "desc": "StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu",
+    "narration": ""
+  },
+  {
+    "scene_id": "S076",
+    "component": "CountdownMonths",
+    "title": "CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh",
+    "desc": "CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh",
+    "narration": ""
+  },
+  {
+    "scene_id": "S080",
+    "component": "AssetTree",
+    "title": "AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy",
+    "desc": "AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy",
+    "narration": ""
+  }
+]

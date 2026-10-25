@@ -21,7 +21,7 @@
       "end_ms": 460
     },
     {
-      "word": "trọn",
+      "word": "chọn",
       "start_ms": 460,
       "end_ms": 740
     },
@@ -36,22 +36,22 @@
       "end_ms": 1080
     },
     {
-      "word": "soa",
+      "word": "xoa",
       "start_ms": 1080,
       "end_ms": 1340
     },
     {
-      "word": "dụng",
+      "word": "dịu",
       "start_ms": 1340,
       "end_ms": 1600
     },
     {
-      "word": "ngàn",
+      "word": "ngắn",
       "start_ms": 1600,
       "end_ms": 1680
     },
     {
-      "word": "hạ,",
+      "word": "hạn,",
       "start_ms": 1680,
       "end_ms": 1820
     },
@@ -76,7 +76,7 @@
       "end_ms": 2960
     },
     {
-      "word": "kiểu",
+      "word": "thiểu",
       "start_ms": 2960,
       "end_ms": 3140
     },
@@ -101,12 +101,12 @@
       "end_ms": 4100
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 4100,
       "end_ms": 4180
     },
     {
-      "word": "buồn",
+      "word": "bù",
       "start_ms": 4180,
       "end_ms": 4480
     },
@@ -125,5 +125,6 @@
       "start_ms": 4680,
       "end_ms": 4920
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

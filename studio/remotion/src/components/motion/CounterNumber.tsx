@@ -1,5 +1,12 @@
 import React from "react";
 import { interpolate, useCurrentFrame, spring, useVideoConfig } from "remotion";
+import { loadFont } from "@remotion/google-fonts/BeVietnamPro";
+
+const { fontFamily } = loadFont("normal", {
+  weights: ["600", "700", "900"],
+  subsets: ["vietnamese", "latin"],
+  ignoreTooManyRequestsWarning: true,
+});
 
 interface CounterNumberProps {
   from?: number;
@@ -31,8 +38,11 @@ export const CounterNumber: React.FC<CounterNumberProps> = ({
     },
   });
 
-  const currentValue = Math.floor(interpolate(progress, [0, 1], [from, to]));
+  const rawValue = interpolate(progress, [0, 1], [from, to]);
+  const currentValue = progress >= 0.98 ? to : Math.round(rawValue);
   const formattedNumber = new Intl.NumberFormat("vi-VN").format(currentValue);
+
+  const displayLabel = label.replace(/^CounterNumber:\s*/i, "").trim();
 
   return (
     <div
@@ -46,20 +56,21 @@ export const CounterNumber: React.FC<CounterNumberProps> = ({
         backgroundColor: "#080c16",
         background: "radial-gradient(ellipse at center, #1a2236 0%, #080c16 80%)",
         color: "#ffffff",
-        fontFamily: "Inter, 'SF Pro Display', sans-serif",
+        fontFamily,
       }}
     >
       <div
         style={{
           fontSize: 32,
-          fontWeight: 600,
+          fontWeight: 700,
           color: "#94a3b8",
           textTransform: "uppercase",
           letterSpacing: "0.15em",
           marginBottom: 16,
+          fontFamily,
         }}
       >
-        {label}
+        {displayLabel}
       </div>
       <div
         style={{

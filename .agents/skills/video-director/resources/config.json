@@ -17,6 +17,13 @@
   "hook_aiv_duration_seconds": 30,
   "body_asset_priority": ["GFX", "IMG", "AIV"],
   "remotion_enabled": true,
+  "default_bgm": "bgm_calm_lofi.mp3",
+  "default_bgm_volume": 0.10,
+  "bgm": {
+    "enabled": true,
+    "default_track": "bgm_calm_lofi.mp3",
+    "default_volume": 0.10
+  },
   "style_lock": "",
   "negative_list": []
 }

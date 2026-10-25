@@ -228,8 +228,8 @@ class FlowBrowserSession:
         (() => {{
             const targetLabels = {labels_json}.map(l => l.toLowerCase());
             
-            // Dò nút Stop/Cancel
-            const stopBtn = document.querySelector('button[aria-label*="Stop"], button[aria-label*="Cancel"]');
+            // Dò nút Stop/Cancel (hỗ trợ đa ngôn ngữ EN / VI)
+            const stopBtn = document.querySelector('button[aria-label*="Stop" i], button[aria-label*="Cancel" i], button[aria-label*="Dừng" i], button[aria-label*="Hủy" i]');
             const isAgentRunning = stopBtn !== null && stopBtn.offsetParent !== null;
 
             // Quét các tile

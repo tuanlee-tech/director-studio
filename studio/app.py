@@ -17,6 +17,13 @@ from flask import Flask, render_template, jsonify, request, send_from_directory
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS, PUT, DELETE"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    return response
+
 # --- Paths ---
 ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = Path(__file__).parent / "data"
@@ -320,85 +327,207 @@ def api_channels_videos():
     return jsonify({"channels": result})
 
 
-@app.route("/api/video-data/<channel>/<slug>")
-def api_video_data(channel, slug):
-    """Lấy dữ liệu composition và sequences cho Remotion Player."""
+def ensure_master_narration(video_dir: Path, sequences: list, fps: int = 30):
+    """Ghép nối chính xác tất cả audio segments thành một file narration_master.wav duy nhất.
+    Khắc phục triệt để lỗi Windows CreateProcess command-line length limit khi Remotion gọi FFmpeg với hàng chục audio inputs."""
+    audio_dir = video_dir / "audio"
+    if not audio_dir.exists():
+        return None
+    master_path = audio_dir / "narration_master.wav"
+
+    total_frames = sum(s.get("duration_frames", 0) for s in sequences)
+    if total_frames <= 0:
+        return None
+
+    sample_rate = 48000
+    samples_per_frame = sample_rate // fps
+    total_samples = total_frames * samples_per_frame
+    total_bytes = total_samples * 2
+
+    # Kiểm tra xem có file narration nào không
+    has_wavs = any((audio_dir / f"{s.get('scene_id') or s.get('scene')}_narration.wav").exists() for s in sequences)
+    if not has_wavs:
+        return None
+
+    # Nếu master file đã có và kích thước khớp, dùng luôn
+    if master_path.exists() and abs(master_path.stat().st_size - (total_bytes + 44)) < 4000:
+        return master_path
+
+    try:
+        import wave
+        master_buffer = bytearray(total_bytes)
+        for seq in sequences:
+            scene = seq.get("scene_id") or seq.get("scene")
+            start_frame = seq.get("from_frame", seq.get("start_frame", 0))
+            start_sample = start_frame * samples_per_frame
+            start_byte = start_sample * 2
+
+            wav_path = audio_dir / f"{scene}_narration.wav"
+            if wav_path.exists():
+                with wave.open(str(wav_path), "rb") as w:
+                    n_frames = w.getnframes()
+                    frames_data = w.readframes(n_frames)
+                    end_byte = min(start_byte + len(frames_data), total_bytes)
+                    master_buffer[start_byte:end_byte] = frames_data[:end_byte - start_byte]
+
+        with wave.open(str(master_path), "wb") as out_w:
+            out_w.setnchannels(1)
+            out_w.setsampwidth(2)
+            out_w.setframerate(sample_rate)
+            out_w.writeframes(master_buffer)
+        return master_path
+    except Exception as e:
+        print(f"[MasterNarration] Lỗi tạo file master narration: {e}")
+        return None
+
+
+def resolve_bgm_for_channel_slug(channel: str, slug: str, base_url: str = "") -> dict:
+    """Tự động resolve nhạc nền BGM (nhạc nhẹ, không lời) mặc định cho channel hoặc video."""
+    prefix = base_url.rstrip("/") if base_url else ""
+    channel_dir = ROOT_DIR / "channels" / channel
+    ch_config_file = channel_dir / "config.json"
+    ch_config = {}
+    if ch_config_file.exists():
+        try:
+            ch_config = json.loads(ch_config_file.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+
+    default_track = (
+        ch_config.get("default_bgm")
+        or ch_config.get("bgm", {}).get("default_track")
+        or "bgm_calm_lofi.mp3"
+    )
+    default_vol = float(
+        ch_config.get("default_bgm_volume")
+        or ch_config.get("bgm", {}).get("default_volume", 0.10)
+    )
+
+    track_path = channel_dir / "bgm" / default_track
+    if not track_path.exists():
+        track_path = ROOT_DIR / "channels" / "_common" / "bgm" / default_track
+    if not track_path.exists():
+        track_path = ROOT_DIR / "studio" / "remotion" / "public" / "bgm" / default_track
+
+    if not track_path.exists():
+        bgm_folder = channel_dir / "bgm"
+        if bgm_folder.exists():
+            mp3s = list(bgm_folder.glob("*.mp3"))
+            if mp3s:
+                track_path = mp3s[0]
+                default_track = track_path.name
+
+    if track_path.exists():
+        dur_s = 168.0
+        try:
+            out = subprocess.check_output(
+                ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(track_path)],
+                text=True, timeout=5
+            ).strip()
+            dur_s = float(out)
+        except Exception:
+            pass
+
+        return {
+            "bgm_url": f"{prefix}/api/media/{channel}/bgm/{default_track}",
+            "bgm_volume": default_vol,
+            "bgm_duration_seconds": dur_s,
+            "bgm_duration_frames": int(dur_s * 30),
+        }
+    return {}
+
+
+def build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1:3000"):
+    """Tạo cấu trúc VideoCompositionProps hoàn chỉnh cho Remotion Player hoặc Render CLI."""
     video_dir = ROOT_DIR / "channels" / channel / "videos" / slug
     if not video_dir.exists():
-        return jsonify({"status": "error", "message": "Video directory not found"}), 404
+        return None
 
+    prefix = base_url.rstrip("/") if base_url else ""
     comp_file = video_dir / "assets" / "remotion-composition.json"
     if comp_file.exists():
         try:
             data = json.loads(comp_file.read_text(encoding="utf-8"))
-            # Chuẩn hóa URLs để phục vụ qua static API
+            # Lấy lời thoại chuẩn từ broll-plan nếu có
+            scene_narrations = {}
+            broll_file = video_dir / "broll-plan.json"
+            if broll_file.exists():
+                try:
+                    b_data = json.loads(broll_file.read_text(encoding="utf-8"))
+                    b_scenes = b_data.get("scenes", []) if isinstance(b_data, dict) else b_data
+                    for sc in b_scenes:
+                        sid = sc.get("scene_id") or sc.get("scene")
+                        if sid and sc.get("narration"):
+                            scene_narrations[sid] = sc.get("narration")
+                except Exception:
+                    pass
+
+            # Tự động map từ visual_sequences nếu thiếu sequences phẳng
+            if "sequences" not in data and "tracks" in data and "visual_sequences" in data["tracks"]:
+                sequences = []
+                fps = data.get("fps", 30)
+                for item in data["tracks"]["visual_sequences"]:
+                    scene = item.get("scene_id") or item.get("scene", "")
+                    seq_id = item.get("id", "")
+                    seq_type = item.get("type", "IMG")
+                    start_f = item.get("from_frame", 0)
+                    dur_f = item.get("duration_frames", 0)
+                    dur_s = item.get("duration_seconds", dur_f / fps if fps else 0)
+                    desc = item.get("description", "")
+                    props = item.get("props", {}) or {}
+                    src = props.get("src")
+
+                    # Thiết lập thông tin props phong phú cho GFX
+                    if seq_type == "GFX":
+                        if not props.get("title"):
+                            props["title"] = desc
+                        comp_name = item.get("component")
+                        if comp_name == "CounterNumber" and "to" not in props:
+                            if "35%" in desc:
+                                props["label"] = "Lãi Suất Thẻ Tín Dụng"
+                                props["to"] = 35
+                                props["suffix"] = "% / Năm"
+                            elif "1.160.000" in desc:
+                                props["label"] = "Tiền Lãi Bốc Hơi Mỗi Tháng"
+                                props["to"] = 1160000
+                                props["suffix"] = " VNĐ"
+                            elif "60 triệu" in desc:
+                                props["label"] = "Dư Nợ Tăng Vọt (Người A)"
+                                props["to"] = 60000000
+                                props["suffix"] = " VNĐ"
+                            elif "14.000.000" in desc or "1.000.000" in desc:
+                                props["label"] = "Thanh Toán Tối Thiểu"
+                                props["to"] = 1000000
+                                props["suffix"] = " VNĐ"
+
+                    seq = {
+                        "id": seq_id,
+                        "scene": scene,
+                        "beat": desc,
+                        "narration_text": scene_narrations.get(scene, desc),
+                        "type": seq_type,
+                        "start_frame": start_f,
+                        "duration_frames": dur_f,
+                        "duration_seconds": dur_s,
+                        "component": item.get("component"),
+                        "gfx_component": item.get("component") if seq_type == "GFX" else None,
+                        "gfx_props": props,
+                    }
+                    if src:
+                        seq["asset_path"] = f"{prefix}/api/media/{channel}/{slug}/{src.lstrip('/')}"
+                    sequences.append(seq)
+                data["sequences"] = sequences
+
+            # Chuẩn hóa URLs để phục vụ qua static API hoặc Remotion Headless Chromium
             for seq in data.get("sequences", []):
                 scene = seq.get("scene", "")
                 seq_id = seq.get("id", "")
                 # Narration audio
                 audio_file = video_dir / "audio" / f"{scene}_narration.wav"
                 if audio_file.exists():
-                    seq["narration_audio_url"] = f"/api/media/{channel}/{slug}/audio/{scene}_narration.wav"
+                    seq["narration_audio_url"] = f"{prefix}/api/media/{channel}/{slug}/audio/{scene}_narration.wav"
 
-                # Word timings từ Whisper
-                timing_file = video_dir / "audio" / f"{scene}_timing.json"
-                if timing_file.exists() and "words" not in seq:
-                    try:
-                        t_data = json.loads(timing_file.read_text(encoding="utf-8"))
-                        seq["words"] = t_data.get("words", [])
-                    except Exception:
-                        pass
-
-                # Asset path
-                assets_dir = video_dir / "assets"
-                matched_asset = None
-                for ext in [".mp4", ".png", ".jpg", ".webp"]:
-                    candidate = assets_dir / f"{seq_id}{ext}"
-                    if candidate.exists():
-                        matched_asset = f"/api/media/{channel}/{slug}/assets/{seq_id}{ext}"
-                        break
-                    candidate_scene = assets_dir / f"{scene}_{seq.get('type', 'IMG')}{ext}"
-                    if candidate_scene.exists():
-                        matched_asset = f"/api/media/{channel}/{slug}/assets/{candidate_scene.name}"
-                        break
-                if matched_asset:
-                    seq["asset_path"] = matched_asset
-
-            return jsonify({"status": "ok", "composition": data})
-        except Exception as e:
-            return jsonify({"status": "error", "message": f"Error parsing composition: {e}"}), 500
-
-    # Fallback nếu chưa có file remotion-composition.json nhưng có broll-plan
-    broll_file = video_dir / "broll-plan.json"
-    if broll_file.exists():
-        try:
-            broll_data = json.loads(broll_file.read_text(encoding="utf-8"))
-            sequences = []
-            fps = 30
-            current_frame = 0
-            for item in broll_data:
-                dur_s = item.get("duration_seconds", 4)
-                dur_f = int(dur_s * fps)
-                scene = item.get("scene", "S001")
-                seq_id = item.get("broll_id", f"{scene}-A")
-                seq_type = item.get("type", "AIV")
-
-                seq = {
-                    "id": seq_id,
-                    "scene": scene,
-                    "beat": item.get("visual_beat", "Scene Beat"),
-                    "type": seq_type,
-                    "duration_seconds": dur_s,
-                    "duration_frames": dur_f,
-                    "start_frame": current_frame,
-                    "motion_effect": "ken_burns_zoom_in" if seq_type == "IMG" else "static",
-                    "narration_text": item.get("visual_beat", ""),
-                }
-
-                audio_file = video_dir / "audio" / f"{scene}_narration.wav"
-                if audio_file.exists():
-                    seq["narration_audio_url"] = f"/api/media/{channel}/{slug}/audio/{scene}_narration.wav"
-
+                # Word timings chuẩn xác từ timing JSON
                 timing_file = video_dir / "audio" / f"{scene}_timing.json"
                 if timing_file.exists():
                     try:
@@ -406,29 +535,151 @@ def api_video_data(channel, slug):
                         seq["words"] = t_data.get("words", [])
                     except Exception:
                         pass
+                if scene in scene_narrations:
+                    seq["narration_text"] = scene_narrations[scene]
 
-                sequences.append(seq)
-                current_frame += dur_f
+                # Asset path fallback nếu chưa có
+                if not seq.get("asset_path"):
+                    assets_dir = video_dir / "assets"
+                    matched_asset = None
+                    for ext in [".mp4", ".png", ".jpg", ".webp"]:
+                        candidate = assets_dir / f"{seq_id}{ext}"
+                        if candidate.exists():
+                            matched_asset = f"{prefix}/api/media/{channel}/{slug}/assets/{seq_id}{ext}"
+                            break
+                        candidate_scene = assets_dir / f"{scene}_{seq.get('type', 'IMG')}{ext}"
+                        if candidate_scene.exists():
+                            matched_asset = f"{prefix}/api/media/{channel}/{slug}/assets/{candidate_scene.name}"
+                            break
+                    if matched_asset:
+                        seq["asset_path"] = matched_asset
+
+            # Đảm bảo tổng số frames và duration chính xác
+            total_f = sum(s.get("duration_frames", 0) for s in data.get("sequences", []))
+            data["total_frames"] = total_f
+            data["total_duration_seconds"] = total_f / data.get("fps", 30) if data.get("fps", 30) else 0
+
+            # Master audio track ghép chính xác timing các cảnh (tránh lỗi Windows CLI limit khi FFmpeg mux 81 wavs)
+            master_file = ensure_master_narration(video_dir, data.get("sequences", []), data.get("fps", 30))
+            if master_file and master_file.exists():
+                data["master_audio_url"] = f"{prefix}/api/media/{channel}/{slug}/audio/narration_master.wav"
+
+            # Tự động gán BGM mặc định cho channel nếu video chưa có cấu hình riêng
+            if not data.get("bgm_url"):
+                bgm_info = resolve_bgm_for_channel_slug(channel, slug, base_url=base_url)
+                if bgm_info:
+                    data.update(bgm_info)
+
+            return data
+        except Exception as e:
+            print(f"Error parsing remotion-composition.json: {e}")
+            return None
+
+    # Fallback nếu chưa có file remotion-composition.json nhưng có broll-plan
+    broll_file = video_dir / "broll-plan.json"
+    if broll_file.exists():
+        try:
+            broll_data = json.loads(broll_file.read_text(encoding="utf-8"))
+            scenes = broll_data.get("scenes", []) if isinstance(broll_data, dict) else broll_data
+            sequences = []
+            fps = 30
+            current_frame = 0
+            for item in scenes:
+                dur_s = item.get("duration_seconds", 4)
+                dur_f = int(dur_s * fps)
+                scene = item.get("scene_id") or item.get("scene", "S001")
+                brolls = item.get("brolls", [])
+                if brolls:
+                    for b in brolls:
+                        b_dur_s = b.get("duration_s", 4)
+                        b_dur_f = int(b_dur_s * fps)
+                        seq_id = b.get("broll_id", f"{scene}-A")
+                        seq_type = b.get("type", "IMG")
+                        seq = {
+                            "id": seq_id,
+                            "scene": scene,
+                            "beat": b.get("description", "Scene Beat"),
+                            "type": seq_type,
+                            "duration_seconds": b_dur_s,
+                            "duration_frames": b_dur_f,
+                            "start_frame": current_frame,
+                            "motion_effect": "ken_burns_zoom_in" if seq_type == "IMG" else "static",
+                            "narration_text": item.get("narration", ""),
+                        }
+                        audio_file = video_dir / "audio" / f"{scene}_narration.wav"
+                        if audio_file.exists():
+                            seq["narration_audio_url"] = f"{prefix}/api/media/{channel}/{slug}/audio/{scene}_narration.wav"
+                        timing_file = video_dir / "audio" / f"{scene}_timing.json"
+                        if timing_file.exists():
+                            try:
+                                t_data = json.loads(timing_file.read_text(encoding="utf-8"))
+                                seq["words"] = t_data.get("words", [])
+                            except Exception:
+                                pass
+                        sequences.append(seq)
+                        current_frame += b_dur_f
+                else:
+                    seq = {
+                        "id": f"{scene}-A",
+                        "scene": scene,
+                        "beat": item.get("description", "Scene Beat"),
+                        "type": "IMG",
+                        "duration_seconds": dur_s,
+                        "duration_frames": dur_f,
+                        "start_frame": current_frame,
+                        "motion_effect": "ken_burns_zoom_in",
+                        "narration_text": item.get("narration", ""),
+                    }
+                    sequences.append(seq)
+                    current_frame += dur_f
 
             total_s = current_frame / fps
-            return jsonify({
-                "status": "ok",
-                "composition": {
-                    "title": slug,
-                    "slug": slug,
-                    "channel": channel,
-                    "fps": fps,
-                    "width": 1920,
-                    "height": 1080,
-                    "total_duration_seconds": total_s,
-                    "total_frames": current_frame,
-                    "sequences": sequences,
-                }
-            })
+            master_file = ensure_master_narration(video_dir, sequences, fps)
+            master_audio_url = f"{prefix}/api/media/{channel}/{slug}/audio/narration_master.wav" if master_file and master_file.exists() else None
+            bgm_info = resolve_bgm_for_channel_slug(channel, slug, base_url=base_url)
+            ret = {
+                "title": slug,
+                "slug": slug,
+                "channel": channel,
+                "fps": fps,
+                "width": 1920,
+                "height": 1080,
+                "total_duration_seconds": total_s,
+                "total_frames": current_frame,
+                "master_audio_url": master_audio_url,
+                "sequences": sequences,
+            }
+            if bgm_info:
+                ret.update(bgm_info)
+            return ret
         except Exception as e:
-            return jsonify({"status": "error", "message": f"Error parsing broll plan: {e}"}), 500
+            print(f"Error parsing broll plan: {e}")
+            return None
+    return None
 
-    return jsonify({"status": "error", "message": "No composition or broll plan found"}), 404
+
+@app.route("/api/media/<channel>/bgm/<path:filepath>")
+def api_channel_bgm(channel, filepath):
+    """Phục vụ file nhạc nền BGM của channel hoặc fallback chung."""
+    bgm_path = ROOT_DIR / "channels" / channel / "bgm" / filepath
+    if bgm_path.exists():
+        return send_from_directory(str(bgm_path.parent), bgm_path.name)
+    common_path = ROOT_DIR / "channels" / "_common" / "bgm" / filepath
+    if common_path.exists():
+        return send_from_directory(str(common_path.parent), common_path.name)
+    remotion_public = ROOT_DIR / "studio" / "remotion" / "public" / "bgm" / filepath
+    if remotion_public.exists():
+        return send_from_directory(str(remotion_public.parent), remotion_public.name)
+    return jsonify({"status": "error", "message": "BGM file not found"}), 404
+
+
+@app.route("/api/video-data/<channel>/<slug>")
+def api_video_data(channel, slug):
+    """Lấy dữ liệu composition và sequences cho Remotion Player."""
+    data = build_composition_for_channel_slug(channel, slug, base_url="")
+    if data:
+        return jsonify({"status": "ok", "composition": data})
+    return jsonify({"status": "error", "message": "Composition not found"}), 404
 
 
 @app.route("/api/media/<channel>/<slug>/<path:filepath>")
@@ -442,7 +693,7 @@ def api_media(channel, slug, filepath):
 
 
 def _execute_render_task(task_id, channel, slug, fps=30):
-    """Worker chạy tiến trình render Remotion ngầm."""
+    """Worker chạy tiến trình render Remotion ngầm không bị kẹt tiến trình."""
     import re
     import uuid
 
@@ -451,23 +702,26 @@ def _execute_render_task(task_id, channel, slug, fps=30):
     output_file = video_dir / "final_video.mp4"
 
     try:
-        # Lấy composition data
-        comp_file = video_dir / "assets" / "remotion-composition.json"
-        if not comp_file.exists():
-            raise FileNotFoundError(f"Không tìm thấy remotion-composition.json tại {comp_file}")
+        # Lấy composition data đầy đủ với full HTTP URLs cho Remotion Headless Chromium
+        comp_data = build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1:3000")
+        if not comp_data:
+            raise FileNotFoundError(f"Không thể khởi tạo composition data cho {channel}/{slug}")
 
-        comp_data = json.loads(comp_file.read_text(encoding="utf-8"))
-        
         # Tạo file props tạm thời
         temp_props_file = remotion_dir / f"temp_props_{task_id}.json"
         temp_props_file.write_text(json.dumps(comp_data, ensure_ascii=False), encoding="utf-8")
 
+        temp_out_name = f"render_out_{task_id}.mp4"
+        temp_out_file = remotion_dir / temp_out_name
+
         cmd = [
             "npx", "remotion", "render",
             "src/index.ts", "MainVideo",
-            str(output_file),
+            temp_out_name,
             f"--props={temp_props_file.name}",
-            "--overwrite"
+            "--overwrite",
+            "--gl=angle",
+            "--concurrency=4"
         ]
 
         # Windows execution wrapper
@@ -486,30 +740,66 @@ def _execute_render_task(task_id, channel, slug, fps=30):
         with _render_lock:
             _render_tasks[task_id]["pid"] = proc.pid
             _render_tasks[task_id]["status"] = "rendering"
+            _render_tasks[task_id]["progress"] = 1
+            _render_tasks[task_id]["log_line"] = "Bắt đầu bundling và render video qua Remotion..."
 
-        # Đọc tiến độ
+        # Đọc tiến độ với stream chunking (tách cả \r và \n) để không bị treo ở Bundling %
         progress_pattern = re.compile(r"Rendered\s+(\d+)/(\d+)")
+        encoded_pattern = re.compile(r"Encoded\s+(\d+)/(\d+)")
         percent_pattern = re.compile(r"(\d+)%")
 
-        for line in iter(proc.stdout.readline, ""):
-            line_str = line.strip()
-            if not line_str:
-                continue
+        buf = ""
+        recent_logs = []
+        while True:
+            chunk = proc.stdout.read(64)
+            if not chunk:
+                break
+            buf += chunk
+            while "\r" in buf or "\n" in buf:
+                idx_r = buf.find("\r")
+                idx_n = buf.find("\n")
+                if idx_r != -1 and idx_n != -1:
+                    idx = min(idx_r, idx_n)
+                elif idx_r != -1:
+                    idx = idx_r
+                else:
+                    idx = idx_n
+                line_str = buf[:idx].strip()
+                buf = buf[idx + 1:]
+                if not line_str:
+                    continue
 
-            prog_match = progress_pattern.search(line_str)
-            if prog_match:
-                curr, total = int(prog_match.group(1)), int(prog_match.group(2))
-                if total > 0:
-                    pct = min(100, int((curr / total) * 100))
+                recent_logs.append(line_str)
+                if len(recent_logs) > 20:
+                    recent_logs.pop(0)
+
+                prog_match = progress_pattern.search(line_str)
+                if prog_match:
+                    curr, total = int(prog_match.group(1)), int(prog_match.group(2))
+                    if total > 0:
+                        pct = min(100, int((curr / total) * 100))
+                        with _render_lock:
+                            _render_tasks[task_id]["progress"] = pct
+                            _render_tasks[task_id]["log_line"] = f"Rendered {curr}/{total} frames ({pct}%)"
+                    continue
+
+                enc_match = encoded_pattern.search(line_str)
+                if enc_match:
+                    curr, total = int(enc_match.group(1)), int(enc_match.group(2))
                     with _render_lock:
-                        _render_tasks[task_id]["progress"] = pct
-                        _render_tasks[task_id]["log_line"] = line_str
+                        _render_tasks[task_id]["progress"] = 99
+                        _render_tasks[task_id]["log_line"] = f"Đang encode MP4: {curr}/{total} frames"
+                    continue
 
-            pct_match = percent_pattern.search(line_str)
-            if pct_match and not prog_match:
-                with _render_lock:
-                    _render_tasks[task_id]["progress"] = int(pct_match.group(1))
-                    _render_tasks[task_id]["log_line"] = line_str
+                pct_match = percent_pattern.search(line_str)
+                if pct_match:
+                    p_val = int(pct_match.group(1))
+                    with _render_lock:
+                        if "bundl" in line_str.lower():
+                            _render_tasks[task_id]["progress"] = min(15, max(1, int(p_val * 0.15)))
+                            _render_tasks[task_id]["log_line"] = f"Bundling Remotion ({p_val}%)..."
+                        else:
+                            _render_tasks[task_id]["log_line"] = line_str
 
         proc.wait()
 
@@ -520,16 +810,22 @@ def _execute_render_task(task_id, channel, slug, fps=30):
             except Exception:
                 pass
 
-        if proc.returncode == 0 and output_file.exists():
+        if proc.returncode == 0 and temp_out_file.exists():
+            shutil.copy2(temp_out_file, output_file)
+            try:
+                temp_out_file.unlink()
+            except Exception:
+                pass
             with _render_lock:
                 _render_tasks[task_id]["status"] = "done"
                 _render_tasks[task_id]["progress"] = 100
                 _render_tasks[task_id]["video_url"] = f"/api/media/{channel}/{slug}/final_video.mp4"
                 _render_tasks[task_id]["finished_at"] = datetime.now().isoformat()
         else:
+            err_details = " | ".join(recent_logs[-5:]) if recent_logs else "No log output"
             with _render_lock:
                 _render_tasks[task_id]["status"] = "error"
-                _render_tasks[task_id]["error"] = f"Remotion render failed with exit code {proc.returncode}"
+                _render_tasks[task_id]["error"] = f"Remotion render failed with exit code {proc.returncode}. {err_details}"
     except Exception as e:
         with _render_lock:
             _render_tasks[task_id]["status"] = "error"
@@ -576,6 +872,24 @@ def api_render_status(task_id):
     if not task:
         return jsonify({"status": "error", "message": "Task not found"}), 404
     return jsonify(task)
+
+
+@app.route("/api/sync-remotion-props", methods=["POST"])
+def api_sync_remotion_props():
+    """Đồng bộ props của video hiện tại sang studio/remotion/current_props.json cho Remotion Studio Timeline."""
+    data = request.json or {}
+    channel = data.get("channel")
+    slug = data.get("slug")
+    if not channel or not slug:
+        return jsonify({"status": "error", "message": "Missing channel or slug"}), 400
+
+    comp_data = build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1:3000")
+    if not comp_data:
+        return jsonify({"status": "error", "message": "Composition not found"}), 404
+
+    remotion_dir = ROOT_DIR / "studio" / "remotion"
+    (remotion_dir / "current_props.json").write_text(json.dumps(comp_data, ensure_ascii=False), encoding="utf-8")
+    return jsonify({"status": "ok", "message": "Props synced for Remotion Studio Timeline", "sequences_count": len(comp_data.get("sequences", []))})
 
 
 # --- Google Flow Multi-Account Browser Pool & Dispatcher Integration ---

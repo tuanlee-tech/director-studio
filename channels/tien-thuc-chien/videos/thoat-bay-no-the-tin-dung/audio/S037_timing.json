@@ -1,99 +1,90 @@
 {
   "audio_file": "S037_narration.wav",
   "duration_ms": 5120,
-  "word_count": 18,
+  "word_count": 16,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Thế",
+      "word": "Thêm",
       "start_ms": 0,
-      "end_ms": 180
+      "end_ms": 254
     },
     {
-      "word": "mà",
-      "start_ms": 180,
-      "end_ms": 280
+      "word": "vào",
+      "start_ms": 254,
+      "end_ms": 444
     },
     {
       "word": "đó",
-      "start_ms": 280,
-      "end_ms": 460
+      "start_ms": 444,
+      "end_ms": 571
     },
     {
       "word": "là",
-      "start_ms": 460,
-      "end_ms": 660
+      "start_ms": 571,
+      "end_ms": 698
     },
     {
-      "word": "phi",
-      "start_ms": 660,
-      "end_ms": 840
+      "word": "phí",
+      "start_ms": 698,
+      "end_ms": 888
     },
     {
       "word": "phạt",
-      "start_ms": 840,
-      "end_ms": 1100
+      "start_ms": 888,
+      "end_ms": 1142
     },
     {
       "word": "chậm",
-      "start_ms": 1100,
-      "end_ms": 1460
+      "start_ms": 1142,
+      "end_ms": 1396
     },
     {
       "word": "trả",
-      "start_ms": 1460,
-      "end_ms": 1640
+      "start_ms": 1396,
+      "end_ms": 1586
     },
     {
       "word": "từ",
-      "start_ms": 1640,
-      "end_ms": 1800
+      "start_ms": 1586,
+      "end_ms": 1713
     },
     {
-      "word": "4",
-      "start_ms": 1800,
-      "end_ms": 2000
+      "word": "4% - 6%,",
+      "start_ms": 1713,
+      "end_ms": 2791
     },
     {
-      "word": ",6",
-      "start_ms": 2000,
-      "end_ms": 2380
+      "word": "tối",
+      "start_ms": 2791,
+      "end_ms": 2981
     },
     {
-      "word": "%",
-      "start_ms": 2380,
-      "end_ms": 2800
+      "word": "thiểu",
+      "start_ms": 2981,
+      "end_ms": 3298
     },
     {
-      "word": "Tối",
-      "start_ms": 2800,
-      "end_ms": 3320
+      "word": "100.000đ",
+      "start_ms": 3298,
+      "end_ms": 3763
     },
     {
-      "word": "thiệu",
-      "start_ms": 3320,
-      "end_ms": 3540
+      "word": "-",
+      "start_ms": 3763,
+      "end_ms": 4228
     },
     {
-      "word": "100",
-      "start_ms": 3540,
-      "end_ms": 3920
+      "word": "200.000đ",
+      "start_ms": 4228,
+      "end_ms": 4693
     },
     {
-      "word": ",200",
-      "start_ms": 3920,
-      "end_ms": 4500
-    },
-    {
-      "word": ",000",
-      "start_ms": 4500,
-      "end_ms": 4720
-    },
-    {
-      "word": "đồng",
-      "start_ms": 4720,
-      "end_ms": 4960
+      "word": "đồng.",
+      "start_ms": 4693,
+      "end_ms": 4947
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

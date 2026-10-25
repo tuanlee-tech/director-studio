@@ -11,7 +11,7 @@
       "end_ms": 220
     },
     {
-      "word": "từ",
+      "word": "tự",
       "start_ms": 220,
       "end_ms": 340
     },
@@ -26,12 +26,12 @@
       "end_ms": 740
     },
     {
-      "word": "quét",
+      "word": "quẹt",
       "start_ms": 740,
       "end_ms": 940
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 940,
       "end_ms": 1160
     },
@@ -76,7 +76,7 @@
       "end_ms": 3380
     },
     {
-      "word": "minh",
+      "word": "nhưng",
       "start_ms": 3680,
       "end_ms": 3860
     },
@@ -115,5 +115,6 @@
       "start_ms": 4860,
       "end_ms": 5080
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

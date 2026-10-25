@@ -31,7 +31,7 @@
       "end_ms": 1200
     },
     {
-      "word": "bạc",
+      "word": "bạn",
       "start_ms": 1200,
       "end_ms": 1480
     },
@@ -41,17 +41,17 @@
       "end_ms": 1640
     },
     {
-      "word": "chân",
+      "word": "trần",
       "start_ms": 1640,
       "end_ms": 1780
     },
     {
-      "word": "trước",
+      "word": "chiếc",
       "start_ms": 1780,
       "end_ms": 1960
     },
     {
-      "word": "bấy",
+      "word": "bẫy",
       "start_ms": 1960,
       "end_ms": 2140
     },
@@ -78,15 +78,15 @@
     {
       "word": "4",
       "start_ms": 2920,
-      "end_ms": 3140
+      "end_ms": 3120
     },
     {
       "word": "bước",
-      "start_ms": 3140,
+      "start_ms": 3120,
       "end_ms": 3320
     },
     {
-      "word": "củ",
+      "word": "cụ",
       "start_ms": 3320,
       "end_ms": 3480
     },
@@ -111,14 +111,15 @@
       "end_ms": 4360
     },
     {
-      "word": "nợn",
+      "word": "nợ",
       "start_ms": 4360,
       "end_ms": 4580
     },
     {
-      "word": "ẩn.",
+      "word": "nần.",
       "start_ms": 4580,
       "end_ms": 4740
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

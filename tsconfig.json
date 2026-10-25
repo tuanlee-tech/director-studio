@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "studio/remotion/node_modules/*"]
+    }
+  },
+  "include": [
+    "channels/**/template/**/*",
+    "studio/remotion/src/**/*",
+    "studio/remotion/remotion.config.ts"
+  ]
+}

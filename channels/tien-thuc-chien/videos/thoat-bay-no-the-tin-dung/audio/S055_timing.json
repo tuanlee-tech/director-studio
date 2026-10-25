@@ -41,7 +41,7 @@
       "end_ms": 1480
     },
     {
-      "word": "chấm",
+      "word": "chấp",
       "start_ms": 1480,
       "end_ms": 1700
     },
@@ -76,7 +76,7 @@
       "end_ms": 2900
     },
     {
-      "word": "nước",
+      "word": "đứt",
       "start_ms": 2900,
       "end_ms": 2980
     },
@@ -91,24 +91,25 @@
       "end_ms": 3460
     },
     {
-      "word": "mềm",
+      "word": "mầm",
       "start_ms": 3460,
       "end_ms": 3660
     },
     {
-      "word": "mẫu",
+      "word": "mống",
       "start_ms": 3660,
       "end_ms": 3800
     },
     {
-      "word": "nội",
+      "word": "nợ",
       "start_ms": 3800,
       "end_ms": 3920
     },
     {
-      "word": "nền.",
+      "word": "nần.",
       "start_ms": 3920,
       "end_ms": 4140
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

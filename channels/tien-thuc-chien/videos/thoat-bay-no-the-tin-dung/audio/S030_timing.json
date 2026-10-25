@@ -81,7 +81,7 @@
       "end_ms": 2960
     },
     {
-      "word": "nhiên",
+      "word": "yên,",
       "start_ms": 2960,
       "end_ms": 3180
     },
@@ -120,5 +120,6 @@
       "start_ms": 4660,
       "end_ms": 4880
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

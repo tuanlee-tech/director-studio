@@ -1,17 +1,17 @@
 {
   "audio_file": "S029_narration.wav",
   "duration_ms": 4640,
-  "word_count": 22,
+  "word_count": 21,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "khoảng",
+      "word": "Khoản",
       "start_ms": 0,
       "end_ms": 200
     },
     {
-      "word": "thân",
+      "word": "thanh",
       "start_ms": 200,
       "end_ms": 380
     },
@@ -21,7 +21,7 @@
       "end_ms": 600
     },
     {
-      "word": "tới",
+      "word": "tối",
       "start_ms": 600,
       "end_ms": 740
     },
@@ -31,13 +31,8 @@
       "end_ms": 960
     },
     {
-      "word": "5",
+      "word": "5%",
       "start_ms": 960,
-      "end_ms": 1220
-    },
-    {
-      "word": "%",
-      "start_ms": 1220,
       "end_ms": 1540
     },
     {
@@ -86,7 +81,7 @@
       "end_ms": 3580
     },
     {
-      "word": "bụ",
+      "word": "bù",
       "start_ms": 3580,
       "end_ms": 3740
     },
@@ -106,7 +101,7 @@
       "end_ms": 4160
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 4160,
       "end_ms": 4260
     },
@@ -115,5 +110,6 @@
       "start_ms": 4260,
       "end_ms": 4440
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

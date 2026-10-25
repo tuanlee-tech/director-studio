@@ -23,11 +23,11 @@
     {
       "word": "4",
       "start_ms": 540,
-      "end_ms": 640
+      "end_ms": 690
     },
     {
       "word": "triệu",
-      "start_ms": 640,
+      "start_ms": 690,
       "end_ms": 840
     },
     {
@@ -56,13 +56,13 @@
       "end_ms": 1980
     },
     {
-      "word": "người",
+      "word": "10",
       "start_ms": 1980,
-      "end_ms": 2100
+      "end_ms": 2180
     },
     {
-      "word": "tháng",
-      "start_ms": 2100,
+      "word": "tháng,",
+      "start_ms": 2180,
       "end_ms": 2380
     },
     {
@@ -105,5 +105,6 @@
       "start_ms": 3940,
       "end_ms": 4200
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

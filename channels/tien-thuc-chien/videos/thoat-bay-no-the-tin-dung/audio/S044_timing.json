@@ -18,21 +18,21 @@
     {
       "word": "12",
       "start_ms": 380,
-      "end_ms": 600
+      "end_ms": 650
     },
     {
       "word": "triệu,",
-      "start_ms": 600,
+      "start_ms": 650,
       "end_ms": 920
     },
     {
       "word": "40",
       "start_ms": 1280,
-      "end_ms": 1440
+      "end_ms": 1480
     },
     {
       "word": "triệu",
-      "start_ms": 1440,
+      "start_ms": 1480,
       "end_ms": 1680
     },
     {
@@ -46,7 +46,7 @@
       "end_ms": 2040
     },
     {
-      "word": "đơn",
+      "word": "đương",
       "start_ms": 2040,
       "end_ms": 2160
     },
@@ -56,7 +56,7 @@
       "end_ms": 2340
     },
     {
-      "word": "3",
+      "word": "ba",
       "start_ms": 2340,
       "end_ms": 2580
     },
@@ -85,5 +85,6 @@
       "start_ms": 3260,
       "end_ms": 3440
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

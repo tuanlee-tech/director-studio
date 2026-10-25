@@ -18,6 +18,14 @@
   "hook_aiv_duration_seconds": 30,
   "body_asset_priority": ["GFX", "IMG", "AIV"],
   "remotion_enabled": true,
+  "default_bgm": "bgm_calm_lofi.mp3",
+  "default_bgm_volume": 0.10,
+  "bgm": {
+    "enabled": true,
+    "default_track": "bgm_calm_lofi.mp3",
+    "default_volume": 0.10,
+    "description": "Nhạc nền lo-fi nhẹ nhàng, không lời cho kênh Tiền Thực Chiến"
+  },
   "style_locked": true,
   "style_lock": "2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism.",
   "negative_list": [

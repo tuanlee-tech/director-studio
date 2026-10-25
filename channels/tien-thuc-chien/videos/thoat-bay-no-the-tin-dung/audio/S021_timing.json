@@ -41,7 +41,7 @@
       "end_ms": 1240
     },
     {
-      "word": "hiện,",
+      "word": "hiện",
       "start_ms": 1240,
       "end_ms": 1420
     },
@@ -61,17 +61,17 @@
       "end_ms": 2440
     },
     {
-      "word": "tìm",
+      "word": "tin",
       "start_ms": 2440,
       "end_ms": 2640
     },
     {
-      "word": "nhận",
+      "word": "nhắn",
       "start_ms": 2640,
       "end_ms": 2780
     },
     {
-      "word": "bao",
+      "word": "báo",
       "start_ms": 2780,
       "end_ms": 2900
     },
@@ -111,7 +111,7 @@
       "end_ms": 4860
     },
     {
-      "word": "tiến",
+      "word": "tín",
       "start_ms": 4860,
       "end_ms": 5000
     },
@@ -120,5 +120,6 @@
       "start_ms": 5000,
       "end_ms": 5260
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

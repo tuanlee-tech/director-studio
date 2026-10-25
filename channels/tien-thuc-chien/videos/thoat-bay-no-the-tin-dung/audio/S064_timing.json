@@ -6,7 +6,7 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "2",
+      "word": "Hãy",
       "start_ms": 0,
       "end_ms": 200
     },
@@ -16,12 +16,12 @@
       "end_ms": 420
     },
     {
-      "word": "kiểu",
+      "word": "kéo",
       "start_ms": 420,
       "end_ms": 580
     },
     {
-      "word": "cách",
+      "word": "cắt",
       "start_ms": 580,
       "end_ms": 780
     },
@@ -31,12 +31,12 @@
       "end_ms": 1020
     },
     {
-      "word": "trước",
+      "word": "chiếc",
       "start_ms": 1020,
       "end_ms": 1160
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 1160,
       "end_ms": 1380
     },
@@ -46,7 +46,7 @@
       "end_ms": 1540
     },
     {
-      "word": "lý,",
+      "word": "lý",
       "start_ms": 1540,
       "end_ms": 1760
     },
@@ -66,7 +66,7 @@
       "end_ms": 2640
     },
     {
-      "word": "và",
+      "word": "vào",
       "start_ms": 2640,
       "end_ms": 2800
     },
@@ -86,7 +86,7 @@
       "end_ms": 3380
     },
     {
-      "word": "lây",
+      "word": "lấy",
       "start_ms": 3380,
       "end_ms": 3500
     },
@@ -95,5 +95,6 @@
       "start_ms": 3500,
       "end_ms": 3700
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

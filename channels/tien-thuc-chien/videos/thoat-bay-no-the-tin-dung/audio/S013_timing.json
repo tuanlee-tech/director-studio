@@ -16,17 +16,17 @@
       "end_ms": 300
     },
     {
-      "word": "thang",
+      "word": "thanh",
       "start_ms": 300,
       "end_ms": 480
     },
     {
-      "word": "tỏa",
+      "word": "toán",
       "start_ms": 480,
       "end_ms": 620
     },
     {
-      "word": "tồn",
+      "word": "toàn",
       "start_ms": 620,
       "end_ms": 920
     },
@@ -56,17 +56,17 @@
       "end_ms": 2200
     },
     {
-      "word": "chứ",
+      "word": "chữ",
       "start_ms": 2200,
       "end_ms": 2400
     },
     {
-      "word": "kiểu",
+      "word": "cứu",
       "start_ms": 2400,
       "end_ms": 2620
     },
     {
-      "word": "cảnh",
+      "word": "cánh",
       "start_ms": 2620,
       "end_ms": 2860
     },
@@ -76,7 +76,7 @@
       "end_ms": 3100
     },
     {
-      "word": "sang,",
+      "word": "xanh:",
       "start_ms": 3100,
       "end_ms": 3240
     },
@@ -91,12 +91,12 @@
       "end_ms": 3940
     },
     {
-      "word": "thang",
+      "word": "thanh",
       "start_ms": 3940,
       "end_ms": 4059
     },
     {
-      "word": "tỏa",
+      "word": "toán",
       "start_ms": 4059,
       "end_ms": 4340
     },
@@ -106,9 +106,10 @@
       "end_ms": 4640
     },
     {
-      "word": "thiệu.",
+      "word": "thiểu.",
       "start_ms": 4640,
       "end_ms": 4900
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

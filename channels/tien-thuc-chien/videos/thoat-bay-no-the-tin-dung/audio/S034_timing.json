@@ -21,17 +21,17 @@
       "end_ms": 540
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 940,
       "end_ms": 1000
     },
     {
-      "word": "kẹp",
+      "word": "kép",
       "start_ms": 1000,
       "end_ms": 1200
     },
     {
-      "word": "súng",
+      "word": "giúp",
       "start_ms": 1200,
       "end_ms": 1300
     },
@@ -46,7 +46,7 @@
       "end_ms": 1580
     },
     {
-      "word": "tại",
+      "word": "tài",
       "start_ms": 1580,
       "end_ms": 1780
     },
@@ -106,12 +106,12 @@
       "end_ms": 4220
     },
     {
-      "word": "nốt",
+      "word": "nuốt",
       "start_ms": 4220,
       "end_ms": 4420
     },
     {
-      "word": "trường",
+      "word": "chửng",
       "start_ms": 4420,
       "end_ms": 4640
     },
@@ -125,5 +125,6 @@
       "start_ms": 4820,
       "end_ms": 5000
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

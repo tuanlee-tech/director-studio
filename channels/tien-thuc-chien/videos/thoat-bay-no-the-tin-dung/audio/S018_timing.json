@@ -73,11 +73,11 @@
     {
       "word": "15",
       "start_ms": 2720,
-      "end_ms": 2980
+      "end_ms": 3020
     },
     {
       "word": "triệu",
-      "start_ms": 2980,
+      "start_ms": 3020,
       "end_ms": 3320
     },
     {
@@ -88,11 +88,11 @@
     {
       "word": "40",
       "start_ms": 3460,
-      "end_ms": 3680
+      "end_ms": 3730
     },
     {
       "word": "triệu",
-      "start_ms": 3680,
+      "start_ms": 3730,
       "end_ms": 4000
     },
     {
@@ -100,5 +100,6 @@
       "start_ms": 4000,
       "end_ms": 4200
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

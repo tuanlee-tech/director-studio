@@ -11,7 +11,7 @@
       "end_ms": 200
     },
     {
-      "word": "dưới",
+      "word": "giữ",
       "start_ms": 200,
       "end_ms": 400
     },
@@ -86,7 +86,7 @@
       "end_ms": 3260
     },
     {
-      "word": "sấu",
+      "word": "xấu",
       "start_ms": 3260,
       "end_ms": 3500
     },
@@ -96,7 +96,7 @@
       "end_ms": 3580
     },
     {
-      "word": "cống",
+      "word": "thống",
       "start_ms": 3580,
       "end_ms": 3740
     },
@@ -110,5 +110,6 @@
       "start_ms": 3840,
       "end_ms": 4160
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

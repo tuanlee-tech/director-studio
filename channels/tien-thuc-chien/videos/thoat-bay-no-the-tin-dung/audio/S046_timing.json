@@ -1,89 +1,95 @@
 {
   "audio_file": "S046_narration.wav",
   "duration_ms": 3920,
-  "word_count": 16,
+  "word_count": 17,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Điểm",
       "start_ms": 0,
-      "end_ms": 220
+      "end_ms": 287
     },
     {
-      "word": "tinh",
-      "start_ms": 220,
-      "end_ms": 380
+      "word": "tín",
+      "start_ms": 287,
+      "end_ms": 502
     },
     {
       "word": "dụng",
-      "start_ms": 380,
-      "end_ms": 600
+      "start_ms": 502,
+      "end_ms": 789
     },
     {
-      "word": "sấu",
-      "start_ms": 600,
-      "end_ms": 840
+      "word": "xấu",
+      "start_ms": 789,
+      "end_ms": 1004
     },
     {
       "word": "sẽ",
-      "start_ms": 840,
-      "end_ms": 1000
+      "start_ms": 1004,
+      "end_ms": 1147
     },
     {
       "word": "đóng",
-      "start_ms": 1000,
-      "end_ms": 1220
+      "start_ms": 1147,
+      "end_ms": 1434
     },
     {
-      "word": "sắp",
-      "start_ms": 1220,
-      "end_ms": 1460
+      "word": "sập",
+      "start_ms": 1434,
+      "end_ms": 1649
     },
     {
       "word": "mọi",
-      "start_ms": 1460,
-      "end_ms": 1580
+      "start_ms": 1649,
+      "end_ms": 1864
     },
     {
       "word": "cơ",
-      "start_ms": 1580,
-      "end_ms": 1840
+      "start_ms": 1864,
+      "end_ms": 2007
     },
     {
       "word": "hội",
-      "start_ms": 1840,
-      "end_ms": 2020
+      "start_ms": 2007,
+      "end_ms": 2222
     },
     {
-      "word": "vài",
-      "start_ms": 2020,
-      "end_ms": 2260
+      "word": "vay",
+      "start_ms": 2222,
+      "end_ms": 2437
     },
     {
       "word": "vốn",
-      "start_ms": 2260,
-      "end_ms": 2480
+      "start_ms": 2437,
+      "end_ms": 2652
     },
     {
       "word": "làm",
-      "start_ms": 2480,
-      "end_ms": 2640
+      "start_ms": 2652,
+      "end_ms": 2867
     },
     {
       "word": "ăn",
-      "start_ms": 2640,
-      "end_ms": 2840
+      "start_ms": 2867,
+      "end_ms": 3010
     },
     {
-      "word": "20",
-      "start_ms": 2840,
-      "end_ms": 3380
+      "word": "hay",
+      "start_ms": 3010,
+      "end_ms": 3225
+    },
+    {
+      "word": "mua",
+      "start_ms": 3225,
+      "end_ms": 3440
     },
     {
       "word": "nhà.",
-      "start_ms": 3380,
-      "end_ms": 3660
+      "start_ms": 3440,
+      "end_ms": 3655
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

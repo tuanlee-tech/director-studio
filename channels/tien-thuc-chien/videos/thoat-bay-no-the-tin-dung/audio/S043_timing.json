@@ -6,12 +6,12 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Toàn",
+      "word": "Toán",
       "start_ms": 0,
       "end_ms": 200
     },
     {
-      "word": "hợp",
+      "word": "học",
       "start_ms": 200,
       "end_ms": 320
     },
@@ -46,7 +46,7 @@
       "end_ms": 1240
     },
     {
-      "word": "rồi,",
+      "word": "dối,",
       "start_ms": 1240,
       "end_ms": 1460
     },
@@ -106,14 +106,15 @@
       "end_ms": 3980
     },
     {
-      "word": "mua",
+      "word": "mù",
       "start_ms": 3980,
       "end_ms": 4240
     },
     {
-      "word": "quán.",
+      "word": "quáng.",
       "start_ms": 4240,
       "end_ms": 4440
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

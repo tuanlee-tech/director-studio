@@ -31,7 +31,7 @@
       "end_ms": 900
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 900,
       "end_ms": 1000
     },
@@ -46,12 +46,12 @@
       "end_ms": 1740
     },
     {
-      "word": "truyền",
+      "word": "chuyển",
       "start_ms": 1740,
       "end_ms": 1920
     },
     {
-      "word": "sáng",
+      "word": "sang",
       "start_ms": 1920,
       "end_ms": 2120
     },
@@ -61,7 +61,7 @@
       "end_ms": 2340
     },
     {
-      "word": "tiêm",
+      "word": "tiền",
       "start_ms": 2340,
       "end_ms": 2540
     },
@@ -113,12 +113,13 @@
     {
       "word": "10",
       "start_ms": 4400,
-      "end_ms": 4560
+      "end_ms": 4630
     },
     {
       "word": "tháng.",
-      "start_ms": 4560,
+      "start_ms": 4630,
       "end_ms": 4860
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

@@ -16,12 +16,12 @@
       "end_ms": 400
     },
     {
-      "word": "chuẩn",
+      "word": "trốn",
       "start_ms": 400,
       "end_ms": 620
     },
     {
-      "word": "tranh",
+      "word": "tránh",
       "start_ms": 620,
       "end_ms": 820
     },
@@ -41,7 +41,7 @@
       "end_ms": 1360
     },
     {
-      "word": "được",
+      "word": "nợ",
       "start_ms": 1360,
       "end_ms": 1480
     },
@@ -71,7 +71,7 @@
       "end_ms": 2820
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 2820,
       "end_ms": 2980
     },
@@ -81,12 +81,12 @@
       "end_ms": 3140
     },
     {
-      "word": "để",
+      "word": "đẻ",
       "start_ms": 3140,
       "end_ms": 3340
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 3340,
       "end_ms": 3560
     },
@@ -96,7 +96,7 @@
       "end_ms": 3760
     },
     {
-      "word": "nhân",
+      "word": "nhanh",
       "start_ms": 3760,
       "end_ms": 3900
     },
@@ -105,5 +105,6 @@
       "start_ms": 3900,
       "end_ms": 4100
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

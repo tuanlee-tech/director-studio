@@ -11,12 +11,12 @@
       "end_ms": 280
     },
     {
-      "word": "4,",
+      "word": "bốn:",
       "start_ms": 280,
       "end_ms": 480
     },
     {
-      "word": "thiên",
+      "word": "Thiết",
       "start_ms": 800,
       "end_ms": 920
     },
@@ -26,7 +26,7 @@
       "end_ms": 1040
     },
     {
-      "word": "quý",
+      "word": "quỹ",
       "start_ms": 1040,
       "end_ms": 1220
     },
@@ -36,23 +36,23 @@
       "end_ms": 1400
     },
     {
-      "word": "Trop",
+      "word": "cấp",
       "start_ms": 1400,
       "end_ms": 1560
     },
     {
-      "word": "Mini",
+      "word": "mini",
       "start_ms": 1560,
       "end_ms": 1720
     },
     {
       "word": "2",
       "start_ms": 1720,
-      "end_ms": 2000
+      "end_ms": 1950
     },
     {
       "word": "triệu",
-      "start_ms": 2000,
+      "start_ms": 1950,
       "end_ms": 2180
     },
     {
@@ -86,12 +86,12 @@
       "end_ms": 3220
     },
     {
-      "word": "quét",
+      "word": "quẹt",
       "start_ms": 3220,
       "end_ms": 3400
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 3400,
       "end_ms": 3560
     },
@@ -105,5 +105,6 @@
       "start_ms": 3780,
       "end_ms": 3960
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

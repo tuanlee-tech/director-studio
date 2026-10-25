@@ -31,7 +31,7 @@
       "end_ms": 820
     },
     {
-      "word": "bé",
+      "word": "bề",
       "start_ms": 820,
       "end_ms": 920
     },
@@ -46,7 +46,7 @@
       "end_ms": 1660
     },
     {
-      "word": "ca",
+      "word": "cà",
       "start_ms": 1660,
       "end_ms": 1820
     },
@@ -61,12 +61,12 @@
       "end_ms": 2160
     },
     {
-      "word": "một",
+      "word": "mua",
       "start_ms": 2160,
       "end_ms": 2300
     },
     {
-      "word": "sảm",
+      "word": "sắm",
       "start_ms": 2300,
       "end_ms": 2600
     },
@@ -81,7 +81,7 @@
       "end_ms": 2940
     },
     {
-      "word": "xuyên",
+      "word": "suy",
       "start_ms": 2940,
       "end_ms": 3120
     },
@@ -90,5 +90,6 @@
       "start_ms": 3120,
       "end_ms": 3240
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

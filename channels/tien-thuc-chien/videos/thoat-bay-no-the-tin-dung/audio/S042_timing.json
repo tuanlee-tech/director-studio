@@ -11,13 +11,18 @@
       "end_ms": 260
     },
     {
-      "word": "90",
+      "word": "chi",
       "start_ms": 260,
       "end_ms": 420
     },
     {
-      "word": "%",
+      "word": "mười",
       "start_ms": 420,
+      "end_ms": 580
+    },
+    {
+      "word": "triệu",
+      "start_ms": 580,
       "end_ms": 740
     },
     {
@@ -41,13 +46,8 @@
       "end_ms": 1400
     },
     {
-      "word": "100",
+      "word": "100.000đ",
       "start_ms": 1400,
-      "end_ms": 1800
-    },
-    {
-      "word": ".000",
-      "start_ms": 1800,
       "end_ms": 2080
     },
     {
@@ -101,7 +101,7 @@
       "end_ms": 4460
     },
     {
-      "word": "chịu",
+      "word": "triệu",
       "start_ms": 4460,
       "end_ms": 4680
     },
@@ -110,5 +110,6 @@
       "start_ms": 4680,
       "end_ms": 4860
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

@@ -1,7 +1,26 @@
 import React from "react";
-import { Composition } from "remotion";
-import { VideoComposition } from "./VideoComposition";
+import { Composition, Still } from "remotion";
+import { VideoComposition as DefaultComposition } from "./VideoComposition";
+import { VideoComposition as TienThucChienComposition } from "../../../channels/tien-thuc-chien/template";
+import { VideoComposition as StarterComposition } from "../../../channels/_template_starter";
+import { Thumbnail } from "../../../channels/tien-thuc-chien/template/components/Thumbnail";
+import { ThumbnailMaster } from "../../../channels/tien-thuc-chien/template/components/ThumbnailMaster";
 import { VideoCompositionProps } from "./types";
+import { loadFont } from "@remotion/google-fonts/BeVietnamPro";
+
+loadFont("normal", {
+  weights: ["400", "600", "700", "800", "900"],
+  subsets: ["vietnamese", "latin"],
+  ignoreTooManyRequestsWarning: true,
+});
+
+const ChannelVideoRouter: React.FC<any> = (props) => {
+  const ch = (props?.channel || "tien-thuc-chien").toLowerCase();
+  if (ch === "tien-thuc-chien") {
+    return <TienThucChienComposition {...props} />;
+  }
+  return <StarterComposition {...props} />;
+};
 
 const defaultProps: VideoCompositionProps = {
   title: "Video Director Composition",
@@ -12,7 +31,9 @@ const defaultProps: VideoCompositionProps = {
   height: 1080,
   total_duration_seconds: 14,
   total_frames: 420,
+  bgm_url: "bgm/bgm_calm_lofi.mp3",
   bgm_volume: 0.1,
+  bgm_duration_frames: 5040,
   sequences: [
     {
       id: "S001-A",
@@ -77,23 +98,33 @@ const defaultProps: VideoCompositionProps = {
   ],
 };
 
+let initialProps = defaultProps;
+try {
+  const current = require("../current_props.json");
+  if (current && current.sequences && current.sequences.length > 0) {
+    initialProps = current;
+  }
+} catch (e) {
+  // fallback to defaultProps
+}
+
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
         id="MainVideo"
-        component={VideoComposition as any}
-        durationInFrames={420}
+        component={ChannelVideoRouter as any}
+        durationInFrames={12270}
         fps={30}
         width={1920}
         height={1080}
-        defaultProps={defaultProps as any}
+        defaultProps={initialProps as any}
         calculateMetadata={({ props }: any) => {
           const totalFrames =
             props?.total_frames ||
             (props?.sequences && props.sequences.length > 0
               ? props.sequences.reduce((sum: number, s: any) => sum + s.duration_frames, 0)
-              : 420);
+              : 12270);
           return {
             durationInFrames: Math.max(totalFrames, 30),
             fps: props?.fps || 30,
@@ -101,6 +132,42 @@ export const RemotionRoot: React.FC = () => {
             height: props?.height || 1080,
           };
         }}
+      />
+      <Composition
+        id="tien-thuc-chien"
+        component={TienThucChienComposition as any}
+        durationInFrames={12270}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={initialProps as any}
+      />
+      <Composition
+        id="demo-channel"
+        component={StarterComposition as any}
+        durationInFrames={12270}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={initialProps as any}
+      />
+      <Still
+        id="Thumbnail"
+        component={Thumbnail}
+        width={1920}
+        height={1080}
+      />
+      <Still
+        id="Thumbnail-720p"
+        component={Thumbnail}
+        width={1280}
+        height={720}
+      />
+      <Still
+        id="ThumbnailMaster"
+        component={ThumbnailMaster as any}
+        width={1920}
+        height={1080}
       />
     </>
   );

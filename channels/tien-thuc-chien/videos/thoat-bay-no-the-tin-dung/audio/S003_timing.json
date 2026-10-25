@@ -16,17 +16,17 @@
       "end_ms": 400
     },
     {
-      "word": "rất",
+      "word": "giật",
       "start_ms": 400,
       "end_ms": 560
     },
     {
-      "word": "gồ",
+      "word": "gấu",
       "start_ms": 560,
       "end_ms": 780
     },
     {
-      "word": "và",
+      "word": "vá",
       "start_ms": 780,
       "end_ms": 940
     },
@@ -36,7 +36,7 @@
       "end_ms": 1200
     },
     {
-      "word": "bạc",
+      "word": "bạn",
       "start_ms": 1620,
       "end_ms": 1760
     },
@@ -56,17 +56,17 @@
       "end_ms": 2220
     },
     {
-      "word": "chức",
+      "word": "chiếc",
       "start_ms": 2220,
       "end_ms": 2440
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 2440,
       "end_ms": 2560
     },
     {
-      "word": "tính",
+      "word": "tín",
       "start_ms": 2560,
       "end_ms": 2820
     },
@@ -86,7 +86,7 @@
       "end_ms": 3340
     },
     {
-      "word": "chức",
+      "word": "chiếc",
       "start_ms": 3340,
       "end_ms": 3600
     },
@@ -96,7 +96,7 @@
       "end_ms": 3740
     },
     {
-      "word": "nèo",
+      "word": "neo",
       "start_ms": 3740,
       "end_ms": 4000
     },
@@ -106,7 +106,7 @@
       "end_ms": 4220
     },
     {
-      "word": "chim",
+      "word": "chìm",
       "start_ms": 4220,
       "end_ms": 4380
     },
@@ -120,5 +120,6 @@
       "start_ms": 4540,
       "end_ms": 4800
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

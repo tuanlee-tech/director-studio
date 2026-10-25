@@ -26,12 +26,12 @@
       "end_ms": 680
     },
     {
-      "word": "bấy",
+      "word": "bẫy",
       "start_ms": 680,
       "end_ms": 840
     },
     {
-      "word": "năng",
+      "word": "nâng",
       "start_ms": 840,
       "end_ms": 1020
     },
@@ -61,12 +61,12 @@
       "end_ms": 2020
     },
     {
-      "word": "yêu",
+      "word": "ưu",
       "start_ms": 2020,
       "end_ms": 2160
     },
     {
-      "word": "đại",
+      "word": "đãi",
       "start_ms": 2160,
       "end_ms": 2360
     },
@@ -81,14 +81,15 @@
       "end_ms": 2780
     },
     {
-      "word": "ý",
+      "word": "ít",
       "start_ms": 2780,
       "end_ms": 2920
     },
     {
-      "word": "tòi.",
+      "word": "ỏi.",
       "start_ms": 2920,
       "end_ms": 3220
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

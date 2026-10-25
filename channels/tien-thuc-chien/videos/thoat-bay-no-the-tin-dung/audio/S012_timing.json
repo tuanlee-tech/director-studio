@@ -6,12 +6,12 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Mất",
+      "word": "Bạn",
       "start_ms": 0,
       "end_ms": 260
     },
     {
-      "word": "mắt",
+      "word": "bắt",
       "start_ms": 260,
       "end_ms": 340
     },
@@ -41,7 +41,7 @@
       "end_ms": 1220
     },
     {
-      "word": "đèn",
+      "word": "đè",
       "start_ms": 1220,
       "end_ms": 1360
     },
@@ -61,7 +61,7 @@
       "end_ms": 2080
     },
     {
-      "word": "khoản,",
+      "word": "khoản",
       "start_ms": 2080,
       "end_ms": 2340
     },
@@ -81,9 +81,10 @@
       "end_ms": 3000
     },
     {
-      "word": "ngay.",
+      "word": "ngày.",
       "start_ms": 3000,
       "end_ms": 3200
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

@@ -16,7 +16,7 @@
       "end_ms": 380
     },
     {
-      "word": "trạm",
+      "word": "chạm",
       "start_ms": 380,
       "end_ms": 600
     },
@@ -31,7 +31,7 @@
       "end_ms": 880
     },
     {
-      "word": "thoại,",
+      "word": "thoại",
       "start_ms": 880,
       "end_ms": 1100
     },
@@ -41,12 +41,12 @@
       "end_ms": 1620
     },
     {
-      "word": "quệt",
+      "word": "quẹt",
       "start_ms": 1620,
       "end_ms": 1760
     },
     {
-      "word": "thể",
+      "word": "thẻ",
       "start_ms": 1760,
       "end_ms": 1940
     },
@@ -66,7 +66,7 @@
       "end_ms": 2500
     },
     {
-      "word": "dây,",
+      "word": "giây,",
       "start_ms": 2500,
       "end_ms": 2740
     },
@@ -81,12 +81,12 @@
       "end_ms": 3480
     },
     {
-      "word": "quá",
+      "word": "quả",
       "start_ms": 3480,
       "end_ms": 3580
     },
     {
-      "word": "ta",
+      "word": "tài",
       "start_ms": 3580,
       "end_ms": 3720
     },
@@ -115,5 +115,6 @@
       "start_ms": 4460,
       "end_ms": 4680
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

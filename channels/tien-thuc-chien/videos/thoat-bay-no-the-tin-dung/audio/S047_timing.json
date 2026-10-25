@@ -26,7 +26,7 @@
       "end_ms": 1060
     },
     {
-      "word": "dân",
+      "word": "dứt",
       "start_ms": 1060,
       "end_ms": 1240
     },
@@ -41,7 +41,7 @@
       "end_ms": 1660
     },
     {
-      "word": "nữa",
+      "word": "nợ",
       "start_ms": 1660,
       "end_ms": 1780
     },
@@ -66,17 +66,17 @@
       "end_ms": 2560
     },
     {
-      "word": "tiếp",
+      "word": "tiết",
       "start_ms": 2560,
       "end_ms": 2740
     },
     {
-      "word": "tìm",
+      "word": "kiệm",
       "start_ms": 2740,
       "end_ms": 2880
     },
     {
-      "word": "tìm,",
+      "word": "tiền,",
       "start_ms": 2880,
       "end_ms": 3060
     },
@@ -111,7 +111,7 @@
       "end_ms": 4420
     },
     {
-      "word": "tại",
+      "word": "tài",
       "start_ms": 4420,
       "end_ms": 4460
     },
@@ -120,5 +120,6 @@
       "start_ms": 4460,
       "end_ms": 4700
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

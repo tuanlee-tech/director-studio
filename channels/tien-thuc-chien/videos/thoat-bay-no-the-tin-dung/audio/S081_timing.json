@@ -11,12 +11,12 @@
       "end_ms": 220
     },
     {
-      "word": "diễn",
+      "word": "yên",
       "start_ms": 220,
       "end_ms": 340
     },
     {
-      "word": "tại",
+      "word": "tài",
       "start_ms": 340,
       "end_ms": 460
     },
@@ -90,5 +90,6 @@
       "start_ms": 3360,
       "end_ms": 3600
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

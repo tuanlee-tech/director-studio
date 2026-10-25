@@ -6,7 +6,7 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Lò",
+      "word": "Đó",
       "start_ms": 0,
       "end_ms": 200
     },
@@ -61,24 +61,25 @@
       "end_ms": 2020
     },
     {
-      "word": "8,",
+      "word": "tám:",
       "start_ms": 2020,
       "end_ms": 2300
     },
     {
-      "word": "lại",
+      "word": "lãi",
       "start_ms": 2640,
       "end_ms": 2740
     },
     {
-      "word": "cắm",
+      "word": "kép",
       "start_ms": 2740,
       "end_ms": 2960
     },
     {
-      "word": "hưởng.",
+      "word": "ngược.",
       "start_ms": 2960,
       "end_ms": 3140
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

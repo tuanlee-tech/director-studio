@@ -26,7 +26,7 @@
       "end_ms": 820
     },
     {
-      "word": "thiểu",
+      "word": "thiểu,",
       "start_ms": 820,
       "end_ms": 1060
     },
@@ -53,11 +53,11 @@
     {
       "word": "10",
       "start_ms": 2060,
-      "end_ms": 2240
+      "end_ms": 2280
     },
     {
       "word": "năm",
-      "start_ms": 2240,
+      "start_ms": 2280,
       "end_ms": 2500
     },
     {
@@ -71,17 +71,17 @@
       "end_ms": 3200
     },
     {
-      "word": "rất",
+      "word": "dứt",
       "start_ms": 3200,
       "end_ms": 3280
     },
     {
-      "word": "giấm",
+      "word": "điểm",
       "start_ms": 3280,
       "end_ms": 3460
     },
     {
-      "word": "khoảng",
+      "word": "khoản",
       "start_ms": 3460,
       "end_ms": 3680
     },
@@ -95,5 +95,6 @@
       "start_ms": 3820,
       "end_ms": 4040
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

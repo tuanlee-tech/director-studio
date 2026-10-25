@@ -21,12 +21,12 @@
       "end_ms": 680
     },
     {
-      "word": "1",
+      "word": "một",
       "start_ms": 680,
       "end_ms": 840
     },
     {
-      "word": ".000",
+      "word": "nghìn",
       "start_ms": 840,
       "end_ms": 960
     },
@@ -41,7 +41,7 @@
       "end_ms": 1260
     },
     {
-      "word": "hạt,",
+      "word": "hạn,",
       "start_ms": 1260,
       "end_ms": 1560
     },
@@ -66,7 +66,7 @@
       "end_ms": 2640
     },
     {
-      "word": "quẹp",
+      "word": "quẹt",
       "start_ms": 2640,
       "end_ms": 3020
     },
@@ -90,5 +90,6 @@
       "start_ms": 3420,
       "end_ms": 3680
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

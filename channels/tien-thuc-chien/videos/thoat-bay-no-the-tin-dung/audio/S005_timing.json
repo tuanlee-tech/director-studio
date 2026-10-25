@@ -31,7 +31,7 @@
       "end_ms": 820
     },
     {
-      "word": "tiên,",
+      "word": "tiên",
       "start_ms": 820,
       "end_ms": 1120
     },
@@ -56,17 +56,17 @@
       "end_ms": 2240
     },
     {
-      "word": "trước",
+      "word": "chiếc",
       "start_ms": 2240,
       "end_ms": 2400
     },
     {
-      "word": "hãy",
+      "word": "thẻ",
       "start_ms": 2400,
       "end_ms": 2520
     },
     {
-      "word": "tên",
+      "word": "tín",
       "start_ms": 2520,
       "end_ms": 2700
     },
@@ -91,7 +91,7 @@
       "end_ms": 3480
     },
     {
-      "word": "hạm",
+      "word": "hạn",
       "start_ms": 3480,
       "end_ms": 3700
     },
@@ -103,12 +103,13 @@
     {
       "word": "50",
       "start_ms": 3840,
-      "end_ms": 4000
+      "end_ms": 4080
     },
     {
       "word": "triệu.",
-      "start_ms": 4000,
+      "start_ms": 4080,
       "end_ms": 4320
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

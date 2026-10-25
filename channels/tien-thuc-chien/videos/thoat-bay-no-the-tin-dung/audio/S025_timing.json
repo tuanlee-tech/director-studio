@@ -1,7 +1,7 @@
 {
   "audio_file": "S025_narration.wav",
   "duration_ms": 4640,
-  "word_count": 21,
+  "word_count": 22,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
@@ -11,7 +11,7 @@
       "end_ms": 220
     },
     {
-      "word": "giờ",
+      "word": "giờ,",
       "start_ms": 220,
       "end_ms": 440
     },
@@ -66,7 +66,7 @@
       "end_ms": 2480
     },
     {
-      "word": "kế",
+      "word": "cái",
       "start_ms": 2480,
       "end_ms": 2620
     },
@@ -101,8 +101,13 @@
       "end_ms": 3800
     },
     {
-      "word": "40k",
+      "word": "40",
       "start_ms": 3800,
+      "end_ms": 4040
+    },
+    {
+      "word": "triệu",
+      "start_ms": 4040,
       "end_ms": 4280
     },
     {
@@ -110,5 +115,6 @@
       "start_ms": 4280,
       "end_ms": 4440
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

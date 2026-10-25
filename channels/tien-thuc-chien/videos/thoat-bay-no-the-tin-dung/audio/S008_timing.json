@@ -6,12 +6,12 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Kỳ",
+      "word": "Khi",
       "start_ms": 0,
       "end_ms": 220
     },
     {
-      "word": "quê",
+      "word": "quẹt",
       "start_ms": 220,
       "end_ms": 340
     },
@@ -21,7 +21,7 @@
       "end_ms": 620
     },
     {
-      "word": "nặp",
+      "word": "não",
       "start_ms": 1060,
       "end_ms": 1180
     },
@@ -81,12 +81,12 @@
       "end_ms": 3040
     },
     {
-      "word": "giúp",
+      "word": "rút",
       "start_ms": 3040,
       "end_ms": 3220
     },
     {
-      "word": "tương",
+      "word": "từng",
       "start_ms": 3220,
       "end_ms": 3420
     },
@@ -96,7 +96,7 @@
       "end_ms": 3600
     },
     {
-      "word": "tiên",
+      "word": "tiền",
       "start_ms": 3600,
       "end_ms": 3800
     },
@@ -116,9 +116,10 @@
       "end_ms": 4280
     },
     {
-      "word": "vĩ.",
+      "word": "ví.",
       "start_ms": 4280,
       "end_ms": 4580
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

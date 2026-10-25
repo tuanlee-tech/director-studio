@@ -21,12 +21,12 @@
       "end_ms": 480
     },
     {
-      "word": "các",
+      "word": "cạm",
       "start_ms": 480,
       "end_ms": 620
     },
     {
-      "word": "bấy",
+      "word": "bẫy",
       "start_ms": 620,
       "end_ms": 880
     },
@@ -36,7 +36,7 @@
       "end_ms": 1120
     },
     {
-      "word": "ý",
+      "word": "lý",
       "start_ms": 1120,
       "end_ms": 1220
     },
@@ -46,12 +46,12 @@
       "end_ms": 1360
     },
     {
-      "word": "tiền,",
+      "word": "tiên:",
       "start_ms": 1360,
       "end_ms": 1660
     },
     {
-      "word": "mỗi",
+      "word": "ngộ",
       "start_ms": 1960,
       "end_ms": 2060
     },
@@ -71,7 +71,7 @@
       "end_ms": 2640
     },
     {
-      "word": "tiến",
+      "word": "tín",
       "start_ms": 2640,
       "end_ms": 2840
     },
@@ -101,7 +101,7 @@
       "end_ms": 3980
     },
     {
-      "word": "tại",
+      "word": "tài",
       "start_ms": 3980,
       "end_ms": 4180
     },
@@ -125,5 +125,6 @@
       "start_ms": 4800,
       "end_ms": 4960
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

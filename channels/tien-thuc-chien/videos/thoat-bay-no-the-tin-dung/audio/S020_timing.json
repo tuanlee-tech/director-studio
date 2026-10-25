@@ -36,7 +36,7 @@
       "end_ms": 1080
     },
     {
-      "word": "trong",
+      "word": "cho",
       "start_ms": 1080,
       "end_ms": 1300
     },
@@ -51,22 +51,22 @@
       "end_ms": 1700
     },
     {
-      "word": "này",
+      "word": "nai",
       "start_ms": 2120,
       "end_ms": 2200
     },
     {
-      "word": "lừng",
+      "word": "lưng",
       "start_ms": 2200,
       "end_ms": 2400
     },
     {
-      "word": "dành",
+      "word": "gánh",
       "start_ms": 2400,
       "end_ms": 2580
     },
     {
-      "word": "các",
+      "word": "vác",
       "start_ms": 2580,
       "end_ms": 2740
     },
@@ -96,12 +96,12 @@
       "end_ms": 3720
     },
     {
-      "word": "máy",
+      "word": "mái",
       "start_ms": 3720,
       "end_ms": 3960
     },
     {
-      "word": "thóng",
+      "word": "thoáng",
       "start_ms": 3960,
       "end_ms": 4140
     },
@@ -110,5 +110,6 @@
       "start_ms": 4140,
       "end_ms": 4360
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

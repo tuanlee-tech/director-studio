@@ -33,5 +33,8 @@ export interface VideoCompositionProps {
   total_frames: number;
   bgm_url?: string;
   bgm_volume?: number;
+  bgm_duration_seconds?: number;
+  bgm_duration_frames?: number;
+  master_audio_url?: string;
   sequences: SequenceItem[];
 }

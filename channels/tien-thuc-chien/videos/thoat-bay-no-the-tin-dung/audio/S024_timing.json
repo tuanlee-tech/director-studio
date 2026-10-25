@@ -6,12 +6,12 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Một",
+      "word": "Muốn",
       "start_ms": 0,
       "end_ms": 220
     },
     {
-      "word": "thất",
+      "word": "thoát",
       "start_ms": 220,
       "end_ms": 380
     },
@@ -21,12 +21,12 @@
       "end_ms": 580
     },
     {
-      "word": "vũ",
+      "word": "vũng",
       "start_ms": 580,
       "end_ms": 720
     },
     {
-      "word": "lời",
+      "word": "lầy",
       "start_ms": 720,
       "end_ms": 860
     },
@@ -71,7 +71,7 @@
       "end_ms": 2600
     },
     {
-      "word": "giống",
+      "word": "dũng",
       "start_ms": 2600,
       "end_ms": 2800
     },
@@ -91,7 +91,7 @@
       "end_ms": 3560
     },
     {
-      "word": "và",
+      "word": "vào",
       "start_ms": 3560,
       "end_ms": 3700
     },
@@ -120,5 +120,6 @@
       "start_ms": 4400,
       "end_ms": 4540
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

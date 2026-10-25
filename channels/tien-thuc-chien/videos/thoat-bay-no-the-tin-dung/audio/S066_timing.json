@@ -11,12 +11,12 @@
       "end_ms": 220
     },
     {
-      "word": "hai,",
+      "word": "hai:",
       "start_ms": 220,
       "end_ms": 440
     },
     {
-      "word": "lập",
+      "word": "Lập",
       "start_ms": 760,
       "end_ms": 980
     },
@@ -61,7 +61,7 @@
       "end_ms": 2380
     },
     {
-      "word": "khóng",
+      "word": "hòn",
       "start_ms": 2380,
       "end_ms": 2600
     },
@@ -71,7 +71,7 @@
       "end_ms": 2840
     },
     {
-      "word": "lăn,",
+      "word": "lăn",
       "start_ms": 2840,
       "end_ms": 2940
     },
@@ -96,17 +96,17 @@
       "end_ms": 4120
     },
     {
-      "word": "thành",
+      "word": "thanh",
       "start_ms": 4120,
       "end_ms": 4260
     },
     {
-      "word": "toàn",
+      "word": "toán",
       "start_ms": 4260,
       "end_ms": 4480
     },
     {
-      "word": "giới",
+      "word": "dứt",
       "start_ms": 4480,
       "end_ms": 4580
     },
@@ -115,5 +115,6 @@
       "start_ms": 4580,
       "end_ms": 4820
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

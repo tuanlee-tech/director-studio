@@ -13,11 +13,11 @@
     {
       "word": "12",
       "start_ms": 220,
-      "end_ms": 520
+      "end_ms": 480
     },
     {
       "word": "triệu",
-      "start_ms": 520,
+      "start_ms": 480,
       "end_ms": 740
     },
     {
@@ -26,7 +26,7 @@
       "end_ms": 940
     },
     {
-      "word": "lượng,",
+      "word": "lương,",
       "start_ms": 940,
       "end_ms": 1120
     },
@@ -41,17 +41,17 @@
       "end_ms": 1820
     },
     {
-      "word": "phí",
+      "word": "ví",
       "start_ms": 1820,
       "end_ms": 1980
     },
     {
-      "word": "bạng",
+      "word": "bạn",
       "start_ms": 1980,
       "end_ms": 2220
     },
     {
-      "word": "là",
+      "word": "lại",
       "start_ms": 2220,
       "end_ms": 2340
     },
@@ -68,11 +68,11 @@
     {
       "word": "40",
       "start_ms": 2680,
-      "end_ms": 2960
+      "end_ms": 2970
     },
     {
       "word": "triệu",
-      "start_ms": 2960,
+      "start_ms": 2970,
       "end_ms": 3260
     },
     {
@@ -85,5 +85,6 @@
       "start_ms": 3440,
       "end_ms": 3600
     }
-  ]
+  ],
+  "aligned_with_script": true
 }

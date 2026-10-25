@@ -60,6 +60,12 @@ node_modules/
 .remotion/
 */.remotion/
 package-lock.json
+studio/remotion/current_props.json
+studio/remotion/temp_props*.json
+studio/remotion/slice_*.json
+studio/remotion/*.mp4
+studio/remotion/*.jpg
+studio/remotion/*.png
 
 # Google Flow Multi-Account Profiles (Chrome User Data)
 tools/flow-dispatcher/profiles/
@@ -70,3 +76,8 @@ tools/flow-dispatcher/profiles/
 .idea/
 *.swp
 *.swo
+
+# Archive & temporary media files
+**/archive_old_vyond/
+*.remotion-in-progress
+
