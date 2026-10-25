@@ -459,6 +459,8 @@ Toàn bộ khâu hậu kỳ dựng video được tự động hóa hoàn toàn,
 | `checklist` | Xuất assembly checklist |
 | `@cheatsheet` | Xem toàn bộ cheatcodes |
 | `@health` | Kiểm tra services |
+| `@start-project` | Khởi động toàn bộ dự án (TTS + Studio + Remotion) bằng 1 lệnh duy nhất (`python run.py`) |
+| `@stop-project` | Dừng an toàn toàn bộ dự án (`python run.py --stop`) |
 | `@start-container` | Khởi động container project (VieNeu TTS + Studio) qua Docker Compose |
 | `@stop-container` | Dừng toàn bộ container project (docker compose down) |
 | `@status-container` | Xem trạng thái các container project đang chạy |

@@ -1,11 +1,67 @@
-# 🎛️ AI Audio Platform — Monorepo
+# 🎛️ AI Audio & Video Platform — Monorepo
 
-Hệ thống nền tảng xử lý âm thanh AI đa dịch vụ (Text-to-Speech, Voice Cloning, Audio Processing...).  
-Thiết kế theo mô hình **Monorepo**, hỗ trợ cả **Native (Python/uv)** và **Docker Compose**, tự động phát hiện phần cứng và graceful fallback giữa Windows và Ubuntu.
+Hệ thống nền tảng sản xuất Video & Âm thanh AI đa dịch vụ:
+- **VieNeu-TTS**: Vietnamese TTS & Voice Cloning (Port 7860)
+- **Remotion Engine**: Hậu kỳ dựng video tự động, Motion Graphics 20/20 & Subtitle Karaoke (Port 3000)
+- **Google Flow Multi-Account CDP Dispatcher**: Điều phối 5 tài khoản Chrome độc lập, tận dụng 250 credit video/ngày và cào ảnh 0 credit song song (Ports 9223-9227)
+
+Hỗ trợ **100% cả Windows và Ubuntu / Linux**, chạy trực tiếp qua **1 lệnh duy nhất** (`python run.py`).
 
 ---
 
-## 📌 Tổng quan kiến trúc (Architecture)
+## ⚡ KHỞI ĐỘNG NHANH TOÀN DỰ ÁN (1 LỆNH DUY NHẤT)
+
+Áp dụng cho cả **Ubuntu (Linux)** và **Windows**:
+
+```bash
+# Khởi động toàn bộ cụm dịch vụ (TTS + Studio UI + Flow CDP):
+python run.py          # Trên Windows
+python3 run.py         # Trên Ubuntu / Linux
+
+# Xem bảng trạng thái realtime các cổng (7860, 3000, 9223-9227):
+python run.py --status
+
+# Dừng an toàn toàn bộ các dịch vụ:
+python run.py --stop
+```
+
+> **Sau khi khởi động:**
+> - 🎬 **Studio UI & Video Preview**: [http://localhost:3000](http://localhost:3000)
+> - 🎙️ **VieNeu-TTS Voice Studio**: [http://localhost:7860](http://localhost:7860)
+> - 🌐 **Google Flow Multi-Account**: Tab trên Web Studio (Ports 9223-9227)
+
+---
+
+## 🐧 Hướng dẫn thiết lập trên Ubuntu / Debian
+
+### 1. Cài đặt các gói phụ thuộc trên Ubuntu (1 lần duy nhất)
+```bash
+sudo apt update
+sudo apt install -y python3 python3-venv python3-pip curl
+
+# Nếu dùng tính năng xuất video Remotion (Node.js & npm):
+sudo apt install -y nodejs npm
+
+# Nếu dùng tính năng tự động cào Google Flow qua Chrome CDP trên Ubuntu:
+sudo apt install -y chromium-browser
+# hoặc tải Google Chrome chính thức:
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt -f install -y
+```
+
+### 2. Khởi chạy dự án trên Ubuntu
+```bash
+cd audio
+
+# Cách 1 (Khuyên dùng): Dùng unified runner đa nền tảng
+python3 run.py
+
+# Cách 2: Dùng bash launcher
+./launcher.sh start
+
+# Cách 3: Dùng Docker Compose
+docker compose --profile cpu up -d --build
+```
 
 ```
 audio/                               ← Thư mục gốc Monorepo

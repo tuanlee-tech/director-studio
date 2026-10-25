@@ -85,8 +85,17 @@ do_install() {
     if [[ ! -d "$STUDIO_DIR/venv" ]]; then
         python3 -m venv "$STUDIO_DIR/venv"
     fi
-    "$STUDIO_DIR/venv/bin/pip" install -q flask requests
-    ok "Studio UI dependencies installed"
+    "$STUDIO_DIR/venv/bin/pip" install -q -r "$STUDIO_DIR/requirements.txt"
+    ok "Studio UI dependencies (Flask, Requests, WebSocket-Client) installed"
+
+    # Remotion
+    if command -v npm &>/dev/null; then
+        info "Setting up Remotion video renderer..."
+        (cd "$STUDIO_DIR/remotion" && npm install --silent) || warn "Remotion npm install skipped"
+        ok "Remotion dependencies ready"
+    else
+        warn "Node.js/npm not found. Video rendering via Remotion requires: sudo apt install -y nodejs npm"
+    fi
 
     # .env
     if [[ ! -f "$ROOT_DIR/.env" ]] && [[ -f "$ROOT_DIR/.env.example" ]]; then
@@ -142,7 +151,7 @@ do_start() {
         if [[ ! -f "$studio_python" ]]; then
             warn "Studio venv not found. Installing..."
             python3 -m venv "$STUDIO_DIR/venv"
-            "$STUDIO_DIR/venv/bin/pip" install -q flask requests
+            "$STUDIO_DIR/venv/bin/pip" install -q -r "$STUDIO_DIR/requirements.txt"
         fi
 
         info "Starting Studio UI on http://localhost:3000 ..."

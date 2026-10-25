@@ -248,7 +248,8 @@ function Start-Services {
             if (-not (Test-Path $studioPython)) {
                 Write-Warn "Studio venv not found. Installing..."
                 & python -m venv (Join-Path $STUDIO_DIR "venv")
-                & (Join-Path $STUDIO_DIR "venv\Scripts\pip.exe") install -q flask requests 2>&1 | Out-Null
+                $reqPath = Join-Path $STUDIO_DIR "requirements.txt"
+                & (Join-Path $STUDIO_DIR "venv\Scripts\pip.exe") install -q -r $reqPath 2>&1 | Out-Null
             }
 
             $studioLog = Join-Path $STUDIO_DIR "studio.log"

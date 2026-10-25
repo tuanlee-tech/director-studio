@@ -51,8 +51,20 @@ def find_chrome_executable():
         mac_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
         if os.path.isfile(mac_path):
             return mac_path
-    else:  # Linux
-        for bin_name in ["google-chrome", "google-chrome-stable", "chromium-browser", "chromium"]:
+    else:  # Linux (Ubuntu, Debian, Fedora, Arch, etc.)
+        linux_candidates = [
+            "/usr/bin/google-chrome-stable",
+            "/usr/bin/google-chrome",
+            "/usr/bin/chromium-browser",
+            "/usr/bin/chromium",
+            "/snap/bin/chromium",
+            "/snap/bin/google-chrome",
+            "/usr/local/bin/google-chrome",
+        ]
+        for p in linux_candidates:
+            if os.path.isfile(p):
+                return p
+        for bin_name in ["google-chrome-stable", "google-chrome", "chromium-browser", "chromium"]:
             which_bin = shutil.which(bin_name)
             if which_bin:
                 return which_bin
@@ -268,7 +280,18 @@ def launch_account(account_id, project_url=None):
             print(f"⚠️ Win32 spawn failed ({res}), falling back to subprocess.Popen")
             subprocess.Popen(cmd, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
     else:
-        subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+        # Linux (Ubuntu, Debian, etc.) & macOS
+        env = os.environ.copy()
+        # Đảm bảo hiển thị GUI trên Ubuntu Desktop (X11 / Wayland)
+        if "DISPLAY" not in env and "WAYLAND_DISPLAY" not in env:
+            env["DISPLAY"] = ":0"
+
+        # Nếu chạy quyền root hoặc trong container Docker trên Ubuntu
+        if hasattr(os, "geteuid") and os.geteuid() == 0:
+            if "--no-sandbox" not in cmd:
+                cmd.append("--no-sandbox")
+
+        subprocess.Popen(cmd, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
 
     # Đợi Chrome bind port
     for _ in range(8):
