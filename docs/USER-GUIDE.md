@@ -297,6 +297,20 @@ Agent sẽ tự động xuất file `assets/remotion-composition.json` chứa to
 - Các phân đoạn `IMG`: tự động áp hiệu ứng Ken Burns chuyển động ảnh mượt mà.
 - Các phân đoạn `GFX`: render trực tiếp component đồ họa React (`ChartMotion`, `CounterNumber`...) với 0 đồng chi phí credit!
 
+### 3. Tự Động Hóa Google Flow Đa Tài Khoản (Chrome CDP Dispatcher) 🌐
+Thay vì mở trình duyệt copy/paste từng prompt bằng tay, bạn có thể kích hoạt cơ chế tự động hóa đa tài khoản:
+1. **Kiểm tra trạng thái tài khoản**: Gõ `@flow-status` để xem danh sách 5 account (port 9222–9226).
+2. **Đăng nhập lần đầu (Session lưu vĩnh viễn)**: Gõ `@flow-login 1`, `@flow-login 2`... để mở từng cửa sổ Chrome với Profile riêng biệt. Bạn chỉ cần đăng nhập Google 1 lần duy nhất!
+3. **Phân bổ và cào asset tự động**:
+   ```text
+   @flow-dispatch
+   ```
+   - Agent tự động chia các cảnh Video (AIV) đều cho 5 tài khoản (tận dụng tối đa quota 250 credit/ngày).
+   - Agent bơm các cảnh Ảnh (IMG) theo batch 3-4 prompt song song (0 credit free).
+   - Tự động download và lưu đúng format chuẩn vào thư mục `assets/`!
+
+---
+
 ### 4. Dựng hoạt ảnh và 3D với Hệ thống 20/20 Stack
 Để tạo component đồ họa chuyển động cho cảnh GFX (như biểu đồ, số đếm, mô phỏng vật lý 3D):
 - Xem toàn bộ 20 công cụ:
@@ -367,6 +381,9 @@ Nếu bạn muốn tự tay chỉnh sửa chuyển cảnh hoặc thêm hiệu �
 | | `@test-style` | **Tạo thử 1 ảnh** trên Google Flow để kiểm tra phong cách thực tế |
 | | `@lock-style` | **Khóa Style Lock** sau khi test ảnh thành công |
 | | `@gen-prompts --all` | Xuất toàn bộ prompt ảnh/video đã chốt style |
+| | `@flow-status` | Xem trạng thái 5 tài khoản Google Flow (CDP) |
+| | `@flow-login <id>` | Mở Chrome Profile riêng để đăng nhập Google Flow |
+| | `@flow-dispatch` | **Tự động phân bổ & cào asset song song** từ 5 tài khoản |
 | | `@render-code-motion`| Tạo component đồ họa chuyển động (20/20 Stack) |
 | | `@list-motion-stack` | Xem 20/20 công nghệ dựng hoạt ảnh & video bằng code |
 | | `@preview-video` | Xem trước timeline video trong Studio Web (port 3000) |

@@ -317,6 +317,20 @@ Prompt: [Mô tả đồ họa/infographic tĩnh. Chuyển động sẽ thêm tro
         Avoid: <NEGATIVE LIST>
 ```
 
+#### Bước 5.1-B — Tự Động Hóa Google Flow Đa Tài Khoản (CDP Dispatcher) 🌐 ⚡
+
+Thay vì copy/paste thủ công vào từng cửa sổ trình duyệt, Agent sử dụng hệ thống **Multi-Account Chrome CDP Dispatcher** (tham khảo phong cách FrameWeaver):
+
+1. **Khởi động & Đăng nhập (`@flow-login <acc_id>`)**:
+   - Mở cửa sổ Chrome độc lập với profile riêng (`profiles/acc1` → `acc5`).
+   - User chỉ cần đăng nhập Google 1 lần, các phiên sau session được giữ vĩnh viễn.
+2. **Kiểm tra trạng thái (`@flow-status`)**:
+   - Quét các port debug `9222` → `9226`, kiểm tra số tài khoản online và hạn mức credit hôm nay.
+3. **Phân bổ Quota thông minh (`@flow-dispatch`)**:
+   - **Cảnh AIV (Video)**: Chia đều cho 5 account (mỗi account gánh 1-2 clip để không vượt 50 credit/ngày, tổng tận dụng 250 credit/ngày).
+   - **Cảnh IMG (Ảnh tĩnh)**: Bơm song song theo batch 3-4 prompt/lần để Google Flow xử lý đồng thời (0 credit free).
+   - **Tự động tải về local**: Tải ảnh/video và lưu đúng tên file chuẩn (`S001-A_6s_AIV.mp4`, `S002_IMG.png`) vào thư mục `assets/`.
+
 **Naming convention (quan trọng):**
 - `S{NNN}-{beat}_{dur}s_{type}[_sb].{ext}` — ví dụ: `S001-A_4s_AIV_sb.png`, `S001-A_4s_AIV.mp4`, `S003_IMG.png`
 - Không có prefix video (vì đã nằm trong folder video riêng)
@@ -427,6 +441,9 @@ Toàn bộ khâu hậu kỳ dựng video được tự động hóa hoàn toàn,
 | `@list-motion-stack` | Xem danh sách 20/20 công nghệ hoạt ảnh & đồ họa |
 | `@render-video` | Xuất video MP4 hoàn chỉnh bằng Remotion Engine (H.264 1080p) |
 | `@preview-video` | Mở xem trước timeline trong Studio UI (port 3000) |
+| `@flow-status` | Kiểm tra trạng thái 5 tài khoản Google Flow (Online/Offline, Port) |
+| `@flow-login <id>` | Mở cửa sổ Chrome profile độc lập để đăng nhập Google Flow |
+| `@flow-dispatch` | Tự động phân bổ prompts cho 5 account Google Flow và tải assets về |
 | `@pipeline --from audio` | Chạy lại từ bước audio |
 | `@pipeline --from broll` | Chạy lại từ bước B-roll |
 | `@pipeline --from prompts` | Chạy lại từ bước sinh prompt |

@@ -286,6 +286,29 @@
     }
   },
 
+  "FLOW": {
+    "@flow-status": {
+      "description": "Kiểm tra trạng thái 5 tài khoản Google Flow qua Chrome Debugging Protocol (Online/Offline, Port, Active Project)",
+      "usage": "@flow-status",
+      "script": "../../tools/flow-dispatcher/chrome_launcher.py status",
+      "cross_platform": true
+    },
+    "@flow-login": {
+      "description": "Khởi động cửa sổ Chrome với Profile riêng để đăng nhập tài khoản Google Flow (Session/Cookie lưu vĩnh viễn)",
+      "usage": "@flow-login <acc_id>",
+      "examples": ["@flow-login 1", "@flow-login 2", "@flow-login 3"],
+      "script": "../../tools/flow-dispatcher/chrome_launcher.py login --acc",
+      "cross_platform": true
+    },
+    "@flow-dispatch": {
+      "description": "Tự động điều phối phân chia prompt cho 5 tài khoản Google Flow song song và tải assets về thư mục local (tham khảo phong cách FrameWeaver)",
+      "usage": "@flow-dispatch [<slug>] [--dry-run]",
+      "examples": ["@flow-dispatch", "@flow-dispatch thoat-bay-no-the-tin-dung --dry-run"],
+      "script": "../../tools/flow-dispatcher/flow_dispatcher.py",
+      "cross_platform": true
+    }
+  },
+
   "SCRIPT": {
     "@gen-script": {
       "description": "Tạo kịch bản video từ chủ đề, tự động lập outline và viết narration theo beat structure trong Channel Bible.",

@@ -39,6 +39,9 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 | **`@test-style`** | `@test-style` | **Tạo thử 1 ảnh** trên Google Flow để kiểm tra phong cách thực tế |
 | **`@lock-style`** | `@lock-style` | **Khóa Style Lock** sau khi đã test ảnh thành công trên Google Flow |
 | **`@gen-prompts`** | `@gen-prompts --all` | Tạo bảng prompt ảnh + video + storyboard hàng loạt (sau khi lock style) |
+| **`@flow-status`** | `@flow-status` | **Trạng thái 5 tài khoản Google Flow** (Online/Offline, Port, Quota) |
+| **`@flow-login`** | `@flow-login 1` | **Mở Chrome Profile riêng** để đăng nhập Google Flow (Session lưu vĩnh viễn) |
+| **`@flow-dispatch`**| `@flow-dispatch` | **Tự động phân bổ & tải asset** song song từ 5 tài khoản về local |
 | **`@show-prompts`** | `@show-prompts` | Xem bảng prompts theo định dạng shot list |
 | **`@shot-list`** | `@shot-list` | Xuất file shot list đầy đủ |
 | **`@gen-remotion`** | `@gen-remotion` | Xuất file composition Remotion để render tự động |
@@ -95,6 +98,14 @@ Hỗ trợ Agent viết code render video và hoạt ảnh với **0 chi phí AI
    - **GFX (Motion Graphic bằng Remotion/Hyperframe)**: Số liệu, biểu đồ, so sánh cột, đồng hồ chạy tiền → Vẽ bằng code React/SVG (**0 credit AI**).
    - **IMG (Ảnh tĩnh AI + Remotion Motion)**: Minh họa bối cảnh, nhân vật → Ảnh tĩnh chi phí cực rẻ kết hợp hiệu ứng camera mượt mà (Ken Burns, Pan, Zoom).
    - **`@gen-remotion`**: Tự động xuất file composition để render video bằng code.
+
+---
+
+## 🌐 Tự Động Hóa Google Flow Đa Tài Khoản (Chrome CDP Dispatcher)
+Hệ thống tự động điều khiển 5 cửa sổ Chrome qua Chrome Remote Debugging Protocol (CDP) (tham khảo FrameWeaver):
+- **Đăng nhập một lần duy nhất**: Gõ `@flow-login 1` đến `5`. Mỗi tài khoản lưu session/cookie trong thư mục profile riêng biệt vĩnh viễn.
+- **Tận dụng 250 credit video / ngày**: Mỗi account có 50 credit/ngày, 5 account = 250 credit video. Ảnh tĩnh IMG thì Google Flow cho tạo hoàn toàn miễn phí (0 credit).
+- **Phân bổ song song siêu tốc**: Gõ `@flow-dispatch`. Agent tự động chia các cảnh AIV đều cho 5 account và bơm các cảnh IMG theo batch 3-4 prompt, sau đó tự cào assets về thư mục `assets/` đúng format chuẩn!
 
 ---
 

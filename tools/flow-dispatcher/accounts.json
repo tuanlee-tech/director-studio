@@ -1,0 +1,58 @@
+{
+  "_note": "Danh sách 5 tài khoản Google Flow sử dụng cho Multi-Account CDP Dispatcher",
+  "default_flow_url": "https://flow.google.com",
+  "batch_size_img": 4,
+  "daily_quota_per_account": 50,
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Flow Account 1",
+      "port": 9222,
+      "profile_dir": "profiles/acc1",
+      "daily_credit_limit": 50,
+      "credit_used_today": 0,
+      "is_logged_in": false,
+      "last_active": null
+    },
+    {
+      "id": 2,
+      "name": "Flow Account 2",
+      "port": 9223,
+      "profile_dir": "profiles/acc2",
+      "daily_credit_limit": 50,
+      "credit_used_today": 0,
+      "is_logged_in": false,
+      "last_active": null
+    },
+    {
+      "id": 3,
+      "name": "Flow Account 3",
+      "port": 9224,
+      "profile_dir": "profiles/acc3",
+      "daily_credit_limit": 50,
+      "credit_used_today": 0,
+      "is_logged_in": false,
+      "last_active": null
+    },
+    {
+      "id": 4,
+      "name": "Flow Account 4",
+      "port": 9225,
+      "profile_dir": "profiles/acc4",
+      "daily_credit_limit": 50,
+      "credit_used_today": 0,
+      "is_logged_in": false,
+      "last_active": null
+    },
+    {
+      "id": 5,
+      "name": "Flow Account 5",
+      "port": 9226,
+      "profile_dir": "profiles/acc5",
+      "daily_credit_limit": 50,
+      "credit_used_today": 0,
+      "is_logged_in": false,
+      "last_active": null
+    }
+  ]
+}

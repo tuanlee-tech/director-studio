@@ -61,6 +61,10 @@ node_modules/
 */.remotion/
 package-lock.json
 
+# Google Flow Multi-Account Profiles (Chrome User Data)
+tools/flow-dispatcher/profiles/
+*/flow-dispatcher/profiles/
+
 # IDE & Editor
 .vscode/
 .idea/
