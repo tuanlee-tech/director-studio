@@ -62,19 +62,19 @@ audio/
 │       ├── channel-bible.md
 │       ├── schedule.md                  ← Lịch trình video
 │       └── videos/
-│           └── V01/                     ← Mỗi video một thư mục
+│           └── <video-slug>/            ← Đặt tên thư mục theo slug của video (ví dụ: ai-thay-doi-giao-duc)
 │               ├── script.md            ← Kịch bản theo scene
 │               ├── audio/
 │               │   ├── S001_narration.wav
 │               │   ├── S001_timing.json ← Word-level timestamps
 │               │   ├── S002_narration.wav
 │               │   └── S002_timing.json
-│               ├── assets/
-│               │   ├── V01_S001_6s_AIV_sb.png
-│               │   ├── V01_S001_6s_AIV.mp4
-│               │   └── V01_S002_IMG.png
+│               ├── assets/              ← Bỏ tiền tố video, chỉ giữ Scene ID
+│               │   ├── S001_6s_AIV_sb.png
+│               │   ├── S001_6s_AIV.mp4
+│               │   └── S002_IMG.png
 │               ├── subtitles/
-│               │   └── V01_karaoke.srt  ← Subtitle karaoke style
+│               │   └── karaoke.srt      ← Subtitle karaoke style
 │               └── broll-plan.md        ← B-roll planning dựa trên timing
 ├── studio/
 ├── VieNeu-TTS/
@@ -168,15 +168,15 @@ channels/<channel-name>/
 ├── channel-bible.md          ← Copy từ output Gem1, hoặc tạo mới
 ├── schedule.md               ← Lịch trình video (⬜/✅)
 └── videos/
-    └── V01/
+    └── <video-slug>/         ← Mỗi video một thư mục theo slug (ví dụ: ai-thay-doi-giao-duc)
         ├── script.md         ← Kịch bản chuẩn hóa
         ├── audio/            ← Narration audio + timing JSON
-        ├── assets/           ← AI-generated images/videos
-        ├── subtitles/        ← Subtitle karaoke
+        ├── assets/           ← AI-generated images/videos (S001_6s_AIV.mp4, S002_IMG.png)
+        ├── subtitles/        ← Subtitle karaoke (karaoke.srt)
         └── broll-plan.md     ← B-roll planning
 ```
 
-Agent sẽ tự tạo cấu trúc này khi user nói "tạo channel mới" hoặc "tạo video mới".
+Agent sẽ tự tạo cấu trúc này khi user nói "tạo channel mới" hoặc `@new-video <video-slug>`.
 
 ---
 
@@ -402,7 +402,7 @@ flowchart TD
     B -->|Có| C["Tự động gọi API<br>tạo .wav cho từng scene"]
     B -->|Không| D["Xuất TTS text<br>User tự tạo audio"]
     D --> E["User upload<br>audio files"]
-    C --> F["Audio files<br>trong video/V##/audio/"]
+    C --> F["Audio files<br>trong video/{slug}/audio/"]
     E --> F
     F --> G["Chạy audio-analyze.py<br>→ timing JSON"]
     G --> H["Phân tích visual beats<br>trong narration"]
@@ -446,21 +446,445 @@ Scene narration: "Năm 1969, con người lần đầu đặt chân lên Mặt T
 
 ---
 
-### Component 7: Agent Commands & Interaction
+### Component 7: Cheatcode API Layer ⭐ (MỚI)
 
-Skill sẽ hỗ trợ các lệnh tương tự gem2 gốc nhưng thông qua agent:
+Lớp trừu tượng giữa user và hệ thống scripts. User gõ lệnh ngắn (cheatcode) trong
+chat → agent nhận diện → detect OS → chạy script phù hợp bên dưới. Mục tiêu: user
+không cần biết PowerShell/Bash, chỉ cần nhớ cheatcode.
 
-| Lệnh user | Agent action |
+#### Kiến trúc 3 tầng
+
+```mermaid
+flowchart TD
+    U["User gõ: @gen-audio -t 'Xin chào'"] --> A["Agent nhận diện cheatcode<br>từ registry"]
+    A --> D{"OS Detection"}
+    D -->|Windows| W["Chạy scripts/*.ps1"]
+    D -->|Linux/Mac| L["Chạy scripts/*.sh"]
+    W --> R["Trả kết quả cho user"]
+    L --> R
+    
+    C["config.json<br>(defaults: voice, channel...)"] -.-> A
+    REG["cheatcodes.json<br>(registry)"] -.-> A
+```
+
+#### File mới cần tạo
+
+| File | Mô tả |
 |---|---|
-| `tạo channel <tên>` | Tạo cấu trúc thư mục `channels/<tên>/` |
-| `bắt đầu video mới` | Khởi tạo `V##/`, bắt đầu Phase 1 |
-| `tiếp` | Tiếp tục phase/batch tiếp theo |
-| `sửa cảnh N: ...` | Sửa scene N trong script, re-gen audio nếu cần |
-| `sửa style: ...` | Cập nhật STYLE LOCK |
-| `tạo audio` | Trigger Phase 3 (TTS + timing) |
-| `xem timing` | Hiển thị timing analysis |
-| `xem broll plan` | Hiển thị B-roll planning |
-| `xuất subtitle` | Sinh file .srt karaoke |
+| `resources/cheatcodes.json` | Registry: map cheatcode → script + params + help |
+| `resources/config.json` | User defaults (voice, channel, pace, style...) |
+| `scripts/tts-generate.sh` | Linux version của tts-generate.ps1 |
+| `scripts/audio-analyze.sh` | Linux wrapper cho audio-analyze.py |
+| `scripts/subtitle-gen.sh` | Linux wrapper cho subtitle-gen.py |
+| `scripts/health-check.py` | Cross-platform health check (Python) |
+
+#### Cheatcode Registry (`cheatcodes.json`)
+
+```json
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Video Director Cheatcode Registry. Agent đọc file này để map user commands → scripts."
+  },
+
+  "🔧 CONFIG": {
+    "@set-voice": {
+      "description": "Set giọng đọc mặc định cho TTS",
+      "usage": "@set-voice <voice-name>",
+      "examples": ["@set-voice ngoc-anh", "@set-voice nam-minh"],
+      "action": "update_config",
+      "config_key": "default_voice",
+      "available_values": ["ngoc-anh", "nam-minh", "thu-hien", "quang-anh", "lan-nhi", "duc-manh"]
+    },
+    "@set-channel": {
+      "description": "Set channel đang làm việc",
+      "usage": "@set-channel <channel-name>",
+      "examples": ["@set-channel my-tech-channel"],
+      "action": "update_config",
+      "config_key": "active_channel"
+    },
+    "@set-pace": {
+      "description": "Set tốc độ đọc mặc định (từ/giây)",
+      "usage": "@set-pace <number>",
+      "examples": ["@set-pace 4", "@set-pace 3.5"],
+      "action": "update_config",
+      "config_key": "default_pace"
+    },
+    "@set-tts": {
+      "description": "Set TTS engine mặc định",
+      "usage": "@set-tts <engine>",
+      "examples": ["@set-tts vieneu", "@set-tts gemini-3.8"],
+      "action": "update_config",
+      "config_key": "tts_engine",
+      "available_values": ["vieneu", "gemini-3.8", "gemini-3.1"]
+    },
+    "@set-style": {
+      "description": "Set hoặc cập nhật STYLE LOCK descriptor",
+      "usage": "@set-style <style text>",
+      "examples": ["@set-style Cinematic dark moody..."],
+      "action": "update_config",
+      "config_key": "style_lock"
+    },
+    "@config": {
+      "description": "Xem toàn bộ config hiện tại",
+      "usage": "@config",
+      "action": "read_config"
+    }
+  },
+
+  "📁 PROJECT": {
+    "@new-channel": {
+      "description": "Tạo channel mới với cấu trúc thư mục chuẩn",
+      "usage": "@new-channel <channel-name>",
+      "examples": ["@new-channel ai-explained-vn"],
+      "action": "create_directory_structure",
+      "template": "channels/{name}/"
+    },
+    "@new-video": {
+      "description": "Tạo video mới theo slug trong channel đang active",
+      "usage": "@new-video <video-slug|tiêu đề>",
+      "examples": ["@new-video ai-thay-doi-giao-duc", "@new-video \"AI thay đổi giáo dục\""],
+      "action": "create_directory_structure",
+      "template": "channels/{channel}/videos/{video-slug}/"
+    },
+    "@status": {
+      "description": "Xem trạng thái tổng quan: channel, video, services",
+      "usage": "@status",
+      "action": "aggregate_status"
+    },
+    "@ls": {
+      "description": "Liệt kê channels hoặc videos trong channel hiện tại",
+      "usage": "@ls [channels|videos]",
+      "examples": ["@ls channels", "@ls videos"]
+    }
+  },
+
+  "🎙️ AUDIO": {
+    "@gen-audio": {
+      "description": "Tạo TTS audio cho 1 scene hoặc tất cả scenes",
+      "usage": "@gen-audio -t \"text\" [-voice name] [-scene N] [--all]",
+      "examples": [
+        "@gen-audio -t \"Năm 1969, con người đặt chân lên Mặt Trăng\"",
+        "@gen-audio -t \"Hello world\" -voice nam-minh",
+        "@gen-audio --all",
+        "@gen-audio -scene 3"
+      ],
+      "script": {
+        "windows": "scripts/tts-generate.ps1",
+        "linux": "scripts/tts-generate.sh"
+      },
+      "requires_service": "vieneu-tts",
+      "fallback": "Xuất TTS text để user tự tạo"
+    },
+    "@gen-all-audio": {
+      "description": "Tạo audio cho TẤT CẢ scenes trong video hiện tại",
+      "usage": "@gen-all-audio [-voice name]",
+      "examples": ["@gen-all-audio", "@gen-all-audio -voice thu-hien"],
+      "action": "batch_tts",
+      "requires_service": "vieneu-tts"
+    },
+    "@play": {
+      "description": "Phát audio scene để preview",
+      "usage": "@play <scene-number>",
+      "examples": ["@play 3"],
+      "action": "play_audio"
+    }
+  },
+
+  "⏱️ TIMING": {
+    "@analyze": {
+      "description": "Phân tích timing audio (Whisper word-level timestamps)",
+      "usage": "@analyze [-scene N] [--all]",
+      "examples": ["@analyze -scene 3", "@analyze --all"],
+      "script": "scripts/audio-analyze.py",
+      "cross_platform": true
+    },
+    "@timing": {
+      "description": "Xem timing analysis của scene hoặc toàn video",
+      "usage": "@timing [-scene N] [--all]",
+      "examples": ["@timing -scene 3", "@timing --all"],
+      "action": "read_timing_json"
+    }
+  },
+
+  "🎬 B-ROLL": {
+    "@plan-broll": {
+      "description": "Tự động lên kế hoạch B-roll từ timing data",
+      "usage": "@plan-broll [--auto-approve]",
+      "examples": ["@plan-broll"],
+      "action": "generate_broll_plan",
+      "output": "broll-plan.json"
+    },
+    "@show-broll": {
+      "description": "Hiển thị B-roll plan dạng timeline table",
+      "usage": "@show-broll",
+      "action": "display_broll_plan"
+    },
+    "@edit-broll": {
+      "description": "Chỉnh sửa B-roll plan (thêm/xóa/đổi duration)",
+      "usage": "@edit-broll <scene> <action>",
+      "examples": [
+        "@edit-broll S003 split 2",
+        "@edit-broll S003 merge S004",
+        "@edit-broll S003 duration 6s",
+        "@edit-broll S003 type IMG"
+      ]
+    },
+    "@approve-broll": {
+      "description": "Duyệt B-roll plan, cho phép chuyển sang Phase 4",
+      "usage": "@approve-broll",
+      "action": "lock_broll_plan"
+    }
+  },
+
+  "📝 SUBTITLE": {
+    "@gen-subs": {
+      "description": "Sinh subtitle karaoke từ timing data",
+      "usage": "@gen-subs [--format srt|ass|vtt]",
+      "examples": ["@gen-subs", "@gen-subs --format ass"],
+      "script": "scripts/subtitle-gen.py",
+      "cross_platform": true
+    },
+    "@preview-subs": {
+      "description": "Xem preview subtitle với word highlighting",
+      "usage": "@preview-subs [-scene N]",
+      "action": "display_subtitle_preview"
+    }
+  },
+
+  "🎨 ASSETS": {
+    "@gen-prompts": {
+      "description": "Tạo asset prompts (ảnh/video) từ B-roll plan đã duyệt",
+      "usage": "@gen-prompts [-scene N] [--all]",
+      "examples": ["@gen-prompts --all", "@gen-prompts -scene 3"],
+      "action": "generate_asset_prompts",
+      "requires": "approved_broll_plan"
+    },
+    "@show-prompts": {
+      "description": "Hiển thị bảng prompts đã tạo",
+      "usage": "@show-prompts",
+      "action": "display_prompt_table"
+    },
+    "@shot-list": {
+      "description": "Xuất shot list đầy đủ cho video",
+      "usage": "@shot-list [--export md|json]",
+      "action": "export_shot_list"
+    }
+  },
+
+  "📋 SCRIPT": {
+    "@gen-script": {
+      "description": "Tạo kịch bản video từ chủ đề/outline",
+      "usage": "@gen-script \"<topic>\" [-minutes N]",
+      "examples": ["@gen-script \"AI thay đổi giáo dục\" -minutes 8"],
+      "action": "generate_script"
+    },
+    "@show-script": {
+      "description": "Hiển thị kịch bản hiện tại",
+      "usage": "@show-script [-scene N]",
+      "action": "display_script"
+    },
+    "@edit-scene": {
+      "description": "Sửa nội dung 1 scene trong kịch bản",
+      "usage": "@edit-scene <N> \"<new text>\"",
+      "examples": ["@edit-scene 3 \"Nội dung mới cho scene 3\""],
+      "action": "edit_scene_in_script"
+    }
+  },
+
+  "📅 SCHEDULE": {
+    "@schedule": {
+      "description": "Xem/quản lý lịch trình video",
+      "usage": "@schedule [show|add|done N]",
+      "examples": [
+        "@schedule show",
+        "@schedule add \"Tiêu đề video mới\"",
+        "@schedule done 3"
+      ]
+    }
+  },
+
+  "🏥 HEALTH": {
+    "@health": {
+      "description": "Kiểm tra trạng thái tất cả services (TTS, Studio, Whisper...)",
+      "usage": "@health",
+      "script": "scripts/health-check.py",
+      "cross_platform": true
+    },
+    "@start-tts": {
+      "description": "Khởi động VieNeu-TTS service",
+      "usage": "@start-tts",
+      "script": {
+        "windows": "../../launcher.ps1 start",
+        "linux": "../../launcher.sh start"
+      }
+    },
+    "@stop-tts": {
+      "description": "Dừng VieNeu-TTS service",
+      "usage": "@stop-tts",
+      "script": {
+        "windows": "../../launcher.ps1 stop",
+        "linux": "../../launcher.sh stop"
+      }
+    }
+  },
+
+  "🔄 PIPELINE": {
+    "@pipeline": {
+      "description": "Chạy toàn bộ pipeline cho video hiện tại (hoặc từ step chỉ định)",
+      "usage": "@pipeline [--from step]",
+      "examples": [
+        "@pipeline",
+        "@pipeline --from audio",
+        "@pipeline --from broll"
+      ],
+      "action": "run_full_pipeline",
+      "steps": ["script", "audio", "analyze", "broll", "prompts", "subs"]
+    },
+    "@next": {
+      "description": "Chuyển sang bước tiếp theo trong pipeline",
+      "usage": "@next",
+      "action": "advance_pipeline"
+    },
+    "@undo": {
+      "description": "Quay lại bước trước trong pipeline",
+      "usage": "@undo",
+      "action": "revert_pipeline_step"
+    }
+  },
+
+  "❓ HELP": {
+    "@help": {
+      "description": "Hiển thị danh sách tất cả cheatcodes",
+      "usage": "@help [category|command]",
+      "examples": ["@help", "@help audio", "@help @gen-audio"]
+    },
+    "@cheatsheet": {
+      "description": "Hiển thị bảng tóm tắt cheatcodes (1 trang)",
+      "usage": "@cheatsheet"
+    }
+  }
+}
+```
+
+#### Config File (`config.json`)
+
+Lưu tại `channels/<channel>/config.json`, agent đọc/ghi khi user dùng `@set-*`:
+
+```json
+{
+  "active_channel": "my-channel",
+  "active_video": "ai-thay-doi-giao-duc",
+  "default_voice": "ngoc-anh",
+  "default_pace": 4,
+  "tts_engine": "vieneu",
+  "tts_api_url": "http://localhost:8000",
+  "whisper_model": "base",
+  "style_lock": "",
+  "language": "vi",
+  "video_duration_target_minutes": 8,
+  "static_image_exempt": true,
+  "subtitle_format": "srt",
+  "subtitle_group_size": 4
+}
+```
+
+#### Agent OS Detection Logic
+
+Trong SKILL.md, agent được hướng dẫn:
+
+```markdown
+## OS Detection & Script Dispatch
+
+Khi user gõ cheatcode, agent thực hiện:
+
+1. **Detect OS**: Kiểm tra biến môi trường hoặc chạy `python -c "import platform; print(platform.system())"`
+2. **Lookup registry**: Đọc `cheatcodes.json` → tìm entry matching
+3. **Resolve defaults**: Merge params user truyền vào với `config.json`
+4. **Dispatch**:
+   - `action` type → agent tự thực hiện (tạo file, đọc file, phân tích...)
+   - `script` type → chạy script tương ứng với OS:
+     - Windows → `.ps1` via PowerShell
+     - Linux/Mac → `.sh` via Bash
+   - `cross_platform: true` → script Python, chạy trực tiếp
+5. **Report**: Trả kết quả cho user dạng dễ đọc
+```
+
+#### Cross-platform Script Example
+
+Mỗi script OS-specific sẽ có cặp `.ps1` / `.sh`:
+
+**`scripts/tts-generate.sh`** (Linux counterpart):
+```bash
+#!/bin/bash
+# Usage: ./tts-generate.sh -t "Lời đọc" -voice "ngoc-anh" -o "audio/S001.wav"
+
+TEXT="" VOICE="ngoc-anh" OUTPUT="" API="http://localhost:8000"
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -t|--text)  TEXT="$2"; shift 2 ;;
+    -voice)     VOICE="$2"; shift 2 ;;
+    -o|--output) OUTPUT="$2"; shift 2 ;;
+    -api)       API="$2"; shift 2 ;;
+    *)          shift ;;
+  esac
+done
+
+# Health check
+if ! curl -sf "$API/health" > /dev/null 2>&1; then
+  echo "ERROR: VieNeu-TTS không chạy tại $API" >&2; exit 1
+fi
+
+# Gọi API
+curl -sf -X POST "$API/v1/audio/speech" \
+  -H "Content-Type: application/json" \
+  -d "{\"model\":\"vieneu-tts-v3-turbo\",\"input\":\"$TEXT\",\"voice\":\"$VOICE\",\"response_format\":\"wav\"}" \
+  -o "$OUTPUT"
+
+echo "Audio saved: $OUTPUT"
+```
+
+#### Bảng tóm tắt Cheatcodes (cho @cheatsheet)
+
+| Category | Cheatcode | Mô tả ngắn |
+|---|---|---|
+| **🔧 Config** | `@set-voice` | Đổi giọng mặc định |
+| | `@set-channel` | Chọn channel đang làm |
+| | `@set-pace` | Set tốc độ đọc |
+| | `@set-tts` | Đổi TTS engine |
+| | `@set-style` | Set STYLE LOCK |
+| | `@config` | Xem toàn bộ config |
+| **📁 Project** | `@new-channel` | Tạo channel mới |
+| | `@new-video` | Tạo video mới |
+| | `@status` | Trạng thái tổng quan |
+| | `@ls` | Liệt kê channels/videos |
+| **🎙️ Audio** | `@gen-audio` | Tạo audio 1 scene |
+| | `@gen-all-audio` | Tạo audio mọi scene |
+| | `@play` | Phát preview audio |
+| **⏱️ Timing** | `@analyze` | Chạy Whisper phân tích |
+| | `@timing` | Xem timing data |
+| **🎬 B-roll** | `@plan-broll` | Auto lên kế hoạch B-roll |
+| | `@show-broll` | Xem B-roll plan |
+| | `@edit-broll` | Sửa B-roll plan |
+| | `@approve-broll` | Duyệt B-roll → Phase 4 |
+| **📝 Subtitle** | `@gen-subs` | Sinh subtitle karaoke |
+| | `@preview-subs` | Preview subtitle |
+| **🎨 Assets** | `@gen-prompts` | Tạo prompts từ B-roll plan |
+| | `@show-prompts` | Xem bảng prompts |
+| | `@shot-list` | Xuất shot list |
+| **📋 Script** | `@gen-script` | Tạo kịch bản |
+| | `@show-script` | Xem kịch bản |
+| | `@edit-scene` | Sửa 1 scene |
+| **📅 Schedule** | `@schedule` | Quản lý lịch trình |
+| **🏥 Health** | `@health` | Check services |
+| | `@start-tts` | Bật TTS service |
+| | `@stop-tts` | Tắt TTS service |
+| **🔄 Pipeline** | `@pipeline` | Chạy toàn bộ pipeline |
+| | `@next` | Bước tiếp theo |
+| | `@undo` | Quay lại bước trước |
+| **❓ Help** | `@help` | Xem chi tiết lệnh |
+| | `@cheatsheet` | Bảng tóm tắt |
 
 ---
 
