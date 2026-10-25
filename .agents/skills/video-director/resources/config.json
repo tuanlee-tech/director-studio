@@ -1,0 +1,18 @@
+{
+  "_note": "Template config mặc định. Agent copy file này vào channels/<channel-name>/config.json khi tạo channel mới.",
+  "active_channel": "",
+  "active_video": "",
+  "default_voice": "Hải Đăng",
+  "default_pace": 4,
+  "tts_engine": "vieneu",
+  "tts_api_url": "http://localhost:8000",
+  "whisper_model": "base",
+  "whisper_language": "vi",
+  "language": "vi",
+  "video_duration_target_minutes": 8,
+  "static_image_exempt_from_duration": true,
+  "subtitle_format": "srt",
+  "subtitle_group_size": 4,
+  "style_lock": "",
+  "negative_list": []
+}
