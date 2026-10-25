@@ -12,8 +12,11 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 | **`@cheatsheet`** | `@cheatsheet` | Mở bảng tóm tắt cheatcode |
 | **`@status`** | `@status` | Xem tổng quan trạng thái kênh, video, dịch vụ |
 | **`@health`** | `@health` | Kiểm tra tình trạng TTS, Whisper, Studio |
-| **`@start-tts`** | `@start-tts` | Khởi động dịch vụ VieNeu-TTS |
-| **`@stop-tts`** | `@stop-tts` | Tắt dịch vụ VieNeu-TTS |
+| **`@start-container`** | `@start-container` | Khởi động container project (Docker Compose tự detect GPU/CPU) |
+| **`@stop-container`** | `@stop-container` | Dừng toàn bộ container của project |
+| **`@status-container`**| `@status-container`| Xem trạng thái các container đang chạy trong project |
+| **`@start-tts`** | `@start-tts` | Khởi động dịch vụ VieNeu-TTS Native (Python/uv) |
+| **`@stop-tts`** | `@stop-tts` | Tắt dịch vụ VieNeu-TTS Native |
 | **`@new-channel`** | `@new-channel my-channel` | Tạo kênh mới với cấu trúc thư mục chuẩn |
 | **`@set-channel`** | `@set-channel my-channel` | Chọn kênh đang làm việc |
 | **`@new-video`** | `@new-video "AI thay đổi giáo dục"` | Tạo video mới (tự tạo thư mục slug sạch) |
@@ -94,5 +97,6 @@ Hỗ trợ Agent viết code render video và hoạt ảnh với **0 chi phí AI
 ---
 
 ## 💡 Mẹo sử dụng
-- Nếu máy chưa bật VieNeu-TTS, bạn chỉ cần gõ `@start-tts`.
+- **Chạy bằng Container (Docker)**: Gõ `@start-container` — tự động phát hiện GPU/CPU để khởi động toàn bộ cụm VieNeu-TTS (7860 & 8000) và Studio UI (3000). Dừng lại bằng `@stop-container`.
+- **Chạy trực tiếp Native (không cần Docker)**: Gõ `@start-tts` (Windows/Linux đều hỗ trợ qua launcher native Python/uv).
 - Khi bán bộ skill này cho người dùng, họ chỉ cần đọc trang Cheatsheet này là có thể vận hành 100% bằng chat với AI.

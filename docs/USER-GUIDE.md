@@ -333,8 +333,12 @@ Bạn tải các file về và ráp theo checklist [`assembly-checklist.md`](fil
 
 | Nhóm | Lệnh | Ý nghĩa |
 |---|---|---|
-| **Hệ thống** | `@health` | Kiểm tra tình trạng TTS, Whisper |
-| | `@start-tts` | Khởi động VieNeu-TTS |
+| **Hệ thống** | `@health` | Kiểm tra tình trạng TTS, Whisper, Studio |
+| | `@start-container` | Khởi động toàn bộ container project (Docker Compose) |
+| | `@stop-container` | Dừng toàn bộ container project (docker compose down) |
+| | `@status-container`| Xem trạng thái container project (docker compose ps) |
+| | `@start-tts` | Khởi động VieNeu-TTS Native (Python/uv) |
+| | `@stop-tts` | Dừng VieNeu-TTS Native |
 | | `@cheatsheet` | Mở danh sách tra cứu lệnh |
 | **Kênh** | `@set-channel <tên>` | Chuyển sang làm việc với kênh khác |
 | | `@status` | Xem video và kênh đang active |

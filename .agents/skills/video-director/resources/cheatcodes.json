@@ -312,7 +312,7 @@
       "cross_platform": true
     },
     "@start-tts": {
-      "description": "Khởi động VieNeu-TTS service (native hoặc Docker)",
+      "description": "Khởi động VieNeu-TTS service theo chế độ Native (Python/uv)",
       "usage": "@start-tts",
       "script": {
         "windows": "..\\..\\launcher.ps1 start",
@@ -320,12 +320,35 @@
       }
     },
     "@stop-tts": {
-      "description": "Dừng VieNeu-TTS service",
+      "description": "Dừng VieNeu-TTS service Native",
       "usage": "@stop-tts",
       "script": {
         "windows": "..\\..\\launcher.ps1 stop",
         "linux": "../../launcher.sh stop"
       }
+    },
+    "@start-container": {
+      "description": "Khởi động toàn bộ container của project (VieNeu TTS, OpenAI API, Studio Dashboard) qua Docker Compose (tự động phát hiện GPU/CPU).",
+      "usage": "@start-container [--profile cpu|gpu] [--build]",
+      "examples": [
+        "@start-container",
+        "@start-container --profile cpu",
+        "@start-container --profile gpu"
+      ],
+      "script": "scripts/container-start.py",
+      "cross_platform": true
+    },
+    "@stop-container": {
+      "description": "Dừng toàn bộ container của project (docker compose down)",
+      "usage": "@stop-container",
+      "script": "scripts/container-start.py stop",
+      "cross_platform": true
+    },
+    "@status-container": {
+      "description": "Xem trạng thái các container của project đang chạy (docker compose ps)",
+      "usage": "@status-container",
+      "script": "scripts/container-start.py status",
+      "cross_platform": true
     }
   },
 

@@ -449,6 +449,11 @@ Lệnh hỗ trợ: `@render-code-motion <scene_id>`, `@list-motion-stack`
 | `checklist` | Xuất assembly checklist |
 | `@cheatsheet` | Xem toàn bộ cheatcodes |
 | `@health` | Kiểm tra services |
+| `@start-container` | Khởi động container project (VieNeu TTS + Studio) qua Docker Compose |
+| `@stop-container` | Dừng toàn bộ container project (docker compose down) |
+| `@status-container` | Xem trạng thái các container project đang chạy |
+| `@start-tts` | Khởi động TTS native (Python/uv) |
+| `@stop-tts` | Dừng TTS native |
 | `@status` | Trạng thái channel + video hiện tại |
 | `@config` | Xem toàn bộ config hiện tại |
 | `@schedule show` | Xem lịch trình |
