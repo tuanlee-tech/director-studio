@@ -368,7 +368,15 @@ if __name__ == "__main__":
 Cấu hình cho 3 engine TTS được hỗ trợ. Agent chọn profile dựa trên
 CẤU HÌNH trong schedule.md của channel.
 
-## gemini-3.8 (Mặc định)
+## vieneu (VieNeu-TTS) — MẶC ĐỊNH
+- 3 tag: [cười] [thở dài] [hắng giọng]
+- Cảm xúc bằng câu ngắn, dấu phẩy, "...", "—"
+- Mỗi câu ≤ 256 ký tự
+- Gọi qua API localhost:8000
+- **Default voice**: "Hải Đăng" (nếu đã enroll), fallback → "Binh"
+- Built-in presets: Binh (nam Bắc), Tuyen (nam Bắc), Vinh (nam Nam), Doan (nữ Nam), Ly (nữ Bắc), Ngoc (nữ Bắc)
+
+## gemini-3.8
 - Không dùng tag ngoặc vuông
 - Tag góc nhọn: <short pause> <long pause> <sigh> <laugh> <breath> <gasp>
 - Cảm xúc/giọng điều khiển bằng STYLE (tiếng Anh, ≤ 8 từ)
@@ -489,12 +497,12 @@ flowchart TD
 
   "🔧 CONFIG": {
     "@set-voice": {
-      "description": "Set giọng đọc mặc định cho TTS",
+      "description": "Set giọng đọc mặc định cho TTS (hỗ trợ giọng built-in và giọng container)",
       "usage": "@set-voice <voice-name>",
-      "examples": ["@set-voice ngoc-anh", "@set-voice nam-minh"],
+      "examples": ["@set-voice \"Hải Đăng\"", "@set-voice Binh", "@set-voice Vinh"],
       "action": "update_config",
       "config_key": "default_voice",
-      "available_values": ["ngoc-anh", "nam-minh", "thu-hien", "quang-anh", "lan-nhi", "duc-manh"]
+      "available_values": ["Hải Đăng", "Binh", "Tuyen", "Vinh", "Doan", "Ly", "Ngoc"]
     },
     "@set-channel": {
       "description": "Set channel đang làm việc",
@@ -775,7 +783,7 @@ Lưu tại `channels/<channel>/config.json`, agent đọc/ghi khi user dùng `@s
 {
   "active_channel": "my-channel",
   "active_video": "ai-thay-doi-giao-duc",
-  "default_voice": "ngoc-anh",
+  "default_voice": "Hải Đăng",
   "default_pace": 4,
   "tts_engine": "vieneu",
   "tts_api_url": "http://localhost:8000",
