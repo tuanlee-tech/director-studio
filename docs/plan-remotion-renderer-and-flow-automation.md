@@ -127,9 +127,9 @@ studio/
 ## 🚀 5. Các Bước Thực Hiện Cụ Thể (Action Plan)
 
 - [x] **Bước 0**: Lưu bản kế hoạch này vào repo và commit Git.
-- [ ] **Bước 1**: Khởi tạo project Remotion bên trong `studio/remotion/` với các dependencies cần thiết.
-- [ ] **Bước 2**: Xây dựng core components: `VideoComposition.tsx`, `KenBurnsImage.tsx`, `KaraokeSubtitle.tsx`.
-- [ ] **Bước 3**: Cập nhật backend `studio/app.py` với các endpoints `/api/channels-videos`, `/api/video-data`, `/api/render-video`.
-- [ ] **Bước 4**: Thêm Tab "🎬 Video Preview & Timeline" vào `studio/templates/index.html` nhúng Remotion Player.
-- [ ] **Bước 5**: Thêm lệnh cheatcode `@render-video` và `@preview-video` vào Skill.
-- [ ] **Bước 6**: Kiểm thử render thực tế trên video `thoat-bay-no-the-tin-dung` của kênh `tien-thuc-chien`.
+- [x] **Bước 1**: Khởi tạo project Remotion bên trong `studio/remotion/` với các dependencies cần thiết.
+- [x] **Bước 2**: Xây dựng core components: `VideoComposition.tsx`, `KenBurnsImage.tsx`, `KaraokeSubtitle.tsx`, `motion/`.
+- [x] **Bước 3**: Cập nhật backend `studio/app.py` với các endpoints `/api/channels-videos`, `/api/video-data`, `/api/render-video`, `/api/media/...`.
+- [x] **Bước 4**: Thêm Tab "🎬 Video Preview & Timeline" vào `studio/templates/index.html` nhúng Remotion Player.
+- [x] **Bước 5**: Thêm lệnh cheatcode `@render-video` và `@preview-video` vào Skill.
+- [x] **Bước 6**: Kiểm thử render thực tế trên video `thoat-bay-no-the-tin-dung` của kênh `tien-thuc-chien` (Đã hoàn thành xuất `final_video.mp4` H.264 1080p).

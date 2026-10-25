@@ -373,7 +373,7 @@ Format khối cảnh đầy đủ (theo `references/shot-list.template.md`):
 
 #### Bước 5.4 — Xuất Remotion Composition (@gen-remotion)
 
-Nếu B-roll plan có cảnh `IMG` hoặc `GFX`, Agent có thể xuất cấu trúc Remotion composition:
+Nếu B-roll plan có cảnh `IMG` hoặc `GFX`, Agent xuất cấu trúc Remotion composition:
 ```
 channels/<channel>/videos/<slug>/assets/remotion-composition.json
 ```
@@ -383,34 +383,18 @@ Chứa toàn bộ danh sách sequences, components (`ChartMotion`, `CounterNumbe
 
 Khi sản xuất các cảnh `GFX` (đồ họa chuyển động) và `IMG` (hình ảnh tĩnh kết hợp motion), Agent sử dụng trọn bộ **20/20 công nghệ** (chi tiết trong `references/motion-graphics-stack.md`):
 
-1. **3 Video Coding Skills**:
-   - **Remotion Skill**: Dựng cấu trúc video React, điều khiển timeline frame-by-frame, tính toán spring physics và interpolate.
-   - **Motion AI Kit**: Sử dụng thư viện `motion` để tạo micro-animations, layout transitions và variants declaratively.
-   - **GSAP Skill**: Lập trình timeline animation đa tầng, staggered text và chuỗi biến đổi hình ảnh chính xác từng frame.
-2. **Thiết kế SVG & JSX**:
-   - **SVGO**: Tối ưu hóa, dọn dẹp và nén vector path cho các biểu tượng tài chính/công nghệ trước khi render.
-   - **Satori**: Chuyển đổi mã nguồn HTML/JSX TailwindCSS thành SVG vector độ phân giải cao tức thì.
-3. **5 Thư viện Hoạt ảnh Chuyên biệt**:
-   - **GSAP**: Timeline phức tạp, số liệu tăng trưởng, chuỗi hành động đồng bộ.
-   - **Anime.js**: Animation đường viền SVG (stroke drawing), morphing vector mượt mà.
-   - **Motion**: Component UI, pop-up thẻ ngân hàng, notification banner.
-   - **Rive**: Hoạt hình nhân vật tương tác có state machine (đổi trạng thái cảm xúc theo nội dung).
-   - **Lottie**: Render hiệu ứng hạt, confetti, sticker xuất từ After Effects.
-4. **Dựng 2D Khung hình**:
-   - **Remotion**: Nền tảng chính ghép toàn bộ timeline thành từng frame video React.
-   - **Motion Canvas**: Lập trình video giải thích (explainer) bằng TypeScript, đồ thị toán học, lãi kép trực quan.
-5. **Dựng 3D Điện ảnh**:
-   - **Three.js**: Lập trình không gian 3D, camera và ánh sáng.
-   - **React Three Fiber (R3F)**: Khai báo cảnh 3D dưới dạng React component.
-   - **Drei**: Tận dụng sẵn Text3D, Environment lighting, Float controls.
-   - **Rapier (@react-three/rapier)**: Mô phỏng vật lý chân thực (tiền vàng rơi, va chạm nảy tưng bừng, thẻ vỡ).
-   - **Postprocessing**: Bloom phát sáng neon, Depth of Field xóa phông điện ảnh.
-6. **Âm thanh & Xuất Video**:
-   - **Howler.js**: Điều khiển BGM ducking (hạ nhạc nền khi có narration) và SFX đồng bộ mili-giây.
-   - **Mediabunny**: Fast browser-based video encoding.
-   - **FFmpeg**: Ghép nối âm thanh VieNeu-TTS, hình ảnh AIV, motion graphics Remotion và phụ đề thành file `.mp4` hoàn chỉnh.
+1. **3 Video Coding Skills**: Remotion Skill, Motion AI Kit, GSAP Skill.
+2. **Thiết kế SVG & JSX**: SVGO, Satori.
+3. **5 Thư viện Hoạt ảnh Chuyên biệt**: GSAP, Anime.js, Motion, Rive, Lottie.
+4. **Dựng 2D Khung hình**: Remotion, Motion Canvas.
+5. **Dựng 3D Điện ảnh**: Three.js, React Three Fiber (R3F), Drei, Rapier (@react-three/rapier), Postprocessing (Bloom neon).
+6. **Âm thanh & Xuất Video**: Howler.js, Mediabunny, FFmpeg.
 
-Lệnh hỗ trợ: `@render-code-motion <scene_id>`, `@list-motion-stack`
+#### Bước 5.6 — Hậu Kỳ Dựng Video Tự Động 100% (@render-video & Studio Player) 🎬
+
+Toàn bộ khâu hậu kỳ dựng video được tự động hóa hoàn toàn, không cần mở CapCut/Premiere kéo thả thủ công:
+- **Xem trước Timeline**: Mở `http://localhost:3000` (Tab "🎬 Video Preview & Timeline") hoặc gõ `@preview-video` để xem Remotion Player đồng bộ audio narration, phụ đề karaoke đổi màu từng từ và hiệu ứng chuyển động Ken Burns.
+- **Xuất MP4 Video**: Bấm nút **"🚀 Xuất MP4 Video"** trên Studio hoặc gõ **`@render-video`** trong chat. Remotion CLI sẽ tự động render ra file **`channels/<channel>/videos/<slug>/final_video.mp4`** (chuẩn H.264 1080p 30fps).
 
 ---
 
@@ -441,6 +425,8 @@ Lệnh hỗ trợ: `@render-code-motion <scene_id>`, `@list-motion-stack`
 | `@lock-style` | Khóa phong cách sau khi test ảnh thành công trên Google Flow |
 | `@render-code-motion` | Tạo code component 20/20 Stack (Remotion/GSAP/R3F) cho cảnh GFX |
 | `@list-motion-stack` | Xem danh sách 20/20 công nghệ hoạt ảnh & đồ họa |
+| `@render-video` | Xuất video MP4 hoàn chỉnh bằng Remotion Engine (H.264 1080p) |
+| `@preview-video` | Mở xem trước timeline trong Studio UI (port 3000) |
 | `@pipeline --from audio` | Chạy lại từ bước audio |
 | `@pipeline --from broll` | Chạy lại từ bước B-roll |
 | `@pipeline --from prompts` | Chạy lại từ bước sinh prompt |

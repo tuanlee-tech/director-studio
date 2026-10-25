@@ -54,6 +54,13 @@ VieNeu-TTS/output-test.wav
 Thumbs.db
 Desktop.ini
 
+# Node / Remotion
+node_modules/
+*/node_modules/
+.remotion/
+*/.remotion/
+package-lock.json
+
 # IDE & Editor
 .vscode/
 .idea/

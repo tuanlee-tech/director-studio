@@ -264,6 +264,25 @@
       "usage": "@list-motion-stack",
       "script": "scripts/motion-stack.py",
       "cross_platform": true
+    },
+    "@render-video": {
+      "description": "Render toàn bộ video thành file MP4 hoàn chỉnh bằng Remotion Engine (tự động ghép audio, phụ đề karaoke, ảnh Ken Burns, motion graphics).",
+      "usage": "@render-video [<slug>] [--frames <start-end>]",
+      "examples": [
+        "@render-video",
+        "@render-video thoat-bay-no-the-tin-dung",
+        "@render-video thoat-bay-no-the-tin-dung --frames 0-60"
+      ],
+      "script": "scripts/remotion-render.py",
+      "cross_platform": true,
+      "output": "{slug}/final_video.mp4"
+    },
+    "@preview-video": {
+      "description": "Mở xem trước Timeline và Remotion Player trong Studio UI (http://localhost:3000)",
+      "usage": "@preview-video [<slug>]",
+      "examples": ["@preview-video", "@preview-video thoat-bay-no-the-tin-dung"],
+      "action": "open_studio_preview",
+      "url": "http://localhost:3000"
     }
   },
 

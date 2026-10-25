@@ -70,12 +70,49 @@ body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--
 @keyframes spn{to{transform:rotate(360deg)}}
 code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75rem}
 @media(max-width:768px){.grid{grid-template-columns:1fr}.sysbar{flex-direction:column;align-items:center;gap:.4rem}.wrap{padding:.8rem}}
+.nav-tabs{display:flex;justify-content:center;gap:.8rem;margin:1rem auto 0;max-width:1100px}
+.nav-tab{background:var(--bg2);color:var(--t2);border:1px solid var(--brd);padding:.6rem 1.4rem;border-radius:20px;font-size:.85rem;font-weight:600;cursor:pointer;transition:.2s}
+.nav-tab.active{background:var(--acc);color:#fff;border-color:var(--acc);box-shadow:0 0 20px rgba(108,99,255,.3)}
+.tab-content{display:none}.tab-content.active{display:block}
+/* Video Studio Styles */
+.v-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.2rem}
+.v-selectors{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.v-player-container{background:#000;border:1px solid var(--brd);border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:16/9;width:100%;max-width:960px;margin:0 auto 1.2rem;box-shadow:0 12px 40px rgba(0,0,0,.6)}
+.v-screen{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;background:#060810}
+.v-screen img,.v-screen video{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
+.v-karaoke{position:absolute;bottom:40px;left:0;width:100%;text-align:center;padding:0 20px;pointer-events:none;z-index:10}
+.v-karaoke-box{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;background:rgba(10,15,30,.85);padding:10px 24px;border-radius:14px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px)}
+.v-word{font-size:1.8rem;font-weight:800;color:#94a3b8;transition:.08s}
+.v-word.spoken{color:#fff}
+.v-word.active{color:#facc15;transform:scale(1.12);text-shadow:0 0 16px rgba(250,204,21,.8)}
+.v-controls{display:flex;align-items:center;gap:1rem;padding:.8rem 1.2rem;background:var(--bg2);border-top:1px solid var(--brd)}
+.v-controls button{background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer}
+.v-slider{flex:1;-webkit-appearance:none;height:6px;border-radius:3px;background:var(--brd);outline:none;cursor:pointer}
+.v-slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--acc);cursor:pointer}
+.v-time{font-size:.8rem;color:var(--t2);font-family:monospace}
+.v-timeline-scroll{display:flex;gap:.8rem;overflow-x:auto;padding:.8rem 0;margin-top:.8rem}
+.v-beat-card{background:var(--bg2);border:1px solid var(--brd);border-radius:8px;padding:.8rem;min-width:200px;max-width:240px;flex-shrink:0;cursor:pointer;transition:.2s}
+.v-beat-card.active{border-color:var(--acc);background:rgba(108,99,255,.1)}
+.v-beat-type{font-size:.68rem;padding:.15rem .45rem;border-radius:4px;font-weight:700;display:inline-block;margin-bottom:.4rem}
+.v-beat-type.AIV{background:#ef4444;color:#fff}
+.v-beat-type.IMG{background:#3b82f6;color:#fff}
+.v-beat-type.GFX{background:#10b981;color:#fff}
+.v-beat-text{font-size:.78rem;color:var(--t2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:999;align-items:center;justify-content:center}
+.modal.vis{display:flex}
+.modal-content{background:var(--bg2);border:1px solid var(--brd);border-radius:var(--r);padding:2rem;width:90%;max-width:500px;text-align:center}
+.pbar-bg{width:100%;height:12px;background:var(--bg3);border-radius:6px;overflow:hidden;margin:1.2rem 0}
+.pbar-fill{width:0%;height:100%;background:linear-gradient(90deg,var(--acc),#10b981);transition:.3s}
 </style>
 </head>
 <body>
 <div class="hdr">
-    <h1>🎛️ AI Audio Studio</h1>
-    <p>Unified Management Dashboard — Native + Docker</p>
+    <h1>🎛️ AI Audio & Video Studio</h1>
+    <p>Unified Management Dashboard & Remotion Video Renderer</p>
+    <div class="nav-tabs">
+        <button class="nav-tab active" onclick="switchTab('tab-services')">📦 Services & System</button>
+        <button class="nav-tab" onclick="switchTab('tab-video')">🎬 Video Preview & Timeline</button>
+    </div>
 </div>
 
 <div class="sysbar">
@@ -88,70 +125,152 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
 </div>
 
 <div class="wrap">
-    <!-- System Info Panel -->
-    <div class="stit">🖥️ System Environment</div>
-    <div class="pnl">
-        <div class="env-grid" id="envGrid">
-            <div class="env-item"><div class="env-label">Platform</div><div class="env-value" id="eiPlatform">...</div></div>
-            <div class="env-item"><div class="env-label">GPU</div><div class="env-value" id="eiGpu">...</div></div>
-            <div class="env-item"><div class="env-label">VRAM</div><div class="env-value" id="eiVram">...</div></div>
-            <div class="env-item"><div class="env-label">TTS Backend</div><div class="env-value" id="eiBackend">...</div></div>
-            <div class="env-item"><div class="env-label">Model Cache</div><div class="env-value" id="eiModel">...</div></div>
-            <div class="env-item"><div class="env-label">Docker</div><div class="env-value" id="eiDocker">...</div></div>
-            <div class="env-item"><div class="env-label">Disk Free</div><div class="env-value" id="eiDisk">...</div></div>
-            <div class="env-item"><div class="env-label">Python</div><div class="env-value" id="eiPython">...</div></div>
+    <!-- TAB 1: SERVICES & SYSTEM -->
+    <div id="tab-services" class="tab-content active">
+        <!-- System Info Panel -->
+        <div class="stit">🖥️ System Environment</div>
+        <div class="pnl">
+            <div class="env-grid" id="envGrid">
+                <div class="env-item"><div class="env-label">Platform</div><div class="env-value" id="eiPlatform">...</div></div>
+                <div class="env-item"><div class="env-label">GPU</div><div class="env-value" id="eiGpu">...</div></div>
+                <div class="env-item"><div class="env-label">VRAM</div><div class="env-value" id="eiVram">...</div></div>
+                <div class="env-item"><div class="env-label">TTS Backend</div><div class="env-value" id="eiBackend">...</div></div>
+                <div class="env-item"><div class="env-label">Model Cache</div><div class="env-value" id="eiModel">...</div></div>
+                <div class="env-item"><div class="env-label">Docker</div><div class="env-value" id="eiDocker">...</div></div>
+                <div class="env-item"><div class="env-label">Disk Free</div><div class="env-value" id="eiDisk">...</div></div>
+                <div class="env-item"><div class="env-label">Python</div><div class="env-value" id="eiPython">...</div></div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="stit">📦 Services</div>
+        <div class="grid" id="svcGrid"></div>
+
+        <!-- Quick Test -->
+        <div class="stit">🧪 Quick TTS Test</div>
+        <div class="pnl">
+            <h3>🎙️ Text-to-Speech</h3>
+            <div class="tf">
+                <div class="fg" style="flex:3">
+                    <label>Text</label>
+                    <textarea id="tText">Xin chào, đây là bài test giọng nói từ AI Audio Studio.</textarea>
+                </div>
+                <div class="fg" style="flex:1">
+                    <label>Voice</label>
+                    <select id="tVoice">
+                        <option value="Hải Đăng">Hải Đăng (Mặc định)</option>
+                        <option value="ngoc-anh">Ngọc Anh</option>
+                        <option value="minh-quang">Minh Quang</option>
+                        <option value="thu-ha">Thu Hà</option>
+                        <option value="duc-manh">Đức Mạnh</option>
+                    </select>
+                </div>
+                <div><button class="btn bp" id="bTest" onclick="testTTS()">▶️ Generate</button></div>
+            </div>
+            <div class="tr" id="tRes">
+                <div class="tm" id="tMeta"></div>
+                <audio id="tAud" controls></audio>
+            </div>
+        </div>
+
+        <!-- How to add services -->
+        <div class="stit">➕ Expand Platform</div>
+        <div class="pnl">
+            <p style="color:var(--t2);font-size:.82rem;line-height:1.5">
+                Add a new service: create a folder → add code → register in <code>studio/app.py</code>
+                and <code>docker-compose.yml</code> → run <code>.\launcher.ps1 start</code>
+            </p>
+            <p style="color:var(--t3);font-size:.78rem;margin-top:.5rem">
+                Planned: STT (Speech-to-Text) · Voice Cloning · Audio Enhancement · Music Gen
+            </p>
         </div>
     </div>
 
-    <!-- Services -->
-    <div class="stit">📦 Services</div>
-    <div class="grid" id="svcGrid"></div>
-
-    <!-- Quick Test -->
-    <div class="stit">🧪 Quick TTS Test</div>
-    <div class="pnl">
-        <h3>🎙️ Text-to-Speech</h3>
-        <div class="tf">
-            <div class="fg" style="flex:3">
-                <label>Text</label>
-                <textarea id="tText">Xin chào, đây là bài test giọng nói từ AI Audio Studio.</textarea>
+    <!-- TAB 2: VIDEO PREVIEW & TIMELINE (REMOTION STUDIO) -->
+    <div id="tab-video" class="tab-content">
+        <div class="v-header">
+            <div class="v-selectors">
+                <div>
+                    <label style="font-size:.75rem;color:var(--t3);display:block;margin-bottom:2px">Kênh (Channel)</label>
+                    <select id="selChannel" onchange="onChannelChange()" style="padding:.45rem .8rem;background:var(--bg2);border:1px solid var(--brd);border-radius:6px;color:#fff;font-size:.82rem"></select>
+                </div>
+                <div>
+                    <label style="font-size:.75rem;color:var(--t3);display:block;margin-bottom:2px">Video Slug</label>
+                    <select id="selVideo" onchange="onVideoChange()" style="padding:.45rem .8rem;background:var(--bg2);border:1px solid var(--brd);border-radius:6px;color:#fff;font-size:.82rem"></select>
+                </div>
+                <button class="btn bs" onclick="loadVideoCatalog()" style="margin-top:16px">🔄 Tải lại</button>
             </div>
-            <div class="fg" style="flex:1">
-                <label>Voice</label>
-                <select id="tVoice">
-                    <option value="ngoc-anh">Ngọc Anh</option>
-                    <option value="minh-quang">Minh Quang</option>
-                    <option value="thu-ha">Thu Hà</option>
-                    <option value="duc-manh">Đức Mạnh</option>
-                    <option value="kieu-trinh">Kiều Trinh</option>
-                    <option value="hoang-long">Hoàng Long</option>
-                </select>
+            <div style="display:flex;gap:.8rem;align-items:center;margin-top:16px">
+                <span id="vStatusBadge" style="font-size:.78rem;color:var(--t2)"></span>
+                <button class="btn bp" id="btnRender" onclick="startRenderVideo()" style="background:linear-gradient(135deg,#10b981,#059669);font-weight:700">🚀 Xuất MP4 Video</button>
             </div>
-            <div><button class="btn bp" id="bTest" onclick="testTTS()">▶️ Generate</button></div>
         </div>
-        <div class="tr" id="tRes">
-            <div class="tm" id="tMeta"></div>
-            <audio id="tAud" controls></audio>
-        </div>
-    </div>
 
-    <!-- How to add services -->
-    <div class="stit">➕ Expand Platform</div>
-    <div class="pnl">
-        <p style="color:var(--t2);font-size:.82rem;line-height:1.5">
-            Add a new service: create a folder → add code → register in <code>studio/app.py</code>
-            and <code>docker-compose.yml</code> → run <code>.\launcher.ps1 start</code>
-        </p>
-        <p style="color:var(--t3);font-size:.78rem;margin-top:.5rem">
-            Planned: STT (Speech-to-Text) · Voice Cloning · Audio Enhancement · Music Gen
-        </p>
+        <!-- Remotion Web Player Container -->
+        <div class="v-player-container">
+            <div class="v-screen" id="vScreen">
+                <img id="vImg" src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80" style="display:block">
+                <video id="vVid" style="display:none" playsinline></video>
+                <div id="vGfxLayer" style="position:absolute;top:0;left:0;width:100%;height:100%;display:none;align-items:center;justify-content:center;color:#fff;font-size:3rem;font-weight:900"></div>
+
+                <!-- Subtitle Karaoke Overlay -->
+                <div class="v-karaoke">
+                    <div class="v-karaoke-box" id="vKaraokeBox">
+                        <span class="v-word">Chọn video để xem trước timeline</span>
+                    </div>
+                </div>
+            </div>
+
+            <audio id="vAudioNarration"></audio>
+
+            <!-- Video Player Controls -->
+            <div class="v-controls">
+                <button id="vBtnPlay" onclick="togglePlay()">▶️</button>
+                <span class="v-time" id="vCurTime">00:00</span>
+                <input type="range" class="v-slider" id="vScrubber" min="0" max="100" value="0" step="0.1" oninput="onScrub(this.value)">
+                <span class="v-time" id="vTotalTime">00:00</span>
+            </div>
+        </div>
+
+        <!-- Timeline Visual Beats -->
+        <div class="stit">🎬 Phân đoạn Visual Beats (B-roll Timeline)</div>
+        <div class="v-timeline-scroll" id="vTimelineBeats">
+            <div style="color:var(--t3);font-size:.82rem;padding:1rem">Đang tải danh sách cảnh...</div>
+        </div>
     </div>
 </div>
 
-<div class="ft2">AI Audio Platform &copy; 2026 — <a href="https://github.com/pnnbao97/VieNeu-TTS" target="_blank">VieNeu-TTS</a></div>
+<!-- Modal Progress Bar khi Render MP4 -->
+<div class="modal" id="renderModal">
+    <div class="modal-content">
+        <h3 style="font-size:1.2rem;margin-bottom:.5rem">🎬 Đang Render Video MP4</h3>
+        <p style="color:var(--t2);font-size:.85rem" id="modalStatusText">Khởi tạo tiến trình Remotion CLI...</p>
+        <div class="pbar-bg">
+            <div class="pbar-fill" id="modalPbar"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--t3);margin-bottom:1.5rem">
+            <span id="modalPercent">0%</span>
+            <span id="modalLogLine">Starting...</span>
+        </div>
+        <div id="modalDoneActions" style="display:none;gap:.8rem;justify-content:center">
+            <a class="btn bp" id="btnDownloadFinal" href="#" target="_blank" style="background:#10b981">⬇️ Tải Video MP4</a>
+            <button class="btn bs" onclick="closeRenderModal()">Đóng</button>
+        </div>
+    </div>
+</div>
+
+<div class="ft2">AI Audio & Video Platform &copy; 2026 — VieNeu-TTS + Remotion Engine</div>
 
 <script>
 const SL={healthy:'Running',starting:'Starting...',stopped:'Stopped',unhealthy:'Unhealthy',unknown:'Unknown',error:'Error'};
+
+function switchTab(tabId){
+    document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+    if(tabId==='tab-video'){loadVideoCatalog();}
+}
 
 function renderCard(id,s){
     const h=s.health||{status:'unknown',message:'Checking...'};
@@ -234,6 +353,338 @@ async function testTTS(){
 loadSvc();loadSys();
 setInterval(loadSvc,15000);
 setInterval(loadSys,60000);
+
+// --- Remotion Studio Video Player & Renderer Logic ---
+let currentCatalog = [];
+let currentVideoData = null;
+let isPlaying = false;
+let playbackTime = 0;
+let playStartTime = 0;
+let activeSeqIndex = -1;
+let currentRenderTaskId = null;
+
+function formatSec(s){
+    const m=Math.floor(s/60);const sec=Math.floor(s%60);
+    return (m<10?'0':'')+m+':'+(sec<10?'0':'')+sec;
+}
+
+async function loadVideoCatalog(){
+    try {
+        const res = await fetch('/api/channels-videos');
+        const data = await res.json();
+        currentCatalog = data.channels || [];
+
+        const selCh = document.getElementById('selChannel');
+        selCh.innerHTML = '';
+        currentCatalog.forEach((ch, idx) => {
+            const opt = document.createElement('option');
+            opt.value = ch.name;
+            opt.textContent = `${ch.title} (${ch.videos.length} videos)`;
+            selCh.appendChild(opt);
+        });
+
+        onChannelChange();
+    } catch(e) {
+        console.error("Error loading video catalog:", e);
+    }
+}
+
+function onChannelChange(){
+    const chName = document.getElementById('selChannel').value;
+    const ch = currentCatalog.find(c => c.name === chName);
+    const selVid = document.getElementById('selVideo');
+    selVid.innerHTML = '';
+
+    if (ch && ch.videos.length > 0) {
+        ch.videos.forEach(v => {
+            const opt = document.createElement('option');
+            opt.value = v.slug;
+            opt.textContent = `${v.slug} ${v.final_video_exists ? '✅' : ''}`;
+            selVid.appendChild(opt);
+        });
+        onVideoChange();
+    } else {
+        selVid.innerHTML = '<option value="">(Chưa có video nào)</option>';
+        document.getElementById('vTimelineBeats').innerHTML = '<div style="padding:1rem;color:var(--t3)">Chưa có video trong kênh này</div>';
+    }
+}
+
+async function onVideoChange(){
+    const ch = document.getElementById('selChannel').value;
+    const slug = document.getElementById('selVideo').value;
+    if (!ch || !slug) return;
+
+    pauseVideo();
+    playbackTime = 0;
+
+    const badge = document.getElementById('vStatusBadge');
+    badge.textContent = '⏳ Đang tải timeline...';
+
+    try {
+        const res = await fetch(`/api/video-data/${ch}/${slug}`);
+        const data = await res.json();
+
+        if (data.status === 'ok') {
+            currentVideoData = data.composition;
+            badge.textContent = `✅ ${currentVideoData.sequences.length} cảnh · ${Math.round(currentVideoData.total_duration_seconds)}s`;
+            renderTimelineBeats();
+            updatePlayerAtTime(0);
+        } else {
+            badge.textContent = '⚠️ ' + data.message;
+        }
+    } catch(e) {
+        badge.textContent = '❌ Lỗi tải video';
+        console.error(e);
+    }
+}
+
+function renderTimelineBeats(){
+    const cont = document.getElementById('vTimelineBeats');
+    cont.innerHTML = '';
+
+    if (!currentVideoData || !currentVideoData.sequences) return;
+
+    currentVideoData.sequences.forEach((seq, idx) => {
+        const card = document.createElement('div');
+        card.className = `v-beat-card ${idx === 0 ? 'active' : ''}`;
+        card.id = `beat-card-${idx}`;
+        card.onclick = () => seekToSequence(idx);
+
+        const startTime = (seq.start_frame / (currentVideoData.fps || 30)).toFixed(1);
+        card.innerHTML = `
+            <div style="display:flex;justify-content:space-between;align-items:center">
+                <span class="v-beat-type ${seq.type}">${seq.type}</span>
+                <span style="font-size:.7rem;color:var(--t3)">${startTime}s · ${seq.duration_seconds}s</span>
+            </div>
+            <div style="font-weight:700;font-size:.82rem;margin-bottom:2px">${seq.id} (${seq.scene})</div>
+            <div class="v-beat-text">${seq.narration_text || seq.beat || ''}</div>
+        `;
+        cont.appendChild(card);
+    });
+
+    document.getElementById('vTotalTime').textContent = formatSec(currentVideoData.total_duration_seconds || 0);
+    document.getElementById('vScrubber').max = currentVideoData.total_duration_seconds || 100;
+}
+
+function seekToSequence(idx){
+    if (!currentVideoData || !currentVideoData.sequences[idx]) return;
+    const seq = currentVideoData.sequences[idx];
+    const sec = seq.start_frame / (currentVideoData.fps || 30);
+    onScrub(sec);
+}
+
+function updatePlayerAtTime(sec){
+    if (!currentVideoData || !currentVideoData.sequences) return;
+
+    playbackTime = Math.max(0, Math.min(sec, currentVideoData.total_duration_seconds));
+    document.getElementById('vCurTime').textContent = formatSec(playbackTime);
+    document.getElementById('vScrubber').value = playbackTime;
+
+    const fps = currentVideoData.fps || 30;
+    const currentFrame = playbackTime * fps;
+
+    // Tìm sequence hiện tại
+    const seqIdx = currentVideoData.sequences.findIndex(s => 
+        currentFrame >= s.start_frame && currentFrame < (s.start_frame + s.duration_frames)
+    );
+
+    const vImg = document.getElementById('vImg');
+    const vVid = document.getElementById('vVid');
+    const vGfx = document.getElementById('vGfxLayer');
+    const vAudio = document.getElementById('vAudioNarration');
+
+    if (seqIdx !== -1) {
+        const seq = currentVideoData.sequences[seqIdx];
+
+        if (seqIdx !== activeSeqIndex) {
+            activeSeqIndex = seqIdx;
+            document.querySelectorAll('.v-beat-card').forEach(c => c.classList.remove('active'));
+            const actCard = document.getElementById(`beat-card-${seqIdx}`);
+            if (actCard) {
+                actCard.classList.add('active');
+                actCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
+
+            // Đổi Media Layer
+            if (seq.type === 'GFX') {
+                vImg.style.display = 'none';
+                vVid.style.display = 'none';
+                vGfx.style.display = 'flex';
+                vGfx.innerHTML = `
+                    <div style="text-align:center;padding:20px;background:rgba(8,12,22,0.9);border-radius:16px;border:1px solid #334155">
+                        <div style="font-size:1.2rem;color:#94a3b8;margin-bottom:8px">${seq.gfx_component || 'Motion Graphic'}</div>
+                        <div style="font-size:3.2rem;font-weight:900;color:#ef4444">${seq.gfx_component === 'CounterNumber' ? '50.000.000 VNĐ' : '45% / năm'}</div>
+                    </div>`;
+            } else if (seq.type === 'AIV' && seq.asset_path && seq.asset_path.endsWith('.mp4')) {
+                vImg.style.display = 'none';
+                vGfx.style.display = 'none';
+                vVid.style.display = 'block';
+                if (vVid.src !== window.location.origin + seq.asset_path) {
+                    vVid.src = seq.asset_path;
+                    vVid.currentTime = (currentFrame - seq.start_frame) / fps;
+                    if (isPlaying) vVid.play();
+                }
+            } else {
+                vVid.style.display = 'none';
+                vGfx.style.display = 'none';
+                vImg.style.display = 'block';
+                vImg.src = seq.asset_path || "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80";
+                
+                // Ken Burns Zoom In effect
+                const progress = (currentFrame - seq.start_frame) / seq.duration_frames;
+                const scale = 1.0 + (progress * 0.15);
+                vImg.style.transform = `scale(${scale})`;
+            }
+
+            // Sync Narration Audio
+            if (seq.narration_audio_url) {
+                if (vAudio.src !== window.location.origin + seq.narration_audio_url) {
+                    vAudio.src = seq.narration_audio_url;
+                    vAudio.currentTime = Math.max(0, (currentFrame - seq.start_frame) / fps);
+                    if (isPlaying) vAudio.play().catch(()=>{});
+                }
+            }
+        }
+
+        // Cập nhật Subtitle Karaoke
+        updateKaraokeSubtitle(seq, currentFrame, fps);
+    }
+}
+
+function updateKaraokeSubtitle(seq, currentFrame, fps){
+    const box = document.getElementById('vKaraokeBox');
+    if (!seq.words || seq.words.length === 0) {
+        box.innerHTML = `<span class="v-word spoken">${seq.narration_text || ''}</span>`;
+        return;
+    }
+
+    const currentMs = ((currentFrame - seq.start_frame) / fps) * 1000;
+    let html = '';
+    seq.words.forEach(w => {
+        let cls = 'v-word';
+        if (currentMs >= w.start_ms && currentMs <= w.end_ms) {
+            cls += ' active';
+        } else if (currentMs > w.end_ms) {
+            cls += ' spoken';
+        }
+        html += `<span class="${cls}">${w.word}</span> `;
+    });
+    box.innerHTML = html;
+}
+
+function onScrub(val){
+    playbackTime = parseFloat(val);
+    updatePlayerAtTime(playbackTime);
+}
+
+function togglePlay(){
+    if (isPlaying) {
+        pauseVideo();
+    } else {
+        playVideo();
+    }
+}
+
+function playVideo(){
+    if (!currentVideoData) return;
+    isPlaying = true;
+    document.getElementById('vBtnPlay').textContent = '⏸️';
+    playStartTime = performance.now() - (playbackTime * 1000);
+    requestAnimationFrame(renderLoop);
+}
+
+function pauseVideo(){
+    isPlaying = false;
+    document.getElementById('vBtnPlay').textContent = '▶️';
+    const vVid = document.getElementById('vVid');
+    const vAudio = document.getElementById('vAudioNarration');
+    if (vVid) vVid.pause();
+    if (vAudio) vAudio.pause();
+}
+
+function renderLoop(now){
+    if (!isPlaying || !currentVideoData) return;
+
+    playbackTime = (now - playStartTime) / 1000;
+    if (playbackTime >= currentVideoData.total_duration_seconds) {
+        playbackTime = currentVideoData.total_duration_seconds;
+        pauseVideo();
+        updatePlayerAtTime(playbackTime);
+        return;
+    }
+
+    updatePlayerAtTime(playbackTime);
+    requestAnimationFrame(renderLoop);
+}
+
+// --- Render Video MP4 Backend Integration ---
+async function startRenderVideo(){
+    const ch = document.getElementById('selChannel').value;
+    const slug = document.getElementById('selVideo').value;
+    if (!ch || !slug) return;
+
+    pauseVideo();
+    const modal = document.getElementById('renderModal');
+    modal.classList.add('vis');
+    document.getElementById('modalDoneActions').style.display = 'none';
+    document.getElementById('modalPbar').style.width = '0%';
+    document.getElementById('modalPercent').textContent = '0%';
+    document.getElementById('modalStatusText').textContent = `Bắt đầu render video '${slug}' qua Remotion...`;
+
+    try {
+        const res = await fetch('/api/render-video', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ channel: ch, slug: slug, fps: 30 })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+            currentRenderTaskId = data.task_id;
+            pollRenderStatus(currentRenderTaskId);
+        } else {
+            document.getElementById('modalStatusText').textContent = '❌ ' + data.message;
+        }
+    } catch(e) {
+        document.getElementById('modalStatusText').textContent = '❌ Lỗi kết nối API: ' + e.message;
+    }
+}
+
+async function pollRenderStatus(taskId){
+    if (!taskId) return;
+    try {
+        const res = await fetch(`/api/render-status/${taskId}`);
+        const data = await res.json();
+
+        const pbar = document.getElementById('modalPbar');
+        const pctText = document.getElementById('modalPercent');
+        const logText = document.getElementById('modalLogLine');
+
+        if (data.status === 'rendering' || data.status === 'queued') {
+            const pct = data.progress || 5;
+            pbar.style.width = pct + '%';
+            pctText.textContent = pct + '%';
+            logText.textContent = data.log_line || 'Đang render từng khung hình...';
+            setTimeout(() => pollRenderStatus(taskId), 1500);
+        } else if (data.status === 'done') {
+            pbar.style.width = '100%';
+            pctText.textContent = '100%';
+            document.getElementById('modalStatusText').textContent = '🎉 Render MP4 hoàn tất thành công!';
+            logText.textContent = 'Chuẩn H.264 1080p 30fps';
+            document.getElementById('modalDoneActions').style.display = 'flex';
+            document.getElementById('btnDownloadFinal').href = data.video_url;
+            onVideoChange(); // Tải lại danh sách để có dấu ✅
+        } else if (data.status === 'error') {
+            document.getElementById('modalStatusText').textContent = '❌ Render thất bại: ' + (data.error || 'Unknown error');
+            document.getElementById('modalDoneActions').style.display = 'flex';
+        }
+    } catch(e) {
+        setTimeout(() => pollRenderStatus(taskId), 3000);
+    }
+}
+
+function closeRenderModal(){
+    document.getElementById('renderModal').classList.remove('vis');
+}
 </script>
 </body>
 </html>

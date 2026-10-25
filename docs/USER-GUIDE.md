@@ -317,11 +317,26 @@ Agent sẽ áp dụng đúng công cụ trong bộ **20/20 Stack**:
 
 ---
 
-## ✂️ Bước 7: Dựng video (Assembly)
+## ✂️ Bước 7: Hậu Kỳ Dựng Video Hoàn Chỉnh (Assembly & Render)
 
-Bạn tải các file về và ráp theo checklist [`assembly-checklist.md`](file:///c:/Users/tuanlee/Downloads/audio/.agents/skills/video-director/references/assembly-checklist.md):
+Bạn có 2 lựa chọn để xuất video hoàn chỉnh:
 
-1. **Import Audio**: Kéo toàn bộ file `.wav` từ thư mục `audio/` vào Timeline phần mềm dựng (CapCut / Premiere).
+### Cách 1: Render Tự Động 100% bằng Remotion Engine ⭐ (Khuyên dùng — Không cần kéo thả)
+Không cần mở CapCut hay Premiere, hệ thống tự động ghép toàn bộ âm thanh, phụ đề karaoke và hình ảnh thành file MP4:
+1. **Xem trước Timeline**: Mở `http://localhost:3000` (Tab **"🎬 Video Preview & Timeline"**) hoặc gõ `@preview-video`. Bạn có thể bấm Play để nghe narration ăn khớp từng chữ với phụ đề đổi màu và ngắm ảnh Ken Burns chuyển động mượt mà.
+2. **Xuất video**:
+   - Bấm nút **"🚀 Xuất MP4 Video"** trên giao diện Studio.
+   - Hoặc gõ lệnh cheatcode trực tiếp trong chat:
+     ```text
+     @render-video
+     ```
+   - Remotion Engine sẽ tự động render ra file **`final_video.mp4`** (chuẩn H.264 1080p 30fps) tại thư mục video!
+
+---
+
+### Cách 2: Dựng Thủ Công trên CapCut / Premiere (Nếu muốn tùy biến nâng cao)
+Nếu bạn muốn tự tay chỉnh sửa chuyển cảnh hoặc thêm hiệu ứng riêng:
+1. **Import Audio**: Kéo toàn bộ file `.wav` từ thư mục `audio/` vào Timeline phần mềm dựng.
 2. **Import Subtitle**: Kéo file `karaoke.srt` đè lên track phụ đề (tự động khớp 100% không cần căn chỉnh tay).
 3. **Import Asset hình ảnh**: Đặt các clip AIV và ảnh IMG vào đúng vị trí B-roll tương ứng theo danh sách.
 4. **Nhạc nền & SFX**: Chèn nhạc nền nhẹ (nhỏ hơn giọng đọc -18dB) và các tiếng động theo gợi ý kịch bản.
@@ -354,6 +369,8 @@ Bạn tải các file về và ráp theo checklist [`assembly-checklist.md`](fil
 | | `@gen-prompts --all` | Xuất toàn bộ prompt ảnh/video đã chốt style |
 | | `@render-code-motion`| Tạo component đồ họa chuyển động (20/20 Stack) |
 | | `@list-motion-stack` | Xem 20/20 công nghệ dựng hoạt ảnh & video bằng code |
+| | `@preview-video` | Xem trước timeline video trong Studio Web (port 3000) |
+| | `@render-video` | **Render xuất video MP4 tự động** (Remotion 1080p) |
 | | `@gen-subs` | Xuất file phụ đề karaoke `.srt` |
 | | `@next` | Đi tiếp bước kế tiếp trong quy trình |
 | | `@undo` | Quay lại bước trước đó |

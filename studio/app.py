@@ -259,6 +259,325 @@ def api_audio(filename):
     return send_from_directory(str(DATA_DIR), filename)
 
 
+# --- Video Rendering & Studio Timeline ---
+_render_tasks = {}
+_render_lock = threading.Lock()
+
+
+@app.route("/api/channels-videos")
+def api_channels_videos():
+    """Liệt kê danh sách channels và video slugs trong monorepo."""
+    channels_dir = ROOT_DIR / "channels"
+    result = []
+    if not channels_dir.exists():
+        return jsonify({"channels": []})
+
+    for ch_path in channels_dir.iterdir():
+        if not ch_path.is_dir() or ch_path.name.startswith("."):
+            continue
+
+        ch_name = ch_path.name
+        ch_title = ch_name
+        config_file = ch_path / "config.json"
+        if config_file.exists():
+            try:
+                cfg = json.loads(config_file.read_text(encoding="utf-8"))
+                ch_title = cfg.get("channel_name", ch_name)
+            except Exception:
+                pass
+
+        videos_dir = ch_path / "videos"
+        videos = []
+        if videos_dir.exists():
+            for v_path in videos_dir.iterdir():
+                if not v_path.is_dir() or v_path.name.startswith("."):
+                    continue
+
+                slug = v_path.name
+                has_comp = (v_path / "assets" / "remotion-composition.json").exists()
+                has_broll = (v_path / "broll-plan.json").exists()
+                has_subs = (v_path / "subtitles" / "karaoke.srt").exists() or (v_path / "subtitles" / "karaoke.ass").exists()
+                audio_dir = v_path / "audio"
+                audio_count = len(list(audio_dir.glob("*.wav"))) if audio_dir.exists() else 0
+                final_video_path = v_path / "final_video.mp4"
+
+                videos.append({
+                    "slug": slug,
+                    "has_composition": has_comp,
+                    "has_broll": has_broll,
+                    "has_subs": has_subs,
+                    "audio_count": audio_count,
+                    "final_video_exists": final_video_path.exists(),
+                    "final_video_url": f"/api/media/{ch_name}/{slug}/final_video.mp4" if final_video_path.exists() else None,
+                })
+
+        result.append({
+            "name": ch_name,
+            "title": ch_title,
+            "videos": videos,
+        })
+
+    return jsonify({"channels": result})
+
+
+@app.route("/api/video-data/<channel>/<slug>")
+def api_video_data(channel, slug):
+    """Lấy dữ liệu composition và sequences cho Remotion Player."""
+    video_dir = ROOT_DIR / "channels" / channel / "videos" / slug
+    if not video_dir.exists():
+        return jsonify({"status": "error", "message": "Video directory not found"}), 404
+
+    comp_file = video_dir / "assets" / "remotion-composition.json"
+    if comp_file.exists():
+        try:
+            data = json.loads(comp_file.read_text(encoding="utf-8"))
+            # Chuẩn hóa URLs để phục vụ qua static API
+            for seq in data.get("sequences", []):
+                scene = seq.get("scene", "")
+                seq_id = seq.get("id", "")
+                # Narration audio
+                audio_file = video_dir / "audio" / f"{scene}_narration.wav"
+                if audio_file.exists():
+                    seq["narration_audio_url"] = f"/api/media/{channel}/{slug}/audio/{scene}_narration.wav"
+
+                # Word timings từ Whisper
+                timing_file = video_dir / "audio" / f"{scene}_timing.json"
+                if timing_file.exists() and "words" not in seq:
+                    try:
+                        t_data = json.loads(timing_file.read_text(encoding="utf-8"))
+                        seq["words"] = t_data.get("words", [])
+                    except Exception:
+                        pass
+
+                # Asset path
+                assets_dir = video_dir / "assets"
+                matched_asset = None
+                for ext in [".mp4", ".png", ".jpg", ".webp"]:
+                    candidate = assets_dir / f"{seq_id}{ext}"
+                    if candidate.exists():
+                        matched_asset = f"/api/media/{channel}/{slug}/assets/{seq_id}{ext}"
+                        break
+                    candidate_scene = assets_dir / f"{scene}_{seq.get('type', 'IMG')}{ext}"
+                    if candidate_scene.exists():
+                        matched_asset = f"/api/media/{channel}/{slug}/assets/{candidate_scene.name}"
+                        break
+                if matched_asset:
+                    seq["asset_path"] = matched_asset
+
+            return jsonify({"status": "ok", "composition": data})
+        except Exception as e:
+            return jsonify({"status": "error", "message": f"Error parsing composition: {e}"}), 500
+
+    # Fallback nếu chưa có file remotion-composition.json nhưng có broll-plan
+    broll_file = video_dir / "broll-plan.json"
+    if broll_file.exists():
+        try:
+            broll_data = json.loads(broll_file.read_text(encoding="utf-8"))
+            sequences = []
+            fps = 30
+            current_frame = 0
+            for item in broll_data:
+                dur_s = item.get("duration_seconds", 4)
+                dur_f = int(dur_s * fps)
+                scene = item.get("scene", "S001")
+                seq_id = item.get("broll_id", f"{scene}-A")
+                seq_type = item.get("type", "AIV")
+
+                seq = {
+                    "id": seq_id,
+                    "scene": scene,
+                    "beat": item.get("visual_beat", "Scene Beat"),
+                    "type": seq_type,
+                    "duration_seconds": dur_s,
+                    "duration_frames": dur_f,
+                    "start_frame": current_frame,
+                    "motion_effect": "ken_burns_zoom_in" if seq_type == "IMG" else "static",
+                    "narration_text": item.get("visual_beat", ""),
+                }
+
+                audio_file = video_dir / "audio" / f"{scene}_narration.wav"
+                if audio_file.exists():
+                    seq["narration_audio_url"] = f"/api/media/{channel}/{slug}/audio/{scene}_narration.wav"
+
+                timing_file = video_dir / "audio" / f"{scene}_timing.json"
+                if timing_file.exists():
+                    try:
+                        t_data = json.loads(timing_file.read_text(encoding="utf-8"))
+                        seq["words"] = t_data.get("words", [])
+                    except Exception:
+                        pass
+
+                sequences.append(seq)
+                current_frame += dur_f
+
+            total_s = current_frame / fps
+            return jsonify({
+                "status": "ok",
+                "composition": {
+                    "title": slug,
+                    "slug": slug,
+                    "channel": channel,
+                    "fps": fps,
+                    "width": 1920,
+                    "height": 1080,
+                    "total_duration_seconds": total_s,
+                    "total_frames": current_frame,
+                    "sequences": sequences,
+                }
+            })
+        except Exception as e:
+            return jsonify({"status": "error", "message": f"Error parsing broll plan: {e}"}), 500
+
+    return jsonify({"status": "error", "message": "No composition or broll plan found"}), 404
+
+
+@app.route("/api/media/<channel>/<slug>/<path:filepath>")
+def api_media(channel, slug, filepath):
+    """Phục vụ an toàn các file media từ thư mục video."""
+    video_dir = ROOT_DIR / "channels" / channel / "videos" / slug
+    full_path = video_dir / filepath
+    if not full_path.exists():
+        return jsonify({"status": "error", "message": "File not found"}), 404
+    return send_from_directory(str(full_path.parent), full_path.name)
+
+
+def _execute_render_task(task_id, channel, slug, fps=30):
+    """Worker chạy tiến trình render Remotion ngầm."""
+    import re
+    import uuid
+
+    video_dir = ROOT_DIR / "channels" / channel / "videos" / slug
+    remotion_dir = ROOT_DIR / "studio" / "remotion"
+    output_file = video_dir / "final_video.mp4"
+
+    try:
+        # Lấy composition data
+        comp_file = video_dir / "assets" / "remotion-composition.json"
+        if not comp_file.exists():
+            raise FileNotFoundError(f"Không tìm thấy remotion-composition.json tại {comp_file}")
+
+        comp_data = json.loads(comp_file.read_text(encoding="utf-8"))
+        
+        # Tạo file props tạm thời
+        temp_props_file = remotion_dir / f"temp_props_{task_id}.json"
+        temp_props_file.write_text(json.dumps(comp_data, ensure_ascii=False), encoding="utf-8")
+
+        cmd = [
+            "npx", "remotion", "render",
+            "src/index.ts", "MainVideo",
+            str(output_file),
+            f"--props={temp_props_file.name}",
+            "--overwrite"
+        ]
+
+        # Windows execution wrapper
+        shell_needed = sys.platform == "win32"
+        proc = subprocess.Popen(
+            cmd,
+            cwd=str(remotion_dir),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            shell=shell_needed,
+            encoding="utf-8",
+            errors="replace"
+        )
+
+        with _render_lock:
+            _render_tasks[task_id]["pid"] = proc.pid
+            _render_tasks[task_id]["status"] = "rendering"
+
+        # Đọc tiến độ
+        progress_pattern = re.compile(r"Rendered\s+(\d+)/(\d+)")
+        percent_pattern = re.compile(r"(\d+)%")
+
+        for line in iter(proc.stdout.readline, ""):
+            line_str = line.strip()
+            if not line_str:
+                continue
+
+            prog_match = progress_pattern.search(line_str)
+            if prog_match:
+                curr, total = int(prog_match.group(1)), int(prog_match.group(2))
+                if total > 0:
+                    pct = min(100, int((curr / total) * 100))
+                    with _render_lock:
+                        _render_tasks[task_id]["progress"] = pct
+                        _render_tasks[task_id]["log_line"] = line_str
+
+            pct_match = percent_pattern.search(line_str)
+            if pct_match and not prog_match:
+                with _render_lock:
+                    _render_tasks[task_id]["progress"] = int(pct_match.group(1))
+                    _render_tasks[task_id]["log_line"] = line_str
+
+        proc.wait()
+
+        # Dọn dẹp file tạm
+        if temp_props_file.exists():
+            try:
+                temp_props_file.unlink()
+            except Exception:
+                pass
+
+        if proc.returncode == 0 and output_file.exists():
+            with _render_lock:
+                _render_tasks[task_id]["status"] = "done"
+                _render_tasks[task_id]["progress"] = 100
+                _render_tasks[task_id]["video_url"] = f"/api/media/{channel}/{slug}/final_video.mp4"
+                _render_tasks[task_id]["finished_at"] = datetime.now().isoformat()
+        else:
+            with _render_lock:
+                _render_tasks[task_id]["status"] = "error"
+                _render_tasks[task_id]["error"] = f"Remotion render failed with exit code {proc.returncode}"
+    except Exception as e:
+        with _render_lock:
+            _render_tasks[task_id]["status"] = "error"
+            _render_tasks[task_id]["error"] = str(e)
+
+
+@app.route("/api/render-video", methods=["POST"])
+def api_render_video():
+    """Kích hoạt tiến trình render Remotion ra file MP4."""
+    import uuid
+
+    data = request.json or {}
+    channel = data.get("channel")
+    slug = data.get("slug")
+    fps = int(data.get("fps", 30))
+
+    if not channel or not slug:
+        return jsonify({"status": "error", "message": "channel and slug are required"}), 400
+
+    task_id = str(uuid.uuid4())[:8]
+    with _render_lock:
+        _render_tasks[task_id] = {
+            "task_id": task_id,
+            "channel": channel,
+            "slug": slug,
+            "status": "queued",
+            "progress": 0,
+            "started_at": datetime.now().isoformat(),
+            "video_url": None,
+            "error": None,
+        }
+
+    thread = threading.Thread(target=_execute_render_task, args=(task_id, channel, slug, fps), daemon=True)
+    thread.start()
+
+    return jsonify({"status": "ok", "task_id": task_id, "message": "Render task queued"})
+
+
+@app.route("/api/render-status/<task_id>")
+def api_render_status(task_id):
+    """Kiểm tra tiến độ render."""
+    with _render_lock:
+        task = _render_tasks.get(task_id)
+    if not task:
+        return jsonify({"status": "error", "message": "Task not found"}), 404
+    return jsonify(task)
+
+
 @app.route("/api/system")
 def api_system():
     """System & GPU info."""

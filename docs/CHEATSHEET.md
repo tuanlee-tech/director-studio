@@ -42,6 +42,8 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 | **`@show-prompts`** | `@show-prompts` | Xem bảng prompts theo định dạng shot list |
 | **`@shot-list`** | `@shot-list` | Xuất file shot list đầy đủ |
 | **`@gen-remotion`** | `@gen-remotion` | Xuất file composition Remotion để render tự động |
+| **`@preview-video`**| `@preview-video` | **Xem trước timeline** và Remotion Player trong Studio (port 3000) |
+| **`@render-video`** | `@render-video` | **Render xuất video MP4** tự động 100% bằng Remotion Engine (H.264 1080p) |
 | **`@render-code-motion`** | `@render-code-motion S005` | Tạo component TSX (20/20 Stack) cho cảnh đồ họa chuyển động |
 | **`@list-motion-stack`** | `@list-motion-stack` | Liệt kê chi tiết 20/20 công cụ dựng hoạt ảnh & video bằng code |
 | **`@gen-subs`** | `@gen-subs --format srt` | Sinh phụ đề karaoke `.srt` hoặc `.ass` |
