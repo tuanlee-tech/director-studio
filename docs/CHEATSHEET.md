@@ -33,10 +33,14 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 | **`@show-broll`** | `@show-broll` | Xem bảng kế hoạch B-roll để kiểm tra |
 | **`@edit-broll`** | `@edit-broll S003 duration 6s` | Chỉnh sửa B-roll (thời lượng, góc máy, loại) |
 | **`@approve-broll`**| `@approve-broll` | **Duyệt B-roll** (Cổng kiểm duyệt trước khi sinh hình) |
-| **`@gen-prompts`** | `@gen-prompts --all` | Tạo bảng prompt ảnh + video + storyboard |
+| **`@test-style`** | `@test-style` | **Tạo thử 1 ảnh** trên Google Flow để kiểm tra phong cách thực tế |
+| **`@lock-style`** | `@lock-style` | **Khóa Style Lock** sau khi đã test ảnh thành công trên Google Flow |
+| **`@gen-prompts`** | `@gen-prompts --all` | Tạo bảng prompt ảnh + video + storyboard hàng loạt (sau khi lock style) |
 | **`@show-prompts`** | `@show-prompts` | Xem bảng prompts theo định dạng shot list |
 | **`@shot-list`** | `@shot-list` | Xuất file shot list đầy đủ |
 | **`@gen-remotion`** | `@gen-remotion` | Xuất file composition Remotion để render tự động |
+| **`@render-code-motion`** | `@render-code-motion S005` | Tạo component TSX (20/20 Stack) cho cảnh đồ họa chuyển động |
+| **`@list-motion-stack`** | `@list-motion-stack` | Liệt kê chi tiết 20/20 công cụ dựng hoạt ảnh & video bằng code |
 | **`@gen-subs`** | `@gen-subs --format srt` | Sinh phụ đề karaoke `.srt` hoặc `.ass` |
 | **`@preview-subs`** | `@preview-subs` | Xem thử phụ đề khớp từng từ trong chat |
 | **`@schedule`** | `@schedule show` | Xem lịch trình các video (⬜ Chưa làm / ✅ Đã xong) |
@@ -46,7 +50,7 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 
 ---
 
-## 🎯 Quy trình 7 bước chuẩn làm 1 video
+## 🎯 Quy trình 8 bước chuẩn làm 1 video
 
 1. **Bước 1**: `@set-channel <tên-kênh>`
 2. **Bước 2**: `@new-video "<tiêu đề video>"`
@@ -54,7 +58,29 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 4. **Bước 4**: `@gen-all-audio` *(tạo giọng đọc audio-first)*
 5. **Bước 5**: `@analyze --all` *(Whisper đo chính xác từng từ)*
 6. **Bước 6**: `@plan-broll` → `@approve-broll` *(duyệt kế hoạch hình ảnh)*
-7. **Bước 7**: `@gen-prompts --all` & `@gen-subs` *(nhận prompt tạo video + file phụ đề karaoke)*
+7. **Bước 7 (Style Prototyping Gate)**: `@test-style` *(tạo thử 1 ảnh trên Google Flow để kiểm tra phong cách thực tế)* → nếu đẹp thì gõ `@lock-style` để chốt!
+8. **Bước 8**: `@gen-prompts --all`, `@render-code-motion` & `@gen-subs` *(sinh toàn bộ prompt đã chốt style + code motion graphics + phụ đề karaoke)*
+
+---
+
+## 🎨 Cổng Thử Nghiệm Phong Cách (Style Prototyping Gate)
+Dự kiến trên giấy tờ có thể khác xa khi AI tạo hình thực tế. Trước khi sinh hàng chục prompt hàng loạt:
+- Gõ **`@test-style`**: Agent trích xuất 1 prompt tiêu biểu nhất (cảnh Hook).
+- Dán vào **Google Flow / Midjourney / Flux** để sinh thử 1 ảnh.
+- Tinh chỉnh prompt nếu cần (`sửa style: ...`).
+- Khi ảnh thực tế đã chuẩn gu, gõ **`@lock-style`**: Toàn bộ các cảnh sau sẽ được sinh theo Style Lock đã được kiểm chứng thực tế!
+
+---
+
+## 🚀 Hệ Thống 20/20 Code-Driven Motion & Video Rendering Stack
+Hỗ trợ Agent viết code render video và hoạt ảnh với **0 chi phí AI Credit**:
+- **I. 3 Skills cốt lõi**: Remotion Skill (React video frame-by-frame), Motion AI Kit (micro-animations), GSAP Skill (timeline chính xác từng frame).
+- **II. Thiết kế Vector**: SVGO (tối ưu hóa SVG), Satori (biến JSX/Tailwind thành SVG sắc nét).
+- **III. 5 Thư viện hoạt ảnh**: GSAP, Anime.js (SVG stroke & morphing), Motion, Rive (interactive state machine), Lottie (AE stickers).
+- **IV. Dựng 2D**: Remotion (ghép React component thành MP4), Motion Canvas (video giải thích/toán học).
+- **V. Dựng 3D**: Three.js, React Three Fiber (R3F), Drei (3D helpers), Rapier (vật lý 3D va chạm, rơi tự do), Postprocessing (Bloom phát sáng neon, xóa phông).
+- **VI. Âm thanh & Xuất video**: Howler.js (BGM ducking & SFX), Mediabunny (in-browser encoding), FFmpeg (ghép xuất MP4 chuẩn 1080p).
+- Tra cứu nhanh: Gõ **`@list-motion-stack`**.
 
 ---
 

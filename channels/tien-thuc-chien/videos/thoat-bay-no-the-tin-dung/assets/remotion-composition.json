@@ -1,0 +1,1322 @@
+{
+  "schema_version": "1.0",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "channel": "tien-thuc-chien",
+  "video_slug": "thoat-bay-no-the-tin-dung",
+  "audio_track": "audio/narration_master.wav",
+  "tracks": {
+    "visual_sequences": [
+      {
+        "id": "S001-A",
+        "scene_id": "S001",
+        "type": "AIV",
+        "from_frame": 0,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Chàng trai sốc nhìn số dư nợ 40 triệu đồng trong app ngân hàng, mồ hôi rơi",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S001-A_6s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      },
+      {
+        "id": "S002-A",
+        "scene_id": "S002",
+        "type": "AIV",
+        "from_frame": 180,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Cảnh quẹt thẻ thanh toán hào nhoáng tại quầy bar sang chảnh giữa ánh đèn lung linh",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S002-A_6s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      },
+      {
+        "id": "S003-A",
+        "scene_id": "S003",
+        "type": "AIV",
+        "from_frame": 360,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Chiếc mỏ neo kim loại khổng lồ gắn vào chiếc ví da kéo chìm dần xuống đáy biển sâu",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S003-A_6s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      },
+      {
+        "id": "S004-A",
+        "scene_id": "S004",
+        "type": "AIV",
+        "from_frame": 540,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Chàng trai đại diện kênh bước vào giữa khung hình, xua tan làn sương mù, giơ tay đưa ra lộ trình",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S004-A_6s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      },
+      {
+        "id": "S005-A",
+        "scene_id": "S005",
+        "type": "IMG",
+        "from_frame": 720,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Nhân vật vui mừng cầm thẻ tín dụng mạ vàng lấp lánh mới toanh, ánh sáng rực rỡ",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S005-A_IMG.png",
+          "animation": "CU, cận cảnh, Ken Burns pan-right",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S006-A",
+        "scene_id": "S006",
+        "type": "GFX",
+        "from_frame": 870,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi",
+        "component": "MotionGraphic",
+        "props": {
+          "title": "AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S007-A",
+        "scene_id": "S007",
+        "type": "IMG",
+        "from_frame": 990,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Nhóm bạn trẻ ăn uống sang chảnh tại nhà hàng, ly cocktail và đồ công nghệ trên bàn",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S007-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S008-A",
+        "scene_id": "S008",
+        "type": "GFX",
+        "from_frame": 1170,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa",
+        "component": "SplitComparison",
+        "props": {
+          "title": "SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S009-A",
+        "scene_id": "S009",
+        "type": "IMG",
+        "from_frame": 1320,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Nhân vật soi gương thấy mình diện vest đại gia trong khi túi quần xẹp lép",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S009-A_IMG.png",
+          "animation": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S010-A",
+        "scene_id": "S010",
+        "type": "GFX",
+        "from_frame": 1440,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn",
+        "component": "MotionGraphic",
+        "props": {
+          "title": "AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S011-A",
+        "scene_id": "S011",
+        "type": "IMG",
+        "from_frame": 1620,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Nhân vật hoảng hốt trợn tròn mắt nhìn thông báo sao kê ngân hàng đỏ rực 15 triệu",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S011-A_IMG.png",
+          "animation": "CU, cận cảnh, Ken Burns pan-right",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S012-A",
+        "scene_id": "S012",
+        "type": "IMG",
+        "from_frame": 1800,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Nhân vật ngồi gục đầu trước bàn làm việc ngập tràn hóa đơn và biên lai",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S012-A_IMG.png",
+          "animation": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S013-A",
+        "scene_id": "S013",
+        "type": "GFX",
+        "from_frame": 1920,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh",
+        "component": "FocusCard",
+        "props": {
+          "title": "FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S014-A",
+        "scene_id": "S014",
+        "type": "GFX",
+        "from_frame": 2100,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'",
+        "component": "CounterNumber",
+        "props": {
+          "title": "CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S015-A",
+        "scene_id": "S015",
+        "type": "IMG",
+        "from_frame": 2250,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Nhân vật thở phào nhưng chân đang lún sâu vào vũng cát lầy nợ nần",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S015-A_IMG.png",
+          "animation": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S016-A",
+        "scene_id": "S016",
+        "type": "IMG",
+        "from_frame": 2400,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Nhân vật ngập ngừng quẹt thẻ tại siêu thị để mua đồ ăn thiết yếu cuối tháng",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S016-A_IMG.png",
+          "animation": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S017-A",
+        "scene_id": "S017",
+        "type": "GFX",
+        "from_frame": 2520,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp",
+        "component": "LoopDiagram",
+        "props": {
+          "title": "LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S018-A",
+        "scene_id": "S018",
+        "type": "GFX",
+        "from_frame": 2670,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng",
+        "component": "ChartMotion",
+        "props": {
+          "title": "ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S019-A",
+        "scene_id": "S019",
+        "type": "IMG",
+        "from_frame": 2820,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Nhân vật cặm cụi gõ phím làm việc, bóng ngân hàng vươn tay rút sạch tiền lương",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S019-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S020-A",
+        "scene_id": "S020",
+        "type": "IMG",
+        "from_frame": 2970,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Nhân vật còng lưng kéo chiếc thẻ tín dụng khổng lồ như một cỗ xe bò nặng trĩu",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S020-A_IMG.png",
+          "animation": "MS, góc 45 độ, Ken Burns pan-left",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S021-A",
+        "scene_id": "S021",
+        "type": "IMG",
+        "from_frame": 3120,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Màn hình điện thoại rung bần bật trong đêm tối, thông báo đòi nợ sáng rực",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S021-A_IMG.png",
+          "animation": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S022-A",
+        "scene_id": "S022",
+        "type": "IMG",
+        "from_frame": 3300,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Ngón tay run rẩy lướt qua icon ứng dụng ngân hàng nhưng không dám bấm vào",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S022-A_IMG.png",
+          "animation": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S023-A",
+        "scene_id": "S023",
+        "type": "GFX",
+        "from_frame": 3420,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương",
+        "component": "TreeGrowth",
+        "props": {
+          "title": "TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S024-A",
+        "scene_id": "S024",
+        "type": "IMG",
+        "from_frame": 3570,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Nhân vật quay người lại, đối diện với tấm bảng đen phân tích, ánh mắt quyết tâm",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S024-A_IMG.png",
+          "animation": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S025-A",
+        "scene_id": "S025",
+        "type": "GFX",
+        "from_frame": 3720,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'",
+        "component": "IntroCard",
+        "props": {
+          "title": "IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S026-A",
+        "scene_id": "S026",
+        "type": "GFX",
+        "from_frame": 3870,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo",
+        "component": "CounterNumber",
+        "props": {
+          "title": "CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S027-A",
+        "scene_id": "S027",
+        "type": "GFX",
+        "from_frame": 3990,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt",
+        "component": "BarChart",
+        "props": {
+          "title": "BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S028-A",
+        "scene_id": "S028",
+        "type": "GFX",
+        "from_frame": 4170,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng",
+        "component": "CounterNumber",
+        "props": {
+          "title": "CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S029-A",
+        "scene_id": "S029",
+        "type": "GFX",
+        "from_frame": 4290,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)",
+        "component": "PieChart",
+        "props": {
+          "title": "PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S030-A",
+        "scene_id": "S030",
+        "type": "GFX",
+        "from_frame": 4440,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng",
+        "component": "ChartMotion",
+        "props": {
+          "title": "ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S031-A",
+        "scene_id": "S031",
+        "type": "GFX",
+        "from_frame": 4620,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036",
+        "component": "TimelineSlider",
+        "props": {
+          "title": "TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S032-A",
+        "scene_id": "S032",
+        "type": "GFX",
+        "from_frame": 4770,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng",
+        "component": "SplitComparison",
+        "props": {
+          "title": "SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S033-A",
+        "scene_id": "S033",
+        "type": "GFX",
+        "from_frame": 4920,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản",
+        "component": "Infographic",
+        "props": {
+          "title": "Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S034-A",
+        "scene_id": "S034",
+        "type": "GFX",
+        "from_frame": 5040,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ",
+        "component": "SplitComparison",
+        "props": {
+          "title": "SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S035-A",
+        "scene_id": "S035",
+        "type": "GFX",
+        "from_frame": 5220,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên",
+        "component": "CalendarAnimation",
+        "props": {
+          "title": "CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S036-A",
+        "scene_id": "S036",
+        "type": "GFX",
+        "from_frame": 5370,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu",
+        "component": "AlertBox",
+        "props": {
+          "title": "AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S037-A",
+        "scene_id": "S037",
+        "type": "GFX",
+        "from_frame": 5490,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau",
+        "component": "StackFee",
+        "props": {
+          "title": "StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S038-A",
+        "scene_id": "S038",
+        "type": "GFX",
+        "from_frame": 5670,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn",
+        "component": "DrainWater",
+        "props": {
+          "title": "DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S039-A",
+        "scene_id": "S039",
+        "type": "IMG",
+        "from_frame": 5790,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Chiếc máy quẹt thẻ POS phát ra ánh sáng tím mờ ảo đầy ma mị và cám dỗ",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S039-A_IMG.png",
+          "animation": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S040-A",
+        "scene_id": "S040",
+        "type": "IMG",
+        "from_frame": 5940,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Chạm nhẹ Apple Pay trong 1 giây đặt cạnh chiếc đồng hồ cát chảy vô tận",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S040-A_IMG.png",
+          "animation": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S041-A",
+        "scene_id": "S041",
+        "type": "IMG",
+        "from_frame": 6090,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Chiếc thẻ bạch kim Platinum bóng bẩy đặt cạnh vài đồng xu lẻ tiền hoàn",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S041-A_IMG.png",
+          "animation": "CU, cận cảnh, Ken Burns pan-right",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S042-A",
+        "scene_id": "S042",
+        "type": "GFX",
+        "from_frame": 6210,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu",
+        "component": "SplitComparison",
+        "props": {
+          "title": "SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S043-A",
+        "scene_id": "S043",
+        "type": "IMG",
+        "from_frame": 6390,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Cán cân công lý: một bên là công thức toán học, một bên là cảm xúc bốc đồng",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S043-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S044-A",
+        "scene_id": "S044",
+        "type": "GFX",
+        "from_frame": 6540,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'",
+        "component": "MonthCalendar",
+        "props": {
+          "title": "MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S045-A",
+        "scene_id": "S045",
+        "type": "GFX",
+        "from_frame": 6660,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3",
+        "component": "CreditScoreMeter",
+        "props": {
+          "title": "CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S046-A",
+        "scene_id": "S046",
+        "type": "IMG",
+        "from_frame": 6810,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Cánh cửa ngân hàng đóng sầm lại trước mặt nhân vật, khóa dây xích nặng nề",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S046-A_IMG.png",
+          "animation": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S047-A",
+        "scene_id": "S047",
+        "type": "IMG",
+        "from_frame": 6930,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Nhân vật đứng nhìn qua cửa sổ đón ánh bình minh, gông cùm rỉ sét rơi xuống",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S047-A_IMG.png",
+          "animation": "CU, cận cảnh, Ken Burns pan-right",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S048-A",
+        "scene_id": "S048",
+        "type": "GFX",
+        "from_frame": 7080,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'",
+        "component": "BadgeGraphic",
+        "props": {
+          "title": "BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S049-A",
+        "scene_id": "S049",
+        "type": "GFX",
+        "from_frame": 7230,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%",
+        "component": "ComparisonTable",
+        "props": {
+          "title": "ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S050-A",
+        "scene_id": "S050",
+        "type": "GFX",
+        "from_frame": 7350,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)",
+        "component": "SplitComparison",
+        "props": {
+          "title": "SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S051-A",
+        "scene_id": "S051",
+        "type": "IMG",
+        "from_frame": 7500,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Người A vô tư quẹt thẻ gọi đồ uống tại quán cà phê sang trọng cùng bạn bè",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S051-A_IMG.png",
+          "animation": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S052-A",
+        "scene_id": "S052",
+        "type": "IMG",
+        "from_frame": 7680,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Người A mải mê chụp ảnh check-in sang chảnh bên những món đồ mới mua",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S052-A_IMG.png",
+          "animation": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S053-A",
+        "scene_id": "S053",
+        "type": "GFX",
+        "from_frame": 7800,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu",
+        "component": "CounterNumber",
+        "props": {
+          "title": "CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S054-A",
+        "scene_id": "S054",
+        "type": "IMG",
+        "from_frame": 7950,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Người A ôm đầu trằn trọc mất ngủ giữa đêm tối, chuông điện thoại nhấp nháy",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S054-A_IMG.png",
+          "animation": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S055-A",
+        "scene_id": "S055",
+        "type": "IMG",
+        "from_frame": 8070,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Người B ngồi bên bàn làm việc, ánh mắt kiên nghị cầm bút tính toán chi tiêu",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S055-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S056-A",
+        "scene_id": "S056",
+        "type": "IMG",
+        "from_frame": 8220,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Những phong bì tiền mặt dán nhãn 'Ăn uống', 'Tiền nhà' ngăn nắp trên bàn Người B",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S056-A_IMG.png",
+          "animation": "MS, góc 45 độ, Ken Burns pan-left",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S057-A",
+        "scene_id": "S057",
+        "type": "GFX",
+        "from_frame": 8400,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng",
+        "component": "ProgressBar",
+        "props": {
+          "title": "ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S058-A",
+        "scene_id": "S058",
+        "type": "IMG",
+        "from_frame": 8550,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Người B tự nấu bữa cơm đơn giản tại nhà, nụ cười nhẹ nhõm và an yên",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S058-A_IMG.png",
+          "animation": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S059-A",
+        "scene_id": "S059",
+        "type": "GFX",
+        "from_frame": 8670,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng",
+        "component": "MilestoneUnlocked",
+        "props": {
+          "title": "MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S060-A",
+        "scene_id": "S060",
+        "type": "GFX",
+        "from_frame": 8850,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi",
+        "component": "SplitComparison",
+        "props": {
+          "title": "SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S061-A",
+        "scene_id": "S061",
+        "type": "IMG",
+        "from_frame": 9030,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Ngã ba đường với hai biển chỉ dẫn: 'Nợ nần lo âu' vs 'Kỷ luật tự do'",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S061-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S062-A",
+        "scene_id": "S062",
+        "type": "GFX",
+        "from_frame": 9180,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên",
+        "component": "StepFlow",
+        "props": {
+          "title": "StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S063-A",
+        "scene_id": "S063",
+        "type": "GFX",
+        "from_frame": 9360,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý",
+        "component": "StepHeader",
+        "props": {
+          "title": "StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S064-A",
+        "scene_id": "S064",
+        "type": "AIV",
+        "from_frame": 9540,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Cận cảnh chiếc kéo kim loại sắc bén dứt khoát cắt đôi chiếc thẻ tín dụng mạ vàng, tia sáng phát ra biểu thị sự giải phóng",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S064-A_6s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      },
+      {
+        "id": "S065-A",
+        "scene_id": "S065",
+        "type": "GFX",
+        "from_frame": 9720,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm",
+        "component": "AppUnlink",
+        "props": {
+          "title": "AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S066-A",
+        "scene_id": "S066",
+        "type": "GFX",
+        "from_frame": 9870,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball",
+        "component": "StepHeader",
+        "props": {
+          "title": "StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S067-A",
+        "scene_id": "S067",
+        "type": "IMG",
+        "from_frame": 10020,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Trang sổ tay ghi chi tiết từng dòng: Tên ngân hàng, Dư nợ, Lãi suất thẻ",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S067-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S068-A",
+        "scene_id": "S068",
+        "type": "GFX",
+        "from_frame": 10200,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt",
+        "component": "TargetHighlight",
+        "props": {
+          "title": "TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S069-A",
+        "scene_id": "S069",
+        "type": "GFX",
+        "from_frame": 10320,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ",
+        "component": "BadgeUnlock",
+        "props": {
+          "title": "BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S070-A",
+        "scene_id": "S070",
+        "type": "GFX",
+        "from_frame": 10470,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu",
+        "component": "StepHeader",
+        "props": {
+          "title": "StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S071-A",
+        "scene_id": "S071",
+        "type": "GFX",
+        "from_frame": 10620,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ",
+        "component": "SalarySplit",
+        "props": {
+          "title": "SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S072-A",
+        "scene_id": "S072",
+        "type": "GFX",
+        "from_frame": 10800,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr",
+        "component": "BudgetEnvelope",
+        "props": {
+          "title": "BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S073-A",
+        "scene_id": "S073",
+        "type": "IMG",
+        "from_frame": 10920,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Chiếc ví da mộc mạc chỉ đựng vừa đủ số tiền mặt chi tiêu trong 1 tuần",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S073-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S074-A",
+        "scene_id": "S074",
+        "type": "GFX",
+        "from_frame": 11100,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu",
+        "component": "StepHeader",
+        "props": {
+          "title": "StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S075-A",
+        "scene_id": "S075",
+        "type": "IMG",
+        "from_frame": 11250,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Chiếc khiên kim loại màu xanh mint bảo vệ chiếc ví trước sự cố hỏng xe bất ngờ",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S075-A_IMG.png",
+          "animation": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S076-A",
+        "scene_id": "S076",
+        "type": "GFX",
+        "from_frame": 11400,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh",
+        "component": "CountdownMonths",
+        "props": {
+          "title": "CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S077-A",
+        "scene_id": "S077",
+        "type": "IMG",
+        "from_frame": 11550,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Nhân vật bước đi tự tin trên con đường rộng mở ngập tràn ánh nắng ban mai",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S077-A_IMG.png",
+          "animation": "CU, cận cảnh, Ken Burns pan-right",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S078-A",
+        "scene_id": "S078",
+        "type": "IMG",
+        "from_frame": 11670,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Gánh nặng đá tảng trên lưng tan biến thành những cánh chim bay vút lên bầu trời",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S078-A_IMG.png",
+          "animation": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S079-A",
+        "scene_id": "S079",
+        "type": "IMG",
+        "from_frame": 11850,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "Nhân vật thảnh thơi thưởng thức tách trà nóng, ví tiền nguyên vẹn trên bàn",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S079-A_IMG.png",
+          "animation": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      },
+      {
+        "id": "S080-A",
+        "scene_id": "S080",
+        "type": "GFX",
+        "from_frame": 12000,
+        "duration_frames": 150,
+        "duration_seconds": 5,
+        "description": "AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy",
+        "component": "AssetTree",
+        "props": {
+          "title": "AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy",
+          "theme": "finance-clean-vyond",
+          "animationType": "slide-up"
+        }
+      },
+      {
+        "id": "S081-A",
+        "scene_id": "S081",
+        "type": "IMG",
+        "from_frame": 12150,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Nhân vật đứng trên đỉnh đồi lộng gió, logo Tiền Thực Chiến hiện lên trang nhã",
+        "component": "KenBurnsImage",
+        "props": {
+          "src": "assets/S081-A_IMG.png",
+          "animation": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "scaleRange": [
+            1.0,
+            1.15
+          ]
+        }
+      }
+    ],
+    "subtitles": "subtitles/karaoke.srt"
+  },
+  "total_frames": 12270,
+  "total_duration_seconds": 409.0
+}

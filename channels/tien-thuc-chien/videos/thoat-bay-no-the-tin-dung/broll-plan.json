@@ -1,0 +1,1950 @@
+{
+  "channel": "tien-thuc-chien",
+  "video_slug": "thoat-bay-no-the-tin-dung",
+  "status": "DRAFT",
+  "asset_strategy": "hybrid-cost-saver",
+  "total_scenes": 81,
+  "total_brolls": 81,
+  "total_duration_seconds": 409,
+  "scenes": [
+    {
+      "scene_id": "S001",
+      "beat": "Hook",
+      "audio_duration_ms": 3840,
+      "audio_file": "S001_narration.wav",
+      "narration": "Nhận mười hai triệu tiền lương, nhưng trong ví bạn lại đang gánh bốn mươi triệu tiền nợ.",
+      "brolls": [
+        {
+          "broll_id": "S001-A",
+          "type": "AIV",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Chàng trai sốc nhìn số dư nợ 40 triệu đồng trong app ngân hàng, mồ hôi rơi",
+          "camera": "MCU, eye-level, push-in, Storyboard 3 panels",
+          "storyboard_panels": 3,
+          "storyboard_desc": "3 khung (chia đều 6s theo diễn biến câu thoại)"
+        }
+      ]
+    },
+    {
+      "scene_id": "S002",
+      "beat": "Hook",
+      "audio_duration_ms": 5280,
+      "audio_file": "S002_narration.wav",
+      "narration": "Bạn tự nhủ chỉ quẹt thẻ chi tiêu tạm thời, tháng sau sẽ trả, nhưng số nợ chưa bao giờ giảm xuống.",
+      "brolls": [
+        {
+          "broll_id": "S002-A",
+          "type": "AIV",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Cảnh quẹt thẻ thanh toán hào nhoáng tại quầy bar sang chảnh giữa ánh đèn lung linh",
+          "camera": "MCU, eye-level, push-in, Storyboard 3 panels",
+          "storyboard_panels": 3,
+          "storyboard_desc": "3 khung (chia đều 6s theo diễn biến câu thoại)"
+        }
+      ]
+    },
+    {
+      "scene_id": "S003",
+      "beat": "Hook",
+      "audio_duration_ms": 5040,
+      "audio_file": "S003_narration.wav",
+      "narration": "Càng cố giật gấu vá vai, bạn càng cảm thấy chiếc thẻ tín dụng như một chiếc mỏ neo kéo chìm cuộc sống.",
+      "brolls": [
+        {
+          "broll_id": "S003-A",
+          "type": "AIV",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Chiếc mỏ neo kim loại khổng lồ gắn vào chiếc ví da kéo chìm dần xuống đáy biển sâu",
+          "camera": "MCU, eye-level, push-in, Storyboard 3 panels",
+          "storyboard_panels": 3,
+          "storyboard_desc": "3 khung (chia đều 6s theo diễn biến câu thoại)"
+        }
+      ]
+    },
+    {
+      "scene_id": "S004",
+      "beat": "Hook",
+      "audio_duration_ms": 4960,
+      "audio_file": "S004_narration.wav",
+      "narration": "Hôm nay, tôi sẽ cùng bạn bóc trần chiếc bẫy này và thực hiện bốn bước cụ thể để cắt đứt nợ nần.",
+      "brolls": [
+        {
+          "broll_id": "S004-A",
+          "type": "AIV",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Chàng trai đại diện kênh bước vào giữa khung hình, xua tan làn sương mù, giơ tay đưa ra lộ trình",
+          "camera": "MCU, eye-level, push-in, Storyboard 3 panels",
+          "storyboard_panels": 3,
+          "storyboard_desc": "3 khung (chia đều 6s theo diễn biến câu thoại)"
+        }
+      ]
+    },
+    {
+      "scene_id": "S005",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4480,
+      "audio_file": "S005_narration.wav",
+      "narration": "Hãy nhìn lại ngày đầu tiên bạn cầm trên tay chiếc thẻ tín dụng sáng bóng với hạn mức năm mươi triệu.",
+      "brolls": [
+        {
+          "broll_id": "S005-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật vui mừng cầm thẻ tín dụng mạ vàng lấp lánh mới toanh, ánh sáng rực rỡ",
+          "camera": "CU, cận cảnh, Ken Burns pan-right",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Pan-right",
+          "props": {
+            "animation": "pan-right",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S006",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 3520,
+      "audio_file": "S006_narration.wav",
+      "narration": "Ngân hàng chào đón bạn với lời hứa miễn lãi bốn mươi lăm ngày đầy hấp dẫn.",
+      "brolls": [
+        {
+          "broll_id": "S006-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi",
+          "component": "MotionGraphic",
+          "renderer": "Remotion: MotionGraphic",
+          "props": {
+            "title": "AlertBox ngân hàng: Banner 'Miễn lãi 45 ngày' kèm đồng hồ đếm ngược mời gọi",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S007",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 5040,
+      "audio_file": "S007_narration.wav",
+      "narration": "Bạn bắt đầu quẹt thẻ cho những bữa ăn cùng đồng nghiệp, những món đồ công nghệ mới hay chuyến du lịch ngắn.",
+      "brolls": [
+        {
+          "broll_id": "S007-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Nhóm bạn trẻ ăn uống sang chảnh tại nhà hàng, ly cocktail và đồ công nghệ trên bàn",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S008",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4720,
+      "audio_file": "S008_narration.wav",
+      "narration": "Khi quẹt thẻ, não bộ không hề cảm nhận nỗi đau mất tiền như khi rút từng tờ tiền mặt ra khỏi ví.",
+      "brolls": [
+        {
+          "broll_id": "S008-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa",
+          "component": "SplitComparison",
+          "renderer": "Remotion: SplitComparison",
+          "props": {
+            "title": "SplitComparison: Chạm thẻ không cảm giác đau vs Rút từng tờ tiền mặt xót xa",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S009",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 3440,
+      "audio_file": "S009_narration.wav",
+      "narration": "Bạn ngỡ rằng mình đang giàu có hơn mức lương thực tế nhận về mỗi tháng.",
+      "brolls": [
+        {
+          "broll_id": "S009-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật soi gương thấy mình diện vest đại gia trong khi túi quần xẹp lép",
+          "camera": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S010",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 5200,
+      "audio_file": "S010_narration.wav",
+      "narration": "Đó chính là cạm bẫy tâm lý đầu tiên: ngộ nhận hạn mức tín dụng của ngân hàng là tài sản của chính mình.",
+      "brolls": [
+        {
+          "broll_id": "S010-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn",
+          "component": "MotionGraphic",
+          "renderer": "Remotion: MotionGraphic",
+          "props": {
+            "title": "AlertBox công thức: Hạn mức thẻ tín dụng != Tài sản thực của bạn",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S011",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 5200,
+      "audio_file": "S011_narration.wav",
+      "narration": "Rồi ngày sao kê đầu tiên ập đến với con số mười lăm triệu đồng vượt quá khả năng chi trả ngay lập tức.",
+      "brolls": [
+        {
+          "broll_id": "S011-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật hoảng hốt trợn tròn mắt nhìn thông báo sao kê ngân hàng đỏ rực 15 triệu",
+          "camera": "CU, cận cảnh, Ken Burns pan-right",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Pan-right",
+          "props": {
+            "animation": "pan-right",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S012",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 3360,
+      "audio_file": "S012_narration.wav",
+      "narration": "Bạn bắt đầu cảm thấy áp lực đè nặng lên từng khoản chi tiêu hàng ngày.",
+      "brolls": [
+        {
+          "broll_id": "S012-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật ngồi gục đầu trước bàn làm việc ngập tràn hóa đơn và biên lai",
+          "camera": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S013",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 5120,
+      "audio_file": "S013_narration.wav",
+      "narration": "Thay vì thanh toán toàn bộ, bạn nhìn thấy dòng chữ cứu cánh màu xanh: số tiền thanh toán tối thiểu.",
+      "brolls": [
+        {
+          "broll_id": "S013-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh",
+          "component": "FocusCard",
+          "renderer": "Remotion: FocusCard",
+          "props": {
+            "title": "FocusCard: Nút bấm màu xanh phát sáng 'Thanh toán tối thiểu 5%' như phao cứu sinh",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S014",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4480,
+      "audio_file": "S014_narration.wav",
+      "narration": "Chỉ cần trả một triệu đồng, bạn đã được xem là hoàn thành nghĩa vụ của kỳ sao kê tháng đó.",
+      "brolls": [
+        {
+          "broll_id": "S014-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'",
+          "component": "CounterNumber",
+          "renderer": "Remotion: CounterNumber",
+          "props": {
+            "title": "CounterNumber: Nhảy số 'Đã trả 1.000.000đ' vs 'Dư nợ còn lại 14.000.000đ'",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S015",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4480,
+      "audio_file": "S015_narration.wav",
+      "narration": "Bạn thở phào nhẹ nhõm mà không nhận ra mình vừa bước một chân vào vũng lầy nợ nần không đáy.",
+      "brolls": [
+        {
+          "broll_id": "S015-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật thở phào nhưng chân đang lún sâu vào vũng cát lầy nợ nần",
+          "camera": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S016",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 3840,
+      "audio_file": "S016_narration.wav",
+      "narration": "Tháng sau, bạn lại tiếp tục quẹt thẻ để bù vào khoản tiền lương vừa bị hao hụt.",
+      "brolls": [
+        {
+          "broll_id": "S016-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật ngập ngừng quẹt thẻ tại siêu thị để mua đồ ăn thiết yếu cuối tháng",
+          "camera": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-out",
+          "props": {
+            "animation": "zoom-out",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S017",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4640,
+      "audio_file": "S017_narration.wav",
+      "narration": "Vòng lặp chi tiêu trước, trả nợ sau bắt đầu cuốn phăng mọi kế hoạch tích lũy và tiết kiệm của bạn.",
+      "brolls": [
+        {
+          "broll_id": "S017-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp",
+          "component": "LoopDiagram",
+          "renderer": "Remotion: LoopDiagram",
+          "props": {
+            "title": "LoopDiagram: Vòng tròn luẩn quẩn Quẹt thẻ -> Trả tối thiểu -> Thiếu tiền -> Quẹt tiếp",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S018",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4400,
+      "audio_file": "S018_narration.wav",
+      "narration": "Sau một năm, con số dư nợ đã âm thầm tăng vọt từ mười lăm triệu lên bốn mươi triệu đồng.",
+      "brolls": [
+        {
+          "broll_id": "S018-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng",
+          "component": "ChartMotion",
+          "renderer": "Remotion: ChartMotion",
+          "props": {
+            "title": "ChartMotion: Đồ thị đường dốc đứng nợ tăng vọt từ 15 triệu lên 40 triệu đồng",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S019",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4720,
+      "audio_file": "S019_narration.wav",
+      "narration": "Mỗi ngày đi làm tám tiếng vất vả, nhưng tiền lương vừa về tài khoản đã lập tức bị chuyển đi trả nợ.",
+      "brolls": [
+        {
+          "broll_id": "S019-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật cặm cụi gõ phím làm việc, bóng ngân hàng vươn tay rút sạch tiền lương",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S020",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4640,
+      "audio_file": "S020_narration.wav",
+      "narration": "Bạn trở thành người làm công cho ngân hàng, nai lưng gánh vác chi phí cho sự thoải mái thoáng qua.",
+      "brolls": [
+        {
+          "broll_id": "S020-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật còng lưng kéo chiếc thẻ tín dụng khổng lồ như một cỗ xe bò nặng trĩu",
+          "camera": "MS, góc 45 độ, Ken Burns pan-left",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Pan-left",
+          "props": {
+            "animation": "pan-left",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S021",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 5360,
+      "audio_file": "S021_narration.wav",
+      "narration": "Cảm giác bất an thường trực xuất hiện mỗi khi có tin nhắn báo biến động số dư hoặc sao kê tín dụng.",
+      "brolls": [
+        {
+          "broll_id": "S021-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Màn hình điện thoại rung bần bật trong đêm tối, thông báo đòi nợ sáng rực",
+          "camera": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S022",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 3920,
+      "audio_file": "S022_narration.wav",
+      "narration": "Nhiều người rơi vào trạng thái trốn tránh, không dám mở ứng dụng ngân hàng để kiểm tra.",
+      "brolls": [
+        {
+          "broll_id": "S022-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Ngón tay run rẩy lướt qua icon ứng dụng ngân hàng nhưng không dám bấm vào",
+          "camera": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-out",
+          "props": {
+            "animation": "zoom-out",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S023",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4400,
+      "audio_file": "S023_narration.wav",
+      "narration": "Nhưng việc trốn tránh không làm khoản nợ biến mất, nó chỉ khiến lãi mẹ đẻ lãi con nhanh hơn.",
+      "brolls": [
+        {
+          "broll_id": "S023-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương",
+          "component": "TreeGrowth",
+          "renderer": "Remotion: TreeGrowth",
+          "props": {
+            "title": "TreeGrowth: Cây lãi suất phân nhánh màu đỏ nuốt chửng các chồi non tiền lương",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S024",
+      "beat": "Bóc thực trạng",
+      "audio_duration_ms": 4800,
+      "audio_file": "S024_narration.wav",
+      "narration": "Muốn thoát khỏi vũng lầy này, việc đầu tiên là chúng ta phải dũng cảm nhìn thẳng vào những con số toán học.",
+      "brolls": [
+        {
+          "broll_id": "S024-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật quay người lại, đối diện với tấm bảng đen phân tích, ánh mắt quyết tâm",
+          "camera": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S025",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4640,
+      "audio_file": "S025_narration.wav",
+      "narration": "Bây giờ, chúng ta hãy cùng đặt bút tính toán chính xác cái giá phải trả cho khoản nợ bốn mươi triệu này.",
+      "brolls": [
+        {
+          "broll_id": "S025-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'",
+          "component": "IntroCard",
+          "renderer": "Remotion: IntroCard",
+          "props": {
+            "title": "IntroCard: Tiêu đề 'Giải Phẫu Toán Học Khoản Nợ 40 Triệu'",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S026",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3280,
+      "audio_file": "S026_narration.wav",
+      "narration": "Lãi suất thẻ tín dụng hiện nay lên tới ba mươi lăm phần trăm một năm.",
+      "brolls": [
+        {
+          "broll_id": "S026-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo",
+          "component": "CounterNumber",
+          "renderer": "Remotion: CounterNumber",
+          "props": {
+            "title": "CounterNumber: Con số 35%/năm nhảy số màu đỏ neon kèm tia chớp cảnh báo",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S027",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 5120,
+      "audio_file": "S027_narration.wav",
+      "narration": "Đây là mức lãi suất cao gấp năm đến sáu lần so với lãi suất vay thế chấp mua nhà hay mua xe.",
+      "brolls": [
+        {
+          "broll_id": "S027-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt",
+          "component": "BarChart",
+          "renderer": "Remotion: BarChart",
+          "props": {
+            "title": "BarChart: So sánh cột 6% vay mua nhà vs cột 35% thẻ tín dụng cao vọt",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S028",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3040,
+      "audio_file": "S028_narration.wav",
+      "narration": "Với bốn mươi triệu nợ, mỗi tháng tiền lãi phát sinh đã hơn một triệu đồng.",
+      "brolls": [
+        {
+          "broll_id": "S028-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng",
+          "component": "CounterNumber",
+          "renderer": "Remotion: CounterNumber",
+          "props": {
+            "title": "CounterNumber: Đồng hồ đếm tiền lãi 1.160.000đ bốc hơi mỗi tháng",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S029",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4640,
+      "audio_file": "S029_narration.wav",
+      "narration": "Khoản thanh toán tối thiểu năm phần trăm mà ngân hàng yêu cầu chỉ vừa đủ để bù đắp phần tiền lãi này.",
+      "brolls": [
+        {
+          "broll_id": "S029-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)",
+          "component": "PieChart",
+          "renderer": "Remotion: PieChart",
+          "props": {
+            "title": "PieChart: Miếng bánh trả tối thiểu 1.2tr: Lãi 1.16tr (95%) vs Gốc 40k (5%)",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S030",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 5120,
+      "audio_file": "S030_narration.wav",
+      "narration": "Điều đó có nghĩa là dư nợ gốc bốn mươi triệu của bạn gần như đứng yên, không hề suy giảm theo thời gian.",
+      "brolls": [
+        {
+          "broll_id": "S030-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng",
+          "component": "ChartMotion",
+          "renderer": "Remotion: ChartMotion",
+          "props": {
+            "title": "ChartMotion: Đường dư nợ gốc 40 triệu nằm ngang bất động qua 12 tháng",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S031",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4400,
+      "audio_file": "S031_narration.wav",
+      "narration": "Nếu chỉ trả tối thiểu, bạn sẽ mất hơn mười năm để trả dứt điểm khoản nợ này.",
+      "brolls": [
+        {
+          "broll_id": "S031-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036",
+          "component": "TimelineSlider",
+          "renderer": "Remotion: TimelineSlider",
+          "props": {
+            "title": "TimelineSlider: Thanh thời gian kéo dài dằng dặc 10 năm từ 2026 đến 2036",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S032",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4800,
+      "audio_file": "S032_narration.wav",
+      "narration": "Tổng số tiền trả cho ngân hàng có thể lên tới hơn tám mươi triệu đồng, tức gấp đôi số nợ gốc.",
+      "brolls": [
+        {
+          "broll_id": "S032-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng",
+          "component": "SplitComparison",
+          "renderer": "Remotion: SplitComparison",
+          "props": {
+            "title": "SplitComparison: Nợ gốc ban đầu 40 triệu vs Tổng tiền phải trả 84 triệu đồng",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S033",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3280,
+      "audio_file": "S033_narration.wav",
+      "narration": "Đó chính là sức mạnh tàn phá của kỳ quan thứ tám: lãi kép ngược.",
+      "brolls": [
+        {
+          "broll_id": "S033-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản",
+          "component": "Infographic",
+          "renderer": "Remotion: Infographic",
+          "props": {
+            "title": "Infographic: Biểu tượng kỳ quan thứ tám đảo ngược nuốt chửng tài sản",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S034",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 5120,
+      "audio_file": "S034_narration.wav",
+      "narration": "Khi đầu tư, lãi kép giúp bạn nhân tài sản lên gấp nhiều lần, nhưng khi vay nợ, nó sẽ nuốt chửng thu nhập.",
+      "brolls": [
+        {
+          "broll_id": "S034-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ",
+          "component": "SplitComparison",
+          "renderer": "Remotion: SplitComparison",
+          "props": {
+            "title": "SplitComparison: Đồ thị xanh lãi kép đầu tư vs Đồ thị đỏ lãi kép vay nợ",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S035",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4720,
+      "audio_file": "S035_narration.wav",
+      "narration": "Chưa dừng lại ở đó, thẻ tín dụng còn áp dụng cơ chế tính lãi lùi từ ngày phát sinh giao dịch.",
+      "brolls": [
+        {
+          "broll_id": "S035-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên",
+          "component": "CalendarAnimation",
+          "renderer": "Remotion: CalendarAnimation",
+          "props": {
+            "title": "CalendarAnimation: Cơ chế tính lãi lùi ngược từ ngày 45 về ngày quẹt đầu tiên",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S036",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3840,
+      "audio_file": "S036_narration.wav",
+      "narration": "Chỉ cần thiếu một nghìn đồng đến hạn, toàn bộ số tiền quẹt đều bị tính lãi.",
+      "brolls": [
+        {
+          "broll_id": "S036-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu",
+          "component": "AlertBox",
+          "renderer": "Remotion: AlertBox",
+          "props": {
+            "title": "AlertBox: Thiếu đúng 1.000đ -> Bị tính lãi toàn bộ 40.000.000đ ban đầu",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S037",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 5120,
+      "audio_file": "S037_narration.wav",
+      "narration": "Thêm vào đó là phí phạt chậm trả từ bốn đến sáu phần trăm, tối thiểu một trăm đến hai trăm nghìn đồng.",
+      "brolls": [
+        {
+          "broll_id": "S037-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau",
+          "component": "StackFee",
+          "renderer": "Remotion: StackFee",
+          "props": {
+            "title": "StackFee: Các lớp phí phạt chậm trả 5% chồng chất lên nhau",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S038",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3840,
+      "audio_file": "S038_narration.wav",
+      "narration": "Các khoản phí phạt này gộp lại sẽ bào mòn sạch sẽ thặng dư từ lương của bạn.",
+      "brolls": [
+        {
+          "broll_id": "S038-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn",
+          "component": "DrainWater",
+          "renderer": "Remotion: DrainWater",
+          "props": {
+            "title": "DrainWater: Bể chứa tiền lương bị các van rò rỉ phí phạt hút cạn",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S039",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4960,
+      "audio_file": "S039_narration.wav",
+      "narration": "Về mặt tâm lý, thẻ tín dụng tạo ra ảo giác tiện lợi bằng cách giảm bớt sự ma sát khi thanh toán.",
+      "brolls": [
+        {
+          "broll_id": "S039-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Chiếc máy quẹt thẻ POS phát ra ánh sáng tím mờ ảo đầy ma mị và cám dỗ",
+          "camera": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S040",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4960,
+      "audio_file": "S040_narration.wav",
+      "narration": "Một cái chạm nhẹ điện thoại hoặc quẹt thẻ chỉ mất một giây, nhưng hậu quả tài chính kéo dài nhiều năm.",
+      "brolls": [
+        {
+          "broll_id": "S040-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Chạm nhẹ Apple Pay trong 1 giây đặt cạnh chiếc đồng hồ cát chảy vô tận",
+          "camera": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-out",
+          "props": {
+            "animation": "zoom-out",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S041",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3360,
+      "audio_file": "S041_narration.wav",
+      "narration": "Nhiều người còn mắc bẫy nâng hạng thẻ để nhận những ưu đãi hoàn tiền ít ỏi.",
+      "brolls": [
+        {
+          "broll_id": "S041-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Chiếc thẻ bạch kim Platinum bóng bẩy đặt cạnh vài đồng xu lẻ tiền hoàn",
+          "camera": "CU, cận cảnh, Ken Burns pan-right",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Pan-right",
+          "props": {
+            "animation": "pan-right",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S042",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 5040,
+      "audio_file": "S042_narration.wav",
+      "narration": "Bạn chi mười triệu đồng để nhận lại một trăm nghìn hoàn tiền, nhưng lại phải chịu phí thường niên cả triệu đồng.",
+      "brolls": [
+        {
+          "broll_id": "S042-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu",
+          "component": "SplitComparison",
+          "renderer": "Remotion: SplitComparison",
+          "props": {
+            "title": "SplitComparison: Chi tiêu 10 triệu nhận hoàn 100k vs Phí thường niên 1.2 triệu",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S043",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4720,
+      "audio_file": "S043_narration.wav",
+      "narration": "Toán học tài chính không bao giờ nói dối, chỉ có cảm xúc chi tiêu nhất thời khiến chúng ta mù quáng.",
+      "brolls": [
+        {
+          "broll_id": "S043-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Cán cân công lý: một bên là công thức toán học, một bên là cảm xúc bốc đồng",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S044",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3680,
+      "audio_file": "S044_narration.wav",
+      "narration": "Với lương mười hai triệu, bốn mươi triệu nợ tương đương hơn ba tháng làm việc không công.",
+      "brolls": [
+        {
+          "broll_id": "S044-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'",
+          "component": "MonthCalendar",
+          "renderer": "Remotion: MonthCalendar",
+          "props": {
+            "title": "MonthCalendar: 3 tờ lịch tháng 1, 2, 3 bị dán nhãn đỏ 'Làm việc 0 đồng'",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S045",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4320,
+      "audio_file": "S045_narration.wav",
+      "narration": "Nếu giữ nguyên thói quen này, nguy cơ nhảy sang nhóm nợ chú ý và nợ xấu hệ thống rất cao.",
+      "brolls": [
+        {
+          "broll_id": "S045-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3",
+          "component": "CreditScoreMeter",
+          "renderer": "Remotion: CreditScoreMeter",
+          "props": {
+            "title": "CreditScoreMeter: Kim đo điểm tín dụng CIC trượt từ Xanh xuống Đỏ - Nhóm 3",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S046",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3920,
+      "audio_file": "S046_narration.wav",
+      "narration": "Điểm tín dụng xấu sẽ đóng sập mọi cơ hội vay vốn làm ăn hay mua nhà.",
+      "brolls": [
+        {
+          "broll_id": "S046-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Cánh cửa ngân hàng đóng sầm lại trước mặt nhân vật, khóa dây xích nặng nề",
+          "camera": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-out",
+          "props": {
+            "animation": "zoom-out",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S047",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4960,
+      "audio_file": "S047_narration.wav",
+      "narration": "Bởi vậy, việc trả dứt điểm khoản nợ này không chỉ là tiết kiệm tiền, mà là giải cứu tương lai tài chính.",
+      "brolls": [
+        {
+          "broll_id": "S047-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật đứng nhìn qua cửa sổ đón ánh bình minh, gông cùm rỉ sét rơi xuống",
+          "camera": "CU, cận cảnh, Ken Burns pan-right",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Pan-right",
+          "props": {
+            "animation": "pan-right",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S048",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 4880,
+      "audio_file": "S048_narration.wav",
+      "narration": "Khoản đầu tư có lợi nhuận cao nhất lúc này chính là xóa sạch khoản nợ lãi suất ba mươi lăm phần trăm.",
+      "brolls": [
+        {
+          "broll_id": "S048-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'",
+          "component": "BadgeGraphic",
+          "renderer": "Remotion: BadgeGraphic",
+          "props": {
+            "title": "BadgeGraphic: Huy hiệu vàng 'Lợi nhuận 35% đảm bảo tuyệt đối khi trả nợ'",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S049",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "audio_duration_ms": 3600,
+      "audio_file": "S049_narration.wav",
+      "narration": "Không kênh đầu tư an toàn nào mang lại lợi nhuận ba mươi lăm phần trăm năm.",
+      "brolls": [
+        {
+          "broll_id": "S049-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%",
+          "component": "ComparisonTable",
+          "renderer": "Remotion: ComparisonTable",
+          "props": {
+            "title": "ComparisonTable: Bảng so sánh Gửi tiết kiệm 6%, Quỹ 12% vs Trả nợ thẻ 35%",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S050",
+      "beat": "Tương phản",
+      "audio_duration_ms": 4640,
+      "audio_file": "S050_narration.wav",
+      "narration": "Để bạn thấy rõ sự khác biệt, hãy so sánh hai con đường của hai người cùng có mức lương mười hai triệu.",
+      "brolls": [
+        {
+          "broll_id": "S050-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)",
+          "component": "SplitComparison",
+          "renderer": "Remotion: SplitComparison",
+          "props": {
+            "title": "SplitComparison: Chia đôi màn hình Người A (trái) vs Người B (phải)",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S051",
+      "beat": "Tương phản",
+      "audio_duration_ms": 5200,
+      "audio_file": "S051_narration.wav",
+      "narration": "Người thứ nhất chọn giải pháp xoa dịu ngắn hạn, tiếp tục trả tối thiểu mỗi tháng và quẹt thẻ bù vào chi tiêu.",
+      "brolls": [
+        {
+          "broll_id": "S051-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Người A vô tư quẹt thẻ gọi đồ uống tại quán cà phê sang trọng cùng bạn bè",
+          "camera": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S052",
+      "beat": "Tương phản",
+      "audio_duration_ms": 3520,
+      "audio_file": "S052_narration.wav",
+      "narration": "Anh ta giữ lối sống bề nổi, đi cà phê và mua sắm không hề suy nghĩ.",
+      "brolls": [
+        {
+          "broll_id": "S052-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Người A mải mê chụp ảnh check-in sang chảnh bên những món đồ mới mua",
+          "camera": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-out",
+          "props": {
+            "animation": "zoom-out",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S053",
+      "beat": "Tương phản",
+      "audio_duration_ms": 4880,
+      "audio_file": "S053_narration.wav",
+      "narration": "Sau một năm, khoản nợ của anh ta phình to lên mức sáu mươi triệu đồng cùng với sự căng thẳng tột cùng.",
+      "brolls": [
+        {
+          "broll_id": "S053-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu",
+          "component": "CounterNumber",
+          "renderer": "Remotion: CounterNumber",
+          "props": {
+            "title": "CounterNumber: Dư nợ Người A nhảy số màu đỏ từ 40 triệu vọt lên 60 triệu",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S054",
+      "beat": "Tương phản",
+      "audio_duration_ms": 4000,
+      "audio_file": "S054_narration.wav",
+      "narration": "Ban đêm anh ta mất ngủ vì lo sợ các cuộc gọi từ bộ phận thu hồi nợ.",
+      "brolls": [
+        {
+          "broll_id": "S054-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Người A ôm đầu trằn trọc mất ngủ giữa đêm tối, chuông điện thoại nhấp nháy",
+          "camera": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S055",
+      "beat": "Tương phản",
+      "audio_duration_ms": 4400,
+      "audio_file": "S055_narration.wav",
+      "narration": "Ngược lại, người thứ hai quyết định chấp nhận đau một lần để cắt đứt hoàn toàn mầm mống nợ nần.",
+      "brolls": [
+        {
+          "broll_id": "S055-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Người B ngồi bên bàn làm việc, ánh mắt kiên nghị cầm bút tính toán chi tiêu",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S056",
+      "beat": "Tương phản",
+      "audio_duration_ms": 5040,
+      "audio_file": "S056_narration.wav",
+      "narration": "Cô ấy lập tức khóa thẻ tín dụng, chuyển sang dùng tiền mặt và thắt chặt chi tiêu kỷ luật trong mười tháng.",
+      "brolls": [
+        {
+          "broll_id": "S056-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Những phong bì tiền mặt dán nhãn 'Ăn uống', 'Tiền nhà' ngăn nắp trên bàn Người B",
+          "camera": "MS, góc 45 độ, Ken Burns pan-left",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Pan-left",
+          "props": {
+            "animation": "pan-left",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S057",
+      "beat": "Tương phản",
+      "audio_duration_ms": 4720,
+      "audio_file": "S057_narration.wav",
+      "narration": "Mỗi tháng cô ấy kiên quyết trích bốn triệu đồng từ lương mười hai triệu để dồn toàn lực trả dứt nợ gốc.",
+      "brolls": [
+        {
+          "broll_id": "S057-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng",
+          "component": "ProgressBar",
+          "renderer": "Remotion: ProgressBar",
+          "props": {
+            "title": "ProgressBar: Thanh tiến độ trả nợ giảm dần đều đặn mỗi tháng 4 triệu đồng",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S058",
+      "beat": "Tương phản",
+      "audio_duration_ms": 4000,
+      "audio_file": "S058_narration.wav",
+      "narration": "Cuộc sống trong mười tháng đó có phần đạm bạc hơn nhưng tinh thần vô cùng thanh thản.",
+      "brolls": [
+        {
+          "broll_id": "S058-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Người B tự nấu bữa cơm đơn giản tại nhà, nụ cười nhẹ nhõm và an yên",
+          "camera": "WS, toàn cảnh, Ken Burns zoom-out (1.15 -> 1.0)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-out",
+          "props": {
+            "animation": "zoom-out",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S059",
+      "beat": "Tương phản",
+      "audio_duration_ms": 5280,
+      "audio_file": "S059_narration.wav",
+      "narration": "Và khi bước sang tháng thứ mười một, cô ấy hoàn toàn sạch nợ, sở hữu quỹ dự phòng và bắt đầu tích sản.",
+      "brolls": [
+        {
+          "broll_id": "S059-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng",
+          "component": "MilestoneUnlocked",
+          "renderer": "Remotion: MilestoneUnlocked",
+          "props": {
+            "title": "MilestoneUnlocked: Biểu tượng mở khóa cúp Tự do tài chính: Dư nợ = 0 đồng",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S060",
+      "beat": "Tương phản",
+      "audio_duration_ms": 5120,
+      "audio_file": "S060_narration.wav",
+      "narration": "Cùng điểm xuất phát và thu nhập, lựa chọn tư duy khác nhau tạo ra hai số phận tài chính đối lập.",
+      "brolls": [
+        {
+          "broll_id": "S060-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi",
+          "component": "SplitComparison",
+          "renderer": "Remotion: SplitComparison",
+          "props": {
+            "title": "SplitComparison: Bức tranh tổng kết: Người A kiệt quệ vs Người B thảnh thơi",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S061",
+      "beat": "Tương phản",
+      "audio_duration_ms": 4720,
+      "audio_file": "S061_narration.wav",
+      "narration": "Bạn muốn sống trong sợ hãi kéo dài hay kỷ luật trong vài tháng để đổi lấy sự tự do trọn vẹn?",
+      "brolls": [
+        {
+          "broll_id": "S061-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Ngã ba đường với hai biển chỉ dẫn: 'Nợ nần lo âu' vs 'Kỷ luật tự do'",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S062",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 5200,
+      "audio_file": "S062_narration.wav",
+      "narration": "Nếu bạn đã sẵn sàng chọn tự do, đây là quy trình bốn bước thực chiến để xóa sạch bốn mươi triệu nợ thẻ.",
+      "brolls": [
+        {
+          "broll_id": "S062-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên",
+          "component": "StepFlow",
+          "renderer": "Remotion: StepFlow",
+          "props": {
+            "title": "StepFlow: Sơ đồ 4 bước thực chiến diệt nợ thẻ sáng bừng lên",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S063",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 5440,
+      "audio_file": "S063_narration.wav",
+      "narration": "Bước một: Cắt mỏ neo tâm lý, phong tỏa ngay lập tức chiếc thẻ tín dụng và xóa liên kết khỏi điện thoại.",
+      "brolls": [
+        {
+          "broll_id": "S063-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý",
+          "component": "StepHeader",
+          "renderer": "Remotion: StepHeader",
+          "props": {
+            "title": "StepHeader: Bước 1 — Phong Tỏa Thẻ & Cắt Mỏ Neo Tâm Lý",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S064",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4000,
+      "audio_file": "S064_narration.wav",
+      "narration": "Hãy cầm kéo cắt đôi chiếc thẻ vật lý hoặc cất nó vào nơi rất khó lấy ra.",
+      "brolls": [
+        {
+          "broll_id": "S064-A",
+          "type": "AIV",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Cận cảnh chiếc kéo kim loại sắc bén dứt khoát cắt đôi chiếc thẻ tín dụng mạ vàng, tia sáng phát ra biểu thị sự giải phóng",
+          "camera": "MCU, eye-level, push-in, Storyboard 3 panels",
+          "storyboard_panels": 3,
+          "storyboard_desc": "3 khung (chia đều 6s theo diễn biến câu thoại)"
+        }
+      ]
+    },
+    {
+      "scene_id": "S065",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4880,
+      "audio_file": "S065_narration.wav",
+      "narration": "Hủy mọi liên kết thẻ trên sàn thương mại điện tử và ứng dụng mua sắm để chặn đứng việc quẹt thẻ.",
+      "brolls": [
+        {
+          "broll_id": "S065-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm",
+          "component": "AppUnlink",
+          "renderer": "Remotion: AppUnlink",
+          "props": {
+            "title": "AppUnlink: Màn hình điện thoại liên tiếp nhấn 'Xóa liên kết thẻ' khỏi app mua sắm",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S066",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4960,
+      "audio_file": "S066_narration.wav",
+      "narration": "Bước hai: Lập bản đồ nợ và áp dụng chiến lược hòn tuyết lăn hoặc tuyết lở để thanh toán dứt điểm.",
+      "brolls": [
+        {
+          "broll_id": "S066-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball",
+          "component": "StepHeader",
+          "renderer": "Remotion: StepHeader",
+          "props": {
+            "title": "StepHeader: Bước 2 — Lập Bản Đồ Nợ & Chiến Lược Snowball",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S067",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 5120,
+      "audio_file": "S067_narration.wav",
+      "narration": "Nếu bạn có nhiều thẻ, hãy liệt kê chính xác số dư nợ và lãi suất của từng thẻ ra một cuốn sổ tay.",
+      "brolls": [
+        {
+          "broll_id": "S067-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Trang sổ tay ghi chi tiết từng dòng: Tên ngân hàng, Dư nợ, Lãi suất thẻ",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S068",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 3920,
+      "audio_file": "S068_narration.wav",
+      "narration": "Tập trung trả dứt điểm chiếc thẻ có lãi suất cao nhất hoặc dư nợ nhỏ nhất trước.",
+      "brolls": [
+        {
+          "broll_id": "S068-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt",
+          "component": "TargetHighlight",
+          "renderer": "Remotion: TargetHighlight",
+          "props": {
+            "title": "TargetHighlight: Hồng tâm nhắm trúng chiếc thẻ có lãi suất cao nhất cần diệt",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S069",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4960,
+      "audio_file": "S069_narration.wav",
+      "narration": "Chiến thắng nhỏ từ việc xóa sổ một chiếc thẻ sẽ tiếp thêm động lực tâm lý mạnh mẽ cho cả chặng đường.",
+      "brolls": [
+        {
+          "broll_id": "S069-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ",
+          "component": "BadgeUnlock",
+          "renderer": "Remotion: BadgeUnlock",
+          "props": {
+            "title": "BadgeUnlock: Con dấu 'ĐÃ THANH TOÁN XONG' đóng dấu đỏ đanh thép lên thẻ",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S070",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4560,
+      "audio_file": "S070_narration.wav",
+      "narration": "Bước ba: Tái cấu trúc ngân sách chi tiêu theo công thức kỷ luật trên mức lương mười hai triệu đồng.",
+      "brolls": [
+        {
+          "broll_id": "S070-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu",
+          "component": "StepHeader",
+          "renderer": "Remotion: StepHeader",
+          "props": {
+            "title": "StepHeader: Bước 3 — Tái Cấu Trúc Ngân Sách Trên Lương 12 Triệu",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S071",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 5360,
+      "audio_file": "S071_narration.wav",
+      "narration": "Ngay khi lương về, trích tự động bốn triệu đồng, tức ba mươi ba phần trăm, chuyển thẳng vào tài khoản trả nợ.",
+      "brolls": [
+        {
+          "broll_id": "S071-A",
+          "type": "GFX",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ",
+          "component": "SalarySplit",
+          "renderer": "Remotion: SalarySplit",
+          "props": {
+            "title": "SalarySplit: Biểu đồ chia lương: 4 triệu (33%) tự động chuyển sang tài khoản trả nợ",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S072",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4000,
+      "audio_file": "S072_narration.wav",
+      "narration": "Tám triệu còn lại dành cho nhu cầu thiết yếu gồm tiền nhà, ăn uống và xăng xe.",
+      "brolls": [
+        {
+          "broll_id": "S072-A",
+          "type": "GFX",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr",
+          "component": "BudgetEnvelope",
+          "renderer": "Remotion: BudgetEnvelope",
+          "props": {
+            "title": "BudgetEnvelope: 3 phong bì tiền mặt: Nhà 3.5tr, Ăn 3.5tr, Xăng xe phát sinh 1tr",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S073",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 5040,
+      "audio_file": "S073_narration.wav",
+      "narration": "Tạm dừng mọi khoản chi giải trí xa xỉ trong giai đoạn này, chuyển hoàn toàn sang thanh toán bằng tiền mặt.",
+      "brolls": [
+        {
+          "broll_id": "S073-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Chiếc ví da mộc mạc chỉ đựng vừa đủ số tiền mặt chi tiêu trong 1 tuần",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S074",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4160,
+      "audio_file": "S074_narration.wav",
+      "narration": "Bước bốn: Thiết lập quỹ khẩn cấp mini hai triệu đồng để không bao giờ phải quẹt thẻ trở lại.",
+      "brolls": [
+        {
+          "broll_id": "S074-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu",
+          "component": "StepHeader",
+          "renderer": "Remotion: StepHeader",
+          "props": {
+            "title": "StepHeader: Bước 4 — Thiết Lập Lá Chắn Quỹ Khẩn Cấp Mini 2 Triệu",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S075",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4880,
+      "audio_file": "S075_narration.wav",
+      "narration": "Khoản dự phòng nhỏ này sẽ bảo vệ bạn trước những sự cố bất ngờ như hỏng xe hay ốm đau thông thường.",
+      "brolls": [
+        {
+          "broll_id": "S075-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Chiếc khiên kim loại màu xanh mint bảo vệ chiếc ví trước sự cố hỏng xe bất ngờ",
+          "camera": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S076",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4400,
+      "audio_file": "S076_narration.wav",
+      "narration": "Với kế hoạch bốn triệu mỗi tháng, chỉ sau đúng mười tháng, bạn sẽ chính thức sạch nợ hoàn toàn.",
+      "brolls": [
+        {
+          "broll_id": "S076-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh",
+          "component": "CountdownMonths",
+          "renderer": "Remotion: CountdownMonths",
+          "props": {
+            "title": "CountdownMonths: Đồng hồ đếm ngược 10 tháng về mốc 0 đồng tròn trĩnh",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S077",
+      "beat": "Lộ trình giải pháp",
+      "audio_duration_ms": 4000,
+      "audio_file": "S077_narration.wav",
+      "narration": "Mười tháng kỷ luật ngắn ngủi để đổi lại một đời tài chính thanh thản và vững vàng.",
+      "brolls": [
+        {
+          "broll_id": "S077-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật bước đi tự tin trên con đường rộng mở ngập tràn ánh nắng ban mai",
+          "camera": "CU, cận cảnh, Ken Burns pan-right",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Pan-right",
+          "props": {
+            "animation": "pan-right",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S078",
+      "beat": "Kết bình yên",
+      "audio_duration_ms": 5120,
+      "audio_file": "S078_narration.wav",
+      "narration": "Khoảnh khắc bạn thanh toán đồng nợ cuối cùng, gánh nặng tâm lý đè nặng bấy lâu sẽ hoàn toàn tan biến.",
+      "brolls": [
+        {
+          "broll_id": "S078-A",
+          "type": "IMG",
+          "duration_s": 6,
+          "timing_offset_ms": 0,
+          "description": "Gánh nặng đá tảng trên lưng tan biến thành những cánh chim bay vút lên bầu trời",
+          "camera": "OTS, qua vai nhân vật, Ken Burns slow zoom-in",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S079",
+      "beat": "Kết bình yên",
+      "audio_duration_ms": 4560,
+      "audio_file": "S079_narration.wav",
+      "narration": "Tiền lương mười hai triệu của bạn từ nay sẽ thực sự là của bạn, phục vụ cho cuộc sống và ước mơ.",
+      "brolls": [
+        {
+          "broll_id": "S079-A",
+          "type": "IMG",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật thảnh thơi thưởng thức tách trà nóng, ví tiền nguyên vẹn trên bàn",
+          "camera": "CU, ngang mắt, Ken Burns zoom-in (1.0 -> 1.15)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S080",
+      "beat": "Kết bình yên",
+      "audio_duration_ms": 4640,
+      "audio_file": "S080_narration.wav",
+      "narration": "Bạn bắt đầu có thể trích tiền mua chứng chỉ quỹ, xây dựng quỹ khẩn cấp lớn và tích sản đều đặn.",
+      "brolls": [
+        {
+          "broll_id": "S080-A",
+          "type": "GFX",
+          "duration_s": 5,
+          "timing_offset_ms": 0,
+          "description": "AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy",
+          "component": "AssetTree",
+          "renderer": "Remotion: AssetTree",
+          "props": {
+            "title": "AssetTree: Cây tích sản xanh tươi nở rộ, biểu tượng chứng chỉ quỹ và vàng tích lũy",
+            "theme": "finance-clean-vyond",
+            "animationType": "slide-up"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "S081",
+      "beat": "Kết bình yên",
+      "audio_duration_ms": 3840,
+      "audio_file": "S081_narration.wav",
+      "narration": "Bình yên tài chính không đến từ thu nhập cao, mà từ việc làm chủ đồng tiền.",
+      "brolls": [
+        {
+          "broll_id": "S081-A",
+          "type": "IMG",
+          "duration_s": 4,
+          "timing_offset_ms": 0,
+          "description": "Nhân vật đứng trên đỉnh đồi lộng gió, logo Tiền Thực Chiến hiện lên trang nhã",
+          "camera": "MCU, góc thấp, Ken Burns zoom-in (1.0 -> 1.12)",
+          "component": "KenBurnsImage",
+          "renderer": "Remotion: Ken Burns Zoom-in",
+          "props": {
+            "animation": "zoom-in",
+            "scaleRange": [
+              1.0,
+              1.15
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

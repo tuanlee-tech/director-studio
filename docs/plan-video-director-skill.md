@@ -44,6 +44,23 @@ Repo `audio/` sẽ chứa nhiều channel, mỗi channel có thư mục riêng v
 >    - **AIV Climax (Tùy chọn)**: Chỉ dùng thêm AIV ở 1–2 bước ngoặt cảm xúc kịch tính nhất của video.
 > 3. **Tiết kiệm dự kiến**: Giảm **70% – 85%** chi phí credit AI cho mỗi video sản xuất.
 
+> [!TIP]
+> **Style Prototyping Gate (Phase 5) — ĐÃ TÍCH HỢP**
+> Trước khi tạo hàng loạt prompts cho toàn bộ video, hệ thống có cổng **`@test-style`**:
+> - Xuất 1 prompt test duy nhất (cảnh Hook) cho Google Flow / Midjourney để user tạo thử 1 ảnh.
+> - Tránh rủi ro lệch phong cách thực tế so với tưởng tượng lý thuyết.
+> - Sau khi user đã chốt được ảnh thực tế như ý, gõ **`@lock-style`** để cố định Style Lock cho toàn bộ batch prompts tiếp theo.
+
+> [!TIP]
+> **Hệ Thống 20/20 Code-Driven Motion & Video Rendering Stack — ĐÃ TÍCH HỢP**
+> Đầy đủ 20/20 công cụ từ 6 nhóm công nghệ:
+> - **I. 3 Skills**: Remotion Skills, Motion AI Kit, GSAP Skill.
+> - **II. Thiết kế**: SVGO (tối ưu SVG), Satori (HTML/JSX to SVG).
+> - **III. Hoạt ảnh**: GSAP, Anime.js, Motion, Rive (State Machine), Lottie (AE stickers).
+> - **IV. Dựng 2D**: Remotion (ghép MP4), Motion Canvas (explainer/toán học).
+> - **V. Dựng 3D**: Three.js, React Three Fiber, Drei, Rapier (vật lý 3D), Postprocessing (Bloom neon).
+> - **VI. Âm thanh & Xuất video**: Howler.js (BGM ducking & SFX), Mediabunny, FFmpeg.
+
 ---
 
 ## Proposed Changes

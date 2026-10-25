@@ -209,6 +209,20 @@
   },
 
   "ASSETS": {
+    "@test-style": {
+      "description": "Tạo prompt thử nghiệm 1 ảnh duy nhất để chốt phong cách thực tế trên Google Flow trước khi sinh hàng loạt.",
+      "usage": "@test-style [-scene <N>]",
+      "examples": ["@test-style", "@test-style -scene 1"],
+      "action": "generate_style_prototype_prompt",
+      "note": "Xuất 1 prompt duy nhất cho Google Flow/Midjourney để user test thực tế. Tránh lãng phí tạo hàng loạt khi style chưa ưng ý."
+    },
+    "@lock-style": {
+      "description": "Khóa Style Lock sau khi đã thử nghiệm thành công 1 ảnh trên Google Flow.",
+      "usage": "@lock-style [\"<descriptor>\"]",
+      "examples": ["@lock-style", "@lock-style \"Cinematic documentary style, 35mm film grain, 8k resolution...\""],
+      "action": "lock_tested_style",
+      "note": "Lưu descriptor vào config.json và mở khóa sinh toàn bộ prompts hàng loạt (@gen-prompts --all)."
+    },
     "@gen-prompts": {
       "description": "Tạo bảng prompt ảnh/video (STYLE LOCK + storyboard) từ B-roll plan đã duyệt.",
       "usage": "@gen-prompts [-scene <N>] [--all]",
@@ -234,6 +248,22 @@
       "action": "export_remotion_composition",
       "requires": "approved_broll_plan",
       "output": "{slug}/assets/remotion-composition.json"
+    },
+    "@render-code-motion": {
+      "description": "Tạo component TypeScript/React cho cảnh GFX dùng hệ thống 20/20 Stack (Remotion, Motion, GSAP, Three.js/R3F, Satori, Rapier).",
+      "usage": "@render-code-motion <scene_id> [--stack <remotion|gsap|r3f|motion>]",
+      "examples": [
+        "@render-code-motion S005 --stack motion",
+        "@render-code-motion S006 --stack r3f"
+      ],
+      "action": "generate_code_motion_component",
+      "output": "{slug}/assets/motion/{scene_id}_{Component}.tsx"
+    },
+    "@list-motion-stack": {
+      "description": "Liệt kê danh sách 20/20 công nghệ Code-Driven Motion & Video Rendering và vai trò của từng công cụ.",
+      "usage": "@list-motion-stack",
+      "script": "scripts/motion-stack.py",
+      "cross_platform": true
     }
   },
 

@@ -265,9 +265,17 @@ Lệnh:
 
 ### Phase 5 — Asset Prompts & Subtitle
 
-**Trigger**: `@gen-prompts --all` (sau `@approve-broll`).
+**Trigger**: `@gen-prompts --all` hoặc `@test-style` (sau `@approve-broll`).
 
-#### Bước 5.1 — Tạo Asset Prompts
+#### Bước 5.0 — Cổng Tạo Thử & Khóa Style Lock (Style Prototyping Gate) 🎨 ⭐
+
+> [!IMPORTANT]
+> **Tạo thử 1 ảnh trước khi sinh hàng loạt**: Dự kiến trên lý thuyết có thể khác thực tế khi đưa vào AI (Google Flow / Flux / Midjourney). Do đó, Agent **bắt buộc** xuất 1 prompt test trước:
+> - Chọn cảnh Hook (`S001-A`) hoặc cảnh tiêu biểu nhất có nhân vật đại diện.
+> - Dòng nhắc: *"📌 Tạo thử 1 ảnh trên Google Flow theo prompt bên dưới. Nếu lệch phong cách thì gõ `sửa style: ...`. Khi ảnh thực tế đã đạt đúng ý, gõ `@lock-style` để chốt Style Lock cho toàn bộ video."*
+> - Khi user gõ `@lock-style` (hoặc cung cấp STYLE DESCRIPTOR mới đã test thành công), Agent cập nhật `config.json` và mới tiến hành Bước 5.1 (sinh toàn bộ prompts hàng loạt).
+
+#### Bước 5.1 — Tạo Asset Prompts Hàng Loạt (Sau khi đã Lock Style)
 
 Dòng nhắc cố định ngay trên bảng prompt: "📌 Flow: tạo xong asset nào thì ĐỔI TÊN ngay đúng cột Tên file (thứ tự cảnh tăng dần), rồi mới tải về."
 
@@ -371,6 +379,39 @@ channels/<channel>/videos/<slug>/assets/remotion-composition.json
 ```
 Chứa toàn bộ danh sách sequences, components (`ChartMotion`, `CounterNumber`, `KenBurnsImage`), timing frame (30fps), và props để Remotion render trực tiếp thành video hoàn chỉnh hoặc graphic overlays.
 
+#### Bước 5.5 — Code-Driven Motion Graphics Engine (Hệ Thống 20/20 Stack) 🚀
+
+Khi sản xuất các cảnh `GFX` (đồ họa chuyển động) và `IMG` (hình ảnh tĩnh kết hợp motion), Agent sử dụng trọn bộ **20/20 công nghệ** (chi tiết trong `references/motion-graphics-stack.md`):
+
+1. **3 Video Coding Skills**:
+   - **Remotion Skill**: Dựng cấu trúc video React, điều khiển timeline frame-by-frame, tính toán spring physics và interpolate.
+   - **Motion AI Kit**: Sử dụng thư viện `motion` để tạo micro-animations, layout transitions và variants declaratively.
+   - **GSAP Skill**: Lập trình timeline animation đa tầng, staggered text và chuỗi biến đổi hình ảnh chính xác từng frame.
+2. **Thiết kế SVG & JSX**:
+   - **SVGO**: Tối ưu hóa, dọn dẹp và nén vector path cho các biểu tượng tài chính/công nghệ trước khi render.
+   - **Satori**: Chuyển đổi mã nguồn HTML/JSX TailwindCSS thành SVG vector độ phân giải cao tức thì.
+3. **5 Thư viện Hoạt ảnh Chuyên biệt**:
+   - **GSAP**: Timeline phức tạp, số liệu tăng trưởng, chuỗi hành động đồng bộ.
+   - **Anime.js**: Animation đường viền SVG (stroke drawing), morphing vector mượt mà.
+   - **Motion**: Component UI, pop-up thẻ ngân hàng, notification banner.
+   - **Rive**: Hoạt hình nhân vật tương tác có state machine (đổi trạng thái cảm xúc theo nội dung).
+   - **Lottie**: Render hiệu ứng hạt, confetti, sticker xuất từ After Effects.
+4. **Dựng 2D Khung hình**:
+   - **Remotion**: Nền tảng chính ghép toàn bộ timeline thành từng frame video React.
+   - **Motion Canvas**: Lập trình video giải thích (explainer) bằng TypeScript, đồ thị toán học, lãi kép trực quan.
+5. **Dựng 3D Điện ảnh**:
+   - **Three.js**: Lập trình không gian 3D, camera và ánh sáng.
+   - **React Three Fiber (R3F)**: Khai báo cảnh 3D dưới dạng React component.
+   - **Drei**: Tận dụng sẵn Text3D, Environment lighting, Float controls.
+   - **Rapier (@react-three/rapier)**: Mô phỏng vật lý chân thực (tiền vàng rơi, va chạm nảy tưng bừng, thẻ vỡ).
+   - **Postprocessing**: Bloom phát sáng neon, Depth of Field xóa phông điện ảnh.
+6. **Âm thanh & Xuất Video**:
+   - **Howler.js**: Điều khiển BGM ducking (hạ nhạc nền khi có narration) và SFX đồng bộ mili-giây.
+   - **Mediabunny**: Fast browser-based video encoding.
+   - **FFmpeg**: Ghép nối âm thanh VieNeu-TTS, hình ảnh AIV, motion graphics Remotion và phụ đề thành file `.mp4` hoàn chỉnh.
+
+Lệnh hỗ trợ: `@render-code-motion <scene_id>`, `@list-motion-stack`
+
 ---
 
 ## Tự kiểm tra (checklist ngầm trước mỗi lượt xuất)
@@ -396,6 +437,10 @@ Chứa toàn bộ danh sách sequences, components (`ChartMotion`, `CounterNumbe
 | `@undo` | Quay lại bước trước |
 | `sửa cảnh N: ...` hoặc `@edit-scene N "..."` | Sửa narration scene N |
 | `sửa style: ...` hoặc `@set-style ...` | Cập nhật STYLE LOCK |
+| `@test-style` | Tạo 1 prompt thử nghiệm duy nhất cho Google Flow để chốt phong cách |
+| `@lock-style` | Khóa phong cách sau khi test ảnh thành công trên Google Flow |
+| `@render-code-motion` | Tạo code component 20/20 Stack (Remotion/GSAP/R3F) cho cảnh GFX |
+| `@list-motion-stack` | Xem danh sách 20/20 công nghệ hoạt ảnh & đồ họa |
 | `@pipeline --from audio` | Chạy lại từ bước audio |
 | `@pipeline --from broll` | Chạy lại từ bước B-roll |
 | `@pipeline --from prompts` | Chạy lại từ bước sinh prompt |
@@ -424,6 +469,7 @@ Chứa toàn bộ danh sách sequences, components (`ChartMotion`, `CounterNumbe
 
 ## Tham chiếu
 
+- **20/20 Motion Graphics Stack**: `references/motion-graphics-stack.md`
 - **Camera Vocabulary**: `references/camera-vocabulary.md`
 - **Channel Bible Template**: `references/channel-bible.template.md`
 - **Shot List Template**: `references/shot-list.template.md`

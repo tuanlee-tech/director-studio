@@ -237,12 +237,32 @@ Agent sẽ khóa kế hoạch và cho phép bước tiếp theo được kích h
 
 ---
 
-## 🚀 Bước 6: Tạo Asset Prompts & Phụ đề Karaoke
+## 🚀 Bước 6: Tạo Asset Prompts, Khóa Style & Phụ đề Karaoke
 
-Sau khi B-roll Plan đã được duyệt, bạn yêu cầu Agent sinh toàn bộ prompt tạo hình và phụ đề.
+Sau khi B-roll Plan đã được duyệt (`@approve-broll`), bạn bước vào giai đoạn chốt hình ảnh và phụ đề.
 
-### 1. Sinh bảng Prompts
-Gõ vào chat:
+### 🎨 1. Cổng thử nghiệm phong cách — Style Prototyping Gate (Bắt buộc)
+> ⚠️ **Vấn đề thực tế**: Đôi khi phong cách dự kiến trong lý thuyết (Channel Bible) khi đưa vào AI tạo hình (Google Flow / Midjourney / Flux) lại cho ra kết quả chưa đúng mong muốn. Nếu sinh hàng chục prompt ngay lập tức, bạn sẽ tốn công sửa lại toàn bộ!
+
+Do đó, hệ thống trang bị cơ chế **Style Prototyping Gate**:
+1. Gõ vào chat:
+   ```text
+   @test-style
+   ```
+2. Agent sẽ trích xuất đúng **1 prompt thử nghiệm** tiêu biểu nhất (cảnh Hook).
+3. Bạn copy prompt này dán vào **Google Flow** (hoặc công cụ tạo ảnh của bạn) để render thử 1 hình.
+4. **Đánh giá ảnh thực tế**:
+   - Nếu chưa ưng ý: gõ `sửa style: <mô tả chi tiết hơn hoặc đổi tông màu...>`
+   - Nếu ảnh thực tế đã đạt chuẩn đúng phong cách bạn muốn: gõ:
+     ```text
+     @lock-style
+     ```
+   - Agent sẽ khóa Style Lock đã kiểm chứng thực tế này vào cấu hình dự án!
+
+---
+
+### 📦 2. Sinh bảng Prompts hàng loạt (Sau khi Lock Style)
+Sau khi đã `@lock-style`, bạn yên tâm yêu cầu Agent sinh toàn bộ prompt:
 ```text
 @gen-prompts --all
 ```
@@ -277,6 +297,24 @@ Agent sẽ tự động xuất file `assets/remotion-composition.json` chứa to
 - Các phân đoạn `IMG`: tự động áp hiệu ứng Ken Burns chuyển động ảnh mượt mà.
 - Các phân đoạn `GFX`: render trực tiếp component đồ họa React (`ChartMotion`, `CounterNumber`...) với 0 đồng chi phí credit!
 
+### 4. Dựng hoạt ảnh và 3D với Hệ thống 20/20 Stack
+Để tạo component đồ họa chuyển động cho cảnh GFX (như biểu đồ, số đếm, mô phỏng vật lý 3D):
+- Xem toàn bộ 20 công cụ:
+  ```text
+  @list-motion-stack
+  ```
+- Tạo component hoạt ảnh cho cảnh:
+  ```text
+  @render-code-motion S003-A --stack motion
+  ```
+Agent sẽ áp dụng đúng công cụ trong bộ **20/20 Stack**:
+- **3 Dựng Video**: Remotion Skills, Motion AI Kit, GSAP Skill.
+- **Thiết kế**: SVGO (tối ưu icon SVG), Satori (HTML/JSX sang SVG).
+- **Hoạt ảnh**: GSAP (timeline), Anime.js (stroke viền), Motion (UI React), Rive (state machine), Lottie (AE stickers).
+- **Dựng 2D**: Remotion, Motion Canvas (giải thích toán học).
+- **Dựng 3D**: Three.js, React Three Fiber, Drei, Rapier (vật lý rơi va chạm), Postprocessing (Bloom neon).
+- **Âm thanh & Xuất video**: Howler.js (BGM ducking & SFX), Mediabunny, FFmpeg.
+
 ---
 
 ## ✂️ Bước 7: Dựng video (Assembly)
@@ -307,7 +345,11 @@ Bạn tải các file về và ráp theo checklist [`assembly-checklist.md`](fil
 | | `@analyze --all` | Whisper đo timing từng từ |
 | | `@plan-broll` | Tính toán số B-roll cho video |
 | | `@approve-broll` | **Duyệt B-roll** để sang bước sinh prompt |
-| | `@gen-prompts --all` | Xuất toàn bộ prompt ảnh/video |
+| | `@test-style` | **Tạo thử 1 ảnh** trên Google Flow để kiểm tra phong cách thực tế |
+| | `@lock-style` | **Khóa Style Lock** sau khi test ảnh thành công |
+| | `@gen-prompts --all` | Xuất toàn bộ prompt ảnh/video đã chốt style |
+| | `@render-code-motion`| Tạo component đồ họa chuyển động (20/20 Stack) |
+| | `@list-motion-stack` | Xem 20/20 công nghệ dựng hoạt ảnh & video bằng code |
 | | `@gen-subs` | Xuất file phụ đề karaoke `.srt` |
 | | `@next` | Đi tiếp bước kế tiếp trong quy trình |
 | | `@undo` | Quay lại bước trước đó |
