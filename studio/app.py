@@ -578,7 +578,7 @@ def api_render_status(task_id):
     return jsonify(task)
 
 
-# --- Google Flow Multi-Account Dispatcher Integration ---
+# --- Google Flow Multi-Account Browser Pool & Dispatcher Integration ---
 _flow_dispatch_tasks = {}
 _flow_lock = threading.Lock()
 
@@ -588,60 +588,95 @@ if str(FLOW_DIR) not in sys.path:
     sys.path.insert(0, str(FLOW_DIR))
 
 
-@app.route("/api/flow/accounts")
-def api_flow_accounts():
+@app.route("/api/browser/accounts", methods=["GET"])
+@app.route("/api/flow/accounts", methods=["GET"])
+def api_browser_accounts():
     """Lấy danh sách 5 tài khoản Google Flow và trạng thái CDP realtime."""
     try:
-        from chrome_launcher import load_accounts_config, check_cdp_status, get_active_tabs
+        from browser_pool import get_accounts, load_accounts_config
         cfg = load_accounts_config()
-        accounts_data = []
-
-        for acc in cfg.get("accounts", []):
-            port = acc["port"]
-            is_online, browser_name = check_cdp_status(port)
-            tabs = get_active_tabs(port) if is_online else []
-            flow_tab = next((t for t in tabs if "flow.google.com" in t.get("url", "")), None)
-            active_tab_title = flow_tab.get("title", "Google Flow") if flow_tab else (tabs[0].get("title", "Chrome") if tabs else "None")
-
-            accounts_data.append({
-                "id": acc["id"],
-                "name": acc["name"],
-                "port": port,
-                "is_online": is_online,
-                "browser_name": browser_name,
-                "active_tab_title": active_tab_title,
-                "daily_credit_limit": acc.get("daily_credit_limit", 50),
-                "credit_used_today": acc.get("credit_used_today", 0),
-            })
-
+        accounts_data = get_accounts()
         return jsonify({
             "status": "ok",
             "accounts": accounts_data,
-            "default_url": cfg.get("default_flow_url", "https://flow.google.com")
+            "default_url": cfg.get("default_flow_url", "https://flow.google.com"),
+            "default_project_url": cfg.get("default_project_url", "")
         })
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
 
+@app.route("/api/browser/accounts/launch", methods=["POST"])
 @app.route("/api/flow/launch", methods=["POST"])
-def api_flow_launch():
-    """Mở cửa sổ Chrome độc lập cho 1 tài khoản."""
+def api_browser_launch():
+    """Mở cửa sổ Chrome độc lập cho 1 tài khoản (hoặc mở tất cả nếu không truyền acc_id)."""
     data = request.json or {}
-    acc_id = int(data.get("acc_id", 1))
+    acc_id = data.get("account_id") or data.get("acc_id")
+    project_url = data.get("project_url")
+
     try:
-        from chrome_launcher import launch_account
-        res = launch_account(acc_id)
-        return jsonify({"status": "ok", "message": f"Chrome account {acc_id} launched", "exit_code": res})
+        from browser_pool import launch_account, launch_all
+        if acc_id is not None and str(acc_id).strip() != "":
+            ok, msg = launch_account(int(acc_id), project_url=project_url)
+            return jsonify({"status": "ok" if ok else "error", "message": msg, "account_id": int(acc_id)})
+        else:
+            res = launch_all(project_url=project_url)
+            return jsonify({"status": "ok", "message": "All accounts launched", "results": res})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route("/api/browser/accounts/close", methods=["POST"])
+@app.route("/api/flow/close", methods=["POST"])
+def api_browser_close():
+    """Đóng Chrome an toàn qua CDP Browser.close (không kill port cứng, chống popup Restore)."""
+    data = request.json or {}
+    acc_id = data.get("account_id") or data.get("acc_id")
+
+    try:
+        from browser_pool import close_account, close_all
+        if acc_id is not None and str(acc_id).strip() != "":
+            ok, msg = close_account(int(acc_id))
+            return jsonify({"status": "ok" if ok else "error", "message": msg, "account_id": int(acc_id)})
+        else:
+            res = close_all()
+            return jsonify({"status": "ok", "message": "All accounts closed safely", "results": res})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route("/api/browser/accounts/update-project", methods=["POST"])
+def api_browser_update_project():
+    """Cập nhật Google Flow Project URL cho tài khoản hoặc mặc định."""
+    data = request.json or {}
+    acc_id = data.get("account_id") or data.get("acc_id")
+    project_url = (data.get("project_url") or "").strip()
+
+    try:
+        from browser_pool import load_accounts_config, save_accounts_config
+        cfg = load_accounts_config()
+        if acc_id is not None and str(acc_id).strip() != "":
+            acc = next((a for a in cfg["accounts"] if a["id"] == int(acc_id)), None)
+            if acc:
+                acc["project_url"] = project_url
+        else:
+            cfg["default_project_url"] = project_url
+            for a in cfg["accounts"]:
+                if not a.get("project_url"):
+                    a["project_url"] = project_url
+
+        save_accounts_config(cfg)
+        return jsonify({"status": "ok", "message": "Project URL updated successfully"})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
 
 @app.route("/api/flow/launch-all", methods=["POST"])
 def api_flow_launch_all():
-    """Mở đồng loạt cả 5 cửa sổ Chrome."""
+    """Alias mở đồng loạt 5 cửa sổ Chrome."""
     try:
-        from chrome_launcher import action_start_all
-        threading.Thread(target=action_start_all, daemon=True).start()
+        from browser_pool import launch_all
+        threading.Thread(target=launch_all, daemon=True).start()
         return jsonify({"status": "ok", "message": "Launching all accounts in background"})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500

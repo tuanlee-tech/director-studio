@@ -248,19 +248,29 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
                 <p style="font-size:.82rem;color:var(--t2)">Điều phối 5 tài khoản Chrome CDP độc lập. Tận dụng 250 credit video/ngày & cào ảnh 0 credit song song.</p>
             </div>
             <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
-                <button class="btn bs" onclick="launchAllFlowAccounts()">🌐 Mở Tất Cả 5 Cửa Sổ</button>
+                <button class="btn bp" onclick="launchAllFlowAccounts()">🌐 Mở Tất Cả 5 Cửa Sổ</button>
+                <button class="btn bd" onclick="closeAllFlowAccounts()">🛑 Đóng Tất Cả An Toàn</button>
                 <button class="btn bs" onclick="loadFlowAccounts()">🔄 Làm Mới Trạng Thái</button>
             </div>
         </div>
 
+        <!-- Global Project URL Input -->
+        <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:var(--r);padding:1rem;margin-bottom:1.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+            <div style="flex:1;min-width:280px">
+                <label style="font-size:.8rem;color:var(--t2);display:block;margin-bottom:4px">🎯 Google Flow Project URL mặc định (trang home không có ô nhập prompt):</label>
+                <input type="text" id="globalProjectUrl" placeholder="https://flow.google.com/project/<UUID>" style="width:100%;padding:.5rem .8rem;background:var(--bg3);border:1px solid var(--brd);border-radius:6px;color:#fff;font-family:monospace;font-size:.82rem">
+            </div>
+            <button class="btn bs" onclick="saveGlobalProjectUrl()" style="margin-top:1.2rem">💾 Lưu Project URL Cho Tất Cả</button>
+        </div>
+
         <!-- 5 Accounts Grid -->
-        <div class="stit">👥 Trạng Thái 5 Tài Khoản Chrome (CDP Profiles)</div>
-        <div class="grid" id="flowAccountsGrid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
+        <div class="stit">👥 Trạng Thái 5 Tài Khoản Chrome (CDP Profiles: ~/.flowkit/chrome_acc1..5)</div>
+        <div class="grid" id="flowAccountsGrid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">
             <div style="color:var(--t3);padding:1rem">Đang kiểm tra kết nối các cổng CDP...</div>
         </div>
 
         <!-- Dispatch Control Panel -->
-        <div class="stit" style="margin-top:1.5rem">⚡ Điều Phối Tạo Asset Tự Động</div>
+        <div class="stit" style="margin-top:1.5rem">⚡ Điều Phối Tạo Asset Tự Động (ProseMirror + Enter CDP)</div>
         <div class="pnl">
             <div class="tf" style="margin-bottom:1rem">
                 <div class="fg" style="flex:1">
@@ -281,7 +291,7 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
             </div>
 
             <!-- Live Terminal / Activity Log -->
-            <label style="font-size:.78rem;color:var(--t3);display:block;margin-bottom:6px">📋 Live Dispatch Log:</label>
+            <label style="font-size:.78rem;color:var(--t3);display:block;margin-bottom:6px">📋 Live Dispatch Log (Quét tile, spinner & đồng bộ về Studio):</label>
             <div id="flowLogBox" style="background:#090d16;border:1px solid var(--brd);border-radius:8px;padding:12px;font-family:monospace;font-size:.78rem;color:#10b981;height:180px;overflow-y:auto;white-space:pre-wrap;line-height:1.5">Sẵn sàng nhận lệnh dispatch...</div>
         </div>
     </div>
@@ -743,9 +753,14 @@ async function loadFlowAccounts(){
     grid.innerHTML = '<div style="color:var(--t3);padding:1rem"><span class="sp"></span> Đang quét 5 cổng Chrome CDP...</div>';
 
     try {
-        const res = await fetch('/api/flow/accounts');
+        const res = await fetch('/api/browser/accounts');
         const data = await res.json();
         flowAccountsData = data.accounts || [];
+
+        const gUrlInput = document.getElementById('globalProjectUrl');
+        if (gUrlInput && data.default_project_url && !gUrlInput.value) {
+            gUrlInput.value = data.default_project_url;
+        }
 
         grid.innerHTML = '';
         flowAccountsData.forEach(acc => {
@@ -753,8 +768,10 @@ async function loadFlowAccounts(){
             card.className = 'card';
             card.id = `flow-acc-card-${acc.id}`;
 
-            const statusClass = acc.is_online ? 'healthy' : 'stopped';
-            const statusLabel = acc.is_online ? '🟢 Online' : '⚪ Offline';
+            const isOnline = acc.cdp_available || acc.is_online;
+            const statusClass = isOnline ? 'healthy' : 'stopped';
+            const statusLabel = isOnline ? '🟢 Online' : '⚪ Offline';
+            const flowTabOpen = acc.flow_tab_open;
 
             card.innerHTML = `
                 <div class="ch">
@@ -762,14 +779,32 @@ async function loadFlowAccounts(){
                         <span class="ci">🌐</span>
                         <div>
                             <div class="cn">${acc.name}</div>
-                            <div class="cv">Port: ${acc.port} · Profile: acc${acc.id}</div>
+                            <div class="cv">Port: ${acc.port} · Profile: ${acc.profile_dir || ('~/.flowkit/chrome_acc' + acc.id)}</div>
                         </div>
                     </div>
                     <span class="sb ${statusClass}"><span class="sd"></span>${statusLabel}</span>
                 </div>
                 <div class="cd" style="font-size:.78rem;margin-bottom:.5rem">
-                    <strong>Tab hiện tại:</strong> <span style="color:#a78bfa">${acc.active_tab_title || 'Chưa mở tab'}</span>
+                    <div style="margin-bottom:4px">
+                        <strong>Tab Google Flow:</strong> 
+                        <span style="color:${flowTabOpen ? '#10b981' : '#f59e0b'};font-weight:600">
+                            ${flowTabOpen ? '✅ Đang mở Project/Flow' : '❌ Chưa vào Flow'}
+                        </span>
+                    </div>
+                    <div style="color:var(--t2);font-size:.74rem;word-break:break-all">
+                        <strong>Active Tab:</strong> ${acc.active_tab_title || 'Chưa kết nối'}
+                    </div>
                 </div>
+
+                <!-- Project URL for Account -->
+                <div style="margin-bottom:.8rem">
+                    <label style="font-size:.72rem;color:var(--t3);display:block;margin-bottom:2px">Project URL (https://flow.google.com/project/...):</label>
+                    <div style="display:flex;gap:4px">
+                        <input type="text" id="accProjectUrl-${acc.id}" value="${acc.project_url || ''}" placeholder="Dán link project..." style="flex:1;padding:4px 6px;background:var(--bg3);border:1px solid var(--brd);border-radius:4px;color:#fff;font-size:.75rem">
+                        <button class="btn bs" onclick="saveAccountProjectUrl(${acc.id})" style="padding:4px 8px;font-size:.72rem">💾</button>
+                    </div>
+                </div>
+
                 <div style="background:rgba(255,255,255,.04);padding:.5rem;border-radius:6px;margin-bottom:.8rem;font-size:.75rem">
                     <div style="display:flex;justify-content:space-between;margin-bottom:4px">
                         <span style="color:var(--t3)">Video Credits Hôm Nay</span>
@@ -779,9 +814,12 @@ async function loadFlowAccounts(){
                         <div style="width:${(acc.credit_used_today / acc.daily_credit_limit) * 100}%;height:100%;background:#10b981"></div>
                     </div>
                 </div>
-                <div class="ca">
-                    <button class="btn bp" onclick="launchFlowAccount(${acc.id})" style="width:100%;justify-content:center">
-                        🔑 ${acc.is_online ? 'Mở Lại Cửa Sổ' : 'Mở Chrome Đăng Nhập'}
+                <div class="ca" style="display:flex;gap:.5rem">
+                    <button class="btn bp" onclick="launchFlowAccount(${acc.id})" style="flex:1;justify-content:center">
+                        🔑 ${isOnline ? 'Mở Lại Window' : 'Bật Chrome CDP'}
+                    </button>
+                    <button class="btn bd" onclick="closeFlowAccount(${acc.id})" ${!isOnline ? 'disabled style="opacity:.4"' : ''} title="Đóng Chrome an toàn qua CDP Browser.close" style="padding:.5rem .7rem">
+                        🛑 Đóng
                     </button>
                 </div>
             `;
@@ -792,12 +830,52 @@ async function loadFlowAccounts(){
     }
 }
 
-async function launchFlowAccount(accId){
+async function saveGlobalProjectUrl(){
+    const url = (document.getElementById('globalProjectUrl').value || '').trim();
+    if (!url) {
+        alert("Vui lòng nhập Google Flow Project URL");
+        return;
+    }
     try {
-        const res = await fetch('/api/flow/launch', {
+        const res = await fetch('/api/browser/accounts/update-project', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ acc_id: accId })
+            body: JSON.stringify({ project_url: url })
+        });
+        const d = await res.json();
+        alert(d.message || "Đã lưu!");
+        loadFlowAccounts();
+    } catch(e) {
+        alert("Lỗi: " + e.message);
+    }
+}
+
+async function saveAccountProjectUrl(accId){
+    const input = document.getElementById(`accProjectUrl-${accId}`);
+    const url = input ? input.value.trim() : '';
+    try {
+        const res = await fetch('/api/browser/accounts/update-project', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ account_id: accId, project_url: url })
+        });
+        const d = await res.json();
+        alert(d.message || "Đã cập nhật cho Account " + accId);
+        loadFlowAccounts();
+    } catch(e) {
+        alert("Lỗi: " + e.message);
+    }
+}
+
+async function launchFlowAccount(accId){
+    try {
+        const urlInput = document.getElementById(`accProjectUrl-${accId}`);
+        const projectUrl = urlInput ? urlInput.value.trim() : null;
+
+        const res = await fetch('/api/browser/accounts/launch', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ account_id: accId, project_url: projectUrl })
         });
         const data = await res.json();
         setTimeout(loadFlowAccounts, 2000);
@@ -806,10 +884,42 @@ async function launchFlowAccount(accId){
     }
 }
 
+async function closeFlowAccount(accId){
+    try {
+        const res = await fetch('/api/browser/accounts/close', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ account_id: accId })
+        });
+        const data = await res.json();
+        setTimeout(loadFlowAccounts, 1500);
+    } catch(e) {
+        alert("Lỗi: " + e.message);
+    }
+}
+
 async function launchAllFlowAccounts(){
     try {
-        await fetch('/api/flow/launch-all', { method: 'POST' });
+        const gUrl = (document.getElementById('globalProjectUrl').value || '').trim();
+        await fetch('/api/browser/accounts/launch', { 
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ project_url: gUrl || null })
+        });
         setTimeout(loadFlowAccounts, 3000);
+    } catch(e) {
+        alert("Lỗi: " + e.message);
+    }
+}
+
+async function closeAllFlowAccounts(){
+    try {
+        await fetch('/api/browser/accounts/close', { 
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({})
+        });
+        setTimeout(loadFlowAccounts, 2000);
     } catch(e) {
         alert("Lỗi: " + e.message);
     }

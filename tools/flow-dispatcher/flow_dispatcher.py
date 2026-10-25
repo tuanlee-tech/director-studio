@@ -3,13 +3,18 @@
 """
 flow_dispatcher.py — Google Flow Multi-Account Batch Dispatcher
 Điều phối tự động phân chia prompt video cho 5 tài khoản Google Flow qua CDP.
-Tận dụng tối đa quota credit hàng ngày (250 credit video / 5 account) và cào ảnh 0 credit song song.
+Thực hiện 4 bước CDP:
+1. Kết nối Chrome CDP
+2. Điều hướng tới Google Flow Project
+3. Nhập prompt vào ProseMirror và Enter đúng 1 lần
+4. Poll spinner/tiles và sync media về Studio + follow-up sync (+10s, +20s, +30s)
 """
 
 import sys
 import os
 import json
 import time
+import re
 import argparse
 import threading
 from pathlib import Path
@@ -23,12 +28,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = SCRIPT_DIR.parent.parent
 CONFIG_FILE = SCRIPT_DIR / "accounts.json"
 
-try:
-    from chrome_launcher import load_accounts_config, check_cdp_status, get_active_tabs
-    from cdp_client import FlowCDPClient
-except ImportError:
-    from tools.flow_dispatcher.chrome_launcher import load_accounts_config, check_cdp_status, get_active_tabs
-    from tools.flow_dispatcher.cdp_client import FlowCDPClient
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from browser_pool import load_accounts_config, check_cdp_status, get_active_tabs
+from browser_flow import FlowBrowserSession, sync_flow_media_to_studio
+
 
 def resolve_active_video(root_dir, channel=None, slug=None):
     channels_dir = root_dir / "channels"
@@ -74,20 +79,42 @@ def resolve_active_video(root_dir, channel=None, slug=None):
 
     return active_channel, slug
 
+
 def load_video_prompts(root_dir, channel, slug):
-    """Đọc danh sách B-roll và prompts từ broll-plan.json hoặc prompts.md."""
+    """Đọc danh sách B-roll và prompts từ broll-plan.json hoặc remotion-composition.json."""
     video_dir = root_dir / "channels" / channel / "videos" / slug
+    comp_file = video_dir / "assets" / "remotion-composition.json"
     broll_file = video_dir / "broll-plan.json"
-    prompts_file = video_dir / "assets" / "prompts.md"
 
     items = []
+    if comp_file.exists():
+        try:
+            data = json.loads(comp_file.read_text(encoding="utf-8"))
+            scenes = data.get("scenes", [])
+            for s in scenes:
+                items.append({
+                    "id": f"Scene-{s.get('index', 1)}",
+                    "scene": f"Scene {s.get('index', 1)}",
+                    "index": s.get("index", 1),
+                    "type": "AIV" if s.get("broll_type") == "AIV" else "IMG",
+                    "duration": s.get("duration", 4),
+                    "beat": s.get("visual_beat", ""),
+                    "target_file": f"scene_{s.get('index', 1):02d}.png",
+                    "prompt": s.get("prompt") or f"{s.get('visual_beat')}, 2D flat vector cartoon style, finance illustration"
+                })
+            if items:
+                return items
+        except Exception:
+            pass
+
     if broll_file.exists():
         try:
             data = json.loads(broll_file.read_text(encoding="utf-8"))
-            for b in data:
+            for idx, b in enumerate(data, start=1):
                 items.append({
-                    "id": b.get("broll_id", "S001-A"),
-                    "scene": b.get("scene", "S001"),
+                    "id": b.get("broll_id", f"S{idx:03d}-A"),
+                    "scene": b.get("scene", f"Scene {idx}"),
+                    "index": idx,
                     "type": b.get("type", "AIV"),
                     "duration": b.get("duration_seconds", 4),
                     "beat": b.get("visual_beat", ""),
@@ -100,17 +127,39 @@ def load_video_prompts(root_dir, channel, slug):
 
     # Mock default nếu chưa có broll plan
     return [
-        {"id": "S001-A", "scene": "S001", "type": "AIV", "duration": 6, "target_file": "S001-A_6s_AIV.mp4", "prompt": "Man looking shocked at red credit card bill, 2D vector style"},
-        {"id": "S002-A", "scene": "S002", "type": "AIV", "duration": 4, "target_file": "S002-A_4s_AIV.mp4", "prompt": "Salary notification arrives on phone, 2D vector style"},
-        {"id": "S003-A", "scene": "S003", "type": "IMG", "duration": 4, "target_file": "S003-A_IMG.png", "prompt": "Credit card cut in half with scissors on table, 2D vector style"},
-        {"id": "S004-A", "scene": "S004", "type": "IMG", "duration": 4, "target_file": "S004-A_IMG.png", "prompt": "Financial freedom roadmap with green upward chart, 2D vector style"}
+        {"id": "Scene-1", "scene": "Scene 1", "index": 1, "type": "AIV", "duration": 6, "target_file": "scene_01.mp4", "prompt": "Man looking shocked at red credit card bill, 2D vector style"},
+        {"id": "Scene-2", "scene": "Scene 2", "index": 2, "type": "AIV", "duration": 4, "target_file": "scene_02.mp4", "prompt": "Salary notification arrives on phone, 2D vector style"},
+        {"id": "Scene-3", "scene": "Scene 3", "index": 3, "type": "IMG", "duration": 4, "target_file": "scene_03.png", "prompt": "Credit card cut in half with scissors on table, 2D vector style"},
+        {"id": "Scene-4", "scene": "Scene 4", "index": 4, "type": "IMG", "duration": 4, "target_file": "scene_04.png", "prompt": "Financial freedom roadmap with green upward chart, 2D vector style"}
     ]
 
-def dispatch_worker(acc_info, batch_items, dest_dir, dry_run=False):
+
+def schedule_followup_sync(session, channel, slug, scene_idx, scene_label, is_video):
+    """
+    Follow-up sync ở +10s / +20s / +30s đề phòng trường hợp Flow render trễ.
+    """
+    def _delayed_check():
+        for delay in [10, 20, 30]:
+            time.sleep(delay)
+            try:
+                st = session.poll_tiles_status([scene_label])
+                for t in st.get("tiles", []):
+                    if scene_label.lower() in (t.get("title") or "").lower() and t.get("media_url") and not t.get("in_progress"):
+                        sync_flow_media_to_studio(channel, slug, scene_idx, t["media_url"], is_video=is_video)
+                        print(f"✨ [Follow-up +{delay}s] Đã sync trễ thành công cho {scene_label}!")
+                        return
+            except Exception:
+                pass
+
+    threading.Thread(target=_delayed_check, daemon=True).start()
+
+
+def dispatch_worker(acc_info, batch_items, channel, slug, dry_run=False):
     """Worker xử lý batch prompts cho 1 tài khoản Chrome."""
     acc_id = acc_info["id"]
     port = acc_info["port"]
     name = acc_info["name"]
+    project_url = acc_info.get("project_url")
 
     print(f"\n[Account {acc_id} - {name}] Bắt đầu xử lý {len(batch_items)} items...")
 
@@ -120,35 +169,52 @@ def dispatch_worker(acc_info, batch_items, dest_dir, dry_run=False):
             time.sleep(0.5)
         return len(batch_items), 0
 
-    client = FlowCDPClient(port=port)
+    session = FlowBrowserSession(port=port, project_url=project_url)
     success_count = 0
     fail_count = 0
 
     try:
-        client.connect()
-        page_info = client.check_page_loaded()
-        print(f"  🔗 [Account {acc_id}] Đã kết nối tab: {page_info.get('title', 'Flow')}")
+        session.connect()
+        print(f"  🔗 [Account {acc_id}] Đã kết nối Flow tab: {session.tab_url}")
 
         for it in batch_items:
             prompt_text = it["prompt"]
-            print(f"  ✍️ [Account {acc_id}] Gửi prompt {it['id']}: '{prompt_text[:40]}...'")
-            
-            res = client.inject_and_send_prompt(prompt_text)
-            if res and res.get("success"):
-                print(f"  ⏳ [Account {acc_id}] Đang chờ Google Flow phản hồi cho {it['id']}...")
-                # Chờ response (thực tế khoảng 15-40s)
-                time.sleep(6)
-                success_count += 1
+            scene_label = it.get("scene", f"Scene {it.get('index', 1)}")
+            scene_idx = it.get("index", 1)
+            is_video = it.get("type") == "AIV"
+
+            print(f"  ✍️ [Account {acc_id}] Gửi prompt cho {scene_label} ({it['id']}): '{prompt_text[:50]}...'")
+
+            # Bước 3: Inject prompt và Enter đúng 1 lần (không click button)
+            session.inject_and_send_prompt(prompt_text)
+
+            # Bước 4: Đợi tile hoàn tất và lấy kết quả
+            ok, matched = session.wait_for_completion([scene_label], is_video=is_video)
+            if ok and scene_label in matched and matched[scene_label].get("media_url"):
+                media_url = matched[scene_label]["media_url"]
+                sync_ok, path_or_err = sync_flow_media_to_studio(channel, slug, scene_idx, media_url, is_video=is_video)
+                if sync_ok:
+                    print(f"  ✅ [Account {acc_id}] Đã sync asset về Studio: {path_or_err}")
+                    success_count += 1
+                    # Schedule follow-up sync
+                    schedule_followup_sync(session, channel, slug, scene_idx, scene_label, is_video)
+                else:
+                    print(f"  ⚠️ [Account {acc_id}] Lỗi sync media: {path_or_err}")
+                    fail_count += 1
             else:
-                print(f"  ⚠️ [Account {acc_id}] Không thể gửi prompt cho {it['id']}")
+                print(f"  ⚠️ [Account {acc_id}] Hết timeout hoặc chưa có media URL cho {scene_label}")
                 fail_count += 1
+                # Vẫn kích hoạt follow-up sync đề phòng render trễ
+                schedule_followup_sync(session, channel, slug, scene_idx, scene_label, is_video)
+
     except Exception as e:
         print(f"  ❌ [Account {acc_id}] Lỗi: {e}")
         fail_count += len(batch_items)
     finally:
-        client.close()
+        session.close()
 
     return success_count, fail_count
+
 
 def run_dispatcher(channel=None, slug=None, dry_run=False):
     root_dir = ROOT_DIR
@@ -163,7 +229,7 @@ def run_dispatcher(channel=None, slug=None, dry_run=False):
     # 1. Quét các account đang Online
     online_accounts = []
     for acc in cfg["accounts"]:
-        is_online, _ = check_cdp_status(acc["port"])
+        is_online, _, _ = check_cdp_status(acc["port"])
         if is_online:
             online_accounts.append(acc)
 
@@ -171,8 +237,9 @@ def run_dispatcher(channel=None, slug=None, dry_run=False):
     if not online_accounts and not dry_run:
         print("\n❌ Không có tài khoản Google Flow nào đang mở!")
         print("💡 Hãy chạy lệnh để mở các cửa sổ Chrome:")
-        print("   • Mở 1 account để login : python tools/flow-dispatcher/chrome_launcher.py login --acc 1")
-        print("   • Mở toàn bộ 5 account  : python tools/flow-dispatcher/chrome_launcher.py start-all")
+        print("   • Mở 1 account để login : python tools/flow-dispatcher/browser_pool.py launch --acc 1")
+        print("   • Mở toàn bộ 5 account  : python tools/flow-dispatcher/browser_pool.py launch-all")
+        print("   • Đóng an toàn          : python tools/flow-dispatcher/browser_pool.py close-all")
         print("   • Hoặc thêm cờ '--dry-run' để kiểm tra kế hoạch phân bổ mà không cần mở Chrome.")
         sys.exit(1)
 
@@ -202,51 +269,51 @@ def run_dispatcher(channel=None, slug=None, dry_run=False):
         target_acc = accounts_to_use[idx % len(accounts_to_use)]
         allocations[target_acc["id"]].append(item)
 
-    # In kế hoạch phân bổ
-    print("📊 KẾ HOẠCH PHÂN BỔ CÔNG VIỆC CHO CÁC TÀI KHOẢN:")
+    print("📊 KẾ HOẠCH PHÂN BỔ THEO TÀI KHOẢN:")
     for acc in accounts_to_use:
-        acc_id = acc["id"]
-        tasks = allocations[acc_id]
-        aiv_c = sum(1 for t in tasks if t["type"] == "AIV")
-        img_c = sum(1 for t in tasks if t["type"] != "AIV")
-        est_credits = aiv_c * 20 # Ước lượng ~20 credit/clip video
-        print(f"  • Account {acc_id} ({acc['name']:<16}) : {len(tasks):<2} items (AIV: {aiv_c}, IMG: {img_c}) → Ước tính credit: {est_credits}/50")
+        batch = allocations[acc["id"]]
+        aiv_c = sum(1 for x in batch if x["type"] == "AIV")
+        img_c = sum(1 for x in batch if x["type"] != "AIV")
+        print(f"  • Account {acc['id']} ({acc['name']}, Port {acc['port']}): {len(batch)} tasks (🎬 {aiv_c} AIV, 🖼️ {img_c} IMG)")
 
     print("-" * 78)
+    print("⚡ Bắt đầu thực thi song song qua ThreadPoolExecutor...")
 
-    # 4. Thực thi song song (Multithreading)
-    print("⚡ Bắt đầu dispatch song song tới các cửa sổ Chrome...")
+    start_all = time.time()
     total_success = 0
     total_fail = 0
 
     with ThreadPoolExecutor(max_workers=len(accounts_to_use)) as executor:
         futures = []
         for acc in accounts_to_use:
-            acc_id = acc["id"]
-            batch = allocations[acc_id]
+            batch = allocations[acc["id"]]
             if batch:
-                futures.append(executor.submit(dispatch_worker, acc, batch, dest_dir, dry_run=dry_run))
+                f = executor.submit(dispatch_worker, acc, batch, channel, slug, dry_run)
+                futures.append(f)
 
         for f in futures:
             s, fl = f.result()
             total_success += s
             total_fail += fl
 
-    print("\n" + "=" * 78)
-    print(f"🎉 HOÀN TẤT ĐIỀU PHỐI GOOGLE FLOW MULTI-ACCOUNT!")
-    print(f"   • Thành công : {total_success} items")
-    print(f"   • Thất bại   : {total_fail} items")
-    print(f"   • Thư mục lưu: {dest_dir}")
+    elapsed = int(time.time() - start_all)
     print("=" * 78)
+    print(f"🎉 HOÀN TẤT DISPATCH (Tổng thời gian: {elapsed}s)")
+    print(f"   • Thành công: {total_success} / {len(items)}")
+    print(f"   • Thất bại:   {total_fail}")
+    print(f"   • Assets tại: {dest_dir}")
+    print("=" * 78)
+
 
 def main():
     parser = argparse.ArgumentParser(description="Google Flow Multi-Account Batch Dispatcher.")
     parser.add_argument("slug", nargs="?", default=None, help="Slug của video (ví dụ: thoat-bay-no-the-tin-dung)")
-    parser.add_argument("--channel", default=None, help="Tên kênh (mặc định lấy active channel)")
-    parser.add_argument("--dry-run", action="store_true", help="Chạy thử nghiệm mô phỏng phân bổ không cần kết nối Chrome")
+    parser.add_argument("--channel", default=None, help="Tên kênh (ví dụ: tien-thuc-chien)")
+    parser.add_argument("--dry-run", action="store_true", help="Chạy mô phỏng không gửi lệnh qua Chrome CDP")
 
     args = parser.parse_args()
     run_dispatcher(channel=args.channel, slug=args.slug, dry_run=args.dry_run)
+
 
 if __name__ == "__main__":
     main()

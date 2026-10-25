@@ -319,17 +319,23 @@ Prompt: [Mô tả đồ họa/infographic tĩnh. Chuyển động sẽ thêm tro
 
 #### Bước 5.1-B — Tự Động Hóa Google Flow Đa Tài Khoản (CDP Dispatcher) 🌐 ⚡
 
-Thay vì copy/paste thủ công vào từng cửa sổ trình duyệt, Agent sử dụng hệ thống **Multi-Account Chrome CDP Dispatcher** (tham khảo phong cách FrameWeaver):
+Hệ thống **Multi-Account Chrome CDP Dispatcher** (tham khảo FrameWeaver) tự động hóa hoàn toàn 4 bước qua Chrome DevTools Protocol mà không cần extension:
 
-1. **Khởi động & Đăng nhập (`@flow-login <acc_id>`)**:
-   - Mở cửa sổ Chrome độc lập với profile riêng (`profiles/acc1` → `acc5`).
-   - User chỉ cần đăng nhập Google 1 lần, các phiên sau session được giữ vĩnh viễn.
-2. **Kiểm tra trạng thái (`@flow-status`)**:
-   - Quét các port debug `9222` → `9226`, kiểm tra số tài khoản online và hạn mức credit hôm nay.
-3. **Phân bổ Quota thông minh (`@flow-dispatch`)**:
-   - **Cảnh AIV (Video)**: Chia đều cho 5 account (mỗi account gánh 1-2 clip để không vượt 50 credit/ngày, tổng tận dụng 250 credit/ngày).
-   - **Cảnh IMG (Ảnh tĩnh)**: Bơm song song theo batch 3-4 prompt/lần để Google Flow xử lý đồng thời (0 credit free).
-   - **Tự động tải về local**: Tải ảnh/video và lưu đúng tên file chuẩn (`S001-A_6s_AIV.mp4`, `S002_IMG.png`) vào thư mục `assets/`.
+1. **Khởi động Chrome Debug (`@flow-login <acc_id>` hoặc Web UI)**:
+   - Command: `chrome.exe --remote-debugging-port=9223 --user-data-dir=~/.flowkit/chrome_acc1 --remote-allow-origins=* --no-first-run --no-default-browser-check https://flow.google.com/project/<UUID>`
+   - Profile riêng biệt (`~/.flowkit/chrome_acc1` → `acc5`) lưu giữ cookie vĩnh viễn. Cờ `--remote-allow-origins=*` chống lỗi 403 WebSocket.
+   - Cổng CDP độc lập: `9223` → `9227` (tránh xung đột port 9222).
+   - Đóng an toàn qua CDP `Browser.close` (`@flow-close <id>`), chống popup "Restore pages?".
+2. **Kết nối tab Flow & Điều hướng Project**:
+   - `GET http://127.0.0.1:<port>/json/list` → lấy `webSocketDebuggerUrl` → kết nối WebSocket.
+   - Trang home Flow không có ô nhập → `ensure_project_tab(project_url)` điều hướng thẳng vào trang project.
+3. **Nhập prompt + Enter đúng 1 lần**:
+   - `Runtime.evaluate`: query `.ProseMirror` (fallback `[aria-label="What do you want to create?"]`) → focus → `selectAll` → `insertText` → dispatch `InputEvent`.
+   - `Input.dispatchKeyEvent` Enter đúng 1 lần (rawKeyDown + keyUp). **Tuyệt đối không click nút submit** vì nút toggle thành "Stop generation".
+4. **Giám sát & Tự động đồng bộ Media về Studio**:
+   - Poll mỗi ~2s: dò nút Stop (`button[aria-label*="Stop"]`) và quét tiles (`flow-grid-tile-container, flow-video-tile`), kiểm tra spinner `progress-percent` và `.footer-title`.
+   - Chỉ kết thúc khi đủ tile "Scene N" và không còn `inProgress` (Ảnh: timeout 180s; Video: 450s).
+   - `sync_flow_media_to_studio`: tải bytes media về `assets/scene_NN.png|mp4`, cập nhật `remotion-composition.json`, follow-up sync ở +10s/+20s/+30s.
 
 **Naming convention (quan trọng):**
 - `S{NNN}-{beat}_{dur}s_{type}[_sb].{ext}` — ví dụ: `S001-A_4s_AIV_sb.png`, `S001-A_4s_AIV.mp4`, `S003_IMG.png`
@@ -441,8 +447,9 @@ Toàn bộ khâu hậu kỳ dựng video được tự động hóa hoàn toàn,
 | `@list-motion-stack` | Xem danh sách 20/20 công nghệ hoạt ảnh & đồ họa |
 | `@render-video` | Xuất video MP4 hoàn chỉnh bằng Remotion Engine (H.264 1080p) |
 | `@preview-video` | Mở xem trước timeline trong Studio UI (port 3000) |
-| `@flow-status` | Kiểm tra trạng thái 5 tài khoản Google Flow (Online/Offline, Port) |
+| `@flow-status` | Kiểm tra trạng thái 5 tài khoản Google Flow (Online/Offline, Port 9223-9227) |
 | `@flow-login <id>` | Mở cửa sổ Chrome profile độc lập để đăng nhập Google Flow |
+| `@flow-close <id>` | Đóng Chrome an toàn qua CDP Browser.close (chống popup Restore) |
 | `@flow-dispatch` | Tự động phân bổ prompts cho 5 account Google Flow và tải assets về |
 | `@pipeline --from audio` | Chạy lại từ bước audio |
 | `@pipeline --from broll` | Chạy lại từ bước B-roll |
