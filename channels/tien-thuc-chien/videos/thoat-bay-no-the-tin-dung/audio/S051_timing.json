@@ -1,0 +1,129 @@
+{
+  "audio_file": "S051_narration.wav",
+  "duration_ms": 5200,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Người",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "thứ",
+      "start_ms": 200,
+      "end_ms": 320
+    },
+    {
+      "word": "nhất",
+      "start_ms": 320,
+      "end_ms": 460
+    },
+    {
+      "word": "trọn",
+      "start_ms": 460,
+      "end_ms": 740
+    },
+    {
+      "word": "giải",
+      "start_ms": 740,
+      "end_ms": 960
+    },
+    {
+      "word": "pháp",
+      "start_ms": 960,
+      "end_ms": 1080
+    },
+    {
+      "word": "soa",
+      "start_ms": 1080,
+      "end_ms": 1340
+    },
+    {
+      "word": "dụng",
+      "start_ms": 1340,
+      "end_ms": 1600
+    },
+    {
+      "word": "ngàn",
+      "start_ms": 1600,
+      "end_ms": 1680
+    },
+    {
+      "word": "hạ,",
+      "start_ms": 1680,
+      "end_ms": 1820
+    },
+    {
+      "word": "tiếp",
+      "start_ms": 2280,
+      "end_ms": 2360
+    },
+    {
+      "word": "tục",
+      "start_ms": 2360,
+      "end_ms": 2580
+    },
+    {
+      "word": "trả",
+      "start_ms": 2580,
+      "end_ms": 2780
+    },
+    {
+      "word": "tối",
+      "start_ms": 2780,
+      "end_ms": 2960
+    },
+    {
+      "word": "kiểu",
+      "start_ms": 2960,
+      "end_ms": 3140
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 3140,
+      "end_ms": 3320
+    },
+    {
+      "word": "tháng",
+      "start_ms": 3320,
+      "end_ms": 3600
+    },
+    {
+      "word": "và",
+      "start_ms": 3600,
+      "end_ms": 3780
+    },
+    {
+      "word": "quẹt",
+      "start_ms": 3780,
+      "end_ms": 4100
+    },
+    {
+      "word": "thể",
+      "start_ms": 4100,
+      "end_ms": 4180
+    },
+    {
+      "word": "buồn",
+      "start_ms": 4180,
+      "end_ms": 4480
+    },
+    {
+      "word": "vào",
+      "start_ms": 4480,
+      "end_ms": 4560
+    },
+    {
+      "word": "chi",
+      "start_ms": 4560,
+      "end_ms": 4680
+    },
+    {
+      "word": "tiêu.",
+      "start_ms": 4680,
+      "end_ms": 4920
+    }
+  ]
+}

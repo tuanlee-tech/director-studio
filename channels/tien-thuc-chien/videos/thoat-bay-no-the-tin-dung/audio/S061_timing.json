@@ -1,0 +1,119 @@
+{
+  "audio_file": "S061_narration.wav",
+  "duration_ms": 4720,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "muốn",
+      "start_ms": 180,
+      "end_ms": 320
+    },
+    {
+      "word": "sống",
+      "start_ms": 320,
+      "end_ms": 560
+    },
+    {
+      "word": "trong",
+      "start_ms": 560,
+      "end_ms": 700
+    },
+    {
+      "word": "sự",
+      "start_ms": 700,
+      "end_ms": 840
+    },
+    {
+      "word": "hãy",
+      "start_ms": 840,
+      "end_ms": 1020
+    },
+    {
+      "word": "kéo",
+      "start_ms": 1020,
+      "end_ms": 1240
+    },
+    {
+      "word": "dài,",
+      "start_ms": 1240,
+      "end_ms": 1520
+    },
+    {
+      "word": "2",
+      "start_ms": 1940,
+      "end_ms": 2040
+    },
+    {
+      "word": "kỷ",
+      "start_ms": 2040,
+      "end_ms": 2220
+    },
+    {
+      "word": "luật",
+      "start_ms": 2220,
+      "end_ms": 2380
+    },
+    {
+      "word": "trong",
+      "start_ms": 2380,
+      "end_ms": 2500
+    },
+    {
+      "word": "vài",
+      "start_ms": 2500,
+      "end_ms": 2760
+    },
+    {
+      "word": "tháng",
+      "start_ms": 2760,
+      "end_ms": 2980
+    },
+    {
+      "word": "để",
+      "start_ms": 2980,
+      "end_ms": 3280
+    },
+    {
+      "word": "đổi",
+      "start_ms": 3280,
+      "end_ms": 3500
+    },
+    {
+      "word": "lấy",
+      "start_ms": 3500,
+      "end_ms": 3660
+    },
+    {
+      "word": "sự",
+      "start_ms": 3660,
+      "end_ms": 3760
+    },
+    {
+      "word": "tự",
+      "start_ms": 3760,
+      "end_ms": 3960
+    },
+    {
+      "word": "do",
+      "start_ms": 3960,
+      "end_ms": 4160
+    },
+    {
+      "word": "chọn",
+      "start_ms": 4160,
+      "end_ms": 4320
+    },
+    {
+      "word": "vệ.",
+      "start_ms": 4320,
+      "end_ms": 4540
+    }
+  ]
+}

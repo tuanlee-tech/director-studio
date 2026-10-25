@@ -34,6 +34,16 @@ Repo `audio/` sẽ chứa nhiều channel, mỗi channel có thư mục riêng v
 > - Hệ thống xuất **file JSON review** (`broll-plan.json`) + hiển thị dạng timeline/table để user **REVIEW và CHỈNH SỬA** trước khi tạo asset prompts
 > - Chỉ sau khi user approve broll-plan mới tiến hành Phase 4 (Asset Prompts)
 
+> [!IMPORTANT]
+> **Chiến lược Hybrid Asset & Remotion/Hyperframe (TỐI ƯU CHI PHÍ) — MỚI BỔ SUNG**
+> Nếu toàn bộ video 8–10 phút đều dùng AIV (AI Video), chi phí credit sẽ cực lớn. Do đó, hệ thống áp dụng mô hình **Hybrid Asset Allocation**:
+> 1. **Giai đoạn Hook (~30s đầu)**: Bắt buộc dùng **AIV (AI Video)** (4s/6s/8s/10s có Storyboard) để giữ chân người xem ở thời khắc quyết định của thuật toán YouTube.
+> 2. **Phần thân video (Sau 30s)**:
+>    - **IMG (Ảnh tĩnh AI chất lượng cao)**: Sinh ảnh tĩnh với Style Lock (chi phí rẻ hơn AIV 10–20 lần). Sau đó áp dụng hiệu ứng camera mượt mà (Ken Burns, Pan, Zoom, Tilt, Push-in) thông qua **Remotion / Hyperframe**.
+>    - **GFX (Motion Graphics bằng code Remotion / Hyperframe)**: Dành cho các phân đoạn số liệu, biểu đồ chi phí cơ hội, cột nợ, so sánh 2 tư duy đối lập, thẻ ngân hàng... **Tốn 0 credit AI** vì được vẽ và render 100% bằng code React/SVG/Canvas.
+>    - **AIV Climax (Tùy chọn)**: Chỉ dùng thêm AIV ở 1–2 bước ngoặt cảm xúc kịch tính nhất của video.
+> 3. **Tiết kiệm dự kiến**: Giảm **70% – 85%** chi phí credit AI cho mỗi video sản xuất.
+
 ---
 
 ## Proposed Changes
@@ -893,6 +903,45 @@ echo "Audio saved: $OUTPUT"
 | | `@undo` | Quay lại bước trước |
 | **❓ Help** | `@help` | Xem chi tiết lệnh |
 | | `@cheatsheet` | Bảng tóm tắt |
+
+---
+
+### Component 8: Chiến lược Hybrid Asset & Remotion/Hyperframe (Tối ưu 70-85% chi phí) ⭐
+
+#### 1. Nguyên lý phân bổ Asset (Cost-Effective Asset Mix)
+- **0s – 30s (Hook & Mở đầu)**: Bắt buộc dùng **AIV (AI Video)** (4s, 6s, 8s hoặc 10s có Storyboard) để giữ chân người xem ở 30 giây quyết định tỷ lệ retention của thuật toán YouTube.
+- **Sau 30s (Thân bài & Lộ trình giải pháp)**:
+  - **IMG (Ảnh tĩnh AI chất lượng cao)**: Sinh ảnh tĩnh từ Flux/Midjourney/Ideogram kèm Style Lock. Tiết kiệm chi phí gấp 10-20 lần so với AIV. Sau đó chèn hiệu ứng camera chuyển động mượt mà (Ken Burns, Slow Zoom, Pan, Push-in) thông qua **Remotion / Hyperframe**.
+  - **GFX (Motion Graphics bằng code Remotion / Hyperframe — 0 Credit)**: 
+    - Biểu đồ tăng giảm tài sản, cột nợ, đường xu hướng (`ChartMotion`)
+    - Bảng so sánh 2 tư duy đối lập Trái vs Phải (`SplitComparison`)
+    - Đồng hồ đếm số tiền, chi phí cơ hội chạy số tăng dần (`CounterNumber`)
+    - Thẻ ngân hàng, tài khoản ví điện tử số dư biến động (`WalletMotion`)
+    - Chữ nhấn mạnh, keyword động đập màn hình (`TypographyImpact`)
+  - **AIV Climax (Tùy chọn)**: Chỉ dùng thêm AIV ở 1 cảnh cao trào bước ngoặt (Climax beat).
+
+#### 2. Định dạng xuất B-roll Plan mới (`broll-plan.json`)
+```json
+{
+  "broll_id": "S003-B",
+  "type": "GFX",
+  "renderer": "remotion",
+  "component": "CounterNumber",
+  "props": {
+    "startValue": 0,
+    "endValue": 300000000,
+    "prefix": "Lỗ lũy kế: ",
+    "suffix": " VNĐ",
+    "color": "#FF0000",
+    "durationFrames": 120
+  },
+  "duration_s": 4
+}
+```
+
+#### 3. Cheatcode bổ sung
+- `@set-strategy <hybrid|cost-saver|all-aiv>`: Đổi chiến lược phân bổ asset.
+- `@gen-remotion`: Tự động xuất file `remotion-composition.json` chứa props cho Remotion / Hyperframe render tự động.
 
 ---
 

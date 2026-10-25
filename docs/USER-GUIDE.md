@@ -192,6 +192,14 @@ Nhờ đó, Agent biết chính xác: Cảnh 1 thực tế dài đúng **5.82 gi
 
 Thay vì chỉ có 1 hình ảnh buồn tẻ cho một đoạn nói dài, Agent sẽ phân tích nội dung narration và timing để chia ra các **visual beats** phù hợp.
 
+### 💰 Chiến lược Hybrid Asset (Tối ưu 70%–85% Credit):
+Để tránh tốn quá nhiều credit video đắt đỏ:
+- **30 giây đầu (Hook)**: Bắt buộc dùng **AIV (AI Video)** nhằm tối đa hóa tỷ lệ giữ chân người xem (retention) của YouTube.
+- **Sau 30 giây (Thân bài & Lộ trình)**:
+  - **GFX (Remotion/Hyperframe Motion Graphics — 0 Credit)**: Dành cho số liệu, công thức, biểu đồ tài sản, bảng so sánh đối lập... Tự động vẽ bằng code React/SVG.
+  - **IMG (Ảnh tĩnh AI + Remotion Camera Motion)**: Sinh ảnh tĩnh từ Flux/Midjourney (chi phí rẻ hơn 10-20 lần) rồi chèn hiệu ứng camera chuyển động mượt mà (Ken Burns, Slow Zoom, Pan).
+  - **AIV (AI Video)**: Chỉ giữ lại ở 1 cảnh cao trào bước ngoặt cảm xúc.
+
 ### 1. Yêu cầu lên kế hoạch B-roll
 Gõ vào chat:
 ```text
@@ -205,17 +213,20 @@ Gõ vào chat:
 ```
 
 **Bảng kế hoạch sẽ hiển thị:**
-| Scene | Thời lượng Audio | B-roll ID | Thời lượng clip | Loại | Mô tả hình ảnh (Visual Beat) | Góc máy |
+| Scene | Thời lượng Audio | B-roll ID | Thời lượng clip | Loại | Mô tả hình ảnh (Visual Beat) | Góc máy / Remotion |
 |---|---|---|---|:---:|---|---|
-| **S001** | 5.8s | `S001-A` | 6s | AIV | Nam thanh niên đứng nhìn hóa đơn thẻ đỏ rực, mặt biến sắc | CU, cận cảnh, push-in |
-| **S002** | 8.4s | `S002-A` | 4s | AIV | Tin nhắn thông báo lương vừa ting ting vào tài khoản | MCU, ngang mắt |
+| **S001** (0–6s) | 5.8s | `S001-A` | 6s | AIV | Nam thanh niên đứng nhìn hóa đơn thẻ đỏ rực, mặt biến sắc | CU, cận cảnh, push-in (Storyboard 3 khung) |
+| **S002** (6–14s) | 8.4s | `S002-A` | 4s | AIV | Tin nhắn thông báo lương vừa ting ting vào tài khoản | MCU, ngang mắt |
 | | | `S002-B` | 4s | AIV | Bàn tay vô hình rút sạch tiền đi, tài khoản về 0 | ECU, đặc tả bàn tay |
+| **S003** (35–43s) | 8.0s | `S003-A` | 4s | GFX | Biểu đồ cột nợ thẻ tín dụng tăng vọt màu đỏ | Remotion: `ChartMotion` (0 credit) |
+| | | `S003-B` | 4s | IMG | Bàn tay cắt đôi thẻ tín dụng màu vàng | Remotion: `KenBurns Zoom-in` |
 
-> 💡 **Điểm ưu việt**: Đoạn S002 nói 8.4 giây được chia làm **2 B-roll khác nhau** (`S002-A` 4s và `S002-B` 4s), giúp màn hình luôn luôn có chuyển động mới cứ mỗi 4 giây!
+> 💡 **Điểm ưu việt**: Đoạn Hook đầu dùng AIV chuyển động liên tục cuốn hút, nhưng đến phần phân tích số liệu sau 30s chuyển sang GFX code và ảnh tĩnh với camera motion, giúp video vừa sinh động vừa tiết kiệm hàng trăm credit AI!
 
 ### 3. Tùy chỉnh (nếu muốn)
 - Muốn đổi thời lượng: `@edit-broll S001-A duration 4s`
 - Muốn đổi sang ảnh tĩnh: `@edit-broll S002-B type IMG`
+- Muốn đổi sang Remotion đồ họa: `@edit-broll S003-A type GFX`
 
 ### 4. Cổng duyệt (Bắt buộc)
 Khi bạn đã hài lòng với phân bổ B-roll, gõ:
@@ -255,6 +266,16 @@ Gõ vào chat:
 Agent sẽ tự động xuất file phụ đề:
 - `subtitles/karaoke.srt` (chuẩn SRT tương thích CapCut, Premiere, DaVinci Resolve).
 - Hoặc gõ `@gen-subs --format ass` nếu bạn muốn phụ đề đổi màu từng chữ như quán Karaoke!
+
+### 3. Xuất cấu trúc Remotion / Hyperframe (Render tự động bằng Code)
+Gõ vào chat:
+```text
+@gen-remotion
+```
+Agent sẽ tự động xuất file `assets/remotion-composition.json` chứa toàn bộ trình tự render tự động cho Remotion:
+- Các phân đoạn `AIV`: ghép clip video tương ứng.
+- Các phân đoạn `IMG`: tự động áp hiệu ứng Ken Burns chuyển động ảnh mượt mà.
+- Các phân đoạn `GFX`: render trực tiếp component đồ họa React (`ChartMotion`, `CounterNumber`...) với 0 đồng chi phí credit!
 
 ---
 

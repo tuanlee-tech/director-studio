@@ -1,0 +1,119 @@
+{
+  "audio_file": "S079_narration.wav",
+  "duration_ms": 4560,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tiền",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "liêng",
+      "start_ms": 200,
+      "end_ms": 420
+    },
+    {
+      "word": "12",
+      "start_ms": 420,
+      "end_ms": 620
+    },
+    {
+      "word": "triệu",
+      "start_ms": 620,
+      "end_ms": 860
+    },
+    {
+      "word": "của",
+      "start_ms": 860,
+      "end_ms": 960
+    },
+    {
+      "word": "bạn",
+      "start_ms": 960,
+      "end_ms": 1100
+    },
+    {
+      "word": "từ",
+      "start_ms": 1100,
+      "end_ms": 1280
+    },
+    {
+      "word": "nay",
+      "start_ms": 1280,
+      "end_ms": 1480
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 1480,
+      "end_ms": 1660
+    },
+    {
+      "word": "thực",
+      "start_ms": 1660,
+      "end_ms": 1800
+    },
+    {
+      "word": "sự",
+      "start_ms": 1800,
+      "end_ms": 2020
+    },
+    {
+      "word": "là",
+      "start_ms": 2020,
+      "end_ms": 2180
+    },
+    {
+      "word": "của",
+      "start_ms": 2180,
+      "end_ms": 2260
+    },
+    {
+      "word": "bạn,",
+      "start_ms": 2260,
+      "end_ms": 2520
+    },
+    {
+      "word": "phụng",
+      "start_ms": 2880,
+      "end_ms": 3060
+    },
+    {
+      "word": "vụ",
+      "start_ms": 3060,
+      "end_ms": 3180
+    },
+    {
+      "word": "cho",
+      "start_ms": 3180,
+      "end_ms": 3280
+    },
+    {
+      "word": "cuộc",
+      "start_ms": 3280,
+      "end_ms": 3400
+    },
+    {
+      "word": "sống",
+      "start_ms": 3400,
+      "end_ms": 3700
+    },
+    {
+      "word": "và",
+      "start_ms": 3700,
+      "end_ms": 3940
+    },
+    {
+      "word": "ước",
+      "start_ms": 3940,
+      "end_ms": 4100
+    },
+    {
+      "word": "mơ.",
+      "start_ms": 4100,
+      "end_ms": 4320
+    }
+  ]
+}

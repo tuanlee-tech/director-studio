@@ -1,0 +1,114 @@
+{
+  "audio_file": "S053_narration.wav",
+  "duration_ms": 4880,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Sau",
+      "start_ms": 0,
+      "end_ms": 280
+    },
+    {
+      "word": "một",
+      "start_ms": 280,
+      "end_ms": 440
+    },
+    {
+      "word": "năm,",
+      "start_ms": 440,
+      "end_ms": 700
+    },
+    {
+      "word": "khoảng",
+      "start_ms": 1200,
+      "end_ms": 1380
+    },
+    {
+      "word": "nợ",
+      "start_ms": 1380,
+      "end_ms": 1540
+    },
+    {
+      "word": "của",
+      "start_ms": 1540,
+      "end_ms": 1680
+    },
+    {
+      "word": "Ancta",
+      "start_ms": 1680,
+      "end_ms": 1940
+    },
+    {
+      "word": "phình",
+      "start_ms": 1940,
+      "end_ms": 2200
+    },
+    {
+      "word": "to",
+      "start_ms": 2200,
+      "end_ms": 2400
+    },
+    {
+      "word": "lên",
+      "start_ms": 2400,
+      "end_ms": 2580
+    },
+    {
+      "word": "mức",
+      "start_ms": 2580,
+      "end_ms": 2840
+    },
+    {
+      "word": "60",
+      "start_ms": 2840,
+      "end_ms": 3040
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3040,
+      "end_ms": 3300
+    },
+    {
+      "word": "đồng",
+      "start_ms": 3300,
+      "end_ms": 3460
+    },
+    {
+      "word": "cùng",
+      "start_ms": 3460,
+      "end_ms": 3640
+    },
+    {
+      "word": "với",
+      "start_ms": 3640,
+      "end_ms": 3740
+    },
+    {
+      "word": "sự",
+      "start_ms": 3740,
+      "end_ms": 3840
+    },
+    {
+      "word": "cân",
+      "start_ms": 3840,
+      "end_ms": 4000
+    },
+    {
+      "word": "thắng",
+      "start_ms": 4000,
+      "end_ms": 4160
+    },
+    {
+      "word": "tốt",
+      "start_ms": 4160,
+      "end_ms": 4400
+    },
+    {
+      "word": "cùng.",
+      "start_ms": 4400,
+      "end_ms": 4620
+    }
+  ]
+}

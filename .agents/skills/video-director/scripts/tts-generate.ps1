@@ -51,18 +51,19 @@ if (-not $OutputPath) {
 }
 
 # --- Health check ---
-Write-Host "🔍 Kiểm tra VieNeu-TTS tại $ApiUrl ..." -ForegroundColor Cyan
+Write-Host "[INFO] Kiem tra VieNeu-TTS tai $ApiUrl ..." -ForegroundColor Cyan
 try {
     $null = Invoke-RestMethod -Uri "$ApiUrl/health" -TimeoutSec 5 -Method GET
-    Write-Host "✅ VieNeu-TTS đang online." -ForegroundColor Green
+    Write-Host "[OK] VieNeu-TTS online." -ForegroundColor Green
 } catch {
-    Write-Host "❌ VieNeu-TTS không chạy tại $ApiUrl" -ForegroundColor Red
-    Write-Host "   → Hãy chạy '@start-tts' hoặc '.\launcher.ps1 start'" -ForegroundColor Yellow
+    Write-Host "[ERR] VieNeu-TTS khong chay tai $ApiUrl" -ForegroundColor Red
+    Write-Host "   -> Hay chay '@start-tts' hoac '.\launcher.ps1 start'" -ForegroundColor Yellow
     exit 1
 }
 
-# --- Gọi TTS API ---
-Write-Host "🎙️  Đang tạo audio | Voice: $Voice | Chars: $($Text.Length)" -ForegroundColor Cyan
+# --- Goi TTS API ---
+$charLen = $Text.Length
+Write-Host "[INFO] Dang tao audio | Voice: $Voice | Chars: $charLen" -ForegroundColor Cyan
 $body = @{
     model           = "vieneu-tts-v3-turbo"
     input           = $Text
@@ -71,18 +72,19 @@ $body = @{
 } | ConvertTo-Json -Compress
 
 try {
-    $response = Invoke-WebRequest `
+    $bodyBytes = [System.Text.Encoding]::UTF8.GetBytes($body)
+    Invoke-WebRequest `
         -Uri "$ApiUrl/v1/audio/speech" `
         -Method POST `
-        -Body $body `
+        -Body $bodyBytes `
         -ContentType "application/json; charset=utf-8" `
+        -UseBasicParsing `
+        -OutFile $OutputPath `
         -TimeoutSec 120
 
-    [System.IO.File]::WriteAllBytes($OutputPath, $response.Content)
-
-    $sizeKB = [math]::Round($response.Content.Length / 1024, 1)
-    Write-Host "✅ Audio saved: $OutputPath ($sizeKB KB)" -ForegroundColor Green
+    $sizeKB = [math]::Round((Get-Item $OutputPath).Length / 1024, 1)
+    Write-Host "[OK] Audio saved: $OutputPath ($sizeKB KB)" -ForegroundColor Green
 } catch {
-    Write-Host "❌ Lỗi gọi API: $_" -ForegroundColor Red
+    Write-Host "[ERR] Loi goi API: $_" -ForegroundColor Red
     exit 1
 }

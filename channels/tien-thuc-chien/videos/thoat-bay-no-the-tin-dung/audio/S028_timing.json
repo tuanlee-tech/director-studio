@@ -1,0 +1,89 @@
+{
+  "audio_file": "S028_narration.wav",
+  "duration_ms": 3040,
+  "word_count": 16,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bởi",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "mối",
+      "start_ms": 220,
+      "end_ms": 360
+    },
+    {
+      "word": "mấy",
+      "start_ms": 360,
+      "end_ms": 460
+    },
+    {
+      "word": "chiều",
+      "start_ms": 460,
+      "end_ms": 640
+    },
+    {
+      "word": "nợ,",
+      "start_ms": 640,
+      "end_ms": 860
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 1100,
+      "end_ms": 1240
+    },
+    {
+      "word": "tháng",
+      "start_ms": 1240,
+      "end_ms": 1400
+    },
+    {
+      "word": "biển",
+      "start_ms": 1400,
+      "end_ms": 1640
+    },
+    {
+      "word": "lãi",
+      "start_ms": 1640,
+      "end_ms": 1820
+    },
+    {
+      "word": "phát",
+      "start_ms": 1820,
+      "end_ms": 1980
+    },
+    {
+      "word": "sinh",
+      "start_ms": 1980,
+      "end_ms": 2200
+    },
+    {
+      "word": "đã",
+      "start_ms": 2200,
+      "end_ms": 2280
+    },
+    {
+      "word": "hơn",
+      "start_ms": 2280,
+      "end_ms": 2400
+    },
+    {
+      "word": "một",
+      "start_ms": 2400,
+      "end_ms": 2560
+    },
+    {
+      "word": "chiều",
+      "start_ms": 2560,
+      "end_ms": 2680
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 2680,
+      "end_ms": 2860
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "audio_file": "S013_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Thay",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "vì",
+      "start_ms": 180,
+      "end_ms": 300
+    },
+    {
+      "word": "thang",
+      "start_ms": 300,
+      "end_ms": 480
+    },
+    {
+      "word": "tỏa",
+      "start_ms": 480,
+      "end_ms": 620
+    },
+    {
+      "word": "tồn",
+      "start_ms": 620,
+      "end_ms": 920
+    },
+    {
+      "word": "bộ,",
+      "start_ms": 920,
+      "end_ms": 1080
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1460,
+      "end_ms": 1560
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 1560,
+      "end_ms": 1820
+    },
+    {
+      "word": "thấy",
+      "start_ms": 1820,
+      "end_ms": 1940
+    },
+    {
+      "word": "dòng",
+      "start_ms": 1940,
+      "end_ms": 2200
+    },
+    {
+      "word": "chứ",
+      "start_ms": 2200,
+      "end_ms": 2400
+    },
+    {
+      "word": "kiểu",
+      "start_ms": 2400,
+      "end_ms": 2620
+    },
+    {
+      "word": "cảnh",
+      "start_ms": 2620,
+      "end_ms": 2860
+    },
+    {
+      "word": "màu",
+      "start_ms": 2860,
+      "end_ms": 3100
+    },
+    {
+      "word": "sang,",
+      "start_ms": 3100,
+      "end_ms": 3240
+    },
+    {
+      "word": "số",
+      "start_ms": 3620,
+      "end_ms": 3740
+    },
+    {
+      "word": "tiền",
+      "start_ms": 3740,
+      "end_ms": 3940
+    },
+    {
+      "word": "thang",
+      "start_ms": 3940,
+      "end_ms": 4059
+    },
+    {
+      "word": "tỏa",
+      "start_ms": 4059,
+      "end_ms": 4340
+    },
+    {
+      "word": "tối",
+      "start_ms": 4340,
+      "end_ms": 4640
+    },
+    {
+      "word": "thiệu.",
+      "start_ms": 4640,
+      "end_ms": 4900
+    }
+  ]
+}

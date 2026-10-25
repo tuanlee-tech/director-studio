@@ -1,0 +1,114 @@
+{
+  "audio_file": "S055_narration.wav",
+  "duration_ms": 4400,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Ngược",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "lại,",
+      "start_ms": 220,
+      "end_ms": 460
+    },
+    {
+      "word": "người",
+      "start_ms": 820,
+      "end_ms": 920
+    },
+    {
+      "word": "thứ",
+      "start_ms": 920,
+      "end_ms": 1020
+    },
+    {
+      "word": "hai",
+      "start_ms": 1020,
+      "end_ms": 1180
+    },
+    {
+      "word": "quyết",
+      "start_ms": 1180,
+      "end_ms": 1380
+    },
+    {
+      "word": "định",
+      "start_ms": 1380,
+      "end_ms": 1480
+    },
+    {
+      "word": "chấm",
+      "start_ms": 1480,
+      "end_ms": 1700
+    },
+    {
+      "word": "nhận",
+      "start_ms": 1700,
+      "end_ms": 1800
+    },
+    {
+      "word": "đau",
+      "start_ms": 1800,
+      "end_ms": 2020
+    },
+    {
+      "word": "một",
+      "start_ms": 2020,
+      "end_ms": 2140
+    },
+    {
+      "word": "lần",
+      "start_ms": 2140,
+      "end_ms": 2380
+    },
+    {
+      "word": "để",
+      "start_ms": 2380,
+      "end_ms": 2620
+    },
+    {
+      "word": "cắt",
+      "start_ms": 2620,
+      "end_ms": 2900
+    },
+    {
+      "word": "nước",
+      "start_ms": 2900,
+      "end_ms": 2980
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 2980,
+      "end_ms": 3240
+    },
+    {
+      "word": "toàn",
+      "start_ms": 3240,
+      "end_ms": 3460
+    },
+    {
+      "word": "mềm",
+      "start_ms": 3460,
+      "end_ms": 3660
+    },
+    {
+      "word": "mẫu",
+      "start_ms": 3660,
+      "end_ms": 3800
+    },
+    {
+      "word": "nội",
+      "start_ms": 3800,
+      "end_ms": 3920
+    },
+    {
+      "word": "nền.",
+      "start_ms": 3920,
+      "end_ms": 4140
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "audio_file": "S037_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 18,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Thế",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "mà",
+      "start_ms": 180,
+      "end_ms": 280
+    },
+    {
+      "word": "đó",
+      "start_ms": 280,
+      "end_ms": 460
+    },
+    {
+      "word": "là",
+      "start_ms": 460,
+      "end_ms": 660
+    },
+    {
+      "word": "phi",
+      "start_ms": 660,
+      "end_ms": 840
+    },
+    {
+      "word": "phạt",
+      "start_ms": 840,
+      "end_ms": 1100
+    },
+    {
+      "word": "chậm",
+      "start_ms": 1100,
+      "end_ms": 1460
+    },
+    {
+      "word": "trả",
+      "start_ms": 1460,
+      "end_ms": 1640
+    },
+    {
+      "word": "từ",
+      "start_ms": 1640,
+      "end_ms": 1800
+    },
+    {
+      "word": "4",
+      "start_ms": 1800,
+      "end_ms": 2000
+    },
+    {
+      "word": ",6",
+      "start_ms": 2000,
+      "end_ms": 2380
+    },
+    {
+      "word": "%",
+      "start_ms": 2380,
+      "end_ms": 2800
+    },
+    {
+      "word": "Tối",
+      "start_ms": 2800,
+      "end_ms": 3320
+    },
+    {
+      "word": "thiệu",
+      "start_ms": 3320,
+      "end_ms": 3540
+    },
+    {
+      "word": "100",
+      "start_ms": 3540,
+      "end_ms": 3920
+    },
+    {
+      "word": ",200",
+      "start_ms": 3920,
+      "end_ms": 4500
+    },
+    {
+      "word": ",000",
+      "start_ms": 4500,
+      "end_ms": 4720
+    },
+    {
+      "word": "đồng",
+      "start_ms": 4720,
+      "end_ms": 4960
+    }
+  ]
+}

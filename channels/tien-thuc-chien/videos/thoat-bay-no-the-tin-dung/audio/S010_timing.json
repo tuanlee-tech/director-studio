@@ -1,0 +1,129 @@
+{
+  "audio_file": "S010_narration.wav",
+  "duration_ms": 5200,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Đó",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "chính",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "là",
+      "start_ms": 340,
+      "end_ms": 480
+    },
+    {
+      "word": "các",
+      "start_ms": 480,
+      "end_ms": 620
+    },
+    {
+      "word": "bấy",
+      "start_ms": 620,
+      "end_ms": 880
+    },
+    {
+      "word": "tâm",
+      "start_ms": 880,
+      "end_ms": 1120
+    },
+    {
+      "word": "ý",
+      "start_ms": 1120,
+      "end_ms": 1220
+    },
+    {
+      "word": "đầu",
+      "start_ms": 1220,
+      "end_ms": 1360
+    },
+    {
+      "word": "tiền,",
+      "start_ms": 1360,
+      "end_ms": 1660
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 1960,
+      "end_ms": 2060
+    },
+    {
+      "word": "nhận",
+      "start_ms": 2060,
+      "end_ms": 2260
+    },
+    {
+      "word": "hạn",
+      "start_ms": 2260,
+      "end_ms": 2440
+    },
+    {
+      "word": "mức",
+      "start_ms": 2440,
+      "end_ms": 2640
+    },
+    {
+      "word": "tiến",
+      "start_ms": 2640,
+      "end_ms": 2840
+    },
+    {
+      "word": "dụng",
+      "start_ms": 2840,
+      "end_ms": 3140
+    },
+    {
+      "word": "của",
+      "start_ms": 3140,
+      "end_ms": 3220
+    },
+    {
+      "word": "ngân",
+      "start_ms": 3220,
+      "end_ms": 3400
+    },
+    {
+      "word": "hàng",
+      "start_ms": 3400,
+      "end_ms": 3580
+    },
+    {
+      "word": "là",
+      "start_ms": 3580,
+      "end_ms": 3980
+    },
+    {
+      "word": "tại",
+      "start_ms": 3980,
+      "end_ms": 4180
+    },
+    {
+      "word": "sản",
+      "start_ms": 4180,
+      "end_ms": 4500
+    },
+    {
+      "word": "của",
+      "start_ms": 4500,
+      "end_ms": 4640
+    },
+    {
+      "word": "chính",
+      "start_ms": 4640,
+      "end_ms": 4800
+    },
+    {
+      "word": "mình.",
+      "start_ms": 4800,
+      "end_ms": 4960
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "channel": "demo-channel",
+  "video_slug": "ai-thay-doi-giao-duc",
+  "audio_track": "audio/narration_master.wav",
+  "tracks": {
+    "visual_sequences": [
+      {
+        "id": "S001-A",
+        "scene_id": "S001",
+        "type": "AIV",
+        "from_frame": 0,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Cận cảnh học sinh nhìn vào màn hình hologram phát sáng giữa đêm, biểu cảm tò mò ngạc nhiên.",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S001-A_6s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      },
+      {
+        "id": "S002-A",
+        "scene_id": "S002",
+        "type": "AIV",
+        "from_frame": 180,
+        "duration_frames": 120,
+        "duration_seconds": 4,
+        "description": "Lớp học truyền thống bảng đen dần mờ đi và chuyển dịch sang không gian số ánh sáng xanh.",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S002-A_4s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      },
+      {
+        "id": "S003-A",
+        "scene_id": "S003",
+        "type": "AIV",
+        "from_frame": 300,
+        "duration_frames": 180,
+        "duration_seconds": 6,
+        "description": "Giao diện AI avatar 3D kiên nhẫn vẽ lại đồ thị toán học trực quan theo chuyển động tay người học.",
+        "component": "VideoClip",
+        "props": {
+          "src": "assets/S003-A_6s_AIV.mp4",
+          "playbackRate": 1.0
+        }
+      }
+    ],
+    "subtitles": "subtitles/karaoke.srt"
+  },
+  "total_frames": 480,
+  "total_duration_seconds": 16.0
+}

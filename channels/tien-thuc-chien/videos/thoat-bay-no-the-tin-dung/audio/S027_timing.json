@@ -1,0 +1,124 @@
+{
+  "audio_file": "S027_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Đi",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "là",
+      "start_ms": 240,
+      "end_ms": 360
+    },
+    {
+      "word": "mức",
+      "start_ms": 360,
+      "end_ms": 560
+    },
+    {
+      "word": "lãi",
+      "start_ms": 560,
+      "end_ms": 780
+    },
+    {
+      "word": "xuất",
+      "start_ms": 780,
+      "end_ms": 900
+    },
+    {
+      "word": "cao",
+      "start_ms": 900,
+      "end_ms": 1160
+    },
+    {
+      "word": "gấp",
+      "start_ms": 1160,
+      "end_ms": 1260
+    },
+    {
+      "word": "5,",
+      "start_ms": 1260,
+      "end_ms": 1420
+    },
+    {
+      "word": "đến",
+      "start_ms": 1720,
+      "end_ms": 1740
+    },
+    {
+      "word": "6",
+      "start_ms": 1740,
+      "end_ms": 1980
+    },
+    {
+      "word": "lần,",
+      "start_ms": 1980,
+      "end_ms": 2280
+    },
+    {
+      "word": "so",
+      "start_ms": 2520,
+      "end_ms": 2620
+    },
+    {
+      "word": "với",
+      "start_ms": 2620,
+      "end_ms": 2760
+    },
+    {
+      "word": "lãi",
+      "start_ms": 2760,
+      "end_ms": 2940
+    },
+    {
+      "word": "xuất",
+      "start_ms": 2940,
+      "end_ms": 3100
+    },
+    {
+      "word": "vầy",
+      "start_ms": 3100,
+      "end_ms": 3340
+    },
+    {
+      "word": "thể",
+      "start_ms": 3340,
+      "end_ms": 3440
+    },
+    {
+      "word": "chấp",
+      "start_ms": 3440,
+      "end_ms": 3680
+    },
+    {
+      "word": "mua",
+      "start_ms": 3680,
+      "end_ms": 3880
+    },
+    {
+      "word": "nhà,",
+      "start_ms": 3880,
+      "end_ms": 4100
+    },
+    {
+      "word": "hay",
+      "start_ms": 4340,
+      "end_ms": 4400
+    },
+    {
+      "word": "mua",
+      "start_ms": 4400,
+      "end_ms": 4660
+    },
+    {
+      "word": "xe.",
+      "start_ms": 4660,
+      "end_ms": 4860
+    }
+  ]
+}

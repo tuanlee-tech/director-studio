@@ -1,6 +1,6 @@
 {
   "active_channel": "tien-thuc-chien",
-  "active_video": "",
+  "active_video": "thoat-bay-no-the-tin-dung",
   "channel_name": "Tiền Thực Chiến",
   "niche": "Tài chính cá nhân / Tích sản & Quản lý chi tiêu",
   "default_voice": "Hải Đăng",
@@ -14,6 +14,10 @@
   "static_image_exempt_from_duration": true,
   "subtitle_format": "srt",
   "subtitle_group_size": 4,
+  "asset_strategy": "hybrid-cost-saver",
+  "hook_aiv_duration_seconds": 30,
+  "body_asset_priority": ["GFX", "IMG", "AIV"],
+  "remotion_enabled": true,
   "style_lock": "2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism.",
   "negative_list": [
     "Photorealism",

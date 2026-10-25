@@ -1,0 +1,109 @@
+{
+  "audio_file": "S070_narration.wav",
+  "duration_ms": 4560,
+  "word_count": 20,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bước",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "3,",
+      "start_ms": 260,
+      "end_ms": 480
+    },
+    {
+      "word": "bài",
+      "start_ms": 940,
+      "end_ms": 1020
+    },
+    {
+      "word": "cầu",
+      "start_ms": 1020,
+      "end_ms": 1180
+    },
+    {
+      "word": "chúc",
+      "start_ms": 1180,
+      "end_ms": 1300
+    },
+    {
+      "word": "ngân",
+      "start_ms": 1300,
+      "end_ms": 1440
+    },
+    {
+      "word": "sách",
+      "start_ms": 1440,
+      "end_ms": 1640
+    },
+    {
+      "word": "chi",
+      "start_ms": 1640,
+      "end_ms": 1780
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 1780,
+      "end_ms": 2040
+    },
+    {
+      "word": "theo",
+      "start_ms": 2040,
+      "end_ms": 2180
+    },
+    {
+      "word": "công",
+      "start_ms": 2180,
+      "end_ms": 2340
+    },
+    {
+      "word": "thức",
+      "start_ms": 2340,
+      "end_ms": 2560
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 2560,
+      "end_ms": 2720
+    },
+    {
+      "word": "loạt",
+      "start_ms": 2720,
+      "end_ms": 2920
+    },
+    {
+      "word": "trên",
+      "start_ms": 2920,
+      "end_ms": 3140
+    },
+    {
+      "word": "mức",
+      "start_ms": 3140,
+      "end_ms": 3380
+    },
+    {
+      "word": "lương",
+      "start_ms": 3380,
+      "end_ms": 3560
+    },
+    {
+      "word": "12",
+      "start_ms": 3560,
+      "end_ms": 3880
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3880,
+      "end_ms": 4140
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 4140,
+      "end_ms": 4340
+    }
+  ]
+}

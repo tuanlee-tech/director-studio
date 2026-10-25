@@ -1,0 +1,119 @@
+{
+  "audio_file": "S080_narration.wav",
+  "duration_ms": 4640,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bàn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "bắt",
+      "start_ms": 240,
+      "end_ms": 360
+    },
+    {
+      "word": "đầu",
+      "start_ms": 360,
+      "end_ms": 500
+    },
+    {
+      "word": "có",
+      "start_ms": 500,
+      "end_ms": 620
+    },
+    {
+      "word": "thể",
+      "start_ms": 620,
+      "end_ms": 780
+    },
+    {
+      "word": "chích",
+      "start_ms": 780,
+      "end_ms": 1000
+    },
+    {
+      "word": "tiền",
+      "start_ms": 1000,
+      "end_ms": 1240
+    },
+    {
+      "word": "mua",
+      "start_ms": 1240,
+      "end_ms": 1480
+    },
+    {
+      "word": "chứng",
+      "start_ms": 1480,
+      "end_ms": 1620
+    },
+    {
+      "word": "trị",
+      "start_ms": 1620,
+      "end_ms": 1780
+    },
+    {
+      "word": "quý,",
+      "start_ms": 1780,
+      "end_ms": 1940
+    },
+    {
+      "word": "xây",
+      "start_ms": 2400,
+      "end_ms": 2560
+    },
+    {
+      "word": "dựng",
+      "start_ms": 2560,
+      "end_ms": 2780
+    },
+    {
+      "word": "quý",
+      "start_ms": 2780,
+      "end_ms": 2960
+    },
+    {
+      "word": "khẩn",
+      "start_ms": 2960,
+      "end_ms": 3160
+    },
+    {
+      "word": "cấp",
+      "start_ms": 3160,
+      "end_ms": 3360
+    },
+    {
+      "word": "lớn",
+      "start_ms": 3360,
+      "end_ms": 3600
+    },
+    {
+      "word": "và",
+      "start_ms": 3600,
+      "end_ms": 3740
+    },
+    {
+      "word": "tích",
+      "start_ms": 3740,
+      "end_ms": 3920
+    },
+    {
+      "word": "sản",
+      "start_ms": 3920,
+      "end_ms": 4100
+    },
+    {
+      "word": "điều",
+      "start_ms": 4100,
+      "end_ms": 4260
+    },
+    {
+      "word": "đại.",
+      "start_ms": 4260,
+      "end_ms": 4440
+    }
+  ]
+}

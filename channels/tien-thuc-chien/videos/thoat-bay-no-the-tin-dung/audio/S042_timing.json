@@ -1,0 +1,114 @@
+{
+  "audio_file": "S042_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "90",
+      "start_ms": 260,
+      "end_ms": 420
+    },
+    {
+      "word": "%",
+      "start_ms": 420,
+      "end_ms": 740
+    },
+    {
+      "word": "đồng",
+      "start_ms": 740,
+      "end_ms": 920
+    },
+    {
+      "word": "để",
+      "start_ms": 920,
+      "end_ms": 1080
+    },
+    {
+      "word": "nhận",
+      "start_ms": 1080,
+      "end_ms": 1260
+    },
+    {
+      "word": "lại",
+      "start_ms": 1260,
+      "end_ms": 1400
+    },
+    {
+      "word": "100",
+      "start_ms": 1400,
+      "end_ms": 1800
+    },
+    {
+      "word": ".000",
+      "start_ms": 1800,
+      "end_ms": 2080
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 2080,
+      "end_ms": 2320
+    },
+    {
+      "word": "tiền,",
+      "start_ms": 2320,
+      "end_ms": 2540
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 3040,
+      "end_ms": 3140
+    },
+    {
+      "word": "lại",
+      "start_ms": 3140,
+      "end_ms": 3280
+    },
+    {
+      "word": "phải",
+      "start_ms": 3280,
+      "end_ms": 3440
+    },
+    {
+      "word": "chịu",
+      "start_ms": 3440,
+      "end_ms": 3640
+    },
+    {
+      "word": "phí",
+      "start_ms": 3640,
+      "end_ms": 3840
+    },
+    {
+      "word": "thường",
+      "start_ms": 3840,
+      "end_ms": 4059
+    },
+    {
+      "word": "niên",
+      "start_ms": 4059,
+      "end_ms": 4280
+    },
+    {
+      "word": "cả",
+      "start_ms": 4280,
+      "end_ms": 4460
+    },
+    {
+      "word": "chịu",
+      "start_ms": 4460,
+      "end_ms": 4680
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 4680,
+      "end_ms": 4860
+    }
+  ]
+}

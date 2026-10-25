@@ -1,0 +1,114 @@
+{
+  "audio_file": "S014_narration.wav",
+  "duration_ms": 4480,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Chỉ",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "cần",
+      "start_ms": 180,
+      "end_ms": 300
+    },
+    {
+      "word": "trả",
+      "start_ms": 300,
+      "end_ms": 520
+    },
+    {
+      "word": "một",
+      "start_ms": 520,
+      "end_ms": 660
+    },
+    {
+      "word": "chủ",
+      "start_ms": 660,
+      "end_ms": 920
+    },
+    {
+      "word": "đồng,",
+      "start_ms": 920,
+      "end_ms": 1140
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1500,
+      "end_ms": 1560
+    },
+    {
+      "word": "đã",
+      "start_ms": 1560,
+      "end_ms": 1680
+    },
+    {
+      "word": "được",
+      "start_ms": 1680,
+      "end_ms": 1780
+    },
+    {
+      "word": "xem",
+      "start_ms": 1780,
+      "end_ms": 2000
+    },
+    {
+      "word": "là",
+      "start_ms": 2000,
+      "end_ms": 2220
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 2220,
+      "end_ms": 2400
+    },
+    {
+      "word": "thành",
+      "start_ms": 2400,
+      "end_ms": 2520
+    },
+    {
+      "word": "nhớ",
+      "start_ms": 2520,
+      "end_ms": 2700
+    },
+    {
+      "word": "vụ",
+      "start_ms": 2700,
+      "end_ms": 2900
+    },
+    {
+      "word": "của",
+      "start_ms": 2900,
+      "end_ms": 3100
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 3100,
+      "end_ms": 3400
+    },
+    {
+      "word": "sau",
+      "start_ms": 3400,
+      "end_ms": 3620
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 3620,
+      "end_ms": 3940
+    },
+    {
+      "word": "thằng",
+      "start_ms": 3940,
+      "end_ms": 4080
+    },
+    {
+      "word": "đó.",
+      "start_ms": 4080,
+      "end_ms": 4200
+    }
+  ]
+}

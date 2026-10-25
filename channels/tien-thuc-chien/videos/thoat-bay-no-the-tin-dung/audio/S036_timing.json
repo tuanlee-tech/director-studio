@@ -1,0 +1,94 @@
+{
+  "audio_file": "S036_narration.wav",
+  "duration_ms": 3840,
+  "word_count": 17,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Chỉ",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "cần",
+      "start_ms": 240,
+      "end_ms": 380
+    },
+    {
+      "word": "thiếu",
+      "start_ms": 380,
+      "end_ms": 680
+    },
+    {
+      "word": "1",
+      "start_ms": 680,
+      "end_ms": 840
+    },
+    {
+      "word": ".000",
+      "start_ms": 840,
+      "end_ms": 960
+    },
+    {
+      "word": "đồng",
+      "start_ms": 960,
+      "end_ms": 1140
+    },
+    {
+      "word": "đến",
+      "start_ms": 1140,
+      "end_ms": 1260
+    },
+    {
+      "word": "hạt,",
+      "start_ms": 1260,
+      "end_ms": 1560
+    },
+    {
+      "word": "toàn",
+      "start_ms": 1920,
+      "end_ms": 2140
+    },
+    {
+      "word": "bộ",
+      "start_ms": 2140,
+      "end_ms": 2260
+    },
+    {
+      "word": "số",
+      "start_ms": 2260,
+      "end_ms": 2400
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2400,
+      "end_ms": 2640
+    },
+    {
+      "word": "quẹp",
+      "start_ms": 2640,
+      "end_ms": 3020
+    },
+    {
+      "word": "đều",
+      "start_ms": 3020,
+      "end_ms": 3140
+    },
+    {
+      "word": "bị",
+      "start_ms": 3140,
+      "end_ms": 3240
+    },
+    {
+      "word": "tính",
+      "start_ms": 3240,
+      "end_ms": 3420
+    },
+    {
+      "word": "lãi.",
+      "start_ms": 3420,
+      "end_ms": 3680
+    }
+  ]
+}

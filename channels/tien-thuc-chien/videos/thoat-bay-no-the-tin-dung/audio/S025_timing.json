@@ -1,0 +1,114 @@
+{
+  "audio_file": "S025_narration.wav",
+  "duration_ms": 4640,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bây",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "giờ",
+      "start_ms": 220,
+      "end_ms": 440
+    },
+    {
+      "word": "chúng",
+      "start_ms": 440,
+      "end_ms": 740
+    },
+    {
+      "word": "ta",
+      "start_ms": 740,
+      "end_ms": 900
+    },
+    {
+      "word": "hãy",
+      "start_ms": 900,
+      "end_ms": 1040
+    },
+    {
+      "word": "cùng",
+      "start_ms": 1040,
+      "end_ms": 1200
+    },
+    {
+      "word": "đặt",
+      "start_ms": 1200,
+      "end_ms": 1440
+    },
+    {
+      "word": "bút",
+      "start_ms": 1440,
+      "end_ms": 1600
+    },
+    {
+      "word": "tính",
+      "start_ms": 1600,
+      "end_ms": 1820
+    },
+    {
+      "word": "toán",
+      "start_ms": 1820,
+      "end_ms": 2060
+    },
+    {
+      "word": "chính",
+      "start_ms": 2060,
+      "end_ms": 2220
+    },
+    {
+      "word": "xác",
+      "start_ms": 2220,
+      "end_ms": 2480
+    },
+    {
+      "word": "kế",
+      "start_ms": 2480,
+      "end_ms": 2620
+    },
+    {
+      "word": "giá",
+      "start_ms": 2620,
+      "end_ms": 2840
+    },
+    {
+      "word": "phải",
+      "start_ms": 2840,
+      "end_ms": 3000
+    },
+    {
+      "word": "trả",
+      "start_ms": 3000,
+      "end_ms": 3300
+    },
+    {
+      "word": "cho",
+      "start_ms": 3300,
+      "end_ms": 3420
+    },
+    {
+      "word": "khoản",
+      "start_ms": 3420,
+      "end_ms": 3640
+    },
+    {
+      "word": "nợ",
+      "start_ms": 3640,
+      "end_ms": 3800
+    },
+    {
+      "word": "40k",
+      "start_ms": 3800,
+      "end_ms": 4280
+    },
+    {
+      "word": "này.",
+      "start_ms": 4280,
+      "end_ms": 4440
+    }
+  ]
+}

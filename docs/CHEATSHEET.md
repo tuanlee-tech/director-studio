@@ -23,6 +23,7 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 | **`@set-voice`** | `@set-voice "Hải Đăng"` | Đổi giọng đọc mặc định (`Hải Đăng`, `Binh`, `Ngoc`...) |
 | **`@set-pace`** | `@set-pace 4` | Đặt tốc độ đọc chuẩn (từ/giây) |
 | **`@set-tts`** | `@set-tts vieneu` | Đổi engine đọc (`vieneu`, `gemini-3.8`) |
+| **`@set-strategy`** | `@set-strategy hybrid` | Đổi chiến lược asset: `hybrid` (tiết kiệm), `all-aiv` |
 | **`@gen-audio`** | `@gen-audio -scene 1` | Tạo file audio `.wav` cho 1 cảnh |
 | **`@gen-all-audio`**| `@gen-all-audio` | Tạo audio tự động cho TOÀN BỘ kịch bản |
 | **`@play`** | `@play 1` | Mở nghe thử file audio của cảnh 1 |
@@ -35,6 +36,7 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 | **`@gen-prompts`** | `@gen-prompts --all` | Tạo bảng prompt ảnh + video + storyboard |
 | **`@show-prompts`** | `@show-prompts` | Xem bảng prompts theo định dạng shot list |
 | **`@shot-list`** | `@shot-list` | Xuất file shot list đầy đủ |
+| **`@gen-remotion`** | `@gen-remotion` | Xuất file composition Remotion để render tự động |
 | **`@gen-subs`** | `@gen-subs --format srt` | Sinh phụ đề karaoke `.srt` hoặc `.ass` |
 | **`@preview-subs`** | `@preview-subs` | Xem thử phụ đề khớp từng từ trong chat |
 | **`@schedule`** | `@schedule show` | Xem lịch trình các video (⬜ Chưa làm / ✅ Đã xong) |
@@ -53,6 +55,15 @@ Lớp **Cheatcode API** cho phép bạn điều khiển Agent bằng các lệnh
 5. **Bước 5**: `@analyze --all` *(Whisper đo chính xác từng từ)*
 6. **Bước 6**: `@plan-broll` → `@approve-broll` *(duyệt kế hoạch hình ảnh)*
 7. **Bước 7**: `@gen-prompts --all` & `@gen-subs` *(nhận prompt tạo video + file phụ đề karaoke)*
+
+---
+
+## 💰 Chiến lược Hybrid Asset — Tiết kiệm 70%–85% Credit AI
+1. **30 giây đầu (Hook)**: Dùng **AIV (AI Video)** để níu chân người xem ở thời điểm quyết định của thuật toán YouTube.
+2. **Sau 30 giây (Thân bài)**:
+   - **GFX (Motion Graphic bằng Remotion/Hyperframe)**: Số liệu, biểu đồ, so sánh cột, đồng hồ chạy tiền → Vẽ bằng code React/SVG (**0 credit AI**).
+   - **IMG (Ảnh tĩnh AI + Remotion Motion)**: Minh họa bối cảnh, nhân vật → Ảnh tĩnh chi phí cực rẻ kết hợp hiệu ứng camera mượt mà (Ken Burns, Pan, Zoom).
+   - **`@gen-remotion`**: Tự động xuất file composition để render video bằng code.
 
 ---
 

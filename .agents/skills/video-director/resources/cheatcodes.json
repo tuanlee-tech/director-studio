@@ -44,6 +44,15 @@
       "action": "update_config",
       "config_key": "style_lock"
     },
+    "@set-strategy": {
+      "description": "Cấu hình chiến lược phân bổ asset để tối ưu chi phí credit",
+      "usage": "@set-strategy <hybrid|cost-saver|all-aiv>",
+      "examples": ["@set-strategy hybrid", "@set-strategy cost-saver", "@set-strategy all-aiv"],
+      "action": "update_config",
+      "config_key": "asset_strategy",
+      "available_values": ["hybrid-cost-saver", "all-aiv", "cost-saver"],
+      "note": "hybrid-cost-saver: 30s đầu dùng AIV giữ chân, sau 30s dùng IMG (ảnh tĩnh + Remotion motion) và GFX (motion graphics vẽ bằng code React/Remotion)"
+    },
     "@config": {
       "description": "Xem toàn bộ config hiện tại của channel/workspace",
       "usage": "@config",
@@ -218,6 +227,13 @@
       "usage": "@shot-list [--export md|json]",
       "examples": ["@shot-list", "@shot-list --export json"],
       "action": "export_shot_list"
+    },
+    "@gen-remotion": {
+      "description": "Xuất file cấu hình composition Remotion/Hyperframe để render tự động (ảnh tĩnh + camera motion hoặc motion graphic)",
+      "usage": "@gen-remotion",
+      "action": "export_remotion_composition",
+      "requires": "approved_broll_plan",
+      "output": "{slug}/assets/remotion-composition.json"
     }
   },
 

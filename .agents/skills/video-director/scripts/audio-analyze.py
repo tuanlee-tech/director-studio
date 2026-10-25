@@ -90,8 +90,16 @@ def analyze_with_faster_whisper(audio_path: str, model_name: str = "base", langu
     try:
         from faster_whisper import WhisperModel  # type: ignore
         print(f"🔍 Đang tải faster-whisper model '{model_name}'...", flush=True)
-        model = WhisperModel(model_name, device="auto", compute_type="int8")
-        segments, info = model.transcribe(audio_path, word_timestamps=True, language=language)
+        try:
+            model = WhisperModel(model_name, device="auto", compute_type="int8")
+            segments, info = model.transcribe(audio_path, word_timestamps=True, language=language)
+            # test generator
+            segments = list(segments)
+        except RuntimeError:
+            print("⚠️ CUDA DLL không có sẵn, chuyển sang device='cpu'...", flush=True)
+            model = WhisperModel(model_name, device="cpu", compute_type="int8")
+            segments, info = model.transcribe(audio_path, word_timestamps=True, language=language)
+            segments = list(segments)
 
         words = []
         for segment in segments:

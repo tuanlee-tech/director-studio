@@ -196,6 +196,14 @@ Với mỗi scene, agent **đọc narration text + timing data** và xác địn
 - Tối thiểu: 1 visual beat / scene
 - Tối đa: Phụ thuộc thời lượng narration thực tế
 
+**Chiến lược phân bổ Asset (Cost-Effective Hybrid Pipeline) ⭐:**
+Để tối ưu chi phí credit AI (tiết kiệm 70%–85% chi phí):
+1. **0s – 30s (Hook Beat & Giữ chân)**: Bắt buộc dùng **AIV (AI Video)** (4s/6s/8s/10s). 30 giây đầu quyết định thuật toán YouTube đề xuất, cần hoạt họa chuyển động mạnh nhất.
+2. **Sau 30s (Body & Solution)**:
+   - **GFX (Remotion / Hyperframe Motion Graphics — 0 Credit)**: Gán cho cảnh có số liệu, tiền bạc, biểu đồ, so sánh 2 cột, bảng chi phí cơ hội, mũi tên xu hướng. Remotion sẽ tự vẽ animation bằng code (React/SVG/Canvas).
+   - **IMG (Ảnh tĩnh AI + Remotion Camera Motion)**: Gán cho cảnh kể chuyện, mô tả bối cảnh, tâm trạng nhân vật. Sinh 1 ảnh tĩnh chất lượng cao (Midjourney/Flux) rồi Remotion áp hiệu ứng camera chuyển động mượt mà (Ken Burns, Slow Zoom In/Out, Pan, Tilt).
+   - **AIV (AI Video)**: Chỉ giữ lại ở 1–2 bước ngoặt cảm xúc kịch tính nhất (Climax beat).
+
 **Ví dụ:**
 ```
 Narration scene 5: "Năm 1969, con người đặt chân lên Mặt Trăng.
@@ -210,24 +218,31 @@ Narration scene 5: "Năm 1969, con người đặt chân lên Mặt Trăng.
 
 **Snap duration về hằng số AIV**: Dùng timing thực từ Whisper để xác định beat boundaries, sau đó:
 - Tổng duration của scene = `duration_ms` thực tế
-- Phân chia thời gian cho từng B-roll: ưu tiên {4, 6, 8, 10}s
-- Nếu beat quá ngắn (< 4s) → gộp với beat liền kề
-- Ảnh tĩnh (IMG) và đồ họa (GFX): không bị ràng buộc duration
+- Phân chia thời gian cho từng B-roll:
+  - Cảnh **AIV**: Ưu tiên snap vào hằng số {4, 6, 8, 10}s
+  - Cảnh **IMG / GFX**: Linh hoạt theo nhịp câu (2s – 12s), không ép buộc vào hằng số AIV
+- Nếu beat quá ngắn (< 3s) → gộp với beat liền kề hoặc dùng hiệu ứng Text Pop-up trong Remotion
 
 #### Bước 4.2 — Xuất B-roll Plan
 
-Ghi `broll-plan.md` và `broll-plan.json`:
+Ghi `broll-plan.md` và `broll-plan.json` (kèm định dạng Remotion renderer props nếu có GFX/IMG):
 
 ```markdown
 # B-roll Plan — <slug>
-Status: DRAFT (chờ @approve-broll)
+Status: DRAFT (chờ @approve-broll) | Chiến lược: Hybrid Cost-Saver
 
-## Scene 001 | Beat: Hook | Duration: 6.3s | Narration words: 18
+## Scene 001 | Beat: Hook (0s-6s) | Duration: 6.3s | Narration words: 18
 
-| B-roll | Type | Duration | Description |
-|---|---|---|---|
-| S001-A | AIV | 4s | Hook opening shot |
-| S001-B | AIV | 4s | ... |
+| B-roll | Type | Duration | Description | Camera / Renderer |
+|---|---|---|---|---|
+| S001-A | AIV | 6s | Hook opening shot | CU, push-in, Storyboard 3 panels |
+
+## Scene 004 | Beat: Số liệu (45s-53s) | Duration: 8s
+
+| B-roll | Type | Duration | Description | Camera / Renderer |
+|---|---|---|---|---|
+| S004-A | GFX | 4s | Biểu đồ nợ thẻ tăng vọt | Remotion: ChartMotion |
+| S004-B | IMG | 4s | Bàn tay cắt đôi thẻ tín dụng | Remotion: Ken Burns Zoom-in |
 ```
 
 #### Bước 4.3 — Review Gate ⛔
@@ -347,6 +362,14 @@ Format khối cảnh đầy đủ (theo `references/shot-list.template.md`):
 - Âm thanh / SFX: <...>
 - Cắt sang cảnh sau: <hard cut | match cut | whip | dissolve ...> — tại cuối câu
 ```
+
+#### Bước 5.4 — Xuất Remotion Composition (@gen-remotion)
+
+Nếu B-roll plan có cảnh `IMG` hoặc `GFX`, Agent có thể xuất cấu trúc Remotion composition:
+```
+channels/<channel>/videos/<slug>/assets/remotion-composition.json
+```
+Chứa toàn bộ danh sách sequences, components (`ChartMotion`, `CounterNumber`, `KenBurnsImage`), timing frame (30fps), và props để Remotion render trực tiếp thành video hoàn chỉnh hoặc graphic overlays.
 
 ---
 

@@ -1,0 +1,124 @@
+{
+  "audio_file": "S062_narration.wav",
+  "duration_ms": 5200,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nếu",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "bạn",
+      "start_ms": 240,
+      "end_ms": 380
+    },
+    {
+      "word": "đã",
+      "start_ms": 380,
+      "end_ms": 540
+    },
+    {
+      "word": "sẵn",
+      "start_ms": 540,
+      "end_ms": 680
+    },
+    {
+      "word": "sàng",
+      "start_ms": 680,
+      "end_ms": 960
+    },
+    {
+      "word": "trọn",
+      "start_ms": 960,
+      "end_ms": 1180
+    },
+    {
+      "word": "tự",
+      "start_ms": 1180,
+      "end_ms": 1360
+    },
+    {
+      "word": "do,",
+      "start_ms": 1360,
+      "end_ms": 1600
+    },
+    {
+      "word": "đây",
+      "start_ms": 2080,
+      "end_ms": 2160
+    },
+    {
+      "word": "là",
+      "start_ms": 2160,
+      "end_ms": 2280
+    },
+    {
+      "word": "quy",
+      "start_ms": 2280,
+      "end_ms": 2400
+    },
+    {
+      "word": "trình",
+      "start_ms": 2400,
+      "end_ms": 2620
+    },
+    {
+      "word": "bốn",
+      "start_ms": 2620,
+      "end_ms": 2800
+    },
+    {
+      "word": "bước",
+      "start_ms": 2800,
+      "end_ms": 3040
+    },
+    {
+      "word": "thực",
+      "start_ms": 3040,
+      "end_ms": 3180
+    },
+    {
+      "word": "chiến",
+      "start_ms": 3180,
+      "end_ms": 3520
+    },
+    {
+      "word": "để",
+      "start_ms": 3520,
+      "end_ms": 3720
+    },
+    {
+      "word": "soát",
+      "start_ms": 3720,
+      "end_ms": 4000
+    },
+    {
+      "word": "sạch",
+      "start_ms": 4000,
+      "end_ms": 4200
+    },
+    {
+      "word": "40",
+      "start_ms": 4200,
+      "end_ms": 4420
+    },
+    {
+      "word": "triệu",
+      "start_ms": 4420,
+      "end_ms": 4660
+    },
+    {
+      "word": "nở",
+      "start_ms": 4660,
+      "end_ms": 4800
+    },
+    {
+      "word": "thể.",
+      "start_ms": 4800,
+      "end_ms": 5000
+    }
+  ]
+}

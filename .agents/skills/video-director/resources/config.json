@@ -13,6 +13,10 @@
   "static_image_exempt_from_duration": true,
   "subtitle_format": "srt",
   "subtitle_group_size": 4,
+  "asset_strategy": "hybrid-cost-saver",
+  "hook_aiv_duration_seconds": 30,
+  "body_asset_priority": ["GFX", "IMG", "AIV"],
+  "remotion_enabled": true,
   "style_lock": "",
   "negative_list": []
 }

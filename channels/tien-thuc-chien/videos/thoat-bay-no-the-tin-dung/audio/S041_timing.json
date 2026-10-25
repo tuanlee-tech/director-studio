@@ -1,0 +1,94 @@
+{
+  "audio_file": "S041_narration.wav",
+  "duration_ms": 3360,
+  "word_count": 17,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nhiều",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "người",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "còn",
+      "start_ms": 340,
+      "end_ms": 460
+    },
+    {
+      "word": "mắc",
+      "start_ms": 460,
+      "end_ms": 680
+    },
+    {
+      "word": "bấy",
+      "start_ms": 680,
+      "end_ms": 840
+    },
+    {
+      "word": "năng",
+      "start_ms": 840,
+      "end_ms": 1020
+    },
+    {
+      "word": "hạng",
+      "start_ms": 1020,
+      "end_ms": 1240
+    },
+    {
+      "word": "thẻ",
+      "start_ms": 1240,
+      "end_ms": 1460
+    },
+    {
+      "word": "để",
+      "start_ms": 1460,
+      "end_ms": 1680
+    },
+    {
+      "word": "nhận",
+      "start_ms": 1680,
+      "end_ms": 1900
+    },
+    {
+      "word": "những",
+      "start_ms": 1900,
+      "end_ms": 2020
+    },
+    {
+      "word": "yêu",
+      "start_ms": 2020,
+      "end_ms": 2160
+    },
+    {
+      "word": "đại",
+      "start_ms": 2160,
+      "end_ms": 2360
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 2360,
+      "end_ms": 2580
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2580,
+      "end_ms": 2780
+    },
+    {
+      "word": "ý",
+      "start_ms": 2780,
+      "end_ms": 2920
+    },
+    {
+      "word": "tòi.",
+      "start_ms": 2920,
+      "end_ms": 3220
+    }
+  ]
+}

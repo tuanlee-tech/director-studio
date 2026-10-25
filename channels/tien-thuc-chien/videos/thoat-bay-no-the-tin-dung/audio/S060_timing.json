@@ -1,0 +1,119 @@
+{
+  "audio_file": "S060_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Cung",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "điểm",
+      "start_ms": 200,
+      "end_ms": 380
+    },
+    {
+      "word": "xuất",
+      "start_ms": 380,
+      "end_ms": 600
+    },
+    {
+      "word": "phát",
+      "start_ms": 600,
+      "end_ms": 780
+    },
+    {
+      "word": "và",
+      "start_ms": 780,
+      "end_ms": 980
+    },
+    {
+      "word": "thu",
+      "start_ms": 980,
+      "end_ms": 1160
+    },
+    {
+      "word": "nhập,",
+      "start_ms": 1160,
+      "end_ms": 1420
+    },
+    {
+      "word": "lựa",
+      "start_ms": 1860,
+      "end_ms": 2000
+    },
+    {
+      "word": "chọn",
+      "start_ms": 2000,
+      "end_ms": 2120
+    },
+    {
+      "word": "tư",
+      "start_ms": 2120,
+      "end_ms": 2380
+    },
+    {
+      "word": "duy",
+      "start_ms": 2380,
+      "end_ms": 2540
+    },
+    {
+      "word": "khác",
+      "start_ms": 2540,
+      "end_ms": 2780
+    },
+    {
+      "word": "nhau",
+      "start_ms": 2780,
+      "end_ms": 3100
+    },
+    {
+      "word": "tạo",
+      "start_ms": 3100,
+      "end_ms": 3500
+    },
+    {
+      "word": "ra",
+      "start_ms": 3500,
+      "end_ms": 3620
+    },
+    {
+      "word": "2",
+      "start_ms": 3620,
+      "end_ms": 3900
+    },
+    {
+      "word": "xuất",
+      "start_ms": 3900,
+      "end_ms": 4120
+    },
+    {
+      "word": "phận",
+      "start_ms": 4120,
+      "end_ms": 4260
+    },
+    {
+      "word": "tại",
+      "start_ms": 4260,
+      "end_ms": 4400
+    },
+    {
+      "word": "chính",
+      "start_ms": 4400,
+      "end_ms": 4580
+    },
+    {
+      "word": "đối",
+      "start_ms": 4580,
+      "end_ms": 4760
+    },
+    {
+      "word": "lập.",
+      "start_ms": 4760,
+      "end_ms": 4940
+    }
+  ]
+}

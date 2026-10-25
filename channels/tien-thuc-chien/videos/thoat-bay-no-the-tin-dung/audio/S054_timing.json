@@ -1,0 +1,99 @@
+{
+  "audio_file": "S054_narration.wav",
+  "duration_ms": 4000,
+  "word_count": 18,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "bán",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "đêm,",
+      "start_ms": 220,
+      "end_ms": 440
+    },
+    {
+      "word": "anh",
+      "start_ms": 800,
+      "end_ms": 900
+    },
+    {
+      "word": "ta",
+      "start_ms": 900,
+      "end_ms": 1040
+    },
+    {
+      "word": "mất",
+      "start_ms": 1040,
+      "end_ms": 1260
+    },
+    {
+      "word": "nũ",
+      "start_ms": 1260,
+      "end_ms": 1480
+    },
+    {
+      "word": "vì",
+      "start_ms": 1480,
+      "end_ms": 1920
+    },
+    {
+      "word": "lo",
+      "start_ms": 1920,
+      "end_ms": 2060
+    },
+    {
+      "word": "sợ",
+      "start_ms": 2060,
+      "end_ms": 2280
+    },
+    {
+      "word": "các",
+      "start_ms": 2280,
+      "end_ms": 2440
+    },
+    {
+      "word": "quốc",
+      "start_ms": 2440,
+      "end_ms": 2600
+    },
+    {
+      "word": "gọi",
+      "start_ms": 2600,
+      "end_ms": 2840
+    },
+    {
+      "word": "từ",
+      "start_ms": 2840,
+      "end_ms": 3020
+    },
+    {
+      "word": "bộ",
+      "start_ms": 3020,
+      "end_ms": 3140
+    },
+    {
+      "word": "phận",
+      "start_ms": 3140,
+      "end_ms": 3320
+    },
+    {
+      "word": "2",
+      "start_ms": 3320,
+      "end_ms": 3500
+    },
+    {
+      "word": "ở",
+      "start_ms": 3500,
+      "end_ms": 3640
+    },
+    {
+      "word": "nợ",
+      "start_ms": 3640,
+      "end_ms": 3840
+    }
+  ]
+}
