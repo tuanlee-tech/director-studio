@@ -578,6 +578,155 @@ def api_render_status(task_id):
     return jsonify(task)
 
 
+# --- Google Flow Multi-Account Dispatcher Integration ---
+_flow_dispatch_tasks = {}
+_flow_lock = threading.Lock()
+
+# Add tools/flow-dispatcher to sys.path
+FLOW_DIR = ROOT_DIR / "tools" / "flow-dispatcher"
+if str(FLOW_DIR) not in sys.path:
+    sys.path.insert(0, str(FLOW_DIR))
+
+
+@app.route("/api/flow/accounts")
+def api_flow_accounts():
+    """Lấy danh sách 5 tài khoản Google Flow và trạng thái CDP realtime."""
+    try:
+        from chrome_launcher import load_accounts_config, check_cdp_status, get_active_tabs
+        cfg = load_accounts_config()
+        accounts_data = []
+
+        for acc in cfg.get("accounts", []):
+            port = acc["port"]
+            is_online, browser_name = check_cdp_status(port)
+            tabs = get_active_tabs(port) if is_online else []
+            flow_tab = next((t for t in tabs if "flow.google.com" in t.get("url", "")), None)
+            active_tab_title = flow_tab.get("title", "Google Flow") if flow_tab else (tabs[0].get("title", "Chrome") if tabs else "None")
+
+            accounts_data.append({
+                "id": acc["id"],
+                "name": acc["name"],
+                "port": port,
+                "is_online": is_online,
+                "browser_name": browser_name,
+                "active_tab_title": active_tab_title,
+                "daily_credit_limit": acc.get("daily_credit_limit", 50),
+                "credit_used_today": acc.get("credit_used_today", 0),
+            })
+
+        return jsonify({
+            "status": "ok",
+            "accounts": accounts_data,
+            "default_url": cfg.get("default_flow_url", "https://flow.google.com")
+        })
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route("/api/flow/launch", methods=["POST"])
+def api_flow_launch():
+    """Mở cửa sổ Chrome độc lập cho 1 tài khoản."""
+    data = request.json or {}
+    acc_id = int(data.get("acc_id", 1))
+    try:
+        from chrome_launcher import launch_account
+        res = launch_account(acc_id)
+        return jsonify({"status": "ok", "message": f"Chrome account {acc_id} launched", "exit_code": res})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route("/api/flow/launch-all", methods=["POST"])
+def api_flow_launch_all():
+    """Mở đồng loạt cả 5 cửa sổ Chrome."""
+    try:
+        from chrome_launcher import action_start_all
+        threading.Thread(target=action_start_all, daemon=True).start()
+        return jsonify({"status": "ok", "message": "Launching all accounts in background"})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+def _execute_flow_dispatch_task(task_id, channel, slug, dry_run=False):
+    """Worker chạy tiến trình dispatch Google Flow song song."""
+    try:
+        cmd = [sys.executable, str(FLOW_DIR / "flow_dispatcher.py"), slug, f"--channel={channel}"]
+        if dry_run:
+            cmd.append("--dry-run")
+
+        proc = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            encoding="utf-8",
+            errors="replace"
+        )
+
+        with _flow_lock:
+            _flow_dispatch_tasks[task_id]["status"] = "running"
+            _flow_dispatch_tasks[task_id]["pid"] = proc.pid
+
+        for line in iter(proc.stdout.readline, ""):
+            line_str = line.strip()
+            if not line_str:
+                continue
+            with _flow_lock:
+                _flow_dispatch_tasks[task_id]["logs"].append(line_str)
+                _flow_dispatch_tasks[task_id]["last_log"] = line_str
+
+        proc.wait()
+
+        with _flow_lock:
+            if proc.returncode == 0:
+                _flow_dispatch_tasks[task_id]["status"] = "done"
+            else:
+                _flow_dispatch_tasks[task_id]["status"] = "error"
+                _flow_dispatch_tasks[task_id]["error"] = f"Dispatcher exited with code {proc.returncode}"
+    except Exception as e:
+        with _flow_lock:
+            _flow_dispatch_tasks[task_id]["status"] = "error"
+            _flow_dispatch_tasks[task_id]["error"] = str(e)
+
+
+@app.route("/api/flow/dispatch", methods=["POST"])
+def api_flow_dispatch():
+    """Kích hoạt tiến trình phân bổ prompt và cào asset từ 5 tài khoản."""
+    import uuid
+    data = request.json or {}
+    channel = data.get("channel", "tien-thuc-chien")
+    slug = data.get("slug", "thoat-bay-no-the-tin-dung")
+    dry_run = bool(data.get("dry_run", False))
+
+    task_id = str(uuid.uuid4())[:8]
+    with _flow_lock:
+        _flow_dispatch_tasks[task_id] = {
+            "task_id": task_id,
+            "channel": channel,
+            "slug": slug,
+            "status": "queued",
+            "logs": [],
+            "last_log": "Starting dispatcher...",
+            "started_at": datetime.now().isoformat(),
+            "error": None
+        }
+
+    thread = threading.Thread(target=_execute_flow_dispatch_task, args=(task_id, channel, slug, dry_run), daemon=True)
+    thread.start()
+
+    return jsonify({"status": "ok", "task_id": task_id, "message": "Dispatch task queued"})
+
+
+@app.route("/api/flow/dispatch-status/<task_id>")
+def api_flow_dispatch_status(task_id):
+    """Kiểm tra tiến độ dispatch."""
+    with _flow_lock:
+        task = _flow_dispatch_tasks.get(task_id)
+    if not task:
+        return jsonify({"status": "error", "message": "Task not found"}), 404
+    return jsonify(task)
+
+
 @app.route("/api/system")
 def api_system():
     """System & GPU info."""

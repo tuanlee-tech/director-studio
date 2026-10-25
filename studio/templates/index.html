@@ -108,10 +108,11 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
 <body>
 <div class="hdr">
     <h1>🎛️ AI Audio & Video Studio</h1>
-    <p>Unified Management Dashboard & Remotion Video Renderer</p>
+    <p>Unified Management Dashboard, Remotion Video Renderer & Google Flow Multi-Account</p>
     <div class="nav-tabs">
         <button class="nav-tab active" onclick="switchTab('tab-services')">📦 Services & System</button>
         <button class="nav-tab" onclick="switchTab('tab-video')">🎬 Video Preview & Timeline</button>
+        <button class="nav-tab" onclick="switchTab('tab-flow')">🌐 Google Flow Multi-Account</button>
     </div>
 </div>
 
@@ -238,6 +239,52 @@ code{background:var(--bg2);padding:.15rem .4rem;border-radius:3px;font-size:.75r
             <div style="color:var(--t3);font-size:.82rem;padding:1rem">Đang tải danh sách cảnh...</div>
         </div>
     </div>
+
+    <!-- TAB 3: GOOGLE FLOW MULTI-ACCOUNT DISPATCHER -->
+    <div id="tab-flow" class="tab-content">
+        <div class="v-header">
+            <div>
+                <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:4px">🌐 Google Flow Multi-Account Dispatcher</h3>
+                <p style="font-size:.82rem;color:var(--t2)">Điều phối 5 tài khoản Chrome CDP độc lập. Tận dụng 250 credit video/ngày & cào ảnh 0 credit song song.</p>
+            </div>
+            <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+                <button class="btn bs" onclick="launchAllFlowAccounts()">🌐 Mở Tất Cả 5 Cửa Sổ</button>
+                <button class="btn bs" onclick="loadFlowAccounts()">🔄 Làm Mới Trạng Thái</button>
+            </div>
+        </div>
+
+        <!-- 5 Accounts Grid -->
+        <div class="stit">👥 Trạng Thái 5 Tài Khoản Chrome (CDP Profiles)</div>
+        <div class="grid" id="flowAccountsGrid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
+            <div style="color:var(--t3);padding:1rem">Đang kiểm tra kết nối các cổng CDP...</div>
+        </div>
+
+        <!-- Dispatch Control Panel -->
+        <div class="stit" style="margin-top:1.5rem">⚡ Điều Phối Tạo Asset Tự Động</div>
+        <div class="pnl">
+            <div class="tf" style="margin-bottom:1rem">
+                <div class="fg" style="flex:1">
+                    <label>Kênh (Channel)</label>
+                    <select id="flowSelChannel" style="padding:.5rem;background:var(--bg2);color:#fff;border:1px solid var(--brd);border-radius:6px;width:100%"></select>
+                </div>
+                <div class="fg" style="flex:1">
+                    <label>Video Slug</label>
+                    <select id="flowSelVideo" style="padding:.5rem;background:var(--bg2);color:#fff;border:1px solid var(--brd);border-radius:6px;width:100%"></select>
+                </div>
+                <div class="fg" style="flex:0;min-width:140px;display:flex;align-items:center;gap:6px;margin-bottom:6px">
+                    <input type="checkbox" id="flowDryRun" style="width:auto">
+                    <label for="flowDryRun" style="margin-bottom:0;cursor:pointer">Dry-run (Test)</label>
+                </div>
+                <div>
+                    <button class="btn bp" id="btnFlowDispatch" onclick="startFlowDispatch()" style="background:linear-gradient(135deg,var(--acc),#a78bfa);font-weight:700">🚀 Bắt Đầu Dispatch Song Song</button>
+                </div>
+            </div>
+
+            <!-- Live Terminal / Activity Log -->
+            <label style="font-size:.78rem;color:var(--t3);display:block;margin-bottom:6px">📋 Live Dispatch Log:</label>
+            <div id="flowLogBox" style="background:#090d16;border:1px solid var(--brd);border-radius:8px;padding:12px;font-family:monospace;font-size:.78rem;color:#10b981;height:180px;overflow-y:auto;white-space:pre-wrap;line-height:1.5">Sẵn sàng nhận lệnh dispatch...</div>
+        </div>
+    </div>
 </div>
 
 <!-- Modal Progress Bar khi Render MP4 -->
@@ -270,6 +317,7 @@ function switchTab(tabId){
     document.getElementById(tabId).classList.add('active');
     event.target.classList.add('active');
     if(tabId==='tab-video'){loadVideoCatalog();}
+    if(tabId==='tab-flow'){loadFlowAccounts();syncFlowVideoSelects();}
 }
 
 function renderCard(id,s){
@@ -684,6 +732,164 @@ async function pollRenderStatus(taskId){
 
 function closeRenderModal(){
     document.getElementById('renderModal').classList.remove('vis');
+}
+
+// --- Google Flow Multi-Account UI Logic ---
+let flowAccountsData = [];
+let currentFlowDispatchTaskId = null;
+
+async function loadFlowAccounts(){
+    const grid = document.getElementById('flowAccountsGrid');
+    grid.innerHTML = '<div style="color:var(--t3);padding:1rem"><span class="sp"></span> Đang quét 5 cổng Chrome CDP...</div>';
+
+    try {
+        const res = await fetch('/api/flow/accounts');
+        const data = await res.json();
+        flowAccountsData = data.accounts || [];
+
+        grid.innerHTML = '';
+        flowAccountsData.forEach(acc => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.id = `flow-acc-card-${acc.id}`;
+
+            const statusClass = acc.is_online ? 'healthy' : 'stopped';
+            const statusLabel = acc.is_online ? '🟢 Online' : '⚪ Offline';
+
+            card.innerHTML = `
+                <div class="ch">
+                    <div class="ct">
+                        <span class="ci">🌐</span>
+                        <div>
+                            <div class="cn">${acc.name}</div>
+                            <div class="cv">Port: ${acc.port} · Profile: acc${acc.id}</div>
+                        </div>
+                    </div>
+                    <span class="sb ${statusClass}"><span class="sd"></span>${statusLabel}</span>
+                </div>
+                <div class="cd" style="font-size:.78rem;margin-bottom:.5rem">
+                    <strong>Tab hiện tại:</strong> <span style="color:#a78bfa">${acc.active_tab_title || 'Chưa mở tab'}</span>
+                </div>
+                <div style="background:rgba(255,255,255,.04);padding:.5rem;border-radius:6px;margin-bottom:.8rem;font-size:.75rem">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                        <span style="color:var(--t3)">Video Credits Hôm Nay</span>
+                        <span style="font-weight:700;color:#10b981">${acc.credit_used_today} / ${acc.daily_credit_limit}</span>
+                    </div>
+                    <div style="width:100%;height:6px;background:var(--bg2);border-radius:3px;overflow:hidden">
+                        <div style="width:${(acc.credit_used_today / acc.daily_credit_limit) * 100}%;height:100%;background:#10b981"></div>
+                    </div>
+                </div>
+                <div class="ca">
+                    <button class="btn bp" onclick="launchFlowAccount(${acc.id})" style="width:100%;justify-content:center">
+                        🔑 ${acc.is_online ? 'Mở Lại Cửa Sổ' : 'Mở Chrome Đăng Nhập'}
+                    </button>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    } catch(e) {
+        grid.innerHTML = `<div style="color:var(--err);padding:1rem">❌ Lỗi kết nối API: ${e.message}</div>`;
+    }
+}
+
+async function launchFlowAccount(accId){
+    try {
+        const res = await fetch('/api/flow/launch', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ acc_id: accId })
+        });
+        const data = await res.json();
+        setTimeout(loadFlowAccounts, 2000);
+    } catch(e) {
+        alert("Lỗi: " + e.message);
+    }
+}
+
+async function launchAllFlowAccounts(){
+    try {
+        await fetch('/api/flow/launch-all', { method: 'POST' });
+        setTimeout(loadFlowAccounts, 3000);
+    } catch(e) {
+        alert("Lỗi: " + e.message);
+    }
+}
+
+function syncFlowVideoSelects(){
+    const selCh = document.getElementById('selChannel');
+    const selVid = document.getElementById('selVideo');
+    const flowCh = document.getElementById('flowSelChannel');
+    const flowVid = document.getElementById('flowSelVideo');
+
+    if (selCh && flowCh) flowCh.innerHTML = selCh.innerHTML;
+    if (selVid && flowVid) flowVid.innerHTML = selVid.innerHTML;
+}
+
+async function startFlowDispatch(){
+    const ch = document.getElementById('flowSelChannel').value || 'tien-thuc-chien';
+    const slug = document.getElementById('flowSelVideo').value || 'thoat-bay-no-the-tin-dung';
+    const dryRun = document.getElementById('flowDryRun').checked;
+
+    const logBox = document.getElementById('flowLogBox');
+    logBox.textContent = `🚀 Đang khởi động Dispatcher cho video '${slug}' (Dry-run: ${dryRun})...\n`;
+
+    const btn = document.getElementById('btnFlowDispatch');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="sp"></span> Đang Dispatch...';
+
+    try {
+        const res = await fetch('/api/flow/dispatch', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ channel: ch, slug: slug, dry_run: dryRun })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+            currentFlowDispatchTaskId = data.task_id;
+            pollFlowDispatch(currentFlowDispatchTaskId);
+        } else {
+            logBox.textContent += `❌ Lỗi: ${data.message}\n`;
+            btn.disabled = false;
+            btn.innerHTML = '🚀 Bắt Đầu Dispatch Song Song';
+        }
+    } catch(e) {
+        logBox.textContent += `❌ Lỗi API: ${e.message}\n`;
+        btn.disabled = false;
+        btn.innerHTML = '🚀 Bắt Đầu Dispatch Song Song';
+    }
+}
+
+async function pollFlowDispatch(taskId){
+    if (!taskId) return;
+    try {
+        const res = await fetch(`/api/flow/dispatch-status/${taskId}`);
+        const data = await res.json();
+
+        const logBox = document.getElementById('flowLogBox');
+        if (data.logs && data.logs.length > 0) {
+            logBox.textContent = data.logs.join('\n');
+            logBox.scrollTop = logBox.scrollHeight;
+        }
+
+        const btn = document.getElementById('btnFlowDispatch');
+
+        if (data.status === 'running' || data.status === 'queued') {
+            setTimeout(() => pollFlowDispatch(taskId), 1500);
+        } else if (data.status === 'done') {
+            logBox.textContent += '\n\n🎉 DISPATCH VÀ ĐỒNG BỘ ASSETS HOÀN TẤT THÀNH CÔNG!';
+            logBox.scrollTop = logBox.scrollHeight;
+            btn.disabled = false;
+            btn.innerHTML = '🚀 Bắt Đầu Dispatch Song Song';
+            loadFlowAccounts();
+        } else if (data.status === 'error') {
+            logBox.textContent += `\n\n❌ LỖI: ${data.error || 'Unknown error'}`;
+            logBox.scrollTop = logBox.scrollHeight;
+            btn.disabled = false;
+            btn.innerHTML = '🚀 Bắt Đầu Dispatch Song Song';
+        }
+    } catch(e) {
+        setTimeout(() => pollFlowDispatch(taskId), 3000);
+    }
 }
 </script>
 </body>
