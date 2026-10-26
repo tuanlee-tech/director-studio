@@ -1,0 +1,70 @@
+{
+  "audio_file": "S026_narration.wav",
+  "duration_ms": 3280,
+  "word_count": 12,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Lãi",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "suất",
+      "start_ms": 200,
+      "end_ms": 360
+    },
+    {
+      "word": "thẻ",
+      "start_ms": 360,
+      "end_ms": 540
+    },
+    {
+      "word": "tín",
+      "start_ms": 540,
+      "end_ms": 780
+    },
+    {
+      "word": "dụng",
+      "start_ms": 780,
+      "end_ms": 980
+    },
+    {
+      "word": "hiện",
+      "start_ms": 980,
+      "end_ms": 1060
+    },
+    {
+      "word": "nay",
+      "start_ms": 1060,
+      "end_ms": 1320
+    },
+    {
+      "word": "lên",
+      "start_ms": 1320,
+      "end_ms": 1620
+    },
+    {
+      "word": "tới",
+      "start_ms": 1620,
+      "end_ms": 1800
+    },
+    {
+      "word": "35%",
+      "start_ms": 1800,
+      "end_ms": 2560
+    },
+    {
+      "word": "một",
+      "start_ms": 2560,
+      "end_ms": 2780
+    },
+    {
+      "word": "năm.",
+      "start_ms": 2780,
+      "end_ms": 3000
+    }
+  ],
+  "aligned_with_script": true
+}

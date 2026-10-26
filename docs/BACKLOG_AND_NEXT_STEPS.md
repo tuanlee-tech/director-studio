@@ -1,78 +1,56 @@
 # CHECKPOINT & BACKLOG: DỰ ÁN THOÁT BẪY NỢ THẺ TÍN DỤNG
 
-> **Thời điểm ghi nhận Checkpoint**: 2026-10-26T08:46:00+07:00  
+> **Thời điểm ghi nhận Checkpoint**: 2026-10-26T22:05:00+07:00  
 > **Kênh**: `tien-thuc-chien`  
 > **Video Target**: `thoat-bay-no-the-tin-dung`  
-> **Trạng thái**: Đã thống nhất 100% qua quy trình `/grill-me`, đã hoàn tất đóng dấu che Watermark Gemini 32/32 ảnh tĩnh và căn chỉnh khít 100% overlay AIV.
+> **Trạng thái**: 🎉 **HOÀN THÀNH 100% TOÀN BỘ ASSETS & QUY TRÌNH CHUẨN HÓA**  
+> - Đạt 100% kiểm định tự động qua `UnifiedQAFilter` (7/7 tiêu chuẩn).
+> - Đạt 100% chuẩn mực Remotion GFX (`audit_remotion_gfx.py`).
+> - Chuẩn hóa quy trình đồng bộ đa tài khoản qua `tools/flow-dispatcher/unified_flow_engine.py`.
+> - Xuất thử nghiệm Remotion render thành công mượt mà offline (0 phụ thuộc server 3001).
 
 ---
 
-## 📌 1. Tóm Tắt Quyết Định Đã Thống Nhất (/grill-me)
+## 📌 1. Bảng Tổng Hợp 10 Video AIV Đã Hoàn Tất & Kiểm Định
+Toàn bộ 10 video AI Video (AIV) đã được sản xuất, kiểm định thị giác, giải phẫu học và xác thực MD5 chống trùng lặp:
 
-1. **Phân bổ 10 AIV (2 AIV / tài khoản cho 5 tài khoản Google Flow)**:
-   - **Account 1** (Port 9223): `S001` (AIV) + `S002` (AIV) *(Đã xong & sạch 100%)*
-   - **Account 2** (Port 9224): `S003` (AIV) + `S004` (AIV) *(Đã xong & sạch 100%)*
-   - **Account 3** (Port 9225): `S007` (SB $\rightarrow$ AIV) + `S011` (SB $\rightarrow$ AIV) *(Cần sinh mới)*
-   - **Account 4** (Port 9226): `S052` (SB $\rightarrow$ AIV) + `S058` (SB $\rightarrow$ AIV) *(Cần sinh mới)*
-   - **Account 5** (Port 9227): `S064` (AIV - *Đã xong*) + `S081` (SB $\rightarrow$ AIV - *Cần sinh mới, thay ảnh lỗi tay*)
-
-2. **Quy trình Dispatcher 1-by-1**:
-   - Mỗi account chỉ gửi lệnh tạo đúng 1 scene tại một thời điểm.
-   - Card/tile hoàn tất $\rightarrow$ Tải media về $\rightarrow$ Chạy QA ngay lập tức.
-   - Nếu PASS $\rightarrow$ Gửi tạo scene kế tiếp.
-   - Nếu FAIL $\rightarrow$ Thử lại tối đa 1 lần (max 1 retry). Nếu vẫn fail $\rightarrow$ đưa vào `failed_assets_review.json` cho human review và tự động chuyển sang scene tiếp theo.
-
-3. **Storyboard $\rightarrow$ AIV chung 1 Account**:
-   - Tài khoản nào tạo Storyboard (ảnh tĩnh tham chiếu) thì dùng chính ảnh đó để sinh video AIV ngay trên tài khoản đó.
-
-4. **Phân khối ảnh tĩnh (IMG) theo Cụm Nhân vật & Tuyến truyện**:
-   - Nhóm Nam Host $\rightarrow$ Tập trung tài khoản riêng.
-   - Nhóm Người A (Nam) $\rightarrow$ Tập trung tài khoản riêng.
-   - Nhóm Người B (Nữ) $\rightarrow$ Tập trung tài khoản riêng.
-
-5. **Đóng dấu thương hiệu `badge_pill.png` che logo Gemini**:
-   - **Ảnh tĩnh**: Đã đóng dấu với tọa độ tâm sao `Star Y = h - 95px`, `margin_right = 50 * scale` chống tràn viền khi Ken Burns. Hiệu ứng `KenBurnsImage` tinh chỉnh `scale: [1.0, 1.08]` mượt mà, không bị crop mép viền. Bản gốc bảo toàn tại `assets/raw_backup/`.
-   - **Video AIV**: Căn chỉnh overlay `badge_pill.png` tại `bottom: 130, right: 28, width: 410`, che khít 100% ngôi sao watermark cả đỉnh trên lẫn mép dưới (không còn hở bất kỳ pixel nào).
+| Scene ID | Tên File Asset | Kích thước | MD5 Hash (Rút gọn) | Mô Tả Trực Quan | Trạng Thái QA |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **S001** | `S001-A_6s_AIV.mp4` | 2,180 KB | `c81e4b91e032` | Nam MC bàng hoàng nhìn thông báo nợ | ✅ PASS |
+| **S002** | `S002-A_6s_AIV.mp4` | 2,422 KB | `ea558f9f4750` | Quẹt thẻ tín dụng tại phòng chờ sang trọng | ✅ PASS |
+| **S003** | `S003-A_6s_AIV.mp4` | 2,826 KB | `a9723408f1c5` | Ví da rơi chìm sâu xuống đáy biển cùng mỏ neo | ✅ PASS |
+| **S004** | `S004-A_6s_AIV.mp4` | 2,916 KB | `8d6887f38439` | Nam MC tự tin bước xuyên qua sương mù tài chính | ✅ PASS |
+| **S007** | `S007-A_6s_AIV.mp4` | 3,709 KB | `ec6a76dbf13e` | Nhóm bạn ăn tối vui vẻ, nâng ly chúc mừng | ✅ PASS |
+| **S011** | `S011-A_6s_AIV.mp4` | 2,740 KB | `39c60c2bb5d7` | Xem sao kê ngân hàng 15 triệu, toát mồ hôi | ✅ PASS |
+| **S052** | `S052-A_4s_AIV.mp4` | 1,094 KB | `3b97f4b1a7cc` | Người A ôm đầu căng thẳng trong phòng tối | ✅ PASS |
+| **S058** | `S058-A_6s_AIV.mp4` | 1,952 KB | `e031a8141bb5` | Người B nấu ăn thư thái trong căn bếp ngập nắng | ✅ PASS |
+| **S064** | `S064-A_6s_AIV.mp4` | 2,183 KB | `56e8d1389a95` | Cây kéo sắc bén cắt đôi chiếc thẻ tín dụng | ✅ PASS |
+| **S081** | `S081-A_4s_AIV.mp4` | 1,499 KB | `c6837cf829cd` | Đứng trên đồi cao đón bình minh (hết dị tật tay) | ✅ PASS |
 
 ---
 
-## ✅ 2. Những Việc ĐÃ HOÀN TẤT Tại Checkpoint Này
-
-- [x] Tạo công cụ `tools/watermark/stamp_badge_pill.py` hỗ trợ tính toán tọa độ che chuẩn xác.
-- [x] Tạo thư mục sao lưu `assets/raw_backup/` bảo vệ 32 file ảnh nguyên bản.
-- [x] Đóng dấu thương hiệu `badge_pill.png` cho toàn bộ **32/32 ảnh tĩnh** hiện hữu và đồng bộ sang `studio/remotion/public/assets/`.
-- [x] Tinh chỉnh `KenBurnsImage` (scale `[1.0, 1.08]`) đảm bảo không bị cắt viền pill khi zoom-in/pan.
-- [x] Tinh chỉnh overlay `badge_pill.png` cho AIV video (`bottom: 130, right: 28, width: 410`) che khít 100% watermark.
-- [x] Thiết lập bản kế hoạch chi tiết tại [plan-assets-qa-and-dispatcher-refactor.md](file:///C:/Users/tuanlee/.gemini/antigravity/brain/49cdbe24-2f1a-40ae-93ac-f41634ec41db/plan-assets-qa-and-dispatcher-refactor.md).
+## 🛠️ 2. Hệ Thống Đồng Bộ Chuẩn Hóa: `unified_flow_engine.py`
+Đã thống nhất kiến trúc qua `/grill-me` và thay thế toàn bộ các script tạm hardcode:
+- **Tự động quét đa tài khoản**: Quét song song cả 5 port Chrome CDP (9223 - 9227).
+- **Định danh đa tầng 3 lớp**: Khớp Scene ID chính xác $\rightarrow$ Khớp từ khóa ngữ nghĩa $\rightarrow$ Khớp Storyboard gốc.
+- **Bảo vệ Credit nghiêm ngặt**:
+  - Không bao giờ spam hay gửi lặp lại prompt.
+  - Tự động phát hiện trạng thái hàng đợi `waiting in the queue` để kiên nhẫn đợi, không thử lại.
+  - Tự động bấm Phê duyệt cho các lệnh đã có sẵn.
+- **Remotion StaticFile Offline Resolving**:
+  - Tự động chuẩn hóa toàn bộ đường dẫn trong `remotion-composition.json` và `current_props.json` về dạng tương đối `assets/...`, `bgm/...`, `audio/...`.
+  - Triệt tiêu 100% lỗi `ECONNREFUSED 127.0.0.1:3001`.
+- **Dọn dẹp sạch sẽ**: Đã xóa toàn bộ 7 file tạm hardcode (`monitor_s052.py`, `inspect_acc4_tiles.py`, `find_s052.py`, `approve_and_monitor.py`, `download_aivs.py`, `approve_man_desk.py`, `check_status.py`).
 
 ---
 
-## 📋 3. Backlog: NHIỆM VỤ CẦN LÀM TIẾP KHI QUAY LẠI
-
-### Hạng mục 1: Thu hồi ảnh S056 từ Google Flow Account #2
-- [ ] Kết nối CDP vào Chrome Account #2 (port 9224).
-- [ ] Trích xuất ảnh `S056-A_6s_IMG.png` đã được sinh trên canvas (bàn để các phong bì tiền mặt dán nhãn 'Ăn uống', 'Tiền nhà' ngăn nắp).
-- [ ] Lưu vào `assets/` thay thế cho fallback `master_anchor.png` hiện tại.
-- [ ] Chạy `stamp_badge_pill.py` cho `S056-A_6s_IMG.png`.
-
-### Hạng mục 2: Tái cấu trúc mã nguồn Dispatcher & QA
-- [ ] Cập nhật `tools/flow-dispatcher/flow_dispatcher.py` và `browser_flow.py` sang cơ chế **1-by-1 tuần tự**:
-  - Gửi prompt 1 scene $\rightarrow$ Chờ hoàn tất $\rightarrow$ Tải về $\rightarrow$ Kích hoạt QA.
-  - Tích hợp chính sách Retry tối đa 1 lần + ghi `failed_assets_review.json`.
-- [ ] Nâng cấp `tools/qa/asset_qa_verifier.py`:
-  - Thêm tầng kiểm tra Vision QA (đối chiếu `Visual concept` trong `script.md` + quét dị tật cơ thể/tay chân đứt lìa).
-
-### Hạng mục 3: Sinh 5 phân cảnh AIV mới (Storyboard $\rightarrow$ AIV)
-- [ ] **Account 3** (Port 9225):
-  - `S007`: Storyboard MC bước ra $\rightarrow$ Sinh video AIV Veo.
-  - `S011`: Storyboard nhân vật hoảng hốt nhìn sao kê 15 triệu đỏ rực $\rightarrow$ Sinh video AIV Veo.
-- [ ] **Account 4** (Port 9226):
-  - `S052`: Storyboard Người A mất ngủ, ánh sáng xanh điện thoại $\rightarrow$ Sinh video AIV Veo.
-  - `S058`: Storyboard Người B (Nữ) tự tin ghi chép sổ chi tiêu $\rightarrow$ Sinh video AIV Veo.
-- [ ] **Account 5** (Port 9227):
-  - `S081`: Storyboard nhân vật đứng trên đỉnh đồi lộng gió (khắc phục lỗi tay đứt lìa) $\rightarrow$ Sinh video AIV Veo.
-
-### Hạng mục 4: QA Tổng duyệt & Cập nhật Props Remotion
-- [ ] Chạy lại toàn bộ bộ kiểm tra tự động `asset_qa_verifier.py` (đạt 100% PASS trên cả 6 tầng).
-- [ ] Đồng bộ composition props sang `studio/remotion/current_props.json`.
-- [ ] Render Still Preview tại các phân cảnh mới và sẵn sàng lệnh xuất video master `final_video.mp4`.
+## 📋 3. Trạng Thái Hoàn Thành Các Hạng Mục
+- [x] Thu hồi và hoàn thiện toàn bộ ảnh tĩnh IMG chuẩn Vyond (S056, S012, S021, S041, S061, S077...).
+- [x] Nâng cấp `asset_qa_verifier.py` với 7 tầng kiểm định tự động (kiểm tra chống trùng lặp MD5, Vision QA, OCR watermark, gender continuity).
+- [x] Sản xuất và kiểm định đủ 10/10 cảnh AIV chân thực, giải phẫu học chuẩn xác, không trùng lặp hash.
+- [x] Đạt 100% `[PASS]` trên `tools/audit_remotion_gfx.py` và `asset_qa_verifier.py`.
+- [x] Render thử nghiệm Remotion đạt 100% thành công không lỗi.
+- [x] Sẵn sàng xuất video Master 100% thời lượng:
+  ```bash
+  python .agents/skills/video-director/scripts/remotion-render.py thoat-bay-no-the-tin-dung --channel tien-thuc-chien
+  ```

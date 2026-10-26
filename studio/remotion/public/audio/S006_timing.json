@@ -1,0 +1,85 @@
+{
+  "audio_file": "S006_narration.wav",
+  "duration_ms": 3520,
+  "word_count": 15,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Ngân",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "hàng",
+      "start_ms": 220,
+      "end_ms": 380
+    },
+    {
+      "word": "chào",
+      "start_ms": 380,
+      "end_ms": 680
+    },
+    {
+      "word": "đón",
+      "start_ms": 680,
+      "end_ms": 760
+    },
+    {
+      "word": "bạn",
+      "start_ms": 760,
+      "end_ms": 980
+    },
+    {
+      "word": "với",
+      "start_ms": 980,
+      "end_ms": 1260
+    },
+    {
+      "word": "lời",
+      "start_ms": 1260,
+      "end_ms": 1400
+    },
+    {
+      "word": "hứa",
+      "start_ms": 1400,
+      "end_ms": 1660
+    },
+    {
+      "word": "miễn",
+      "start_ms": 1660,
+      "end_ms": 1800
+    },
+    {
+      "word": "lãi",
+      "start_ms": 1800,
+      "end_ms": 1940
+    },
+    {
+      "word": "45",
+      "start_ms": 1940,
+      "end_ms": 2370
+    },
+    {
+      "word": "ngày",
+      "start_ms": 2370,
+      "end_ms": 2800
+    },
+    {
+      "word": "đầy",
+      "start_ms": 2800,
+      "end_ms": 2960
+    },
+    {
+      "word": "hấp",
+      "start_ms": 2960,
+      "end_ms": 3100
+    },
+    {
+      "word": "dẫn.",
+      "start_ms": 3100,
+      "end_ms": 3320
+    }
+  ],
+  "aligned_with_script": true
+}

@@ -1,0 +1,100 @@
+{
+  "audio_file": "S064_narration.wav",
+  "duration_ms": 4000,
+  "word_count": 18,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hãy",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "cầm",
+      "start_ms": 200,
+      "end_ms": 420
+    },
+    {
+      "word": "kéo",
+      "start_ms": 420,
+      "end_ms": 580
+    },
+    {
+      "word": "cắt",
+      "start_ms": 580,
+      "end_ms": 780
+    },
+    {
+      "word": "đôi",
+      "start_ms": 780,
+      "end_ms": 1020
+    },
+    {
+      "word": "chiếc",
+      "start_ms": 1020,
+      "end_ms": 1160
+    },
+    {
+      "word": "thẻ",
+      "start_ms": 1160,
+      "end_ms": 1380
+    },
+    {
+      "word": "vật",
+      "start_ms": 1380,
+      "end_ms": 1540
+    },
+    {
+      "word": "lý",
+      "start_ms": 1540,
+      "end_ms": 1760
+    },
+    {
+      "word": "hoặc",
+      "start_ms": 2180,
+      "end_ms": 2320
+    },
+    {
+      "word": "cất",
+      "start_ms": 2320,
+      "end_ms": 2520
+    },
+    {
+      "word": "nó",
+      "start_ms": 2520,
+      "end_ms": 2640
+    },
+    {
+      "word": "vào",
+      "start_ms": 2640,
+      "end_ms": 2800
+    },
+    {
+      "word": "nơi",
+      "start_ms": 2800,
+      "end_ms": 3000
+    },
+    {
+      "word": "rất",
+      "start_ms": 3000,
+      "end_ms": 3120
+    },
+    {
+      "word": "khó",
+      "start_ms": 3120,
+      "end_ms": 3380
+    },
+    {
+      "word": "lấy",
+      "start_ms": 3380,
+      "end_ms": 3500
+    },
+    {
+      "word": "ra.",
+      "start_ms": 3500,
+      "end_ms": 3700
+    }
+  ],
+  "aligned_with_script": true
+}

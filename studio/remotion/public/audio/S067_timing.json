@@ -1,0 +1,130 @@
+{
+  "audio_file": "S067_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nếu",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "bạn",
+      "start_ms": 260,
+      "end_ms": 380
+    },
+    {
+      "word": "có",
+      "start_ms": 380,
+      "end_ms": 540
+    },
+    {
+      "word": "nhiều",
+      "start_ms": 540,
+      "end_ms": 660
+    },
+    {
+      "word": "thẻ,",
+      "start_ms": 660,
+      "end_ms": 1020
+    },
+    {
+      "word": "hãy",
+      "start_ms": 1380,
+      "end_ms": 1460
+    },
+    {
+      "word": "liệt",
+      "start_ms": 1460,
+      "end_ms": 1640
+    },
+    {
+      "word": "kê",
+      "start_ms": 1640,
+      "end_ms": 1860
+    },
+    {
+      "word": "chính",
+      "start_ms": 1860,
+      "end_ms": 2040
+    },
+    {
+      "word": "xác",
+      "start_ms": 2040,
+      "end_ms": 2280
+    },
+    {
+      "word": "số",
+      "start_ms": 2280,
+      "end_ms": 2460
+    },
+    {
+      "word": "dư",
+      "start_ms": 2460,
+      "end_ms": 2680
+    },
+    {
+      "word": "nợ",
+      "start_ms": 2680,
+      "end_ms": 2840
+    },
+    {
+      "word": "và",
+      "start_ms": 2840,
+      "end_ms": 3020
+    },
+    {
+      "word": "lãi",
+      "start_ms": 3020,
+      "end_ms": 3140
+    },
+    {
+      "word": "suất",
+      "start_ms": 3140,
+      "end_ms": 3380
+    },
+    {
+      "word": "của",
+      "start_ms": 3380,
+      "end_ms": 3520
+    },
+    {
+      "word": "từng",
+      "start_ms": 3520,
+      "end_ms": 3720
+    },
+    {
+      "word": "thẻ",
+      "start_ms": 3720,
+      "end_ms": 4000
+    },
+    {
+      "word": "ra",
+      "start_ms": 4000,
+      "end_ms": 4160
+    },
+    {
+      "word": "một",
+      "start_ms": 4160,
+      "end_ms": 4340
+    },
+    {
+      "word": "cuốn",
+      "start_ms": 4340,
+      "end_ms": 4500
+    },
+    {
+      "word": "sổ",
+      "start_ms": 4500,
+      "end_ms": 4620
+    },
+    {
+      "word": "tay.",
+      "start_ms": 4620,
+      "end_ms": 4860
+    }
+  ],
+  "aligned_with_script": true
+}

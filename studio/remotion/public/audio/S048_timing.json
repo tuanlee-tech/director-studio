@@ -1,0 +1,105 @@
+{
+  "audio_file": "S048_narration.wav",
+  "duration_ms": 4880,
+  "word_count": 19,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Khoản",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "đầu",
+      "start_ms": 260,
+      "end_ms": 400
+    },
+    {
+      "word": "tư",
+      "start_ms": 400,
+      "end_ms": 560
+    },
+    {
+      "word": "có",
+      "start_ms": 560,
+      "end_ms": 680
+    },
+    {
+      "word": "lợi",
+      "start_ms": 680,
+      "end_ms": 840
+    },
+    {
+      "word": "nhuận",
+      "start_ms": 840,
+      "end_ms": 1020
+    },
+    {
+      "word": "cao",
+      "start_ms": 1020,
+      "end_ms": 1320
+    },
+    {
+      "word": "nhất",
+      "start_ms": 1320,
+      "end_ms": 1440
+    },
+    {
+      "word": "lúc",
+      "start_ms": 1440,
+      "end_ms": 1660
+    },
+    {
+      "word": "này",
+      "start_ms": 1660,
+      "end_ms": 1860
+    },
+    {
+      "word": "chính",
+      "start_ms": 2240,
+      "end_ms": 2320
+    },
+    {
+      "word": "là",
+      "start_ms": 2320,
+      "end_ms": 2500
+    },
+    {
+      "word": "xóa",
+      "start_ms": 2500,
+      "end_ms": 2740
+    },
+    {
+      "word": "sạch",
+      "start_ms": 2740,
+      "end_ms": 2920
+    },
+    {
+      "word": "khoản",
+      "start_ms": 2920,
+      "end_ms": 3200
+    },
+    {
+      "word": "nợ",
+      "start_ms": 3200,
+      "end_ms": 3320
+    },
+    {
+      "word": "lãi",
+      "start_ms": 3320,
+      "end_ms": 3600
+    },
+    {
+      "word": "suất",
+      "start_ms": 3600,
+      "end_ms": 3840
+    },
+    {
+      "word": "35%.",
+      "start_ms": 3840,
+      "end_ms": 4520
+    }
+  ],
+  "aligned_with_script": true
+}

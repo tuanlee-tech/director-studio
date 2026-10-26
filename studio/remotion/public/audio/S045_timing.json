@@ -1,0 +1,115 @@
+{
+  "audio_file": "S045_narration.wav",
+  "duration_ms": 4320,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nếu",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "giữ",
+      "start_ms": 200,
+      "end_ms": 400
+    },
+    {
+      "word": "nguyên",
+      "start_ms": 400,
+      "end_ms": 560
+    },
+    {
+      "word": "thói",
+      "start_ms": 560,
+      "end_ms": 720
+    },
+    {
+      "word": "quen",
+      "start_ms": 720,
+      "end_ms": 880
+    },
+    {
+      "word": "này,",
+      "start_ms": 880,
+      "end_ms": 1040
+    },
+    {
+      "word": "nguy",
+      "start_ms": 1380,
+      "end_ms": 1520
+    },
+    {
+      "word": "cơ",
+      "start_ms": 1520,
+      "end_ms": 1760
+    },
+    {
+      "word": "nhảy",
+      "start_ms": 1760,
+      "end_ms": 2000
+    },
+    {
+      "word": "sang",
+      "start_ms": 2000,
+      "end_ms": 2160
+    },
+    {
+      "word": "nhóm",
+      "start_ms": 2160,
+      "end_ms": 2400
+    },
+    {
+      "word": "nợ",
+      "start_ms": 2400,
+      "end_ms": 2540
+    },
+    {
+      "word": "chú",
+      "start_ms": 2540,
+      "end_ms": 2780
+    },
+    {
+      "word": "ý",
+      "start_ms": 2780,
+      "end_ms": 2940
+    },
+    {
+      "word": "và",
+      "start_ms": 2940,
+      "end_ms": 3080
+    },
+    {
+      "word": "nợ",
+      "start_ms": 3080,
+      "end_ms": 3260
+    },
+    {
+      "word": "xấu",
+      "start_ms": 3260,
+      "end_ms": 3500
+    },
+    {
+      "word": "hệ",
+      "start_ms": 3500,
+      "end_ms": 3580
+    },
+    {
+      "word": "thống",
+      "start_ms": 3580,
+      "end_ms": 3740
+    },
+    {
+      "word": "rất",
+      "start_ms": 3740,
+      "end_ms": 3840
+    },
+    {
+      "word": "cao.",
+      "start_ms": 3840,
+      "end_ms": 4160
+    }
+  ],
+  "aligned_with_script": true
+}

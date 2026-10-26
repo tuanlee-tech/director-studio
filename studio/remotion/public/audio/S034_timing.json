@@ -1,0 +1,130 @@
+{
+  "audio_file": "S034_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Khi",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "đầu",
+      "start_ms": 200,
+      "end_ms": 300
+    },
+    {
+      "word": "tư,",
+      "start_ms": 300,
+      "end_ms": 540
+    },
+    {
+      "word": "lãi",
+      "start_ms": 940,
+      "end_ms": 1000
+    },
+    {
+      "word": "kép",
+      "start_ms": 1000,
+      "end_ms": 1200
+    },
+    {
+      "word": "giúp",
+      "start_ms": 1200,
+      "end_ms": 1300
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1300,
+      "end_ms": 1440
+    },
+    {
+      "word": "nhân",
+      "start_ms": 1440,
+      "end_ms": 1580
+    },
+    {
+      "word": "tài",
+      "start_ms": 1580,
+      "end_ms": 1780
+    },
+    {
+      "word": "sản",
+      "start_ms": 1780,
+      "end_ms": 2000
+    },
+    {
+      "word": "lên",
+      "start_ms": 2000,
+      "end_ms": 2180
+    },
+    {
+      "word": "gấp",
+      "start_ms": 2180,
+      "end_ms": 2400
+    },
+    {
+      "word": "nhiều",
+      "start_ms": 2400,
+      "end_ms": 2560
+    },
+    {
+      "word": "lần,",
+      "start_ms": 2560,
+      "end_ms": 2860
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 3180,
+      "end_ms": 3240
+    },
+    {
+      "word": "khi",
+      "start_ms": 3240,
+      "end_ms": 3400
+    },
+    {
+      "word": "vay",
+      "start_ms": 3400,
+      "end_ms": 3540
+    },
+    {
+      "word": "nợ,",
+      "start_ms": 3540,
+      "end_ms": 3760
+    },
+    {
+      "word": "nó",
+      "start_ms": 4040,
+      "end_ms": 4080
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 4080,
+      "end_ms": 4220
+    },
+    {
+      "word": "nuốt",
+      "start_ms": 4220,
+      "end_ms": 4420
+    },
+    {
+      "word": "chửng",
+      "start_ms": 4420,
+      "end_ms": 4640
+    },
+    {
+      "word": "thu",
+      "start_ms": 4640,
+      "end_ms": 4820
+    },
+    {
+      "word": "nhập.",
+      "start_ms": 4820,
+      "end_ms": 5000
+    }
+  ],
+  "aligned_with_script": true
+}

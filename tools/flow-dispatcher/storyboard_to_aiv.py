@@ -92,7 +92,7 @@ STORYBOARD_TASKS = [
         "acc_id": 3,
         "port": 9225,
         "scene_id": "S011",
-        "sb_pattern": r"ANqvLOYtVY1KKKaAokhDBKsVow|sao kê|billing alert|15,000,000",
+        "sb_pattern": r"S011|billing alert|15,000,000",
         "output_file": "S011-A_6s_AIV.mp4",
         "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man with glasses stares in frozen shock at his glowing red phone screen displaying 'BILLING ALERT: 15,000,000 VND'. His eyes widen in extreme comic shock, sweat beads run down his face, his trembling hand holds the phone as red warning light pulses across his face. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading. Expressive comic shock. No 3D rendering, no CGI, no photorealism."
     },
@@ -100,15 +100,15 @@ STORYBOARD_TASKS = [
         "acc_id": 4,
         "port": 9226,
         "scene_id": "S052",
-        "sb_pattern": r"ANqvLOaDns4R3kf0rPAroyQulxDpAhlM|ôm đầu|billing statements|kiệt quệ",
+        "sb_pattern": r"S052|ôm đầu|billing statements|kiệt quệ",
         "output_file": "S052-A_4s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man with glasses sits at his wooden desk late at night under a warm desk lamp, holding his head in deep distress and exhaustion, breathing heavily while papers and billing statements cover the desk around him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive exhausted face. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 4-second shot. The young man with glasses sits at his wooden desk late at night under a warm desk lamp, holding his head in deep distress and exhaustion, breathing heavily while papers and billing statements cover the desk around him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive exhausted face. No 3D rendering, no CGI, no photorealism."
     },
     {
-        "acc_id": 4,
-        "port": 9226,
+        "acc_id": 3,
+        "port": 9225,
         "scene_id": "S058",
-        "sb_pattern": r"ANqvLOZ1chv3K7QTVeFMXFjANAT|tự nấu|cooking|sunny kitchen",
+        "sb_pattern": r"S058|Woman cooking|tự nấu",
         "output_file": "S058-A_6s_AIV.mp4",
         "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young woman with glasses and an apron stands happily in her bright sunny kitchen, smiling warmly and peacefully as steam gently rises from a cooking pot on the stove while she gently stirs with a wooden spoon. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Joyful, serene expression. No 3D rendering, no CGI, no photorealism."
     },
@@ -124,7 +124,7 @@ STORYBOARD_TASKS = [
         "acc_id": 5,
         "port": 9227,
         "scene_id": "S081",
-        "sb_pattern": r"hilltop|sunrise|đỉnh đồi|làm chủ đồng tiền",
+        "sb_pattern": r"hilltop|grassy hilltop|làm chủ đồng tiền",
         "output_file": "S081-A_4s_AIV.mp4",
         "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 4-second shot. The young man with glasses stands proudly on the grassy hilltop at sunrise, smiling serenely as gentle morning wind ruffles his hair and grass waves softly in the breeze. Golden morning sunlight radiates warm lens flares across the green landscape. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors, flat shading. Peaceful, triumphant expression. Anatomically complete and correct hands and arms. No 3D rendering, no CGI, no photorealism."
     }
@@ -156,6 +156,13 @@ class FlowVideoCDPClient:
         self.ws = websocket.create_connection(ws_url, timeout=15)
         self.send_cdp("Runtime.enable")
         self.send_cdp("Page.enable")
+        try:
+            self.send_cdp("Page.setDownloadBehavior", {
+                "behavior": "allow",
+                "downloadPath": str(DOWNLOADS_DIR)
+            })
+        except Exception:
+            pass
         return True
 
     def close(self):
@@ -205,20 +212,28 @@ class FlowVideoCDPClient:
         js = f"""(() => {{
             const pat = new RegExp({escaped_pat}, 'i');
             const tiles = Array.from(document.querySelectorAll('flow-grid-tile-container'));
-            const tile = tiles.find(t => pat.test(t.innerText) || pat.test(t.getAttribute('aria-label') || '') || pat.test(t.querySelector('button[aria-haspopup="true"]')?.getAttribute('aria-label') || ''));
-            if (!tile) return {{ success: false, error: 'Không tìm thấy tile storyboard phù hợp' }};
+            const tile = tiles.find(t => {{
+                const aria = t.getAttribute('aria-label') || '';
+                const txt = t.innerText || '';
+                const img = t.querySelector('img');
+                const imgAlt = img ? (img.getAttribute('alt') || '') : '';
+                const imgSrc = img ? (img.getAttribute('src') || '') : '';
+                return pat.test(aria) || pat.test(txt) || pat.test(imgAlt) || pat.test(imgSrc);
+            }});
+            if (!tile) return {{ success: false, error: 'Không tìm thấy tile storyboard phù hợp cho ' + {escaped_pat} }};
 
+            tile.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
             // Tìm nút More options (EN hoặc VI)
             const moreBtn = tile.querySelector('button[aria-label*="options" i], button[aria-label*="khác" i], button[aria-label="More options"]');
             if (!moreBtn) return {{ success: false, error: 'Nút More options không tồn tại trên tile' }};
             moreBtn.click();
-            return {{ success: true, tileText: tile.innerText.slice(0, 40) }};
+            return {{ success: true, tileText: (tile.getAttribute('aria-label') || tile.innerText || '').slice(0, 40) }};
         }})()"""
         r1 = self.evaluate(js)
         if not r1 or not r1.get("success"):
             return r1
 
-        time.sleep(0.4)
+        time.sleep(0.5)
 
         js_click_animate = """(() => {
             const items = Array.from(document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"]'));
@@ -252,52 +267,112 @@ class FlowVideoCDPClient:
         self.send_cdp("Input.dispatchKeyEvent", {
             "type": "keyUp", "windowsVirtualKeyCode": 13, "unmodifiedText": "\r", "text": "\r", "key": "Enter", "code": "Enter"
         })
+
+        # Tự động bấm Always approve / Approve nếu Google Flow hỏi xác nhận credit
+        time.sleep(1.5)
+        js_approve = """(() => {
+            const all = Array.from(document.querySelectorAll('*'));
+            const target = all.reverse().find(el => {
+                const txt = el.innerText || '';
+                return (/always approve/i.test(txt) || /luôn phê duyệt/i.test(txt) || /phê duyệt/i.test(txt)) && el.children.length === 0;
+            });
+            if (target) {
+                (target.parentElement || target).click();
+                target.click();
+                return true;
+            }
+            return false;
+        })()"""
+        for _ in range(18):
+            if self.evaluate(js_approve):
+                print(f"  ✅ [Account {self.acc_id}] Đã tự động bấm Approve/Always approve!")
+                break
+            time.sleep(1.0)
+
         return True
 
-    def poll_for_video_ready(self, timeout=360):
-        """Giám sát tile video cho đến khi hoàn tất 100%."""
+    def poll_for_video_ready(self, initial_count=0, timeout=600):
+        """Giám sát tile video MỚI NHẤT cho đến khi hoàn tất 100% (Khóa chặn: Không gửi lại prompt!)."""
         start = time.time()
-        time.sleep(8)  # Đợi 8s ban đầu để tile video mount chắc chắn
+        time.sleep(10)  # Đợi ban đầu để tile video mount
+        last_log = 0
 
         while time.time() - start < timeout:
-            js_status = """(() => {
-                const videoTile = document.querySelector('flow-video-tile');
-                if (!videoTile) return { found: false, ready: false };
-                
-                const text = videoTile.innerText;
-                // Kiểm tra xem còn tiến trình % không
-                const hasProgress = /\\b\\d+%/i.test(text);
-                return {
-                    found: true,
-                    text: text.slice(0, 60),
-                    ready: !hasProgress && (text.includes('play_circle') || !!videoTile.querySelector('img, video'))
-                };
+            # Kiểm tra trạng thái hàng đợi trong chat
+            js_queue = """(() => {
+                const bubbles = Array.from(document.querySelectorAll('div, p, span')).filter(e => e.innerText && e.children.length === 0);
+                return bubbles.slice(-5).some(e => /waiting in the queue/i.test(e.innerText) || /hàng đợi/i.test(e.innerText));
             })()"""
+            in_queue = bool(self.evaluate(js_queue))
+
+            js_status = f"""(() => {{
+                const tiles = Array.from(document.querySelectorAll('flow-video-tile'));
+                if (tiles.length <= {initial_count}) {{
+                    return {{ found: false, ready: false, count: tiles.length }};
+                }}
+                
+                // Trong Google Flow, tile mới sinh luôn được chèn lên đầu tiên (index 0)
+                const latest = tiles[0];
+                const text = latest.innerText || '';
+                const hasProgress = /\\b\\d+%/i.test(text);
+                const moreBtn = latest.querySelector('button[aria-label*="options" i], button[aria-label*="khác" i], button[aria-label="More options"]');
+                const isReady = !hasProgress && (moreBtn !== null);
+                return {{
+                    found: true,
+                    count: tiles.length,
+                    text: text.slice(0, 60),
+                    ready: isReady
+                }};
+            }})()"""
             st = self.evaluate(js_status) or {}
+            
             if st.get("found") and st.get("ready"):
+                print(f"  🎉 [Account {self.acc_id}] Video MỚI ĐÃ HOÀN TẤT 100% ({st.get('text')})!")
                 return True
 
-            time.sleep(4)
+            now = time.time()
+            if now - last_log > 15:
+                last_log = now
+                if in_queue and not st.get("found"):
+                    print(f"  ⏳ [Account {self.acc_id}] Tác vụ đang xếp trong hàng đợi Google Flow (waiting in queue). Đang kiên nhẫn đợi...")
+                elif st.get("found"):
+                    print(f"  🔄 [Account {self.acc_id}] Đang render video tile mới: {st.get('text')}...")
+                else:
+                    print(f"  ⏳ [Account {self.acc_id}] Đang chờ Google Flow khởi tạo tile mới ({int(now - start)}s)...")
+
+            time.sleep(5)
 
         return False
 
-    def trigger_download_720p(self):
-        """Bấm More options -> Hover Download -> Click 720p Original size."""
-        # 1. Mở More options
-        js_more = """(() => {
-            const moreBtn = document.querySelector('flow-video-tile button[aria-label*="options" i], flow-video-tile button[aria-label*="khác" i], flow-video-tile button[aria-label="More options"]');
-            if (moreBtn) moreBtn.click();
-            return !!moreBtn;
-        })()"""
-        self.evaluate(js_more)
-        time.sleep(0.4)
+    def trigger_download_720p(self, tile_index=0):
+        """Bấm More options trên video tile (mặc định index 0) -> Hover Download -> Click 720p."""
+        # 1. Hover target tile and click More options
+        js_more = f"""(() => {{
+            const tiles = Array.from(document.querySelectorAll('flow-video-tile'));
+            if (!tiles.length || !tiles[{tile_index}]) return {{ ok: false, error: 'no tile' }};
+            const target = tiles[{tile_index}];
+            target.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+            target.dispatchEvent(new MouseEvent('mouseenter', {{ bubbles: true }}));
+            const moreBtn = target.querySelector('button[aria-label*="options" i], button[aria-label*="khác" i], button[aria-label="More options"]');
+            if (moreBtn) {{
+                moreBtn.click();
+                return {{ ok: true, text: target.innerText.slice(0, 40) }};
+            }}
+            return {{ ok: false, error: 'no moreBtn' }};
+        }})()"""
+        r1 = self.evaluate(js_more) or {}
+        if not r1.get("ok"):
+            print(f"  ⚠️ [Account {self.acc_id}] Lỗi mở menu More options: {r1}")
+            return False
+        time.sleep(0.5)
 
         # 2. Hover Download / Tải xuống
         js_hover = """(() => {
-            const items = Array.from(document.querySelectorAll('.mat-mdc-menu-item'));
+            const items = Array.from(document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"]'));
             const dl = items.find(b => /download|tải xuống/i.test(b.innerText));
             if (dl) {
                 dl.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
+                dl.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
                 dl.click();
                 return true;
             }
@@ -308,7 +383,7 @@ class FlowVideoCDPClient:
 
         # 3. Click 720p / Kích thước gốc
         js_click_720 = """(() => {
-            const btns = Array.from(document.querySelectorAll('.mat-mdc-menu-item, button'));
+            const btns = Array.from(document.querySelectorAll('.mat-mdc-menu-item, [role="menuitem"], button'));
             const opt = btns.find(b => /720p/i.test(b.innerText) || /original size|kích thước gốc/i.test(b.innerText));
             if (opt) {
                 opt.click();
@@ -320,6 +395,7 @@ class FlowVideoCDPClient:
 
 
 def execute_storyboard_to_aiv(task):
+    import hashlib
     acc_id = task["acc_id"]
     port = task["port"]
     scene_id = task["scene_id"]
@@ -327,11 +403,22 @@ def execute_storyboard_to_aiv(task):
     sb_pattern = task["sb_pattern"]
     prompt = task["prompt"]
     target_path = ASSETS_DIR / output_file
+    remotion_pub_path = ROOT_DIR / "studio" / "remotion" / "public" / "assets" / output_file
 
-    # Nếu đã có file thì bỏ qua
+    # Nếu đã có file thì bỏ qua (kiểm tra không trùng lặp)
     if target_path.exists() and target_path.stat().st_size > 500000:
-        print(f"\n[Account {acc_id} | Port {port}] ✅ {output_file} đã có sẵn ({target_path.stat().st_size // 1024} KB), bỏ qua.")
-        return {"acc_id": acc_id, "scene_id": scene_id, "success": True, "file": output_file}
+        h = hashlib.md5(target_path.read_bytes()).hexdigest()
+        is_dup = False
+        for ex in ASSETS_DIR.glob("*_AIV.mp4"):
+            if ex.name != output_file and ex.exists() and hashlib.md5(ex.read_bytes()).hexdigest() == h:
+                is_dup = True
+                break
+        if not is_dup:
+            print(f"\n[Account {acc_id} | Port {port}] ✅ {output_file} đã có sẵn và hợp lệ ({target_path.stat().st_size // 1024} KB), bỏ qua.")
+            return {"acc_id": acc_id, "scene_id": scene_id, "success": True, "file": output_file}
+        else:
+            print(f"\n[Account {acc_id} | Port {port}] ⚠️ {output_file} hiện tại bị trùng hash, xóa để tạo lại...")
+            target_path.unlink()
 
     print(f"\n[Account {acc_id} | Port {port}] ▶ Khởi chạy Storyboard -> AIV cho {scene_id} ({output_file})...")
     client = FlowVideoCDPClient(port=port, acc_id=acc_id)
@@ -340,39 +427,51 @@ def execute_storyboard_to_aiv(task):
         client.connect()
         print(f"  🔗 [Account {acc_id}] Kết nối CDP thành công.")
 
-        # Kiểm tra xem có flow-video-tile đang tồn tại không
-        js_tile_check = """(() => {
-            const vt = document.querySelector('flow-video-tile');
-            return vt ? { exists: true, text: vt.innerText.slice(0, 60) } : { exists: false };
-        })()"""
-        tc = client.evaluate(js_tile_check) or {}
+        # Đếm số lượng video tile hiện có trên trang
+        count_js = "document.querySelectorAll('flow-video-tile').length"
+        initial_video_count = client.evaluate(count_js) or 0
+        print(f"  📊 [Account {acc_id}] Số lượng video tile hiện tại trên trang: {initial_video_count}")
 
-        if tc.get("exists") and "%" not in tc.get("text", ""):
-            print(f"  ✨ [Account {acc_id}] Video tile đã sinh xong sẵn trên trang! Bắt đầu tải file...")
-        elif tc.get("exists") and "%" in tc.get("text", ""):
-            print(f"  ⏳ [Account {acc_id}] Video tile đang trong tiến trình sinh ({tc.get('text')}), tiếp tục đợi...")
-            ready = client.poll_for_video_ready(timeout=360)
-            if not ready:
-                raise RuntimeError("Hết timeout chờ video hoàn tất")
+        # Kiểm tra nếu tile 0 đã là video của scene này vừa sinh xong
+        escaped_pat = json.dumps(sb_pattern)
+        check_t0_js = f"""(() => {{
+            const tiles = Array.from(document.querySelectorAll('flow-video-tile'));
+            if (!tiles.length) return {{ match: false }};
+            const t0 = tiles[0];
+            const text = t0.innerText || '';
+            const pat = new RegExp({escaped_pat}, 'i');
+            const hasProg = /\\b\\d+%/i.test(text);
+            const moreBtn = t0.querySelector('button[aria-label*="options" i], button[aria-label*="khác" i], button[aria-label="More options"]');
+            const isMatch = pat.test(text) || pat.test(t0.getAttribute('aria-label') || '');
+            return {{
+                match: isMatch,
+                ready: !hasProg && (moreBtn !== null),
+                text: text.slice(0, 60)
+            }};
+        }})()"""
+        t0_status = client.evaluate(check_t0_js) or {}
+
+        if t0_status.get("match") and t0_status.get("ready"):
+            print(f"  ✨ [Account {acc_id}] Tile 0 đã hoàn tất và khớp kịch bản ({t0_status.get('text')})! Bắt đầu tải...")
         else:
-            # Chưa có video tile -> Tìm Storyboard và bấm Animate
+            # Tìm Storyboard và bấm Animate
             print(f"  🎯 [Account {acc_id}] Định vị tile Storyboard ({sb_pattern})...")
             r_anim = client.trigger_animate_for_storyboard(sb_pattern)
             if not r_anim or not r_anim.get("success"):
                 raise RuntimeError(f"Lỗi kích hoạt Animate: {r_anim}")
 
             print(f"  ✨ [Account {acc_id}] Đã bấm 'Animate'! Đợi đính kèm ingredient...")
-            time.sleep(1.2)
+            time.sleep(2.0)
 
             print(f"  ✍️ [Account {acc_id}] Điền prompt AIV và gửi phím Enter...")
             client.inject_and_submit_prompt(prompt)
             print(f"  🚀 [Account {acc_id}] Đã gửi lệnh! Đang sinh video AIV...")
 
-            ready = client.poll_for_video_ready(timeout=360)
+            ready = client.poll_for_video_ready(initial_count=initial_video_count, timeout=400)
             if not ready:
                 raise RuntimeError("Hết timeout chờ video hoàn tất")
 
-        # Video đã sẵn sàng -> Bấm Download 720p
+        # Video đã sẵn sàng -> Bấm Download 720p trên tile mới nhất
         print(f"  📥 [Account {acc_id}] Kích hoạt Download 720p qua Google Flow UI...")
         before_files = set(f.name for f in DOWNLOADS_DIR.glob("*.mp4"))
 
@@ -383,36 +482,50 @@ def execute_storyboard_to_aiv(task):
             client.trigger_download_720p()
 
         # Đợi file tải về ~/Downloads
-        for _ in range(25):
+        saved = False
+        for _ in range(30):
             time.sleep(1)
             after_files = set(f.name for f in DOWNLOADS_DIR.glob("*.mp4"))
             diff = after_files - before_files
             if diff:
                 dl_file = list(diff)[0]
                 shutil.copyfile(DOWNLOADS_DIR / dl_file, target_path)
-                sz_kb = target_path.stat().st_size // 1024
-                print(f"  💾 [Account {acc_id}] ĐÃ LƯU THÀNH CÔNG: {output_file} ({sz_kb} KB)")
-                # Kích hoạt Unified QA Filter tức thì
-                if UnifiedQAFilter:
-                    qa = UnifiedQAFilter(channel=CHANNEL, slug=SLUG)
-                    qa_ok, qa_msg, _ = qa.filter_single_asset(target_path, scene_id=scene_id)
-                    print(f"  🛡️ [Unified QA Filter] {scene_id}: {'PASS' if qa_ok else 'FAIL'} - {qa_msg}")
-                return {"acc_id": acc_id, "scene_id": scene_id, "success": True, "file": output_file}
+                saved = True
+                break
 
-        # Fallback kiểm tra file mới nhất trong Downloads (trong 60s gần nhất)
-        recent = [f for f in DOWNLOADS_DIR.glob("*.mp4") if time.time() - f.stat().st_mtime < 60]
-        if recent:
-            latest = max(recent, key=lambda f: f.stat().st_mtime)
-            shutil.copyfile(latest, target_path)
-            sz_kb = target_path.stat().st_size // 1024
-            print(f"  💾 [Account {acc_id}] ĐÃ LƯU THÀNH CÔNG (từ Downloads): {output_file} ({sz_kb} KB)")
-            if UnifiedQAFilter:
-                qa = UnifiedQAFilter(channel=CHANNEL, slug=SLUG)
-                qa_ok, qa_msg, _ = qa.filter_single_asset(target_path, scene_id=scene_id)
-                print(f"  🛡️ [Unified QA Filter] {scene_id}: {'PASS' if qa_ok else 'FAIL'} - {qa_msg}")
-            return {"acc_id": acc_id, "scene_id": scene_id, "success": True, "file": output_file}
+        if not saved:
+            recent = [f for f in DOWNLOADS_DIR.glob("*.mp4") if time.time() - f.stat().st_mtime < 60]
+            if recent:
+                latest = max(recent, key=lambda f: f.stat().st_mtime)
+                shutil.copyfile(latest, target_path)
+                saved = True
 
-        raise RuntimeError("Không tìm thấy file MP4 sau khi bấm download")
+        if not saved or not target_path.exists():
+            raise RuntimeError("Không tìm thấy file MP4 sau khi bấm download")
+
+        sz_kb = target_path.stat().st_size // 1024
+        print(f"  💾 [Account {acc_id}] ĐÃ LƯU THÀNH CÔNG: {output_file} ({sz_kb} KB)")
+
+        # Kiểm tra chống trùng lặp (Anti-Duplicate Hash Guard)
+        new_hash = hashlib.md5(target_path.read_bytes()).hexdigest()
+        for existing_f in ASSETS_DIR.glob("*_AIV.mp4"):
+            if existing_f.name != output_file and existing_f.exists():
+                if hashlib.md5(existing_f.read_bytes()).hexdigest() == new_hash:
+                    target_path.unlink()
+                    raise RuntimeError(f"🚨 PHÁT HIỆN DUPLICATE: File vừa tải về trùng lặp 100% hash với {existing_f.name} ({new_hash[:12]})!")
+
+        # Đồng bộ sang studio/remotion/public/assets
+        remotion_pub_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(target_path, remotion_pub_path)
+        print(f"  🔄 Đã đồng bộ sang studio/remotion/public/assets/{output_file}")
+
+        # Kích hoạt Unified QA Filter tức thì
+        if UnifiedQAFilter:
+            qa = UnifiedQAFilter(channel=CHANNEL, slug=SLUG)
+            qa_ok, qa_msg, _ = qa.filter_single_asset(target_path, scene_id=scene_id)
+            print(f"  🛡️ [Unified QA Filter] {scene_id}: {'PASS' if qa_ok else 'FAIL'} - {qa_msg}")
+
+        return {"acc_id": acc_id, "scene_id": scene_id, "success": True, "file": output_file}
 
     except Exception as e:
         print(f"  ❌ [Account {acc_id}] Lỗi: {e}")

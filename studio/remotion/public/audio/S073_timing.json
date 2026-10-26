@@ -1,0 +1,120 @@
+{
+  "audio_file": "S073_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tạm",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "dừng",
+      "start_ms": 240,
+      "end_ms": 440
+    },
+    {
+      "word": "mọi",
+      "start_ms": 440,
+      "end_ms": 600
+    },
+    {
+      "word": "khoản",
+      "start_ms": 600,
+      "end_ms": 820
+    },
+    {
+      "word": "chi",
+      "start_ms": 820,
+      "end_ms": 1000
+    },
+    {
+      "word": "giải",
+      "start_ms": 1000,
+      "end_ms": 1220
+    },
+    {
+      "word": "trí",
+      "start_ms": 1220,
+      "end_ms": 1400
+    },
+    {
+      "word": "xa",
+      "start_ms": 1400,
+      "end_ms": 1580
+    },
+    {
+      "word": "xỉ",
+      "start_ms": 1580,
+      "end_ms": 1820
+    },
+    {
+      "word": "trong",
+      "start_ms": 1820,
+      "end_ms": 2080
+    },
+    {
+      "word": "giai",
+      "start_ms": 2080,
+      "end_ms": 2260
+    },
+    {
+      "word": "đoạn",
+      "start_ms": 2260,
+      "end_ms": 2400
+    },
+    {
+      "word": "này,",
+      "start_ms": 2400,
+      "end_ms": 2540
+    },
+    {
+      "word": "chuyển",
+      "start_ms": 2940,
+      "end_ms": 3080
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 3080,
+      "end_ms": 3320
+    },
+    {
+      "word": "toàn",
+      "start_ms": 3320,
+      "end_ms": 3580
+    },
+    {
+      "word": "sang",
+      "start_ms": 3580,
+      "end_ms": 3760
+    },
+    {
+      "word": "thanh",
+      "start_ms": 3760,
+      "end_ms": 3940
+    },
+    {
+      "word": "toán",
+      "start_ms": 3940,
+      "end_ms": 4200
+    },
+    {
+      "word": "bằng",
+      "start_ms": 4200,
+      "end_ms": 4460
+    },
+    {
+      "word": "tiền",
+      "start_ms": 4460,
+      "end_ms": 4700
+    },
+    {
+      "word": "mặt.",
+      "start_ms": 4700,
+      "end_ms": 4800
+    }
+  ],
+  "aligned_with_script": true
+}

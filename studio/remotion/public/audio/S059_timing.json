@@ -1,0 +1,130 @@
+{
+  "audio_file": "S059_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Và",
+      "start_ms": 0,
+      "end_ms": 133
+    },
+    {
+      "word": "khi",
+      "start_ms": 133,
+      "end_ms": 332
+    },
+    {
+      "word": "bước",
+      "start_ms": 332,
+      "end_ms": 598
+    },
+    {
+      "word": "sang",
+      "start_ms": 598,
+      "end_ms": 864
+    },
+    {
+      "word": "tháng",
+      "start_ms": 864,
+      "end_ms": 1196
+    },
+    {
+      "word": "thứ",
+      "start_ms": 1196,
+      "end_ms": 1395
+    },
+    {
+      "word": "mười",
+      "start_ms": 1395,
+      "end_ms": 1661
+    },
+    {
+      "word": "một,",
+      "start_ms": 1661,
+      "end_ms": 1860
+    },
+    {
+      "word": "cô",
+      "start_ms": 1860,
+      "end_ms": 1993
+    },
+    {
+      "word": "ấy",
+      "start_ms": 1993,
+      "end_ms": 2126
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 2126,
+      "end_ms": 2392
+    },
+    {
+      "word": "toàn",
+      "start_ms": 2392,
+      "end_ms": 2658
+    },
+    {
+      "word": "sạch",
+      "start_ms": 2658,
+      "end_ms": 2924
+    },
+    {
+      "word": "nợ,",
+      "start_ms": 2924,
+      "end_ms": 3057
+    },
+    {
+      "word": "sở",
+      "start_ms": 3057,
+      "end_ms": 3190
+    },
+    {
+      "word": "hữu",
+      "start_ms": 3190,
+      "end_ms": 3389
+    },
+    {
+      "word": "quỹ",
+      "start_ms": 3389,
+      "end_ms": 3588
+    },
+    {
+      "word": "dự",
+      "start_ms": 3588,
+      "end_ms": 3721
+    },
+    {
+      "word": "phòng",
+      "start_ms": 3721,
+      "end_ms": 4053
+    },
+    {
+      "word": "và",
+      "start_ms": 4053,
+      "end_ms": 4186
+    },
+    {
+      "word": "bắt",
+      "start_ms": 4186,
+      "end_ms": 4385
+    },
+    {
+      "word": "đầu",
+      "start_ms": 4385,
+      "end_ms": 4584
+    },
+    {
+      "word": "tích",
+      "start_ms": 4584,
+      "end_ms": 4850
+    },
+    {
+      "word": "sản.",
+      "start_ms": 4850,
+      "end_ms": 5049
+    }
+  ],
+  "aligned_with_script": true
+}

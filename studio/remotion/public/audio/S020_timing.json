@@ -1,0 +1,115 @@
+{
+  "audio_file": "S020_narration.wav",
+  "duration_ms": 4640,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "trở",
+      "start_ms": 240,
+      "end_ms": 400
+    },
+    {
+      "word": "thành",
+      "start_ms": 400,
+      "end_ms": 560
+    },
+    {
+      "word": "người",
+      "start_ms": 560,
+      "end_ms": 740
+    },
+    {
+      "word": "làm",
+      "start_ms": 740,
+      "end_ms": 860
+    },
+    {
+      "word": "công",
+      "start_ms": 860,
+      "end_ms": 1080
+    },
+    {
+      "word": "cho",
+      "start_ms": 1080,
+      "end_ms": 1300
+    },
+    {
+      "word": "ngân",
+      "start_ms": 1300,
+      "end_ms": 1520
+    },
+    {
+      "word": "hàng,",
+      "start_ms": 1520,
+      "end_ms": 1700
+    },
+    {
+      "word": "nai",
+      "start_ms": 2120,
+      "end_ms": 2200
+    },
+    {
+      "word": "lưng",
+      "start_ms": 2200,
+      "end_ms": 2400
+    },
+    {
+      "word": "gánh",
+      "start_ms": 2400,
+      "end_ms": 2580
+    },
+    {
+      "word": "vác",
+      "start_ms": 2580,
+      "end_ms": 2740
+    },
+    {
+      "word": "chi",
+      "start_ms": 2740,
+      "end_ms": 2940
+    },
+    {
+      "word": "phí",
+      "start_ms": 2940,
+      "end_ms": 3200
+    },
+    {
+      "word": "cho",
+      "start_ms": 3200,
+      "end_ms": 3360
+    },
+    {
+      "word": "sự",
+      "start_ms": 3360,
+      "end_ms": 3460
+    },
+    {
+      "word": "thoải",
+      "start_ms": 3460,
+      "end_ms": 3720
+    },
+    {
+      "word": "mái",
+      "start_ms": 3720,
+      "end_ms": 3960
+    },
+    {
+      "word": "thoáng",
+      "start_ms": 3960,
+      "end_ms": 4140
+    },
+    {
+      "word": "qua.",
+      "start_ms": 4140,
+      "end_ms": 4360
+    }
+  ],
+  "aligned_with_script": true
+}

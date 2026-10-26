@@ -1,0 +1,95 @@
+{
+  "audio_file": "S046_narration.wav",
+  "duration_ms": 3920,
+  "word_count": 17,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Điểm",
+      "start_ms": 0,
+      "end_ms": 287
+    },
+    {
+      "word": "tín",
+      "start_ms": 287,
+      "end_ms": 502
+    },
+    {
+      "word": "dụng",
+      "start_ms": 502,
+      "end_ms": 789
+    },
+    {
+      "word": "xấu",
+      "start_ms": 789,
+      "end_ms": 1004
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 1004,
+      "end_ms": 1147
+    },
+    {
+      "word": "đóng",
+      "start_ms": 1147,
+      "end_ms": 1434
+    },
+    {
+      "word": "sập",
+      "start_ms": 1434,
+      "end_ms": 1649
+    },
+    {
+      "word": "mọi",
+      "start_ms": 1649,
+      "end_ms": 1864
+    },
+    {
+      "word": "cơ",
+      "start_ms": 1864,
+      "end_ms": 2007
+    },
+    {
+      "word": "hội",
+      "start_ms": 2007,
+      "end_ms": 2222
+    },
+    {
+      "word": "vay",
+      "start_ms": 2222,
+      "end_ms": 2437
+    },
+    {
+      "word": "vốn",
+      "start_ms": 2437,
+      "end_ms": 2652
+    },
+    {
+      "word": "làm",
+      "start_ms": 2652,
+      "end_ms": 2867
+    },
+    {
+      "word": "ăn",
+      "start_ms": 2867,
+      "end_ms": 3010
+    },
+    {
+      "word": "hay",
+      "start_ms": 3010,
+      "end_ms": 3225
+    },
+    {
+      "word": "mua",
+      "start_ms": 3225,
+      "end_ms": 3440
+    },
+    {
+      "word": "nhà.",
+      "start_ms": 3440,
+      "end_ms": 3655
+    }
+  ],
+  "aligned_with_script": true
+}

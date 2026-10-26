@@ -1,0 +1,115 @@
+{
+  "audio_file": "S005_narration.wav",
+  "duration_ms": 4480,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hãy",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 180,
+      "end_ms": 340
+    },
+    {
+      "word": "lại",
+      "start_ms": 340,
+      "end_ms": 460
+    },
+    {
+      "word": "ngày",
+      "start_ms": 460,
+      "end_ms": 640
+    },
+    {
+      "word": "đầu",
+      "start_ms": 640,
+      "end_ms": 820
+    },
+    {
+      "word": "tiên",
+      "start_ms": 820,
+      "end_ms": 1120
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1500,
+      "end_ms": 1620
+    },
+    {
+      "word": "cầm",
+      "start_ms": 1620,
+      "end_ms": 1900
+    },
+    {
+      "word": "trên",
+      "start_ms": 1900,
+      "end_ms": 2040
+    },
+    {
+      "word": "tay",
+      "start_ms": 2040,
+      "end_ms": 2240
+    },
+    {
+      "word": "chiếc",
+      "start_ms": 2240,
+      "end_ms": 2400
+    },
+    {
+      "word": "thẻ",
+      "start_ms": 2400,
+      "end_ms": 2520
+    },
+    {
+      "word": "tín",
+      "start_ms": 2520,
+      "end_ms": 2700
+    },
+    {
+      "word": "dụng",
+      "start_ms": 2700,
+      "end_ms": 2880
+    },
+    {
+      "word": "sáng",
+      "start_ms": 2880,
+      "end_ms": 3160
+    },
+    {
+      "word": "bóng",
+      "start_ms": 3160,
+      "end_ms": 3380
+    },
+    {
+      "word": "với",
+      "start_ms": 3380,
+      "end_ms": 3480
+    },
+    {
+      "word": "hạn",
+      "start_ms": 3480,
+      "end_ms": 3700
+    },
+    {
+      "word": "mức",
+      "start_ms": 3700,
+      "end_ms": 3840
+    },
+    {
+      "word": "50",
+      "start_ms": 3840,
+      "end_ms": 4080
+    },
+    {
+      "word": "triệu.",
+      "start_ms": 4080,
+      "end_ms": 4320
+    }
+  ],
+  "aligned_with_script": true
+}

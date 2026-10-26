@@ -279,13 +279,32 @@ class AssetQAVerifier:
                             "size_kb": file_size // 1024, "meta": meta
                         })
 
-        if missing_assets or corrupted_assets or under_50kb_assets:
+        # Kiểm tra trùng lặp nội dung giữa các cảnh (Anti-Duplicate Hash Guard)
+        import hashlib
+        hashes_seen: Dict[str, Tuple[str, str]] = {}
+        duplicate_assets = []
+        for v in verified_assets:
+            ap = self.assets_dir / v["file"]
+            try:
+                h = hashlib.md5(ap.read_bytes()).hexdigest()
+                if h in hashes_seen:
+                    orig_sid, orig_file = hashes_seen[h]
+                    msg = f"[DUPLICATE ASSET] Cảnh {v['scene_id']} ({v['file']}) trùng 100% nội dung với {orig_sid} ({orig_file})"
+                    check.errors.append(msg)
+                    duplicate_assets.append((v["scene_id"], orig_sid))
+                else:
+                    hashes_seen[h] = (v["scene_id"], v["file"])
+            except Exception:
+                pass
+
+        if missing_assets or corrupted_assets or under_50kb_assets or duplicate_assets:
             check.passed = False
             for err in check.errors:
                 self.errors.append(err)
             check.details = (
                 f"Phát hiện lỗi assets: {len(missing_assets)} thiếu, "
-                f"{len(corrupted_assets)} hỏng, {len(under_50kb_assets)} < 50KB"
+                f"{len(corrupted_assets)} hỏng, {len(under_50kb_assets)} < 50KB, "
+                f"{len(duplicate_assets)} bị trùng lặp"
             )
         else:
             check.details = (
@@ -912,6 +931,20 @@ class AssetQAVerifier:
                     return False, msg, details
             except Exception:
                 pass
+
+        # 7. Kiểm tra trùng lặp hash với bất kỳ asset nào khác
+        import hashlib
+        try:
+            cur_h = hashlib.md5(fpath.read_bytes()).hexdigest()
+            for other_f in self.assets_dir.iterdir():
+                if other_f.is_file() and other_f.name != fpath.name and other_f.suffix in [".mp4", ".png"]:
+                    if other_f.name[:4] != sid:
+                        if hashlib.md5(other_f.read_bytes()).hexdigest() == cur_h:
+                            msg = f"[TRÙNG LẶP ASSET] File '{fname}' trùng 100% hash với cảnh khác '{other_f.name}'"
+                            details["errors"].append(msg)
+                            return False, msg, details
+        except Exception:
+            pass
 
         return True, f"Asset {fname} hợp lệ 100% qua bộ lọc QA Filter", details
 

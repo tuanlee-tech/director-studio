@@ -1,0 +1,85 @@
+{
+  "audio_file": "S028_narration.wav",
+  "duration_ms": 3040,
+  "word_count": 15,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Với",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "40",
+      "start_ms": 220,
+      "end_ms": 430
+    },
+    {
+      "word": "triệu",
+      "start_ms": 430,
+      "end_ms": 640
+    },
+    {
+      "word": "nợ,",
+      "start_ms": 640,
+      "end_ms": 860
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 1100,
+      "end_ms": 1240
+    },
+    {
+      "word": "tháng",
+      "start_ms": 1240,
+      "end_ms": 1400
+    },
+    {
+      "word": "tiền",
+      "start_ms": 1400,
+      "end_ms": 1640
+    },
+    {
+      "word": "lãi",
+      "start_ms": 1640,
+      "end_ms": 1820
+    },
+    {
+      "word": "phát",
+      "start_ms": 1820,
+      "end_ms": 1980
+    },
+    {
+      "word": "sinh",
+      "start_ms": 1980,
+      "end_ms": 2200
+    },
+    {
+      "word": "đã",
+      "start_ms": 2200,
+      "end_ms": 2280
+    },
+    {
+      "word": "hơn",
+      "start_ms": 2280,
+      "end_ms": 2400
+    },
+    {
+      "word": "1",
+      "start_ms": 2400,
+      "end_ms": 2540
+    },
+    {
+      "word": "triệu",
+      "start_ms": 2540,
+      "end_ms": 2680
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 2680,
+      "end_ms": 2860
+    }
+  ],
+  "aligned_with_script": true
+}

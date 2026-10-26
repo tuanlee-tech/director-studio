@@ -217,3 +217,10 @@ Monorepo được thiết kế mở để dễ dàng tích hợp thêm các mả
 - **Giao diện TTS không có model / Tải lỗi**:
   - Model `pnnbao-ump/VieNeu-TTS-v3-Turbo` (~521 MB) được cache tại thư mục HuggingFace (`~/.cache/huggingface`).
   - Lần khởi động đầu tiên máy sẽ tự động tải các file graph ONNX về máy; từ lần thứ 2 trở đi hệ thống đọc trực tiếp từ cache offline không cần tải lại.
+
+## Account:
+1. Flow Account 1 : tuanlee.tech@gmail.com
+2. Flow Account 2 : mr.tuan.cb@gmail.com
+3. Flow Account 3 : tuanlee.social@gmail.com
+4. Flow Account 4 : tuanlee.finance@gmail.com
+5. Flow Account 5 : tuanlexor@gmail.com

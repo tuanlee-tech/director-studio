@@ -1,0 +1,125 @@
+{
+  "audio_file": "S056_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Cô",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "ấy",
+      "start_ms": 200,
+      "end_ms": 300
+    },
+    {
+      "word": "lập",
+      "start_ms": 300,
+      "end_ms": 500
+    },
+    {
+      "word": "tức",
+      "start_ms": 500,
+      "end_ms": 640
+    },
+    {
+      "word": "khóa",
+      "start_ms": 640,
+      "end_ms": 900
+    },
+    {
+      "word": "thẻ",
+      "start_ms": 900,
+      "end_ms": 1000
+    },
+    {
+      "word": "tín",
+      "start_ms": 1000,
+      "end_ms": 1200
+    },
+    {
+      "word": "dụng,",
+      "start_ms": 1200,
+      "end_ms": 1740
+    },
+    {
+      "word": "chuyển",
+      "start_ms": 1740,
+      "end_ms": 1920
+    },
+    {
+      "word": "sang",
+      "start_ms": 1920,
+      "end_ms": 2120
+    },
+    {
+      "word": "dùng",
+      "start_ms": 2120,
+      "end_ms": 2340
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2340,
+      "end_ms": 2540
+    },
+    {
+      "word": "mặt",
+      "start_ms": 2540,
+      "end_ms": 2720
+    },
+    {
+      "word": "và",
+      "start_ms": 2720,
+      "end_ms": 2960
+    },
+    {
+      "word": "thắt",
+      "start_ms": 2960,
+      "end_ms": 3120
+    },
+    {
+      "word": "chặt",
+      "start_ms": 3120,
+      "end_ms": 3400
+    },
+    {
+      "word": "chi",
+      "start_ms": 3400,
+      "end_ms": 3580
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 3580,
+      "end_ms": 3860
+    },
+    {
+      "word": "kỷ",
+      "start_ms": 3860,
+      "end_ms": 4019
+    },
+    {
+      "word": "luật",
+      "start_ms": 4019,
+      "end_ms": 4220
+    },
+    {
+      "word": "trong",
+      "start_ms": 4220,
+      "end_ms": 4400
+    },
+    {
+      "word": "10",
+      "start_ms": 4400,
+      "end_ms": 4630
+    },
+    {
+      "word": "tháng.",
+      "start_ms": 4630,
+      "end_ms": 4860
+    }
+  ],
+  "aligned_with_script": true
+}
