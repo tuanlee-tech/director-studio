@@ -1,7 +1,7 @@
 {
   "channel": "tien-thuc-chien",
   "video_slug": "thoat-bay-no-the-tin-dung",
-  "timestamp": "2026-10-26 00:27:39",
+  "timestamp": "2026-10-26 07:19:01",
   "passed": true,
   "total_checks": 6,
   "passed_checks": 6,
@@ -20,7 +20,7 @@
       "category": "Naming",
       "name": "File Naming & Anti-Alias Standardization",
       "passed": true,
-      "details": "100% File trong assets/ (47 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
+      "details": "100% File trong assets/ (42 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
       "errors": [],
       "warnings": []
     },
@@ -65,7 +65,7 @@
     "img_count": 32,
     "gfx_count": 44,
     "verified_assets_count": 37,
-    "valid_media_files": 47,
+    "valid_media_files": 42,
     "clean_images_count": 37,
     "tainted_images_count": 0,
     "audio_valid_scenes": 81

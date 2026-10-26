@@ -1,5 +1,5 @@
 import React from "react";
-import { Sequence, Audio, OffthreadVideo, staticFile, Loop } from "remotion";
+import { Sequence, Audio, OffthreadVideo, Img, staticFile, Loop } from "remotion";
 import { KenBurnsImage } from "./components/KenBurnsImage";
 import { KaraokeSubtitle } from "./components/KaraokeSubtitle";
 import { DynamicGraphic } from "./components/DynamicGraphic";
@@ -105,10 +105,25 @@ export const VideoComposition: React.FC<VideoCompositionProps> = ({
                   narration={seq.narration_text}
                 />
               ) : seq.type === "AIV" && seq.asset_path && seq.asset_path.endsWith(".mp4") ? (
-                <OffthreadVideo
-                  src={seq.asset_path.startsWith("http") ? seq.asset_path : staticFile(seq.asset_path)}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+                <>
+                  <OffthreadVideo
+                    src={seq.asset_path.startsWith("http") ? seq.asset_path : staticFile(seq.asset_path)}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                  {/* Badge pill watermark cover for AIV video */}
+                  <Img
+                    src={staticFile("images/badge_pill.png")}
+                    style={{
+                      position: "absolute",
+                      bottom: 24,
+                      right: 28,
+                      width: 210,
+                      height: "auto",
+                      zIndex: 10,
+                      filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))",
+                    }}
+                  />
+                </>
               ) : (
                 <KenBurnsImage
                   src={
