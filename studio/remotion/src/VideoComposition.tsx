@@ -58,7 +58,7 @@ export const VideoComposition: React.FC<VideoCompositionProps> = ({
                     src={staticFile("images/badge_pill.png")}
                     style={{
                       position: "absolute",
-                      bottom: 137,
+                      bottom: 130,
                       right: 28,
                       width: 410,
                       height: "auto",

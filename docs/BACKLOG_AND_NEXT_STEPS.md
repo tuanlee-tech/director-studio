@@ -32,7 +32,7 @@
 
 5. **Đóng dấu thương hiệu `badge_pill.png` che logo Gemini**:
    - **Ảnh tĩnh**: Đã đóng dấu với tọa độ tâm sao `Star Y = h - 95px`, `margin_right = 50 * scale` chống tràn viền khi Ken Burns. Hiệu ứng `KenBurnsImage` tinh chỉnh `scale: [1.0, 1.08]` mượt mà, không bị crop mép viền. Bản gốc bảo toàn tại `assets/raw_backup/`.
-   - **Video AIV**: Căn chỉnh overlay `badge_pill.png` tại `bottom: 137, right: 28, width: 410`, che khít 100% ngôi sao watermark cả đỉnh trên lẫn mép dưới (không còn hở bất kỳ pixel nào).
+   - **Video AIV**: Căn chỉnh overlay `badge_pill.png` tại `bottom: 130, right: 28, width: 410`, che khít 100% ngôi sao watermark cả đỉnh trên lẫn mép dưới (không còn hở bất kỳ pixel nào).
 
 ---
 
@@ -42,7 +42,7 @@
 - [x] Tạo thư mục sao lưu `assets/raw_backup/` bảo vệ 32 file ảnh nguyên bản.
 - [x] Đóng dấu thương hiệu `badge_pill.png` cho toàn bộ **32/32 ảnh tĩnh** hiện hữu và đồng bộ sang `studio/remotion/public/assets/`.
 - [x] Tinh chỉnh `KenBurnsImage` (scale `[1.0, 1.08]`) đảm bảo không bị cắt viền pill khi zoom-in/pan.
-- [x] Tinh chỉnh overlay `badge_pill.png` cho AIV video (`bottom: 137, right: 28, width: 410`) che khít 100% watermark.
+- [x] Tinh chỉnh overlay `badge_pill.png` cho AIV video (`bottom: 130, right: 28, width: 410`) che khít 100% watermark.
 - [x] Thiết lập bản kế hoạch chi tiết tại [plan-assets-qa-and-dispatcher-refactor.md](file:///C:/Users/tuanlee/.gemini/antigravity/brain/49cdbe24-2f1a-40ae-93ac-f41634ec41db/plan-assets-qa-and-dispatcher-refactor.md).
 
 ---
