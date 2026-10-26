@@ -1213,8 +1213,8 @@
       "gfx_props": {
         "src": "assets/S001-A_6s_AIV.mp4"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S001-A_6s_AIV.mp4",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S001_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S001-A_6s_AIV.mp4",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S001_narration.wav",
       "words": [
         {
           "word": "Nhận",
@@ -1313,8 +1313,8 @@
       "gfx_props": {
         "src": "assets/S002-A_6s_AIV.mp4"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S002-A_6s_AIV.mp4",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S002_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S002-A_6s_AIV.mp4",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S002_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -1443,8 +1443,8 @@
       "gfx_props": {
         "src": "assets/S003-A_6s_AIV.mp4"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S003-A_6s_AIV.mp4",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S003_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S003-A_6s_AIV.mp4",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S003_narration.wav",
       "words": [
         {
           "word": "Càng",
@@ -1578,8 +1578,8 @@
       "gfx_props": {
         "src": "assets/S004-A_6s_AIV.mp4"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S004-A_6s_AIV.mp4",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S004_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S004-A_6s_AIV.mp4",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S004_narration.wav",
       "words": [
         {
           "word": "Hôm",
@@ -1714,8 +1714,8 @@
         "src": "assets/S005-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S005-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S005_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S005-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S005_narration.wav",
       "words": [
         {
           "word": "Hãy",
@@ -1840,7 +1840,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S006_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S006_narration.wav",
       "words": [
         {
           "word": "Ngân",
@@ -1934,8 +1934,8 @@
         "src": "assets/S007-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S007-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S007_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S007-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S007_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -2070,7 +2070,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S008_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S008_narration.wav",
       "words": [
         {
           "word": "Khi",
@@ -2204,8 +2204,8 @@
         "src": "assets/S009-A_4s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S009-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S009_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S009-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S009_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -2305,7 +2305,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S010_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S010_narration.wav",
       "words": [
         {
           "word": "Đó",
@@ -2444,8 +2444,8 @@
         "src": "assets/S011-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S011-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S011_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S011-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S011_narration.wav",
       "words": [
         {
           "word": "Rồi",
@@ -2579,8 +2579,8 @@
         "src": "assets/S012-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S012-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S012_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S012-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S012_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -2680,7 +2680,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S013_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S013_narration.wav",
       "words": [
         {
           "word": "Thay",
@@ -2808,7 +2808,7 @@
         "to": 1000000,
         "suffix": " VNĐ"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S014_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S014_narration.wav",
       "words": [
         {
           "word": "Chỉ",
@@ -2932,8 +2932,8 @@
         "src": "assets/S015-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S015-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S015_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S015-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S015_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -3057,8 +3057,8 @@
         "src": "assets/S016-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S016-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S016_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S016-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S016_narration.wav",
       "words": [
         {
           "word": "Tháng",
@@ -3168,7 +3168,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S017_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S017_narration.wav",
       "words": [
         {
           "word": "Vòng",
@@ -3298,7 +3298,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S018_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S018_narration.wav",
       "words": [
         {
           "word": "Sau",
@@ -3412,8 +3412,8 @@
         "src": "assets/S019-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S019-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S019_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S019-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S019_narration.wav",
       "words": [
         {
           "word": "Mỗi",
@@ -3547,8 +3547,8 @@
         "src": "assets/S020-A_5s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S020-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S020_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S020-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S020_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -3672,8 +3672,8 @@
         "src": "assets/S021-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S021-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S021_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S021-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S021_narration.wav",
       "words": [
         {
           "word": "Cảm",
@@ -3807,8 +3807,8 @@
         "src": "assets/S022-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S022-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S022_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S022-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S022_narration.wav",
       "words": [
         {
           "word": "Nhiều",
@@ -3918,7 +3918,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S023_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S023_narration.wav",
       "words": [
         {
           "word": "Nhưng",
@@ -4037,8 +4037,8 @@
         "src": "assets/S024-A_5s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S024-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S024_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S024-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S024_narration.wav",
       "words": [
         {
           "word": "Muốn",
@@ -4173,7 +4173,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S025_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S025_narration.wav",
       "words": [
         {
           "word": "Bây",
@@ -4306,7 +4306,7 @@
         "to": 35,
         "suffix": "% / Năm"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S026_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S026_narration.wav",
       "words": [
         {
           "word": "Lãi",
@@ -4386,7 +4386,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S027_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S027_narration.wav",
       "words": [
         {
           "word": "Đây",
@@ -4524,7 +4524,7 @@
         "to": 1160000,
         "suffix": " VNĐ"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S028_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S028_narration.wav",
       "words": [
         {
           "word": "Với",
@@ -4619,7 +4619,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S029_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S029_narration.wav",
       "words": [
         {
           "word": "Khoản",
@@ -4744,7 +4744,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S030_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S030_narration.wav",
       "words": [
         {
           "word": "Điều",
@@ -4879,7 +4879,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S031_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S031_narration.wav",
       "words": [
         {
           "word": "Nếu",
@@ -4989,7 +4989,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S032_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S032_narration.wav",
       "words": [
         {
           "word": "Tổng",
@@ -5114,7 +5114,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S033_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S033_narration.wav",
       "words": [
         {
           "word": "Đó",
@@ -5209,7 +5209,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S034_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S034_narration.wav",
       "words": [
         {
           "word": "Khi",
@@ -5349,7 +5349,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S035_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S035_narration.wav",
       "words": [
         {
           "word": "Chưa",
@@ -5479,7 +5479,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S036_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S036_narration.wav",
       "words": [
         {
           "word": "Chỉ",
@@ -5584,7 +5584,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S037_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S037_narration.wav",
       "words": [
         {
           "word": "Thêm",
@@ -5684,7 +5684,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S038_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S038_narration.wav",
       "words": [
         {
           "word": "Các",
@@ -5793,8 +5793,8 @@
         "src": "assets/S039-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S039-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S039_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S039-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S039_narration.wav",
       "words": [
         {
           "word": "Về",
@@ -5928,8 +5928,8 @@
         "src": "assets/S040-A_5s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S040-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S040_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S040-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S040_narration.wav",
       "words": [
         {
           "word": "Một",
@@ -6058,8 +6058,8 @@
         "src": "assets/S041-A_4s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S041-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S041_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S041-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S041_narration.wav",
       "words": [
         {
           "word": "Nhiều",
@@ -6164,7 +6164,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S042_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S042_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -6288,8 +6288,8 @@
         "src": "assets/S043-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S043-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S043_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S043-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S043_narration.wav",
       "words": [
         {
           "word": "Toán",
@@ -6419,7 +6419,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S044_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S044_narration.wav",
       "words": [
         {
           "word": "Với",
@@ -6519,7 +6519,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S045_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S045_narration.wav",
       "words": [
         {
           "word": "Nếu",
@@ -6643,8 +6643,8 @@
         "src": "assets/S046-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S046-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S046_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S046-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S046_narration.wav",
       "words": [
         {
           "word": "Điểm",
@@ -6748,8 +6748,8 @@
         "src": "assets/S047-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S047-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S047_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S047-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S047_narration.wav",
       "words": [
         {
           "word": "Bởi",
@@ -6884,7 +6884,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S048_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S048_narration.wav",
       "words": [
         {
           "word": "Khoản",
@@ -6999,7 +6999,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S049_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S049_narration.wav",
       "words": [
         {
           "word": "Không",
@@ -7084,7 +7084,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S050_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S050_narration.wav",
       "words": [
         {
           "word": "Để",
@@ -7213,8 +7213,8 @@
         "src": "assets/S051-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S051-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S051_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S051-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S051_narration.wav",
       "words": [
         {
           "word": "Người",
@@ -7353,8 +7353,8 @@
         "src": "assets/S052-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S052-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S052_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S052-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S052_narration.wav",
       "words": [
         {
           "word": "Anh",
@@ -7462,7 +7462,7 @@
         "to": 60000000,
         "suffix": " VNĐ"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S053_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S053_narration.wav",
       "words": [
         {
           "word": "Sau",
@@ -7591,8 +7591,8 @@
         "src": "assets/S054-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S054-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S054_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S054-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S054_narration.wav",
       "words": [
         {
           "word": "Ban",
@@ -7701,8 +7701,8 @@
         "src": "assets/S055-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S055-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S055_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S055-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S055_narration.wav",
       "words": [
         {
           "word": "Ngược",
@@ -7826,8 +7826,8 @@
         "src": "assets/S056-A_6s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S056-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S056_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S056-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S056_narration.wav",
       "words": [
         {
           "word": "Cô",
@@ -7962,7 +7962,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S057_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S057_narration.wav",
       "words": [
         {
           "word": "Mỗi",
@@ -8091,8 +8091,8 @@
         "src": "assets/S058-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S058-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S058_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S058-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S058_narration.wav",
       "words": [
         {
           "word": "Cuộc",
@@ -8202,7 +8202,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S059_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S059_narration.wav",
       "words": [
         {
           "word": "Và",
@@ -8342,7 +8342,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S060_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S060_narration.wav",
       "words": [
         {
           "word": "Cùng",
@@ -8471,8 +8471,8 @@
         "src": "assets/S061-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S061-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S061_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S061-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S061_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -8602,7 +8602,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S062_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S062_narration.wav",
       "words": [
         {
           "word": "Nếu",
@@ -8737,7 +8737,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S063_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S063_narration.wav",
       "words": [
         {
           "word": "Bước",
@@ -8870,8 +8870,8 @@
       "gfx_props": {
         "src": "assets/S064-A_6s_AIV.mp4"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S064-A_6s_AIV.mp4",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S064_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S064-A_6s_AIV.mp4",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S064_narration.wav",
       "words": [
         {
           "word": "Hãy",
@@ -8982,7 +8982,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S065_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S065_narration.wav",
       "words": [
         {
           "word": "Hủy",
@@ -9112,7 +9112,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S066_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S066_narration.wav",
       "words": [
         {
           "word": "Bước",
@@ -9241,8 +9241,8 @@
         "src": "assets/S067-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S067-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S067_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S067-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S067_narration.wav",
       "words": [
         {
           "word": "Nếu",
@@ -9382,7 +9382,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S068_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S068_narration.wav",
       "words": [
         {
           "word": "Tập",
@@ -9492,7 +9492,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S069_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S069_narration.wav",
       "words": [
         {
           "word": "Chiến",
@@ -9627,7 +9627,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S070_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S070_narration.wav",
       "words": [
         {
           "word": "Bước",
@@ -9747,7 +9747,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S071_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S071_narration.wav",
       "words": [
         {
           "word": "Ngay",
@@ -9862,7 +9862,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S072_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S072_narration.wav",
       "words": [
         {
           "word": "Tám",
@@ -9971,8 +9971,8 @@
         "src": "assets/S073-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S073-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S073_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S073-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S073_narration.wav",
       "words": [
         {
           "word": "Tạm",
@@ -10102,7 +10102,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S074_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S074_narration.wav",
       "words": [
         {
           "word": "Bước",
@@ -10221,8 +10221,8 @@
         "src": "assets/S075-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S075-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S075_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S075-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S075_narration.wav",
       "words": [
         {
           "word": "Khoản",
@@ -10357,7 +10357,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S076_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S076_narration.wav",
       "words": [
         {
           "word": "Với",
@@ -10476,8 +10476,8 @@
         "src": "assets/S077-A_4s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S077-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S077_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S077-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S077_narration.wav",
       "words": [
         {
           "word": "10",
@@ -10586,8 +10586,8 @@
         "src": "assets/S078-A_6s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S078-A_6s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S078_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S078-A_6s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S078_narration.wav",
       "words": [
         {
           "word": "Khoảnh",
@@ -10716,8 +10716,8 @@
         "src": "assets/S079-A_5s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S079-A_5s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S079_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S079-A_5s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S079_narration.wav",
       "words": [
         {
           "word": "Tiền",
@@ -10847,7 +10847,7 @@
         "theme": "finance-clean-vyond",
         "animationType": "slide-up"
       },
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S080_narration.wav",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S080_narration.wav",
       "words": [
         {
           "word": "Bạn",
@@ -10976,8 +10976,8 @@
         "src": "assets/S081-A_4s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S081-A_4s_IMG.png",
-      "narration_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S081_narration.wav",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S081-A_4s_IMG.png",
+      "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S081_narration.wav",
       "words": [
         {
           "word": "Bình",
@@ -11067,8 +11067,8 @@
       ]
     }
   ],
-  "master_audio_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/narration_master.wav",
-  "bgm_url": "http://127.0.0.1:3000/api/media/tien-thuc-chien/bgm/bgm_calm_lofi.mp3",
+  "master_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/narration_master.wav",
+  "bgm_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/bgm/bgm_calm_lofi.mp3",
   "bgm_volume": 0.1,
   "bgm_duration_seconds": 168.010438,
   "bgm_duration_frames": 5040

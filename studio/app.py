@@ -29,6 +29,16 @@ ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
+# --- Load .env ---
+try:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT_DIR / ".env")
+except Exception:
+    pass
+
+REMOTION_PORT = int(os.environ.get("REMOTION_PORT", "3100"))
+STUDIO_PORT = int(os.environ.get("STUDIO_PORT", os.environ.get("PORT", "3001")))
+
 # --- Service Registry ---
 SERVICES = {
     "vieneu-tts": {
@@ -205,7 +215,7 @@ def background_health_checker():
 # --- Routes ---
 @app.route("/")
 def index():
-    return render_template("index.html", services=SERVICES)
+    return render_template("index.html", services=SERVICES, remotion_port=REMOTION_PORT)
 
 
 @app.route("/api/health")
@@ -437,8 +447,19 @@ def resolve_bgm_for_channel_slug(channel: str, slug: str, base_url: str = "") ->
     return {}
 
 
-def build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1:3000"):
+def _normalize_media_url(url, prefix):
+    if not url or not isinstance(url, str):
+        return url
+    if "/api/media/" in url:
+        path = url[url.index("/api/media/"):]
+        return f"{prefix}{path}"
+    return url
+
+
+def build_composition_for_channel_slug(channel, slug, base_url=None):
     """Tạo cấu trúc VideoCompositionProps hoàn chỉnh cho Remotion Player hoặc Render CLI."""
+    if base_url is None:
+        base_url = f"http://127.0.0.1:{STUDIO_PORT}"
     video_dir = ROOT_DIR / "channels" / channel / "videos" / slug
     if not video_dir.exists():
         return None
@@ -553,6 +574,11 @@ def build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1
                             break
                     if matched_asset:
                         seq["asset_path"] = matched_asset
+                else:
+                    seq["asset_path"] = _normalize_media_url(seq["asset_path"], prefix)
+
+                if seq.get("narration_audio_url"):
+                    seq["narration_audio_url"] = _normalize_media_url(seq["narration_audio_url"], prefix)
 
             # Đảm bảo tổng số frames và duration chính xác
             total_f = sum(s.get("duration_frames", 0) for s in data.get("sequences", []))
@@ -563,12 +589,16 @@ def build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1
             master_file = ensure_master_narration(video_dir, data.get("sequences", []), data.get("fps", 30))
             if master_file and master_file.exists():
                 data["master_audio_url"] = f"{prefix}/api/media/{channel}/{slug}/audio/narration_master.wav"
+            elif data.get("master_audio_url"):
+                data["master_audio_url"] = _normalize_media_url(data["master_audio_url"], prefix)
 
             # Tự động gán BGM mặc định cho channel nếu video chưa có cấu hình riêng
             if not data.get("bgm_url"):
                 bgm_info = resolve_bgm_for_channel_slug(channel, slug, base_url=base_url)
                 if bgm_info:
                     data.update(bgm_info)
+            else:
+                data["bgm_url"] = _normalize_media_url(data["bgm_url"], prefix)
 
             return data
         except Exception as e:
@@ -676,7 +706,8 @@ def api_channel_bgm(channel, filepath):
 @app.route("/api/video-data/<channel>/<slug>")
 def api_video_data(channel, slug):
     """Lấy dữ liệu composition và sequences cho Remotion Player."""
-    data = build_composition_for_channel_slug(channel, slug, base_url="")
+    base_url = f"http://localhost:{STUDIO_PORT}"
+    data = build_composition_for_channel_slug(channel, slug, base_url=base_url)
     if data:
         return jsonify({"status": "ok", "composition": data})
     return jsonify({"status": "error", "message": "Composition not found"}), 404
@@ -703,7 +734,7 @@ def _execute_render_task(task_id, channel, slug, fps=30):
 
     try:
         # Lấy composition data đầy đủ với full HTTP URLs cho Remotion Headless Chromium
-        comp_data = build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1:3000")
+        comp_data = build_composition_for_channel_slug(channel, slug, base_url=f"http://127.0.0.1:{STUDIO_PORT}")
         if not comp_data:
             raise FileNotFoundError(f"Không thể khởi tạo composition data cho {channel}/{slug}")
 
@@ -883,7 +914,7 @@ def api_sync_remotion_props():
     if not channel or not slug:
         return jsonify({"status": "error", "message": "Missing channel or slug"}), 400
 
-    comp_data = build_composition_for_channel_slug(channel, slug, base_url="http://127.0.0.1:3000")
+    comp_data = build_composition_for_channel_slug(channel, slug, base_url=f"http://127.0.0.1:{STUDIO_PORT}")
     if not comp_data:
         return jsonify({"status": "error", "message": "Composition not found"}), 404
 
@@ -1117,7 +1148,7 @@ if __name__ == "__main__":
     checker = threading.Thread(target=background_health_checker, daemon=True)
     checker.start()
 
-    port = int(os.environ.get("PORT", 3000))
+    port = STUDIO_PORT
     print(f"[Studio] AI Audio Studio starting on http://0.0.0.0:{port}")
     print(f"[Studio] Platform: {platform.system()} {platform.machine()}")
     print(f"[Studio] Root: {ROOT_DIR}")

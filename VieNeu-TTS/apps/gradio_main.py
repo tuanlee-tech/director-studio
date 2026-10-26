@@ -2231,16 +2231,14 @@ with gr.Blocks(theme=theme, css=css, title="VieNeu-TTS", head=head_html) as demo
                         label="Trạng thái", 
                         elem_classes="status-box",
                         lines=2,
-                        max_lines=10,
-                        show_copy_button=True
+                        max_lines=10
                     )
                 with gr.Group():
                     estimate_output = gr.Textbox(
                         label="Ước tính thời gian",
                         elem_classes="estimate-box",
                         lines=2,
-                        max_lines=4,
-                        show_copy_button=True
+                        max_lines=4
                     )
                 download_btn = gr.DownloadButton(
                     "📥 Tải xuống file Audio",

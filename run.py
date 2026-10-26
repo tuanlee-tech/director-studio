@@ -22,6 +22,13 @@ import argparse
 import urllib.request
 from pathlib import Path
 
+# Load .env
+try:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT_DIR / ".env")
+except Exception:
+    pass
+
 # Fix UTF-8 console output for Windows
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -32,6 +39,7 @@ STUDIO_DIR = ROOT_DIR / "studio"
 REMOTION_DIR = STUDIO_DIR / "remotion"
 PIDFILE_TTS = ROOT_DIR / ".tts.pid"
 PIDFILE_STUDIO = ROOT_DIR / ".studio.pid"
+PIDFILE_REMOTION = ROOT_DIR / ".remotion.pid"
 
 IS_WIN = sys.platform == "win32"
 IS_LINUX = sys.platform.startswith("linux")
@@ -140,17 +148,20 @@ def start_tts_service():
 
 
 def start_studio_service():
-    """Khởi chạy Studio Web UI trên cổng 3000."""
-    if is_port_in_use(3000):
-        print("✅ Studio UI đã ĐANG CHẠY tại http://localhost:3000")
+    """Khởi chạy Studio Web UI trên cổng 3001 (3000 bị chiếm)."""
+    if is_port_in_use(3001):
+        print("✅ Studio UI đã ĐANG CHẠY tại http://localhost:3001")
         return None
 
     studio_py = get_studio_python()
-    print("🚀 Đang khởi động AI Audio & Video Studio UI trên cổng 3000...")
+    print("🚀 Đang khởi động AI Audio & Video Studio UI trên cổng 3001...")
 
     env = os.environ.copy()
-    env["PORT"] = "3000"
+    env["PORT"] = "3001"
     env["VIENEU_TTS_URL"] = "http://localhost:7860"
+
+    log_out = open(STUDIO_DIR / "studio.stdout.log", "a", encoding="utf-8")
+    log_err = open(STUDIO_DIR / "studio.stderr.log", "a", encoding="utf-8")
 
     creationflags = 0
     if IS_WIN:
@@ -160,6 +171,8 @@ def start_studio_service():
         [str(studio_py), "app.py"],
         cwd=str(STUDIO_DIR),
         env=env,
+        stdout=log_out,
+        stderr=log_err,
         creationflags=creationflags
     )
 
@@ -167,11 +180,52 @@ def start_studio_service():
     return proc
 
 
+def start_remotion_service():
+    """Khởi chạy Remotion Studio Preview trên cổng từ .env (mặc định 3100)."""
+    remotion_port = int(os.environ.get("REMOTION_PORT", "3100"))
+    if is_port_in_use(remotion_port):
+        print(f"✅ Remotion Studio đã ĐANG CHẠY tại http://localhost:{remotion_port}")
+        return None
+
+    if not REMOTION_DIR.exists() or not (REMOTION_DIR / "node_modules").exists():
+        print("⚠️ Remotion dependencies chưa cài đặt. Bỏ qua Remotion Studio.")
+        return None
+
+    print(f"🚀 Đang khởi động Remotion Studio Preview trên cổng {remotion_port}...")
+
+    npm_bin = shutil.which("npm.cmd" if IS_WIN else "npm")
+    if not npm_bin:
+        print("⚠️ npm không tìm thấy. Bỏ qua Remotion Studio.")
+        return None
+
+    env = os.environ.copy()
+    env["PORT"] = str(remotion_port)
+
+    log_out = open(REMOTION_DIR / "remotion.stdout.log", "a", encoding="utf-8")
+    log_err = open(REMOTION_DIR / "remotion.stderr.log", "a", encoding="utf-8")
+
+    creationflags = 0
+    if IS_WIN:
+        creationflags = subprocess.CREATE_NEW_PROCESS_GROUP
+
+    proc = subprocess.Popen(
+        [npm_bin, "run", "start"],
+        cwd=str(REMOTION_DIR),
+        env=env,
+        stdout=log_out,
+        stderr=log_err,
+        creationflags=creationflags
+    )
+
+    PIDFILE_REMOTION.write_text(str(proc.pid))
+    return proc
+
+
 def stop_all_services():
-    """Dừng toàn bộ các tiến trình TTS và Studio."""
+    """Dừng toàn bộ các tiến trình TTS, Studio và Remotion."""
     print("🛑 Đang dừng toàn bộ các dịch vụ dự án...")
 
-    for pid_file, name in [(PIDFILE_TTS, "VieNeu-TTS"), (PIDFILE_STUDIO, "Studio")]:
+    for pid_file, name in [(PIDFILE_TTS, "VieNeu-TTS"), (PIDFILE_STUDIO, "Studio"), (PIDFILE_REMOTION, "Remotion Studio")]:
         if pid_file.exists():
             try:
                 pid = int(pid_file.read_text().strip())
@@ -187,9 +241,10 @@ def stop_all_services():
             except Exception:
                 pass
 
-    # Giải phóng các cổng 3000 và 7860
+    # Giải phóng các cổng 3001, 7860 và remotion port
+    remotion_port = int(os.environ.get("REMOTION_PORT", "3100"))
     if IS_WIN:
-        for port in [3000, 7860]:
+        for port in [3001, 7860, remotion_port]:
             try:
                 res = subprocess.run(f'netstat -ano | findstr :{port}', shell=True, capture_output=True, text=True)
                 for line in res.stdout.splitlines():
@@ -200,7 +255,7 @@ def stop_all_services():
             except Exception:
                 pass
     else:
-        for port in [3000, 7860]:
+        for port in [3001, 7860, remotion_port]:
             try:
                 subprocess.run(f"fuser -k {port}/tcp", shell=True, capture_output=True)
             except Exception:
@@ -215,10 +270,14 @@ def show_status():
     print("-" * 65)
 
     tts_ok = is_port_in_use(7860)
-    studio_ok = is_port_in_use(3000)
+    studio_ok = is_port_in_use(3001)
+    remotion_port = int(os.environ.get("REMOTION_PORT", "3100"))
+    remotion_ok = is_port_in_use(remotion_port)
 
-    print(f"  • VieNeu-TTS (Port 7860) : {'🟢 ONLINE  (http://localhost:7860)' if tts_ok else '⚪ OFFLINE'}")
-    print(f"  • Studio UI  (Port 3000) : {'🟢 ONLINE  (http://localhost:3000)' if studio_ok else '⚪ OFFLINE'}")
+    remotion_url = f"http://localhost:{remotion_port}"
+    print(f"  • VieNeu-TTS     (Port 7860) : {'🟢 ONLINE  (http://localhost:7860)' if tts_ok else '⚪ OFFLINE'}")
+    print(f"  • Studio UI      (Port 3001) : {'🟢 ONLINE  (http://localhost:3001)' if studio_ok else '⚪ OFFLINE'}")
+    print(f"  • Remotion Studio(Port {remotion_port}) : {f'🟢 ONLINE  ({remotion_url})' if remotion_ok else '⚪ OFFLINE'}")
 
     # Kiểm tra 5 cổng Google Flow CDP
     print("\n  • Google Flow CDP Ports (9223 - 9227):")
@@ -263,13 +322,21 @@ def main():
             if studio_proc:
                 procs.append(studio_proc)
 
-        time.sleep(2)
+        # 3. Khởi động Remotion Studio Preview
+        if not args.tts_only and not args.studio_only:
+            remotion_proc = start_remotion_service()
+            if remotion_proc:
+                procs.append(remotion_proc)
+
+        time.sleep(3)
         show_status()
 
-        print("""
+        remotion_port = int(os.environ.get("REMOTION_PORT", "3100"))
+        print(f"""
 \033[1;32m🎉 DỰ ÁN ĐÃ KHỞI CHẠY THÀNH CÔNG!\033[0m
-👉 Truy cập Studio: \033[1;34mhttp://localhost:3000\033[0m
-👉 Truy cập TTS:    \033[1;34mhttp://localhost:7860\033[0m
+👉 Truy cập Studio:        \033[1;34mhttp://localhost:3001\033[0m
+👉 Truy cập TTS:           \033[1;34mhttp://localhost:7860\033[0m
+👉 Remotion Studio Preview:\033[1;34mhttp://localhost:{remotion_port}\033[0m
 
 \033[1;33m💡 Nhấn Ctrl + C để dừng tất cả dịch vụ.\033[0m
 """)
