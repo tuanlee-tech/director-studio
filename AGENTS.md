@@ -78,3 +78,14 @@ Trước khi bàn giao hoặc hoàn tất bất kỳ tác vụ nào liên quan �
    ```
    Kết quả bắt buộc phải đạt **`[PASS] AUDIT PASSED! 100% compliant with Remotion Motion Rules`**.
 2. Render kiểm thử hình ảnh (*still render*) tại các phân cảnh vừa can thiệp để đảm bảo không lỗi biên dịch, không lỗi font, và bố cục hiển thị chuẩn mực trước khi xuất video.
+
+---
+
+### ĐIỀU 9: Quy Chuẩn Âm Thanh Video AIV (Nghiêm Cấm Thoại Nhân Vật & Nhạc Nền)
+1. **Tuyệt đối nghiêm cấm**:
+   - Video AI (AIV) **không được có giọng nói, lời thoại nhân vật** (*no character speech, no dialogue, no talking voices*). Lời thoại duy nhất trong toàn bộ video là giọng đọc của Narration Host từ file audio chính.
+   - Video AI (AIV) **không được chứa nhạc nền nội bộ** (*no background music, no soundtrack*). Nhạc nền duy nhất là bản BGM được điều phối ở tầng Master Remotion Composition.
+2. **Âm thanh được phép**: Chỉ chấp nhận tiếng động môi trường / SFX tự nhiên ở mức độ tinh tế (*subtle natural ambient sound effects, foley SFX* như tiếng gió, tiếng kéo cắt thẻ, tiếng click máy tính, tiếng lách cách bát đĩa).
+3. **Quy định Prompt sinh AIV**: Mọi prompt gửi cho công cụ sinh video AIV bắt buộc phải chứa đoạn khóa âm thanh:
+   `Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects.`
+4. **Xử lý sự cố (Mute Override)**: Nếu video AIV bị dính tiếng nói hoặc nhạc nền ngoài ý muốn, bắt buộc phải strip audio track (`ffmpeg -c:v copy -an`) hoặc set `volume={0}` tại phân cảnh đó.

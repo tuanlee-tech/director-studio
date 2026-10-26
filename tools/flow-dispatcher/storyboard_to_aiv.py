@@ -54,7 +54,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S001",
         "sb_pattern": r"phone alert|man reacting|shock|nợ 40 triệu",
         "output_file": "S001-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. The young man starts smiling looking at his phone, his smile quickly freezes and fades, his eyes widen in extreme comic shock, mouth opens in disbelief, sweat drops appear on his forehead as a red downward arrow icon floats beside him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions. No 3D rendering, no CGI, no photorealism. Avoid text, typography, watermarks, distorted faces."
+        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. The young man starts smiling looking at his phone, his smile quickly freezes and fades, his eyes widen in extreme comic shock, mouth opens in disbelief, sweat drops appear on his forehead as a red downward arrow icon floats beside him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism. Avoid text, typography, watermarks, distorted faces."
     },
     {
         "acc_id": 2,
@@ -62,7 +62,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S002",
         "sb_pattern": r"paying with credit card|pos|receipt|lounge|quẹt thẻ",
         "output_file": "S002-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man proudly presents the card, swipes it across the terminal, a receipt scrolls out rapidly, and his confident expression softens into an uneasy hesitation. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man proudly presents the card, swipes it across the terminal, a receipt scrolls out rapidly, and his confident expression softens into an uneasy hesitation. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 3,
@@ -70,7 +70,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S003",
         "sb_pattern": r"wallet sinking|ocean abyss|underwater|chìm",
         "output_file": "S003-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The floating wallet is snagged by the heavy iron anchor, which drags it underwater with accelerating downward motion, leaving a trail of rising bubbles. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The floating wallet is snagged by the heavy iron anchor, which drags it underwater with accelerating downward motion, leaving a trail of rising bubbles. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 4,
@@ -78,7 +78,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S004",
         "sb_pattern": r"parting mist|host|studio backdrop|sương mù",
         "output_file": "S004-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The host steps through the dissipating fog, smiles warmly and confidently at the camera, and raises an open hand as four green numbered badges pop up with a playful bounce. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The host steps through the dissipating fog, smiles warmly and confidently at the camera, and raises an open hand as four green numbered badges pop up with a playful bounce. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 1,
@@ -86,7 +86,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S007",
         "sb_pattern": r"S007|dining|restaurant|ăn uống|cocktail",
         "output_file": "S007-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The group of young professional friends sit around the dinner table laughing and chatting joyfully, raising their cocktail glasses in a celebratory toast while warm ambient restaurant lights glow overhead. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive happy faces. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The group of young professional friends sit around the dinner table laughing and chatting joyfully, raising their cocktail glasses in a celebratory toast while warm ambient restaurant lights glow overhead. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive happy faces.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 3,
@@ -94,7 +94,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S011",
         "sb_pattern": r"S011|billing alert|15,000,000",
         "output_file": "S011-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man with glasses stares in frozen shock at his glowing red phone screen displaying 'BILLING ALERT: 15,000,000 VND'. His eyes widen in extreme comic shock, sweat beads run down his face, his trembling hand holds the phone as red warning light pulses across his face. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading. Expressive comic shock. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man with glasses stares in frozen shock at his glowing red phone screen displaying 'BILLING ALERT: 15,000,000 VND'. His eyes widen in extreme comic shock, sweat beads run down his face, his trembling hand holds the phone as red warning light pulses across his face. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading. Expressive comic shock.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 4,
@@ -102,7 +102,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S052",
         "sb_pattern": r"S052|ôm đầu|billing statements|kiệt quệ",
         "output_file": "S052-A_4s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 4-second shot. The young man with glasses sits at his wooden desk late at night under a warm desk lamp, holding his head in deep distress and exhaustion, breathing heavily while papers and billing statements cover the desk around him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive exhausted face. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 4-second shot. The young man with glasses sits at his wooden desk late at night under a warm desk lamp, holding his head in deep distress and exhaustion, breathing heavily while papers and billing statements cover the desk around him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive exhausted face.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 3,
@@ -110,7 +110,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S058",
         "sb_pattern": r"S058|Woman cooking|tự nấu",
         "output_file": "S058-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young woman with glasses and an apron stands happily in her bright sunny kitchen, smiling warmly and peacefully as steam gently rises from a cooking pot on the stove while she gently stirs with a wooden spoon. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Joyful, serene expression. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young woman with glasses and an apron stands happily in her bright sunny kitchen, smiling warmly and peacefully as steam gently rises from a cooking pot on the stove while she gently stirs with a wooden spoon. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Joyful, serene expression.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 5,
@@ -118,7 +118,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S064",
         "sb_pattern": r"scissors cutting credit card|scissors|cắt thẻ",
         "output_file": "S064-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. The scissors cleanly snip through the plastic credit card with a decisive motion, the two halves spring slightly apart and settle onto the surface as sparkling light bursts forth. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. The scissors cleanly snip through the plastic credit card with a decisive motion, the two halves spring slightly apart and settle onto the surface as sparkling light bursts forth. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 5,
@@ -126,7 +126,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S081",
         "sb_pattern": r"hilltop|grassy hilltop|làm chủ đồng tiền",
         "output_file": "S081-A_4s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 4-second shot. The young man with glasses stands proudly on the grassy hilltop at sunrise, smiling serenely as gentle morning wind ruffles his hair and grass waves softly in the breeze. Golden morning sunlight radiates warm lens flares across the green landscape. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors, flat shading. Peaceful, triumphant expression. Anatomically complete and correct hands and arms. No 3D rendering, no CGI, no photorealism."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 4-second shot. The young man with glasses stands proudly on the grassy hilltop at sunrise, smiling serenely as gentle morning wind ruffles his hair and grass waves softly in the breeze. Golden morning sunlight radiates warm lens flares across the green landscape. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors, flat shading. Peaceful, triumphant expression. Anatomically complete and correct hands and arms.  Audio: No character speech, no dialogue, no talking voices, no background music. Only subtle natural ambient environmental sounds and foley sound effects. No 3D rendering, no CGI, no photorealism."
     }
 ]
 

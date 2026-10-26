@@ -11063,8 +11063,8 @@
     }
   ],
   "master_audio_url": "audio/narration_master.wav",
-  "bgm_url": "bgm/bgm_calm_lofi.mp3",
-  "bgm_volume": 0.1,
-  "bgm_duration_seconds": 168.010438,
-  "bgm_duration_frames": 5040
+  "bgm_url": "bgm/bgm_enlivening.mp3",
+  "bgm_volume": 0.22,
+  "bgm_duration_seconds": 152.82,
+  "bgm_duration_frames": 4584
 }
