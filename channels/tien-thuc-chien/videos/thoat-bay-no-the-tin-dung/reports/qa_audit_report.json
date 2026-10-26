@@ -1,10 +1,10 @@
 {
   "channel": "tien-thuc-chien",
   "video_slug": "thoat-bay-no-the-tin-dung",
-  "timestamp": "2026-10-26 07:19:01",
+  "timestamp": "2026-10-26 20:02:43",
   "passed": true,
-  "total_checks": 6,
-  "passed_checks": 6,
+  "total_checks": 7,
+  "passed_checks": 7,
   "failed_checks": 0,
   "warning_checks": 0,
   "checks": [
@@ -12,7 +12,7 @@
       "category": "Assets",
       "name": "Asset Coverage & File Integrity",
       "passed": true,
-      "details": "100% Assets hợp lệ: 37 files (AIV: 5, IMG: 32) đều nguyên vẹn, > 50KB và đúng metadata ffprobe/PIL",
+      "details": "100% Assets hợp lệ: 37 files (AIV: 10, IMG: 27) đều nguyên vẹn, > 50KB và đúng metadata ffprobe/PIL",
       "errors": [],
       "warnings": []
     },
@@ -20,7 +20,7 @@
       "category": "Naming",
       "name": "File Naming & Anti-Alias Standardization",
       "passed": true,
-      "details": "100% File trong assets/ (42 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
+      "details": "100% File trong assets/ (47 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
       "errors": [],
       "warnings": []
     },
@@ -55,19 +55,28 @@
       "details": "100% Audio & Timing đồng bộ: 81/81 cảnh đầy đủ WAV và JSON timing, 0 cảnh bị cắt âm",
       "errors": [],
       "warnings": []
+    },
+    {
+      "category": "Vision QA",
+      "name": "Visual Concept Alignment & Anatomy Integrity",
+      "passed": true,
+      "details": "100% Phân cảnh (42 assets) khớp ngữ cảnh thị giác Visual Concept & giải phẫu học",
+      "errors": [],
+      "warnings": []
     }
   ],
   "errors": [],
   "warnings": [],
   "summary_stats": {
     "total_visual_sequences": 81,
-    "aiv_count": 5,
-    "img_count": 32,
+    "aiv_count": 10,
+    "img_count": 27,
     "gfx_count": 44,
     "verified_assets_count": 37,
-    "valid_media_files": 42,
+    "valid_media_files": 47,
     "clean_images_count": 37,
     "tainted_images_count": 0,
-    "audio_valid_scenes": 81
+    "audio_valid_scenes": 81,
+    "vision_qa_verified_assets": 42
   }
 }

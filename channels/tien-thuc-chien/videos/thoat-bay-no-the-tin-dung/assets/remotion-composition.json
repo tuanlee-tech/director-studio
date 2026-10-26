@@ -16,7 +16,7 @@
         "duration_frames": 180,
         "duration_seconds": 6,
         "description": "Chàng trai sốc nhìn số dư nợ 40 triệu đồng trong app ngân hàng, mồ hôi rơi",
-        "component": "OffthreadVideo",
+        "component": "Video",
         "props": {
           "src": "assets/S001-A_6s_AIV.mp4"
         }
@@ -29,7 +29,7 @@
         "duration_frames": 180,
         "duration_seconds": 6,
         "description": "Cảnh quẹt thẻ thanh toán hào nhoáng tại quầy bar sang chảnh giữa ánh đèn lung linh",
-        "component": "OffthreadVideo",
+        "component": "Video",
         "props": {
           "src": "assets/S002-A_6s_AIV.mp4"
         }
@@ -42,7 +42,7 @@
         "duration_frames": 180,
         "duration_seconds": 6,
         "description": "Chiếc mỏ neo kim loại khổng lồ gắn vào chiếc ví da kéo chìm dần xuống đáy biển sâu",
-        "component": "OffthreadVideo",
+        "component": "Video",
         "props": {
           "src": "assets/S003-A_6s_AIV.mp4"
         }
@@ -55,7 +55,7 @@
         "duration_frames": 180,
         "duration_seconds": 6,
         "description": "Chàng trai đại diện kênh bước vào giữa khung hình, xua tan làn sương mù, giơ tay đưa ra lộ trình",
-        "component": "OffthreadVideo",
+        "component": "Video",
         "props": {
           "src": "assets/S004-A_6s_AIV.mp4"
         }
@@ -92,15 +92,14 @@
       {
         "id": "S007-A",
         "scene_id": "S007",
-        "type": "IMG",
+        "type": "AIV",
         "from_frame": 990,
         "duration_frames": 180,
         "duration_seconds": 6,
         "description": "Nhóm bạn trẻ ăn uống sang chảnh tại nhà hàng, ly cocktail và đồ công nghệ trên bàn",
-        "component": "KenBurnsImage",
+        "component": "Video",
         "props": {
-          "src": "assets/S007-A_6s_IMG.png",
-          "animation": "pan-right"
+          "src": "assets/S007-A_6s_AIV.mp4"
         }
       },
       {
@@ -150,15 +149,14 @@
       {
         "id": "S011-A",
         "scene_id": "S011",
-        "type": "IMG",
+        "type": "AIV",
         "from_frame": 1620,
         "duration_frames": 180,
         "duration_seconds": 6,
         "description": "Nhân vật hoảng hốt trợn tròn mắt nhìn thông báo sao kê ngân hàng đỏ rực 15 triệu",
-        "component": "KenBurnsImage",
+        "component": "Video",
         "props": {
-          "src": "assets/S011-A_6s_IMG.png",
-          "animation": "pan-right"
+          "src": "assets/S011-A_6s_AIV.mp4"
         }
       },
       {
@@ -758,15 +756,14 @@
       {
         "id": "S052-A",
         "scene_id": "S052",
-        "type": "IMG",
+        "type": "AIV",
         "from_frame": 7680,
         "duration_frames": 120,
         "duration_seconds": 4,
         "description": "Người A mải mê chụp ảnh check-in sang chảnh bên những món đồ mới mua",
-        "component": "KenBurnsImage",
+        "component": "Video",
         "props": {
-          "src": "assets/S052-A_4s_IMG.png",
-          "animation": "zoom-in"
+          "src": "assets/S052-A_4s_AIV.mp4"
         }
       },
       {
@@ -847,15 +844,14 @@
       {
         "id": "S058-A",
         "scene_id": "S058",
-        "type": "IMG",
+        "type": "AIV",
         "from_frame": 8550,
         "duration_frames": 120,
         "duration_seconds": 4,
         "description": "Người B tự nấu bữa cơm đơn giản tại nhà, nụ cười nhẹ nhõm và an yên",
-        "component": "KenBurnsImage",
+        "component": "Video",
         "props": {
-          "src": "assets/S058-A_4s_IMG.png",
-          "animation": "zoom-in"
+          "src": "assets/S058-A_6s_AIV.mp4"
         }
       },
       {
@@ -940,7 +936,7 @@
         "duration_frames": 180,
         "duration_seconds": 6,
         "description": "Cận cảnh chiếc kéo kim loại sắc bén dứt khoát cắt đôi chiếc thẻ tín dụng mạ vàng, tia sáng phát ra biểu thị sự giải phóng",
-        "component": "OffthreadVideo",
+        "component": "Video",
         "props": {
           "src": "assets/S064-A_6s_AIV.mp4"
         }
@@ -1182,15 +1178,14 @@
       {
         "id": "S081-A",
         "scene_id": "S081",
-        "type": "IMG",
+        "type": "AIV",
         "from_frame": 12150,
         "duration_frames": 120,
         "duration_seconds": 4,
         "description": "Nhân vật đứng trên đỉnh đồi lộng gió, logo Tiền Thực Chiến hiện lên trang nhã",
-        "component": "KenBurnsImage",
+        "component": "Video",
         "props": {
-          "src": "assets/S081-A_4s_IMG.png",
-          "animation": "pan-right"
+          "src": "assets/S081-A_4s_AIV.mp4"
         }
       }
     ],
@@ -1924,17 +1919,17 @@
       "scene": "S007",
       "beat": "Nhóm bạn trẻ ăn uống sang chảnh tại nhà hàng, ly cocktail và đồ công nghệ trên bàn",
       "narration_text": "Bạn bắt đầu quẹt thẻ cho những bữa ăn cùng đồng nghiệp, những món đồ công nghệ mới hay chuyến du lịch ngắn.",
-      "type": "IMG",
+      "type": "AIV",
       "start_frame": 990,
       "duration_frames": 180,
       "duration_seconds": 6,
-      "component": "KenBurnsImage",
+      "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
         "src": "assets/S007-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S007-A_6s_IMG.png",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S007-A_6s_AIV.mp4",
       "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S007_narration.wav",
       "words": [
         {
@@ -2434,17 +2429,17 @@
       "scene": "S011",
       "beat": "Nhân vật hoảng hốt trợn tròn mắt nhìn thông báo sao kê ngân hàng đỏ rực 15 triệu",
       "narration_text": "Rồi ngày sao kê đầu tiên ập đến với con số mười lăm triệu đồng vượt quá khả năng chi trả ngay lập tức.",
-      "type": "IMG",
+      "type": "AIV",
       "start_frame": 1620,
       "duration_frames": 180,
       "duration_seconds": 6,
-      "component": "KenBurnsImage",
+      "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
         "src": "assets/S011-A_6s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S011-A_6s_IMG.png",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S011-A_6s_AIV.mp4",
       "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S011_narration.wav",
       "words": [
         {
@@ -7343,17 +7338,17 @@
       "scene": "S052",
       "beat": "Người A mải mê chụp ảnh check-in sang chảnh bên những món đồ mới mua",
       "narration_text": "Anh ta giữ lối sống bề nổi, đi cà phê và mua sắm không hề suy nghĩ.",
-      "type": "IMG",
+      "type": "AIV",
       "start_frame": 7680,
       "duration_frames": 120,
       "duration_seconds": 4,
-      "component": "KenBurnsImage",
+      "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
         "src": "assets/S052-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S052-A_4s_IMG.png",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S052-A_4s_AIV.mp4",
       "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S052_narration.wav",
       "words": [
         {
@@ -8081,17 +8076,17 @@
       "scene": "S058",
       "beat": "Người B tự nấu bữa cơm đơn giản tại nhà, nụ cười nhẹ nhõm và an yên",
       "narration_text": "Cuộc sống trong mười tháng đó có phần đạm bạc hơn nhưng tinh thần vô cùng thanh thản.",
-      "type": "IMG",
+      "type": "AIV",
       "start_frame": 8550,
       "duration_frames": 120,
       "duration_seconds": 4,
-      "component": "KenBurnsImage",
+      "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
         "src": "assets/S058-A_4s_IMG.png",
         "animation": "zoom-in"
       },
-      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S058-A_4s_IMG.png",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S058-A_6s_AIV.mp4",
       "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S058_narration.wav",
       "words": [
         {
@@ -10966,17 +10961,17 @@
       "scene": "S081",
       "beat": "Nhân vật đứng trên đỉnh đồi lộng gió, logo Tiền Thực Chiến hiện lên trang nhã",
       "narration_text": "Bình yên tài chính không đến từ thu nhập cao, mà từ việc làm chủ đồng tiền.",
-      "type": "IMG",
+      "type": "AIV",
       "start_frame": 12150,
       "duration_frames": 120,
       "duration_seconds": 4,
-      "component": "KenBurnsImage",
+      "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
         "src": "assets/S081-A_4s_IMG.png",
         "animation": "pan-right"
       },
-      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S081-A_4s_IMG.png",
+      "asset_path": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/assets/S081-A_4s_AIV.mp4",
       "narration_audio_url": "http://127.0.0.1:3001/api/media/tien-thuc-chien/thoat-bay-no-the-tin-dung/audio/S081_narration.wav",
       "words": [
         {

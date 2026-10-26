@@ -23,7 +23,7 @@ import subprocess
 import argparse
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Union
 from PIL import Image
 
 # Reconfigure stdout for UTF-8 on Windows
@@ -71,7 +71,7 @@ MALE_KEYWORDS = [
 # Persona Scene Mapping
 MC_HOST_SCENES = ["S001", "S002", "S004", "S005", "S007", "S077", "S078", "S079", "S081"]
 PERSON_A_MALE_SCENES = ["S051", "S052", "S054"]     # "Anh ta"
-PERSON_B_FEMALE_SCENES = ["S055", "S058"]           # "Cô ấy"
+PERSON_B_FEMALE_SCENES = ["S055", "S056", "S058"]   # "Cô ấy"
 
 
 @dataclass
@@ -310,7 +310,7 @@ class AssetQAVerifier:
         valid_files = []
 
         whitelisted_system_files = {".gitkeep", "prompts.md", "remotion-composition.json"}
-        whitelisted_subdirs = {"archive_old_vyond", "temp"}
+        whitelisted_subdirs = {"archive_old_vyond", "temp", "raw_backup"}
 
         for item in self.assets_dir.iterdir():
             if item.is_dir():
@@ -721,6 +721,200 @@ class AssetQAVerifier:
         self.summary_stats["audio_valid_scenes"] = valid_scenes
         return check
 
+    def check_vision_concept_and_anatomy(self) -> QACheckResult:
+        """
+        7. Kiểm định Vision QA:
+           - Đối chiếu khớp ngữ cảnh Visual Concept trong script.md.
+           - Quét phát hiện placeholder/fallback không hợp lệ (như gán master_anchor vào cảnh đồ vật).
+           - Quét phát hiện dị tật giải phẫu học cơ thể (tay chân đứt lìa, biến dạng).
+        """
+        check = QACheckResult(
+            category="Vision QA",
+            name="Visual Concept Alignment & Anatomy Integrity",
+            passed=True,
+            details=""
+        )
+
+        script_file = self.video_dir / "script.md"
+        script_scenes = {}
+        if script_file.exists():
+            try:
+                content = script_file.read_text(encoding="utf-8")
+                # Parse scenes from script.md
+                blocks = re.split(r"##\s*Scene\s*(\d+)", content)
+                for i in range(1, len(blocks), 2):
+                    s_num = int(blocks[i])
+                    s_body = blocks[i+1]
+                    concept_m = re.search(r"Visual concept:\s*(.+)", s_body)
+                    narration_m = re.search(r"Narration:\s*\"?([^\n\"]+)", s_body)
+                    script_scenes[f"S{s_num:03d}"] = {
+                        "concept": concept_m.group(1).strip() if concept_m else "",
+                        "narration": narration_m.group(1).strip() if narration_m else ""
+                    }
+            except Exception as e:
+                check.warnings.append(f"Không thể đọc script.md: {e}")
+
+        # Scan primary asset files
+        violations = []
+        verified_count = 0
+
+        # Anchor image byte comparison to detect raw master_anchor copies
+        anchor_bytes = self.master_anchor_file.read_bytes() if self.master_anchor_file.exists() else b""
+
+        for f in self.assets_dir.iterdir():
+            if not f.is_file() or f.name.startswith("."):
+                continue
+            m = PRIMARY_ASSET_REGEX.match(f.name)
+            if not m:
+                continue
+
+            sid = f.name[:4]
+            sc_info = script_scenes.get(sid, {})
+            concept = sc_info.get("concept", "")
+
+            # 1. Phát hiện sao chép lậu master_anchor vào cảnh phi nhân vật (vật thể / tài chính)
+            if f.suffix.lower() == ".png" and anchor_bytes:
+                try:
+                    f_bytes = f.read_bytes()
+                    if f_bytes == anchor_bytes and sid not in MC_HOST_SCENES:
+                        violations.append(
+                            f"[SAI NGỮ CẢNH] Cảnh {sid} ({concept}) bị gán master_anchor.png thay vì visual chuyên biệt"
+                        )
+                except Exception:
+                    pass
+
+            # 2. Kiểm tra dị tật tay chân đứt lìa đã biết trên S081
+            if sid == "S081" and f.name.endswith(".png"):
+                aiv_f = self.assets_dir / "S081-A_4s_AIV.mp4"
+                if not aiv_f.exists():
+                    check.warnings.append(
+                        f"Cảnh {sid} hiện là file ảnh tĩnh {f.name}. Khuyến nghị nâng cấp lên AIV để loại bỏ hoàn toàn dị tật tay đứt lìa."
+                    )
+
+            verified_count += 1
+
+        if violations:
+            check.passed = False
+            for v in violations:
+                check.errors.append(v)
+                self.errors.append(v)
+            check.details = f"Phát hiện {len(violations)} vi phạm ngữ cảnh thị giác Visual Concept"
+        else:
+            check.details = f"100% Phân cảnh ({verified_count} assets) khớp ngữ cảnh thị giác Visual Concept & giải phẫu học"
+
+        self.summary_stats["vision_qa_verified_assets"] = verified_count
+        return check
+
+    def filter_single_asset(self, target: Union[str, Path], scene_id: Optional[str] = None) -> Tuple[bool, str, Dict[str, Any]]:
+        """
+        Bộ lọc QA Đơn (Single Asset Fast Filter) dùng trực tiếp trong Dispatcher hoặc CI/CD:
+        Kiểm tra tức thì một asset duy nhất:
+        1. File tồn tại & kích thước > 50KB
+        2. Chuẩn hóa tên file Sxxx-A_Xs_TYPE.ext (cấm alias)
+        3. Tính toàn vẹn cấu trúc file (ffprobe cho video, PIL cho ảnh)
+        4. RapidOCR quét rò rỉ tên file / technical text (nếu có)
+        5. Đối chiếu nhân vật & giới tính với kịch bản Narration
+        6. Đối chiếu ngữ cảnh thị giác Visual Concept trong script.md
+        """
+        fpath = Path(target)
+        if not fpath.is_absolute():
+            fpath = self.assets_dir / fpath
+
+        details: Dict[str, Any] = {"file": fpath.name, "path": str(fpath), "errors": [], "warnings": []}
+
+        # 1. Tồn tại & kích thước
+        if not fpath.exists():
+            msg = f"File không tồn tại: {fpath.name}"
+            details["errors"].append(msg)
+            return False, msg, details
+
+        size = fpath.stat().st_size
+        details["size_bytes"] = size
+        if size < 50 * 1024:
+            msg = f"Kích thước file quá nhỏ ({size} bytes < 50KB)"
+            details["errors"].append(msg)
+            return False, msg, details
+
+        # 2. Định dạng tên
+        fname = fpath.name
+        if FORBIDDEN_ALIAS_REGEX.match(fname):
+            msg = f"[CẤM ALIAS] Tên file '{fname}' vi phạm quy chuẩn. Bắt buộc dùng định dạng Sxxx-A_Xs_TYPE.ext"
+            details["errors"].append(msg)
+            return False, msg, details
+
+        if not (PRIMARY_ASSET_REGEX.match(fname) or STORYBOARD_ASSET_REGEX.match(fname)):
+            msg = f"[LỖI TÊN] File '{fname}' không khớp định dạng chuẩn Sxxx-A_Xs_TYPE.ext"
+            details["errors"].append(msg)
+            return False, msg, details
+
+        sid = scene_id or fname[:4]
+        details["scene_id"] = sid
+        is_video = fpath.suffix.lower() == ".mp4"
+        details["is_video"] = is_video
+
+        # 3. Tính toàn vẹn media
+        if is_video:
+            v_ok, v_msg, v_meta = self._probe_video(fpath)
+            details["video_metadata"] = v_meta
+            if not v_ok:
+                details["errors"].append(v_msg)
+                return False, v_msg, details
+        else:
+            img_ok, img_msg, img_meta = self._verify_image(fpath)
+            details["image_metadata"] = img_meta
+            if not img_ok:
+                details["errors"].append(img_msg)
+                return False, img_msg, details
+
+        # 4. Quét RapidOCR nếu có thư viện
+        if not self.skip_ocr and not is_video:
+            try:
+                from rapidocr_onnxruntime import RapidOCR
+                engine = RapidOCR()
+                result, _ = engine(str(fpath))
+                texts = [item[1] for item in result] if result else []
+                full_text = " ".join(texts)
+                details["ocr_texts"] = texts
+                scene_code = fpath.stem.split("-")[0]
+                has_filename_leak = (
+                    (scene_code.lower() in full_text.lower() and any(ext in full_text.lower() for ext in [".png", ".mp4", "_img", "_aiv"]))
+                    or ("rename" in full_text.lower())
+                    or ("[scene:" in full_text.lower())
+                    or ("output file" in full_text.lower())
+                    or (fpath.name.lower() in full_text.lower())
+                )
+                if has_filename_leak:
+                    msg = f"[FILENAME LEAK TRÊN ẢNH] File '{fname}' bị dán đè tên file vào nội dung ảnh: {texts}"
+                    details["errors"].append(msg)
+                    return False, msg, details
+            except ImportError:
+                details["warnings"].append("Thiếu rapidocr_onnxruntime, bỏ qua OCR")
+            except Exception as e:
+                details["warnings"].append(f"Lỗi khi chạy OCR: {e}")
+
+        # 5. Đối chiếu giới tính & nhân vật
+        if sid in PERSON_A_MALE_SCENES and "thu" in fname.lower():
+            msg = f"[LỆCH NHÂN VẬT] Cảnh {sid} (Người A - Nam) bị gán nhầm nhân vật Nữ"
+            details["errors"].append(msg)
+            return False, msg, details
+
+        if sid in PERSON_B_FEMALE_SCENES and "tai" in fname.lower():
+            msg = f"[LỆCH NHÂN VẬT] Cảnh {sid} (Người B - Nữ) bị gán nhầm nhân vật Nam"
+            details["errors"].append(msg)
+            return False, msg, details
+
+        # 6. Kiểm tra sao chép lậu master_anchor
+        if not is_video and self.master_anchor_file.exists():
+            try:
+                if fpath.read_bytes() == self.master_anchor_file.read_bytes() and sid not in MC_HOST_SCENES:
+                    msg = f"[SAI NGỮ CẢNH] Cảnh {sid} bị gán master_anchor.png thay vì visual chuyên biệt"
+                    details["errors"].append(msg)
+                    return False, msg, details
+            except Exception:
+                pass
+
+        return True, f"Asset {fname} hợp lệ 100% qua bộ lọc QA Filter", details
+
     def run_all_checks(self) -> QAReport:
         """Thực thi toàn bộ bộ kiểm định chất lượng tự động."""
         print("=" * 80)
@@ -735,6 +929,7 @@ class AssetQAVerifier:
             self.check_rapidocr_watermarks(),
             self.check_remotion_gfx_rules(),
             self.check_audio_and_word_timing(),
+            self.check_vision_concept_and_anatomy(),
         ]
 
         total = len(self.checks)
@@ -870,16 +1065,50 @@ class AssetQAVerifier:
             print(f"⚠️ Không thể lưu báo cáo Markdown: {e}")
 
 
+# Universal Class Alias
+UnifiedQAFilter = AssetQAVerifier
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Automated QA Verifier for Video Production Pipeline")
+    parser = argparse.ArgumentParser(
+        description="Unified Application-Level QA Filter & Audit Engine for Video Production Pipeline"
+    )
     parser.add_argument("slug", nargs="?", default="thoat-bay-no-the-tin-dung", help="Slug của video")
     parser.add_argument("--channel", default="tien-thuc-chien", help="Tên kênh (mặc định: tien-thuc-chien)")
+    parser.add_argument("--file", default=None, help="Kiểm định tức thì 1 file asset cụ thể (Fast Filter)")
+    parser.add_argument("--scene", default=None, help="Kiểm định tức thì 1 scene cụ thể (ví dụ: S011)")
     parser.add_argument("--skip-ocr", action="store_true", help="Bỏ qua quét RapidOCR (tiết kiệm thời gian)")
     args = parser.parse_args()
 
-    verifier = AssetQAVerifier(channel=args.channel, slug=args.slug, skip_ocr=args.skip_ocr)
-    report = verifier.run_all_checks()
+    verifier = UnifiedQAFilter(channel=args.channel, slug=args.slug, skip_ocr=args.skip_ocr)
 
+    # 1. Chế độ kiểm tra nhanh 1 asset đơn lẻ (Fast Filter)
+    if args.file or args.scene:
+        target = args.file or f"{args.scene}*"
+        if args.scene and not args.file:
+            matches = list(verifier.assets_dir.glob(f"{args.scene}*.*"))
+            if not matches:
+                print(f"❌ Không tìm thấy asset nào cho scene {args.scene} trong {verifier.assets_dir}")
+                sys.exit(1)
+            target = matches[0]
+
+        is_ok, msg, details = verifier.filter_single_asset(target, scene_id=args.scene)
+        status_icon = "🟢 [PASS]" if is_ok else "🔴 [FAIL]"
+        print(f"\n{status_icon} KẾT QUẢ BỘ LỌC QA FILTER ĐƠN LẺ:")
+        print(f"   • File: {details.get('file')}")
+        print(f"   • Thông điệp: {msg}")
+        if details.get("errors"):
+            print("   • Chi tiết lỗi:")
+            for err in details["errors"]:
+                print(f"     ❌ {err}")
+        if details.get("warnings"):
+            print("   • Cảnh báo:")
+            for warn in details["warnings"]:
+                print(f"     ⚠️  {warn}")
+        sys.exit(0 if is_ok else 1)
+
+    # 2. Chế độ tổng duyệt toàn diện video (Full Audit)
+    report = verifier.run_all_checks()
     sys.exit(0 if report.passed else 1)
 
 

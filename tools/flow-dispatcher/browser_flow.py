@@ -267,6 +267,61 @@ class FlowBrowserSession:
         """
         return self.evaluate(js_poll) or {"is_agent_running": False, "tiles": []}
 
+    def fetch_image_base64(self, img_src):
+        """Trích xuất bytes ảnh trực tiếp từ context đã xác thực qua CDP Runtime.evaluate."""
+        escaped_src = json.dumps(img_src)
+        js = f"""
+        (async function() {{
+            try {{
+                var resp = await fetch({escaped_src});
+                var blob = await resp.blob();
+                var b64 = await new Promise(function(resolve) {{
+                    var reader = new FileReader();
+                    reader.onloadend = function() {{ resolve(reader.result); }};
+                    reader.readAsDataURL(blob);
+                }});
+                return {{ success: true, dataUrl: b64 }};
+            }} catch(e) {{
+                return {{ success: false, error: e.toString() }};
+            }}
+        }})()
+        """
+        return self.evaluate(js)
+
+    def trigger_download_720p(self):
+        """Bấm More options -> Hover Download -> Click 720p Original size."""
+        js_more = """(() => {
+            const moreBtn = document.querySelector('flow-video-tile button[aria-label*="options" i], flow-video-tile button[aria-label*="khác" i], flow-video-tile button[aria-label="More options"]');
+            if (moreBtn) moreBtn.click();
+            return !!moreBtn;
+        })()"""
+        self.evaluate(js_more)
+        time.sleep(0.4)
+
+        js_hover = """(() => {
+            const items = Array.from(document.querySelectorAll('.mat-mdc-menu-item'));
+            const dl = items.find(b => /download|tải xuống/i.test(b.innerText));
+            if (dl) {
+                dl.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
+                dl.click();
+                return true;
+            }
+            return false;
+        })()"""
+        self.evaluate(js_hover)
+        time.sleep(0.5)
+
+        js_click_720 = """(() => {
+            const btns = Array.from(document.querySelectorAll('.mat-mdc-menu-item, button'));
+            const opt = btns.find(b => /720p/i.test(b.innerText) || /original size|kích thước gốc/i.test(b.innerText));
+            if (opt) {
+                opt.click();
+                return true;
+            }
+            return false;
+        })()"""
+        return bool(self.evaluate(js_click_720))
+
     def wait_for_completion(self, target_scene_labels, is_video=False, timeout=None):
         """
         Vòng lặp poll mỗi ~2s:
@@ -315,54 +370,102 @@ class FlowBrowserSession:
         return False, matched_tiles
 
 
-def sync_flow_media_to_studio(channel, slug, scene_idx, media_url, media_id=None, is_video=False):
+def sync_flow_media_to_studio(channel, slug, scene_idx, media_url, media_id=None, is_video=False, session=None, duration=6):
     """
     Tải bytes media từ URL Google Flow về thư mục assets của scene.
-    Cập nhật horizontal_image_url hoặc video_url và trạng thái COMPLETED trong composition.
+    Sử dụng CDP session in-page fetch để chống lỗi 302 login redirect.
+    Áp dụng chuẩn tên file nghiêm ngặt Sxxx-A_Xs_TYPE.ext (cấm alias scene_*.png).
+    Tự động đóng dấu thương hiệu badge_pill.png che kín watermark cho ảnh tĩnh.
     """
+    import base64
     video_dir = ROOT_DIR / "channels" / channel / "videos" / slug
     assets_dir = video_dir / "assets"
-    assets_dir.mkdir(parents=True, exist_ok=True)
+    raw_backup_dir = assets_dir / "raw_backup"
+    raw_backup_dir.mkdir(parents=True, exist_ok=True)
+    remotion_public = ROOT_DIR / "studio" / "remotion" / "public" / "assets"
 
+    broll_type = "AIV" if is_video else "IMG"
     ext = "mp4" if is_video else "png"
-    dest_filename = f"scene_{scene_idx:02d}.{ext}"
+    dest_filename = f"S{scene_idx:03d}-A_{int(duration)}s_{broll_type}.{ext}"
     dest_path = assets_dir / dest_filename
+    raw_path = raw_backup_dir / dest_filename
 
-    print(f"📥 Đang tải asset Scene {scene_idx} từ Google Flow ({media_url[:60]}...)...")
-    try:
-        resp = requests.get(media_url, stream=True, timeout=60, headers={"User-Agent": "Mozilla/5.0"})
-        if resp.status_code == 200:
-            with open(dest_path, "wb") as f:
-                for chunk in resp.iter_content(chunk_size=16384):
-                    f.write(chunk)
-            print(f"💾 Đã lưu asset thành công: {dest_path.name} ({dest_path.stat().st_size // 1024} KB)")
+    print(f"📥 Đang tải asset {dest_filename} từ Google Flow ({media_url[:60]}...)...")
 
-            # Cập nhật remotion-composition.json
-            comp_path = assets_dir / "remotion-composition.json"
-            if comp_path.exists():
-                try:
-                    data = json.loads(comp_path.read_text(encoding="utf-8"))
-                    scenes = data.get("scenes", [])
-                    for s in scenes:
-                        if s.get("index") == scene_idx:
-                            if is_video:
-                                s["video_url"] = f"/api/media/{channel}/{slug}/{dest_filename}"
-                            else:
-                                s["image_url"] = f"/api/media/{channel}/{slug}/{dest_filename}"
-                                s["horizontal_image_url"] = f"/api/media/{channel}/{slug}/{dest_filename}"
-                            s["status"] = "COMPLETED"
-                            if media_id:
-                                s["media_id"] = media_id
-                            break
-                    comp_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-                except Exception as e:
-                    print(f"⚠️ Lỗi cập nhật remotion-composition.json: {e}")
+    # 1. Tải bytes qua CDP in-page fetch nếu có session
+    downloaded = False
+    if session and hasattr(session, "fetch_image_base64") and not is_video:
+        try:
+            res_b64 = session.fetch_image_base64(media_url)
+            if res_b64 and res_b64.get("success") and res_b64.get("dataUrl"):
+                _, b64_str = res_b64["dataUrl"].split(",", 1)
+                img_data = base64.b64decode(b64_str)
+                raw_path.write_bytes(img_data)
+                dest_path.write_bytes(img_data)
+                downloaded = True
+                print(f"💾 Đã tải qua CDP authenticated fetch: {len(img_data)//1024} KB")
+        except Exception as e:
+            print(f"⚠️ CDP fetch thất bại, thử HTTP fallback: {e}")
 
-            return True, str(dest_path)
-        else:
-            return False, f"HTTP Error {resp.status_code}"
-    except Exception as e:
-        return False, str(e)
+    # Fallback requests.get nếu chưa tải được
+    if not downloaded:
+        try:
+            resp = requests.get(media_url, stream=True, timeout=60, headers={"User-Agent": "Mozilla/5.0"})
+            if resp.status_code == 200:
+                with open(dest_path, "wb") as f:
+                    for chunk in resp.iter_content(chunk_size=16384):
+                        f.write(chunk)
+                with open(raw_path, "wb") as f:
+                    f.write(dest_path.read_bytes())
+                downloaded = True
+            else:
+                return False, f"HTTP Error {resp.status_code}"
+        except Exception as e:
+            return False, str(e)
+
+    # 2. Đóng dấu badge_pill.png che watermark đối với ảnh tĩnh
+    if not is_video and downloaded:
+        try:
+            stamp_script = ROOT_DIR / "tools" / "watermark" / "stamp_badge_pill.py"
+            if stamp_script.exists():
+                sys.path.insert(0, str(stamp_script.parent))
+                from stamp_badge_pill import stamp_image_with_badge, get_badge_path
+                bpath = get_badge_path(channel)
+                stamp_image_with_badge(dest_path, bpath, raw_backup_dir)
+                print(f"🏷️ Đã đóng dấu badge_pill.png che kín watermark cho {dest_filename}")
+        except Exception as e:
+            print(f"⚠️ Không thể đóng dấu badge_pill: {e}")
+
+    # 3. Đồng bộ sang studio/remotion/public/assets/
+    if dest_path.exists() and remotion_public.exists():
+        try:
+            import shutil
+            shutil.copy2(dest_path, remotion_public / dest_filename)
+        except Exception:
+            pass
+
+    # 4. Cập nhật remotion-composition.json
+    comp_path = assets_dir / "remotion-composition.json"
+    if comp_path.exists():
+        try:
+            data = json.loads(comp_path.read_text(encoding="utf-8"))
+            scenes = data.get("scenes", [])
+            for s in scenes:
+                if s.get("index") == scene_idx:
+                    if is_video:
+                        s["video_url"] = f"/api/media/{channel}/{slug}/{dest_filename}"
+                    else:
+                        s["image_url"] = f"/api/media/{channel}/{slug}/{dest_filename}"
+                        s["horizontal_image_url"] = f"/api/media/{channel}/{slug}/{dest_filename}"
+                    s["status"] = "COMPLETED"
+                    if media_id:
+                        s["media_id"] = media_id
+                    break
+            comp_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+        except Exception as e:
+            print(f"⚠️ Lỗi cập nhật remotion-composition.json: {e}")
+
+    return True, str(dest_path)
 
 
 def main():

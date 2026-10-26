@@ -38,6 +38,15 @@ except ImportError:
     sys.exit(1)
 
 
+# Import Unified QA Filter
+QA_TOOL_DIR = ROOT_DIR / "tools" / "qa"
+if str(QA_TOOL_DIR) not in sys.path:
+    sys.path.insert(0, str(QA_TOOL_DIR))
+try:
+    from asset_qa_verifier import UnifiedQAFilter
+except ImportError:
+    UnifiedQAFilter = None
+
 STORYBOARD_TASKS = [
     {
         "acc_id": 1,
@@ -45,7 +54,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S001",
         "sb_pattern": r"phone alert|man reacting|shock|nợ 40 triệu",
         "output_file": "S001-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. Do not show panel borders, a grid or multiple panels. The young man starts smiling looking at his phone, his smile quickly freezes and fades, his eyes widen in extreme comic shock, mouth opens in disbelief, sweat drops appear on his forehead as a red downward arrow icon floats beside him. Audio: only natural ambient sound and scene sound effects; no music, no speech, no dialogue, no singing, no narration; characters never speak and keep their mouths closed. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism. Avoid: Photorealism, 3D render, CGI, text, letters, typography, watermarks, signature, distorted faces, dark lighting, complex gradients."
+        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. The young man starts smiling looking at his phone, his smile quickly freezes and fades, his eyes widen in extreme comic shock, mouth opens in disbelief, sweat drops appear on his forehead as a red downward arrow icon floats beside him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions. No 3D rendering, no CGI, no photorealism. Avoid text, typography, watermarks, distorted faces."
     },
     {
         "acc_id": 2,
@@ -53,7 +62,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S002",
         "sb_pattern": r"paying with credit card|pos|receipt|lounge|quẹt thẻ",
         "output_file": "S002-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 4 in order, with the timings below, as ONE continuous full-frame 8-second shot. Do not show panel borders, a grid or multiple panels. The young man proudly presents the card, swipes it across the terminal, a receipt scrolls out rapidly, and his confident expression softens into an uneasy hesitation. Audio: only natural ambient sound and scene sound effects; no music, no speech, no dialogue, no singing, no narration; characters never speak and keep their mouths closed. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism. Avoid: Photorealism, 3D render, CGI, text, letters, typography, watermarks, signature, distorted faces, dark lighting, complex gradients."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man proudly presents the card, swipes it across the terminal, a receipt scrolls out rapidly, and his confident expression softens into an uneasy hesitation. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 3,
@@ -61,7 +70,7 @@ STORYBOARD_TASKS = [
         "scene_id": "S003",
         "sb_pattern": r"wallet sinking|ocean abyss|underwater|chìm",
         "output_file": "S003-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 4 in order, with the timings below, as ONE continuous full-frame 8-second shot. Do not show panel borders, a grid or multiple panels. The floating wallet is snagged by the heavy iron anchor, which drags it underwater with accelerating downward motion, leaving a trail of rising bubbles. Audio: only natural ambient sound and scene sound effects; no music, no speech, no dialogue, no singing, no narration; characters never speak and keep their mouths closed. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism. Avoid: Photorealism, 3D render, CGI, text, letters, typography, watermarks, signature, distorted faces, dark lighting, complex gradients."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The floating wallet is snagged by the heavy iron anchor, which drags it underwater with accelerating downward motion, leaving a trail of rising bubbles. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 4,
@@ -69,7 +78,39 @@ STORYBOARD_TASKS = [
         "scene_id": "S004",
         "sb_pattern": r"parting mist|host|studio backdrop|sương mù",
         "output_file": "S004-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 4 in order, with the timings below, as ONE continuous full-frame 8-second shot. Do not show panel borders, a grid or multiple panels. The host steps through the dissipating fog, smiles warmly and confidently at the camera, and raises an open hand as four green numbered badges pop up with a playful bounce. Audio: only natural ambient sound and scene sound effects; no music, no speech, no dialogue, no singing, no narration; characters never speak and keep their mouths closed. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism. Avoid: Photorealism, 3D render, CGI, text, letters, typography, watermarks, signature, distorted faces, dark lighting, complex gradients."
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The host steps through the dissipating fog, smiles warmly and confidently at the camera, and raises an open hand as four green numbered badges pop up with a playful bounce. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. No 3D rendering, no CGI, no photorealism."
+    },
+    {
+        "acc_id": 1,
+        "port": 9223,
+        "scene_id": "S007",
+        "sb_pattern": r"S007|dining|restaurant|ăn uống|cocktail",
+        "output_file": "S007-A_6s_AIV.mp4",
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The group of young professional friends sit around the dinner table laughing and chatting joyfully, raising their cocktail glasses in a celebratory toast while warm ambient restaurant lights glow overhead. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive happy faces. No 3D rendering, no CGI, no photorealism."
+    },
+    {
+        "acc_id": 3,
+        "port": 9225,
+        "scene_id": "S011",
+        "sb_pattern": r"ANqvLOYtVY1KKKaAokhDBKsVow|sao kê|billing alert|15,000,000",
+        "output_file": "S011-A_6s_AIV.mp4",
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man with glasses stares in frozen shock at his glowing red phone screen displaying 'BILLING ALERT: 15,000,000 VND'. His eyes widen in extreme comic shock, sweat beads run down his face, his trembling hand holds the phone as red warning light pulses across his face. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading. Expressive comic shock. No 3D rendering, no CGI, no photorealism."
+    },
+    {
+        "acc_id": 4,
+        "port": 9226,
+        "scene_id": "S052",
+        "sb_pattern": r"ANqvLOaDns4R3kf0rPAroyQulxDpAhlM|ôm đầu|billing statements|kiệt quệ",
+        "output_file": "S052-A_4s_AIV.mp4",
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young man with glasses sits at his wooden desk late at night under a warm desk lamp, holding his head in deep distress and exhaustion, breathing heavily while papers and billing statements cover the desk around him. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Expressive exhausted face. No 3D rendering, no CGI, no photorealism."
+    },
+    {
+        "acc_id": 4,
+        "port": 9226,
+        "scene_id": "S058",
+        "sb_pattern": r"ANqvLOZ1chv3K7QTVeFMXFjANAT|tự nấu|cooking|sunny kitchen",
+        "output_file": "S058-A_6s_AIV.mp4",
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 6-second shot. The young woman with glasses and an apron stands happily in her bright sunny kitchen, smiling warmly and peacefully as steam gently rises from a cooking pot on the stove while she gently stirs with a wooden spoon. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, clean composition. Joyful, serene expression. No 3D rendering, no CGI, no photorealism."
     },
     {
         "acc_id": 5,
@@ -77,7 +118,15 @@ STORYBOARD_TASKS = [
         "scene_id": "S064",
         "sb_pattern": r"scissors cutting credit card|scissors|cắt thẻ",
         "output_file": "S064-A_6s_AIV.mp4",
-        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. Do not show panel borders, a grid or multiple panels. The scissors cleanly snip through the plastic credit card with a decisive motion, the two halves spring slightly apart and settle onto the surface as sparkling light bursts forth. Audio: only natural ambient sound and scene sound effects; no music, no speech, no dialogue, no singing, no narration; characters never speak and keep their mouths closed. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant and highly saturated solid colors. Flat shading, no complex lighting. White background. Expressive characters with exaggerated comic-style facial expressions (shock, anger, confidence). Incorporate floating financial icons like gold coins, credit cards, or red downward arrows. High contrast, clean composition. No 3D rendering, no CGI, no photorealism. Avoid: Photorealism, 3D render, CGI, text, letters, typography, watermarks, signature, distorted faces, dark lighting, complex gradients."
+        "prompt": "Use the attached storyboard image as the shot plan: animate panel 1 through panel 3 in order, with the timings below, as ONE continuous full-frame 6-second shot. The scissors cleanly snip through the plastic credit card with a decisive motion, the two halves spring slightly apart and settle onto the surface as sparkling light bursts forth. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors. Flat shading, no complex lighting. White background. No 3D rendering, no CGI, no photorealism."
+    },
+    {
+        "acc_id": 5,
+        "port": 9227,
+        "scene_id": "S081",
+        "sb_pattern": r"hilltop|sunrise|đỉnh đồi|làm chủ đồng tiền",
+        "output_file": "S081-A_4s_AIV.mp4",
+        "prompt": "Use the attached storyboard image as the shot plan: animate as ONE continuous full-frame 4-second shot. The young man with glasses stands proudly on the grassy hilltop at sunrise, smiling serenely as gentle morning wind ruffles his hair and grass waves softly in the breeze. Golden morning sunlight radiates warm lens flares across the green landscape. 2D flat vector cartoon illustration, Vyond animation style, thick black outlines, vibrant solid colors, flat shading. Peaceful, triumphant expression. Anatomically complete and correct hands and arms. No 3D rendering, no CGI, no photorealism."
     }
 ]
 
@@ -343,6 +392,11 @@ def execute_storyboard_to_aiv(task):
                 shutil.copyfile(DOWNLOADS_DIR / dl_file, target_path)
                 sz_kb = target_path.stat().st_size // 1024
                 print(f"  💾 [Account {acc_id}] ĐÃ LƯU THÀNH CÔNG: {output_file} ({sz_kb} KB)")
+                # Kích hoạt Unified QA Filter tức thì
+                if UnifiedQAFilter:
+                    qa = UnifiedQAFilter(channel=CHANNEL, slug=SLUG)
+                    qa_ok, qa_msg, _ = qa.filter_single_asset(target_path, scene_id=scene_id)
+                    print(f"  🛡️ [Unified QA Filter] {scene_id}: {'PASS' if qa_ok else 'FAIL'} - {qa_msg}")
                 return {"acc_id": acc_id, "scene_id": scene_id, "success": True, "file": output_file}
 
         # Fallback kiểm tra file mới nhất trong Downloads (trong 60s gần nhất)
@@ -352,6 +406,10 @@ def execute_storyboard_to_aiv(task):
             shutil.copyfile(latest, target_path)
             sz_kb = target_path.stat().st_size // 1024
             print(f"  💾 [Account {acc_id}] ĐÃ LƯU THÀNH CÔNG (từ Downloads): {output_file} ({sz_kb} KB)")
+            if UnifiedQAFilter:
+                qa = UnifiedQAFilter(channel=CHANNEL, slug=SLUG)
+                qa_ok, qa_msg, _ = qa.filter_single_asset(target_path, scene_id=scene_id)
+                print(f"  🛡️ [Unified QA Filter] {scene_id}: {'PASS' if qa_ok else 'FAIL'} - {qa_msg}")
             return {"acc_id": acc_id, "scene_id": scene_id, "success": True, "file": output_file}
 
         raise RuntimeError("Không tìm thấy file MP4 sau khi bấm download")
@@ -366,40 +424,81 @@ def execute_storyboard_to_aiv(task):
 
 def update_composition_aiv():
     comp_file = ASSETS_DIR / "remotion-composition.json"
+    props_file = ROOT_DIR / "studio" / "remotion" / "current_props.json"
     if not comp_file.exists():
         return
     try:
         data = json.loads(comp_file.read_text(encoding="utf-8"))
-        seqs = data.get("tracks", {}).get("visual_sequences", [])
+        vseqs = data.get("tracks", {}).get("visual_sequences", [])
+        flat_seqs = data.get("sequences", [])
         updated = 0
         for t in STORYBOARD_TASKS:
             out_file = t["output_file"]
             p = ASSETS_DIR / out_file
             if p.exists():
-                for seq in seqs:
+                for seq in vseqs:
                     if seq.get("scene_id") == t["scene_id"] and seq.get("id", "").startswith(t["scene_id"]):
                         seq["type"] = "AIV"
                         seq["component"] = "Video"
                         seq["props"] = {"src": f"assets/{out_file}"}
                         updated += 1
                         break
+                for s in flat_seqs:
+                    if s.get("scene") == t["scene_id"]:
+                        s["type"] = "AIV"
+                        s["component"] = "OffthreadVideo"
+                        s["asset_path"] = f"http://127.0.0.1:3001/api/media/{CHANNEL}/{SLUG}/assets/{out_file}"
+                        break
         comp_file.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"\n🎬 Đã cập nhật {updated} cảnh AIV Video vào remotion-composition.json!")
+
+        if props_file.exists():
+            try:
+                pdata = json.loads(props_file.read_text(encoding="utf-8"))
+                for s in pdata.get("sequences", []):
+                    sid = s.get("scene")
+                    for t in STORYBOARD_TASKS:
+                        if sid == t["scene_id"]:
+                            out_file = t["output_file"]
+                            if (ASSETS_DIR / out_file).exists():
+                                s["type"] = "AIV"
+                                s["component"] = "OffthreadVideo"
+                                s["asset_path"] = f"http://127.0.0.1:3000/api/media/{CHANNEL}/{SLUG}/assets/{out_file}"
+                props_file.write_text(json.dumps(pdata, indent=2, ensure_ascii=False), encoding="utf-8")
+                print("🎬 Đã cập nhật current_props.json đồng bộ!")
+            except Exception as e:
+                print(f"⚠️ Lỗi cập nhật current_props.json: {e}")
     except Exception as e:
         print(f"⚠️ Lỗi cập nhật remotion: {e}")
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Google Flow Universal Storyboard-to-Video (AIV) Auto-Dispatcher")
+    parser.add_argument("slug", nargs="?", default=SLUG, help="Slug của video")
+    parser.add_argument("--channel", default=CHANNEL, help="Tên kênh (mặc định: tien-thuc-chien)")
+    parser.add_argument("--scene", default=None, help="Lọc chạy cho 1 scene cụ thể (ví dụ: S011, S052)")
+    args = parser.parse_args()
+
+    tasks_to_run = STORYBOARD_TASKS
+    if args.scene:
+        target_sid = args.scene.upper().strip()
+        tasks_to_run = [t for t in STORYBOARD_TASKS if t["scene_id"] == target_sid]
+        if not tasks_to_run:
+            print(f"❌ Không tìm thấy cấu hình task cho scene {target_sid}")
+            sys.exit(1)
+
     print("=" * 76)
-    print("🎬 CHUYỂN ĐỔI STORYBOARD -> AI VIDEO (AIV) TRÊN 5 TÀI KHOẢN GOOGLE FLOW CDP")
-    print(f"   Dự án: {SLUG} | Cảnh: S001, S002, S003, S004, S064")
+    print("🎬 CHUYỂN ĐỔI STORYBOARD -> AI VIDEO (AIV) TRÊN GOOGLE FLOW CDP")
+    print(f"   Dự án: {args.slug} | Kênh: {args.channel} | Số tasks: {len(tasks_to_run)}")
     print("=" * 76)
 
     start_time = time.time()
     results = []
 
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = [executor.submit(execute_storyboard_to_aiv, task) for task in STORYBOARD_TASKS]
+    workers = min(5, len(tasks_to_run))
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = [executor.submit(execute_storyboard_to_aiv, task) for task in tasks_to_run]
         for f in futures:
             results.append(f.result())
 
@@ -408,7 +507,7 @@ def main():
 
     successes = [r for r in results if r["success"]]
     print("\n" + "=" * 76)
-    print(f"🎉 HOÀN TẤT AIV DISPATCH ({len(successes)}/5 thành công, thời gian: {elapsed}s):")
+    print(f"🎉 HOÀN TẤT AIV DISPATCH ({len(successes)}/{len(tasks_to_run)} thành công, thời gian: {elapsed}s):")
     for r in results:
         icon = "✅" if r["success"] else "❌"
         print(f"   {icon} Account {r['acc_id']}: {r['scene_id']} -> {r['file']}")

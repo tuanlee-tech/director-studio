@@ -18,6 +18,7 @@ import re
 import argparse
 import threading
 from pathlib import Path
+from typing import Tuple, List, Dict, Any, Optional
 from concurrent.futures import ThreadPoolExecutor
 
 # Fix UTF-8 console output for Windows
@@ -92,14 +93,19 @@ def load_video_prompts(root_dir, channel, slug):
             data = json.loads(comp_file.read_text(encoding="utf-8"))
             scenes = data.get("scenes", [])
             for s in scenes:
+                is_aiv = (s.get("broll_type") == "AIV")
+                dur = int(s.get("duration", 4))
+                ext = "mp4" if is_aiv else "png"
+                s_type = "AIV" if is_aiv else "IMG"
+                s_idx = s.get("index", 1)
                 items.append({
-                    "id": f"Scene-{s.get('index', 1)}",
-                    "scene": f"Scene {s.get('index', 1)}",
-                    "index": s.get("index", 1),
-                    "type": "AIV" if s.get("broll_type") == "AIV" else "IMG",
-                    "duration": s.get("duration", 4),
+                    "id": f"Scene-{s_idx}",
+                    "scene": f"Scene {s_idx}",
+                    "index": s_idx,
+                    "type": s_type,
+                    "duration": dur,
                     "beat": s.get("visual_beat", ""),
-                    "target_file": f"scene_{s.get('index', 1):02d}.png",
+                    "target_file": f"S{s_idx:03d}-A_{dur}s_{s_type}.{ext}",
                     "prompt": s.get("prompt") or f"{s.get('visual_beat')}, 2D flat vector cartoon style, finance illustration"
                 })
             if items:
@@ -154,24 +160,60 @@ def schedule_followup_sync(session, channel, slug, scene_idx, scene_label, is_vi
     threading.Thread(target=_delayed_check, daemon=True).start()
 
 
+# Import Unified QA Filter
+QA_TOOL_DIR = ROOT_DIR / "tools" / "qa"
+if str(QA_TOOL_DIR) not in sys.path:
+    sys.path.insert(0, str(QA_TOOL_DIR))
+try:
+    from asset_qa_verifier import UnifiedQAFilter
+except ImportError:
+    UnifiedQAFilter = None
+
+
+def log_failed_asset(video_dir: Path, fail_record: dict):
+    """Ghi nhận asset thất bại vào failed_assets_review.json để con người xem xét."""
+    failed_file = video_dir / "failed_assets_review.json"
+    records = []
+    if failed_file.exists():
+        try:
+            records = json.loads(failed_file.read_text(encoding="utf-8"))
+        except Exception:
+            records = []
+    records.append(fail_record)
+    failed_file.write_text(json.dumps(records, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"📋 Đã ghi nhận lỗi vào {failed_file.name}")
+
+
 def dispatch_worker(acc_info, batch_items, channel, slug, dry_run=False):
-    """Worker xử lý batch prompts cho 1 tài khoản Chrome."""
+    """
+    Worker xử lý TUẦN TỰ 1-BY-1 prompts cho 1 tài khoản Chrome CDP:
+    1. Gửi prompt 1 scene tại 1 thời điểm.
+    2. Chờ hoàn tất & sync về qua CDP.
+    3. Kích hoạt QA kiểm tra tức thì (kích thước, PIL, ffprobe).
+    4. Thử lại tối đa 1 lần (max 1 retry). Nếu vẫn fail -> ghi failed_assets_review.json và tiếp tục scene kế tiếp.
+    """
+    from typing import Tuple
     acc_id = acc_info["id"]
     port = acc_info["port"]
     name = acc_info["name"]
     project_url = acc_info.get("project_url")
+    video_dir = ROOT_DIR / "channels" / channel / "videos" / slug
+    assets_dir = video_dir / "assets"
 
-    print(f"\n[Account {acc_id} - {name}] Bắt đầu xử lý {len(batch_items)} items...")
+    print(f"\n[Account {acc_id} - {name}] Bắt đầu xử lý tuần tự 1-by-1 ({len(batch_items)} items)...")
 
     if dry_run:
         for it in batch_items:
-            print(f"  👉 [Account {acc_id}] Mock dispatch: {it['id']} ({it['type']}) → {it['target_file']}")
+            print(f"  👉 [Account {acc_id}] Mock dispatch 1-by-1: {it['id']} ({it['type']}) → {it['target_file']}")
             time.sleep(0.5)
         return len(batch_items), 0
 
     session = FlowBrowserSession(port=port, project_url=project_url)
     success_count = 0
     fail_count = 0
+
+    # Khởi tạo Unified QA Filter cho worker
+    qa_filter = UnifiedQAFilter(channel=channel, slug=slug, skip_ocr=False) if UnifiedQAFilter else None
 
     try:
         session.connect()
@@ -181,34 +223,82 @@ def dispatch_worker(acc_info, batch_items, channel, slug, dry_run=False):
             prompt_text = it["prompt"]
             scene_label = it.get("scene", f"Scene {it.get('index', 1)}")
             scene_idx = it.get("index", 1)
+            duration = it.get("duration", 6)
             is_video = it.get("type") == "AIV"
+            broll_type = "AIV" if is_video else "IMG"
+            ext = "mp4" if is_video else "png"
+            target_filename = f"S{scene_idx:03d}-A_{int(duration)}s_{broll_type}.{ext}"
+            target_path = assets_dir / target_filename
+            sid = f"S{scene_idx:03d}"
 
-            print(f"  ✍️ [Account {acc_id}] Gửi prompt cho {scene_label} ({it['id']}): '{prompt_text[:50]}...'")
-
-            # Bước 3: Inject prompt và Enter đúng 1 lần (không click button)
-            session.inject_and_send_prompt(prompt_text)
-
-            # Bước 4: Đợi tile hoàn tất và lấy kết quả
-            ok, matched = session.wait_for_completion([scene_label], is_video=is_video)
-            if ok and scene_label in matched and matched[scene_label].get("media_url"):
-                media_url = matched[scene_label]["media_url"]
-                sync_ok, path_or_err = sync_flow_media_to_studio(channel, slug, scene_idx, media_url, is_video=is_video)
-                if sync_ok:
-                    print(f"  ✅ [Account {acc_id}] Đã sync asset về Studio: {path_or_err}")
+            # Kiểm tra xem file đã có sẵn và hợp lệ chưa qua Unified QA Filter
+            if target_path.exists() and target_path.stat().st_size > 50 * 1024:
+                is_valid = True
+                if qa_filter:
+                    is_valid, msg, _ = qa_filter.filter_single_asset(target_path, scene_id=sid)
+                if is_valid:
+                    print(f"  ✅ [Account {acc_id}] {target_filename} đã có sẵn và đạt chuẩn QA ({target_path.stat().st_size // 1024} KB), bỏ qua.")
                     success_count += 1
-                    # Schedule follow-up sync
-                    schedule_followup_sync(session, channel, slug, scene_idx, scene_label, is_video)
+                    continue
+
+            # Quy trình 1-by-1 với Max 1 Retry
+            max_attempts = 2
+            item_success = False
+
+            for attempt in range(1, max_attempts + 1):
+                attempt_label = f"(Lần {attempt}/{max_attempts})"
+                print(f"\n  ▶ [Account {acc_id}] {attempt_label} Xử lý 1-by-1 cho {scene_label} ({target_filename})...")
+                print(f"    ✍️ Prompt: '{prompt_text[:60]}...'")
+
+                # Gửi prompt qua ProseMirror và nhấn Enter đúng 1 lần
+                session.inject_and_send_prompt(prompt_text)
+
+                # Chờ hoàn tất và lấy kết quả
+                ok, matched = session.wait_for_completion([scene_label], is_video=is_video)
+                if ok and scene_label in matched and matched[scene_label].get("media_url"):
+                    media_url = matched[scene_label]["media_url"]
+                    sync_ok, path_or_err = sync_flow_media_to_studio(
+                        channel, slug, scene_idx, media_url, is_video=is_video, session=session, duration=duration
+                    )
+                    if sync_ok:
+                        saved_file = Path(path_or_err)
+                        # Kích hoạt Universal Unified QA Filter tức thì
+                        qa_ok = True
+                        qa_msg = "OK"
+                        if qa_filter:
+                            qa_ok, qa_msg, _ = qa_filter.filter_single_asset(saved_file, scene_id=sid)
+
+                        if qa_ok:
+                            print(f"    🎉 [Account {acc_id}] Unified QA Filter PASS: {saved_file.name} ({qa_msg})")
+                            item_success = True
+                            success_count += 1
+                            break
+                        else:
+                            print(f"    ⚠️ [Account {acc_id}] Unified QA Filter FAIL: {qa_msg}")
+                    else:
+                        print(f"    ⚠️ [Account {acc_id}] Sync thất bại: {path_or_err}")
                 else:
-                    print(f"  ⚠️ [Account {acc_id}] Lỗi sync media: {path_or_err}")
-                    fail_count += 1
-            else:
-                print(f"  ⚠️ [Account {acc_id}] Hết timeout hoặc chưa có media URL cho {scene_label}")
+                    print(f"    ⚠️ [Account {acc_id}] Hết timeout hoặc không tìm thấy media URL cho {scene_label}")
+
+                if attempt < max_attempts:
+                    print(f"    🔄 [Account {acc_id}] Thử lại lần thứ {attempt + 1}...")
+                    time.sleep(3)
+
+            if not item_success:
                 fail_count += 1
-                # Vẫn kích hoạt follow-up sync đề phòng render trễ
-                schedule_followup_sync(session, channel, slug, scene_idx, scene_label, is_video)
+                fail_record = {
+                    "scene_id": f"S{scene_idx:03d}",
+                    "account_id": acc_id,
+                    "target_file": target_filename,
+                    "prompt": prompt_text,
+                    "reason": "Max 1 retry exceeded or QA failed",
+                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                }
+                log_failed_asset(video_dir, fail_record)
+                print(f"  ❌ [Account {acc_id}] {scene_label} thất bại sau 2 lần thử, chuyển sang scene kế tiếp.")
 
     except Exception as e:
-        print(f"  ❌ [Account {acc_id}] Lỗi: {e}")
+        print(f"  ❌ [Account {acc_id}] Lỗi tiến trình worker: {e}")
         fail_count += len(batch_items)
     finally:
         session.close()
