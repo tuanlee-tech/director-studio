@@ -1,9 +1,9 @@
 # CHECKPOINT & BACKLOG: DỰ ÁN THOÁT BẪY NỢ THẺ TÍN DỤNG
 
-> **Thời điểm ghi nhận Checkpoint**: 2026-10-26T08:14:00+07:00  
+> **Thời điểm ghi nhận Checkpoint**: 2026-10-26T08:46:00+07:00  
 > **Kênh**: `tien-thuc-chien`  
 > **Video Target**: `thoat-bay-no-the-tin-dung`  
-> **Trạng thái**: Đã thống nhất 100% qua quy trình `/grill-me`, đã hoàn tất đóng dấu che Watermark Gemini 32/32 ảnh và lưu bản gốc an toàn.
+> **Trạng thái**: Đã thống nhất 100% qua quy trình `/grill-me`, đã hoàn tất đóng dấu che Watermark Gemini 32/32 ảnh tĩnh và căn chỉnh khít 100% overlay AIV.
 
 ---
 
@@ -31,12 +31,8 @@
    - Nhóm Người B (Nữ) $\rightarrow$ Tập trung tài khoản riêng.
 
 5. **Đóng dấu thương hiệu `badge_pill.png` che logo Gemini**:
-   - **Tọa độ chính xác theo công cụ Gemini & Nano Banana Adaptive**:
-     - Watermark Star: `X = -41px, Y = -41px`, kích thước `~37px` (trên khung 1376x768).
-     - Badge Scale: Tỷ lệ `scale = w / 1376.0`, `badge_w = int(210 * scale)`, `margin_right = 20 * scale`, `margin_bottom = 18 * scale`.
-     - Độ phủ: Che phủ 100% hình học cả chiều ngang và chiều dọc.
-   - **Ảnh tĩnh**: Đã đóng dấu trực tiếp vào 32/32 ảnh tĩnh. Toàn bộ bản gốc chưa đóng dấu được lưu an toàn tại `assets/raw_backup/`.
-   - **Video AIV**: Đã cập nhật Remotion template overlay component `badge_pill.png` cố định ở góc dưới bên phải (`bottom: 24, right: 28, width: 210`).
+   - **Ảnh tĩnh**: Đã đóng dấu với tọa độ tâm sao `Star Y = h - 95px`, `margin_right = 50 * scale` chống tràn viền khi Ken Burns. Hiệu ứng `KenBurnsImage` tinh chỉnh `scale: [1.0, 1.08]` mượt mà, không bị crop mép viền. Bản gốc bảo toàn tại `assets/raw_backup/`.
+   - **Video AIV**: Căn chỉnh overlay `badge_pill.png` tại `bottom: 137, right: 28, width: 410`, che khít 100% ngôi sao watermark cả đỉnh trên lẫn mép dưới (không còn hở bất kỳ pixel nào).
 
 ---
 
@@ -45,7 +41,8 @@
 - [x] Tạo công cụ `tools/watermark/stamp_badge_pill.py` hỗ trợ tính toán tọa độ che chuẩn xác.
 - [x] Tạo thư mục sao lưu `assets/raw_backup/` bảo vệ 32 file ảnh nguyên bản.
 - [x] Đóng dấu thương hiệu `badge_pill.png` cho toàn bộ **32/32 ảnh tĩnh** hiện hữu và đồng bộ sang `studio/remotion/public/assets/`.
-- [x] Bổ sung component overlay `badge_pill.png` cho AIV trong Remotion template `channels/tien-thuc-chien/template/VideoComposition.tsx`.
+- [x] Tinh chỉnh `KenBurnsImage` (scale `[1.0, 1.08]`) đảm bảo không bị cắt viền pill khi zoom-in/pan.
+- [x] Tinh chỉnh overlay `badge_pill.png` cho AIV video (`bottom: 137, right: 28, width: 410`) che khít 100% watermark.
 - [x] Thiết lập bản kế hoạch chi tiết tại [plan-assets-qa-and-dispatcher-refactor.md](file:///C:/Users/tuanlee/.gemini/antigravity/brain/49cdbe24-2f1a-40ae-93ac-f41634ec41db/plan-assets-qa-and-dispatcher-refactor.md).
 
 ---

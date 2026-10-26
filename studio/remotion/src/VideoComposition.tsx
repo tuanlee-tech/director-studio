@@ -48,10 +48,24 @@ export const VideoComposition: React.FC<VideoCompositionProps> = ({
                   <CounterNumber {...seq.gfx_props} durationInFrames={seq.duration_frames} />
                 )
               ) : seq.type === "AIV" && seq.asset_path && seq.asset_path.endsWith(".mp4") ? (
+                <>
                 <Video
                   src={seq.asset_path.startsWith("http") ? seq.asset_path : staticFile(seq.asset_path)}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
+                  {/* Badge pill watermark cover for AIV video */}
+                  <Img
+                    src={staticFile("images/badge_pill.png")}
+                    style={{
+                      position: "absolute",
+                      bottom: 137,
+                      right: 28,
+                      width: 410,
+                      height: "auto",
+                      zIndex: 10,
+                    }}
+                  />
+                </>
               ) : (
                 <KenBurnsImage
                   src={

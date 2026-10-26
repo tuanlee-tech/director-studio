@@ -1,8 +1,8 @@
 import React from "react";
-import { Sequence, Audio, OffthreadVideo, Img, staticFile, Loop } from "remotion";
-import { KenBurnsImage } from "./components/KenBurnsImage";
-import { KaraokeSubtitle } from "./components/KaraokeSubtitle";
+import { Audio, Img, Loop, OffthreadVideo, Sequence, staticFile } from "remotion";
 import { DynamicGraphic } from "./components/DynamicGraphic";
+import { KaraokeSubtitle } from "./components/KaraokeSubtitle";
+import { KenBurnsImage } from "./components/KenBurnsImage";
 import { theme } from "./theme";
 
 export interface SequenceItem {
@@ -115,9 +115,9 @@ export const VideoComposition: React.FC<VideoCompositionProps> = ({
                     src={staticFile("images/badge_pill.png")}
                     style={{
                       position: "absolute",
-                      bottom: 80,
-                      right: 48,
-                      width: 362,
+                      bottom: 130,
+                      right: 28,
+                      width: 410,
                       height: "auto",
                       zIndex: 10,
                       filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))",
