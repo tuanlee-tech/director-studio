@@ -57,8 +57,8 @@ def stamp_image_with_badge(img_path: Path, badge_path: Path, raw_backup_dir: Pat
         star_y = h - int(95 * scale)
         # Căn chỉnh tâm pill trùng tâm ngôi sao theo trục Y
         pos_y = star_y - (badge_h // 2)
-        # Căn chỉnh lề phải gọn gàng, bao phủ hoàn toàn ngôi sao theo trục X
-        pos_x = w - badge_w - int(35 * scale)
+        # Căn chỉnh lề phải an toàn để chống tràn viền khi Ken Burns zoom-in
+        pos_x = w - badge_w - int(50 * scale)
 
         pos = (pos_x, pos_y)
         resized_badge = badge.resize((badge_w, badge_h), Image.Resampling.LANCZOS)

@@ -19,21 +19,21 @@ export const KenBurnsImage: React.FC<KenBurnsImageProps> = ({
   let translateY = 0;
 
   if (effect === "ken_burns_zoom_in") {
-    scale = interpolate(frame, [0, durationInFrames], [1.0, 1.15], {
+    scale = interpolate(frame, [0, durationInFrames], [1.0, 1.08], {
       extrapolateRight: "clamp",
     });
   } else if (effect === "ken_burns_zoom_out") {
-    scale = interpolate(frame, [0, durationInFrames], [1.15, 1.0], {
+    scale = interpolate(frame, [0, durationInFrames], [1.08, 1.0], {
       extrapolateRight: "clamp",
     });
   } else if (effect === "ken_burns_pan_left") {
-    scale = 1.1;
-    translateX = interpolate(frame, [0, durationInFrames], [0, -30], {
+    scale = 1.05;
+    translateX = interpolate(frame, [0, durationInFrames], [0, -20], {
       extrapolateRight: "clamp",
     });
   } else if (effect === "ken_burns_pan_right") {
-    scale = 1.1;
-    translateX = interpolate(frame, [0, durationInFrames], [-30, 0], {
+    scale = 1.05;
+    translateX = interpolate(frame, [0, durationInFrames], [-20, 0], {
       extrapolateRight: "clamp",
     });
   }
