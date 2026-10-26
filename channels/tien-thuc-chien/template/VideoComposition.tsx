@@ -41,7 +41,7 @@ export interface VideoCompositionProps {
 export const VideoComposition: React.FC<VideoCompositionProps> = ({
   sequences = [],
   bgm_url,
-  bgm_volume = 0.22,
+  bgm_volume = 0.15,
   bgm_duration_frames,
   master_audio_url,
 }) => {

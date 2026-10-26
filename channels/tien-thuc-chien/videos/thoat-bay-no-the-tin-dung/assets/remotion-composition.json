@@ -11064,7 +11064,7 @@
   ],
   "master_audio_url": "audio/narration_master.wav",
   "bgm_url": "bgm/bgm_enlivening.mp3",
-  "bgm_volume": 0.22,
+  "bgm_volume": 0.15,
   "bgm_duration_seconds": 152.82,
   "bgm_duration_frames": 4584
 }

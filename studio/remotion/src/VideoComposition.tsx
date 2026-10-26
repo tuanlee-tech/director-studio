@@ -9,7 +9,7 @@ import { ChartMotion } from "./components/motion/ChartMotion";
 export const VideoComposition: React.FC<VideoCompositionProps> = ({
   sequences = [],
   bgm_url,
-  bgm_volume = 0.12,
+  bgm_volume = 0.15,
 }) => {
   return (
     <div
