@@ -115,9 +115,9 @@ export const VideoComposition: React.FC<VideoCompositionProps> = ({
                     src={staticFile("images/badge_pill.png")}
                     style={{
                       position: "absolute",
-                      bottom: 24,
-                      right: 28,
-                      width: 210,
+                      bottom: 80,
+                      right: 48,
+                      width: 362,
                       height: "auto",
                       zIndex: 10,
                       filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))",

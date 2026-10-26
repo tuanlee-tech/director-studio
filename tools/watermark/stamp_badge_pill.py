@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 stamp_badge_pill.py — Watermark Masking & Channel Branding Tool
-Dán đè logo badge_pill.png vào góc dưới cùng bên phải (Bottom-Right) của ảnh tĩnh:
-- Tọa độ ngôi sao watermark Gemini/Nano Banana: X = -41px, Y = -41px, Size = ~37px (chuẩn hóa trên khung 1376x768).
-- Tự động scale tương ứng theo độ phân giải ảnh (1376x768, 1920x1080, 2752x1536).
-- Che phủ 100% ngôi sao watermark, bảo vệ thương hiệu khi thực hiện Ken Burns (pan / zoom).
-- Tự động sao lưu ảnh nguyên bản vào assets/raw_backup/ trước khi dán đè.
-- Đồng bộ sang studio/remotion/public/assets/.
+Dán đè logo badge_pill.png che phủ 100% ngôi sao watermark Gemini:
+- Vị trí thực tế của watermark star trên khung 1376x768: X = w - 83px, Y = h - 95px.
+- Tự động scale theo tỷ lệ độ phân giải ảnh (1376x768, 1280x720, 1920x1080, 2752x1536).
+- Đặt pill bao trọn tâm điểm ngôi sao: Y_pos = star_y - (badge_h // 2), X_pos = w - badge_w - 35px.
+- Luôn đọc từ bản gốc trong assets/raw_backup/ để đảm bảo chất lượng và không bị dán đè nhiều lần.
+- Đồng bộ tự động sang studio/remotion/public/assets/.
 """
 
 import sys
@@ -33,7 +33,7 @@ def get_badge_path(channel: str = "tien-thuc-chien") -> Path:
 
 def stamp_image_with_badge(img_path: Path, badge_path: Path, raw_backup_dir: Path) -> bool:
     """
-    Dán logo badge_pill.png vào góc dưới bên phải ảnh, che hoàn toàn watermark Gemini.
+    Dán logo badge_pill.png che 100% ngôi sao watermark Gemini.
     """
     try:
         raw_backup_dir.mkdir(parents=True, exist_ok=True)
@@ -49,13 +49,18 @@ def stamp_image_with_badge(img_path: Path, badge_path: Path, raw_backup_dir: Pat
         w, h = img.size
         scale = w / 1376.0
 
-        # Thông số định vị chính xác theo tọa độ watermark Gemini (X: -41px, Y: -41px, Star: 37px)
-        badge_w = int(210 * scale)
+        # Tọa độ thực nghiệm chuẩn xác của watermark Gemini:
+        # Star center: X = w - 83 * scale, Y = h - 95 * scale
+        badge_w = int(260 * scale)
         badge_h = int(badge_w * (badge.height / badge.width))
-        margin_right = int(20 * scale)
-        margin_bottom = int(18 * scale)
 
-        pos = (w - badge_w - margin_right, h - badge_h - margin_bottom)
+        star_y = h - int(95 * scale)
+        # Căn chỉnh tâm pill trùng tâm ngôi sao theo trục Y
+        pos_y = star_y - (badge_h // 2)
+        # Căn chỉnh lề phải gọn gàng, bao phủ hoàn toàn ngôi sao theo trục X
+        pos_x = w - badge_w - int(35 * scale)
+
+        pos = (pos_x, pos_y)
         resized_badge = badge.resize((badge_w, badge_h), Image.Resampling.LANCZOS)
 
         # Paste badge onto image using its alpha channel
@@ -81,10 +86,16 @@ def stamp_all_static_assets(channel: str = "tien-thuc-chien", slug: str = "thoat
         print(f"❌ Không tìm thấy badge_pill.png tại: {badge_path}")
         return
 
+    # Sync badge_pill sang remotion public
+    rem_badge = ROOT_DIR / "studio" / "remotion" / "public" / "images" / "badge_pill.png"
+    rem_badge.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(badge_path, rem_badge)
+
     print("=" * 70)
-    print("🏷️  TIẾN HÀNH ĐÓNG DẤU BADGE_PILL VÀO ẢNH TĨNH (BOTTOM-RIGHT WATERMARK MASK)")
+    print("🏷️  TIẾN HÀNH ĐÓNG DẤU BADGE_PILL MỚI CHE WATERMARK GEMINI (STAR CENTER MASK)")
     print(f"   Kênh: {channel} | Video: {slug}")
-    print(f"   Tọa độ chuẩn hóa: X=-41px, Y=-41px (Gemini Adaptive Mask)")
+    print(f"   Badge: {badge_path.name} ({badge_path})")
+    print(f"   Tọa độ chuẩn: Star Y = h - 95px, Star X = w - 83px (Định vị trung tâm)")
     print("=" * 70)
 
     img_files = sorted([
@@ -99,7 +110,7 @@ def stamp_all_static_assets(channel: str = "tien-thuc-chien", slug: str = "thoat
             success_count += 1
             if remotion_public_assets.exists():
                 shutil.copy2(img_file, remotion_public_assets / img_file.name)
-            print(f"  ✅ Đã đóng dấu & che watermark: {img_file.name}")
+            print(f"  ✅ Đã đóng dấu che kín watermark: {img_file.name}")
 
     print("-" * 70)
     print(f"🎉 Hoàn tất! Đã đóng dấu thành công {success_count}/{len(img_files)} ảnh tĩnh.")
