@@ -1,5 +1,5 @@
 import React from "react";
-import { Audio, Img, Loop, OffthreadVideo, Sequence, staticFile } from "remotion";
+import { Audio, Img, Loop, Video, Sequence, staticFile } from "remotion";
 import { DynamicGraphic } from "./components/DynamicGraphic";
 import { KaraokeSubtitle } from "./components/KaraokeSubtitle";
 import { KenBurnsImage } from "./components/KenBurnsImage";
@@ -106,7 +106,7 @@ export const VideoComposition: React.FC<VideoCompositionProps> = ({
                 />
               ) : seq.type === "AIV" && seq.asset_path && seq.asset_path.endsWith(".mp4") ? (
                 <>
-                  <OffthreadVideo
+                  <Video
                     src={seq.asset_path.startsWith("http") ? seq.asset_path : staticFile(seq.asset_path)}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />

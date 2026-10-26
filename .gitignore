@@ -81,3 +81,7 @@ tools/flow-dispatcher/profiles/
 **/archive_old_vyond/
 *.remotion-in-progress
 
+
+# Master Video Exports
+**/final_video.mp4
+final_video.mp4
