@@ -60,12 +60,19 @@ node_modules/
 .remotion/
 */.remotion/
 package-lock.json
+# Remotion runtime build/public cache (synced dynamically from channels/<channel>/videos/<video_slug>/)
 studio/remotion/current_props.json
 studio/remotion/temp_props*.json
 studio/remotion/slice_*.json
 studio/remotion/*.mp4
 studio/remotion/*.jpg
 studio/remotion/*.png
+studio/remotion/public/assets/*
+!studio/remotion/public/assets/.gitkeep
+studio/remotion/public/audio/*
+!studio/remotion/public/audio/.gitkeep
+studio/remotion/public/bgm/*
+!studio/remotion/public/bgm/.gitkeep
 
 # Google Flow Multi-Account Profiles (Chrome User Data)
 tools/flow-dispatcher/profiles/
