@@ -1,7 +1,7 @@
 {
   "channel": "tien-thuc-chien",
   "video_slug": "thoat-bay-no-the-tin-dung",
-  "timestamp": "2026-10-26 22:26:45",
+  "timestamp": "2026-10-26 23:09:38",
   "passed": true,
   "total_checks": 7,
   "passed_checks": 7,
@@ -20,7 +20,7 @@
       "category": "Naming",
       "name": "File Naming & Anti-Alias Standardization",
       "passed": true,
-      "details": "100% File trong assets/ (47 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
+      "details": "100% File trong assets/ (37 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
       "errors": [],
       "warnings": []
     },
@@ -36,7 +36,7 @@
       "category": "OCR & Watermark",
       "name": "RapidOCR Technical Text & Filename Leak Scan",
       "passed": true,
-      "details": "100% Ảnh sạch (37 files), không bị rò rỉ bất kỳ filename leak hay watermark nào",
+      "details": "100% Ảnh sạch (27 files), không bị rò rỉ bất kỳ filename leak hay watermark nào",
       "errors": [],
       "warnings": []
     },
@@ -60,7 +60,7 @@
       "category": "Vision QA",
       "name": "Visual Concept Alignment & Anatomy Integrity",
       "passed": true,
-      "details": "100% Phân cảnh (42 assets) khớp ngữ cảnh thị giác Visual Concept & giải phẫu học",
+      "details": "100% Phân cảnh (37 assets) khớp ngữ cảnh thị giác Visual Concept & giải phẫu học",
       "errors": [],
       "warnings": []
     }
@@ -73,10 +73,10 @@
     "img_count": 27,
     "gfx_count": 44,
     "verified_assets_count": 37,
-    "valid_media_files": 47,
-    "clean_images_count": 37,
+    "valid_media_files": 37,
+    "clean_images_count": 27,
     "tainted_images_count": 0,
     "audio_valid_scenes": 81,
-    "vision_qa_verified_assets": 42
+    "vision_qa_verified_assets": 37
   }
 }

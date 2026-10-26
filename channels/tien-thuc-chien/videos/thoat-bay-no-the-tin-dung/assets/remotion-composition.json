@@ -1926,8 +1926,7 @@
       "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
-        "src": "assets/S007-A_6s_IMG.png",
-        "animation": "pan-right"
+        "src": "assets/S007-A_6s_AIV.mp4"
       },
       "asset_path": "assets/S007-A_6s_AIV.mp4",
       "narration_audio_url": "audio/S007_narration.wav",
@@ -2436,8 +2435,7 @@
       "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
-        "src": "assets/S011-A_6s_IMG.png",
-        "animation": "pan-right"
+        "src": "assets/S011-A_6s_AIV.mp4"
       },
       "asset_path": "assets/S011-A_6s_AIV.mp4",
       "narration_audio_url": "audio/S011_narration.wav",
@@ -7345,8 +7343,7 @@
       "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
-        "src": "assets/S052-A_4s_IMG.png",
-        "animation": "zoom-in"
+        "src": "assets/S052-A_4s_AIV.mp4"
       },
       "asset_path": "assets/S052-A_4s_AIV.mp4",
       "narration_audio_url": "audio/S052_narration.wav",
@@ -8083,8 +8080,7 @@
       "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
-        "src": "assets/S058-A_4s_IMG.png",
-        "animation": "zoom-in"
+        "src": "assets/S058-A_6s_AIV.mp4"
       },
       "asset_path": "assets/S058-A_6s_AIV.mp4",
       "narration_audio_url": "audio/S058_narration.wav",
@@ -10968,8 +10964,7 @@
       "component": "OffthreadVideo",
       "gfx_component": null,
       "gfx_props": {
-        "src": "assets/S081-A_4s_IMG.png",
-        "animation": "pan-right"
+        "src": "assets/S081-A_4s_AIV.mp4"
       },
       "asset_path": "assets/S081-A_4s_AIV.mp4",
       "narration_audio_url": "audio/S081_narration.wav",
