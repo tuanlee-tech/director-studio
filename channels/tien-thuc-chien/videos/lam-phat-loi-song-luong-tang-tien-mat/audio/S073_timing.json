@@ -1,0 +1,144 @@
+{
+  "audio_file": "S073_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Món",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "đầu",
+      "start_ms": 180,
+      "end_ms": 300
+    },
+    {
+      "word": "ban",
+      "start_ms": 300,
+      "end_ms": 440
+    },
+    {
+      "word": "đầu",
+      "start_ms": 440,
+      "end_ms": 600
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 600,
+      "end_ms": 760
+    },
+    {
+      "word": "là",
+      "start_ms": 760,
+      "end_ms": 880
+    },
+    {
+      "word": "ngồi",
+      "start_ms": 880,
+      "end_ms": 1100
+    },
+    {
+      "word": "nổ,",
+      "start_ms": 1100,
+      "end_ms": 1320
+    },
+    {
+      "word": "chính",
+      "start_ms": 1660,
+      "end_ms": 1760
+    },
+    {
+      "word": "trôi",
+      "start_ms": 1760,
+      "end_ms": 1960
+    },
+    {
+      "word": "chi",
+      "start_ms": 1960,
+      "end_ms": 2080
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 2080,
+      "end_ms": 2260
+    },
+    {
+      "word": "đồng",
+      "start_ms": 2260,
+      "end_ms": 2400
+    },
+    {
+      "word": "bộ",
+      "start_ms": 2400,
+      "end_ms": 2540
+    },
+    {
+      "word": "phía",
+      "start_ms": 2540,
+      "end_ms": 2700
+    },
+    {
+      "word": "sau",
+      "start_ms": 2700,
+      "end_ms": 2960
+    },
+    {
+      "word": "mới",
+      "start_ms": 2960,
+      "end_ms": 3240
+    },
+    {
+      "word": "là",
+      "start_ms": 3240,
+      "end_ms": 3360
+    },
+    {
+      "word": "thứ",
+      "start_ms": 3360,
+      "end_ms": 3480
+    },
+    {
+      "word": "tàn",
+      "start_ms": 3480,
+      "end_ms": 3720
+    },
+    {
+      "word": "phá",
+      "start_ms": 3720,
+      "end_ms": 4019
+    },
+    {
+      "word": "tài",
+      "start_ms": 4019,
+      "end_ms": 4200
+    },
+    {
+      "word": "khoản",
+      "start_ms": 4200,
+      "end_ms": 4440
+    },
+    {
+      "word": "gần",
+      "start_ms": 4440,
+      "end_ms": 4600
+    },
+    {
+      "word": "hàng",
+      "start_ms": 4600,
+      "end_ms": 4740
+    },
+    {
+      "word": "của",
+      "start_ms": 4740,
+      "end_ms": 4900
+    },
+    {
+      "word": "bạn.",
+      "start_ms": 4900,
+      "end_ms": 5020
+    }
+  ]
+}

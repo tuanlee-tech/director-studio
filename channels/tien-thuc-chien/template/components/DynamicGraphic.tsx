@@ -3,6 +3,7 @@ import { interpolate, useCurrentFrame, spring, useVideoConfig } from "remotion";
 import { theme } from "../theme";
 import { TreeGrowth } from "./TreeGrowth";
 import { ChartMotion } from "./ChartMotion";
+import { DynamicGraphicVideo2 } from "./DynamicGraphicVideo2";
 
 interface DynamicGraphicProps {
   title?: string;
@@ -56,6 +57,24 @@ export const DynamicGraphic: React.FC<DynamicGraphicProps> = ({
   const opacity = interpolate(enterSpring, [0, 0.4], [0, 1]);
   const translateY = interpolate(enterSpring, [0, 1], [20, 0]);
   const animProgress = Math.min(1, Math.max(0, frame / (durationInFrames || 120)));
+
+  // Delegate to DynamicGraphicVideo2 for video #2
+  if (props?.videoSlug === "lam-phat-loi-song-luong-tang-tien-mat" || props?.slug === "lam-phat-loi-song-luong-tang-tien-mat") {
+    return (
+      <DynamicGraphicVideo2
+        title={title}
+        label={label}
+        description={description}
+        component={component}
+        scene={scene}
+        theme={theme}
+        durationInFrames={durationInFrames}
+        props={props}
+        narration={narration}
+      />
+    );
+  }
+
 
   // =========================================================================
   // --- 1. S006: ALERTBOX NGÂN HÀNG (BANNER MIỄN LÃI 45 NGÀY & ĐỒNG HỒ) ---

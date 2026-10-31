@@ -1,0 +1,139 @@
+{
+  "audio_file": "S054_narration.wav",
+  "duration_ms": 5520,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "không",
+      "start_ms": 260,
+      "end_ms": 400
+    },
+    {
+      "word": "còn",
+      "start_ms": 400,
+      "end_ms": 520
+    },
+    {
+      "word": "thấy",
+      "start_ms": 520,
+      "end_ms": 640
+    },
+    {
+      "word": "hạnh",
+      "start_ms": 640,
+      "end_ms": 800
+    },
+    {
+      "word": "phúc",
+      "start_ms": 800,
+      "end_ms": 1020
+    },
+    {
+      "word": "hơn",
+      "start_ms": 1020,
+      "end_ms": 1140
+    },
+    {
+      "word": "trước,",
+      "start_ms": 1140,
+      "end_ms": 1420
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 1840,
+      "end_ms": 1920
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1920,
+      "end_ms": 2080
+    },
+    {
+      "word": "lại",
+      "start_ms": 2080,
+      "end_ms": 2300
+    },
+    {
+      "word": "không",
+      "start_ms": 2300,
+      "end_ms": 2480
+    },
+    {
+      "word": "bao",
+      "start_ms": 2480,
+      "end_ms": 2620
+    },
+    {
+      "word": "giờ",
+      "start_ms": 2620,
+      "end_ms": 2760
+    },
+    {
+      "word": "có",
+      "start_ms": 2760,
+      "end_ms": 2940
+    },
+    {
+      "word": "thể",
+      "start_ms": 2940,
+      "end_ms": 3060
+    },
+    {
+      "word": "quay",
+      "start_ms": 3060,
+      "end_ms": 3360
+    },
+    {
+      "word": "về",
+      "start_ms": 3360,
+      "end_ms": 3520
+    },
+    {
+      "word": "sống",
+      "start_ms": 3520,
+      "end_ms": 3780
+    },
+    {
+      "word": "ở",
+      "start_ms": 3780,
+      "end_ms": 3940
+    },
+    {
+      "word": "cân",
+      "start_ms": 3940,
+      "end_ms": 4120
+    },
+    {
+      "word": "phòng",
+      "start_ms": 4120,
+      "end_ms": 4340
+    },
+    {
+      "word": "trọc",
+      "start_ms": 4340,
+      "end_ms": 4740
+    },
+    {
+      "word": "cố",
+      "start_ms": 4740,
+      "end_ms": 4880
+    },
+    {
+      "word": "được",
+      "start_ms": 4880,
+      "end_ms": 4980
+    },
+    {
+      "word": "nữa.",
+      "start_ms": 4980,
+      "end_ms": 5220
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "audio_file": "S085_narration.wav",
+  "duration_ms": 5200,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bây",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "giờ,",
+      "start_ms": 220,
+      "end_ms": 420
+    },
+    {
+      "word": "hãy",
+      "start_ms": 860,
+      "end_ms": 960
+    },
+    {
+      "word": "cùng",
+      "start_ms": 960,
+      "end_ms": 1080
+    },
+    {
+      "word": "tôi",
+      "start_ms": 1080,
+      "end_ms": 1320
+    },
+    {
+      "word": "là",
+      "start_ms": 1320,
+      "end_ms": 1500
+    },
+    {
+      "word": "một",
+      "start_ms": 1500,
+      "end_ms": 1640
+    },
+    {
+      "word": "bài",
+      "start_ms": 1640,
+      "end_ms": 1780
+    },
+    {
+      "word": "toán",
+      "start_ms": 1780,
+      "end_ms": 2000
+    },
+    {
+      "word": "chí",
+      "start_ms": 2000,
+      "end_ms": 2220
+    },
+    {
+      "word": "phí",
+      "start_ms": 2220,
+      "end_ms": 2360
+    },
+    {
+      "word": "cơ",
+      "start_ms": 2360,
+      "end_ms": 2520
+    },
+    {
+      "word": "hội",
+      "start_ms": 2520,
+      "end_ms": 2640
+    },
+    {
+      "word": "thực",
+      "start_ms": 2640,
+      "end_ms": 2760
+    },
+    {
+      "word": "tế",
+      "start_ms": 2760,
+      "end_ms": 3040
+    },
+    {
+      "word": "để",
+      "start_ms": 3040,
+      "end_ms": 3240
+    },
+    {
+      "word": "thấy",
+      "start_ms": 3240,
+      "end_ms": 3380
+    },
+    {
+      "word": "giá",
+      "start_ms": 3380,
+      "end_ms": 3700
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3700,
+      "end_ms": 3840
+    },
+    {
+      "word": "phải",
+      "start_ms": 3840,
+      "end_ms": 4080
+    },
+    {
+      "word": "chả",
+      "start_ms": 4080,
+      "end_ms": 4280
+    },
+    {
+      "word": "đắt",
+      "start_ms": 4280,
+      "end_ms": 4500
+    },
+    {
+      "word": "đến",
+      "start_ms": 4500,
+      "end_ms": 4640
+    },
+    {
+      "word": "mức",
+      "start_ms": 4640,
+      "end_ms": 4820
+    },
+    {
+      "word": "nào.",
+      "start_ms": 4820,
+      "end_ms": 4980
+    }
+  ]
+}

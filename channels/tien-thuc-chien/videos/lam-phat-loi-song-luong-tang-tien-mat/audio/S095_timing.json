@@ -1,0 +1,154 @@
+{
+  "audio_file": "S095_narration.wav",
+  "duration_ms": 5920,
+  "word_count": 29,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Chứ",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "điên",
+      "start_ms": 180,
+      "end_ms": 340
+    },
+    {
+      "word": "thoại",
+      "start_ms": 340,
+      "end_ms": 480
+    },
+    {
+      "word": "mới",
+      "start_ms": 480,
+      "end_ms": 660
+    },
+    {
+      "word": "hay",
+      "start_ms": 660,
+      "end_ms": 920
+    },
+    {
+      "word": "bữa",
+      "start_ms": 920,
+      "end_ms": 1100
+    },
+    {
+      "word": "ăn",
+      "start_ms": 1100,
+      "end_ms": 1240
+    },
+    {
+      "word": "đất",
+      "start_ms": 1240,
+      "end_ms": 1420
+    },
+    {
+      "word": "đỏ",
+      "start_ms": 1420,
+      "end_ms": 1600
+    },
+    {
+      "word": "hôm",
+      "start_ms": 1600,
+      "end_ms": 1780
+    },
+    {
+      "word": "nay",
+      "start_ms": 1780,
+      "end_ms": 1900
+    },
+    {
+      "word": "không",
+      "start_ms": 1900,
+      "end_ms": 2080
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 2080,
+      "end_ms": 2220
+    },
+    {
+      "word": "tốn",
+      "start_ms": 2220,
+      "end_ms": 2480
+    },
+    {
+      "word": "vài",
+      "start_ms": 2480,
+      "end_ms": 2820
+    },
+    {
+      "word": "chiệu",
+      "start_ms": 2820,
+      "end_ms": 3060
+    },
+    {
+      "word": "Nó",
+      "start_ms": 3060,
+      "end_ms": 3540
+    },
+    {
+      "word": "đang",
+      "start_ms": 3540,
+      "end_ms": 3720
+    },
+    {
+      "word": "lấy",
+      "start_ms": 3720,
+      "end_ms": 3860
+    },
+    {
+      "word": "đi",
+      "start_ms": 3860,
+      "end_ms": 4000
+    },
+    {
+      "word": "của",
+      "start_ms": 4000,
+      "end_ms": 4140
+    },
+    {
+      "word": "bạn",
+      "start_ms": 4140,
+      "end_ms": 4320
+    },
+    {
+      "word": "cả",
+      "start_ms": 4320,
+      "end_ms": 4500
+    },
+    {
+      "word": "một",
+      "start_ms": 4500,
+      "end_ms": 4620
+    },
+    {
+      "word": "giá",
+      "start_ms": 4620,
+      "end_ms": 4780
+    },
+    {
+      "word": "tài",
+      "start_ms": 4780,
+      "end_ms": 5060
+    },
+    {
+      "word": "trong",
+      "start_ms": 5060,
+      "end_ms": 5260
+    },
+    {
+      "word": "tương",
+      "start_ms": 5260,
+      "end_ms": 5420
+    },
+    {
+      "word": "lai",
+      "start_ms": 5420,
+      "end_ms": 5720
+    }
+  ]
+}

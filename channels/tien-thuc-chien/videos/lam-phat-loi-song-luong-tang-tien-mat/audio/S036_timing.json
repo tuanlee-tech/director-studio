@@ -1,0 +1,134 @@
+{
+  "audio_file": "S036_narration.wav",
+  "duration_ms": 5360,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tụi",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "đô",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "của",
+      "start_ms": 340,
+      "end_ms": 460
+    },
+    {
+      "word": "bạn",
+      "start_ms": 460,
+      "end_ms": 640
+    },
+    {
+      "word": "bắt",
+      "start_ms": 640,
+      "end_ms": 800
+    },
+    {
+      "word": "đầu",
+      "start_ms": 800,
+      "end_ms": 920
+    },
+    {
+      "word": "xuất",
+      "start_ms": 920,
+      "end_ms": 1120
+    },
+    {
+      "word": "hiện",
+      "start_ms": 1120,
+      "end_ms": 1240
+    },
+    {
+      "word": "những",
+      "start_ms": 1240,
+      "end_ms": 1400
+    },
+    {
+      "word": "chiếc",
+      "start_ms": 1400,
+      "end_ms": 1660
+    },
+    {
+      "word": "áo",
+      "start_ms": 1660,
+      "end_ms": 1860
+    },
+    {
+      "word": "Sermie,",
+      "start_ms": 1860,
+      "end_ms": 2260
+    },
+    {
+      "word": "đối",
+      "start_ms": 2680,
+      "end_ms": 2760
+    },
+    {
+      "word": "dây",
+      "start_ms": 2760,
+      "end_ms": 2940
+    },
+    {
+      "word": "ra",
+      "start_ms": 2940,
+      "end_ms": 3080
+    },
+    {
+      "word": "hàng",
+      "start_ms": 3080,
+      "end_ms": 3240
+    },
+    {
+      "word": "hiệu",
+      "start_ms": 3240,
+      "end_ms": 3420
+    },
+    {
+      "word": "có",
+      "start_ms": 3420,
+      "end_ms": 3580
+    },
+    {
+      "word": "giá",
+      "start_ms": 3580,
+      "end_ms": 3740
+    },
+    {
+      "word": "gấp",
+      "start_ms": 3740,
+      "end_ms": 3840
+    },
+    {
+      "word": "2",
+      "start_ms": 3840,
+      "end_ms": 4120
+    },
+    {
+      "word": ".3",
+      "start_ms": 4120,
+      "end_ms": 4520
+    },
+    {
+      "word": "lần",
+      "start_ms": 4520,
+      "end_ms": 4700
+    },
+    {
+      "word": "đầu",
+      "start_ms": 4700,
+      "end_ms": 4800
+    },
+    {
+      "word": "cố.",
+      "start_ms": 4800,
+      "end_ms": 5080
+    }
+  ]
+}

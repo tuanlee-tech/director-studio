@@ -1,0 +1,129 @@
+{
+  "audio_file": "S016_narration.wav",
+  "duration_ms": 5440,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nguyên",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "tất",
+      "start_ms": 260,
+      "end_ms": 420
+    },
+    {
+      "word": "tài",
+      "start_ms": 420,
+      "end_ms": 560
+    },
+    {
+      "word": "chính",
+      "start_ms": 560,
+      "end_ms": 720
+    },
+    {
+      "word": "trọng",
+      "start_ms": 720,
+      "end_ms": 980
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 980,
+      "end_ms": 1100
+    },
+    {
+      "word": "cho",
+      "start_ms": 1100,
+      "end_ms": 1240
+    },
+    {
+      "word": "phép",
+      "start_ms": 1240,
+      "end_ms": 1400
+    },
+    {
+      "word": "tiền",
+      "start_ms": 1400,
+      "end_ms": 1640
+    },
+    {
+      "word": "nhà",
+      "start_ms": 1640,
+      "end_ms": 1880
+    },
+    {
+      "word": "chiếm",
+      "start_ms": 1880,
+      "end_ms": 2260
+    },
+    {
+      "word": "tố",
+      "start_ms": 2260,
+      "end_ms": 2400
+    },
+    {
+      "word": "đã",
+      "start_ms": 2400,
+      "end_ms": 2500
+    },
+    {
+      "word": "30",
+      "start_ms": 2500,
+      "end_ms": 2780
+    },
+    {
+      "word": "%",
+      "start_ms": 2780,
+      "end_ms": 3060
+    },
+    {
+      "word": "thu",
+      "start_ms": 3060,
+      "end_ms": 3260
+    },
+    {
+      "word": "nhập,",
+      "start_ms": 3260,
+      "end_ms": 3480
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 3880,
+      "end_ms": 4019
+    },
+    {
+      "word": "bạn",
+      "start_ms": 4019,
+      "end_ms": 4200
+    },
+    {
+      "word": "đã",
+      "start_ms": 4200,
+      "end_ms": 4400
+    },
+    {
+      "word": "vượt",
+      "start_ms": 4400,
+      "end_ms": 4580
+    },
+    {
+      "word": "ngựa",
+      "start_ms": 4580,
+      "end_ms": 4760
+    },
+    {
+      "word": "ăn",
+      "start_ms": 4760,
+      "end_ms": 4940
+    },
+    {
+      "word": "toàn.",
+      "start_ms": 4940,
+      "end_ms": 5200
+    }
+  ]
+}

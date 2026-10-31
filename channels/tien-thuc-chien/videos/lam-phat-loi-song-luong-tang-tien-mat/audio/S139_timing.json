@@ -1,0 +1,124 @@
+{
+  "audio_file": "S139_narration.wav",
+  "duration_ms": 4720,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tân",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "phòng",
+      "start_ms": 160,
+      "end_ms": 320
+    },
+    {
+      "word": "thủ",
+      "start_ms": 320,
+      "end_ms": 520
+    },
+    {
+      "word": "thứ",
+      "start_ms": 520,
+      "end_ms": 640
+    },
+    {
+      "word": "3",
+      "start_ms": 640,
+      "end_ms": 860
+    },
+    {
+      "word": "là",
+      "start_ms": 860,
+      "end_ms": 1140
+    },
+    {
+      "word": "thiết",
+      "start_ms": 1140,
+      "end_ms": 1380
+    },
+    {
+      "word": "lập",
+      "start_ms": 1380,
+      "end_ms": 1560
+    },
+    {
+      "word": "hệ",
+      "start_ms": 1560,
+      "end_ms": 1880
+    },
+    {
+      "word": "thống",
+      "start_ms": 1880,
+      "end_ms": 2100
+    },
+    {
+      "word": "phân",
+      "start_ms": 2100,
+      "end_ms": 2340
+    },
+    {
+      "word": "luồng",
+      "start_ms": 2340,
+      "end_ms": 2580
+    },
+    {
+      "word": "3",
+      "start_ms": 2580,
+      "end_ms": 2840
+    },
+    {
+      "word": "tại",
+      "start_ms": 2840,
+      "end_ms": 2980
+    },
+    {
+      "word": "khoản",
+      "start_ms": 2980,
+      "end_ms": 3180
+    },
+    {
+      "word": "số",
+      "start_ms": 3180,
+      "end_ms": 3400
+    },
+    {
+      "word": "và",
+      "start_ms": 3400,
+      "end_ms": 3620
+    },
+    {
+      "word": "bộ",
+      "start_ms": 3620,
+      "end_ms": 3720
+    },
+    {
+      "word": "lọc",
+      "start_ms": 3720,
+      "end_ms": 3900
+    },
+    {
+      "word": "chi",
+      "start_ms": 3900,
+      "end_ms": 4019
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 4019,
+      "end_ms": 4220
+    },
+    {
+      "word": "vì",
+      "start_ms": 4220,
+      "end_ms": 4340
+    },
+    {
+      "word": "mộ.",
+      "start_ms": 4340,
+      "end_ms": 4520
+    }
+  ]
+}

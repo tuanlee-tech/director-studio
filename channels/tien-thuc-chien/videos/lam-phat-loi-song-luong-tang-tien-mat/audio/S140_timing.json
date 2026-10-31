@@ -1,0 +1,124 @@
+{
+  "audio_file": "S140_narration.wav",
+  "duration_ms": 4560,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Thay",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "vì",
+      "start_ms": 160,
+      "end_ms": 280
+    },
+    {
+      "word": "để",
+      "start_ms": 280,
+      "end_ms": 380
+    },
+    {
+      "word": "chung",
+      "start_ms": 380,
+      "end_ms": 600
+    },
+    {
+      "word": "tồn",
+      "start_ms": 600,
+      "end_ms": 780
+    },
+    {
+      "word": "bộ",
+      "start_ms": 780,
+      "end_ms": 900
+    },
+    {
+      "word": "tiền",
+      "start_ms": 900,
+      "end_ms": 1140
+    },
+    {
+      "word": "trong",
+      "start_ms": 1140,
+      "end_ms": 1300
+    },
+    {
+      "word": "một",
+      "start_ms": 1300,
+      "end_ms": 1440
+    },
+    {
+      "word": "tài",
+      "start_ms": 1440,
+      "end_ms": 1560
+    },
+    {
+      "word": "khoản,",
+      "start_ms": 1560,
+      "end_ms": 1860
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2240,
+      "end_ms": 2360
+    },
+    {
+      "word": "thấy",
+      "start_ms": 2360,
+      "end_ms": 2480
+    },
+    {
+      "word": "mở",
+      "start_ms": 2480,
+      "end_ms": 2700
+    },
+    {
+      "word": "bà",
+      "start_ms": 2700,
+      "end_ms": 2900
+    },
+    {
+      "word": "tài",
+      "start_ms": 2900,
+      "end_ms": 3000
+    },
+    {
+      "word": "khoản",
+      "start_ms": 3000,
+      "end_ms": 3180
+    },
+    {
+      "word": "số",
+      "start_ms": 3180,
+      "end_ms": 3360
+    },
+    {
+      "word": "riêng",
+      "start_ms": 3360,
+      "end_ms": 3620
+    },
+    {
+      "word": "biệt",
+      "start_ms": 3620,
+      "end_ms": 3820
+    },
+    {
+      "word": "trên",
+      "start_ms": 3820,
+      "end_ms": 4000
+    },
+    {
+      "word": "liện",
+      "start_ms": 4000,
+      "end_ms": 4160
+    },
+    {
+      "word": "thoại.",
+      "start_ms": 4160,
+      "end_ms": 4400
+    }
+  ]
+}

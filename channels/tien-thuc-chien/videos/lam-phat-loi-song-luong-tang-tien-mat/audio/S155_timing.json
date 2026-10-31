@@ -1,0 +1,94 @@
+{
+  "audio_file": "S155_narration.wav",
+  "duration_ms": 3680,
+  "word_count": 17,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "xưng",
+      "start_ms": 240,
+      "end_ms": 420
+    },
+    {
+      "word": "đang",
+      "start_ms": 420,
+      "end_ms": 560
+    },
+    {
+      "word": "có",
+      "start_ms": 560,
+      "end_ms": 760
+    },
+    {
+      "word": "sự",
+      "start_ms": 760,
+      "end_ms": 880
+    },
+    {
+      "word": "khảnh",
+      "start_ms": 880,
+      "end_ms": 1140
+    },
+    {
+      "word": "thơ",
+      "start_ms": 1140,
+      "end_ms": 1300
+    },
+    {
+      "word": "tại",
+      "start_ms": 1300,
+      "end_ms": 1460
+    },
+    {
+      "word": "chính,",
+      "start_ms": 1460,
+      "end_ms": 1720
+    },
+    {
+      "word": "tại",
+      "start_ms": 2060,
+      "end_ms": 2160
+    },
+    {
+      "word": "nên",
+      "start_ms": 2160,
+      "end_ms": 2360
+    },
+    {
+      "word": "bởi",
+      "start_ms": 2360,
+      "end_ms": 2740
+    },
+    {
+      "word": "chính",
+      "start_ms": 2740,
+      "end_ms": 2900
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 2900,
+      "end_ms": 3080
+    },
+    {
+      "word": "luật",
+      "start_ms": 3080,
+      "end_ms": 3220
+    },
+    {
+      "word": "của",
+      "start_ms": 3220,
+      "end_ms": 3320
+    },
+    {
+      "word": "mình.",
+      "start_ms": 3320,
+      "end_ms": 3480
+    }
+  ]
+}

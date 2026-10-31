@@ -1,0 +1,144 @@
+{
+  "audio_file": "S060_narration.wav",
+  "duration_ms": 5680,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Các",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "nhà",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "kinh",
+      "start_ms": 340,
+      "end_ms": 520
+    },
+    {
+      "word": "tế",
+      "start_ms": 520,
+      "end_ms": 700
+    },
+    {
+      "word": "học",
+      "start_ms": 700,
+      "end_ms": 820
+    },
+    {
+      "word": "gọi",
+      "start_ms": 820,
+      "end_ms": 1100
+    },
+    {
+      "word": "đây",
+      "start_ms": 1100,
+      "end_ms": 1260
+    },
+    {
+      "word": "là",
+      "start_ms": 1260,
+      "end_ms": 1380
+    },
+    {
+      "word": "tính",
+      "start_ms": 1380,
+      "end_ms": 1540
+    },
+    {
+      "word": "mất",
+      "start_ms": 1540,
+      "end_ms": 1760
+    },
+    {
+      "word": "đôi",
+      "start_ms": 1760,
+      "end_ms": 1940
+    },
+    {
+      "word": "sướng",
+      "start_ms": 1940,
+      "end_ms": 2200
+    },
+    {
+      "word": "của",
+      "start_ms": 2200,
+      "end_ms": 2320
+    },
+    {
+      "word": "chi",
+      "start_ms": 2320,
+      "end_ms": 2460
+    },
+    {
+      "word": "tiêu.",
+      "start_ms": 2460,
+      "end_ms": 2760
+    },
+    {
+      "word": "Nâng",
+      "start_ms": 3220,
+      "end_ms": 3420
+    },
+    {
+      "word": "lên",
+      "start_ms": 3420,
+      "end_ms": 3500
+    },
+    {
+      "word": "thì",
+      "start_ms": 3500,
+      "end_ms": 3660
+    },
+    {
+      "word": "mất",
+      "start_ms": 3660,
+      "end_ms": 3860
+    },
+    {
+      "word": "một",
+      "start_ms": 3860,
+      "end_ms": 3940
+    },
+    {
+      "word": "ngày,",
+      "start_ms": 3940,
+      "end_ms": 4200
+    },
+    {
+      "word": "hạ",
+      "start_ms": 4480,
+      "end_ms": 4560
+    },
+    {
+      "word": "xuống",
+      "start_ms": 4560,
+      "end_ms": 4840
+    },
+    {
+      "word": "thì",
+      "start_ms": 4840,
+      "end_ms": 4960
+    },
+    {
+      "word": "mất",
+      "start_ms": 4960,
+      "end_ms": 5100
+    },
+    {
+      "word": "cả",
+      "start_ms": 5100,
+      "end_ms": 5200
+    },
+    {
+      "word": "năm.",
+      "start_ms": 5200,
+      "end_ms": 5420
+    }
+  ]
+}

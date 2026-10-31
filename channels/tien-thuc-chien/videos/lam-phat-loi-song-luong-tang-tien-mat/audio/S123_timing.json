@@ -1,0 +1,139 @@
+{
+  "audio_file": "S123_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Cảm",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "giác",
+      "start_ms": 220,
+      "end_ms": 300
+    },
+    {
+      "word": "có",
+      "start_ms": 300,
+      "end_ms": 420
+    },
+    {
+      "word": "một",
+      "start_ms": 420,
+      "end_ms": 520
+    },
+    {
+      "word": "khoản",
+      "start_ms": 520,
+      "end_ms": 700
+    },
+    {
+      "word": "tiền",
+      "start_ms": 700,
+      "end_ms": 1000
+    },
+    {
+      "word": "dự",
+      "start_ms": 1000,
+      "end_ms": 1220
+    },
+    {
+      "word": "phòng",
+      "start_ms": 1220,
+      "end_ms": 1440
+    },
+    {
+      "word": "lớn",
+      "start_ms": 1440,
+      "end_ms": 1680
+    },
+    {
+      "word": "trong",
+      "start_ms": 1680,
+      "end_ms": 1780
+    },
+    {
+      "word": "tay,",
+      "start_ms": 1780,
+      "end_ms": 2080
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 2340,
+      "end_ms": 2460
+    },
+    {
+      "word": "mang",
+      "start_ms": 2460,
+      "end_ms": 2620
+    },
+    {
+      "word": "lại",
+      "start_ms": 2620,
+      "end_ms": 2760
+    },
+    {
+      "word": "sự",
+      "start_ms": 2760,
+      "end_ms": 2920
+    },
+    {
+      "word": "an",
+      "start_ms": 2920,
+      "end_ms": 3080
+    },
+    {
+      "word": "tâm",
+      "start_ms": 3080,
+      "end_ms": 3280
+    },
+    {
+      "word": "và",
+      "start_ms": 3280,
+      "end_ms": 3400
+    },
+    {
+      "word": "trội",
+      "start_ms": 3400,
+      "end_ms": 3620
+    },
+    {
+      "word": "hơn",
+      "start_ms": 3620,
+      "end_ms": 3780
+    },
+    {
+      "word": "bất",
+      "start_ms": 3780,
+      "end_ms": 4019
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 4019,
+      "end_ms": 4240
+    },
+    {
+      "word": "món",
+      "start_ms": 4240,
+      "end_ms": 4380
+    },
+    {
+      "word": "đầu",
+      "start_ms": 4380,
+      "end_ms": 4540
+    },
+    {
+      "word": "hiệu",
+      "start_ms": 4540,
+      "end_ms": 4720
+    },
+    {
+      "word": "nào.",
+      "start_ms": 4720,
+      "end_ms": 4900
+    }
+  ]
+}

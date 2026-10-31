@@ -1,0 +1,1580 @@
+{
+  "channel": "tien-thuc-chien",
+  "video_slug": "lam-phat-loi-song-luong-tang-tien-mat",
+  "total_scenes": 157,
+  "total_duration_seconds": 1199.13,
+  "total_frames": 35974,
+  "fps": 30,
+  "scenes": [
+    {
+      "scene_id": "S001",
+      "beat": "Hook",
+      "type": "AIV",
+      "duration": 6.0,
+      "duration_frames": 180,
+      "concept": "Chàng trai văn phòng 27 tuổi mặc sơ mi trắng mỉm cười hạnh phúc khi nhận thông báo thăng chức và tăng lương gấp đôi lên hai mươi triệu đồng",
+      "narration": "Bạn vừa đạt cột mốc đáng nhớ: được tăng lương từ mười triệu lên hai mươi triệu đồng.",
+      "asset_file": "S001-A_6s_AIV.mp4"
+    },
+    {
+      "scene_id": "S002",
+      "beat": "Hook",
+      "type": "AIV",
+      "duration": 6.0,
+      "duration_frames": 180,
+      "concept": "Chàng trai cùng nhóm bạn đồng nghiệp nâng ly cocktail ăn mừng tưng bừng tại quầy bar nhà hàng sang trọng giữa ánh đèn lung linh",
+      "narration": "Bạn tự hào ăn mừng, cảm thấy những nỗ lực làm việc cuối cùng đã được đền đáp.",
+      "asset_file": "S002-A_6s_AIV.mp4"
+    },
+    {
+      "scene_id": "S003",
+      "beat": "Hook",
+      "type": "AIV",
+      "duration": 6.0,
+      "duration_frames": 180,
+      "concept": "Chàng trai đứng giữa căn hộ chung cư mới thuê rộng rãi, ban công ngắm nhìn toàn cảnh thành phố lung linh về đêm",
+      "narration": "Bạn chuyển sang căn hộ tiện nghi hơn, tin rằng mình sẽ sớm tích lũy được nhiều tiền.",
+      "asset_file": "S003-A_6s_AIV.mp4"
+    },
+    {
+      "scene_id": "S004",
+      "beat": "Hook",
+      "type": "AIV",
+      "duration": 6.0,
+      "duration_frames": 180,
+      "concept": "Chàng trai thẫn thờ nhìn chằm chằm vào màn hình điện thoại vào ngày hai mươi tám cuối tháng, thông báo số dư tài khoản chỉ còn vài chục nghìn đồng",
+      "narration": "Thế nhưng cuối tháng mở tài khoản, số dư thực tế vẫn là con số không tròn trĩnh.",
+      "asset_file": "S004-A_6s_AIV.mp4"
+    },
+    {
+      "scene_id": "S005",
+      "beat": "Hook",
+      "type": "AIV",
+      "duration": 6.0,
+      "duration_frames": 180,
+      "concept": "Chàng trai ngồi một mình bên bàn làm việc ban đêm, xoa thái dương trĩu nặng âu lo, tự hỏi tiền của mình đã biến đi đâu",
+      "narration": "Lương tăng gấp đôi, nhưng cảm giác hoang mang, bất an cuối tháng vẫn y nguyên.",
+      "asset_file": "S005-A_6s_AIV.mp4"
+    },
+    {
+      "scene_id": "S006",
+      "beat": "Hook",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Đồ thị đường thẳng song song: Đường lương màu xanh tăng 100% chạy song song với đường chi tiêu màu đỏ tăng 100%",
+      "narration": "Nghịch lý ở chỗ: Khi thu nhập của bạn tăng lên một bậc, thì mức sống và các khoản chi tiêu cũng lập tức tăng theo đúng một bậc tương ứng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S007",
+      "beat": "Hook",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Mô hình biểu tượng chiếc bẫy chuột bằng vàng phát sáng mang tên Lạm phát lối sống",
+      "narration": "Trong tài chính cá nhân, đây được gọi là chiếc bẫy lạm phát lối sống, thứ âm thầm triệt tiêu mọi thành quả lao động của bạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S008",
+      "beat": "Hook",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nam MC đại diện kênh Tiền Thực Chiến mặc sơ mi trắng đeo thẻ bước vào khung hình với vẻ mặt kiên định, sẵn sàng phân tích",
+      "narration": "Hôm nay, tôi sẽ cùng bạn bóc trần ba chiếc bẫy tâm lý vô hình này và xây dựng lộ trình ba tầng phòng thủ để giữ lại tiền.",
+      "asset_file": "S008-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S009",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Hình ảnh căn phòng trọ nhỏ đơn sơ nhưng ấm cúng của những ngày đầu mới đi làm",
+      "narration": "Hãy nhìn lại thời điểm bạn vừa ra trường, đi làm với mức lương khởi điểm mười triệu đồng.",
+      "asset_file": "S009-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S010",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bảng kê chi tiêu cũ: Tiền thuê trọ hai triệu rưỡi, điện nước năm trăm nghìn, tổng cộng ba triệu mỗi tháng",
+      "narration": "Khi đó, bạn thuê một căn phòng nhỏ hai triệu rưỡi mỗi tháng, chi tiêu tiết kiệm và vẫn sống hoàn toàn ổn thỏa.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S011",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật đứng ngắm tòa nhà chung cư mini hiện đại có thang máy và bảo vệ túc trực",
+      "narration": "Nhưng ngay khi nhận thông báo lương hai mươi triệu, ý nghĩ đầu tiên xuất hiện trong đầu bạn là: Mình phải chuyển chỗ ở.",
+      "asset_file": "S011-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S012",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hợp đồng thuê nhà mới: Tiền thuê sáu triệu, phí dịch vụ một triệu, điện nước giá thương mại, tổng chín triệu",
+      "narration": "Bạn chuyển sang căn hộ dịch vụ sáu triệu đồng, cộng thêm tiền gửi xe và dịch vụ, mỗi tháng tiêu tốn tới chín triệu đồng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S013",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biểu đồ cán cân: Chi phí nhà ở tăng vọt gấp 3 lần từ 3 triệu lên 9 triệu đồng mỗi tháng",
+      "narration": "Bạn tự biện minh rằng: Ở nơi đẹp hơn thì mới có tinh thần làm việc tốt hơn và xứng tầm với vị trí mới.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S014",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật ngồi trên chiếc ghế sofa mới đắt tiền trong căn hộ, xung quanh là hóa đơn tiền nhà và phí quản lý",
+      "narration": "Nhưng bạn không nhận ra rằng: Nhà ở là một khoản chi phí cố định, một khi đã ký hợp đồng thì không thể hạ xuống được.",
+      "asset_file": "S014-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S015",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cột mốc thời gian: Mười tháng thuê nhà mới tiêu tốn chín mươi triệu đồng, tương đương gần một năm tiền lương cũ",
+      "narration": "Chỉ riêng việc nâng cấp chỗ ở đã nuốt chửng sáu mươi triệu đồng tiền chênh lệch mỗi năm của bạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S016",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Thước đo ngân sách: Tỷ trọng tiền thuê nhà chiếm tới 45% tổng thu nhập hàng tháng, mức báo động đỏ",
+      "narration": "Nguyên tắc tài chính chuẩn chỉ cho phép tiền nhà chiếm tối đa ba mươi phần trăm thu nhập, nhưng bạn đã vượt ngưỡng an toàn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S017",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Quán cà phê vỉa hè mộc mạc quen thuộc với cốc cà phê đen đá mười lăm nghìn đồng",
+      "narration": "Hạng mục rò rỉ thứ hai, tinh vi hơn rất nhiều, chính là thói quen ăn uống và cà phê hàng ngày.",
+      "asset_file": "S017-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S018",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Cốc cà phê thương hiệu cao cấp đặt trên bàn làm việc sang trọng có giá sáu mươi lăm nghìn đồng",
+      "narration": "Trước đây, bạn hài lòng với cốc cà phê vỉa hè mười lăm nghìn; nay bạn chuyển sang cà phê thương hiệu sáu mươi lăm nghìn mỗi sáng.",
+      "asset_file": "S018-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S019",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Phép tính nhân: Chênh lệch năm mươi nghìn mỗi ngày, một tháng ba mươi ngày tiêu tốn thêm một triệu rưỡi tiền cà phê",
+      "narration": "Mỗi ngày chênh lệch năm mươi nghìn đồng nghe có vẻ vô hại, nhưng một tháng nó lấy đi của bạn thêm một triệu rưỡi.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S020",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Bàn ăn trưa tại nhà hàng cùng đồng nghiệp trong văn phòng, hóa đơn thanh toán trên một trăm nghìn",
+      "narration": "Bữa trưa công sở từ cơm bình dân ba mươi lăm nghìn được nâng cấp thành những bữa ăn nhà hàng cùng đồng nghiệp tám mươi đến một trăm nghìn.",
+      "asset_file": "S020-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S021",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biểu đồ so sánh chi phí ăn trưa: Cơm bình dân 900 nghìn mỗi tháng vs Nhà hàng 2.5 triệu mỗi tháng",
+      "narration": "Chỉ riêng tiền ăn trưa, bạn đã chi thêm hơn một triệu sáu trăm nghìn đồng mỗi tháng mà hoàn toàn không để ý.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S022",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật quét mã thanh toán hóa đơn bữa tối thịnh soạn tại nhà hàng lẩu nướng cùng bạn bè",
+      "narration": "Chưa kể những buổi liên hoan, ăn tối tại nhà hàng cao cấp vào cuối tuần để tự thưởng sau những ngày làm việc áp lực.",
+      "asset_file": "S022-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S023",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biểu đồ rò rỉ dòng tiền: Tổng chi phí ăn uống giải trí tăng vọt từ 3 triệu lên 7.5 triệu đồng mỗi tháng",
+      "narration": "Cộng tất cả lại, khoản tiền ăn uống và cà phê của bạn đã tăng thêm hơn bốn triệu đồng mỗi tháng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S024",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Dòng chữ cảnh báo tài chính: Rò rỉ vi mô là con dao sắc nhọn cắt đứt dòng tiền tích lũy",
+      "narration": "Những khoản chi nhỏ nhặt này không bao giờ xuất hiện dưới dạng một cú sốc lớn, mà thấm dần như nước chảy qua kẽ tay.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S025",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Chiếc xe máy số giản dị dựng trước sảnh văn phòng của những ngày đầu đi làm",
+      "narration": "Khoản nâng cấp thứ ba thường xuất hiện khi lương tăng chính là phương tiện và cách bạn di chuyển.",
+      "asset_file": "S025-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S026",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Chiếc xe tay ga cao cấp mới toanh bóng loáng với biển số mới trong bãi đỗ xe",
+      "narration": "Bạn cảm thấy chiếc xe máy cũ không còn phù hợp với vị trí quản lý hoặc mức lương hai mươi triệu của mình nữa.",
+      "asset_file": "S026-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S027",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hợp đồng mua xe trả góp: Trả trước một phần, mỗi tháng trả góp ngân hàng hai triệu rưỡi trong hai năm",
+      "narration": "Bạn quyết định đổi một chiếc xe tay ga đắt tiền, chọn hình thức trả góp hai triệu rưỡi mỗi tháng vì nghĩ mình thừa sức trả.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S028",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật ngồi trong xe taxi công nghệ nhìn mưa rơi ngoài cửa kính trên đường đi làm",
+      "narration": "Những ngày trời mưa hoặc nắng gắt, thay vì mặc áo mưa tự lái xe, bạn bắt đầu hình thành thói quen đặt xe ô tô công nghệ.",
+      "asset_file": "S028-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S029",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Lịch sử chuyến đi đặt xe: Mỗi tuần bốn cuốc xe ô tô, một tháng tiêu tốn thêm một triệu hai trăm nghìn",
+      "narration": "Bạn tự nhủ thời gian và sức khỏe là vàng, nhưng một tháng bạn lại mất thêm một triệu hai trăm nghìn đồng cho việc đi lại bằng ô tô.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S030",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bảng tính chi phí xe cộ: Xăng, bảo dưỡng định kỳ, phí gửi xe chung cư và trả góp tổng cộng bốn triệu mỗi tháng",
+      "narration": "Chi phí vận hành phương tiện tăng từ năm trăm nghìn lên bốn triệu đồng mỗi tháng, gấp tám lần so với trước đây.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S031",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật đứng nhìn bảng giá gửi xe và tiền bảo hiểm xe máy tại bàn tiếp tân với vẻ mặt đăm chiêu",
+      "narration": "Mỗi đồ vật đắt tiền bạn sở hữu đều kéo theo một hệ sinh thái chi phí bảo trì và bảo dưỡng đắt tiền đi kèm.",
+      "asset_file": "S031-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S032",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Sơ đồ bẫy chi phí bảo trì: Mua tài sản giá cao luôn đi kèm chi phí vận hành giá cao",
+      "narration": "Khi bạn nâng cấp chiếc xe, bạn không chỉ trả tiền cho cái xe, mà bạn đang cam kết trả thêm một chuỗi chi phí dài hạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S033",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hộp đựng chiếc điện thoại thông minh cao cấp đời mới nhất vừa được mở hộp trên bàn làm việc",
+      "narration": "Hạng mục thứ tư là mua sắm cá nhân và đồ công nghệ, nơi cái bẫy mang tên mình xứng đáng phát huy tác dụng mạnh nhất.",
+      "asset_file": "S033-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S034",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật đeo chiếc đồng hồ thông minh và tai nghe không dây đời mới, cảm thấy tự tin trước gương",
+      "narration": "Bạn đổi chiếc điện thoại mới ba mươi triệu, mua thêm đồng hồ thông minh và tai nghe cao cấp để đồng bộ hệ sinh thái.",
+      "asset_file": "S034-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S035",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hóa đơn mua sắm trả góp thẻ tín dụng: Ba mươi lăm triệu chia đều cho mười hai tháng, mỗi tháng ba triệu",
+      "narration": "Bạn chia nhỏ số tiền thành các khoản trả góp lãi suất không phần trăm qua thẻ tín dụng, tự nhủ mỗi tháng chỉ tốn vài triệu.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S036",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Tủ quần áo đầy ắp những bộ trang phục công sở đắt tiền có thương hiệu nổi tiếng",
+      "narration": "Tủ đồ của bạn bắt đầu xuất hiện những chiếc áo sơ mi, đôi giày da hàng hiệu có giá gấp hai đến ba lần đồ cũ.",
+      "asset_file": "S036-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S037",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Thẻ hội viên phòng tập thể hình cao cấp nằm trong ví, nhưng bên cạnh là lịch sử chỉ mới tập được ba buổi",
+      "narration": "Bạn mua gói tập thể hình mười hai triệu một năm tại trung tâm thể thao cao cấp, nhưng sau tháng đầu tiên chỉ ghé qua đúng ba lần.",
+      "asset_file": "S037-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S038",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biểu đồ chi tiêu ngẫu hứng: Các khoản mua sắm và đồ công nghệ tiêu tốn trung bình ba triệu rưỡi mỗi tháng",
+      "narration": "Tổng cộng các khoản chi tiêu mua sắm cá nhân đã lấy đi của bạn thêm ba triệu rưỡi mỗi tháng một cách đều đặn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S039",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật cầm điện thoại lướt các sàn thương mại điện tử vào đêm khuya, bấm đặt hàng liên tục",
+      "narration": "Mua sắm trực tuyến trở thành một liều thuốc giảm căng thẳng sau những giờ làm việc mệt mỏi ở công ty.",
+      "asset_file": "S039-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S040",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Chỉ số hưng phấn ngắn hạn: Cảm giác thỏa mãn chỉ kéo dài vài ngày nhưng nợ thẻ kéo dài nhiều tháng",
+      "narration": "Khoảnh khắc mở hộp đồ mới mang lại niềm vui chớp nhoáng, nhưng nghĩa vụ thanh toán sẽ bám theo bạn suốt nửa năm trời.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S041",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhóm bạn trẻ cùng nhau trò chuyện vui vẻ tại quán cà phê tầng thượng sang trọng nhìn ra thành phố",
+      "narration": "Hạng mục cuối cùng trong năm khoản nâng cấp vô thức chính là chi phí xã giao và duy trì hình ảnh cá nhân.",
+      "asset_file": "S041-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S042",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật rút ví đặt tờ tiền mệnh giá năm trăm nghìn lên bàn góp tiền tiệc cùng đồng nghiệp",
+      "narration": "Khi ở vị trí mới, bạn không thể từ chối những buổi tiệc sau giờ làm hoặc những chuyến dã ngoại cuối tuần cùng nhóm.",
+      "asset_file": "S042-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S043",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hóa đơn tiệc tùng: Hai buổi gặp gỡ đối tác và đồng nghiệp cuối tuần tiêu tốn hai triệu đồng",
+      "narration": "Mỗi lần đi ăn uống cùng nhóm quản lý, tiền chia hóa đơn không bao giờ dưới năm trăm nghìn đến một triệu đồng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S044",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Chiếc phong bì mừng cưới in hoa văn sang trọng kèm lời chúc mừng đồng nghiệp thân thiết",
+      "narration": "Tiền mừng cưới hỏi, sinh nhật của bạn bè và đồng nghiệp cũng được bạn nâng mức phong bì lên để không bị kém cạnh.",
+      "asset_file": "S044-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S045",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bảng thống kê chi phí xã giao: Tăng từ một triệu lên ba triệu rưỡi mỗi tháng để giữ gìn quan hệ",
+      "narration": "Khoản chi phí ngoại giao vô hình này âm thầm tiêu tốn thêm hai triệu rưỡi mỗi tháng từ thu nhập của bạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S046",
+      "beat": "Bóc thực trạng",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật nhìn vào gương trong phòng vệ sinh nhà hàng, nụ cười gượng gạo che giấu sự lo lắng bên trong",
+      "narration": "Bạn đang phải gồng mình chi tiền để duy trì một vỏ bọc thành đạt trước mắt những người xung quanh.",
+      "asset_file": "S046-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S047",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 10.0,
+      "duration_frames": 300,
+      "concept": "Bảng cân đối thu chi tổng kết 5 hạng mục: Nhà ở tăng sáu triệu, Ăn uống tăng bốn triệu, Xe cộ tăng ba triệu rưỡi, Mua sắm tăng ba triệu rưỡi, Xã giao tăng hai triệu rưỡi",
+      "narration": "Hãy nhìn vào bức tranh tổng thể: Toàn bộ mười triệu tiền lương tăng thêm đã bị nuốt chửng hoàn toàn bởi năm hạng mục nâng cấp vô thức này.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S048",
+      "beat": "Bóc thực trạng",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Dòng số liệu đỏ rực: Thu nhập hai mươi triệu, Tổng chi tiêu hai mươi triệu, Số dư cuối tháng bằng không",
+      "narration": "Và đó chính là lý do vì sao lương bạn tăng gấp đôi, nhưng ví tiền của bạn vẫn rỗng không vào cuối tháng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S049",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật chạy trên chiếc máy chạy bộ trong phòng tập, mồ hôi rơi nhưng vẫn đứng yên một chỗ",
+      "narration": "Tại sao một người thông minh, có học thức và có thu nhập tốt lại dễ dàng rơi vào cái bẫy này?",
+      "asset_file": "S049-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S050",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tiêu đề đồ họa nổi bật: Bẫy tâm lý số 1 - Cỗ máy thích nghi khoái lạc",
+      "narration": "Câu trả lời nằm ở hiện tượng tâm lý học kinh điển mang tên cỗ máy thích nghi khoái lạc.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S051",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biểu đồ sóng cảm xúc: Cột mốc hạnh phúc tăng vọt khi mua nhà mới rồi tụt dốc trở về mức cân bằng ban đầu sau 30 ngày",
+      "narration": "Bộ não con người có cơ chế thích nghi cực kỳ nhanh chóng với mọi sự tiện nghi và sung túc mới.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S052",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật thức dậy trong căn hộ chung cư mới, nhìn quanh căn phòng với vẻ mặt bình thường, không còn hào hứng",
+      "narration": "Khi bạn chuyển từ phòng trọ sang chung cư sáu triệu, tuần đầu tiên bạn cảm thấy ngập tràn trong hạnh phúc.",
+      "asset_file": "S052-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S053",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật ngồi tại ban công chung cư lướt điện thoại, cảm thấy căn hộ bắt đầu có những điểm chật chội và bất tiện",
+      "narration": "Nhưng chỉ sau ba mươi ngày, căn hộ đẹp đẽ này trở thành tiêu chuẩn bình thường mới trong mắt bạn.",
+      "asset_file": "S053-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S054",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Mô hình bậc thang thích nghi: Tiêu chuẩn sống tăng lên vĩnh viễn, nhưng cảm giác thỏa mãn lập tức biến mất",
+      "narration": "Bạn không còn thấy hạnh phúc hơn trước, nhưng bạn lại không bao giờ có thể quay về sống ở căn phòng trọ cũ được nữa.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S055",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật nhìn sang tòa nhà chung cư cao cấp bên cạnh với ánh mắt ao ước một căn hộ rộng hơn",
+      "narration": "Và thế là, bạn bắt đầu khao khát một căn hộ cao cấp hơn mười triệu để tìm lại cảm giác hưng phấn ban đầu.",
+      "asset_file": "S055-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S056",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biểu đồ vòng lặp luẩn quẩn: Kiếm nhiều tiền hơn -> Tiêu nhiều hơn -> Cần kiếm nhiều hơn để duy trì",
+      "narration": "Nó giống hệt như việc bạn chạy trên máy tập: Chân bạn guồng càng nhanh, nhưng vị trí của bạn thì vẫn dậm chân tại chỗ.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S057",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật mệt mỏi tựa lưng vào ghế văn phòng sau giờ làm, cảm thấy bị mắc kẹt trong guồng quay công việc",
+      "narration": "Bạn phải làm việc nhiều giờ hơn, chịu nhiều áp lực hơn chỉ để nuôi sống mức sống mới mà mình đã lỡ tạo ra.",
+      "asset_file": "S057-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S058",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Đồ thị phân tích: Chi phí nâng cấp thì vĩnh viễn, nhưng niềm vui nâng cấp chỉ là tạm thời",
+      "narration": "Đây chính là bẫy tâm lý nguy hiểm nhất: Chúng ta chi tiêu thật để mua những niềm vui ngắn hạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S059",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật cầm cốc nước lọc ngồi suy ngẫm bên bàn làm việc tĩnh lặng",
+      "narration": "Nếu không nhận thức được cỗ máy này, dù lương bạn có lên năm mươi triệu, bạn vẫn sẽ tiêu sạch năm mươi triệu.",
+      "asset_file": "S059-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S060",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Quy luật thích nghi của não bộ: Mức sống tăng lên như van một chiều, rất dễ mở ra nhưng cực kỳ khó đóng lại",
+      "narration": "Các nhà kinh tế học gọi đây là tính bất đối xứng của chi tiêu: Nâng lên thì mất một ngày, hạ xuống thì mất cả năm.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S061",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật thở dài nhìn danh sách các khoản thanh toán cố định tự động trừ tiền trong ứng dụng ngân hàng",
+      "narration": "Những khoản chi đã thành thói quen sẽ biến thành nhu cầu thiết yếu giả tạo trong tâm trí bạn.",
+      "asset_file": "S061-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S062",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Thông điệp khắc cốt ghi tâm: Làm chủ cỗ máy thích nghi là bước đầu tiên để giành lại tự do tài chính",
+      "narration": "Nhận ra được cỗ máy này đang vận hành chính là chìa khóa đầu tiên giúp bạn dừng lại trước khi quá muộn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S063",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bức chân dung triết gia Đi-đơ-rô thời kỳ Khai sáng thế kỷ mười tám trong phòng làm việc cổ kính",
+      "narration": "Bẫy tâm lý số hai giải thích vì sao một món đồ nhỏ lại có thể kích hoạt cả một chuỗi chi tiêu thảm họa.",
+      "asset_file": "S063-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S064",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tiêu đề đồ họa: Bẫy tâm lý số 2 - Hiệu ứng Đi-đơ-rô và phản ứng dây chuyền mua sắm",
+      "narration": "Nó mang tên Hiệu ứng Đi-đơ-rô, bắt nguồn từ câu chuyện có thật của triết gia người Pháp vào thế kỷ mười tám.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S065",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hình minh họa chiếc áo choàng nhung đỏ rực rỡ tuyệt đẹp được tặng đặt giữa căn phòng làm việc cũ kỹ",
+      "narration": "Ông cả đời sống thanh bạch, cho đến một ngày được tặng một chiếc áo choàng nhung màu đỏ lộng lẫy.",
+      "asset_file": "S065-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S066",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhà thông thái nhìn quanh căn phòng nhỏ, thấy bàn ghế gỗ cũ nát và tấm thảm rách không còn xứng với áo choàng",
+      "narration": "Khi khoác chiếc áo choàng quý tộc lên người, ông nhìn quanh căn phòng và thấy chiếc bàn gỗ cũ kỹ bỗng trở nên thô kệch.",
+      "asset_file": "S066-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S067",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Sơ đồ chuỗi phản ứng dây chuyền: Chiếc áo choàng đỏ -> Mua bàn làm việc mới -> Mua thảm mới -> Mua tượng đồng trang trí",
+      "narration": "Để xứng với chiếc áo, ông gom tiền mua một chiếc bàn mới; rồi chiếc bàn mới lại đòi hỏi một tấm thảm lụa mới.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S068",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Triết gia ngồi ôm đầu giữa căn phòng tràn ngập đồ đạc xa xỉ mới mua, nhưng trong túi hoàn toàn cạn kiệt",
+      "narration": "Chuỗi phản ứng mua sắm dây chuyền cứ thế tiếp diễn cho đến khi toàn bộ số tiền tích lũy của ông biến sạch và lâm vào nợ nần.",
+      "asset_file": "S068-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S069",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Khái niệm tài chính hiện đại: Nâng cấp một món đồ kéo theo bắt buộc nâng cấp toàn bộ hệ sinh thái xung quanh",
+      "narration": "Trong đời sống hiện đại, hiệu ứng này diễn ra hàng ngày mà bạn không hề hay biết.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S070",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật cầm chiếc điện thoại mới mua, nhìn vào củ sạc cũ và tai nghe dây cũ trên bàn",
+      "narration": "Khi bạn mua một chiếc điện thoại cao cấp mới, bạn cảm thấy chiếc ốp lưng cũ ba mươi nghìn không còn xứng tầm.",
+      "asset_file": "S070-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S071",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Danh sách chi tiêu phái sinh: Điện thoại mới -> Ốp lưng hàng hiệu -> Củ sạc nhanh -> Tai nghe không dây -> Gói bảo hiểm rơi vỡ",
+      "narration": "Bạn mua ốp lưng chính hãng năm trăm nghìn, sạc không dây một triệu, tai nghe không dây ba triệu và gói bảo hiểm rơi vỡ.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S072",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật mặc bộ vest mới may rất đẹp nhưng nhìn xuống đôi giày da cũ sờn đế",
+      "narration": "Khi bạn mua một bộ vest mới đi làm, bạn buộc phải mua thêm một đôi giày da mới và một chiếc cặp da công sở mới.",
+      "asset_file": "S072-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S073",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hiệu ứng dây chuyền chi tiêu: Món đồ ban đầu chỉ trị giá hai mươi triệu kéo theo các khoản chi phái sinh lên đến mười lăm triệu",
+      "narration": "Món đồ ban đầu chỉ là ngòi nổ, chính chuỗi chi tiêu đồng bộ phía sau mới là thứ tàn phá tài khoản ngân hàng của bạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S074",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật đứng tần ngần trước cửa hàng thời trang, cầm hóa đơn thanh toán dài dằng dặc",
+      "narration": "Chúng ta liên tục mua sắm những thứ bổ trợ chỉ để phục vụ cho món đồ đắt tiền mà mình vừa sở hữu.",
+      "asset_file": "S074-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S075",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Quy tắc cảnh giác tài chính: Hãy dập tắt chuỗi mua sắm dây chuyền ngay từ mắt xích đầu tiên",
+      "narration": "Muốn giữ được tiền, bạn phải có năng lực phát hiện và dập tắt ngòi nổ mua sắm ngay từ món đồ đầu tiên.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S076",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật kiên quyết cất chiếc thẻ tín dụng vào ngăn kéo, từ chối mua thêm phụ kiện không cần thiết",
+      "narration": "Sự hài lòng không đến từ việc đồng bộ hóa đồ đạc bên ngoài, mà đến từ sự đồng bộ giữa thu nhập và dòng tiền tích lũy.",
+      "asset_file": "S076-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S077",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật ngồi nhìn chiếc bánh ngọt hấp dẫn trên đĩa, đấu tranh tâm lý giữa ăn ngay và giữ vóc dáng",
+      "narration": "Bẫy tâm lý số ba là một cơ chế tiến hóa đã ăn sâu vào bộ não con người: Thiên kiến hiện tại, tức xu hướng coi trọng hiện tại hơn tương lai.",
+      "asset_file": "S077-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S078",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tiêu đề đồ họa: Bẫy tâm lý số 3 - Thiên kiến hiện tại và ảo tưởng tháng sau sẽ tiết kiệm",
+      "narration": "Bộ não của chúng ta luôn đánh giá phần thưởng ở hiện tại cao hơn rất nhiều so với những phần thưởng tương đương trong tương lai.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S079",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật vui vẻ quẹt thẻ thanh toán bữa tiệc thịnh soạn, tự nhủ tháng sau mình sẽ thắt chặt chi tiêu",
+      "narration": "Bạn dễ dàng tiêu hai triệu cho bữa tiệc hôm nay, và tự hứa với bản thân rằng tháng sau mình sẽ bắt đầu tiết kiệm bù lại.",
+      "asset_file": "S079-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S080",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biểu đồ tâm lý học: Bản thân trong tương lai luôn bị coi như một người xa lạ phải gánh chịu hậu quả tài chính",
+      "narration": "Các nhà nghiên cứu thần kinh học phát hiện ra: Khi nghĩ về bản thân trong mười năm tới, não bộ xử lý thông tin hệt như nghĩ về một người lạ.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S081",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Hình ảnh chiếc đồng hồ cát đang chảy, cát rơi đều đặn không dừng lại",
+      "narration": "Bạn sẵn sàng trừng phạt bản thân trong tương lai bằng cảnh cạn tiền, chỉ để đổi lấy sự thỏa mãn chốc lát của bản thân ở hiện tại.",
+      "asset_file": "S081-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S082",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Lời nói dối tai hại nhất: Tháng sau mình sẽ tiết kiệm là chiếc bẫy trì hoãn nguy hiểm nhất của đời người",
+      "narration": "Thực tế chứng minh: Nếu ngày hôm nay có thêm tiền mà bạn không tiết kiệm được, thì tháng sau chắc chắn bạn cũng sẽ không làm được.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S083",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật tỉnh ngộ nhìn thẳng vào gương, nhận ra mình đã lặp lại lời hứa này suốt mười hai tháng qua",
+      "narration": "Bởi vì khi tháng sau tới, nó lại biến thành hiện tại, và thiên kiến này sẽ tiếp tục thôi thúc bạn tiêu sạch số tiền đó.",
+      "asset_file": "S083-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S084",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nguyên tắc thép: Tiết kiệm không phải là việc của tháng sau, tiết kiệm là hành động phải thực hiện ngay giây phút lương về",
+      "narration": "Cách duy nhất để đánh bại thiên kiến hiện tại là loại bỏ hoàn toàn yếu tố ý chí ra khỏi quy trình giữ tiền.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S085",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật mở sổ tay và máy tính để tính toán lại những con số tài chính cụ thể",
+      "narration": "Bây giờ, hãy cùng tôi làm một bài toán chi phí cơ hội thực tế để thấy cái giá bạn phải trả đắt đến mức nào.",
+      "asset_file": "S085-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S086",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.133333333333333,
+      "duration_frames": 244,
+      "concept": "Bảng so sánh hai kịch bản đối lập cho mười triệu tiền lương tăng thêm mỗi tháng",
+      "narration": "Giả sử mỗi tháng bạn được tăng thêm mười triệu đồng: Kịch bản A tiêu hết vào nâng cấp lối sống; Kịch bản B trích năm mươi phần trăm đi đầu tư tích sản.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S087",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Công thức lãi kép: Năm triệu mỗi tháng, tích sản đều đặn vào chứng chỉ quỹ với lợi nhuận kỳ vọng 10% mỗi năm",
+      "narration": "Ở kịch bản B, bạn chỉ cần giữ lại năm triệu đồng mỗi tháng, gửi đều đặn vào kênh tích sản với mức sinh lời khiêm tốn mười phần trăm một năm.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S088",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cột mốc 1 năm: Kịch bản A có 0 đồng tích sản vs Kịch bản B có 63 triệu đồng trong tài khoản",
+      "narration": "Sau một năm: Kịch bản A có con số không tròn trĩnh; Kịch bản B đã sở hữu sáu mươi ba triệu đồng tiền mặt an toàn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S089",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật nhìn thấy con số sáu mươi ba triệu, đủ để chi trả toàn bộ chi phí sinh hoạt trong sáu tháng nếu có biến cố",
+      "narration": "Số tiền sáu mươi ba triệu này chính là tấm khiên giúp bạn ngủ ngon mỗi đêm mà không phải lo sợ mất việc.",
+      "asset_file": "S089-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S090",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cột mốc 3 năm: Kịch bản A vẫn 0 đồng vs Kịch bản B tích lũy được 215 triệu đồng nhờ sức mạnh lãi kép",
+      "narration": "Sau ba năm: Trong khi người ở kịch bản A vẫn loay hoay xoay tiền trang trải, người ở kịch bản B đã có hai trăm mười lăm triệu đồng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S091",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cột mốc 5 năm: Kịch bản A đối mặt với chi phí cố định khổng lồ vs Kịch bản B cán mốc 410 triệu đồng",
+      "narration": "Sau năm năm làm việc: Con số ở kịch bản B đã tăng vọt lên bốn trăm mười triệu đồng, tương đương gần nửa tỷ đồng tích lũy.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S092",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật cầm cuốn sổ tiết kiệm và danh mục tài sản, cảm nhận được sự tự do và thanh thản thực sự",
+      "narration": "Bốn trăm mười triệu đồng mang lại cho bạn quyền lựa chọn công việc mình yêu thích thay vì phải gắng gượng làm việc vì tiền.",
+      "asset_file": "S092-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S093",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cột mốc 10 năm bùng nổ: Kịch bản B chính thức vượt ngưỡng 1.1 tỷ đồng tích sản độc lập",
+      "narration": "Và nếu kiên trì mười năm: Nhờ sức mạnh kỳ diệu của lãi kép, số tiền năm triệu mỗi tháng đã nở ra hơn một tỷ một trăm triệu đồng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S094",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Đồ thị phân kỳ khổng lồ: Khoảng cách giữa 0 đồng và 1.1 tỷ đồng chính là cái giá của việc nâng cấp lối sống bừa bãi",
+      "narration": "Một bên là một tỷ một trăm triệu đồng tài sản ròng; một bên là con số không, cùng những món đồ cũ đã lỗi thời và mất giá.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S095",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật nhìn vào đồ thị tài chính với vẻ mặt chấn động và hoàn toàn thức tỉnh",
+      "narration": "Chiếc điện thoại mới hay bữa ăn đắt đỏ hôm nay không chỉ tốn vài triệu, nó đang lấy đi của bạn cả một gia tài trong tương lai.",
+      "asset_file": "S095-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S096",
+      "beat": "Số liệu & Bẫy tâm lý",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Kết luận đanh thép: Tăng lương không làm bạn giàu lên, việc bạn giữ lại được bao nhiêu tiền từ khoản tăng đó mới quyết định tương lai của bạn",
+      "narration": "Sự khác biệt giữa người giàu lên sau khi tăng lương và người nghèo đi chính là khả năng kiểm soát phần tiền tăng thêm này.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S097",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Khung hình chia đôi: Bên trái là chàng trai A sang trọng bảnh bao, bên phải là chàng trai B giản dị điềm đạm",
+      "narration": "Để thấy rõ sự tương phản này, hãy đặt hai đồng nghiệp cùng nhận mức lương hai mươi triệu lên bàn cân sau ba năm làm việc.",
+      "asset_file": "S097-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S098",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Người A mặc áo vest sang trọng bước xuống từ chiếc xe tay ga đắt tiền, đeo kính râm thời thượng",
+      "narration": "Người A chọn nâng cấp lối sống toàn diện: Anh ta chuyển sang chung cư cao cấp, đổi xe mới và thường xuyên lui tới những nơi đắt đỏ.",
+      "asset_file": "S098-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S099",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Người B mặc áo sơ mi trắng giản dị, chạy chiếc xe máy quen thuộc, mỉm cười nhẹ nhàng bước vào văn phòng",
+      "narration": "Người B chọn giữ nguyên mức sống cũ: Anh ta vẫn ở căn phòng vừa vặn, đi chiếc xe cũ và ăn những bữa cơm ấm áp.",
+      "asset_file": "S099-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S100",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bảng so sánh vẻ bề ngoài: Người A trông như một doanh nhân thành đạt; Người B trông như một nhân viên bình thường",
+      "narration": "Nhìn từ bên ngoài, ai cũng nghĩ người A thành công hơn, kiếm được nhiều tiền hơn và có cuộc sống đáng mơ ước hơn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S101",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Người A ngồi ôm trán căng thẳng trong căn hộ chung cư lúc nửa đêm khi nhận thông báo công ty cắt giảm nhân sự",
+      "narration": "Nhưng bức tranh hậu trường lại hoàn toàn trái ngược: Người A sống trong nỗi sợ hãi tột cùng mỗi khi công ty có biến động.",
+      "asset_file": "S101-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S102",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bảng số dư thực tế của người A: Tài khoản còn đúng sáu triệu đồng, nợ thẻ tín dụng hai mươi triệu, tiền nhà đến hạn thanh toán",
+      "narration": "Với chi phí sinh hoạt mười chín triệu mỗi tháng, người A chỉ cần chậm lương đúng mười ngày là lập tức rơi vào khủng hoảng tài chính.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S103",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Người B thảnh thơi nhâm nhi tách trà bên cửa sổ, không hề có chút lo âu về những thông tin cắt giảm nhân sự",
+      "narration": "Trong khi đó, người B sở hữu một quỹ khẩn cấp sáu tháng và một danh mục tích sản hơn hai trăm triệu đồng.",
+      "asset_file": "S103-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S104",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cán cân tự do tài chính: Người A có 0 ngày sống sót nếu mất việc vs Người B có 24 tháng thảnh thơi tự chủ",
+      "narration": "Nếu mất việc, người B có thể ung dung sống hai năm mà không cần vay mượn ai một đồng nào.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S105",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Người A cắn răng chịu đựng những lời phê bình của cấp trên vì không dám nghỉ việc",
+      "narration": "Người A trở thành nô lệ cho chính mức sống của mình, không dám lên tiếng phản bác và không dám đổi việc vì áp lực tiền bạc.",
+      "asset_file": "S105-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S106",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Người B tự tin trình bày quan điểm trong cuộc họp với tâm thế vững vàng của một người tự chủ tài chính",
+      "narration": "Người B làm việc với tâm thế tự tin, sáng tạo và thảnh thơi, bởi vì anh ta không bị đồng tiền trói buộc vào chiếc ghế làm việc.",
+      "asset_file": "S106-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S107",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "So sánh cốt lõi: Ảo giác giàu có bên ngoài vs Năng lực tài chính thực sự bên trong",
+      "narration": "Người A chọn vẻ ngoài giàu có giả tạo; người B chọn sự tự do tài chính thực chất và bền vững.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S108",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật MC đứng trước bức tường kính thành phố, nhìn xuống dòng người tấp nập với cái nhìn thấu suốt",
+      "narration": "Thực tế phũ phàng là: Người khác chỉ quan tâm đến những gì bạn chi tiêu trong vài giây, rồi họ sẽ quên ngay lập tức.",
+      "asset_file": "S108-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S109",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nghịch lý nhận thức xã hội: Người ta không ngưỡng mộ chiếc xe của bạn, họ chỉ đang tưởng tượng họ ngồi trong chiếc xe đó",
+      "narration": "Tác giả cuốn sách Tâm lý học về tiền từng viết: Không ai bị ấn tượng bởi món đồ đắt tiền của bạn nhiều bằng chính bản thân bạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S110",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật tự tin mặc chiếc áo sơ mi trắng giản dị bước đi giữa phố đông, không cần ánh nhìn công nhận của người lạ",
+      "narration": "Khi bạn chi tiền chỉ để gây ấn tượng với người khác, bạn đang tiêu mồ hôi của mình cho những ánh nhìn thoáng qua.",
+      "asset_file": "S110-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S111",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Định nghĩa mới về sự giàu có: Giàu có không phải là thứ bạn khoe ra, giàu có là những gì bạn giữ lại được",
+      "narration": "Chiếc xe bạn không mua, căn nhà bạn không nâng cấp quá đà, chính là tài sản thực sự đang bảo vệ tương lai của bạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S112",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật mỉm cười nhẹ nhõm khi trút bỏ được gánh nặng phải thể hiện với xã hội",
+      "narration": "Buông bỏ được nhu cầu chứng tỏ bản thân chính là bước nhảy vọt lớn nhất trong tư duy quản lý tài chính cá nhân.",
+      "asset_file": "S112-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S113",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bảng tóm tắt tương phản: Lối sống hào nhoáng dẫn tới kiệt quệ vs Lối sống kỷ luật dẫn tới bình an tự tại",
+      "narration": "Sự bình yên trong tâm hồn bắt đầu từ giây phút bạn dám sống dưới mức thu nhập của mình mà không hề cảm thấy xấu hổ.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S114",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật đặt hai bàn tay lên bàn, sẵn sàng đón nhận những giải pháp thực tế để thay đổi hoàn toàn cục diện",
+      "narration": "Vậy làm thế nào để chúng ta vừa tận hưởng thành quả tăng lương, vừa không bị cuốn vào cỗ máy lạm phát lối sống này?",
+      "asset_file": "S114-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S115",
+      "beat": "Tương phản",
+      "type": "GFX",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Mũi tên định hướng: Từ cạm bẫy tâm lý chuyển dịch sang Hệ thống phòng thủ ba tầng thực chiến",
+      "narration": "Câu trả lời không phải là sống kham khổ cực đoan, mà là thiết lập một hệ thống bảo vệ tự động.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S116",
+      "beat": "Tương phản",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Master Anchor chỉ tay về phía trước, mở ra phần lộ trình hành động cụ thể từng bước",
+      "narration": "Ngay sau đây, tôi sẽ hướng dẫn bạn quy trình ba tầng phòng thủ chi tiết để áp dụng ngay vào kỳ lương tới.",
+      "asset_file": "S116-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S117",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tiêu đề đồ họa nổi bật: Tầng phòng thủ số 1 - Quy tắc Đóng băng lối sống sáu tháng",
+      "narration": "Tầng phòng thủ đầu tiên mang tên: Quy tắc đóng băng lối sống trong sáu tháng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S118",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật nhìn vào lịch treo tường, đánh dấu khoanh tròn cột mốc một trăm tám mươi ngày kỷ luật",
+      "narration": "Kể từ ngày bạn nhận được thông báo tăng lương, hãy ban hành một lệnh giới nghiêm chi tiêu cố định trong đúng một trăm tám mươi ngày.",
+      "asset_file": "S118-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S119",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Biển báo ba điều cấm trong 6 tháng: 1. Cấm chuyển chỗ ở; 2. Cấm đổi xe; 3. Cấm mua đồ công nghệ đắt tiền",
+      "narration": "Trong sáu tháng này: Tuyệt đối không chuyển nhà, không đổi xe và không mua bất kỳ món đồ công nghệ xa xỉ nào.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S120",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật kiên nhẫn lau chùi chiếc xe máy cũ và sắp xếp lại căn phòng trọ sạch sẽ ngăn nắp",
+      "narration": "Hãy giữ nguyên mức sống cũ để cơ thể và tâm trí bạn quen dần với việc nhìn thấy một khoản tiền lớn dư ra mỗi tháng.",
+      "asset_file": "S120-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S121",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Lợi ích tâm lý học: Sáu tháng giúp bộ não thoát khỏi cơn say hưng phấn tăng lương và lấy lại sự tỉnh táo",
+      "narration": "Khoảng thời gian này giúp bạn làm nguội cơn hưng phấn ban đầu, tránh được những quyết định tài chính bốc đồng không thể đảo ngược.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S122",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Số tiền gom được sau 6 tháng: Sáu tháng nhân mười triệu bằng sáu mươi triệu đồng tiền vốn ban đầu nguyên vẹn",
+      "narration": "Chỉ sau sáu tháng đóng băng, bạn đã tích lũy ngay được một quỹ an toàn sáu mươi triệu đồng mà không tốn công sức gồng gánh.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S123",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật mỉm cười tự tin khi nhìn thấy số dư tích lũy tăng trưởng đều đặn qua từng tháng",
+      "narration": "Cảm giác có một khoản tiền dự phòng lớn trong tay sẽ mang lại sự an tâm vượt trội hơn bất kỳ món đồ hiệu nào.",
+      "asset_file": "S123-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S124",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Quy tắc vàng: Đóng băng lối sống không phải là kìm hãm, mà là tạo khoảng đệm an toàn trước khi bứt phá",
+      "narration": "Đây là bước chạy đà cực kỳ quan trọng giúp bạn thiết lập thế chủ động hoàn toàn trước đồng tiền của chính mình.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S125",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật gật đầu kiên định, sẵn sàng chuyển sang bước tiếp theo của hệ thống",
+      "narration": "Sau khi đã vượt qua sáu tháng thử thách, chúng ta sẽ bước sang quy tắc phân bổ dòng tiền bền vững.",
+      "asset_file": "S125-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S126",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Cầu nối chuyển tiếp: Từ kỷ luật đóng băng bước sang Công thức phân bổ 50/50 thông minh",
+      "narration": "Hết sáu tháng, bạn có được nâng cấp mức sống không? Câu trả lời là có, nhưng phải theo một tỷ lệ vàng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S127",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tiêu đề đồ họa: Tầng phòng thủ số 2 - Quy tắc chia đôi phần lương tăng năm mươi năm mươi",
+      "narration": "Tầng phòng thủ số hai chính là Quy tắc chia đôi phần lương tăng, hay công thức năm mươi năm mươi.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S128",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Sơ đồ phân luồng 10 triệu lương tăng: 50% (5 triệu) vào Quỹ tích sản; 50% (5 triệu) nâng cấp có chủ đích",
+      "narration": "Khi bạn được tăng thêm mười triệu đồng: Bắt buộc chia đôi số tiền này thành hai phần hoàn toàn bằng nhau.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S129",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhánh số 1: Năm triệu đồng tự động chuyển vào tài khoản tích sản hoặc chứng chỉ quỹ ngay ngày nhận lương",
+      "narration": "Năm mươi phần trăm đầu tiên, tức năm triệu đồng, phải được tự động chuyển thẳng vào tài khoản tích sản ngay ngày có lương.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S130",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật thao tác thiết lập lệnh trích tiền tự động định kỳ trên ứng dụng ngân hàng số",
+      "narration": "Hãy cài đặt lệnh trích tiền tự động vào lúc tám giờ sáng ngày nhận lương, trước khi bạn kịp nhìn thấy hoặc có ý định tiêu nó.",
+      "asset_file": "S130-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S131",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nguyên tắc trả cho mình trước: Coi năm triệu đồng này như một khoản thuế bắt buộc và chưa từng tồn tại",
+      "narration": "Đây là nguyên tắc kinh điển: Hãy trả cho bản thân mình trước, phần còn lại mới dùng để chi trả cho cuộc sống.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S132",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhánh số 2: Năm triệu đồng còn lại được phép chi tiêu nâng cấp chất lượng sống một cách hoàn toàn thoải mái",
+      "narration": "Năm mươi phần trăm còn lại, tức năm triệu đồng, bạn được phép thoải mái dùng để nâng cấp cuộc sống của mình.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S133",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật vui vẻ đăng ký một khóa học nâng cao kỹ năng nghề nghiệp và mua giỏ thực phẩm tươi sạch hữu cơ",
+      "narration": "Bạn có thể dùng khoản tiền này để ăn uống chất lượng hơn, đăng ký một khóa học chuyên môn hoặc phụng dưỡng cha mẹ.",
+      "asset_file": "S133-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S134",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cân bằng tâm lý: Cho phép nâng cấp 50% giúp bạn có động lực phấn đấu mà không bị ức chế tâm lý cực đoan",
+      "narration": "Quy tắc này giúp bạn vừa tận hưởng được quả ngọt của sự thăng tiến, vừa đảm bảo tài sản tương lai vẫn sinh sôi mạnh mẽ.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S135",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật tự tin thưởng thức một bữa ăn ngon cùng người thân mà không còn cảm giác tội lỗi hay lo âu",
+      "narration": "Bạn tiêu tiền một cách có chủ đích, tự hào và không bao giờ phải hối hận vì mình đã bảo vệ được một nửa phần tiền tăng thêm an toàn.",
+      "asset_file": "S135-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S136",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Bảng tính lũy kế sau 3 năm áp dụng quy tắc 50/50: Vừa sống thoải mái hơn, vừa tích lũy được hơn 200 triệu đồng",
+      "narration": "Nhờ công thức này, sau ba năm bạn vừa được nâng cấp mức sống lên hai mươi lăm phần trăm, vừa có trong tay hơn hai trăm triệu đồng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S137",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật nhìn vào màn hình điện thoại với nụ cười hài lòng và phong thái tự tin vững vàng",
+      "narration": "Đó chính là sự cân bằng hoàn hảo giữa hạnh phúc ở hiện tại và sự thịnh vượng ở tương lai.",
+      "asset_file": "S137-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S138",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Đúc kết quy tắc 50/50: Mỗi lần tăng lương là một lần tăng gấp đôi tốc độ tự do tài chính của bạn",
+      "narration": "Cứ mỗi nấc thang thu nhập mới, tốc độ tích sản của bạn sẽ tăng lên theo cấp số nhân thay vì trôi tuột vào chi phí.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S139",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tiêu đề đồ họa: Tầng phòng thủ số 3 - Hệ thống phân luồng ba tài khoản số và Bộ lọc chi tiêu 72 giờ",
+      "narration": "Tầng phòng thủ thứ ba là thiết lập Hệ thống phân luồng ba tài khoản số và bộ lọc chi tiêu vi mô.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S140",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Mô hình ba tài khoản ngân hàng số: 1. Tài khoản sống cơ bản; 2. Tài khoản tích sản bất khả xâm phạm; 3. Tài khoản trải nghiệm có hạn mức",
+      "narration": "Thay vì để chung toàn bộ tiền trong một tài khoản, bạn hãy mở ba tài khoản số riêng biệt trên điện thoại.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S141",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tài khoản số 1: Nhận lương và giữ nguyên mười triệu cho toàn bộ chi phí sinh hoạt thiết yếu",
+      "narration": "Tài khoản thứ nhất giữ nguyên mười triệu cho chi phí sinh hoạt căn bản: tiền nhà, tiền ăn, hóa đơn điện nước.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S142",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tài khoản số 2: Tích sản năm triệu tự động chuyển đi đầu tư, không cài ứng dụng chuyển tiền trên máy để tránh rút bừa",
+      "narration": "Tài khoản thứ hai là két sắt tích sản năm triệu: Tiền chỉ có một chiều đi vào, tuyệt đối không gắn thẻ rút tiền chi tiêu.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S143",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Tài khoản số 3: Năm triệu cho trải nghiệm và nâng cấp, tiêu hết là dừng lại, không được phép bù trừ",
+      "narration": "Tài khoản thứ ba là tài khoản trải nghiệm năm triệu: Bạn được quyền tiêu trọn khoản này cho sở thích mà không cần áy náy.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S144",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Nhân vật dừng tay trước nút bấm Mua ngay trên sàn thương mại điện tử, đặt điện thoại xuống bàn",
+      "narration": "Đi kèm với hệ thống tài khoản là Quy tắc bảy mươi hai giờ: Trước mọi quyết định mua đồ ngoài danh mục, hãy chờ đủ ba ngày.",
+      "asset_file": "S144-A_8s_IMG.png"
+    },
+    {
+      "scene_id": "S145",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Đồng hồ đếm ngược 72 giờ: 80% ham muốn mua sắm bốc đồng sẽ tự động biến mất sau ba ngày suy nghĩ",
+      "narration": "Sau bảy mươi hai giờ, cơn sốt hưng phấn mua sắm sẽ hạ nhiệt; tám mươi phần trăm trường hợp bạn sẽ nhận ra mình không hề cần món đồ đó.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S146",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật cầm chiếc máy tính mini, quy đổi giá tiền chiếc áo hai triệu thành hai mươi giờ làm việc",
+      "narration": "Bộ lọc thứ hai là Quy đổi giá trị ra giờ lao động: Lấy giá món đồ chia cho thu nhập mỗi giờ làm việc của bạn.",
+      "asset_file": "S146-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S147",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Công thức quy đổi thực tế: Thu nhập 100 nghìn/giờ -> Chiếc đồng hồ 6 triệu tương đương 60 giờ làm việc",
+      "narration": "Nếu bạn kiếm được một trăm nghìn một giờ, chiếc đồng hồ sáu triệu đồng tương đương sáu mươi giờ làm việc vất vả, liệu có xứng đáng?",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S148",
+      "beat": "Lộ trình giải pháp",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nhân vật mỉm cười thanh thản, tự tin làm chủ hoàn toàn mọi quyết định chi tiêu hàng ngày",
+      "narration": "Khi bạn nhìn món đồ dưới góc độ thời gian của cuộc đời mình, bạn sẽ trở thành một người tiêu dùng cực kỳ thông thái.",
+      "asset_file": "S148-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S149",
+      "beat": "Lộ trình giải pháp",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Hệ thống hoàn chỉnh: Ba tầng phòng thủ kết hợp tạo thành bức tường thành vững chắc bảo vệ tương lai của bạn",
+      "narration": "Ba tầng phòng thủ này không hề tốn thời gian, nhưng nó sẽ bảo vệ bạn trọn đời trước mọi cám dỗ của lạm phát lối sống.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S150",
+      "beat": "Kết bình yên",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Cây tài sản xanh tươi đâm chồi nảy lộc, tỏa bóng mát che chở cho ngôi nhà nhỏ ấm cúng",
+      "narration": "Tài chính cá nhân không phải là cuộc đua xem ai chi tiêu hoành tráng hơn hay ai đổi điện thoại nhanh hơn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S151",
+      "beat": "Kết bình yên",
+      "type": "IMG",
+      "duration": 7.0,
+      "duration_frames": 210,
+      "concept": "Nam MC đại diện kênh ngồi đọc sách bên hiên nhà ngập tràn ánh nắng ấm áp, tâm thái an nhiên",
+      "narration": "Nó là hành trình xây dựng sự bình yên nội tại, nơi bạn không còn phải giật mình thon thót mỗi khi nhận thông báo số dư.",
+      "asset_file": "S151-A_7s_IMG.png"
+    },
+    {
+      "scene_id": "S152",
+      "beat": "Kết bình yên",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Sơ đồ tự do đích thực: Kiếm tiền thông minh -> Giữ tiền kỷ luật -> Tự do lựa chọn cuộc sống",
+      "narration": "Sự giàu có thực sự là quyền được tự do lựa chọn công việc mình yêu thích và có thể nói không với những điều mình không muốn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S153",
+      "beat": "Kết bình yên",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Châm ngôn dập nổi: Tài sản lớn nhất của một con người không phải là đồ hiệu, mà là sự tự do trong tâm trí",
+      "narration": "Hãy để mỗi đồng tiền tăng thêm trở thành một viên gạch xây dựng tự do, thay vì trở thành sợi dây xích trói buộc bạn.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S154",
+      "beat": "Kết bình yên",
+      "type": "AIV",
+      "duration": 6.0,
+      "duration_frames": 180,
+      "concept": "Chàng trai văn phòng 27 tuổi mặc sơ mi trắng tự tin sải bước trên con phố nhộn nhịp với nụ cười thanh thản và ánh mắt rạng ngời",
+      "narration": "Từ kỳ lương tới, hãy áp dụng công thức năm mươi năm mươi để làm chủ dòng tiền.",
+      "asset_file": "S154-A_6s_AIV.mp4"
+    },
+    {
+      "scene_id": "S155",
+      "beat": "Kết bình yên",
+      "type": "AIV",
+      "duration": 6.0,
+      "duration_frames": 180,
+      "concept": "Chàng trai đứng trên đỉnh đồi lộng gió lúc bình minh, hít thở bầu không khí trong lành, ánh mặt trời vàng ấm áp chiếu rọi",
+      "narration": "Bạn xứng đáng có sự thảnh thơi tài chính, tạo nên bởi chính kỷ luật của mình.",
+      "asset_file": "S155-A_6s_AIV.mp4"
+    },
+    {
+      "scene_id": "S156",
+      "beat": "Kết bình yên",
+      "type": "GFX",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Logo Tiền Thực Chiến hiện lên trang nhã cùng slogan: Kiến thức thực chiến - Hành động mỗi ngày - Bình an tài chính",
+      "narration": "Nếu thấy video này hữu ích, hãy nhấn Đăng ký kênh Tiền Thực Chiến để cùng nhau xây dựng nền tảng tài chính vững vàng.",
+      "asset_file": null
+    },
+    {
+      "scene_id": "S157",
+      "beat": "Kết bình yên",
+      "type": "IMG",
+      "duration": 8.0,
+      "duration_frames": 240,
+      "concept": "Master Anchor mỉm cười ấm áp giơ tay chào tạm biệt khán giả trong khung hình tinh tế",
+      "narration": "Tôi là người đồng hành của bạn tại Tiền Thực Chiến. Cảm ơn bạn đã lắng nghe và hẹn gặp lại ở video tiếp theo.",
+      "asset_file": "S157-A_8s_IMG.png"
+    }
+  ]
+}

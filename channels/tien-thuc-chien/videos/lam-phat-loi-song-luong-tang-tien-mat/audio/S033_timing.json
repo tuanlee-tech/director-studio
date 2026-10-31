@@ -1,0 +1,144 @@
+{
+  "audio_file": "S033_narration.wav",
+  "duration_ms": 5440,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hẳn",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "một",
+      "start_ms": 160,
+      "end_ms": 300
+    },
+    {
+      "word": "thứ",
+      "start_ms": 300,
+      "end_ms": 440
+    },
+    {
+      "word": "tư",
+      "start_ms": 440,
+      "end_ms": 640
+    },
+    {
+      "word": "là",
+      "start_ms": 640,
+      "end_ms": 800
+    },
+    {
+      "word": "một",
+      "start_ms": 800,
+      "end_ms": 920
+    },
+    {
+      "word": "xong",
+      "start_ms": 920,
+      "end_ms": 1060
+    },
+    {
+      "word": "cá",
+      "start_ms": 1060,
+      "end_ms": 1240
+    },
+    {
+      "word": "nhân",
+      "start_ms": 1240,
+      "end_ms": 1400
+    },
+    {
+      "word": "và",
+      "start_ms": 1400,
+      "end_ms": 1640
+    },
+    {
+      "word": "đồ",
+      "start_ms": 1640,
+      "end_ms": 1740
+    },
+    {
+      "word": "công",
+      "start_ms": 1740,
+      "end_ms": 1880
+    },
+    {
+      "word": "nghệ,",
+      "start_ms": 1880,
+      "end_ms": 2160
+    },
+    {
+      "word": "nơi",
+      "start_ms": 2580,
+      "end_ms": 2800
+    },
+    {
+      "word": "cái",
+      "start_ms": 2800,
+      "end_ms": 2940
+    },
+    {
+      "word": "bẫy",
+      "start_ms": 2940,
+      "end_ms": 3100
+    },
+    {
+      "word": "mang",
+      "start_ms": 3100,
+      "end_ms": 3220
+    },
+    {
+      "word": "tên",
+      "start_ms": 3220,
+      "end_ms": 3480
+    },
+    {
+      "word": "mình",
+      "start_ms": 3480,
+      "end_ms": 3680
+    },
+    {
+      "word": "sướng",
+      "start_ms": 3680,
+      "end_ms": 3960
+    },
+    {
+      "word": "đáng",
+      "start_ms": 3960,
+      "end_ms": 4120
+    },
+    {
+      "word": "phát",
+      "start_ms": 4120,
+      "end_ms": 4280
+    },
+    {
+      "word": "huy",
+      "start_ms": 4280,
+      "end_ms": 4500
+    },
+    {
+      "word": "tắc",
+      "start_ms": 4500,
+      "end_ms": 4720
+    },
+    {
+      "word": "dụng",
+      "start_ms": 4720,
+      "end_ms": 5020
+    },
+    {
+      "word": "mạnh",
+      "start_ms": 5020,
+      "end_ms": 5080
+    },
+    {
+      "word": "nhất.",
+      "start_ms": 5080,
+      "end_ms": 5260
+    }
+  ]
+}

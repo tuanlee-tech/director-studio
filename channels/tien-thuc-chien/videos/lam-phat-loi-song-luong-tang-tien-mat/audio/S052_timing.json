@@ -1,0 +1,119 @@
+{
+  "audio_file": "S052_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Khi",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "bạn",
+      "start_ms": 200,
+      "end_ms": 320
+    },
+    {
+      "word": "truyền",
+      "start_ms": 320,
+      "end_ms": 580
+    },
+    {
+      "word": "từ",
+      "start_ms": 580,
+      "end_ms": 720
+    },
+    {
+      "word": "phòng",
+      "start_ms": 720,
+      "end_ms": 960
+    },
+    {
+      "word": "trọng",
+      "start_ms": 960,
+      "end_ms": 1300
+    },
+    {
+      "word": "sang",
+      "start_ms": 1300,
+      "end_ms": 1400
+    },
+    {
+      "word": "trung",
+      "start_ms": 1400,
+      "end_ms": 1640
+    },
+    {
+      "word": "cư",
+      "start_ms": 1640,
+      "end_ms": 1860
+    },
+    {
+      "word": "6",
+      "start_ms": 1860,
+      "end_ms": 2080
+    },
+    {
+      "word": "chiệu,",
+      "start_ms": 2080,
+      "end_ms": 2460
+    },
+    {
+      "word": "tôi",
+      "start_ms": 2900,
+      "end_ms": 3020
+    },
+    {
+      "word": "đầu",
+      "start_ms": 3020,
+      "end_ms": 3120
+    },
+    {
+      "word": "tiên",
+      "start_ms": 3120,
+      "end_ms": 3340
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3340,
+      "end_ms": 3460
+    },
+    {
+      "word": "cảm",
+      "start_ms": 3460,
+      "end_ms": 3640
+    },
+    {
+      "word": "thấy",
+      "start_ms": 3640,
+      "end_ms": 3840
+    },
+    {
+      "word": "ngập",
+      "start_ms": 3840,
+      "end_ms": 4120
+    },
+    {
+      "word": "tràn",
+      "start_ms": 4120,
+      "end_ms": 4340
+    },
+    {
+      "word": "trong",
+      "start_ms": 4340,
+      "end_ms": 4500
+    },
+    {
+      "word": "hạnh",
+      "start_ms": 4500,
+      "end_ms": 4640
+    },
+    {
+      "word": "phúc.",
+      "start_ms": 4640,
+      "end_ms": 4880
+    }
+  ]
+}

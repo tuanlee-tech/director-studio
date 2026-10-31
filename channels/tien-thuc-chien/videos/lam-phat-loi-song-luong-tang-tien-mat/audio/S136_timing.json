@@ -1,0 +1,134 @@
+{
+  "audio_file": "S136_narration.wav",
+  "duration_ms": 6560,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nhờ",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "công",
+      "start_ms": 260,
+      "end_ms": 380
+    },
+    {
+      "word": "thức",
+      "start_ms": 380,
+      "end_ms": 580
+    },
+    {
+      "word": "này,",
+      "start_ms": 580,
+      "end_ms": 740
+    },
+    {
+      "word": "sau",
+      "start_ms": 1200,
+      "end_ms": 1320
+    },
+    {
+      "word": "3",
+      "start_ms": 1320,
+      "end_ms": 1520
+    },
+    {
+      "word": "năm",
+      "start_ms": 1520,
+      "end_ms": 1660
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1660,
+      "end_ms": 1900
+    },
+    {
+      "word": "gửi",
+      "start_ms": 1900,
+      "end_ms": 2120
+    },
+    {
+      "word": "được",
+      "start_ms": 2120,
+      "end_ms": 2260
+    },
+    {
+      "word": "nên",
+      "start_ms": 2260,
+      "end_ms": 2420
+    },
+    {
+      "word": "cấp",
+      "start_ms": 2420,
+      "end_ms": 2740
+    },
+    {
+      "word": "mức",
+      "start_ms": 2740,
+      "end_ms": 3040
+    },
+    {
+      "word": "sống",
+      "start_ms": 3040,
+      "end_ms": 3220
+    },
+    {
+      "word": "lên",
+      "start_ms": 3220,
+      "end_ms": 3340
+    },
+    {
+      "word": "25",
+      "start_ms": 3340,
+      "end_ms": 3680
+    },
+    {
+      "word": "%",
+      "start_ms": 3680,
+      "end_ms": 4180
+    },
+    {
+      "word": "Vừa",
+      "start_ms": 4180,
+      "end_ms": 4880
+    },
+    {
+      "word": "có",
+      "start_ms": 4880,
+      "end_ms": 5000
+    },
+    {
+      "word": "trong",
+      "start_ms": 5000,
+      "end_ms": 5120
+    },
+    {
+      "word": "tay",
+      "start_ms": 5120,
+      "end_ms": 5320
+    },
+    {
+      "word": "hơn",
+      "start_ms": 5320,
+      "end_ms": 5520
+    },
+    {
+      "word": "200",
+      "start_ms": 5520,
+      "end_ms": 5860
+    },
+    {
+      "word": "triệu",
+      "start_ms": 5860,
+      "end_ms": 6140
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 6140,
+      "end_ms": 6320
+    }
+  ]
+}

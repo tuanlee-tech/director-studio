@@ -4,37 +4,37 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 001
 - Beat: Hook
 - Loại dự kiến: AIV
-- Visual concept: Chàng trai văn phòng 27 tuổi mặc sơ mi trắng mỉm cười hạnh phúc khi nhận email thăng chức và tăng lương gấp đôi lên hai mươi triệu đồng
+- Visual concept: Chàng trai văn phòng 27 tuổi mặc sơ mi trắng mỉm cười hạnh phúc khi nhận thông báo thăng chức và tăng lương gấp đôi lên hai mươi triệu đồng
 - Duration ước tính: 6s
-- Narration: "Bạn vừa đạt cột mốc đáng nhớ: được tăng lương từ mười triệu lên hai mươi triệu."
+- Narration: "Bạn vừa đạt cột mốc đáng nhớ: được tăng lương từ mười triệu lên hai mươi triệu đồng."
 
 ## Scene 002
 - Beat: Hook
 - Loại dự kiến: AIV
 - Visual concept: Chàng trai cùng nhóm bạn đồng nghiệp nâng ly cocktail ăn mừng tưng bừng tại quầy bar nhà hàng sang trọng giữa ánh đèn lung linh
 - Duration ước tính: 6s
-- Narration: "Bạn tự hào ăn mừng, cảm thấy những năm tháng cày cuốc cuối cùng đã được đền đáp."
+- Narration: "Bạn tự hào ăn mừng, cảm thấy những nỗ lực làm việc cuối cùng đã được đền đáp."
 
 ## Scene 003
 - Beat: Hook
 - Loại dự kiến: AIV
 - Visual concept: Chàng trai đứng giữa căn hộ chung cư mới thuê rộng rãi, ban công ngắm nhìn toàn cảnh thành phố lung linh về đêm
 - Duration ước tính: 6s
-- Narration: "Bạn chuyển sang căn hộ mới tiện nghi, tin rằng mức lương này sẽ giúp tích lũy lớn."
+- Narration: "Bạn chuyển sang căn hộ tiện nghi hơn, tin rằng mình sẽ sớm tích lũy được nhiều tiền."
 
 ## Scene 004
 - Beat: Hook
 - Loại dự kiến: AIV
-- Visual concept: Chàng trai thẫn thờ nhìn chằm chằm vào màn hình điện thoại vào ngày hai mươi tám cuối tháng, thông báo số dư tài khoản chỉ còn vài chục ngàn đồng
+- Visual concept: Chàng trai thẫn thờ nhìn chằm chằm vào màn hình điện thoại vào ngày hai mươi tám cuối tháng, thông báo số dư tài khoản chỉ còn vài chục nghìn đồng
 - Duration ước tính: 6s
-- Narration: "Thế nhưng cuối tháng mở app, số dư tài khoản vẫn là con số không tròn trĩnh."
+- Narration: "Thế nhưng cuối tháng mở tài khoản, số dư thực tế vẫn là con số không tròn trĩnh."
 
 ## Scene 005
 - Beat: Hook
 - Loại dự kiến: AIV
 - Visual concept: Chàng trai ngồi một mình bên bàn làm việc ban đêm, xoa thái dương trĩu nặng âu lo, tự hỏi tiền của mình đã biến đi đâu
 - Duration ước tính: 6s
-- Narration: "Lương tăng gấp đôi, nhưng cảm giác hoang mang, bất an cuối tháng vẫn y nguyên như cũ."
+- Narration: "Lương tăng gấp đôi, nhưng cảm giác hoang mang, bất an cuối tháng vẫn y nguyên."
 
 ## Scene 006
 - Beat: Hook
@@ -67,9 +67,9 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 010
 - Beat: Bóc thực trạng
 - Loại dự kiến: GFX
-- Visual concept: Bảng kê chi tiêu cũ: Tiền thuê trọ hai triệu rưỡi, điện nước năm trăm ngàn, tổng cộng ba triệu mỗi tháng
+- Visual concept: Bảng kê chi tiêu cũ: Tiền thuê trọ hai triệu rưỡi, điện nước năm trăm nghìn, tổng cộng ba triệu mỗi tháng
 - Duration ước tính: 8s
-- Narration: "Khi đó, bạn thuê một căn phòng nhỏ hai triệu rưỡi mỗi tháng, chi tiêu chắt chiu và vẫn sống hoàn toàn ổn thỏa."
+- Narration: "Khi đó, bạn thuê một căn phòng nhỏ hai triệu rưỡi mỗi tháng, chi tiêu tiết kiệm và vẫn sống hoàn toàn ổn thỏa."
 
 ## Scene 011
 - Beat: Bóc thực trạng
@@ -83,7 +83,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Hợp đồng thuê nhà mới: Tiền thuê sáu triệu, phí dịch vụ một triệu, điện nước giá thương mại, tổng chín triệu
 - Duration ước tính: 8s
-- Narration: "Bạn chuyển sang căn hộ dịch vụ sáu triệu đồng, cộng thêm tiền gửi xe và dịch vụ, mỗi tháng mất đứt chín triệu."
+- Narration: "Bạn chuyển sang căn hộ dịch vụ sáu triệu đồng, cộng thêm tiền gửi xe và dịch vụ, mỗi tháng tiêu tốn tới chín triệu đồng."
 
 ## Scene 013
 - Beat: Bóc thực trạng
@@ -116,44 +116,44 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 017
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Quán cà phê vỉa hè mộc mạc quen thuộc với cốc cà phê đen đá mười lăm ngàn đồng
+- Visual concept: Quán cà phê vỉa hè mộc mạc quen thuộc với cốc cà phê đen đá mười lăm nghìn đồng
 - Duration ước tính: 7s
 - Narration: "Hạng mục rò rỉ thứ hai, tinh vi hơn rất nhiều, chính là thói quen ăn uống và cà phê hàng ngày."
 
 ## Scene 018
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Cốc cà phê thương hiệu cao cấp đặt trên bàn làm việc sang chảnh có giá sáu mươi lăm ngàn đồng
+- Visual concept: Cốc cà phê thương hiệu cao cấp đặt trên bàn làm việc sang trọng có giá sáu mươi lăm nghìn đồng
 - Duration ước tính: 7s
-- Narration: "Trước đây, bạn hài lòng với cốc cà phê vỉa hè mười lăm ngàn; nay bạn chuyển sang cà phê thương hiệu sáu mươi lăm ngàn mỗi sáng."
+- Narration: "Trước đây, bạn hài lòng với cốc cà phê vỉa hè mười lăm nghìn; nay bạn chuyển sang cà phê thương hiệu sáu mươi lăm nghìn mỗi sáng."
 
 ## Scene 019
 - Beat: Bóc thực trạng
 - Loại dự kiến: GFX
-- Visual concept: Phép tính nhân: Chênh lệch năm mươi ngàn mỗi ngày, một tháng ba mươi ngày đốt thêm một triệu rưỡi tiền cà phê
+- Visual concept: Phép tính nhân: Chênh lệch năm mươi nghìn mỗi ngày, một tháng ba mươi ngày tiêu tốn thêm một triệu rưỡi tiền cà phê
 - Duration ước tính: 8s
-- Narration: "Mỗi ngày chênh lệch năm mươi ngàn đồng nghe có vẻ vô hại, nhưng một tháng nó ngốn của bạn thêm một triệu rưỡi."
+- Narration: "Mỗi ngày chênh lệch năm mươi nghìn đồng nghe có vẻ vô hại, nhưng một tháng nó lấy đi của bạn thêm một triệu rưỡi."
 
 ## Scene 020
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Bàn ăn trưa tại nhà hàng cùng đồng nghiệp trong văn phòng, hóa đơn thanh toán trên một trăm ngàn
+- Visual concept: Bàn ăn trưa tại nhà hàng cùng đồng nghiệp trong văn phòng, hóa đơn thanh toán trên một trăm nghìn
 - Duration ước tính: 7s
-- Narration: "Bữa trưa công sở từ cơm bình dân ba mươi lăm ngàn được nâng cấp thành những bữa ăn nhà hàng cùng đồng nghiệp tám mươi đến một trăm ngàn."
+- Narration: "Bữa trưa công sở từ cơm bình dân ba mươi lăm nghìn được nâng cấp thành những bữa ăn nhà hàng cùng đồng nghiệp tám mươi đến một trăm nghìn."
 
 ## Scene 021
 - Beat: Bóc thực trạng
 - Loại dự kiến: GFX
-- Visual concept: Biểu đồ so sánh chi phí ăn trưa: Cơm bình dân 900 ngàn mỗi tháng vs Nhà hàng 2.5 triệu mỗi tháng
+- Visual concept: Biểu đồ so sánh chi phí ăn trưa: Cơm bình dân 900 nghìn mỗi tháng vs Nhà hàng 2.5 triệu mỗi tháng
 - Duration ước tính: 8s
-- Narration: "Chỉ riêng tiền ăn trưa, bạn đã chi thêm hơn một triệu sáu trăm ngàn đồng mỗi tháng mà hoàn toàn không để ý."
+- Narration: "Chỉ riêng tiền ăn trưa, bạn đã chi thêm hơn một triệu sáu trăm nghìn đồng mỗi tháng mà hoàn toàn không để ý."
 
 ## Scene 022
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Nhân vật quét mã QR thanh toán hóa đơn bữa tối thịnh soạn tại nhà hàng lẩu nướng cùng bạn bè
+- Visual concept: Nhân vật quét mã thanh toán hóa đơn bữa tối thịnh soạn tại nhà hàng lẩu nướng cùng bạn bè
 - Duration ước tính: 8s
-- Narration: "Chưa kể những buổi liên hoan, ăn tối sang chảnh vào cuối tuần để tự thưởng sau những ngày làm việc áp lực."
+- Narration: "Chưa kể những buổi liên hoan, ăn tối tại nhà hàng cao cấp vào cuối tuần để tự thưởng sau những ngày làm việc áp lực."
 
 ## Scene 023
 - Beat: Bóc thực trạng
@@ -200,16 +200,16 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 029
 - Beat: Bóc thực trạng
 - Loại dự kiến: GFX
-- Visual concept: Lịch sử chuyến đi trên app: Mỗi tuần bốn cuốc xe ô tô, một tháng tiêu tốn thêm một triệu hai trăm ngàn
+- Visual concept: Lịch sử chuyến đi đặt xe: Mỗi tuần bốn cuốc xe ô tô, một tháng tiêu tốn thêm một triệu hai trăm nghìn
 - Duration ước tính: 8s
-- Narration: "Bạn tự nhủ thời gian và sức khỏe là vàng, nhưng một tháng bạn lại mất thêm một triệu hai cho việc đi lại bằng ô tô."
+- Narration: "Bạn tự nhủ thời gian và sức khỏe là vàng, nhưng một tháng bạn lại mất thêm một triệu hai trăm nghìn đồng cho việc đi lại bằng ô tô."
 
 ## Scene 030
 - Beat: Bóc thực trạng
 - Loại dự kiến: GFX
 - Visual concept: Bảng tính chi phí xe cộ: Xăng, bảo dưỡng định kỳ, phí gửi xe chung cư và trả góp tổng cộng bốn triệu mỗi tháng
 - Duration ước tính: 8s
-- Narration: "Chi phí vận hành phương tiện tăng từ năm trăm ngàn lên bốn triệu đồng mỗi tháng, gấp tám lần so với trước đây."
+- Narration: "Chi phí vận hành phương tiện tăng từ năm trăm nghìn lên bốn triệu đồng mỗi tháng, gấp tám lần so với trước đây."
 
 ## Scene 031
 - Beat: Bóc thực trạng
@@ -228,9 +228,9 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 033
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Hộp đựng chiếc điện thoại thông minh cao cấp đời mới nhất vừa được bóc seal trên bàn làm việc
+- Visual concept: Hộp đựng chiếc điện thoại thông minh cao cấp đời mới nhất vừa được mở hộp trên bàn làm việc
 - Duration ước tính: 8s
-- Narration: "Hạng mục thứ tư là mua sắm cá nhân và đồ công nghệ, nơi cái bẫy mình xứng đáng phát huy tác dụng mạnh nhất."
+- Narration: "Hạng mục thứ tư là mua sắm cá nhân và đồ công nghệ, nơi cái bẫy mang tên mình xứng đáng phát huy tác dụng mạnh nhất."
 
 ## Scene 034
 - Beat: Bóc thực trạng
@@ -256,14 +256,14 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 037
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Thẻ hội viên phòng tập gym năm sao mạ vàng nằm trong ví, nhưng bên cạnh là lịch sử chỉ mới tập được ba buổi
+- Visual concept: Thẻ hội viên phòng tập thể hình cao cấp nằm trong ví, nhưng bên cạnh là lịch sử chỉ mới tập được ba buổi
 - Duration ước tính: 8s
-- Narration: "Bạn mua gói tập gym mười hai triệu một năm tại trung tâm thể thao cao cấp, nhưng sau tháng đầu tiên chỉ ghé qua đúng ba lần."
+- Narration: "Bạn mua gói tập thể hình mười hai triệu một năm tại trung tâm thể thao cao cấp, nhưng sau tháng đầu tiên chỉ ghé qua đúng ba lần."
 
 ## Scene 038
 - Beat: Bóc thực trạng
 - Loại dự kiến: GFX
-- Visual concept: Biểu đồ chi tiêu ngẫu hứng: Các khoản mua sắm và đồ công nghệ ngốn trung bình ba triệu rưỡi mỗi tháng
+- Visual concept: Biểu đồ chi tiêu ngẫu hứng: Các khoản mua sắm và đồ công nghệ tiêu tốn trung bình ba triệu rưỡi mỗi tháng
 - Duration ước tính: 8s
 - Narration: "Tổng cộng các khoản chi tiêu mua sắm cá nhân đã lấy đi của bạn thêm ba triệu rưỡi mỗi tháng một cách đều đặn."
 
@@ -277,21 +277,21 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 040
 - Beat: Bóc thực trạng
 - Loại dự kiến: GFX
-- Visual concept: Chỉ số Dopamine ngắn hạn: Cảm giác thỏa mãn chỉ kéo dài vài ngày nhưng nợ thẻ kéo dài nhiều tháng
+- Visual concept: Chỉ số hưng phấn ngắn hạn: Cảm giác thỏa mãn chỉ kéo dài vài ngày nhưng nợ thẻ kéo dài nhiều tháng
 - Duration ước tính: 8s
-- Narration: "Khoảnh khắc bóc hộp đồ mới mang lại niềm vui chớp nhoáng, nhưng nghĩa vụ thanh toán sẽ bám theo bạn suốt nửa năm trời."
+- Narration: "Khoảnh khắc mở hộp đồ mới mang lại niềm vui chớp nhoáng, nhưng nghĩa vụ thanh toán sẽ bám theo bạn suốt nửa năm trời."
 
 ## Scene 041
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Nhóm bạn trẻ cùng nhau trò chuyện vui vẻ tại quán bar tầng thượng sang trọng nhìn ra thành phố
+- Visual concept: Nhóm bạn trẻ cùng nhau trò chuyện vui vẻ tại quán cà phê tầng thượng sang trọng nhìn ra thành phố
 - Duration ước tính: 8s
 - Narration: "Hạng mục cuối cùng trong năm khoản nâng cấp vô thức chính là chi phí xã giao và duy trì hình ảnh cá nhân."
 
 ## Scene 042
 - Beat: Bóc thực trạng
 - Loại dự kiến: IMG
-- Visual concept: Nhân vật rút ví đặt tờ tiền mệnh giá năm trăm ngàn lên bàn góp tiền tiệc cùng đồng nghiệp
+- Visual concept: Nhân vật rút ví đặt tờ tiền mệnh giá năm trăm nghìn lên bàn góp tiền tiệc cùng đồng nghiệp
 - Duration ước tính: 7s
 - Narration: "Khi ở vị trí mới, bạn không thể từ chối những buổi tiệc sau giờ làm hoặc những chuyến dã ngoại cuối tuần cùng nhóm."
 
@@ -300,7 +300,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Hóa đơn tiệc tùng: Hai buổi gặp gỡ đối tác và đồng nghiệp cuối tuần tiêu tốn hai triệu đồng
 - Duration ước tính: 8s
-- Narration: "Mỗi lần đi ăn uống cùng nhóm quản lý, tiền chia hóa đơn không bao giờ dưới năm trăm ngàn đến một triệu đồng."
+- Narration: "Mỗi lần đi ăn uống cùng nhóm quản lý, tiền chia hóa đơn không bao giờ dưới năm trăm nghìn đến một triệu đồng."
 
 ## Scene 044
 - Beat: Bóc thực trạng
@@ -314,7 +314,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Bảng thống kê chi phí xã giao: Tăng từ một triệu lên ba triệu rưỡi mỗi tháng để giữ gìn quan hệ
 - Duration ước tính: 8s
-- Narration: "Khoản chi phí ngoại giao vô hình này âm thầm ngốn thêm hai triệu rưỡi mỗi tháng từ thu nhập của bạn."
+- Narration: "Khoản chi phí ngoại giao vô hình này âm thầm tiêu tốn thêm hai triệu rưỡi mỗi tháng từ thu nhập của bạn."
 
 ## Scene 046
 - Beat: Bóc thực trạng
@@ -347,9 +347,9 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 050
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
-- Visual concept: Tiêu đề đồ họa nổi bật: Bẫy tâm lý số 1 - Cỗ máy chạy bộ khoái lạc Hedonic Treadmill
+- Visual concept: Tiêu đề đồ họa nổi bật: Bẫy tâm lý số 1 - Cỗ máy thích nghi khoái lạc
 - Duration ước tính: 8s
-- Narration: "Câu trả lời nằm ở hiện tượng tâm lý học kinh điển mang tên Hedonic Treadmill, hay cỗ máy chạy bộ khoái lạc."
+- Narration: "Câu trả lời nằm ở hiện tượng tâm lý học kinh điển mang tên cỗ máy thích nghi khoái lạc."
 
 ## Scene 051
 - Beat: Số liệu & Bẫy tâm lý
@@ -424,37 +424,37 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 061
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
-- Visual concept: Nhân vật thở dài nhìn danh sách các khoản thanh toán cố định tự động trừ tiền trong app ngân hàng
+- Visual concept: Nhân vật thở dài nhìn danh sách các khoản thanh toán cố định tự động trừ tiền trong ứng dụng ngân hàng
 - Duration ước tính: 7s
 - Narration: "Những khoản chi đã thành thói quen sẽ biến thành nhu cầu thiết yếu giả tạo trong tâm trí bạn."
 
 ## Scene 062
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
-- Visual concept: Thông điệp khắc cốt ghi tâm: Làm chủ cỗ máy Hedonic Treadmill là bước đầu tiên để giành lại tự do tài chính
+- Visual concept: Thông điệp khắc cốt ghi tâm: Làm chủ cỗ máy thích nghi là bước đầu tiên để giành lại tự do tài chính
 - Duration ước tính: 8s
 - Narration: "Nhận ra được cỗ máy này đang vận hành chính là chìa khóa đầu tiên giúp bạn dừng lại trước khi quá muộn."
 
 ## Scene 063
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
-- Visual concept: Bức chân dung triết gia Denis Diderot thời kỳ Khai sáng thế kỷ mười tám trong phòng làm việc cổ kính
+- Visual concept: Bức chân dung triết gia Đi-đơ-rô thời kỳ Khai sáng thế kỷ mười tám trong phòng làm việc cổ kính
 - Duration ước tính: 8s
 - Narration: "Bẫy tâm lý số hai giải thích vì sao một món đồ nhỏ lại có thể kích hoạt cả một chuỗi chi tiêu thảm họa."
 
 ## Scene 064
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
-- Visual concept: Tiêu đề đồ họa: Bẫy tâm lý số 2 - Hiệu ứng Diderot và phản ứng dây chuyền mua sắm
+- Visual concept: Tiêu đề đồ họa: Bẫy tâm lý số 2 - Hiệu ứng Đi-đơ-rô và phản ứng dây chuyền mua sắm
 - Duration ước tính: 8s
-- Narration: "Nó mang tên Hiệu ứng Diderot, bắt nguồn từ câu chuyện có thật của triết gia người Pháp Denis Diderot vào thế kỷ mười tám."
+- Narration: "Nó mang tên Hiệu ứng Đi-đơ-rô, bắt nguồn từ câu chuyện có thật của triết gia người Pháp vào thế kỷ mười tám."
 
 ## Scene 065
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
 - Visual concept: Hình minh họa chiếc áo choàng nhung đỏ rực rỡ tuyệt đẹp được tặng đặt giữa căn phòng làm việc cũ kỹ
 - Duration ước tính: 8s
-- Narration: "Diderot cả đời sống thanh bạch, cho đến một ngày ông được tặng một chiếc áo choàng nhung màu đỏ lộng lẫy."
+- Narration: "Ông cả đời sống thanh bạch, cho đến một ngày được tặng một chiếc áo choàng nhung màu đỏ lộng lẫy."
 
 ## Scene 066
 - Beat: Số liệu & Bẫy tâm lý
@@ -466,49 +466,49 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 067
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
-- Visual concept: Sơ đồ chuỗi phản ứng Diderot: Chiếc áo choàng đỏ -> Mua bàn làm việc mới -> Mua thảm mới -> Mua tượng đồng trang trí
+- Visual concept: Sơ đồ chuỗi phản ứng dây chuyền: Chiếc áo choàng đỏ -> Mua bàn làm việc mới -> Mua thảm mới -> Mua tượng đồng trang trí
 - Duration ước tính: 8s
 - Narration: "Để xứng với chiếc áo, ông gom tiền mua một chiếc bàn mới; rồi chiếc bàn mới lại đòi hỏi một tấm thảm lụa mới."
 
 ## Scene 068
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
-- Visual concept: Triết gia ngồi ôm đầu giữa căn phòng tràn ngập đồ đạc xa xỉ mới mua, nhưng trong túi hoàn toàn khánh kiệt
+- Visual concept: Triết gia ngồi ôm đầu giữa căn phòng tràn ngập đồ đạc xa xỉ mới mua, nhưng trong túi hoàn toàn cạn kiệt
 - Duration ước tính: 8s
-- Narration: "Chuỗi phản ứng domino mua sắm cứ thế tiếp diễn cho đến khi toàn bộ số tiền tích lũy của ông biến sạch và ông lâm vào nợ nần."
+- Narration: "Chuỗi phản ứng mua sắm dây chuyền cứ thế tiếp diễn cho đến khi toàn bộ số tiền tích lũy của ông biến sạch và lâm vào nợ nần."
 
 ## Scene 069
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
 - Visual concept: Khái niệm tài chính hiện đại: Nâng cấp một món đồ kéo theo bắt buộc nâng cấp toàn bộ hệ sinh thái xung quanh
 - Duration ước tính: 8s
-- Narration: "Trong đời sống hiện đại, hiệu ứng Diderot diễn ra hàng ngày mà bạn không hề hay biết."
+- Narration: "Trong đời sống hiện đại, hiệu ứng này diễn ra hàng ngày mà bạn không hề hay biết."
 
 ## Scene 070
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật cầm chiếc điện thoại mới mua, nhìn vào củ sạc cũ và tai nghe dây cũ trên bàn
 - Duration ước tính: 7s
-- Narration: "Khi bạn mua một chiếc điện thoại cao cấp mới, bạn cảm thấy chiếc ốp lưng cũ ba mươi ngàn không còn xứng tầm."
+- Narration: "Khi bạn mua một chiếc điện thoại cao cấp mới, bạn cảm thấy chiếc ốp lưng cũ ba mươi nghìn không còn xứng tầm."
 
 ## Scene 071
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
 - Visual concept: Danh sách chi tiêu phái sinh: Điện thoại mới -> Ốp lưng hàng hiệu -> Củ sạc nhanh -> Tai nghe không dây -> Gói bảo hiểm rơi vỡ
 - Duration ước tính: 8s
-- Narration: "Bạn mua ốp lưng chính hãng năm trăm ngàn, sạc không dây một triệu, tai nghe Bluetooth ba triệu và gói bảo hiểm rơi vỡ."
+- Narration: "Bạn mua ốp lưng chính hãng năm trăm nghìn, sạc không dây một triệu, tai nghe không dây ba triệu và gói bảo hiểm rơi vỡ."
 
 ## Scene 072
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật mặc bộ vest mới may rất đẹp nhưng nhìn xuống đôi giày da cũ sờn đế
 - Duration ước tính: 7s
-- Narration: "Khi bạn mua một bộ vest xịn đi làm, bạn buộc phải mua thêm một đôi giày da mới và một chiếc cặp da công sở mới."
+- Narration: "Khi bạn mua một bộ vest mới đi làm, bạn buộc phải mua thêm một đôi giày da mới và một chiếc cặp da công sở mới."
 
 ## Scene 073
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
-- Visual concept: Hiệu ứng Domino chi tiêu: Món đồ ban đầu chỉ trị giá hai mươi triệu kéo theo các khoản chi phái sinh lên đến mười lăm triệu
+- Visual concept: Hiệu ứng dây chuyền chi tiêu: Món đồ ban đầu chỉ trị giá hai mươi triệu kéo theo các khoản chi phái sinh lên đến mười lăm triệu
 - Duration ước tính: 8s
 - Narration: "Món đồ ban đầu chỉ là ngòi nổ, chính chuỗi chi tiêu đồng bộ phía sau mới là thứ tàn phá tài khoản ngân hàng của bạn."
 
@@ -522,9 +522,9 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 075
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
-- Visual concept: Quy tắc cảnh giác tài chính: Hãy chặn đứng hiệu ứng Diderot ngay từ mắt xích đầu tiên trước khi nó bắt đầu
+- Visual concept: Quy tắc cảnh giác tài chính: Hãy dập tắt chuỗi mua sắm dây chuyền ngay từ mắt xích đầu tiên
 - Duration ước tính: 8s
-- Narration: "Muốn giữ được tiền, bạn phải có năng lực phát hiện và dập tắt ngòi nổ Diderot ngay từ món đồ đầu tiên."
+- Narration: "Muốn giữ được tiền, bạn phải có năng lực phát hiện và dập tắt ngòi nổ mua sắm ngay từ món đồ đầu tiên."
 
 ## Scene 076
 - Beat: Số liệu & Bẫy tâm lý
@@ -538,19 +538,19 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật ngồi nhìn chiếc bánh ngọt hấp dẫn trên đĩa, đấu tranh tâm lý giữa ăn ngay và giữ vóc dáng
 - Duration ước tính: 8s
-- Narration: "Bẫy tâm lý số ba là một cơ chế tiến hóa đã ăn sâu vào bộ não con người: Thiên kiến hiện tại hay Present Bias."
+- Narration: "Bẫy tâm lý số ba là một cơ chế tiến hóa đã ăn sâu vào bộ não con người: Thiên kiến hiện tại, tức xu hướng coi trọng hiện tại hơn tương lai."
 
 ## Scene 078
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
-- Visual concept: Tiêu đề đồ họa: Bẫy tâm lý số 3 - Thiên kiến hiện tại Present Bias và ảo tưởng tháng sau sẽ tiết kiệm
+- Visual concept: Tiêu đề đồ họa: Bẫy tâm lý số 3 - Thiên kiến hiện tại và ảo tưởng tháng sau sẽ tiết kiệm
 - Duration ước tính: 8s
-- Narration: "Não bộ của chúng ta luôn đánh giá phần thưởng ở hiện tại cao hơn rất nhiều so với những phần thưởng tương đương trong tương lai."
+- Narration: "Bộ não của chúng ta luôn đánh giá phần thưởng ở hiện tại cao hơn rất nhiều so với những phần thưởng tương đương trong tương lai."
 
 ## Scene 079
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
-- Visual concept: Nhân vật vui vẻ quẹt thẻ thanh toán bữa tiệc thịnh soạn, tự nhủ tháng sau mình sẽ thắt lưng buộc bụng
+- Visual concept: Nhân vật vui vẻ quẹt thẻ thanh toán bữa tiệc thịnh soạn, tự nhủ tháng sau mình sẽ thắt chặt chi tiêu
 - Duration ước tính: 7s
 - Narration: "Bạn dễ dàng tiêu hai triệu cho bữa tiệc hôm nay, và tự hứa với bản thân rằng tháng sau mình sẽ bắt đầu tiết kiệm bù lại."
 
@@ -566,7 +566,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: IMG
 - Visual concept: Hình ảnh chiếc đồng hồ cát đang chảy, cát rơi đều đặn không dừng lại
 - Duration ước tính: 7s
-- Narration: "Bạn sẵn sàng trừng phạt bản thân của tương lai bằng cảnh rỗng ví, chỉ để đổi lấy sự thỏa mãn chốc lát của bản thân ở hiện tại."
+- Narration: "Bạn sẵn sàng trừng phạt bản thân trong tương lai bằng cảnh cạn tiền, chỉ để đổi lấy sự thỏa mãn chốc lát của bản thân ở hiện tại."
 
 ## Scene 082
 - Beat: Số liệu & Bẫy tâm lý
@@ -592,7 +592,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 085
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
-- Visual concept: Nhân vật mở sổ tay và máy tính tính toán lại những con số tài chính cụ thể
+- Visual concept: Nhân vật mở sổ tay và máy tính để tính toán lại những con số tài chính cụ thể
 - Duration ước tính: 7s
 - Narration: "Bây giờ, hãy cùng tôi làm một bài toán chi phí cơ hội thực tế để thấy cái giá bạn phải trả đắt đến mức nào."
 
@@ -601,7 +601,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Bảng so sánh hai kịch bản đối lập cho mười triệu tiền lương tăng thêm mỗi tháng
 - Duration ước tính: 8s
-- Narration: "Giả sử mỗi tháng bạn được tăng thêm mười triệu đồng: Kịch bản A đốt hết vào nâng cấp lối sống; Kịch bản B trích 50% đi đầu tư tích sản."
+- Narration: "Giả sử mỗi tháng bạn được tăng thêm mười triệu đồng: Kịch bản A tiêu hết vào nâng cấp lối sống; Kịch bản B trích năm mươi phần trăm đi đầu tư tích sản."
 
 ## Scene 087
 - Beat: Số liệu & Bẫy tâm lý
@@ -629,21 +629,21 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Cột mốc 3 năm: Kịch bản A vẫn 0 đồng vs Kịch bản B tích lũy được 215 triệu đồng nhờ sức mạnh lãi kép
 - Duration ước tính: 8s
-- Narration: "Sau ba năm: Trong khi người ở kịch bản A vẫn loay hoay xoay tiền trả nợ, người ở kịch bản B đã có hai trăm mười lăm triệu đồng."
+- Narration: "Sau ba năm: Trong khi người ở kịch bản A vẫn loay hoay xoay tiền trang trải, người ở kịch bản B đã có hai trăm mười lăm triệu đồng."
 
 ## Scene 091
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: GFX
 - Visual concept: Cột mốc 5 năm: Kịch bản A đối mặt với chi phí cố định khổng lồ vs Kịch bản B cán mốc 410 triệu đồng
 - Duration ước tính: 8s
-- Narration: "Sau năm năm: Con số ở kịch bản B đã tăng vọt lên bốn trăm mười triệu đồng, tương đương gần nửa tỷ đồng tích lũy."
+- Narration: "Sau năm năm làm việc: Con số ở kịch bản B đã tăng vọt lên bốn trăm mười triệu đồng, tương đương gần nửa tỷ đồng tích lũy."
 
 ## Scene 092
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật cầm cuốn sổ tiết kiệm và danh mục tài sản, cảm nhận được sự tự do và thanh thản thực sự
 - Duration ước tính: 7s
-- Narration: "Bốn trăm mười triệu đồng mang lại cho bạn quyền lựa chọn công việc mình yêu thích thay vì phải cắn răng làm việc vì tiền."
+- Narration: "Bốn trăm mười triệu đồng mang lại cho bạn quyền lựa chọn công việc mình yêu thích thay vì phải gắng gượng làm việc vì tiền."
 
 ## Scene 093
 - Beat: Số liệu & Bẫy tâm lý
@@ -657,14 +657,14 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Đồ thị phân kỳ khổng lồ: Khoảng cách giữa 0 đồng và 1.1 tỷ đồng chính là cái giá của việc nâng cấp lối sống bừa bãi
 - Duration ước tính: 8s
-- Narration: "Một bên là một tỷ một trăm triệu đồng tài sản ròng; một bên là con số không kèm theo một đống đồ cũ đã lỗi thời và mất giá."
+- Narration: "Một bên là một tỷ một trăm triệu đồng tài sản ròng; một bên là con số không, cùng những món đồ cũ đã lỗi thời và mất giá."
 
 ## Scene 095
 - Beat: Số liệu & Bẫy tâm lý
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật nhìn vào đồ thị tài chính với vẻ mặt chấn động và hoàn toàn thức tỉnh
 - Duration ước tính: 7s
-- Narration: "Chiếc điện thoại mới hay bữa ăn sang chảnh hôm nay không chỉ tốn vài triệu, nó đang lấy đi của bạn cả một gia tài trong tương lai."
+- Narration: "Chiếc điện thoại mới hay bữa ăn đắt đỏ hôm nay không chỉ tốn vài triệu, nó đang lấy đi của bạn cả một gia tài trong tương lai."
 
 ## Scene 096
 - Beat: Số liệu & Bẫy tâm lý
@@ -676,7 +676,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 097
 - Beat: Tương phản
 - Loại dự kiến: IMG
-- Visual concept: Khung hình chia đôi: Bên trái là chàng trai A sang chảnh bảnh bao, bên phải là chàng trai B giản dị điềm đạm
+- Visual concept: Khung hình chia đôi: Bên trái là chàng trai A sang trọng bảnh bao, bên phải là chàng trai B giản dị điềm đạm
 - Duration ước tính: 8s
 - Narration: "Để thấy rõ sự tương phản này, hãy đặt hai đồng nghiệp cùng nhận mức lương hai mươi triệu lên bàn cân sau ba năm làm việc."
 
@@ -704,7 +704,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 101
 - Beat: Tương phản
 - Loại dự kiến: IMG
-- Visual concept: Người A ngồi ôm trán căng thẳng trong căn hộ chung cư lúc nửa đêm khi nhận email công ty thông báo cắt giảm nhân sự
+- Visual concept: Người A ngồi ôm trán căng thẳng trong căn hộ chung cư lúc nửa đêm khi nhận thông báo công ty cắt giảm nhân sự
 - Duration ước tính: 8s
 - Narration: "Nhưng bức tranh hậu trường lại hoàn toàn trái ngược: Người A sống trong nỗi sợ hãi tột cùng mỗi khi công ty có biến động."
 
@@ -732,9 +732,9 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 105
 - Beat: Tương phản
 - Loại dự kiến: IMG
-- Visual concept: Người A cắn răng chịu đựng những lời mắng mỏ của sếp trong phòng họp vì không dám nghỉ việc
+- Visual concept: Người A cắn răng chịu đựng những lời phê bình của cấp trên vì không dám nghỉ việc
 - Duration ước tính: 7s
-- Narration: "Người A trở thành nô lệ cho chính mức sống của mình, không dám lên tiếng phản bác và không dám đổi việc vì áp lực nợ nần."
+- Narration: "Người A trở thành nô lệ cho chính mức sống của mình, không dám lên tiếng phản bác và không dám đổi việc vì áp lực tiền bạc."
 
 ## Scene 106
 - Beat: Tương phản
@@ -755,21 +755,21 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật MC đứng trước bức tường kính thành phố, nhìn xuống dòng người tấp nập với cái nhìn thấu suốt
 - Duration ước tính: 8s
-- Narration: "Thực tế phũ phàng là: Người khác chỉ quan tâm đến những gì bạn tiêu xài trong vài giây, rồi họ sẽ quên ngay lập tức."
+- Narration: "Thực tế phũ phàng là: Người khác chỉ quan tâm đến những gì bạn chi tiêu trong vài giây, rồi họ sẽ quên ngay lập tức."
 
 ## Scene 109
 - Beat: Tương phản
 - Loại dự kiến: GFX
 - Visual concept: Nghịch lý nhận thức xã hội: Người ta không ngưỡng mộ chiếc xe của bạn, họ chỉ đang tưởng tượng họ ngồi trong chiếc xe đó
 - Duration ước tính: 8s
-- Narration: "Nhà tâm lý học Morgan Housel từng viết: Không ai bị ấn tượng bởi món đồ hiệu của bạn nhiều bằng chính bản thân bạn."
+- Narration: "Tác giả cuốn sách Tâm lý học về tiền từng viết: Không ai bị ấn tượng bởi món đồ đắt tiền của bạn nhiều bằng chính bản thân bạn."
 
 ## Scene 110
 - Beat: Tương phản
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật tự tin mặc chiếc áo sơ mi trắng giản dị bước đi giữa phố đông, không cần ánh nhìn công nhận của người lạ
 - Duration ước tính: 7s
-- Narration: "Khi bạn chi tiền chỉ để gây ấn tượng với người khác, bạn đang tiêu mồ hôi của mình cho những ánh nhìn vô nghĩa."
+- Narration: "Khi bạn chi tiền chỉ để gây ấn tượng với người khác, bạn đang tiêu mồ hôi của mình cho những ánh nhìn thoáng qua."
 
 ## Scene 111
 - Beat: Tương phản
@@ -816,7 +816,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 117
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: GFX
-- Visual concept: Tiêu đề đồ họa nổi bật: Tầng phòng thủ số 1 - Quy tắc Đóng băng lối sống sáu tháng 6-Month Lifestyle Freeze
+- Visual concept: Tiêu đề đồ họa nổi bật: Tầng phòng thủ số 1 - Quy tắc Đóng băng lối sống sáu tháng
 - Duration ước tính: 8s
 - Narration: "Tầng phòng thủ đầu tiên mang tên: Quy tắc đóng băng lối sống trong sáu tháng."
 
@@ -825,7 +825,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật nhìn vào lịch treo tường, đánh dấu khoanh tròn cột mốc một trăm tám mươi ngày kỷ luật
 - Duration ước tính: 8s
-- Narration: "Kể từ ngày bạn nhận được email thông báo tăng lương, hãy ban hành một lệnh giới nghiêm chi tiêu cố định trong đúng một trăm tám mươi ngày."
+- Narration: "Kể từ ngày bạn nhận được thông báo tăng lương, hãy ban hành một lệnh giới nghiêm chi tiêu cố định trong đúng một trăm tám mươi ngày."
 
 ## Scene 119
 - Beat: Lộ trình giải pháp
@@ -844,7 +844,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 121
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: GFX
-- Visual concept: Lợi ích tâm lý học: Sáu tháng giúp bộ não thoát khỏi cơn say Dopamine tăng lương và lấy lại sự tỉnh táo
+- Visual concept: Lợi ích tâm lý học: Sáu tháng giúp bộ não thoát khỏi cơn say hưng phấn tăng lương và lấy lại sự tỉnh táo
 - Duration ước tính: 8s
 - Narration: "Khoảng thời gian này giúp bạn làm nguội cơn hưng phấn ban đầu, tránh được những quyết định tài chính bốc đồng không thể đảo ngược."
 
@@ -853,7 +853,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Số tiền gom được sau 6 tháng: Sáu tháng nhân mười triệu bằng sáu mươi triệu đồng tiền vốn ban đầu nguyên vẹn
 - Duration ước tính: 8s
-- Narration: "Chỉ sau sáu tháng đóng băng, bạn đã tích lũy ngay được một quỹ an toàn sáu mươi triệu đồng mà không tốn một giọt mồ hôi gồng gánh."
+- Narration: "Chỉ sau sáu tháng đóng băng, bạn đã tích lũy ngay được một quỹ an toàn sáu mươi triệu đồng mà không tốn công sức gồng gánh."
 
 ## Scene 123
 - Beat: Lộ trình giải pháp
@@ -886,7 +886,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 127
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: GFX
-- Visual concept: Tiêu đề đồ họa: Tầng phòng thủ số 2 - Quy tắc chia đôi phần lương tăng The 50/50 Increment Rule
+- Visual concept: Tiêu đề đồ họa: Tầng phòng thủ số 2 - Quy tắc chia đôi phần lương tăng năm mươi năm mươi
 - Duration ước tính: 8s
 - Narration: "Tầng phòng thủ số hai chính là Quy tắc chia đôi phần lương tăng, hay công thức năm mươi năm mươi."
 
@@ -907,7 +907,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 130
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: IMG
-- Visual concept: Nhân vật thao tác thiết lập lệnh trích tiền tự động định kỳ Auto-Debit trên ứng dụng ngân hàng số
+- Visual concept: Nhân vật thao tác thiết lập lệnh trích tiền tự động định kỳ trên ứng dụng ngân hàng số
 - Duration ước tính: 8s
 - Narration: "Hãy cài đặt lệnh trích tiền tự động vào lúc tám giờ sáng ngày nhận lương, trước khi bạn kịp nhìn thấy hoặc có ý định tiêu nó."
 
@@ -944,7 +944,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: IMG
 - Visual concept: Nhân vật tự tin thưởng thức một bữa ăn ngon cùng người thân mà không còn cảm giác tội lỗi hay lo âu
 - Duration ước tính: 7s
-- Narration: "Bạn tiêu tiền một cách có chủ đích, tự hào và không bao giờ phải hối hận vì mình đã bảo vệ được nửa kia an toàn."
+- Narration: "Bạn tiêu tiền một cách có chủ đích, tự hào và không bao giờ phải hối hận vì mình đã bảo vệ được một nửa phần tiền tăng thêm an toàn."
 
 ## Scene 136
 - Beat: Lộ trình giải pháp
@@ -977,7 +977,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 140
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: GFX
-- Visual concept: Mô hình ba tài khoản ngân hàng số: 1. Tài khoản sống cơ bản; 2. Tài khoản tích sản bất khả xâm phạm; 3. Tài khoản ăn chơi có hạn mức
+- Visual concept: Mô hình ba tài khoản ngân hàng số: 1. Tài khoản sống cơ bản; 2. Tài khoản tích sản bất khả xâm phạm; 3. Tài khoản trải nghiệm có hạn mức
 - Duration ước tính: 8s
 - Narration: "Thay vì để chung toàn bộ tiền trong một tài khoản, bạn hãy mở ba tài khoản số riêng biệt trên điện thoại."
 
@@ -986,21 +986,21 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Tài khoản số 1: Nhận lương và giữ nguyên mười triệu cho toàn bộ chi phí sinh hoạt thiết yếu
 - Duration ước tính: 8s
-- Narration: "Tài khoản một giữ nguyên mười triệu cho chi phí sinh hoạt căn bản: tiền nhà, tiền ăn, hóa đơn điện nước."
+- Narration: "Tài khoản thứ nhất giữ nguyên mười triệu cho chi phí sinh hoạt căn bản: tiền nhà, tiền ăn, hóa đơn điện nước."
 
 ## Scene 142
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: GFX
-- Visual concept: Tài khoản số 2: Tích sản năm triệu tự động chuyển đi đầu tư, không cài app chuyển tiền trên máy để tránh rút bừa
+- Visual concept: Tài khoản số 2: Tích sản năm triệu tự động chuyển đi đầu tư, không cài ứng dụng chuyển tiền trên máy để tránh rút bừa
 - Duration ước tính: 8s
-- Narration: "Tài khoản hai là két sắt tích sản năm triệu: Tiền chỉ có một chiều đi vào, tuyệt đối không gắn thẻ ATM chi tiêu."
+- Narration: "Tài khoản thứ hai là két sắt tích sản năm triệu: Tiền chỉ có một chiều đi vào, tuyệt đối không gắn thẻ rút tiền chi tiêu."
 
 ## Scene 143
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: GFX
-- Visual concept: Tài khoản số 3: Năm triệu cho giải trí và nâng cấp, quẹt hết là dừng lại, không được phép bù trừ
+- Visual concept: Tài khoản số 3: Năm triệu cho trải nghiệm và nâng cấp, tiêu hết là dừng lại, không được phép bù trừ
 - Duration ước tính: 8s
-- Narration: "Tài khoản ba là tài khoản trải nghiệm năm triệu: Bạn được quyền tiêu sạch khoản này cho sở thích mà không cần áy náy."
+- Narration: "Tài khoản thứ ba là tài khoản trải nghiệm năm triệu: Bạn được quyền tiêu trọn khoản này cho sở thích mà không cần áy náy."
 
 ## Scene 144
 - Beat: Lộ trình giải pháp
@@ -1014,7 +1014,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Đồng hồ đếm ngược 72 giờ: 80% ham muốn mua sắm bốc đồng sẽ tự động biến mất sau ba ngày suy nghĩ
 - Duration ước tính: 8s
-- Narration: "Sau bảy mươi hai giờ, cơn sốt Dopamine sẽ hạ nhiệt; tám mươi phần trăm trường hợp bạn sẽ nhận ra mình không hề cần món đồ đó."
+- Narration: "Sau bảy mươi hai giờ, cơn sốt hưng phấn mua sắm sẽ hạ nhiệt; tám mươi phần trăm trường hợp bạn sẽ nhận ra mình không hề cần món đồ đó."
 
 ## Scene 146
 - Beat: Lộ trình giải pháp
@@ -1026,9 +1026,9 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 147
 - Beat: Lộ trình giải pháp
 - Loại dự kiến: GFX
-- Visual concept: Công thức quy đổi thực tế: Thu nhập 100 ngàn/giờ -> Chiếc đồng hồ 6 triệu tương đương 60 giờ cày cuốc
+- Visual concept: Công thức quy đổi thực tế: Thu nhập 100 nghìn/giờ -> Chiếc đồng hồ 6 triệu tương đương 60 giờ làm việc
 - Duration ước tính: 8s
-- Narration: "Nếu bạn kiếm được một trăm ngàn một giờ, chiếc đồng hồ sáu triệu đồng tương đương sáu mươi giờ làm việc vất vả, liệu có xứng đáng?"
+- Narration: "Nếu bạn kiếm được một trăm nghìn một giờ, chiếc đồng hồ sáu triệu đồng tương đương sáu mươi giờ làm việc vất vả, liệu có xứng đáng?"
 
 ## Scene 148
 - Beat: Lộ trình giải pháp
@@ -1049,7 +1049,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 - Loại dự kiến: GFX
 - Visual concept: Cây tài sản xanh tươi đâm chồi nảy lộc, tỏa bóng mát che chở cho ngôi nhà nhỏ ấm cúng
 - Duration ước tính: 8s
-- Narration: "Tài chính cá nhân không phải là cuộc đua xem ai tiêu xài hoành tráng hơn hay ai đổi điện thoại nhanh hơn."
+- Narration: "Tài chính cá nhân không phải là cuộc đua xem ai chi tiêu hoành tráng hơn hay ai đổi điện thoại nhanh hơn."
 
 ## Scene 151
 - Beat: Kết bình yên
@@ -1068,7 +1068,7 @@ Kênh: Tiền Thực Chiến | Ngôn ngữ: vi | Mục tiêu: 20 phút | TTS: vi
 ## Scene 153
 - Beat: Kết bình yên
 - Loại dự kiến: GFX
-- Visual concept: Câu quote tâm đắc dập nổi: Tài sản lớn nhất của một con người không phải là đồ hiệu, mà là sự tự do trong tâm trí
+- Visual concept: Châm ngôn dập nổi: Tài sản lớn nhất của một con người không phải là đồ hiệu, mà là sự tự do trong tâm trí
 - Duration ước tính: 8s
 - Narration: "Hãy để mỗi đồng tiền tăng thêm trở thành một viên gạch xây dựng tự do, thay vì trở thành sợi dây xích trói buộc bạn."
 

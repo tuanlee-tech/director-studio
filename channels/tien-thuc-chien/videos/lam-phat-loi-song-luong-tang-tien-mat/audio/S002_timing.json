@@ -1,0 +1,99 @@
+{
+  "audio_file": "S002_narration.wav",
+  "duration_ms": 3760,
+  "word_count": 18,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "từ",
+      "start_ms": 240,
+      "end_ms": 360
+    },
+    {
+      "word": "Hau",
+      "start_ms": 360,
+      "end_ms": 540
+    },
+    {
+      "word": "An",
+      "start_ms": 540,
+      "end_ms": 620
+    },
+    {
+      "word": "Mừng",
+      "start_ms": 620,
+      "end_ms": 880
+    },
+    {
+      "word": "cảm",
+      "start_ms": 880,
+      "end_ms": 1320
+    },
+    {
+      "word": "thấy",
+      "start_ms": 1320,
+      "end_ms": 1520
+    },
+    {
+      "word": "những",
+      "start_ms": 1520,
+      "end_ms": 1700
+    },
+    {
+      "word": "nỗ",
+      "start_ms": 1700,
+      "end_ms": 1880
+    },
+    {
+      "word": "lực",
+      "start_ms": 1880,
+      "end_ms": 2080
+    },
+    {
+      "word": "làm",
+      "start_ms": 2080,
+      "end_ms": 2240
+    },
+    {
+      "word": "việc",
+      "start_ms": 2240,
+      "end_ms": 2400
+    },
+    {
+      "word": "cuối",
+      "start_ms": 2400,
+      "end_ms": 2620
+    },
+    {
+      "word": "cùng",
+      "start_ms": 2620,
+      "end_ms": 2820
+    },
+    {
+      "word": "đã",
+      "start_ms": 2820,
+      "end_ms": 2980
+    },
+    {
+      "word": "được",
+      "start_ms": 2980,
+      "end_ms": 3100
+    },
+    {
+      "word": "đến",
+      "start_ms": 3100,
+      "end_ms": 3260
+    },
+    {
+      "word": "đáp.",
+      "start_ms": 3260,
+      "end_ms": 3600
+    }
+  ]
+}

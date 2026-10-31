@@ -1,0 +1,129 @@
+{
+  "audio_file": "S092_narration.wav",
+  "duration_ms": 5360,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "40",
+      "start_ms": 0,
+      "end_ms": 360
+    },
+    {
+      "word": "triệu",
+      "start_ms": 360,
+      "end_ms": 760
+    },
+    {
+      "word": "đồng",
+      "start_ms": 760,
+      "end_ms": 920
+    },
+    {
+      "word": "mang",
+      "start_ms": 920,
+      "end_ms": 1080
+    },
+    {
+      "word": "lại",
+      "start_ms": 1080,
+      "end_ms": 1260
+    },
+    {
+      "word": "cho",
+      "start_ms": 1260,
+      "end_ms": 1440
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1440,
+      "end_ms": 1600
+    },
+    {
+      "word": "quyền",
+      "start_ms": 1600,
+      "end_ms": 1860
+    },
+    {
+      "word": "lựa",
+      "start_ms": 1860,
+      "end_ms": 2020
+    },
+    {
+      "word": "chọn",
+      "start_ms": 2020,
+      "end_ms": 2200
+    },
+    {
+      "word": "công",
+      "start_ms": 2200,
+      "end_ms": 2400
+    },
+    {
+      "word": "việc",
+      "start_ms": 2400,
+      "end_ms": 2540
+    },
+    {
+      "word": "mình",
+      "start_ms": 2540,
+      "end_ms": 2780
+    },
+    {
+      "word": "yêu",
+      "start_ms": 2780,
+      "end_ms": 2960
+    },
+    {
+      "word": "thích,",
+      "start_ms": 2960,
+      "end_ms": 3280
+    },
+    {
+      "word": "thay",
+      "start_ms": 3640,
+      "end_ms": 3780
+    },
+    {
+      "word": "vì",
+      "start_ms": 3780,
+      "end_ms": 3920
+    },
+    {
+      "word": "phải",
+      "start_ms": 3920,
+      "end_ms": 4120
+    },
+    {
+      "word": "gắn",
+      "start_ms": 4120,
+      "end_ms": 4320
+    },
+    {
+      "word": "gượng",
+      "start_ms": 4320,
+      "end_ms": 4520
+    },
+    {
+      "word": "làm",
+      "start_ms": 4520,
+      "end_ms": 4640
+    },
+    {
+      "word": "việc",
+      "start_ms": 4640,
+      "end_ms": 4760
+    },
+    {
+      "word": "về",
+      "start_ms": 4760,
+      "end_ms": 4880
+    },
+    {
+      "word": "tiền.",
+      "start_ms": 4880,
+      "end_ms": 5120
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "audio_file": "S089_narration.wav",
+  "duration_ms": 5200,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Xô",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "tiên",
+      "start_ms": 180,
+      "end_ms": 340
+    },
+    {
+      "word": "63",
+      "start_ms": 340,
+      "end_ms": 660
+    },
+    {
+      "word": "triệu",
+      "start_ms": 660,
+      "end_ms": 940
+    },
+    {
+      "word": "này",
+      "start_ms": 940,
+      "end_ms": 1120
+    },
+    {
+      "word": "chính",
+      "start_ms": 1120,
+      "end_ms": 1380
+    },
+    {
+      "word": "là",
+      "start_ms": 1380,
+      "end_ms": 1520
+    },
+    {
+      "word": "tâm",
+      "start_ms": 1520,
+      "end_ms": 1680
+    },
+    {
+      "word": "kiên,",
+      "start_ms": 1680,
+      "end_ms": 1940
+    },
+    {
+      "word": "giúp",
+      "start_ms": 2400,
+      "end_ms": 2480
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2480,
+      "end_ms": 2620
+    },
+    {
+      "word": "ngủ",
+      "start_ms": 2620,
+      "end_ms": 2820
+    },
+    {
+      "word": "ngon",
+      "start_ms": 2820,
+      "end_ms": 3040
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 3040,
+      "end_ms": 3240
+    },
+    {
+      "word": "đêm,",
+      "start_ms": 3240,
+      "end_ms": 3500
+    },
+    {
+      "word": "không",
+      "start_ms": 3860,
+      "end_ms": 4019
+    },
+    {
+      "word": "phải",
+      "start_ms": 4019,
+      "end_ms": 4300
+    },
+    {
+      "word": "lo",
+      "start_ms": 4300,
+      "end_ms": 4440
+    },
+    {
+      "word": "sợ",
+      "start_ms": 4440,
+      "end_ms": 4600
+    },
+    {
+      "word": "mất",
+      "start_ms": 4600,
+      "end_ms": 4780
+    },
+    {
+      "word": "việc.",
+      "start_ms": 4780,
+      "end_ms": 4900
+    }
+  ]
+}

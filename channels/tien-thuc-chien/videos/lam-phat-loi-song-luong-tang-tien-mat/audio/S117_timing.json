@@ -1,0 +1,94 @@
+{
+  "audio_file": "S117_narration.wav",
+  "duration_ms": 3840,
+  "word_count": 17,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tân",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "phong",
+      "start_ms": 180,
+      "end_ms": 320
+    },
+    {
+      "word": "phong",
+      "start_ms": 320,
+      "end_ms": 440
+    },
+    {
+      "word": "phủ",
+      "start_ms": 440,
+      "end_ms": 500
+    },
+    {
+      "word": "đầu",
+      "start_ms": 500,
+      "end_ms": 600
+    },
+    {
+      "word": "tiên",
+      "start_ms": 600,
+      "end_ms": 900
+    },
+    {
+      "word": "mang",
+      "start_ms": 900,
+      "end_ms": 1080
+    },
+    {
+      "word": "tiền,",
+      "start_ms": 1080,
+      "end_ms": 1400
+    },
+    {
+      "word": "quy",
+      "start_ms": 1760,
+      "end_ms": 1800
+    },
+    {
+      "word": "tất",
+      "start_ms": 1800,
+      "end_ms": 2000
+    },
+    {
+      "word": "động",
+      "start_ms": 2000,
+      "end_ms": 2220
+    },
+    {
+      "word": "băng",
+      "start_ms": 2220,
+      "end_ms": 2480
+    },
+    {
+      "word": "lôi",
+      "start_ms": 2480,
+      "end_ms": 2740
+    },
+    {
+      "word": "sống",
+      "start_ms": 2740,
+      "end_ms": 2960
+    },
+    {
+      "word": "trong",
+      "start_ms": 2960,
+      "end_ms": 3120
+    },
+    {
+      "word": "sảo",
+      "start_ms": 3120,
+      "end_ms": 3360
+    },
+    {
+      "word": "tháng.",
+      "start_ms": 3360,
+      "end_ms": 3620
+    }
+  ]
+}

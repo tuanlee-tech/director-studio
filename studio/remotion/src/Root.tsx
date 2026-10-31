@@ -121,12 +121,14 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={initialProps as any}
         calculateMetadata={({ props }: any) => {
           const totalFrames =
-            props?.total_frames ||
+            Number(props?.total_frames) ||
+            Number(props?.durationInFrames) ||
+            Number(props?.composition?.duration_frames) ||
             (props?.sequences && props.sequences.length > 0
-              ? props.sequences.reduce((sum: number, s: any) => sum + s.duration_frames, 0)
+              ? props.sequences.reduce((sum: number, s: any) => sum + (Number(s.duration_frames) || Number(s.durationInFrames) || 0), 0)
               : 12270);
           return {
-            durationInFrames: Math.max(totalFrames, 30),
+            durationInFrames: Number.isFinite(totalFrames) && totalFrames > 0 ? totalFrames : 12270,
             fps: props?.fps || 30,
             width: props?.width || 1920,
             height: props?.height || 1080,

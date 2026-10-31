@@ -1,0 +1,119 @@
+{
+  "audio_file": "S023_narration.wav",
+  "duration_ms": 4720,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Cộng",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "tất",
+      "start_ms": 260,
+      "end_ms": 380
+    },
+    {
+      "word": "cả",
+      "start_ms": 380,
+      "end_ms": 520
+    },
+    {
+      "word": "lại,",
+      "start_ms": 520,
+      "end_ms": 740
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 1020,
+      "end_ms": 1180
+    },
+    {
+      "word": "tên",
+      "start_ms": 1180,
+      "end_ms": 1260
+    },
+    {
+      "word": "ăn",
+      "start_ms": 1260,
+      "end_ms": 1400
+    },
+    {
+      "word": "uống",
+      "start_ms": 1400,
+      "end_ms": 1660
+    },
+    {
+      "word": "và",
+      "start_ms": 1660,
+      "end_ms": 1840
+    },
+    {
+      "word": "ca",
+      "start_ms": 1840,
+      "end_ms": 1980
+    },
+    {
+      "word": "phê",
+      "start_ms": 1980,
+      "end_ms": 2160
+    },
+    {
+      "word": "của",
+      "start_ms": 2160,
+      "end_ms": 2300
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2300,
+      "end_ms": 2460
+    },
+    {
+      "word": "đã",
+      "start_ms": 2460,
+      "end_ms": 2660
+    },
+    {
+      "word": "tăng",
+      "start_ms": 2660,
+      "end_ms": 2920
+    },
+    {
+      "word": "thêm",
+      "start_ms": 2920,
+      "end_ms": 3180
+    },
+    {
+      "word": "hơn",
+      "start_ms": 3180,
+      "end_ms": 3380
+    },
+    {
+      "word": "4",
+      "start_ms": 3380,
+      "end_ms": 3600
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3600,
+      "end_ms": 3880
+    },
+    {
+      "word": "đồng",
+      "start_ms": 3880,
+      "end_ms": 4040
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 4040,
+      "end_ms": 4220
+    },
+    {
+      "word": "tháng.",
+      "start_ms": 4220,
+      "end_ms": 4480
+    }
+  ]
+}

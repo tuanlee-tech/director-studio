@@ -1,0 +1,139 @@
+{
+  "audio_file": "S096_narration.wav",
+  "duration_ms": 5520,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Sự",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "khắp",
+      "start_ms": 220,
+      "end_ms": 420
+    },
+    {
+      "word": "biệt",
+      "start_ms": 420,
+      "end_ms": 600
+    },
+    {
+      "word": "dẫn",
+      "start_ms": 600,
+      "end_ms": 800
+    },
+    {
+      "word": "người",
+      "start_ms": 800,
+      "end_ms": 920
+    },
+    {
+      "word": "giàu",
+      "start_ms": 920,
+      "end_ms": 1200
+    },
+    {
+      "word": "lên,",
+      "start_ms": 1200,
+      "end_ms": 1320
+    },
+    {
+      "word": "sau",
+      "start_ms": 1720,
+      "end_ms": 1840
+    },
+    {
+      "word": "khi",
+      "start_ms": 1840,
+      "end_ms": 2000
+    },
+    {
+      "word": "tăng",
+      "start_ms": 2000,
+      "end_ms": 2180
+    },
+    {
+      "word": "lương",
+      "start_ms": 2180,
+      "end_ms": 2380
+    },
+    {
+      "word": "và",
+      "start_ms": 2380,
+      "end_ms": 2600
+    },
+    {
+      "word": "người",
+      "start_ms": 2600,
+      "end_ms": 2720
+    },
+    {
+      "word": "nghèo,",
+      "start_ms": 2720,
+      "end_ms": 3100
+    },
+    {
+      "word": "đi",
+      "start_ms": 3280,
+      "end_ms": 3360
+    },
+    {
+      "word": "chính",
+      "start_ms": 3360,
+      "end_ms": 3540
+    },
+    {
+      "word": "là",
+      "start_ms": 3540,
+      "end_ms": 3700
+    },
+    {
+      "word": "khả",
+      "start_ms": 3700,
+      "end_ms": 3860
+    },
+    {
+      "word": "năng",
+      "start_ms": 3860,
+      "end_ms": 4040
+    },
+    {
+      "word": "kiểm",
+      "start_ms": 4040,
+      "end_ms": 4200
+    },
+    {
+      "word": "soát",
+      "start_ms": 4200,
+      "end_ms": 4480
+    },
+    {
+      "word": "phần",
+      "start_ms": 4480,
+      "end_ms": 4620
+    },
+    {
+      "word": "tiền",
+      "start_ms": 4620,
+      "end_ms": 4760
+    },
+    {
+      "word": "tăng",
+      "start_ms": 4760,
+      "end_ms": 4940
+    },
+    {
+      "word": "thêm",
+      "start_ms": 4940,
+      "end_ms": 5100
+    },
+    {
+      "word": "nay.",
+      "start_ms": 5100,
+      "end_ms": 5260
+    }
+  ]
+}

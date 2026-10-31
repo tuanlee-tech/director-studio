@@ -1,0 +1,119 @@
+{
+  "audio_file": "S107_narration.wav",
+  "duration_ms": 4640,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Người",
+      "start_ms": 0,
+      "end_ms": 280
+    },
+    {
+      "word": "A",
+      "start_ms": 280,
+      "end_ms": 400
+    },
+    {
+      "word": "trọn",
+      "start_ms": 400,
+      "end_ms": 600
+    },
+    {
+      "word": "về",
+      "start_ms": 600,
+      "end_ms": 740
+    },
+    {
+      "word": "ngoài",
+      "start_ms": 740,
+      "end_ms": 1080
+    },
+    {
+      "word": "do",
+      "start_ms": 1080,
+      "end_ms": 1200
+    },
+    {
+      "word": "có",
+      "start_ms": 1200,
+      "end_ms": 1360
+    },
+    {
+      "word": "giả",
+      "start_ms": 1360,
+      "end_ms": 1580
+    },
+    {
+      "word": "tạo,",
+      "start_ms": 1580,
+      "end_ms": 1780
+    },
+    {
+      "word": "người",
+      "start_ms": 2220,
+      "end_ms": 2320
+    },
+    {
+      "word": "B",
+      "start_ms": 2320,
+      "end_ms": 2460
+    },
+    {
+      "word": "cho",
+      "start_ms": 2460,
+      "end_ms": 2640
+    },
+    {
+      "word": "sự",
+      "start_ms": 2640,
+      "end_ms": 2820
+    },
+    {
+      "word": "tự",
+      "start_ms": 2820,
+      "end_ms": 2960
+    },
+    {
+      "word": "do",
+      "start_ms": 2960,
+      "end_ms": 3140
+    },
+    {
+      "word": "tại",
+      "start_ms": 3140,
+      "end_ms": 3340
+    },
+    {
+      "word": "chính",
+      "start_ms": 3340,
+      "end_ms": 3480
+    },
+    {
+      "word": "thức",
+      "start_ms": 3480,
+      "end_ms": 3740
+    },
+    {
+      "word": "chết",
+      "start_ms": 3740,
+      "end_ms": 3940
+    },
+    {
+      "word": "và",
+      "start_ms": 3940,
+      "end_ms": 4059
+    },
+    {
+      "word": "bên",
+      "start_ms": 4059,
+      "end_ms": 4180
+    },
+    {
+      "word": "vững.",
+      "start_ms": 4180,
+      "end_ms": 4420
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "audio_file": "S040_narration.wav",
+  "duration_ms": 5440,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "khỏi",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "khách",
+      "start_ms": 160,
+      "end_ms": 380
+    },
+    {
+      "word": "mở",
+      "start_ms": 380,
+      "end_ms": 520
+    },
+    {
+      "word": "hợp",
+      "start_ms": 520,
+      "end_ms": 680
+    },
+    {
+      "word": "đầu",
+      "start_ms": 680,
+      "end_ms": 760
+    },
+    {
+      "word": "mới",
+      "start_ms": 760,
+      "end_ms": 1020
+    },
+    {
+      "word": "mang",
+      "start_ms": 1020,
+      "end_ms": 1260
+    },
+    {
+      "word": "lại",
+      "start_ms": 1260,
+      "end_ms": 1440
+    },
+    {
+      "word": "niềm",
+      "start_ms": 1440,
+      "end_ms": 1680
+    },
+    {
+      "word": "vui",
+      "start_ms": 1680,
+      "end_ms": 1940
+    },
+    {
+      "word": "chấp",
+      "start_ms": 1940,
+      "end_ms": 2100
+    },
+    {
+      "word": "nhau",
+      "start_ms": 2100,
+      "end_ms": 2280
+    },
+    {
+      "word": "án",
+      "start_ms": 2280,
+      "end_ms": 2560
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 2560,
+      "end_ms": 2960
+    },
+    {
+      "word": "những",
+      "start_ms": 2960,
+      "end_ms": 3080
+    },
+    {
+      "word": "vụ",
+      "start_ms": 3080,
+      "end_ms": 3220
+    },
+    {
+      "word": "thình",
+      "start_ms": 3220,
+      "end_ms": 3400
+    },
+    {
+      "word": "toán",
+      "start_ms": 3400,
+      "end_ms": 3700
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 3700,
+      "end_ms": 3820
+    },
+    {
+      "word": "bàm",
+      "start_ms": 3820,
+      "end_ms": 4040
+    },
+    {
+      "word": "theo",
+      "start_ms": 4040,
+      "end_ms": 4140
+    },
+    {
+      "word": "bạn",
+      "start_ms": 4140,
+      "end_ms": 4300
+    },
+    {
+      "word": "xuất",
+      "start_ms": 4300,
+      "end_ms": 4540
+    },
+    {
+      "word": "nửa",
+      "start_ms": 4540,
+      "end_ms": 4760
+    },
+    {
+      "word": "nằm",
+      "start_ms": 4760,
+      "end_ms": 4960
+    },
+    {
+      "word": "trời.",
+      "start_ms": 4960,
+      "end_ms": 5180
+    }
+  ]
+}

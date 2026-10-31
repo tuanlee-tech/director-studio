@@ -1,0 +1,134 @@
+{
+  "audio_file": "S133_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "có",
+      "start_ms": 180,
+      "end_ms": 300
+    },
+    {
+      "word": "thể",
+      "start_ms": 300,
+      "end_ms": 400
+    },
+    {
+      "word": "dùng",
+      "start_ms": 400,
+      "end_ms": 620
+    },
+    {
+      "word": "quản",
+      "start_ms": 620,
+      "end_ms": 820
+    },
+    {
+      "word": "tiên",
+      "start_ms": 820,
+      "end_ms": 1000
+    },
+    {
+      "word": "này",
+      "start_ms": 1000,
+      "end_ms": 1160
+    },
+    {
+      "word": "để",
+      "start_ms": 1160,
+      "end_ms": 1360
+    },
+    {
+      "word": "ăn",
+      "start_ms": 1360,
+      "end_ms": 1520
+    },
+    {
+      "word": "uống",
+      "start_ms": 1520,
+      "end_ms": 1720
+    },
+    {
+      "word": "chất",
+      "start_ms": 1720,
+      "end_ms": 1900
+    },
+    {
+      "word": "lượng",
+      "start_ms": 1900,
+      "end_ms": 2080
+    },
+    {
+      "word": "hơn.",
+      "start_ms": 2080,
+      "end_ms": 2300
+    },
+    {
+      "word": "Đăng",
+      "start_ms": 2780,
+      "end_ms": 2860
+    },
+    {
+      "word": "ký",
+      "start_ms": 2860,
+      "end_ms": 3040
+    },
+    {
+      "word": "một",
+      "start_ms": 3040,
+      "end_ms": 3160
+    },
+    {
+      "word": "khoa",
+      "start_ms": 3160,
+      "end_ms": 3340
+    },
+    {
+      "word": "học",
+      "start_ms": 3340,
+      "end_ms": 3440
+    },
+    {
+      "word": "chuyên",
+      "start_ms": 3440,
+      "end_ms": 3700
+    },
+    {
+      "word": "môn,",
+      "start_ms": 3700,
+      "end_ms": 3940
+    },
+    {
+      "word": "hoặc",
+      "start_ms": 4240,
+      "end_ms": 4400
+    },
+    {
+      "word": "phụng",
+      "start_ms": 4400,
+      "end_ms": 4600
+    },
+    {
+      "word": "dưỡng",
+      "start_ms": 4600,
+      "end_ms": 4820
+    },
+    {
+      "word": "trả",
+      "start_ms": 4820,
+      "end_ms": 4960
+    },
+    {
+      "word": "mẹ.",
+      "start_ms": 4960,
+      "end_ms": 5120
+    }
+  ]
+}

@@ -430,8 +430,17 @@ class AssetQAVerifier:
         mismatches = []
         style_violations = []
 
+        if self.slug == "lam-phat-loi-song-luong-tang-tien-mat":
+            mc_scenes = ["S008", "S116", "S151", "S157"]
+            male_scenes = ["S001", "S002", "S003", "S004", "S005", "S098", "S099", "S101", "S102", "S103", "S104", "S105", "S106", "S154", "S155"]
+            female_scenes = []
+        else:
+            mc_scenes = MC_HOST_SCENES
+            male_scenes = PERSON_A_MALE_SCENES
+            female_scenes = PERSON_B_FEMALE_SCENES
+
         # 3.4. Kiểm tra nhóm MC/Host (Nam MC 27 tuổi, kính mắt, áo sơ mi)
-        for sid in MC_HOST_SCENES:
+        for sid in mc_scenes:
             p_text = prompts_by_scene.get(sid, "")
             b_data = broll_by_scene.get(sid, {})
             b_desc = " ".join([b.get("description", "") for b in b_data.get("brolls", [])])
@@ -444,8 +453,8 @@ class AssetQAVerifier:
                         f"[LỆCH GIỚI TÍNH MC] Cảnh {sid} (Nam MC chuẩn kênh) bị gán nhầm từ khóa nữ: '{pat}'"
                     )
 
-        # 3.5. Kiểm tra nhóm Người A (S051, S052, S054): Narration 'Anh ta' -> Phải là NAM
-        for sid in PERSON_A_MALE_SCENES:
+        # 3.5. Kiểm tra nhóm Nhân vật Nam (Narration 'Anh ta' / Chàng trai -> Phải là NAM)
+        for sid in male_scenes:
             p_text = prompts_by_scene.get(sid, "")
             b_data = broll_by_scene.get(sid, {})
             b_desc = " ".join([b.get("description", "") for b in b_data.get("brolls", [])])
@@ -454,11 +463,11 @@ class AssetQAVerifier:
             for pat in FEMALE_KEYWORDS:
                 if re.search(pat, full_desc, re.IGNORECASE) and not any(k in full_desc.lower() for k in ["friends", "bạn bè", "quán cà phê"]):
                     mismatches.append(
-                        f"[LỆCH GIỚI TÍNH NGƯỜI A] Cảnh {sid} Narration nói về 'Anh ta' (Nam), nhưng mô tả có từ khóa nữ: '{pat}'"
+                        f"[LỆCH GIỚI TÍNH NHÂN VẬT NAM] Cảnh {sid} Narration nói về nhân vật Nam, nhưng mô tả có từ khóa nữ: '{pat}'"
                     )
 
-        # 3.6. Kiểm tra nhóm Người B (S055, S058): Narration 'Cô ấy' -> Phải là NỮ
-        for sid in PERSON_B_FEMALE_SCENES:
+        # 3.6. Kiểm tra nhóm Nhân vật Nữ (nếu có)
+        for sid in female_scenes:
             p_text = prompts_by_scene.get(sid, "")
             b_data = broll_by_scene.get(sid, {})
             b_desc = " ".join([b.get("description", "") for b in b_data.get("brolls", [])])
@@ -604,9 +613,12 @@ class AssetQAVerifier:
                 check.warnings.append(f"Lỗi parse props file: {e}")
 
         # 5.3. Kiểm tra 100% GFX scenes có dedicated visual graphic trong DynamicGraphic.tsx
-        if self.dg_file.exists() and self.comp_file.exists():
+        components_dir = self.template_dir / "components"
+        if components_dir.exists() and self.comp_file.exists():
             try:
-                dg_code = self.dg_file.read_text(encoding="utf-8")
+                dg_code = ""
+                for f in components_dir.glob("DynamicGraphic*.tsx"):
+                    dg_code += f.read_text(encoding="utf-8") + "\n"
                 cdata = json.loads(self.comp_file.read_text(encoding="utf-8"))
                 gfx_scenes = [
                     s.get("scene_id")

@@ -1,0 +1,134 @@
+{
+  "audio_file": "S144_narration.wav",
+  "duration_ms": 5760,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Đi",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "cảnh",
+      "start_ms": 180,
+      "end_ms": 380
+    },
+    {
+      "word": "phải",
+      "start_ms": 380,
+      "end_ms": 480
+    },
+    {
+      "word": "thống",
+      "start_ms": 480,
+      "end_ms": 760
+    },
+    {
+      "word": "tại",
+      "start_ms": 760,
+      "end_ms": 960
+    },
+    {
+      "word": "khoản",
+      "start_ms": 960,
+      "end_ms": 1220
+    },
+    {
+      "word": "là",
+      "start_ms": 1220,
+      "end_ms": 1360
+    },
+    {
+      "word": "quy",
+      "start_ms": 1360,
+      "end_ms": 1520
+    },
+    {
+      "word": "tắc",
+      "start_ms": 1520,
+      "end_ms": 1720
+    },
+    {
+      "word": "72",
+      "start_ms": 1720,
+      "end_ms": 2000
+    },
+    {
+      "word": "giờ,",
+      "start_ms": 2000,
+      "end_ms": 2380
+    },
+    {
+      "word": "trước",
+      "start_ms": 2780,
+      "end_ms": 2900
+    },
+    {
+      "word": "mọi",
+      "start_ms": 2900,
+      "end_ms": 3040
+    },
+    {
+      "word": "quy",
+      "start_ms": 3040,
+      "end_ms": 3180
+    },
+    {
+      "word": "định",
+      "start_ms": 3180,
+      "end_ms": 3380
+    },
+    {
+      "word": "mô",
+      "start_ms": 3380,
+      "end_ms": 3520
+    },
+    {
+      "word": "đồ",
+      "start_ms": 3520,
+      "end_ms": 3620
+    },
+    {
+      "word": "ngoài",
+      "start_ms": 3620,
+      "end_ms": 3840
+    },
+    {
+      "word": "dành",
+      "start_ms": 3840,
+      "end_ms": 4040
+    },
+    {
+      "word": "1,",
+      "start_ms": 4040,
+      "end_ms": 4160
+    },
+    {
+      "word": "hãy",
+      "start_ms": 4680,
+      "end_ms": 4760
+    },
+    {
+      "word": "trở",
+      "start_ms": 4760,
+      "end_ms": 4960
+    },
+    {
+      "word": "đủ",
+      "start_ms": 4960,
+      "end_ms": 5140
+    },
+    {
+      "word": "3",
+      "start_ms": 5140,
+      "end_ms": 5260
+    },
+    {
+      "word": "ngày.",
+      "start_ms": 5260,
+      "end_ms": 5480
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "audio_file": "S076_narration.wav",
+  "duration_ms": 5840,
+  "word_count": 28,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Sự",
+      "start_ms": 0,
+      "end_ms": 280
+    },
+    {
+      "word": "hay",
+      "start_ms": 280,
+      "end_ms": 400
+    },
+    {
+      "word": "lòng",
+      "start_ms": 400,
+      "end_ms": 600
+    },
+    {
+      "word": "không",
+      "start_ms": 600,
+      "end_ms": 800
+    },
+    {
+      "word": "đến",
+      "start_ms": 800,
+      "end_ms": 960
+    },
+    {
+      "word": "từ",
+      "start_ms": 960,
+      "end_ms": 1120
+    },
+    {
+      "word": "việc",
+      "start_ms": 1120,
+      "end_ms": 1300
+    },
+    {
+      "word": "đồng",
+      "start_ms": 1300,
+      "end_ms": 1520
+    },
+    {
+      "word": "bộ",
+      "start_ms": 1520,
+      "end_ms": 1600
+    },
+    {
+      "word": "hóa",
+      "start_ms": 1600,
+      "end_ms": 1840
+    },
+    {
+      "word": "độ",
+      "start_ms": 1840,
+      "end_ms": 1940
+    },
+    {
+      "word": "đặc",
+      "start_ms": 1940,
+      "end_ms": 2140
+    },
+    {
+      "word": "biên",
+      "start_ms": 2140,
+      "end_ms": 2300
+    },
+    {
+      "word": "ngoài.",
+      "start_ms": 2300,
+      "end_ms": 2580
+    },
+    {
+      "word": "Mà",
+      "start_ms": 3060,
+      "end_ms": 3140
+    },
+    {
+      "word": "đến",
+      "start_ms": 3140,
+      "end_ms": 3240
+    },
+    {
+      "word": "từ",
+      "start_ms": 3240,
+      "end_ms": 3420
+    },
+    {
+      "word": "sự",
+      "start_ms": 3420,
+      "end_ms": 3580
+    },
+    {
+      "word": "đồng",
+      "start_ms": 3580,
+      "end_ms": 3820
+    },
+    {
+      "word": "bộ",
+      "start_ms": 3820,
+      "end_ms": 4019
+    },
+    {
+      "word": "giữa",
+      "start_ms": 4019,
+      "end_ms": 4280
+    },
+    {
+      "word": "thu",
+      "start_ms": 4280,
+      "end_ms": 4400
+    },
+    {
+      "word": "nhập",
+      "start_ms": 4400,
+      "end_ms": 4620
+    },
+    {
+      "word": "và",
+      "start_ms": 4620,
+      "end_ms": 4780
+    },
+    {
+      "word": "dòng",
+      "start_ms": 4780,
+      "end_ms": 4960
+    },
+    {
+      "word": "tiền",
+      "start_ms": 4960,
+      "end_ms": 5140
+    },
+    {
+      "word": "tích",
+      "start_ms": 5140,
+      "end_ms": 5360
+    },
+    {
+      "word": "lý.",
+      "start_ms": 5360,
+      "end_ms": 5540
+    }
+  ]
+}

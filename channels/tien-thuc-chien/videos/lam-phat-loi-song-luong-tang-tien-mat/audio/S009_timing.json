@@ -1,0 +1,104 @@
+{
+  "audio_file": "S009_narration.wav",
+  "duration_ms": 3760,
+  "word_count": 19,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hãy",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 180,
+      "end_ms": 340
+    },
+    {
+      "word": "lại",
+      "start_ms": 340,
+      "end_ms": 440
+    },
+    {
+      "word": "thời",
+      "start_ms": 440,
+      "end_ms": 560
+    },
+    {
+      "word": "điểm",
+      "start_ms": 560,
+      "end_ms": 720
+    },
+    {
+      "word": "bạn",
+      "start_ms": 720,
+      "end_ms": 880
+    },
+    {
+      "word": "vừa",
+      "start_ms": 880,
+      "end_ms": 1120
+    },
+    {
+      "word": "ra",
+      "start_ms": 1120,
+      "end_ms": 1280
+    },
+    {
+      "word": "trường",
+      "start_ms": 1280,
+      "end_ms": 1520
+    },
+    {
+      "word": "đi",
+      "start_ms": 1520,
+      "end_ms": 2000
+    },
+    {
+      "word": "làm",
+      "start_ms": 2000,
+      "end_ms": 2160
+    },
+    {
+      "word": "với",
+      "start_ms": 2160,
+      "end_ms": 2320
+    },
+    {
+      "word": "mức",
+      "start_ms": 2320,
+      "end_ms": 2500
+    },
+    {
+      "word": "lương",
+      "start_ms": 2500,
+      "end_ms": 2640
+    },
+    {
+      "word": "khởi",
+      "start_ms": 2640,
+      "end_ms": 2880
+    },
+    {
+      "word": "điểm",
+      "start_ms": 2880,
+      "end_ms": 3080
+    },
+    {
+      "word": "mới",
+      "start_ms": 3080,
+      "end_ms": 3220
+    },
+    {
+      "word": "chuyệu",
+      "start_ms": 3220,
+      "end_ms": 3400
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 3400,
+      "end_ms": 3540
+    }
+  ]
+}

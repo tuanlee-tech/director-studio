@@ -1,0 +1,114 @@
+{
+  "audio_file": "S104_narration.wav",
+  "duration_ms": 4960,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nếu",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "mất",
+      "start_ms": 220,
+      "end_ms": 400
+    },
+    {
+      "word": "việc,",
+      "start_ms": 400,
+      "end_ms": 620
+    },
+    {
+      "word": "Người",
+      "start_ms": 960,
+      "end_ms": 1080
+    },
+    {
+      "word": "B",
+      "start_ms": 1080,
+      "end_ms": 1160
+    },
+    {
+      "word": "có",
+      "start_ms": 1160,
+      "end_ms": 1360
+    },
+    {
+      "word": "thể",
+      "start_ms": 1360,
+      "end_ms": 1480
+    },
+    {
+      "word": "uống",
+      "start_ms": 1480,
+      "end_ms": 1700
+    },
+    {
+      "word": "dùng",
+      "start_ms": 1700,
+      "end_ms": 1860
+    },
+    {
+      "word": "sống",
+      "start_ms": 1860,
+      "end_ms": 2060
+    },
+    {
+      "word": "2",
+      "start_ms": 2060,
+      "end_ms": 2320
+    },
+    {
+      "word": "năm",
+      "start_ms": 2320,
+      "end_ms": 2540
+    },
+    {
+      "word": "mà",
+      "start_ms": 2540,
+      "end_ms": 3020
+    },
+    {
+      "word": "không",
+      "start_ms": 3020,
+      "end_ms": 3160
+    },
+    {
+      "word": "cần",
+      "start_ms": 3160,
+      "end_ms": 3340
+    },
+    {
+      "word": "vây",
+      "start_ms": 3340,
+      "end_ms": 3580
+    },
+    {
+      "word": "mượt",
+      "start_ms": 3580,
+      "end_ms": 4000
+    },
+    {
+      "word": "ai",
+      "start_ms": 4000,
+      "end_ms": 4140
+    },
+    {
+      "word": "một",
+      "start_ms": 4140,
+      "end_ms": 4320
+    },
+    {
+      "word": "đồng",
+      "start_ms": 4320,
+      "end_ms": 4480
+    },
+    {
+      "word": "mau.",
+      "start_ms": 4480,
+      "end_ms": 4680
+    }
+  ]
+}

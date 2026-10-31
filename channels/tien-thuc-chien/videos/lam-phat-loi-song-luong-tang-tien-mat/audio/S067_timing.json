@@ -1,0 +1,134 @@
+{
+  "audio_file": "S067_narration.wav",
+  "duration_ms": 5680,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "để",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "sứng",
+      "start_ms": 200,
+      "end_ms": 420
+    },
+    {
+      "word": "với",
+      "start_ms": 420,
+      "end_ms": 540
+    },
+    {
+      "word": "chức",
+      "start_ms": 540,
+      "end_ms": 720
+    },
+    {
+      "word": "áo,",
+      "start_ms": 720,
+      "end_ms": 960
+    },
+    {
+      "word": "ông",
+      "start_ms": 1100,
+      "end_ms": 1180
+    },
+    {
+      "word": "gòm",
+      "start_ms": 1180,
+      "end_ms": 1400
+    },
+    {
+      "word": "tiền",
+      "start_ms": 1400,
+      "end_ms": 1620
+    },
+    {
+      "word": "mua",
+      "start_ms": 1620,
+      "end_ms": 2000
+    },
+    {
+      "word": "một",
+      "start_ms": 2000,
+      "end_ms": 2140
+    },
+    {
+      "word": "chức",
+      "start_ms": 2140,
+      "end_ms": 2320
+    },
+    {
+      "word": "bàn",
+      "start_ms": 2320,
+      "end_ms": 2440
+    },
+    {
+      "word": "mới",
+      "start_ms": 2440,
+      "end_ms": 2620
+    },
+    {
+      "word": "rồi",
+      "start_ms": 2620,
+      "end_ms": 3280
+    },
+    {
+      "word": "chức",
+      "start_ms": 3280,
+      "end_ms": 3500
+    },
+    {
+      "word": "bàn",
+      "start_ms": 3500,
+      "end_ms": 3660
+    },
+    {
+      "word": "mới",
+      "start_ms": 3660,
+      "end_ms": 3840
+    },
+    {
+      "word": "lại",
+      "start_ms": 3840,
+      "end_ms": 3980
+    },
+    {
+      "word": "đoài",
+      "start_ms": 3980,
+      "end_ms": 4220
+    },
+    {
+      "word": "hỏi",
+      "start_ms": 4220,
+      "end_ms": 4400
+    },
+    {
+      "word": "một",
+      "start_ms": 4400,
+      "end_ms": 4580
+    },
+    {
+      "word": "tấm",
+      "start_ms": 4580,
+      "end_ms": 4860
+    },
+    {
+      "word": "thảm",
+      "start_ms": 4860,
+      "end_ms": 5080
+    },
+    {
+      "word": "luận",
+      "start_ms": 5080,
+      "end_ms": 5220
+    },
+    {
+      "word": "mới",
+      "start_ms": 5220,
+      "end_ms": 5400
+    }
+  ]
+}

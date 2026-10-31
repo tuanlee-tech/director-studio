@@ -1,0 +1,139 @@
+{
+  "audio_file": "S066_narration.wav",
+  "duration_ms": 5920,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "khi",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "quát",
+      "start_ms": 160,
+      "end_ms": 360
+    },
+    {
+      "word": "chữ",
+      "start_ms": 360,
+      "end_ms": 520
+    },
+    {
+      "word": "outro",
+      "start_ms": 520,
+      "end_ms": 680
+    },
+    {
+      "word": "hàng",
+      "start_ms": 680,
+      "end_ms": 900
+    },
+    {
+      "word": "quý",
+      "start_ms": 900,
+      "end_ms": 1100
+    },
+    {
+      "word": "tộc",
+      "start_ms": 1100,
+      "end_ms": 1280
+    },
+    {
+      "word": "lên",
+      "start_ms": 1280,
+      "end_ms": 1380
+    },
+    {
+      "word": "người,",
+      "start_ms": 1380,
+      "end_ms": 1680
+    },
+    {
+      "word": "ông",
+      "start_ms": 2120,
+      "end_ms": 2220
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 2220,
+      "end_ms": 2440
+    },
+    {
+      "word": "quen",
+      "start_ms": 2440,
+      "end_ms": 2620
+    },
+    {
+      "word": "căn",
+      "start_ms": 2620,
+      "end_ms": 2820
+    },
+    {
+      "word": "phòng",
+      "start_ms": 2820,
+      "end_ms": 3080
+    },
+    {
+      "word": "và",
+      "start_ms": 3080,
+      "end_ms": 3520
+    },
+    {
+      "word": "thấy",
+      "start_ms": 3520,
+      "end_ms": 3680
+    },
+    {
+      "word": "chiếc",
+      "start_ms": 3680,
+      "end_ms": 4019
+    },
+    {
+      "word": "bàn",
+      "start_ms": 4019,
+      "end_ms": 4200
+    },
+    {
+      "word": "gỗ",
+      "start_ms": 4200,
+      "end_ms": 4420
+    },
+    {
+      "word": "quốc",
+      "start_ms": 4420,
+      "end_ms": 4700
+    },
+    {
+      "word": "kỹ",
+      "start_ms": 4700,
+      "end_ms": 4900
+    },
+    {
+      "word": "bóng",
+      "start_ms": 4900,
+      "end_ms": 5120
+    },
+    {
+      "word": "trở",
+      "start_ms": 5120,
+      "end_ms": 5260
+    },
+    {
+      "word": "nên",
+      "start_ms": 5260,
+      "end_ms": 5340
+    },
+    {
+      "word": "thu",
+      "start_ms": 5340,
+      "end_ms": 5500
+    },
+    {
+      "word": "cạnh.",
+      "start_ms": 5500,
+      "end_ms": 5700
+    }
+  ]
+}

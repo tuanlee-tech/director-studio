@@ -1,0 +1,144 @@
+{
+  "audio_file": "S142_narration.wav",
+  "duration_ms": 6000,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tại",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "khoảng",
+      "start_ms": 200,
+      "end_ms": 400
+    },
+    {
+      "word": "thứ",
+      "start_ms": 400,
+      "end_ms": 520
+    },
+    {
+      "word": "2",
+      "start_ms": 520,
+      "end_ms": 780
+    },
+    {
+      "word": "là",
+      "start_ms": 780,
+      "end_ms": 940
+    },
+    {
+      "word": "cái",
+      "start_ms": 940,
+      "end_ms": 1080
+    },
+    {
+      "word": "sát",
+      "start_ms": 1080,
+      "end_ms": 1340
+    },
+    {
+      "word": "tích",
+      "start_ms": 1340,
+      "end_ms": 1540
+    },
+    {
+      "word": "sản",
+      "start_ms": 1540,
+      "end_ms": 1760
+    },
+    {
+      "word": "năm",
+      "start_ms": 1760,
+      "end_ms": 1900
+    },
+    {
+      "word": "chậu.",
+      "start_ms": 1900,
+      "end_ms": 2320
+    },
+    {
+      "word": "Tiên",
+      "start_ms": 2620,
+      "end_ms": 2720
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 2720,
+      "end_ms": 2900
+    },
+    {
+      "word": "có",
+      "start_ms": 2900,
+      "end_ms": 3020
+    },
+    {
+      "word": "một",
+      "start_ms": 3020,
+      "end_ms": 3140
+    },
+    {
+      "word": "chiều",
+      "start_ms": 3140,
+      "end_ms": 3380
+    },
+    {
+      "word": "đi",
+      "start_ms": 3380,
+      "end_ms": 3520
+    },
+    {
+      "word": "vào,",
+      "start_ms": 3520,
+      "end_ms": 3760
+    },
+    {
+      "word": "tự",
+      "start_ms": 4200,
+      "end_ms": 4240
+    },
+    {
+      "word": "đôi",
+      "start_ms": 4240,
+      "end_ms": 4400
+    },
+    {
+      "word": "không",
+      "start_ms": 4400,
+      "end_ms": 4560
+    },
+    {
+      "word": "gắn",
+      "start_ms": 4560,
+      "end_ms": 4760
+    },
+    {
+      "word": "thể",
+      "start_ms": 4760,
+      "end_ms": 4920
+    },
+    {
+      "word": "giúp",
+      "start_ms": 4920,
+      "end_ms": 5120
+    },
+    {
+      "word": "tiền",
+      "start_ms": 5120,
+      "end_ms": 5320
+    },
+    {
+      "word": "chi",
+      "start_ms": 5320,
+      "end_ms": 5460
+    },
+    {
+      "word": "tiêu.",
+      "start_ms": 5460,
+      "end_ms": 5720
+    }
+  ]
+}

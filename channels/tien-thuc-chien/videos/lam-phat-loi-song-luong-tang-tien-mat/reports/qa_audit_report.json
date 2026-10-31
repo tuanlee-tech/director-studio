@@ -1,0 +1,82 @@
+{
+  "channel": "tien-thuc-chien",
+  "video_slug": "lam-phat-loi-song-luong-tang-tien-mat",
+  "timestamp": "2026-10-31 13:32:54",
+  "passed": true,
+  "total_checks": 7,
+  "passed_checks": 7,
+  "failed_checks": 0,
+  "warning_checks": 1,
+  "checks": [
+    {
+      "category": "Assets",
+      "name": "Asset Coverage & File Integrity",
+      "passed": true,
+      "details": "100% Assets hợp lệ: 76 files (AIV: 7, IMG: 69) đều nguyên vẹn, > 50KB và đúng metadata ffprobe/PIL",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Naming",
+      "name": "File Naming & Anti-Alias Standardization",
+      "passed": true,
+      "details": "100% File trong assets/ (76 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Character",
+      "name": "Character Continuity & Narration Gender Alignment",
+      "passed": true,
+      "details": "Khớp 100% nhân vật & lời thoại Narration: Nam MC (9 cảnh), Người A Nam (S051-S054), Người B Nữ (S055-S058)",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "OCR & Watermark",
+      "name": "RapidOCR Technical Text & Filename Leak Scan",
+      "passed": true,
+      "details": "Bỏ qua quét OCR theo cờ --skip-ocr",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Remotion",
+      "name": "Remotion & GFX 8 Mandatory Rules",
+      "passed": true,
+      "details": "100% Tuân thủ 8 Điều luật Remotion & Motion Graphics (44/44 GFX dedicated, 0 prefix leaks, glassy subtitle)",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Audio",
+      "name": "Audio & Word Timing Synchronization",
+      "passed": true,
+      "details": "100% Audio & Timing đồng bộ: 157/157 cảnh đầy đủ WAV và JSON timing, 0 cảnh bị cắt âm",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "category": "Vision QA",
+      "name": "Visual Concept Alignment & Anatomy Integrity",
+      "passed": true,
+      "details": "100% Phân cảnh (76 assets) khớp ngữ cảnh thị giác Visual Concept & giải phẫu học",
+      "errors": [],
+      "warnings": [
+        "Cảnh S081 hiện là file ảnh tĩnh S081-A_7s_IMG.png. Khuyến nghị nâng cấp lên AIV để loại bỏ hoàn toàn dị tật tay đứt lìa."
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "summary_stats": {
+    "total_visual_sequences": 157,
+    "aiv_count": 7,
+    "img_count": 69,
+    "gfx_count": 81,
+    "verified_assets_count": 76,
+    "valid_media_files": 76,
+    "audio_valid_scenes": 157,
+    "vision_qa_verified_assets": 76
+  }
+}

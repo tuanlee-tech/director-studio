@@ -1,0 +1,144 @@
+{
+  "audio_file": "S134_narration.wav",
+  "duration_ms": 5840,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Cui",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "đặt",
+      "start_ms": 180,
+      "end_ms": 340
+    },
+    {
+      "word": "này,",
+      "start_ms": 340,
+      "end_ms": 540
+    },
+    {
+      "word": "giúp",
+      "start_ms": 960,
+      "end_ms": 1100
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1100,
+      "end_ms": 1240
+    },
+    {
+      "word": "vừa",
+      "start_ms": 1240,
+      "end_ms": 1460
+    },
+    {
+      "word": "tận",
+      "start_ms": 1460,
+      "end_ms": 1600
+    },
+    {
+      "word": "hưởng",
+      "start_ms": 1600,
+      "end_ms": 1780
+    },
+    {
+      "word": "được",
+      "start_ms": 1780,
+      "end_ms": 1960
+    },
+    {
+      "word": "quả",
+      "start_ms": 1960,
+      "end_ms": 2120
+    },
+    {
+      "word": "ngọt",
+      "start_ms": 2120,
+      "end_ms": 2340
+    },
+    {
+      "word": "của",
+      "start_ms": 2340,
+      "end_ms": 2500
+    },
+    {
+      "word": "sự",
+      "start_ms": 2500,
+      "end_ms": 2600
+    },
+    {
+      "word": "thang",
+      "start_ms": 2600,
+      "end_ms": 2780
+    },
+    {
+      "word": "tiến,",
+      "start_ms": 2780,
+      "end_ms": 3080
+    },
+    {
+      "word": "vừa",
+      "start_ms": 3420,
+      "end_ms": 3560
+    },
+    {
+      "word": "đam",
+      "start_ms": 3560,
+      "end_ms": 3680
+    },
+    {
+      "word": "bảo",
+      "start_ms": 3680,
+      "end_ms": 3840
+    },
+    {
+      "word": "tại",
+      "start_ms": 3840,
+      "end_ms": 3960
+    },
+    {
+      "word": "sản",
+      "start_ms": 3960,
+      "end_ms": 4140
+    },
+    {
+      "word": "tương",
+      "start_ms": 4140,
+      "end_ms": 4320
+    },
+    {
+      "word": "lai",
+      "start_ms": 4320,
+      "end_ms": 4580
+    },
+    {
+      "word": "vẫn",
+      "start_ms": 4580,
+      "end_ms": 4660
+    },
+    {
+      "word": "sinh",
+      "start_ms": 4660,
+      "end_ms": 4980
+    },
+    {
+      "word": "sôi",
+      "start_ms": 4980,
+      "end_ms": 5160
+    },
+    {
+      "word": "mạnh",
+      "start_ms": 5160,
+      "end_ms": 5340
+    },
+    {
+      "word": "mẽ.",
+      "start_ms": 5340,
+      "end_ms": 5560
+    }
+  ]
+}

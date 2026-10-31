@@ -1,0 +1,134 @@
+{
+  "audio_file": "S013_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "tư",
+      "start_ms": 240,
+      "end_ms": 380
+    },
+    {
+      "word": "biệt",
+      "start_ms": 380,
+      "end_ms": 500
+    },
+    {
+      "word": "minh",
+      "start_ms": 500,
+      "end_ms": 660
+    },
+    {
+      "word": "ràng,",
+      "start_ms": 660,
+      "end_ms": 900
+    },
+    {
+      "word": "ở",
+      "start_ms": 1220,
+      "end_ms": 1320
+    },
+    {
+      "word": "nơi",
+      "start_ms": 1320,
+      "end_ms": 1420
+    },
+    {
+      "word": "đẹp",
+      "start_ms": 1420,
+      "end_ms": 1600
+    },
+    {
+      "word": "hơn",
+      "start_ms": 1600,
+      "end_ms": 1740
+    },
+    {
+      "word": "thì",
+      "start_ms": 1740,
+      "end_ms": 1940
+    },
+    {
+      "word": "mời",
+      "start_ms": 1940,
+      "end_ms": 2100
+    },
+    {
+      "word": "có",
+      "start_ms": 2100,
+      "end_ms": 2220
+    },
+    {
+      "word": "tinh",
+      "start_ms": 2220,
+      "end_ms": 2380
+    },
+    {
+      "word": "thần",
+      "start_ms": 2380,
+      "end_ms": 2560
+    },
+    {
+      "word": "làm",
+      "start_ms": 2560,
+      "end_ms": 2680
+    },
+    {
+      "word": "việc",
+      "start_ms": 2680,
+      "end_ms": 2840
+    },
+    {
+      "word": "tốt",
+      "start_ms": 2840,
+      "end_ms": 3000
+    },
+    {
+      "word": "hơn",
+      "start_ms": 3000,
+      "end_ms": 3220
+    },
+    {
+      "word": "và",
+      "start_ms": 3220,
+      "end_ms": 3500
+    },
+    {
+      "word": "sướng",
+      "start_ms": 3500,
+      "end_ms": 3820
+    },
+    {
+      "word": "tầm",
+      "start_ms": 3820,
+      "end_ms": 4080
+    },
+    {
+      "word": "với",
+      "start_ms": 4080,
+      "end_ms": 4220
+    },
+    {
+      "word": "vị",
+      "start_ms": 4220,
+      "end_ms": 4380
+    },
+    {
+      "word": "trí",
+      "start_ms": 4380,
+      "end_ms": 4620
+    },
+    {
+      "word": "mới.",
+      "start_ms": 4620,
+      "end_ms": 4780
+    }
+  ]
+}

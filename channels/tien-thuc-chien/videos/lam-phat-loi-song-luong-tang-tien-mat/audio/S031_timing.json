@@ -1,0 +1,139 @@
+{
+  "audio_file": "S031_narration.wav",
+  "duration_ms": 5600,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Mỗi",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "đồ",
+      "start_ms": 240,
+      "end_ms": 340
+    },
+    {
+      "word": "và",
+      "start_ms": 340,
+      "end_ms": 460
+    },
+    {
+      "word": "nắp",
+      "start_ms": 460,
+      "end_ms": 640
+    },
+    {
+      "word": "tiền",
+      "start_ms": 640,
+      "end_ms": 780
+    },
+    {
+      "word": "bạn",
+      "start_ms": 780,
+      "end_ms": 940
+    },
+    {
+      "word": "sở",
+      "start_ms": 940,
+      "end_ms": 1180
+    },
+    {
+      "word": "hữu",
+      "start_ms": 1180,
+      "end_ms": 1400
+    },
+    {
+      "word": "đều",
+      "start_ms": 1400,
+      "end_ms": 1540
+    },
+    {
+      "word": "kéo",
+      "start_ms": 1540,
+      "end_ms": 1760
+    },
+    {
+      "word": "theo",
+      "start_ms": 1760,
+      "end_ms": 1940
+    },
+    {
+      "word": "một",
+      "start_ms": 1940,
+      "end_ms": 2120
+    },
+    {
+      "word": "thể",
+      "start_ms": 2120,
+      "end_ms": 2260
+    },
+    {
+      "word": "xinh",
+      "start_ms": 2260,
+      "end_ms": 2480
+    },
+    {
+      "word": "thái",
+      "start_ms": 2480,
+      "end_ms": 2700
+    },
+    {
+      "word": "chi",
+      "start_ms": 2700,
+      "end_ms": 2900
+    },
+    {
+      "word": "phí",
+      "start_ms": 2900,
+      "end_ms": 3140
+    },
+    {
+      "word": "bảo",
+      "start_ms": 3140,
+      "end_ms": 3320
+    },
+    {
+      "word": "chi",
+      "start_ms": 3320,
+      "end_ms": 3520
+    },
+    {
+      "word": "và",
+      "start_ms": 3520,
+      "end_ms": 4080
+    },
+    {
+      "word": "bảo",
+      "start_ms": 4080,
+      "end_ms": 4280
+    },
+    {
+      "word": "dự",
+      "start_ms": 4280,
+      "end_ms": 4480
+    },
+    {
+      "word": "nắp",
+      "start_ms": 4480,
+      "end_ms": 4820
+    },
+    {
+      "word": "tiền",
+      "start_ms": 4820,
+      "end_ms": 5000
+    },
+    {
+      "word": "đi",
+      "start_ms": 5000,
+      "end_ms": 5140
+    },
+    {
+      "word": "kèm.",
+      "start_ms": 5140,
+      "end_ms": 5440
+    }
+  ]
+}

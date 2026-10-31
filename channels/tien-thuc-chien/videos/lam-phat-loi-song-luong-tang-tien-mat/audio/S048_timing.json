@@ -1,0 +1,129 @@
+{
+  "audio_file": "S048_narration.wav",
+  "duration_ms": 5120,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Và",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "đó",
+      "start_ms": 160,
+      "end_ms": 260
+    },
+    {
+      "word": "chính",
+      "start_ms": 260,
+      "end_ms": 420
+    },
+    {
+      "word": "là",
+      "start_ms": 420,
+      "end_ms": 540
+    },
+    {
+      "word": "lý",
+      "start_ms": 540,
+      "end_ms": 680
+    },
+    {
+      "word": "do",
+      "start_ms": 680,
+      "end_ms": 820
+    },
+    {
+      "word": "vì",
+      "start_ms": 820,
+      "end_ms": 1020
+    },
+    {
+      "word": "sao",
+      "start_ms": 1020,
+      "end_ms": 1320
+    },
+    {
+      "word": "lương",
+      "start_ms": 1320,
+      "end_ms": 1580
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1580,
+      "end_ms": 1680
+    },
+    {
+      "word": "tăng",
+      "start_ms": 1680,
+      "end_ms": 1900
+    },
+    {
+      "word": "cấp",
+      "start_ms": 1900,
+      "end_ms": 2080
+    },
+    {
+      "word": "đôi,",
+      "start_ms": 2080,
+      "end_ms": 2340
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 2680,
+      "end_ms": 2800
+    },
+    {
+      "word": "ví",
+      "start_ms": 2800,
+      "end_ms": 3000
+    },
+    {
+      "word": "tiền",
+      "start_ms": 3000,
+      "end_ms": 3200
+    },
+    {
+      "word": "của",
+      "start_ms": 3200,
+      "end_ms": 3340
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3340,
+      "end_ms": 3560
+    },
+    {
+      "word": "vẫn",
+      "start_ms": 3560,
+      "end_ms": 3740
+    },
+    {
+      "word": "giống",
+      "start_ms": 3740,
+      "end_ms": 4019
+    },
+    {
+      "word": "không",
+      "start_ms": 4019,
+      "end_ms": 4280
+    },
+    {
+      "word": "vào",
+      "start_ms": 4280,
+      "end_ms": 4420
+    },
+    {
+      "word": "quý",
+      "start_ms": 4420,
+      "end_ms": 4600
+    },
+    {
+      "word": "tháng.",
+      "start_ms": 4600,
+      "end_ms": 4880
+    }
+  ]
+}

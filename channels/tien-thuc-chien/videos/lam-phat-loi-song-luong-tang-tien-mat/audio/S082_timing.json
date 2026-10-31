@@ -1,0 +1,149 @@
+{
+  "audio_file": "S082_narration.wav",
+  "duration_ms": 6320,
+  "word_count": 28,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Thực",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "tệ",
+      "start_ms": 200,
+      "end_ms": 320
+    },
+    {
+      "word": "chính",
+      "start_ms": 320,
+      "end_ms": 460
+    },
+    {
+      "word": "mình,",
+      "start_ms": 460,
+      "end_ms": 680
+    },
+    {
+      "word": "nếu",
+      "start_ms": 1220,
+      "end_ms": 1320
+    },
+    {
+      "word": "ngày",
+      "start_ms": 1320,
+      "end_ms": 1460
+    },
+    {
+      "word": "hôm",
+      "start_ms": 1460,
+      "end_ms": 1600
+    },
+    {
+      "word": "nay",
+      "start_ms": 1600,
+      "end_ms": 1760
+    },
+    {
+      "word": "có",
+      "start_ms": 1760,
+      "end_ms": 1940
+    },
+    {
+      "word": "thêm",
+      "start_ms": 1940,
+      "end_ms": 2140
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2140,
+      "end_ms": 2380
+    },
+    {
+      "word": "mà",
+      "start_ms": 2380,
+      "end_ms": 2540
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2540,
+      "end_ms": 2680
+    },
+    {
+      "word": "không",
+      "start_ms": 2680,
+      "end_ms": 2900
+    },
+    {
+      "word": "tiết",
+      "start_ms": 2900,
+      "end_ms": 3140
+    },
+    {
+      "word": "kiệm",
+      "start_ms": 3140,
+      "end_ms": 3300
+    },
+    {
+      "word": "được,",
+      "start_ms": 3300,
+      "end_ms": 3440
+    },
+    {
+      "word": "thì",
+      "start_ms": 4000,
+      "end_ms": 4019
+    },
+    {
+      "word": "tháng",
+      "start_ms": 4019,
+      "end_ms": 4280
+    },
+    {
+      "word": "sau",
+      "start_ms": 4280,
+      "end_ms": 4500
+    },
+    {
+      "word": "chắc",
+      "start_ms": 4500,
+      "end_ms": 4780
+    },
+    {
+      "word": "chắn",
+      "start_ms": 4780,
+      "end_ms": 4980
+    },
+    {
+      "word": "bạn",
+      "start_ms": 4980,
+      "end_ms": 5180
+    },
+    {
+      "word": "cũng",
+      "start_ms": 5180,
+      "end_ms": 5380
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 5380,
+      "end_ms": 5580
+    },
+    {
+      "word": "không",
+      "start_ms": 5580,
+      "end_ms": 5800
+    },
+    {
+      "word": "làm",
+      "start_ms": 5800,
+      "end_ms": 5960
+    },
+    {
+      "word": "được.",
+      "start_ms": 5960,
+      "end_ms": 6120
+    }
+  ]
+}

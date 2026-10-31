@@ -1,0 +1,154 @@
+{
+  "audio_file": "S094_narration.wav",
+  "duration_ms": 6560,
+  "word_count": 29,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "một",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "bên",
+      "start_ms": 200,
+      "end_ms": 400
+    },
+    {
+      "word": "là",
+      "start_ms": 400,
+      "end_ms": 540
+    },
+    {
+      "word": "một",
+      "start_ms": 540,
+      "end_ms": 700
+    },
+    {
+      "word": "tỉ",
+      "start_ms": 700,
+      "end_ms": 840
+    },
+    {
+      "word": "một",
+      "start_ms": 840,
+      "end_ms": 1000
+    },
+    {
+      "word": "chăm",
+      "start_ms": 1000,
+      "end_ms": 1180
+    },
+    {
+      "word": "triệu",
+      "start_ms": 1180,
+      "end_ms": 1360
+    },
+    {
+      "word": "đồng",
+      "start_ms": 1360,
+      "end_ms": 1500
+    },
+    {
+      "word": "tài",
+      "start_ms": 1500,
+      "end_ms": 1720
+    },
+    {
+      "word": "sản",
+      "start_ms": 1720,
+      "end_ms": 1920
+    },
+    {
+      "word": "dòng,",
+      "start_ms": 1920,
+      "end_ms": 2180
+    },
+    {
+      "word": "một",
+      "start_ms": 2660,
+      "end_ms": 2760
+    },
+    {
+      "word": "bên",
+      "start_ms": 2760,
+      "end_ms": 3000
+    },
+    {
+      "word": "là",
+      "start_ms": 3000,
+      "end_ms": 3160
+    },
+    {
+      "word": "con",
+      "start_ms": 3160,
+      "end_ms": 3300
+    },
+    {
+      "word": "số",
+      "start_ms": 3300,
+      "end_ms": 3460
+    },
+    {
+      "word": "không,",
+      "start_ms": 3460,
+      "end_ms": 3760
+    },
+    {
+      "word": "cùng",
+      "start_ms": 4180,
+      "end_ms": 4220
+    },
+    {
+      "word": "những",
+      "start_ms": 4220,
+      "end_ms": 4360
+    },
+    {
+      "word": "món",
+      "start_ms": 4360,
+      "end_ms": 4500
+    },
+    {
+      "word": "độ",
+      "start_ms": 4500,
+      "end_ms": 4620
+    },
+    {
+      "word": "cố",
+      "start_ms": 4620,
+      "end_ms": 4920
+    },
+    {
+      "word": "đã",
+      "start_ms": 4920,
+      "end_ms": 5040
+    },
+    {
+      "word": "lỗi",
+      "start_ms": 5040,
+      "end_ms": 5220
+    },
+    {
+      "word": "thời",
+      "start_ms": 5220,
+      "end_ms": 5420
+    },
+    {
+      "word": "và",
+      "start_ms": 5420,
+      "end_ms": 5820
+    },
+    {
+      "word": "mất",
+      "start_ms": 5820,
+      "end_ms": 6020
+    },
+    {
+      "word": "giá.",
+      "start_ms": 6020,
+      "end_ms": 6320
+    }
+  ]
+}

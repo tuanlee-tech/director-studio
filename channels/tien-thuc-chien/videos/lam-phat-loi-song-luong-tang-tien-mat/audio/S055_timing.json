@@ -1,0 +1,134 @@
+{
+  "audio_file": "S055_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "và",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "thế",
+      "start_ms": 160,
+      "end_ms": 300
+    },
+    {
+      "word": "là,",
+      "start_ms": 300,
+      "end_ms": 540
+    },
+    {
+      "word": "bạn",
+      "start_ms": 820,
+      "end_ms": 1020
+    },
+    {
+      "word": "bắt",
+      "start_ms": 1020,
+      "end_ms": 1080
+    },
+    {
+      "word": "đầu",
+      "start_ms": 1080,
+      "end_ms": 1240
+    },
+    {
+      "word": "khau",
+      "start_ms": 1240,
+      "end_ms": 1500
+    },
+    {
+      "word": "khát",
+      "start_ms": 1500,
+      "end_ms": 1700
+    },
+    {
+      "word": "một",
+      "start_ms": 1700,
+      "end_ms": 1860
+    },
+    {
+      "word": "con",
+      "start_ms": 1860,
+      "end_ms": 1980
+    },
+    {
+      "word": "hộ",
+      "start_ms": 1980,
+      "end_ms": 2100
+    },
+    {
+      "word": "cao",
+      "start_ms": 2100,
+      "end_ms": 2380
+    },
+    {
+      "word": "cấp",
+      "start_ms": 2380,
+      "end_ms": 2560
+    },
+    {
+      "word": "hơn",
+      "start_ms": 2560,
+      "end_ms": 2820
+    },
+    {
+      "word": "10",
+      "start_ms": 2820,
+      "end_ms": 3060
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3060,
+      "end_ms": 3300
+    },
+    {
+      "word": "để",
+      "start_ms": 3300,
+      "end_ms": 3600
+    },
+    {
+      "word": "tìm",
+      "start_ms": 3600,
+      "end_ms": 3860
+    },
+    {
+      "word": "lại",
+      "start_ms": 3860,
+      "end_ms": 3980
+    },
+    {
+      "word": "cảm",
+      "start_ms": 3980,
+      "end_ms": 4120
+    },
+    {
+      "word": "giác",
+      "start_ms": 4120,
+      "end_ms": 4360
+    },
+    {
+      "word": "hương",
+      "start_ms": 4360,
+      "end_ms": 4560
+    },
+    {
+      "word": "phân",
+      "start_ms": 4560,
+      "end_ms": 4720
+    },
+    {
+      "word": "bắt",
+      "start_ms": 4720,
+      "end_ms": 4880
+    },
+    {
+      "word": "đầu.",
+      "start_ms": 4880,
+      "end_ms": 5100
+    }
+  ]
+}

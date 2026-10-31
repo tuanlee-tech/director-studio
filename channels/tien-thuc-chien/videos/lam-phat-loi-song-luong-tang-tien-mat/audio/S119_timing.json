@@ -1,0 +1,129 @@
+{
+  "audio_file": "S119_narration.wav",
+  "duration_ms": 5440,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Trong",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "sau",
+      "start_ms": 200,
+      "end_ms": 360
+    },
+    {
+      "word": "tháng",
+      "start_ms": 360,
+      "end_ms": 520
+    },
+    {
+      "word": "này,",
+      "start_ms": 520,
+      "end_ms": 720
+    },
+    {
+      "word": "thiệt",
+      "start_ms": 1140,
+      "end_ms": 1280
+    },
+    {
+      "word": "đối",
+      "start_ms": 1280,
+      "end_ms": 1420
+    },
+    {
+      "word": "không",
+      "start_ms": 1420,
+      "end_ms": 1560
+    },
+    {
+      "word": "chuyện",
+      "start_ms": 1560,
+      "end_ms": 1760
+    },
+    {
+      "word": "nhà,",
+      "start_ms": 1760,
+      "end_ms": 1960
+    },
+    {
+      "word": "không",
+      "start_ms": 2340,
+      "end_ms": 2440
+    },
+    {
+      "word": "đổi",
+      "start_ms": 2440,
+      "end_ms": 2600
+    },
+    {
+      "word": "xe",
+      "start_ms": 2600,
+      "end_ms": 2880
+    },
+    {
+      "word": "và",
+      "start_ms": 2880,
+      "end_ms": 3040
+    },
+    {
+      "word": "không",
+      "start_ms": 3040,
+      "end_ms": 3220
+    },
+    {
+      "word": "mua",
+      "start_ms": 3220,
+      "end_ms": 3440
+    },
+    {
+      "word": "bất",
+      "start_ms": 3440,
+      "end_ms": 3640
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 3640,
+      "end_ms": 3820
+    },
+    {
+      "word": "món",
+      "start_ms": 3820,
+      "end_ms": 3960
+    },
+    {
+      "word": "đồ",
+      "start_ms": 3960,
+      "end_ms": 4160
+    },
+    {
+      "word": "công",
+      "start_ms": 4160,
+      "end_ms": 4320
+    },
+    {
+      "word": "nghệ",
+      "start_ms": 4320,
+      "end_ms": 4560
+    },
+    {
+      "word": "sát",
+      "start_ms": 4560,
+      "end_ms": 4780
+    },
+    {
+      "word": "sĩ",
+      "start_ms": 4780,
+      "end_ms": 4980
+    },
+    {
+      "word": "nào.",
+      "start_ms": 4980,
+      "end_ms": 5160
+    }
+  ]
+}

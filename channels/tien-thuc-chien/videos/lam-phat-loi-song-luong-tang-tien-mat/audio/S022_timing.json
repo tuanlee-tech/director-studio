@@ -1,0 +1,139 @@
+{
+  "audio_file": "S022_narration.wav",
+  "duration_ms": 5440,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Chưa",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "kể",
+      "start_ms": 260,
+      "end_ms": 420
+    },
+    {
+      "word": "những",
+      "start_ms": 420,
+      "end_ms": 520
+    },
+    {
+      "word": "bởi",
+      "start_ms": 520,
+      "end_ms": 700
+    },
+    {
+      "word": "liên",
+      "start_ms": 700,
+      "end_ms": 860
+    },
+    {
+      "word": "hoàng,",
+      "start_ms": 860,
+      "end_ms": 1100
+    },
+    {
+      "word": "âm",
+      "start_ms": 1400,
+      "end_ms": 1560
+    },
+    {
+      "word": "tối",
+      "start_ms": 1560,
+      "end_ms": 1720
+    },
+    {
+      "word": "tại",
+      "start_ms": 1720,
+      "end_ms": 1820
+    },
+    {
+      "word": "nhà",
+      "start_ms": 1820,
+      "end_ms": 1980
+    },
+    {
+      "word": "hàng",
+      "start_ms": 1980,
+      "end_ms": 2120
+    },
+    {
+      "word": "cao",
+      "start_ms": 2120,
+      "end_ms": 2380
+    },
+    {
+      "word": "cấp",
+      "start_ms": 2380,
+      "end_ms": 2540
+    },
+    {
+      "word": "vào",
+      "start_ms": 2540,
+      "end_ms": 2700
+    },
+    {
+      "word": "cuối",
+      "start_ms": 2700,
+      "end_ms": 2900
+    },
+    {
+      "word": "tuần",
+      "start_ms": 2900,
+      "end_ms": 3140
+    },
+    {
+      "word": "để",
+      "start_ms": 3140,
+      "end_ms": 3700
+    },
+    {
+      "word": "tự",
+      "start_ms": 3700,
+      "end_ms": 3840
+    },
+    {
+      "word": "thưởng",
+      "start_ms": 3840,
+      "end_ms": 4100
+    },
+    {
+      "word": "sau",
+      "start_ms": 4100,
+      "end_ms": 4380
+    },
+    {
+      "word": "những",
+      "start_ms": 4380,
+      "end_ms": 4520
+    },
+    {
+      "word": "này",
+      "start_ms": 4520,
+      "end_ms": 4680
+    },
+    {
+      "word": "làm",
+      "start_ms": 4680,
+      "end_ms": 4800
+    },
+    {
+      "word": "việc",
+      "start_ms": 4800,
+      "end_ms": 4900
+    },
+    {
+      "word": "áp",
+      "start_ms": 4900,
+      "end_ms": 5160
+    },
+    {
+      "word": "lực.",
+      "start_ms": 5160,
+      "end_ms": 5300
+    }
+  ]
+}

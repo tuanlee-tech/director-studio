@@ -1,0 +1,99 @@
+{
+  "audio_file": "S069_narration.wav",
+  "duration_ms": 3600,
+  "word_count": 18,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Trong",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "đời",
+      "start_ms": 200,
+      "end_ms": 360
+    },
+    {
+      "word": "sống",
+      "start_ms": 360,
+      "end_ms": 540
+    },
+    {
+      "word": "hiện",
+      "start_ms": 540,
+      "end_ms": 680
+    },
+    {
+      "word": "đại,",
+      "start_ms": 680,
+      "end_ms": 920
+    },
+    {
+      "word": "hiệu",
+      "start_ms": 1260,
+      "end_ms": 1380
+    },
+    {
+      "word": "ứng",
+      "start_ms": 1380,
+      "end_ms": 1540
+    },
+    {
+      "word": "này",
+      "start_ms": 1540,
+      "end_ms": 1660
+    },
+    {
+      "word": "diễn",
+      "start_ms": 1660,
+      "end_ms": 1920
+    },
+    {
+      "word": "ra",
+      "start_ms": 1920,
+      "end_ms": 2020
+    },
+    {
+      "word": "hàng",
+      "start_ms": 2020,
+      "end_ms": 2200
+    },
+    {
+      "word": "ngày",
+      "start_ms": 2200,
+      "end_ms": 2400
+    },
+    {
+      "word": "mà",
+      "start_ms": 2400,
+      "end_ms": 2560
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2560,
+      "end_ms": 2680
+    },
+    {
+      "word": "không",
+      "start_ms": 2680,
+      "end_ms": 2900
+    },
+    {
+      "word": "hề",
+      "start_ms": 2900,
+      "end_ms": 3100
+    },
+    {
+      "word": "hay",
+      "start_ms": 3100,
+      "end_ms": 3200
+    },
+    {
+      "word": "biết.",
+      "start_ms": 3200,
+      "end_ms": 3360
+    }
+  ]
+}

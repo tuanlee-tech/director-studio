@@ -1,0 +1,144 @@
+{
+  "audio_file": "S032_narration.wav",
+  "duration_ms": 5760,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Khi",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "bạn",
+      "start_ms": 160,
+      "end_ms": 280
+    },
+    {
+      "word": "nâng",
+      "start_ms": 280,
+      "end_ms": 420
+    },
+    {
+      "word": "cấp",
+      "start_ms": 420,
+      "end_ms": 540
+    },
+    {
+      "word": "trước",
+      "start_ms": 540,
+      "end_ms": 700
+    },
+    {
+      "word": "xe,",
+      "start_ms": 700,
+      "end_ms": 980
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1200,
+      "end_ms": 1300
+    },
+    {
+      "word": "không",
+      "start_ms": 1300,
+      "end_ms": 1480
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 1480,
+      "end_ms": 1680
+    },
+    {
+      "word": "trả",
+      "start_ms": 1680,
+      "end_ms": 1920
+    },
+    {
+      "word": "tiền",
+      "start_ms": 1920,
+      "end_ms": 2140
+    },
+    {
+      "word": "cho",
+      "start_ms": 2140,
+      "end_ms": 2280
+    },
+    {
+      "word": "cái",
+      "start_ms": 2280,
+      "end_ms": 2380
+    },
+    {
+      "word": "xe,",
+      "start_ms": 2380,
+      "end_ms": 2700
+    },
+    {
+      "word": "mà",
+      "start_ms": 3100,
+      "end_ms": 3180
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3180,
+      "end_ms": 3360
+    },
+    {
+      "word": "đang",
+      "start_ms": 3360,
+      "end_ms": 3500
+    },
+    {
+      "word": "căm",
+      "start_ms": 3500,
+      "end_ms": 3720
+    },
+    {
+      "word": "kết",
+      "start_ms": 3720,
+      "end_ms": 3920
+    },
+    {
+      "word": "trả",
+      "start_ms": 3920,
+      "end_ms": 4180
+    },
+    {
+      "word": "thêm",
+      "start_ms": 4180,
+      "end_ms": 4400
+    },
+    {
+      "word": "một",
+      "start_ms": 4400,
+      "end_ms": 4560
+    },
+    {
+      "word": "chối",
+      "start_ms": 4560,
+      "end_ms": 4800
+    },
+    {
+      "word": "chi",
+      "start_ms": 4800,
+      "end_ms": 4960
+    },
+    {
+      "word": "phí",
+      "start_ms": 4960,
+      "end_ms": 5200
+    },
+    {
+      "word": "dài",
+      "start_ms": 5200,
+      "end_ms": 5440
+    },
+    {
+      "word": "hạ.",
+      "start_ms": 5440,
+      "end_ms": 5600
+    }
+  ]
+}

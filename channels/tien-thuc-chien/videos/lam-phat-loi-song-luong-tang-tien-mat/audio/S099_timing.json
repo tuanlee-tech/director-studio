@@ -1,0 +1,144 @@
+{
+  "audio_file": "S099_narration.wav",
+  "duration_ms": 5760,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Người",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "bê",
+      "start_ms": 260,
+      "end_ms": 440
+    },
+    {
+      "word": "chọn",
+      "start_ms": 440,
+      "end_ms": 560
+    },
+    {
+      "word": "dưới",
+      "start_ms": 560,
+      "end_ms": 780
+    },
+    {
+      "word": "nguyên",
+      "start_ms": 780,
+      "end_ms": 960
+    },
+    {
+      "word": "mức",
+      "start_ms": 960,
+      "end_ms": 1140
+    },
+    {
+      "word": "sống",
+      "start_ms": 1140,
+      "end_ms": 1280
+    },
+    {
+      "word": "cu,",
+      "start_ms": 1280,
+      "end_ms": 1440
+    },
+    {
+      "word": "anh",
+      "start_ms": 1900,
+      "end_ms": 2020
+    },
+    {
+      "word": "ta",
+      "start_ms": 2020,
+      "end_ms": 2200
+    },
+    {
+      "word": "vẫn",
+      "start_ms": 2200,
+      "end_ms": 2380
+    },
+    {
+      "word": "ở",
+      "start_ms": 2380,
+      "end_ms": 2520
+    },
+    {
+      "word": "canh",
+      "start_ms": 2520,
+      "end_ms": 2740
+    },
+    {
+      "word": "phòng",
+      "start_ms": 2740,
+      "end_ms": 2840
+    },
+    {
+      "word": "vừa",
+      "start_ms": 2840,
+      "end_ms": 3040
+    },
+    {
+      "word": "vạn,",
+      "start_ms": 3040,
+      "end_ms": 3260
+    },
+    {
+      "word": "đi",
+      "start_ms": 3680,
+      "end_ms": 3740
+    },
+    {
+      "word": "chức",
+      "start_ms": 3740,
+      "end_ms": 3920
+    },
+    {
+      "word": "xe",
+      "start_ms": 3920,
+      "end_ms": 4040
+    },
+    {
+      "word": "cu",
+      "start_ms": 4040,
+      "end_ms": 4200
+    },
+    {
+      "word": "và",
+      "start_ms": 4200,
+      "end_ms": 4460
+    },
+    {
+      "word": "anh",
+      "start_ms": 4460,
+      "end_ms": 4680
+    },
+    {
+      "word": "những",
+      "start_ms": 4680,
+      "end_ms": 4820
+    },
+    {
+      "word": "bữa",
+      "start_ms": 4820,
+      "end_ms": 5020
+    },
+    {
+      "word": "cơ",
+      "start_ms": 5020,
+      "end_ms": 5200
+    },
+    {
+      "word": "mà",
+      "start_ms": 5200,
+      "end_ms": 5340
+    },
+    {
+      "word": "máp.",
+      "start_ms": 5340,
+      "end_ms": 5640
+    }
+  ]
+}

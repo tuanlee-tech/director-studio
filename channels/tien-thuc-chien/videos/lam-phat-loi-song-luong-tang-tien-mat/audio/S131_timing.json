@@ -1,0 +1,129 @@
+{
+  "audio_file": "S131_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Đây",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "là",
+      "start_ms": 220,
+      "end_ms": 380
+    },
+    {
+      "word": "nguyên",
+      "start_ms": 380,
+      "end_ms": 580
+    },
+    {
+      "word": "tắc",
+      "start_ms": 580,
+      "end_ms": 780
+    },
+    {
+      "word": "kinh",
+      "start_ms": 780,
+      "end_ms": 940
+    },
+    {
+      "word": "diện,",
+      "start_ms": 940,
+      "end_ms": 1140
+    },
+    {
+      "word": "hãy",
+      "start_ms": 1600,
+      "end_ms": 1700
+    },
+    {
+      "word": "trả",
+      "start_ms": 1700,
+      "end_ms": 1900
+    },
+    {
+      "word": "cho",
+      "start_ms": 1900,
+      "end_ms": 2040
+    },
+    {
+      "word": "bàn",
+      "start_ms": 2040,
+      "end_ms": 2180
+    },
+    {
+      "word": "thân",
+      "start_ms": 2180,
+      "end_ms": 2280
+    },
+    {
+      "word": "mình",
+      "start_ms": 2280,
+      "end_ms": 2400
+    },
+    {
+      "word": "trước",
+      "start_ms": 2400,
+      "end_ms": 2680
+    },
+    {
+      "word": "phần",
+      "start_ms": 2680,
+      "end_ms": 3020
+    },
+    {
+      "word": "còn",
+      "start_ms": 3020,
+      "end_ms": 3180
+    },
+    {
+      "word": "lại",
+      "start_ms": 3180,
+      "end_ms": 3360
+    },
+    {
+      "word": "mới",
+      "start_ms": 3360,
+      "end_ms": 3560
+    },
+    {
+      "word": "dùng",
+      "start_ms": 3560,
+      "end_ms": 3760
+    },
+    {
+      "word": "để",
+      "start_ms": 3760,
+      "end_ms": 3920
+    },
+    {
+      "word": "chi",
+      "start_ms": 3920,
+      "end_ms": 4100
+    },
+    {
+      "word": "trả",
+      "start_ms": 4100,
+      "end_ms": 4320
+    },
+    {
+      "word": "cho",
+      "start_ms": 4320,
+      "end_ms": 4440
+    },
+    {
+      "word": "khủ",
+      "start_ms": 4440,
+      "end_ms": 4560
+    },
+    {
+      "word": "sống.",
+      "start_ms": 4560,
+      "end_ms": 4800
+    }
+  ]
+}

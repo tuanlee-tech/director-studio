@@ -1,0 +1,129 @@
+{
+  "audio_file": "S075_narration.wav",
+  "duration_ms": 5520,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nguồn",
+      "start_ms": 0,
+      "end_ms": 300
+    },
+    {
+      "word": "giữ",
+      "start_ms": 300,
+      "end_ms": 480
+    },
+    {
+      "word": "được",
+      "start_ms": 480,
+      "end_ms": 580
+    },
+    {
+      "word": "tiền,",
+      "start_ms": 580,
+      "end_ms": 820
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1160,
+      "end_ms": 1280
+    },
+    {
+      "word": "phải",
+      "start_ms": 1280,
+      "end_ms": 1420
+    },
+    {
+      "word": "có",
+      "start_ms": 1420,
+      "end_ms": 1560
+    },
+    {
+      "word": "năng",
+      "start_ms": 1560,
+      "end_ms": 1740
+    },
+    {
+      "word": "lực",
+      "start_ms": 1740,
+      "end_ms": 1900
+    },
+    {
+      "word": "phát",
+      "start_ms": 1900,
+      "end_ms": 2060
+    },
+    {
+      "word": "hiện",
+      "start_ms": 2060,
+      "end_ms": 2180
+    },
+    {
+      "word": "và",
+      "start_ms": 2180,
+      "end_ms": 2500
+    },
+    {
+      "word": "dập",
+      "start_ms": 2500,
+      "end_ms": 2660
+    },
+    {
+      "word": "táp",
+      "start_ms": 2660,
+      "end_ms": 2820
+    },
+    {
+      "word": "ngồi",
+      "start_ms": 2820,
+      "end_ms": 3100
+    },
+    {
+      "word": "nổ",
+      "start_ms": 3100,
+      "end_ms": 3280
+    },
+    {
+      "word": "mua",
+      "start_ms": 3280,
+      "end_ms": 3580
+    },
+    {
+      "word": "sắm,",
+      "start_ms": 3580,
+      "end_ms": 3880
+    },
+    {
+      "word": "ngay",
+      "start_ms": 4300,
+      "end_ms": 4460
+    },
+    {
+      "word": "từ",
+      "start_ms": 4460,
+      "end_ms": 4580
+    },
+    {
+      "word": "món",
+      "start_ms": 4580,
+      "end_ms": 4720
+    },
+    {
+      "word": "đầu",
+      "start_ms": 4720,
+      "end_ms": 4860
+    },
+    {
+      "word": "đầu",
+      "start_ms": 4860,
+      "end_ms": 5000
+    },
+    {
+      "word": "tiền.",
+      "start_ms": 5000,
+      "end_ms": 5320
+    }
+  ]
+}

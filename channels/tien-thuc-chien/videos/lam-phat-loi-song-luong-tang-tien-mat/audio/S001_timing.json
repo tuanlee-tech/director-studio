@@ -1,0 +1,94 @@
+{
+  "audio_file": "S001_narration.wav",
+  "duration_ms": 3840,
+  "word_count": 17,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 280
+    },
+    {
+      "word": "với",
+      "start_ms": 280,
+      "end_ms": 400
+    },
+    {
+      "word": "đa",
+      "start_ms": 400,
+      "end_ms": 540
+    },
+    {
+      "word": "cột",
+      "start_ms": 540,
+      "end_ms": 740
+    },
+    {
+      "word": "mốc",
+      "start_ms": 740,
+      "end_ms": 960
+    },
+    {
+      "word": "đăng",
+      "start_ms": 960,
+      "end_ms": 1140
+    },
+    {
+      "word": "nhớ",
+      "start_ms": 1140,
+      "end_ms": 1380
+    },
+    {
+      "word": "được",
+      "start_ms": 1380,
+      "end_ms": 1680
+    },
+    {
+      "word": "tăng",
+      "start_ms": 1680,
+      "end_ms": 1860
+    },
+    {
+      "word": "lương",
+      "start_ms": 1860,
+      "end_ms": 2060
+    },
+    {
+      "word": "từ",
+      "start_ms": 2060,
+      "end_ms": 2220
+    },
+    {
+      "word": "10",
+      "start_ms": 2220,
+      "end_ms": 2420
+    },
+    {
+      "word": "triệu",
+      "start_ms": 2420,
+      "end_ms": 2700
+    },
+    {
+      "word": "lên",
+      "start_ms": 2700,
+      "end_ms": 2940
+    },
+    {
+      "word": "20",
+      "start_ms": 2940,
+      "end_ms": 3220
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3220,
+      "end_ms": 3460
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 3460,
+      "end_ms": 3660
+    }
+  ]
+}

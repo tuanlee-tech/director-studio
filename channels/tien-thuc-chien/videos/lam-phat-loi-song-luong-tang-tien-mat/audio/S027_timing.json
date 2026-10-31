@@ -1,0 +1,144 @@
+{
+  "audio_file": "S027_narration.wav",
+  "duration_ms": 6400,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "quyết",
+      "start_ms": 240,
+      "end_ms": 480
+    },
+    {
+      "word": "định",
+      "start_ms": 480,
+      "end_ms": 620
+    },
+    {
+      "word": "đổi",
+      "start_ms": 620,
+      "end_ms": 780
+    },
+    {
+      "word": "một",
+      "start_ms": 780,
+      "end_ms": 920
+    },
+    {
+      "word": "chức",
+      "start_ms": 920,
+      "end_ms": 1120
+    },
+    {
+      "word": "xe",
+      "start_ms": 1120,
+      "end_ms": 1340
+    },
+    {
+      "word": "tay",
+      "start_ms": 1340,
+      "end_ms": 1500
+    },
+    {
+      "word": "gà",
+      "start_ms": 1500,
+      "end_ms": 1760
+    },
+    {
+      "word": "đắt",
+      "start_ms": 1760,
+      "end_ms": 1900
+    },
+    {
+      "word": "tiền,",
+      "start_ms": 1900,
+      "end_ms": 2160
+    },
+    {
+      "word": "chọn",
+      "start_ms": 2640,
+      "end_ms": 2800
+    },
+    {
+      "word": "hình",
+      "start_ms": 2800,
+      "end_ms": 2940
+    },
+    {
+      "word": "thức",
+      "start_ms": 2940,
+      "end_ms": 3120
+    },
+    {
+      "word": "chả",
+      "start_ms": 3120,
+      "end_ms": 3300
+    },
+    {
+      "word": "góp",
+      "start_ms": 3300,
+      "end_ms": 3500
+    },
+    {
+      "word": "2",
+      "start_ms": 3500,
+      "end_ms": 3740
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3740,
+      "end_ms": 4000
+    },
+    {
+      "word": "dưới",
+      "start_ms": 4000,
+      "end_ms": 4180
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 4180,
+      "end_ms": 4380
+    },
+    {
+      "word": "tháng,",
+      "start_ms": 4380,
+      "end_ms": 4700
+    },
+    {
+      "word": "vì",
+      "start_ms": 4980,
+      "end_ms": 5160
+    },
+    {
+      "word": "nghĩ",
+      "start_ms": 5160,
+      "end_ms": 5340
+    },
+    {
+      "word": "mình",
+      "start_ms": 5340,
+      "end_ms": 5500
+    },
+    {
+      "word": "thưa",
+      "start_ms": 5500,
+      "end_ms": 5740
+    },
+    {
+      "word": "sức",
+      "start_ms": 5740,
+      "end_ms": 5940
+    },
+    {
+      "word": "trả.",
+      "start_ms": 5940,
+      "end_ms": 6140
+    }
+  ]
+}

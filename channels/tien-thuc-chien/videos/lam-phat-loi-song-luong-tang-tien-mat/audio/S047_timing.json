@@ -1,0 +1,159 @@
+{
+  "audio_file": "S047_narration.wav",
+  "duration_ms": 6000,
+  "word_count": 30,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hãy",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 160,
+      "end_ms": 340
+    },
+    {
+      "word": "vào",
+      "start_ms": 340,
+      "end_ms": 420
+    },
+    {
+      "word": "bức",
+      "start_ms": 420,
+      "end_ms": 580
+    },
+    {
+      "word": "tranh",
+      "start_ms": 580,
+      "end_ms": 800
+    },
+    {
+      "word": "tổng",
+      "start_ms": 800,
+      "end_ms": 940
+    },
+    {
+      "word": "thể,",
+      "start_ms": 940,
+      "end_ms": 1120
+    },
+    {
+      "word": "toàn",
+      "start_ms": 1660,
+      "end_ms": 1820
+    },
+    {
+      "word": "bộ",
+      "start_ms": 1820,
+      "end_ms": 1980
+    },
+    {
+      "word": "10",
+      "start_ms": 1980,
+      "end_ms": 2140
+    },
+    {
+      "word": "triệu",
+      "start_ms": 2140,
+      "end_ms": 2340
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2340,
+      "end_ms": 2560
+    },
+    {
+      "word": "lương",
+      "start_ms": 2560,
+      "end_ms": 2740
+    },
+    {
+      "word": "tăng",
+      "start_ms": 2740,
+      "end_ms": 2980
+    },
+    {
+      "word": "thêm",
+      "start_ms": 2980,
+      "end_ms": 3180
+    },
+    {
+      "word": "đã",
+      "start_ms": 3180,
+      "end_ms": 3280
+    },
+    {
+      "word": "bị",
+      "start_ms": 3280,
+      "end_ms": 3400
+    },
+    {
+      "word": "nốt",
+      "start_ms": 3400,
+      "end_ms": 3620
+    },
+    {
+      "word": "trừng",
+      "start_ms": 3620,
+      "end_ms": 3880
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 3880,
+      "end_ms": 4100
+    },
+    {
+      "word": "toàn",
+      "start_ms": 4100,
+      "end_ms": 4360
+    },
+    {
+      "word": "bởi",
+      "start_ms": 4360,
+      "end_ms": 4520
+    },
+    {
+      "word": "năm",
+      "start_ms": 4520,
+      "end_ms": 4620
+    },
+    {
+      "word": "hạn",
+      "start_ms": 4620,
+      "end_ms": 4800
+    },
+    {
+      "word": "1",
+      "start_ms": 4800,
+      "end_ms": 4900
+    },
+    {
+      "word": "nương",
+      "start_ms": 4900,
+      "end_ms": 5160
+    },
+    {
+      "word": "cấp",
+      "start_ms": 5160,
+      "end_ms": 5300
+    },
+    {
+      "word": "vô",
+      "start_ms": 5300,
+      "end_ms": 5440
+    },
+    {
+      "word": "thức",
+      "start_ms": 5440,
+      "end_ms": 5600
+    },
+    {
+      "word": "này.",
+      "start_ms": 5600,
+      "end_ms": 5760
+    }
+  ]
+}

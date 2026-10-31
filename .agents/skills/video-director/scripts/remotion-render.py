@@ -143,7 +143,7 @@ def main():
         f"--props={temp_props.name}",
         "--overwrite",
         "--gl=angle",
-        "--concurrency=4",
+        "--concurrency=6",
         "--timeout=60000"
     ]
 

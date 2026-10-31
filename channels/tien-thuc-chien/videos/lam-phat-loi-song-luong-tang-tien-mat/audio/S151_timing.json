@@ -1,0 +1,144 @@
+{
+  "audio_file": "S151_narration.wav",
+  "duration_ms": 5840,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nó",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "là",
+      "start_ms": 200,
+      "end_ms": 360
+    },
+    {
+      "word": "hành",
+      "start_ms": 360,
+      "end_ms": 500
+    },
+    {
+      "word": "trình",
+      "start_ms": 500,
+      "end_ms": 700
+    },
+    {
+      "word": "xây",
+      "start_ms": 700,
+      "end_ms": 880
+    },
+    {
+      "word": "dự",
+      "start_ms": 880,
+      "end_ms": 1040
+    },
+    {
+      "word": "sự",
+      "start_ms": 1040,
+      "end_ms": 1280
+    },
+    {
+      "word": "dự",
+      "start_ms": 1280,
+      "end_ms": 1420
+    },
+    {
+      "word": "nhiên",
+      "start_ms": 1420,
+      "end_ms": 1580
+    },
+    {
+      "word": "nổi",
+      "start_ms": 1580,
+      "end_ms": 1720
+    },
+    {
+      "word": "tại,",
+      "start_ms": 1720,
+      "end_ms": 1980
+    },
+    {
+      "word": "nơi",
+      "start_ms": 2460,
+      "end_ms": 2560
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2560,
+      "end_ms": 2660
+    },
+    {
+      "word": "không",
+      "start_ms": 2660,
+      "end_ms": 2860
+    },
+    {
+      "word": "còn",
+      "start_ms": 2860,
+      "end_ms": 3000
+    },
+    {
+      "word": "phải",
+      "start_ms": 3000,
+      "end_ms": 3160
+    },
+    {
+      "word": "giật",
+      "start_ms": 3160,
+      "end_ms": 3420
+    },
+    {
+      "word": "mình",
+      "start_ms": 3420,
+      "end_ms": 3520
+    },
+    {
+      "word": "thôn",
+      "start_ms": 3520,
+      "end_ms": 3760
+    },
+    {
+      "word": "thoát,",
+      "start_ms": 3760,
+      "end_ms": 4080
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 4300,
+      "end_ms": 4440
+    },
+    {
+      "word": "khi",
+      "start_ms": 4440,
+      "end_ms": 4580
+    },
+    {
+      "word": "nhận",
+      "start_ms": 4580,
+      "end_ms": 4800
+    },
+    {
+      "word": "thông",
+      "start_ms": 4800,
+      "end_ms": 5000
+    },
+    {
+      "word": "báo",
+      "start_ms": 5000,
+      "end_ms": 5180
+    },
+    {
+      "word": "số",
+      "start_ms": 5180,
+      "end_ms": 5320
+    },
+    {
+      "word": "giữ.",
+      "start_ms": 5320,
+      "end_ms": 5620
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "audio_file": "S010_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Khi",
+      "start_ms": 0,
+      "end_ms": 140
+    },
+    {
+      "word": "đó",
+      "start_ms": 140,
+      "end_ms": 260
+    },
+    {
+      "word": "bạn",
+      "start_ms": 260,
+      "end_ms": 480
+    },
+    {
+      "word": "thêm",
+      "start_ms": 480,
+      "end_ms": 740
+    },
+    {
+      "word": "một",
+      "start_ms": 740,
+      "end_ms": 880
+    },
+    {
+      "word": "cân",
+      "start_ms": 880,
+      "end_ms": 1020
+    },
+    {
+      "word": "phòng",
+      "start_ms": 1020,
+      "end_ms": 1200
+    },
+    {
+      "word": "nhỏ",
+      "start_ms": 1200,
+      "end_ms": 1360
+    },
+    {
+      "word": "2",
+      "start_ms": 1360,
+      "end_ms": 1600
+    },
+    {
+      "word": "triệu",
+      "start_ms": 1600,
+      "end_ms": 1740
+    },
+    {
+      "word": "dưới",
+      "start_ms": 1740,
+      "end_ms": 1940
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 1940,
+      "end_ms": 2100
+    },
+    {
+      "word": "tháng,",
+      "start_ms": 2100,
+      "end_ms": 2360
+    },
+    {
+      "word": "chi",
+      "start_ms": 2780,
+      "end_ms": 2840
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 2840,
+      "end_ms": 3020
+    },
+    {
+      "word": "thích",
+      "start_ms": 3020,
+      "end_ms": 3160
+    },
+    {
+      "word": "kia",
+      "start_ms": 3160,
+      "end_ms": 3320
+    },
+    {
+      "word": "và",
+      "start_ms": 3320,
+      "end_ms": 3600
+    },
+    {
+      "word": "vẫn",
+      "start_ms": 3600,
+      "end_ms": 3740
+    },
+    {
+      "word": "sống",
+      "start_ms": 3740,
+      "end_ms": 4019
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 4019,
+      "end_ms": 4200
+    },
+    {
+      "word": "toàn",
+      "start_ms": 4200,
+      "end_ms": 4440
+    },
+    {
+      "word": "uống",
+      "start_ms": 4440,
+      "end_ms": 4580
+    },
+    {
+      "word": "thoả.",
+      "start_ms": 4580,
+      "end_ms": 4800
+    }
+  ]
+}

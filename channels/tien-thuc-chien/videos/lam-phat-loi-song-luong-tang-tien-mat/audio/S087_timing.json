@@ -1,0 +1,164 @@
+{
+  "audio_file": "S087_narration.wav",
+  "duration_ms": 6720,
+  "word_count": 31,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Ở",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "kịch",
+      "start_ms": 180,
+      "end_ms": 320
+    },
+    {
+      "word": "bản",
+      "start_ms": 320,
+      "end_ms": 440
+    },
+    {
+      "word": "B,",
+      "start_ms": 440,
+      "end_ms": 620
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1140,
+      "end_ms": 1300
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 1300,
+      "end_ms": 1420
+    },
+    {
+      "word": "cần",
+      "start_ms": 1420,
+      "end_ms": 1560
+    },
+    {
+      "word": "giữ",
+      "start_ms": 1560,
+      "end_ms": 1800
+    },
+    {
+      "word": "lại",
+      "start_ms": 1800,
+      "end_ms": 1940
+    },
+    {
+      "word": "5",
+      "start_ms": 1940,
+      "end_ms": 2100
+    },
+    {
+      "word": "trộng",
+      "start_ms": 2100,
+      "end_ms": 2440
+    },
+    {
+      "word": "đồng",
+      "start_ms": 2440,
+      "end_ms": 2440
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 2440,
+      "end_ms": 2600
+    },
+    {
+      "word": "tháng,",
+      "start_ms": 2600,
+      "end_ms": 2900
+    },
+    {
+      "word": "hư",
+      "start_ms": 3360,
+      "end_ms": 3400
+    },
+    {
+      "word": "đều",
+      "start_ms": 3400,
+      "end_ms": 3620
+    },
+    {
+      "word": "đạt",
+      "start_ms": 3620,
+      "end_ms": 3780
+    },
+    {
+      "word": "vào",
+      "start_ms": 3780,
+      "end_ms": 3940
+    },
+    {
+      "word": "kinh",
+      "start_ms": 3940,
+      "end_ms": 4160
+    },
+    {
+      "word": "tích",
+      "start_ms": 4160,
+      "end_ms": 4320
+    },
+    {
+      "word": "sản",
+      "start_ms": 4320,
+      "end_ms": 4620
+    },
+    {
+      "word": "với",
+      "start_ms": 4620,
+      "end_ms": 4800
+    },
+    {
+      "word": "mức",
+      "start_ms": 4800,
+      "end_ms": 4940
+    },
+    {
+      "word": "sinh",
+      "start_ms": 4940,
+      "end_ms": 5140
+    },
+    {
+      "word": "lời",
+      "start_ms": 5140,
+      "end_ms": 5260
+    },
+    {
+      "word": "khiêm",
+      "start_ms": 5260,
+      "end_ms": 5540
+    },
+    {
+      "word": "tốn",
+      "start_ms": 5540,
+      "end_ms": 5700
+    },
+    {
+      "word": "10",
+      "start_ms": 5700,
+      "end_ms": 5880
+    },
+    {
+      "word": "%",
+      "start_ms": 5880,
+      "end_ms": 6120
+    },
+    {
+      "word": "1",
+      "start_ms": 6120,
+      "end_ms": 6300
+    },
+    {
+      "word": "năm.",
+      "start_ms": 6300,
+      "end_ms": 6480
+    }
+  ]
+}

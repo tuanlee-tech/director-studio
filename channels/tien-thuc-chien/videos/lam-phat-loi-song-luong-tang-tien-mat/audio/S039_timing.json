@@ -1,0 +1,119 @@
+{
+  "audio_file": "S039_narration.wav",
+  "duration_ms": 4880,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nguồn",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "sám",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "chức",
+      "start_ms": 340,
+      "end_ms": 540
+    },
+    {
+      "word": "tuyến",
+      "start_ms": 540,
+      "end_ms": 760
+    },
+    {
+      "word": "cho",
+      "start_ms": 760,
+      "end_ms": 900
+    },
+    {
+      "word": "thành",
+      "start_ms": 900,
+      "end_ms": 1020
+    },
+    {
+      "word": "một",
+      "start_ms": 1020,
+      "end_ms": 1200
+    },
+    {
+      "word": "leo",
+      "start_ms": 1200,
+      "end_ms": 1420
+    },
+    {
+      "word": "thuốc",
+      "start_ms": 1420,
+      "end_ms": 1620
+    },
+    {
+      "word": "giảm",
+      "start_ms": 1620,
+      "end_ms": 1980
+    },
+    {
+      "word": "căng",
+      "start_ms": 1980,
+      "end_ms": 2180
+    },
+    {
+      "word": "thẳng,",
+      "start_ms": 2180,
+      "end_ms": 2400
+    },
+    {
+      "word": "sau",
+      "start_ms": 2760,
+      "end_ms": 2880
+    },
+    {
+      "word": "những",
+      "start_ms": 2880,
+      "end_ms": 3040
+    },
+    {
+      "word": "giờ",
+      "start_ms": 3040,
+      "end_ms": 3280
+    },
+    {
+      "word": "là",
+      "start_ms": 3280,
+      "end_ms": 3420
+    },
+    {
+      "word": "việc",
+      "start_ms": 3420,
+      "end_ms": 3600
+    },
+    {
+      "word": "mệt",
+      "start_ms": 3600,
+      "end_ms": 3940
+    },
+    {
+      "word": "mỏi",
+      "start_ms": 3940,
+      "end_ms": 4140
+    },
+    {
+      "word": "ở",
+      "start_ms": 4140,
+      "end_ms": 4300
+    },
+    {
+      "word": "công",
+      "start_ms": 4300,
+      "end_ms": 4380
+    },
+    {
+      "word": "ty.",
+      "start_ms": 4380,
+      "end_ms": 4600
+    }
+  ]
+}

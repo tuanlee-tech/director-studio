@@ -1,0 +1,149 @@
+{
+  "audio_file": "S008_narration.wav",
+  "duration_ms": 6800,
+  "word_count": 28,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hôm",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "nay,",
+      "start_ms": 220,
+      "end_ms": 420
+    },
+    {
+      "word": "tôi",
+      "start_ms": 760,
+      "end_ms": 840
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 840,
+      "end_ms": 960
+    },
+    {
+      "word": "cùng",
+      "start_ms": 960,
+      "end_ms": 1120
+    },
+    {
+      "word": "bạc",
+      "start_ms": 1120,
+      "end_ms": 1360
+    },
+    {
+      "word": "bóc",
+      "start_ms": 1360,
+      "end_ms": 1520
+    },
+    {
+      "word": "trần",
+      "start_ms": 1520,
+      "end_ms": 1780
+    },
+    {
+      "word": "3",
+      "start_ms": 1780,
+      "end_ms": 2020
+    },
+    {
+      "word": ",7",
+      "start_ms": 2020,
+      "end_ms": 2360
+    },
+    {
+      "word": "tâm",
+      "start_ms": 2360,
+      "end_ms": 2640
+    },
+    {
+      "word": "lý",
+      "start_ms": 2640,
+      "end_ms": 2760
+    },
+    {
+      "word": "vô",
+      "start_ms": 2760,
+      "end_ms": 2960
+    },
+    {
+      "word": "hình",
+      "start_ms": 2960,
+      "end_ms": 3160
+    },
+    {
+      "word": "này",
+      "start_ms": 3160,
+      "end_ms": 3360
+    },
+    {
+      "word": "và",
+      "start_ms": 3360,
+      "end_ms": 4000
+    },
+    {
+      "word": "xây",
+      "start_ms": 4000,
+      "end_ms": 4260
+    },
+    {
+      "word": "dựng",
+      "start_ms": 4260,
+      "end_ms": 4480
+    },
+    {
+      "word": "lộ",
+      "start_ms": 4480,
+      "end_ms": 4580
+    },
+    {
+      "word": "trình",
+      "start_ms": 4580,
+      "end_ms": 4820
+    },
+    {
+      "word": "3",
+      "start_ms": 4820,
+      "end_ms": 5020
+    },
+    {
+      "word": "tầng",
+      "start_ms": 5020,
+      "end_ms": 5200
+    },
+    {
+      "word": "vòng",
+      "start_ms": 5200,
+      "end_ms": 5380
+    },
+    {
+      "word": "thủ",
+      "start_ms": 5380,
+      "end_ms": 5580
+    },
+    {
+      "word": "để",
+      "start_ms": 5580,
+      "end_ms": 5940
+    },
+    {
+      "word": "giữ",
+      "start_ms": 5940,
+      "end_ms": 6180
+    },
+    {
+      "word": "lại",
+      "start_ms": 6180,
+      "end_ms": 6320
+    },
+    {
+      "word": "tiền.",
+      "start_ms": 6320,
+      "end_ms": 6600
+    }
+  ]
+}

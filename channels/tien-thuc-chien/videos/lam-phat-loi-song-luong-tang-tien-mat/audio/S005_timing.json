@@ -1,0 +1,89 @@
+{
+  "audio_file": "S005_narration.wav",
+  "duration_ms": 3680,
+  "word_count": 16,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "lưng",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "tăng",
+      "start_ms": 260,
+      "end_ms": 440
+    },
+    {
+      "word": "cấp",
+      "start_ms": 440,
+      "end_ms": 620
+    },
+    {
+      "word": "đôi,",
+      "start_ms": 620,
+      "end_ms": 820
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 1120,
+      "end_ms": 1220
+    },
+    {
+      "word": "cảm",
+      "start_ms": 1220,
+      "end_ms": 1360
+    },
+    {
+      "word": "giác",
+      "start_ms": 1360,
+      "end_ms": 1540
+    },
+    {
+      "word": "hoang",
+      "start_ms": 1540,
+      "end_ms": 1760
+    },
+    {
+      "word": "mang,",
+      "start_ms": 1760,
+      "end_ms": 1940
+    },
+    {
+      "word": "bất",
+      "start_ms": 2280,
+      "end_ms": 2400
+    },
+    {
+      "word": "an",
+      "start_ms": 2400,
+      "end_ms": 2500
+    },
+    {
+      "word": "cuối",
+      "start_ms": 2500,
+      "end_ms": 2720
+    },
+    {
+      "word": "tháng",
+      "start_ms": 2720,
+      "end_ms": 2920
+    },
+    {
+      "word": "và",
+      "start_ms": 2920,
+      "end_ms": 3100
+    },
+    {
+      "word": "y",
+      "start_ms": 3100,
+      "end_ms": 3220
+    },
+    {
+      "word": "nguyện.",
+      "start_ms": 3220,
+      "end_ms": 3440
+    }
+  ]
+}

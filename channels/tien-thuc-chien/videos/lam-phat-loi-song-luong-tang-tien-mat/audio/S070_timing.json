@@ -1,0 +1,124 @@
+{
+  "audio_file": "S070_narration.wav",
+  "duration_ms": 4880,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Thì",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "bạn",
+      "start_ms": 180,
+      "end_ms": 260
+    },
+    {
+      "word": "mua",
+      "start_ms": 260,
+      "end_ms": 500
+    },
+    {
+      "word": "một",
+      "start_ms": 500,
+      "end_ms": 640
+    },
+    {
+      "word": "chiếc",
+      "start_ms": 640,
+      "end_ms": 880
+    },
+    {
+      "word": "điện",
+      "start_ms": 880,
+      "end_ms": 980
+    },
+    {
+      "word": "thoại",
+      "start_ms": 980,
+      "end_ms": 1160
+    },
+    {
+      "word": "cao",
+      "start_ms": 1160,
+      "end_ms": 1340
+    },
+    {
+      "word": "cấp",
+      "start_ms": 1340,
+      "end_ms": 1480
+    },
+    {
+      "word": "mới,",
+      "start_ms": 1480,
+      "end_ms": 1660
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2100,
+      "end_ms": 2200
+    },
+    {
+      "word": "cảm",
+      "start_ms": 2200,
+      "end_ms": 2360
+    },
+    {
+      "word": "thấy",
+      "start_ms": 2360,
+      "end_ms": 2500
+    },
+    {
+      "word": "chiếc",
+      "start_ms": 2500,
+      "end_ms": 2760
+    },
+    {
+      "word": "óp",
+      "start_ms": 2760,
+      "end_ms": 2920
+    },
+    {
+      "word": "lưng",
+      "start_ms": 2920,
+      "end_ms": 3080
+    },
+    {
+      "word": "cua",
+      "start_ms": 3080,
+      "end_ms": 3420
+    },
+    {
+      "word": "30",
+      "start_ms": 3420,
+      "end_ms": 3720
+    },
+    {
+      "word": ",000",
+      "start_ms": 3720,
+      "end_ms": 3920
+    },
+    {
+      "word": "không",
+      "start_ms": 3920,
+      "end_ms": 4180
+    },
+    {
+      "word": "còn",
+      "start_ms": 4180,
+      "end_ms": 4320
+    },
+    {
+      "word": "sướng",
+      "start_ms": 4320,
+      "end_ms": 4540
+    },
+    {
+      "word": "tầm.",
+      "start_ms": 4540,
+      "end_ms": 4760
+    }
+  ]
+}

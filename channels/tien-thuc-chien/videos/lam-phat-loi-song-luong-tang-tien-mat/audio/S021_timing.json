@@ -1,0 +1,119 @@
+{
+  "audio_file": "S021_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Chỉ",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "dương",
+      "start_ms": 220,
+      "end_ms": 440
+    },
+    {
+      "word": "tỉnh",
+      "start_ms": 440,
+      "end_ms": 660
+    },
+    {
+      "word": "Anh",
+      "start_ms": 660,
+      "end_ms": 760
+    },
+    {
+      "word": "chưa,",
+      "start_ms": 760,
+      "end_ms": 980
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1520,
+      "end_ms": 1580
+    },
+    {
+      "word": "đã",
+      "start_ms": 1580,
+      "end_ms": 1720
+    },
+    {
+      "word": "chia",
+      "start_ms": 1720,
+      "end_ms": 1860
+    },
+    {
+      "word": "thêm",
+      "start_ms": 1860,
+      "end_ms": 2080
+    },
+    {
+      "word": "hơn",
+      "start_ms": 2080,
+      "end_ms": 2240
+    },
+    {
+      "word": "một",
+      "start_ms": 2240,
+      "end_ms": 2460
+    },
+    {
+      "word": "chậu",
+      "start_ms": 2460,
+      "end_ms": 2740
+    },
+    {
+      "word": "600",
+      "start_ms": 2740,
+      "end_ms": 2920
+    },
+    {
+      "word": ",000",
+      "start_ms": 2920,
+      "end_ms": 3140
+    },
+    {
+      "word": "đồng",
+      "start_ms": 3140,
+      "end_ms": 3320
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 3320,
+      "end_ms": 3500
+    },
+    {
+      "word": "tháng",
+      "start_ms": 3500,
+      "end_ms": 3780
+    },
+    {
+      "word": "mà",
+      "start_ms": 3780,
+      "end_ms": 3940
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 3940,
+      "end_ms": 4080
+    },
+    {
+      "word": "toàn",
+      "start_ms": 4080,
+      "end_ms": 4320
+    },
+    {
+      "word": "không",
+      "start_ms": 4320,
+      "end_ms": 4460
+    },
+    {
+      "word": "lấy.",
+      "start_ms": 4460,
+      "end_ms": 4640
+    }
+  ]
+}

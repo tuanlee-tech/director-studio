@@ -1,0 +1,129 @@
+{
+  "audio_file": "S041_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hà",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "một",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "cuối",
+      "start_ms": 340,
+      "end_ms": 480
+    },
+    {
+      "word": "cùng",
+      "start_ms": 480,
+      "end_ms": 660
+    },
+    {
+      "word": "trong",
+      "start_ms": 660,
+      "end_ms": 920
+    },
+    {
+      "word": "năm",
+      "start_ms": 920,
+      "end_ms": 1060
+    },
+    {
+      "word": "khoản",
+      "start_ms": 1060,
+      "end_ms": 1320
+    },
+    {
+      "word": "nâng",
+      "start_ms": 1320,
+      "end_ms": 1440
+    },
+    {
+      "word": "cấp",
+      "start_ms": 1440,
+      "end_ms": 1660
+    },
+    {
+      "word": "vô",
+      "start_ms": 1660,
+      "end_ms": 1880
+    },
+    {
+      "word": "thức",
+      "start_ms": 1880,
+      "end_ms": 2080
+    },
+    {
+      "word": "chính",
+      "start_ms": 2080,
+      "end_ms": 2260
+    },
+    {
+      "word": "là",
+      "start_ms": 2260,
+      "end_ms": 2400
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 2400,
+      "end_ms": 2540
+    },
+    {
+      "word": "phía",
+      "start_ms": 2540,
+      "end_ms": 2740
+    },
+    {
+      "word": "xã",
+      "start_ms": 2740,
+      "end_ms": 2940
+    },
+    {
+      "word": "giao",
+      "start_ms": 2940,
+      "end_ms": 3200
+    },
+    {
+      "word": "và",
+      "start_ms": 3200,
+      "end_ms": 3720
+    },
+    {
+      "word": "duy",
+      "start_ms": 3720,
+      "end_ms": 3900
+    },
+    {
+      "word": "trì",
+      "start_ms": 3900,
+      "end_ms": 4160
+    },
+    {
+      "word": "hình",
+      "start_ms": 4160,
+      "end_ms": 4280
+    },
+    {
+      "word": "ảnh",
+      "start_ms": 4280,
+      "end_ms": 4440
+    },
+    {
+      "word": "cá",
+      "start_ms": 4440,
+      "end_ms": 4560
+    },
+    {
+      "word": "nhân.",
+      "start_ms": 4560,
+      "end_ms": 4760
+    }
+  ]
+}

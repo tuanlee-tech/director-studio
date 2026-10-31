@@ -1,0 +1,139 @@
+{
+  "audio_file": "S097_narration.wav",
+  "duration_ms": 6080,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Để",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "theo",
+      "start_ms": 200,
+      "end_ms": 280
+    },
+    {
+      "word": "dõ",
+      "start_ms": 280,
+      "end_ms": 480
+    },
+    {
+      "word": "sử",
+      "start_ms": 480,
+      "end_ms": 660
+    },
+    {
+      "word": "tương",
+      "start_ms": 660,
+      "end_ms": 880
+    },
+    {
+      "word": "phản",
+      "start_ms": 880,
+      "end_ms": 1080
+    },
+    {
+      "word": "này,",
+      "start_ms": 1080,
+      "end_ms": 1300
+    },
+    {
+      "word": "hãy",
+      "start_ms": 1740,
+      "end_ms": 1760
+    },
+    {
+      "word": "đặt",
+      "start_ms": 1760,
+      "end_ms": 1940
+    },
+    {
+      "word": "2",
+      "start_ms": 1940,
+      "end_ms": 2180
+    },
+    {
+      "word": "đồng",
+      "start_ms": 2180,
+      "end_ms": 2380
+    },
+    {
+      "word": "nhập",
+      "start_ms": 2380,
+      "end_ms": 2560
+    },
+    {
+      "word": "cùng",
+      "start_ms": 2560,
+      "end_ms": 2760
+    },
+    {
+      "word": "nhật",
+      "start_ms": 2760,
+      "end_ms": 2980
+    },
+    {
+      "word": "mức",
+      "start_ms": 2980,
+      "end_ms": 3200
+    },
+    {
+      "word": "lương",
+      "start_ms": 3200,
+      "end_ms": 3440
+    },
+    {
+      "word": "20",
+      "start_ms": 3440,
+      "end_ms": 3960
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3960,
+      "end_ms": 4280
+    },
+    {
+      "word": "lên",
+      "start_ms": 4280,
+      "end_ms": 4400
+    },
+    {
+      "word": "bản",
+      "start_ms": 4400,
+      "end_ms": 4600
+    },
+    {
+      "word": "cân",
+      "start_ms": 4600,
+      "end_ms": 4820
+    },
+    {
+      "word": "sau",
+      "start_ms": 4820,
+      "end_ms": 5160
+    },
+    {
+      "word": "3",
+      "start_ms": 5160,
+      "end_ms": 5420
+    },
+    {
+      "word": "năm",
+      "start_ms": 5420,
+      "end_ms": 5580
+    },
+    {
+      "word": "làm",
+      "start_ms": 5580,
+      "end_ms": 5700
+    },
+    {
+      "word": "việc.",
+      "start_ms": 5700,
+      "end_ms": 5880
+    }
+  ]
+}

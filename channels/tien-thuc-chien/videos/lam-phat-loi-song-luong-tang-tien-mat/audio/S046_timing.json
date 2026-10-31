@@ -1,0 +1,114 @@
+{
+  "audio_file": "S046_narration.wav",
+  "duration_ms": 4560,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "đang",
+      "start_ms": 220,
+      "end_ms": 320
+    },
+    {
+      "word": "phải",
+      "start_ms": 320,
+      "end_ms": 460
+    },
+    {
+      "word": "gầu",
+      "start_ms": 460,
+      "end_ms": 640
+    },
+    {
+      "word": "mình",
+      "start_ms": 640,
+      "end_ms": 760
+    },
+    {
+      "word": "chi",
+      "start_ms": 760,
+      "end_ms": 940
+    },
+    {
+      "word": "tiền",
+      "start_ms": 940,
+      "end_ms": 1180
+    },
+    {
+      "word": "để",
+      "start_ms": 1180,
+      "end_ms": 1320
+    },
+    {
+      "word": "duy",
+      "start_ms": 1320,
+      "end_ms": 1500
+    },
+    {
+      "word": "trì",
+      "start_ms": 1500,
+      "end_ms": 1740
+    },
+    {
+      "word": "một",
+      "start_ms": 1740,
+      "end_ms": 1860
+    },
+    {
+      "word": "và",
+      "start_ms": 1860,
+      "end_ms": 2000
+    },
+    {
+      "word": "bọc",
+      "start_ms": 2000,
+      "end_ms": 2240
+    },
+    {
+      "word": "thành",
+      "start_ms": 2240,
+      "end_ms": 2400
+    },
+    {
+      "word": "đã",
+      "start_ms": 2400,
+      "end_ms": 2960
+    },
+    {
+      "word": "trước",
+      "start_ms": 2960,
+      "end_ms": 3220
+    },
+    {
+      "word": "mắt",
+      "start_ms": 3220,
+      "end_ms": 3520
+    },
+    {
+      "word": "những",
+      "start_ms": 3520,
+      "end_ms": 3760
+    },
+    {
+      "word": "người",
+      "start_ms": 3760,
+      "end_ms": 3940
+    },
+    {
+      "word": "xung",
+      "start_ms": 3940,
+      "end_ms": 4120
+    },
+    {
+      "word": "quanh.",
+      "start_ms": 4120,
+      "end_ms": 4420
+    }
+  ]
+}

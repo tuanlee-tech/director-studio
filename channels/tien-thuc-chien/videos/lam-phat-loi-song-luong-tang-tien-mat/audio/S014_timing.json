@@ -1,0 +1,144 @@
+{
+  "audio_file": "S014_narration.wav",
+  "duration_ms": 5600,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nhưng",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "bạn",
+      "start_ms": 200,
+      "end_ms": 300
+    },
+    {
+      "word": "không",
+      "start_ms": 300,
+      "end_ms": 460
+    },
+    {
+      "word": "nhận",
+      "start_ms": 460,
+      "end_ms": 640
+    },
+    {
+      "word": "ra",
+      "start_ms": 640,
+      "end_ms": 780
+    },
+    {
+      "word": "rằng,",
+      "start_ms": 780,
+      "end_ms": 1000
+    },
+    {
+      "word": "nhà",
+      "start_ms": 1440,
+      "end_ms": 1560
+    },
+    {
+      "word": "ở",
+      "start_ms": 1560,
+      "end_ms": 1740
+    },
+    {
+      "word": "là",
+      "start_ms": 1740,
+      "end_ms": 1980
+    },
+    {
+      "word": "một",
+      "start_ms": 1980,
+      "end_ms": 2120
+    },
+    {
+      "word": "quản",
+      "start_ms": 2120,
+      "end_ms": 2300
+    },
+    {
+      "word": "chi",
+      "start_ms": 2300,
+      "end_ms": 2460
+    },
+    {
+      "word": "phí",
+      "start_ms": 2460,
+      "end_ms": 2720
+    },
+    {
+      "word": "cố",
+      "start_ms": 2720,
+      "end_ms": 2880
+    },
+    {
+      "word": "địch,",
+      "start_ms": 2880,
+      "end_ms": 3100
+    },
+    {
+      "word": "một",
+      "start_ms": 3480,
+      "end_ms": 3580
+    },
+    {
+      "word": "khi",
+      "start_ms": 3580,
+      "end_ms": 3780
+    },
+    {
+      "word": "đã",
+      "start_ms": 3780,
+      "end_ms": 3920
+    },
+    {
+      "word": "kí",
+      "start_ms": 3920,
+      "end_ms": 4100
+    },
+    {
+      "word": "hấp",
+      "start_ms": 4100,
+      "end_ms": 4240
+    },
+    {
+      "word": "đồng",
+      "start_ms": 4240,
+      "end_ms": 4400
+    },
+    {
+      "word": "thì",
+      "start_ms": 4400,
+      "end_ms": 4580
+    },
+    {
+      "word": "không",
+      "start_ms": 4580,
+      "end_ms": 4760
+    },
+    {
+      "word": "thể",
+      "start_ms": 4760,
+      "end_ms": 4900
+    },
+    {
+      "word": "hạ",
+      "start_ms": 4900,
+      "end_ms": 5040
+    },
+    {
+      "word": "xuống",
+      "start_ms": 5040,
+      "end_ms": 5260
+    },
+    {
+      "word": "được.",
+      "start_ms": 5260,
+      "end_ms": 5400
+    }
+  ]
+}

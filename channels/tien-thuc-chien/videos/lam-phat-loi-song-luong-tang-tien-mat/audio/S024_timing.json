@@ -1,0 +1,139 @@
+{
+  "audio_file": "S024_narration.wav",
+  "duration_ms": 5680,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Những",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "khoảng",
+      "start_ms": 260,
+      "end_ms": 460
+    },
+    {
+      "word": "chi",
+      "start_ms": 460,
+      "end_ms": 600
+    },
+    {
+      "word": "nhỏ",
+      "start_ms": 600,
+      "end_ms": 800
+    },
+    {
+      "word": "nhật",
+      "start_ms": 800,
+      "end_ms": 1060
+    },
+    {
+      "word": "này",
+      "start_ms": 1060,
+      "end_ms": 1200
+    },
+    {
+      "word": "không",
+      "start_ms": 1200,
+      "end_ms": 1480
+    },
+    {
+      "word": "bao",
+      "start_ms": 1480,
+      "end_ms": 1580
+    },
+    {
+      "word": "giờ",
+      "start_ms": 1580,
+      "end_ms": 1700
+    },
+    {
+      "word": "xuất",
+      "start_ms": 1700,
+      "end_ms": 1920
+    },
+    {
+      "word": "hiện",
+      "start_ms": 1920,
+      "end_ms": 2040
+    },
+    {
+      "word": "giới",
+      "start_ms": 2040,
+      "end_ms": 2340
+    },
+    {
+      "word": "dạng",
+      "start_ms": 2340,
+      "end_ms": 2600
+    },
+    {
+      "word": "một",
+      "start_ms": 2600,
+      "end_ms": 2680
+    },
+    {
+      "word": "cú",
+      "start_ms": 2680,
+      "end_ms": 2960
+    },
+    {
+      "word": "xuất",
+      "start_ms": 2960,
+      "end_ms": 3200
+    },
+    {
+      "word": "lớn,",
+      "start_ms": 3200,
+      "end_ms": 3480
+    },
+    {
+      "word": "mà",
+      "start_ms": 3860,
+      "end_ms": 3920
+    },
+    {
+      "word": "thấm",
+      "start_ms": 3920,
+      "end_ms": 4140
+    },
+    {
+      "word": "dần",
+      "start_ms": 4140,
+      "end_ms": 4320
+    },
+    {
+      "word": "như",
+      "start_ms": 4320,
+      "end_ms": 4480
+    },
+    {
+      "word": "nước",
+      "start_ms": 4480,
+      "end_ms": 4660
+    },
+    {
+      "word": "trải",
+      "start_ms": 4660,
+      "end_ms": 4860
+    },
+    {
+      "word": "qua",
+      "start_ms": 4860,
+      "end_ms": 5020
+    },
+    {
+      "word": "kế",
+      "start_ms": 5020,
+      "end_ms": 5200
+    },
+    {
+      "word": "tay.",
+      "start_ms": 5200,
+      "end_ms": 5340
+    }
+  ]
+}

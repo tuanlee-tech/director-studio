@@ -1,0 +1,134 @@
+{
+  "audio_file": "S157_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tôi",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "là",
+      "start_ms": 180,
+      "end_ms": 300
+    },
+    {
+      "word": "người",
+      "start_ms": 300,
+      "end_ms": 440
+    },
+    {
+      "word": "đồng",
+      "start_ms": 440,
+      "end_ms": 640
+    },
+    {
+      "word": "hành",
+      "start_ms": 640,
+      "end_ms": 760
+    },
+    {
+      "word": "của",
+      "start_ms": 760,
+      "end_ms": 900
+    },
+    {
+      "word": "bạn",
+      "start_ms": 900,
+      "end_ms": 1060
+    },
+    {
+      "word": "tại",
+      "start_ms": 1060,
+      "end_ms": 1240
+    },
+    {
+      "word": "tiền",
+      "start_ms": 1240,
+      "end_ms": 1420
+    },
+    {
+      "word": "thực",
+      "start_ms": 1420,
+      "end_ms": 1560
+    },
+    {
+      "word": "chiến",
+      "start_ms": 1560,
+      "end_ms": 1840
+    },
+    {
+      "word": "Cảm",
+      "start_ms": 1840,
+      "end_ms": 2540
+    },
+    {
+      "word": "ơn",
+      "start_ms": 2540,
+      "end_ms": 2600
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2600,
+      "end_ms": 2800
+    },
+    {
+      "word": "đã",
+      "start_ms": 2800,
+      "end_ms": 2940
+    },
+    {
+      "word": "lắng",
+      "start_ms": 2940,
+      "end_ms": 3160
+    },
+    {
+      "word": "nghe",
+      "start_ms": 3160,
+      "end_ms": 3380
+    },
+    {
+      "word": "và",
+      "start_ms": 3380,
+      "end_ms": 3520
+    },
+    {
+      "word": "hẹn",
+      "start_ms": 3520,
+      "end_ms": 3700
+    },
+    {
+      "word": "gặp",
+      "start_ms": 3700,
+      "end_ms": 3820
+    },
+    {
+      "word": "lại",
+      "start_ms": 3820,
+      "end_ms": 3980
+    },
+    {
+      "word": "ở",
+      "start_ms": 3980,
+      "end_ms": 4320
+    },
+    {
+      "word": "video",
+      "start_ms": 4320,
+      "end_ms": 4580
+    },
+    {
+      "word": "tiếp",
+      "start_ms": 4580,
+      "end_ms": 4800
+    },
+    {
+      "word": "theo",
+      "start_ms": 4800,
+      "end_ms": 5040
+    }
+  ]
+}

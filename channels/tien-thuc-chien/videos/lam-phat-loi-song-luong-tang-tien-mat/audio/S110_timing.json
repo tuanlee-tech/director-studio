@@ -1,0 +1,134 @@
+{
+  "audio_file": "S110_narration.wav",
+  "duration_ms": 5440,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Khi",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "bạn",
+      "start_ms": 180,
+      "end_ms": 300
+    },
+    {
+      "word": "xin",
+      "start_ms": 300,
+      "end_ms": 460
+    },
+    {
+      "word": "tiền",
+      "start_ms": 460,
+      "end_ms": 680
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 680,
+      "end_ms": 840
+    },
+    {
+      "word": "để",
+      "start_ms": 840,
+      "end_ms": 980
+    },
+    {
+      "word": "gây",
+      "start_ms": 980,
+      "end_ms": 1180
+    },
+    {
+      "word": "ấm",
+      "start_ms": 1180,
+      "end_ms": 1420
+    },
+    {
+      "word": "tượng",
+      "start_ms": 1420,
+      "end_ms": 1640
+    },
+    {
+      "word": "với",
+      "start_ms": 1640,
+      "end_ms": 1840
+    },
+    {
+      "word": "người",
+      "start_ms": 1840,
+      "end_ms": 2020
+    },
+    {
+      "word": "khác,",
+      "start_ms": 2020,
+      "end_ms": 2260
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2740,
+      "end_ms": 2960
+    },
+    {
+      "word": "đang",
+      "start_ms": 2960,
+      "end_ms": 3100
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 3100,
+      "end_ms": 3300
+    },
+    {
+      "word": "mô",
+      "start_ms": 3300,
+      "end_ms": 3460
+    },
+    {
+      "word": "hôi",
+      "start_ms": 3460,
+      "end_ms": 3640
+    },
+    {
+      "word": "của",
+      "start_ms": 3640,
+      "end_ms": 3760
+    },
+    {
+      "word": "mình",
+      "start_ms": 3760,
+      "end_ms": 4019
+    },
+    {
+      "word": "cho",
+      "start_ms": 4019,
+      "end_ms": 4300
+    },
+    {
+      "word": "những",
+      "start_ms": 4300,
+      "end_ms": 4400
+    },
+    {
+      "word": "anh",
+      "start_ms": 4400,
+      "end_ms": 4540
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 4540,
+      "end_ms": 4720
+    },
+    {
+      "word": "thóng",
+      "start_ms": 4720,
+      "end_ms": 4920
+    },
+    {
+      "word": "qua.",
+      "start_ms": 4920,
+      "end_ms": 5120
+    }
+  ]
+}

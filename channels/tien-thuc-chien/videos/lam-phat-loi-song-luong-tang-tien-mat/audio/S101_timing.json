@@ -1,0 +1,139 @@
+{
+  "audio_file": "S101_narration.wav",
+  "duration_ms": 5520,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Mình",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "bức",
+      "start_ms": 180,
+      "end_ms": 360
+    },
+    {
+      "word": "tranh",
+      "start_ms": 360,
+      "end_ms": 560
+    },
+    {
+      "word": "hậu",
+      "start_ms": 560,
+      "end_ms": 720
+    },
+    {
+      "word": "trường",
+      "start_ms": 720,
+      "end_ms": 860
+    },
+    {
+      "word": "lại",
+      "start_ms": 860,
+      "end_ms": 1040
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 1040,
+      "end_ms": 1260
+    },
+    {
+      "word": "toàn",
+      "start_ms": 1260,
+      "end_ms": 1480
+    },
+    {
+      "word": "xảy",
+      "start_ms": 1480,
+      "end_ms": 1660
+    },
+    {
+      "word": "ngược,",
+      "start_ms": 1660,
+      "end_ms": 1800
+    },
+    {
+      "word": "người",
+      "start_ms": 2240,
+      "end_ms": 2340
+    },
+    {
+      "word": "A",
+      "start_ms": 2340,
+      "end_ms": 2500
+    },
+    {
+      "word": "sống",
+      "start_ms": 2500,
+      "end_ms": 2720
+    },
+    {
+      "word": "trong",
+      "start_ms": 2720,
+      "end_ms": 2900
+    },
+    {
+      "word": "nỗi",
+      "start_ms": 2900,
+      "end_ms": 3100
+    },
+    {
+      "word": "sợ",
+      "start_ms": 3100,
+      "end_ms": 3300
+    },
+    {
+      "word": "hãy",
+      "start_ms": 3300,
+      "end_ms": 3480
+    },
+    {
+      "word": "tốt",
+      "start_ms": 3480,
+      "end_ms": 3700
+    },
+    {
+      "word": "cùng",
+      "start_ms": 3700,
+      "end_ms": 4180
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 4180,
+      "end_ms": 4400
+    },
+    {
+      "word": "khi",
+      "start_ms": 4400,
+      "end_ms": 4560
+    },
+    {
+      "word": "công",
+      "start_ms": 4560,
+      "end_ms": 4720
+    },
+    {
+      "word": "ty",
+      "start_ms": 4720,
+      "end_ms": 4860
+    },
+    {
+      "word": "của",
+      "start_ms": 4860,
+      "end_ms": 5000
+    },
+    {
+      "word": "biến",
+      "start_ms": 5000,
+      "end_ms": 5160
+    },
+    {
+      "word": "đậm.",
+      "start_ms": 5160,
+      "end_ms": 5360
+    }
+  ]
+}

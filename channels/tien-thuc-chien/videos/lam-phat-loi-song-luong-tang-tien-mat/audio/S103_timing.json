@@ -1,0 +1,124 @@
+{
+  "audio_file": "S103_narration.wav",
+  "duration_ms": 5200,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Trong",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "khi",
+      "start_ms": 200,
+      "end_ms": 320
+    },
+    {
+      "word": "đó,",
+      "start_ms": 320,
+      "end_ms": 560
+    },
+    {
+      "word": "Người",
+      "start_ms": 840,
+      "end_ms": 1040
+    },
+    {
+      "word": "B",
+      "start_ms": 1040,
+      "end_ms": 1160
+    },
+    {
+      "word": "sở",
+      "start_ms": 1160,
+      "end_ms": 1400
+    },
+    {
+      "word": "hiểu",
+      "start_ms": 1400,
+      "end_ms": 1600
+    },
+    {
+      "word": "một",
+      "start_ms": 1600,
+      "end_ms": 1700
+    },
+    {
+      "word": "quý",
+      "start_ms": 1700,
+      "end_ms": 1900
+    },
+    {
+      "word": "khẩn",
+      "start_ms": 1900,
+      "end_ms": 2140
+    },
+    {
+      "word": "cấp",
+      "start_ms": 2140,
+      "end_ms": 2360
+    },
+    {
+      "word": "6",
+      "start_ms": 2360,
+      "end_ms": 2580
+    },
+    {
+      "word": "tháng",
+      "start_ms": 2580,
+      "end_ms": 2940
+    },
+    {
+      "word": "và",
+      "start_ms": 2940,
+      "end_ms": 3060
+    },
+    {
+      "word": "một",
+      "start_ms": 3060,
+      "end_ms": 3220
+    },
+    {
+      "word": "dành",
+      "start_ms": 3220,
+      "end_ms": 3400
+    },
+    {
+      "word": "mục",
+      "start_ms": 3400,
+      "end_ms": 3520
+    },
+    {
+      "word": "tích",
+      "start_ms": 3520,
+      "end_ms": 3760
+    },
+    {
+      "word": "sản",
+      "start_ms": 3760,
+      "end_ms": 4059
+    },
+    {
+      "word": "hơn",
+      "start_ms": 4059,
+      "end_ms": 4260
+    },
+    {
+      "word": "200",
+      "start_ms": 4260,
+      "end_ms": 4580
+    },
+    {
+      "word": "triệu",
+      "start_ms": 4580,
+      "end_ms": 4820
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 4820,
+      "end_ms": 5020
+    }
+  ]
+}

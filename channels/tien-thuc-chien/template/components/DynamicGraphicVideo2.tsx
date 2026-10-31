@@ -1,0 +1,2367 @@
+import React from "react";
+import { interpolate, useCurrentFrame, spring, useVideoConfig } from "remotion";
+import { theme } from "../theme";
+
+interface DynamicGraphicVideo2Props {
+  title?: string;
+  label?: string;
+  description?: string;
+  component?: string;
+  scene?: string;
+  theme?: string;
+  durationInFrames?: number;
+  props?: Record<string, any>;
+  narration?: string;
+  [key: string]: any;
+}
+
+export const cleanText = (t: string): string => {
+  if (!t) return "";
+  return t
+    .replace(/^[A-Za-z0-9_]+(\s+[^\:]+)?:\s*/i, "")
+    .replace(/^Tiêu đề\s*[\:\'\"]*/i, "")
+    .replace(/[\'\"]$/g, "")
+    .trim();
+};
+
+export const DynamicGraphicVideo2: React.FC<DynamicGraphicVideo2Props> = ({
+  title = "",
+  label = "",
+  description = "",
+  scene = "",
+  durationInFrames = 120,
+  props = {},
+  narration = "",
+}) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const sc = (scene || "").toUpperCase();
+  const cleanTitle = cleanText(title || description || "");
+
+  // Spring entrance
+  const enterSpring = spring({
+    frame,
+    fps,
+    config: { damping: 14, mass: 0.7, stiffness: 85 },
+  });
+
+  const scale = interpolate(enterSpring, [0, 1], [0.94, 1]);
+  const opacity = interpolate(enterSpring, [0, 0.4], [0, 1]);
+  const translateY = interpolate(enterSpring, [0, 1], [20, 0]);
+  const animProgress = Math.min(1, Math.max(0, frame / (durationInFrames || 120)));
+
+  // =========================================================================
+  // --- S006: ĐƯỜNG LƯƠNG TĂNG SONG SONG VỚI ĐƯỜNG CHI TIÊU ---
+  // =========================================================================
+  if (sc === "S006") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>📈</span> NGHỊCH LÝ DÒNG TIỀN
+          </div>
+          <div style={headingStyle}>ĐƯỜNG LƯƠNG TĂNG SONG SONG VỚI ĐƯỜNG CHI TIÊU</div>
+          <div style={subheadStyle}>Khi thu nhập tăng 100%, mức sống và chi tiêu cũng lập tức tăng tương ứng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 700 240" style={{ width: "100%", height: "100%" }}>
+      <line x1="100" y1="200" x2="600" y2="200" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <line x1="100" y1="40" x2="100" y2="200" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      {/* Green Income Line */}
+      <path d={`M 100 180 Q 350 ${180 - animProgress * 120} 600 ${180 - animProgress * 140}`} fill="none" stroke="#10b981" strokeWidth="6" strokeLinecap="round" />
+      <circle cx={100 + animProgress * 500} cy={180 - animProgress * 140} r="8" fill="#10b981" />
+      <text x="610" y="45" fill="#10b981" fontSize="18" fontWeight="bold">LƯƠNG: +100%</text>
+      {/* Red Expense Line */}
+      <path d={`M 100 190 Q 350 ${190 - animProgress * 120} 600 ${190 - animProgress * 140}`} fill="none" stroke="#ef4444" strokeWidth="6" strokeLinecap="round" strokeDasharray="8 8" />
+      <circle cx={100 + animProgress * 500} cy={190 - animProgress * 140} r="8" fill="#ef4444" />
+      <text x="610" y="75" fill="#ef4444" fontSize="18" fontWeight="bold">CHI TIÊU: +100%</text>
+      <text x="350" y="230" fill="#94a3b8" fontSize="16" textAnchor="middle">KHOẢNG CÁCH TÍCH LŨY = 0 ĐỒNG</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S007: CHIẾC BẪY LẠM PHÁT LỐI SỐNG ---
+  // =========================================================================
+  if (sc === "S007") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>⚠️</span> CẠM BẪY VÔ HÌNH
+          </div>
+          <div style={headingStyle}>CHIẾC BẪY LẠM PHÁT LỐI SỐNG</div>
+          <div style={subheadStyle}>Thứ âm thầm nuốt chửng mọi thành quả làm việc chăm chỉ của bạn</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="150" y="40" width="300" height="150" rx="20" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" strokeWidth="4" />
+      <circle cx="300" cy="115" r={50 + Math.sin(frame * 0.1) * 8} fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" strokeWidth="3" />
+      <text x="300" y="105" fill="#fde68a" fontSize="32" textAnchor="middle" fontWeight="bold">🧀</text>
+      <text x="300" y="140" fill="#ffffff" fontSize="20" textAnchor="middle" fontWeight="bold">MỨC SỐNG CAO HƠN</text>
+      <path d={`M 200 60 L ${200 + animProgress * 200} 170`} stroke="#ef4444" strokeWidth="5" strokeLinecap="round" />
+      <text x="300" y="225" fill="#ef4444" fontSize="16" textAnchor="middle" fontWeight="bold">BẪY CHUỘT BẰNG VÀNG ĐANG SẬP XUỐNG</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S010: BẢNG KÊ CHI PHÍ NHÀ Ở THỜI LƯƠNG 10 TRIỆU ---
+  // =========================================================================
+  if (sc === "S010") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>🏠</span> ĐIỂM XUẤT PHÁT
+          </div>
+          <div style={headingStyle}>BẢNG KÊ CHI PHÍ NHÀ Ở THỜI LƯƠNG 10 TRIỆU</div>
+          <div style={subheadStyle}>Thuê phòng nhỏ 2.5 triệu, điện nước 500 nghìn, tổng 3 triệu mỗi tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="30" width="490" height="180" rx="16" fill="rgba(30, 41, 59, 0.7)" stroke="#38bdf8" strokeWidth="2" />
+      <text x="120" y="75" fill="#cbd5e1" fontSize="18">Tiền thuê phòng trọ:</text>
+      <text x="480" y="75" fill="#38bdf8" fontSize="20" fontWeight="bold">2.500.000 đ</text>
+      <text x="120" y="120" fill="#cbd5e1" fontSize="18">Điện, nước, internet:</text>
+      <text x="480" y="120" fill="#38bdf8" fontSize="20" fontWeight="bold">500.000 đ</text>
+      <line x1="120" y1="145" x2="530" y2="145" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="120" y="185" fill="#ffffff" fontSize="20" fontWeight="bold">TỔNG CHI PHÍ NHÀ Ở:</text>
+      <text x="480" y="185" fill="#10b981" fontSize="22" fontWeight="900">3.000.000 đ (30%)</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S012: HỢP ĐỒNG THUÊ CĂN HỘ MỚI KHI LƯƠNG 20 TRIỆU ---
+  // =========================================================================
+  if (sc === "S012") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🏢</span> NÂNG CẤP VỘI VÃ
+          </div>
+          <div style={headingStyle}>HỢP ĐỒNG THUÊ CĂN HỘ MỚI KHI LƯƠNG 20 TRIỆU</div>
+          <div style={subheadStyle}>Tiền nhà 6 triệu, phí dịch vụ 1 triệu, điện nước 2 triệu, tổng 9 triệu</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="20" width="490" height="200" rx="16" fill="rgba(30, 41, 59, 0.85)" stroke="#ef4444" strokeWidth="3" />
+      <text x="120" y="65" fill="#cbd5e1" fontSize="18">Tiền thuê căn hộ dịch vụ:</text>
+      <text x="480" y="65" fill="#fca5a5" fontSize="20" fontWeight="bold">6.000.000 đ</text>
+      <text x="120" y="105" fill="#cbd5e1" fontSize="18">Phí quản lý & gửi xe:</text>
+      <text x="480" y="105" fill="#fca5a5" fontSize="20" fontWeight="bold">1.000.000 đ</text>
+      <text x="120" y="145" fill="#cbd5e1" fontSize="18">Điện nước giá thương mại:</text>
+      <text x="480" y="145" fill="#fca5a5" fontSize="20" fontWeight="bold">2.000.000 đ</text>
+      <line x1="120" y1="165" x2="530" y2="165" stroke="#ef4444" strokeWidth="2" />
+      <text x="120" y="200" fill="#ffffff" fontSize="20" fontWeight="bold">TỔNG CHI PHÍ MỚI:</text>
+      <text x="480" y="200" fill="#ef4444" fontSize="24" fontWeight="900">9.000.000 đ (45%)</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S013: CHI PHÍ NHÀ Ở TĂNG GẤP 3 LẦN ---
+  // =========================================================================
+  if (sc === "S013") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>⚖️</span> CÁN CÂN CHI PHÍ
+          </div>
+          <div style={headingStyle}>CHI PHÍ NHÀ Ở TĂNG GẤP 3 LẦN</div>
+          <div style={subheadStyle}>Từ 3 triệu vọt lên 9 triệu đồng mỗi tháng, nuốt trọn phần lớn tiền tăng thêm</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      {/* Old column */}
+      <rect x="150" y={190 - animProgress * 50} width="120" height={animProgress * 50} rx="10" fill="#10b981" />
+      <text x="210" y="130" fill="#10b981" fontSize="20" fontWeight="bold" textAnchor="middle">3 TRIỆU</text>
+      <text x="210" y="220" fill="#cbd5e1" fontSize="16" textAnchor="middle">Phòng trọ cũ</text>
+      {/* New column */}
+      <rect x="380" y={190 - animProgress * 150} width="120" height={animProgress * 150} rx="10" fill="#ef4444" />
+      <text x="440" y={180 - animProgress * 150} fill="#ef4444" fontSize="24" fontWeight="900" textAnchor="middle">9 TRIỆU</text>
+      <text x="440" y="220" fill="#cbd5e1" fontSize="16" textAnchor="middle">Chung cư mới</text>
+      <text x="325" y="50" fill="#f59e0b" fontSize="20" fontWeight="bold" textAnchor="middle">TĂNG VỌT +300%!</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S015: 10 THÁNG THUÊ NHÀ = GẦN MỘT NĂM LƯƠNG CŨ ---
+  // =========================================================================
+  if (sc === "S015") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>⏱️</span> TỔNG THẤT THOÁT
+          </div>
+          <div style={headingStyle}>10 THÁNG THUÊ NHÀ = GẦN MỘT NĂM LƯƠNG CŨ</div>
+          <div style={subheadStyle}>Mỗi năm việc đổi chỗ ở đã nuốt chửng 60 triệu đồng tiền chênh lệch của bạn</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="40" width="450" height="150" rx="16" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" strokeWidth="3" />
+      <text x="325" y="85" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">CHÊNH LỆCH: 6.000.000 đ / THÁNG</text>
+      <text x="325" y="125" fill="#fca5a5" fontSize="18" textAnchor="middle">x 10 THÁNG = 60.000.000 đ BỐC HƠI</text>
+      <path d={`M 150 160 L ${150 + animProgress * 350} 160`} stroke="#ef4444" strokeWidth="12" strokeLinecap="round" />
+      <text x="325" y="220" fill="#cbd5e1" fontSize="16" textAnchor="middle">Tương đương 6 tháng lương cũ đã bị tiêu biến hoàn toàn</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S016: TỶ TRỌNG TIỀN NHÀ VƯỢT NGƯỠNG AN TOÀN ---
+  // =========================================================================
+  if (sc === "S016") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🚨</span> NGƯỠNG BÁO ĐỘNG
+          </div>
+          <div style={headingStyle}>TỶ TRỌNG TIỀN NHÀ VƯỢT NGƯỠNG AN TOÀN</div>
+          <div style={subheadStyle}>Chiếm 45% tổng thu nhập hàng tháng trong khi trần tối đa chỉ là 30%</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      {/* Gauge bar */}
+      <rect x="100" y="80" width="450" height="40" rx="20" fill="rgba(255,255,255,0.1)" />
+      <rect x="100" y="80" width={450 * 0.3} height="40" rx="20" fill="#10b981" />
+      <rect x={100 + 450 * 0.3} y="80" width={animProgress * (450 * 0.15)} height="40" fill="#ef4444" />
+      <line x1={100 + 450 * 0.3} y1="65" x2={100 + 450 * 0.3} y2="135" stroke="#ffffff" strokeWidth="4" />
+      <text x={100 + 450 * 0.3} y="55" fill="#10b981" fontSize="16" fontWeight="bold" textAnchor="middle">CHUẨN: 30%</text>
+      <text x="440" y="155" fill="#ef4444" fontSize="22" fontWeight="900" textAnchor="middle">THỰC TẾ: 45% (BÁO ĐỘNG ĐỎ!)</text>
+      <text x="325" y="210" fill="#cbd5e1" fontSize="16" textAnchor="middle">Vượt quá 15% trần chịu tải tài chính cá nhân</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S019: PHÉP TÍNH CHÊNH LỆCH CÀ PHÊ HÀNG NGÀY ---
+  // =========================================================================
+  if (sc === "S019") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>☕</span> RÒ RỈ VI MÔ
+          </div>
+          <div style={headingStyle}>PHÉP TÍNH CHÊNH LỆCH CÀ PHÊ HÀNG NGÀY</div>
+          <div style={subheadStyle}>Chênh lệch 50 nghìn mỗi ngày lấy đi thêm 1.5 triệu đồng mỗi tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="30" width="450" height="170" rx="16" fill="rgba(30, 41, 59, 0.7)" stroke="#f59e0b" strokeWidth="2" />
+      <text x="140" y="75" fill="#cbd5e1" fontSize="18">Cà phê vỉa hè cũ:</text>
+      <text x="450" y="75" fill="#10b981" fontSize="20" fontWeight="bold">15.000 đ / ngày</text>
+      <text x="140" y="115" fill="#cbd5e1" fontSize="18">Cà phê thương hiệu mới:</text>
+      <text x="450" y="115" fill="#ef4444" fontSize="20" fontWeight="bold">65.000 đ / ngày</text>
+      <line x1="140" y1="135" x2="510" y2="135" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="140" y="175" fill="#ffffff" fontSize="18">Chênh lệch: +50k x 30 ngày =</text>
+      <text x="420" y="175" fill="#f59e0b" fontSize="22" fontWeight="900">+1.500.000 đ</text>
+      <text x="325" y="225" fill="#cbd5e1" fontSize="15" textAnchor="middle">Khoản tiền đủ mua một chứng chỉ quỹ tích sản mỗi tháng</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S021: CHI PHÍ ĂN TRƯA TĂNG GẦN GẤP 3 ---
+  // =========================================================================
+  if (sc === "S021") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🍱</span> ĂN TRƯA CÔNG SỞ
+          </div>
+          <div style={headingStyle}>CHI PHÍ ĂN TRƯA TĂNG GẦN GẤP 3</div>
+          <div style={subheadStyle}>Từ cơm bình dân 900 nghìn vọt lên 2.5 triệu đồng mỗi tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="140" y={190 - animProgress * 60} width="140" height={animProgress * 60} rx="12" fill="#10b981" />
+      <text x="210" y="120" fill="#10b981" fontSize="20" fontWeight="bold" textAnchor="middle">900.000 đ</text>
+      <text x="210" y="215" fill="#cbd5e1" fontSize="16" textAnchor="middle">Cơm bình dân (35k)</text>
+      <rect x="370" y={190 - animProgress * 150} width="140" height={animProgress * 150} rx="12" fill="#ef4444" />
+      <text x="440" y={180 - animProgress * 150} fill="#ef4444" fontSize="22" fontWeight="900" textAnchor="middle">2.500.000 đ</text>
+      <text x="440" y="215" fill="#cbd5e1" fontSize="16" textAnchor="middle">Nhà hàng (100k)</text>
+      <text x="325" y="40" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">THẤT THOÁT THÊM 1.600.000 đ / THÁNG</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S023: CHI PHÍ ĂN UỐNG & GIẢI TRÍ TĂNG TỪ 3TR LÊN 7.5TR ---
+  // =========================================================================
+  if (sc === "S023") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>💸</span> TỔNG RÒ RỈ ĂN UỐNG
+          </div>
+          <div style={headingStyle}>CHI PHÍ ĂN UỐNG & GIẢI TRÍ TĂNG TỪ 3TR LÊN 7.5TR</div>
+          <div style={subheadStyle}>Mỗi tháng cuốn bay thêm hơn 4 triệu đồng mà không hề để ý</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="40" width="450" height="150" rx="16" fill="rgba(30, 41, 59, 0.8)" stroke="#ef4444" strokeWidth="2" />
+      <text x="140" y="80" fill="#cbd5e1" fontSize="18">Thời điểm lương 10 triệu:</text>
+      <text x="460" y="80" fill="#10b981" fontSize="20" fontWeight="bold">3.000.000 đ</text>
+      <text x="140" y="125" fill="#cbd5e1" fontSize="18">Thời điểm lương 20 triệu:</text>
+      <text x="460" y="125" fill="#ef4444" fontSize="24" fontWeight="900">7.500.000 đ</text>
+      <line x1="140" y1="145" x2="510" y2="145" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="325" y="175" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">BỐC HƠI THÊM: 4.500.000 đ MỖI THÁNG</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S024: RÒ RỈ VI MÔ LÀ CON DAO CẮT ĐỨT DÒNG TIỀN ---
+  // =========================================================================
+  if (sc === "S024") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🔪</span> CẢNH BÁO TÀI CHÍNH
+          </div>
+          <div style={headingStyle}>RÒ RỈ VI MÔ LÀ CON DAO CẮT ĐỨT DÒNG TIỀN</div>
+          <div style={subheadStyle}>Những khoản tiền nhỏ không gây sốc nhưng âm thầm rút cạn tương lai</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="90" r="50" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" strokeWidth="3" />
+      <text x="300" y="105" fill="#ffffff" fontSize="40" textAnchor="middle">💧</text>
+      <text x="300" y="170" fill="#ef4444" fontSize="22" fontWeight="900" textAnchor="middle">NƯỚC CHẢY QUA KẼ TAY</text>
+      <text x="300" y="205" fill="#cbd5e1" fontSize="16" textAnchor="middle">100k/ngày = 36 triệu/năm tích sản bị triệt tiêu</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S027: HỢP ĐỒNG TRẢ GÓP XE TAY GA ĐẮT TIỀN ---
+  // =========================================================================
+  if (sc === "S027") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>🛵</span> TRẢ GÓP XE MỚI
+          </div>
+          <div style={headingStyle}>HỢP ĐỒNG TRẢ GÓP XE TAY GA ĐẮT TIỀN</div>
+          <div style={subheadStyle}>Trả góp 2.5 triệu mỗi tháng trong vòng 2 năm vì nghĩ mình thừa sức</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="30" width="490" height="170" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="#38bdf8" strokeWidth="2" />
+      <text x="120" y="75" fill="#cbd5e1" fontSize="18">Giá trị xe tay ga mới:</text>
+      <text x="480" y="75" fill="#38bdf8" fontSize="20" fontWeight="bold">80.000.000 đ</text>
+      <text x="120" y="115" fill="#cbd5e1" fontSize="18">Trả góp hàng tháng:</text>
+      <text x="480" y="115" fill="#ef4444" fontSize="22" fontWeight="bold">2.500.000 đ / tháng</text>
+      <text x="120" y="155" fill="#cbd5e1" fontSize="18">Thời hạn cam kết nợ:</text>
+      <text x="480" y="155" fill="#f59e0b" fontSize="20" fontWeight="bold">24 Tháng liên tục</text>
+      <text x="325" y="225" fill="#cbd5e1" fontSize="15" textAnchor="middle">Một khoản nợ cố định 60 triệu đè nặng lên thu nhập</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S029: LỊCH SỬ CHUYẾN ĐI ĐẶT XE Ô TÔ ---
+  // =========================================================================
+  if (sc === "S029") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>🚗</span> ĐẶT XE CÔNG NGHỆ
+          </div>
+          <div style={headingStyle}>LỊCH SỬ CHUYẾN ĐI ĐẶT XE Ô TÔ</div>
+          <div style={subheadStyle}>Mỗi tuần 4 cuốc xe ô tô, một tháng tiêu tốn thêm 1.2 triệu đồng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="35" width="450" height="160" rx="16" fill="rgba(30, 41, 59, 0.8)" stroke="#f59e0b" strokeWidth="2" />
+      <text x="140" y="80" fill="#cbd5e1" fontSize="18">Tần suất đặt xe ô tô:</text>
+      <text x="450" y="80" fill="#fde68a" fontSize="20" fontWeight="bold">4 Chuyến / tuần</text>
+      <text x="140" y="120" fill="#cbd5e1" fontSize="18">Giá cước trung bình:</text>
+      <text x="450" y="120" fill="#fde68a" fontSize="20" fontWeight="bold">75.000 đ / chuyến</text>
+      <line x1="140" y1="140" x2="510" y2="140" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="140" y="175" fill="#ffffff" fontSize="18">Tổng phát sinh mỗi tháng:</text>
+      <text x="430" y="175" fill="#ef4444" fontSize="22" fontWeight="900">1.200.000 đ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S030: CHI PHÍ PHƯƠNG TIỆN TĂNG GẤP 8 LẦN ---
+  // =========================================================================
+  if (sc === "S030") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>⚙️</span> HỆ SINH THÁI XE CỘ
+          </div>
+          <div style={headingStyle}>CHI PHÍ PHƯƠNG TIỆN TĂNG GẤP 8 LẦN</div>
+          <div style={subheadStyle}>Xăng xe, bảo dưỡng, gửi xe và trả góp vọt lên 4 triệu đồng mỗi tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="150" y={190 - animProgress * 30} width="120" height={animProgress * 30} rx="10" fill="#10b981" />
+      <text x="210" y="150" fill="#10b981" fontSize="18" fontWeight="bold" textAnchor="middle">500.000 đ</text>
+      <text x="210" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Xe máy cũ</text>
+      <rect x="380" y={190 - animProgress * 150} width="120" height={animProgress * 150} rx="10" fill="#ef4444" />
+      <text x="440" y={180 - animProgress * 150} fill="#ef4444" fontSize="22" fontWeight="900" textAnchor="middle">4.000.000 đ</text>
+      <text x="440" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Xe mới + Trả góp</text>
+      <text x="325" y="45" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">GẤP 8 LẦN CHI PHÍ CŨ!</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S032: MUA TÀI SẢN GIÁ CAO KÉO THEO CHI PHÍ VẬN HÀNH CAO ---
+  // =========================================================================
+  if (sc === "S032") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🕸️</span> BẪY BẢO TRÌ
+          </div>
+          <div style={headingStyle}>MUA TÀI SẢN GIÁ CAO KÉO THEO CHI PHÍ VẬN HÀNH CAO</div>
+          <div style={subheadStyle}>Bạn không chỉ mua đồ vật, bạn đang cam kết trả một chuỗi chi phí dài hạn</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="110" r="45" fill="#38bdf8" />
+      <text x="300" y="115" fill="#ffffff" fontSize="15" fontWeight="bold" textAnchor="middle">MUA ĐỒ</text>
+      {/* Surrounding circles */}
+      <circle cx="160" cy="70" r="32" fill="rgba(239, 68, 68, 0.3)" stroke="#ef4444" strokeWidth="2" />
+      <text x="160" y="75" fill="#fca5a5" fontSize="12" textAnchor="middle">Bảo dưỡng</text>
+      <circle cx="440" cy="70" r="32" fill="rgba(239, 68, 68, 0.3)" stroke="#ef4444" strokeWidth="2" />
+      <text x="440" y="75" fill="#fca5a5" fontSize="12" textAnchor="middle">Gửi xe đắt</text>
+      <circle cx="160" cy="160" r="32" fill="rgba(239, 68, 68, 0.3)" stroke="#ef4444" strokeWidth="2" />
+      <text x="160" y="165" fill="#fca5a5" fontSize="12" textAnchor="middle">Bảo hiểm</text>
+      <circle cx="440" cy="160" r="32" fill="rgba(239, 68, 68, 0.3)" stroke="#ef4444" strokeWidth="2" />
+      <text x="440" y="165" fill="#fca5a5" fontSize="12" textAnchor="middle">Phụ tùng</text>
+      <line x1="200" y1="80" x2="260" y2="100" stroke="#ef4444" strokeWidth="2" />
+      <line x1="400" y1="80" x2="340" y2="100" stroke="#ef4444" strokeWidth="2" />
+      <line x1="200" y1="150" x2="260" y2="120" stroke="#ef4444" strokeWidth="2" />
+      <line x1="400" y1="150" x2="340" y2="120" stroke="#ef4444" strokeWidth="2" />
+      <text x="300" y="225" fill="#cbd5e1" fontSize="15" textAnchor="middle">Chuỗi chi phí phái sinh bám theo tài sản</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S035: ẢO TƯỞNG TRẢ GÓP LÃI SUẤT 0% ---
+  // =========================================================================
+  if (sc === "S035") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>💳</span> TRẢ GÓP 0%
+          </div>
+          <div style={headingStyle}>ẢO TƯỞNG TRẢ GÓP LÃI SUẤT 0%</div>
+          <div style={subheadStyle}>35 triệu mua sắm chia 12 tháng lấy đi 3 triệu mỗi tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="30" width="490" height="170" rx="16" fill="rgba(30, 41, 59, 0.85)" stroke="#f59e0b" strokeWidth="2" />
+      <text x="120" y="75" fill="#cbd5e1" fontSize="18">Tổng giá trị đơn hàng công nghệ:</text>
+      <text x="480" y="75" fill="#ffffff" fontSize="22" fontWeight="bold">35.000.000 đ</text>
+      <text x="120" y="115" fill="#cbd5e1" fontSize="18">Chia đều cho 12 tháng:</text>
+      <text x="480" y="115" fill="#f59e0b" fontSize="22" fontWeight="bold">3.000.000 đ / tháng</text>
+      <text x="120" y="155" fill="#cbd5e1" fontSize="18">Ảo tưởng tâm lý:</text>
+      <text x="480" y="155" fill="#ef4444" fontSize="18" fontWeight="bold">Mỗi tháng chỉ có vài triệu!</text>
+      <text x="325" y="225" fill="#cbd5e1" fontSize="15" textAnchor="middle">Nuốt trọn 30% phần tiền lương tăng thêm suốt 1 năm</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S038: CHI PHÍ MUA SẮM NGẪU HỨNG ---
+  // =========================================================================
+  if (sc === "S038") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🛍️</span> MUA SẮM CÁ NHÂN
+          </div>
+          <div style={headingStyle}>CHI PHÍ MUA SẮM NGẪU HỨNG</div>
+          <div style={subheadStyle}>Đồ công nghệ và quần áo lấy đi thêm 3.5 triệu đồng mỗi tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="40" width="400" height="150" rx="16" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" strokeWidth="3" />
+      <text x="300" y="85" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">MUA SẮM ONLINE & ĐỒ CÔNG NGHỆ</text>
+      <text x="300" y="130" fill="#ef4444" fontSize="32" fontWeight="900" textAnchor="middle">+3.500.000 đ / THÁNG</text>
+      <text x="300" y="170" fill="#cbd5e1" fontSize="16" textAnchor="middle">Tương đương 42 triệu đồng mỗi năm tiêu biến</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S040: CHỈ SỐ THỎA MÃN CHỚP NHOÁNG VS NỢ DÀI HẠN ---
+  // =========================================================================
+  if (sc === "S040") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🧠</span> HƯNG PHẤN NGẮN HẠN
+          </div>
+          <div style={headingStyle}>CHỈ SỐ THỎA MÃN CHỚP NHOÁNG VS NỢ DÀI HẠN</div>
+          <div style={subheadStyle}>Niềm vui mở hộp đồ mới chỉ kéo dài vài ngày nhưng nợ thẻ kéo dài nhiều tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      {/* Joy curve - drops fast */}
+      <path d={`M 100 180 Q 180 50 300 180`} fill="none" stroke="#10b981" strokeWidth="5" />
+      <text x="200" y="50" fill="#10b981" fontSize="16" fontWeight="bold">Niềm vui: 3 ngày</text>
+      {/* Debt line - long flat */}
+      <line x1="100" y1="120" x2="550" y2="120" stroke="#ef4444" strokeWidth="5" strokeDasharray="6 6" />
+      <text x="450" y="105" fill="#ef4444" fontSize="18" fontWeight="bold">Nợ thẻ: 12 tháng!</text>
+      <text x="325" y="220" fill="#cbd5e1" fontSize="16" textAnchor="middle">Chúng ta chi tiền thật để mua những cảm xúc thoáng qua</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S043: HÓA ĐƠN TIỆC TÙNG VÀ NGOẠI GIAO ---
+  // =========================================================================
+  if (sc === "S043") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>🥂</span> TIỆC TÙNG XÃ GIAO
+          </div>
+          <div style={headingStyle}>HÓA ĐƠN TIỆC TÙNG VÀ NGOẠI GIAO</div>
+          <div style={subheadStyle}>Mỗi buổi gặp gỡ chia hóa đơn không dưới 500 nghìn đến 1 triệu đồng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="30" width="400" height="170" rx="16" fill="rgba(30, 41, 59, 0.85)" stroke="#f59e0b" strokeWidth="2" />
+      <text x="140" y="75" fill="#cbd5e1" fontSize="18">2 Buổi tiệc cuối tuần:</text>
+      <text x="420" y="75" fill="#f59e0b" fontSize="20" fontWeight="bold">2.000.000 đ</text>
+      <text x="140" y="115" fill="#cbd5e1" fontSize="18">Tiền phong bì cưới hỏi:</text>
+      <text x="420" y="115" fill="#f59e0b" fontSize="20" fontWeight="bold">1.500.000 đ</text>
+      <line x1="140" y1="135" x2="460" y2="135" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="140" y="175" fill="#ffffff" fontSize="18">Tổng chi phí xã giao:</text>
+      <text x="400" y="175" fill="#ef4444" fontSize="22" fontWeight="900">3.500.000 đ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S045: CHI PHÍ DUY TRÌ HÌNH ẢNH TĂNG GẤP 3.5 LẦN ---
+  // =========================================================================
+  if (sc === "S045") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🤝</span> CHI PHÍ HÌNH ẢNH
+          </div>
+          <div style={headingStyle}>CHI PHÍ DUY TRÌ HÌNH ẢNH TĂNG GẤP 3.5 LẦN</div>
+          <div style={subheadStyle}>Tăng từ 1 triệu lên 3.5 triệu mỗi tháng để giữ gìn quan hệ và vỏ bọc</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="150" y={190 - animProgress * 40} width="120" height={animProgress * 40} rx="10" fill="#10b981" />
+      <text x="210" y="140" fill="#10b981" fontSize="18" fontWeight="bold" textAnchor="middle">1.000.000 đ</text>
+      <text x="210" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Trước đây</text>
+      <rect x="380" y={190 - animProgress * 140} width="120" height={animProgress * 140} rx="10" fill="#ef4444" />
+      <text x="440" y={180 - animProgress * 140} fill="#ef4444" fontSize="22" fontWeight="900" textAnchor="middle">3.500.000 đ</text>
+      <text x="440" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Hiện tại</text>
+      <text x="325" y="45" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">THẤT THOÁT THÊM 2.5 TRIỆU / THÁNG</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S047: BẢNG CÂN ĐỐI 5 KHOẢN TỰ ĐỘNG NÂNG CẤP ---
+  // =========================================================================
+  if (sc === "S047") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>📊</span> TỔNG KẾT 5 HẠNG MỤC
+          </div>
+          <div style={headingStyle}>BẢNG CÂN ĐỐI 5 KHOẢN TỰ ĐỘNG NÂNG CẤP</div>
+          <div style={subheadStyle}>Nhà ở +6tr, Ăn uống +4tr, Xe +3.5tr, Mua sắm +3.5tr, Xã giao +2.5tr</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 700 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="50" y="20" width="600" height="200" rx="16" fill="rgba(30, 41, 59, 0.9)" stroke="#ef4444" strokeWidth="2" />
+      <text x="80" y="55" fill="#cbd5e1" fontSize="16">1. Nhà ở & Tiện ích: +6.000.000 đ</text>
+      <text x="80" y="85" fill="#cbd5e1" fontSize="16">2. Ăn uống & Cà phê: +4.000.000 đ</text>
+      <text x="80" y="115" fill="#cbd5e1" fontSize="16">3. Xe cộ & Di chuyển: +3.500.000 đ</text>
+      <text x="80" y="145" fill="#cbd5e1" fontSize="16">4. Mua sắm & Công nghệ: +3.500.000 đ</text>
+      <text x="80" y="175" fill="#cbd5e1" fontSize="16">5. Xã giao & Hình ảnh: +2.500.000 đ</text>
+      <line x1="420" y1="35" x2="420" y2="195" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="535" y="80" fill="#ffffff" fontSize="18" textAnchor="middle">LƯƠNG TĂNG:</text>
+      <text x="535" y="110" fill="#10b981" fontSize="22" fontWeight="bold" textAnchor="middle">+10 TRIỆU</text>
+      <text x="535" y="150" fill="#ffffff" fontSize="18" textAnchor="middle">CHI PHÍ TĂNG:</text>
+      <text x="535" y="180" fill="#ef4444" fontSize="24" fontWeight="900" textAnchor="middle">+19.5 TRIỆU!</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S048: THU NHẬP 20 TRIỆU — SỐ DƯ CUỐI THÁNG BẰNG 0 ---
+  // =========================================================================
+  if (sc === "S048") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🔴</span> SỰ THẬT TÀN NHẪN
+          </div>
+          <div style={headingStyle}>THU NHẬP 20 TRIỆU — SỐ DƯ CUỐI THÁNG BẰNG 0</div>
+          <div style={subheadStyle}>Lương tăng gấp đôi nhưng ví tiền vẫn rỗng không vào cuối tháng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="490" height="150" rx="20" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" strokeWidth="4" />
+      <text x="325" y="90" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">THU NHẬP: 20 TRIỆU = TỔNG CHI: 20 TRIỆU</text>
+      <text x="325" y="150" fill="#ef4444" fontSize="48" fontWeight="900" textAnchor="middle">SỐ DƯ: 0 ĐỒNG</text>
+      <text x="325" y="220" fill="#cbd5e1" fontSize="16" textAnchor="middle">Vòng lặp bất an tài chính vẫn lặp lại y hệt</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S050: CỖ MÁY THÍCH NGHI KHOÁI LẠC ---
+  // =========================================================================
+  if (sc === "S050") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #818cf8", boxShadow: "0 0 45px #818cf833" }}>
+          <div style={tagStyle("#818cf8", "#c7d2fe")}>
+            <span>🎡</span> BẪY TÂM LÝ SỐ 1
+          </div>
+          <div style={headingStyle}>CỖ MÁY THÍCH NGHI KHOÁI LẠC</div>
+          <div style={subheadStyle}>Não bộ thích nghi cực nhanh với mọi sự sung túc và tiện nghi mới</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="325" cy="110" r="70" fill="none" stroke="#818cf8" strokeWidth="6" strokeDasharray="12 12" />
+      <circle cx="325" cy="110" r="45" fill="rgba(129, 140, 248, 0.2)" />
+      <text x="325" y="115" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">MÁY CHẠY BỘ</text>
+      <text x="325" y="215" fill="#c7d2fe" fontSize="16" textAnchor="middle">Chân chạy càng nhanh nhưng vị trí vẫn dậm chân tại chỗ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S051: HẠNH PHÚC TĂNG VỌT RỒI TỤT DỐC SAU 30 NGÀY ---
+  // =========================================================================
+  if (sc === "S051") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>📉</span> SÓNG CẢM XÚC
+          </div>
+          <div style={headingStyle}>HẠNH PHÚC TĂNG VỌT RỒI TỤT DỐC SAU 30 NGÀY</div>
+          <div style={subheadStyle}>Chỉ sau một tháng, căn hộ mới trở thành tiêu chuẩn bình thường mới</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <line x1="80" y1="180" x2="580" y2="180" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <line x1="80" y1="40" x2="80" y2="180" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      {/* Curve peaking then falling to baseline */}
+      <path d={`M 80 180 Q 200 30 350 175 T 580 180`} fill="none" stroke="#f59e0b" strokeWidth="6" strokeLinecap="round" />
+      <circle cx="210" cy="50" r="8" fill="#10b981" />
+      <text x="210" y="35" fill="#10b981" fontSize="16" fontWeight="bold" textAnchor="middle">Hưng phấn: Tuần 1</text>
+      <circle cx="450" cy="178" r="8" fill="#ef4444" />
+      <text x="450" y="160" fill="#ef4444" fontSize="16" fontWeight="bold" textAnchor="middle">Bình thường mới: Ngày 30</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S054: TIÊU CHUẨN SỐNG TĂNG LÊN VĨNH VIỄN ---
+  // =========================================================================
+  if (sc === "S054") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🪜</span> BẬC THANG THÍCH NGHI
+          </div>
+          <div style={headingStyle}>TIÊU CHUẨN SỐNG TĂNG LÊN VĨNH VIỄN</div>
+          <div style={subheadStyle}>Sự thỏa mãn biến mất nhưng bạn không thể quay về phòng trọ cũ được nữa</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <path d="M 120 190 L 260 190 L 260 130 L 400 130 L 400 70 L 540 70" fill="none" stroke="#ef4444" strokeWidth="6" />
+      <text x="190" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Trọ 2.5tr</text>
+      <text x="330" y="155" fill="#cbd5e1" fontSize="15" textAnchor="middle">Chung cư 6tr</text>
+      <text x="470" y="95" fill="#fca5a5" fontSize="15" textAnchor="middle">Cao cấp 10tr?</text>
+      <text x="325" y="35" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">VAN MỘT CHIỀU: DỄ LÊN, KHÔNG THỂ XUỐNG</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S056: CHU KỲ BẪY THU NHẬP VÀ CHI TIÊU ---
+  // =========================================================================
+  if (sc === "S056") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>🔄</span> VÒNG LẶP LUẨN QUẨN
+          </div>
+          <div style={headingStyle}>CHU KỲ BẪY THU NHẬP VÀ CHI TIÊU</div>
+          <div style={subheadStyle}>Kiếm nhiều hơn → Tiêu nhiều hơn → Cần cày cuốc nhiều hơn để nuôi mức sống</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="80" width="140" height="60" rx="12" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="2" />
+      <text x="150" y="115" fill="#10b981" fontSize="15" fontWeight="bold" textAnchor="middle">Kiếm nhiều tiền</text>
+      <path d="M 230 110 L 270 110" stroke="#ffffff" strokeWidth="3" markerEnd="url(#arrow)" />
+      <rect x="280" y="80" width="140" height="60" rx="12" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" strokeWidth="2" />
+      <text x="350" y="115" fill="#ef4444" fontSize="15" fontWeight="bold" textAnchor="middle">Tiêu nhiều hơn</text>
+      <path d="M 430 110 L 470 110" stroke="#ffffff" strokeWidth="3" />
+      <rect x="480" y="80" width="140" height="60" rx="12" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" strokeWidth="2" />
+      <text x="550" y="115" fill="#fde68a" fontSize="15" fontWeight="bold" textAnchor="middle">Áp lực cày cuốc</text>
+      <path d="M 550 150 Q 350 210 150 150" fill="none" stroke="#f59e0b" strokeWidth="3" strokeDasharray="6 6" />
+      <text x="350" y="225" fill="#cbd5e1" fontSize="14" textAnchor="middle">Bị mắc kẹt trong vòng xoáy chuột chạy</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S058: CHI PHÍ VĨNH VIỄN — NIỀM VUI TẠM THỜI ---
+  // =========================================================================
+  if (sc === "S058") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>📉</span> TÍNH BẤT ĐỐI XỨNG
+          </div>
+          <div style={headingStyle}>CHI PHÍ VĨNH VIỄN — NIỀM VUI TẠM THỜI</div>
+          <div style={subheadStyle}>Chúng ta liên tục chi tiêu thật cho những cảm giác thỏa mãn ngắn hạn</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="120" y="40" width="410" height="70" rx="14" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" strokeWidth="2" />
+      <text x="325" y="70" fill="#ffffff" fontSize="16">Cam kết chi phí cố định:</text>
+      <text x="325" y="95" fill="#ef4444" fontSize="20" fontWeight="bold">DÀI HẠN & VĨNH VIỄN</text>
+      <rect x="120" y="130" width="410" height="70" rx="14" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="2" />
+      <text x="325" y="160" fill="#ffffff" fontSize="16">Cảm giác hưng phấn hạnh phúc:</text>
+      <text x="325" y="185" fill="#10b981" fontSize="20" fontWeight="bold">CHỈ VÀI NGÀY ĐẦU</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S060: NÂNG MỨC SỐNG MẤT 1 NGÀY — HẠ XUỐNG MẤT CẢ NĂM ---
+  // =========================================================================
+  if (sc === "S060") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🚪</span> QUY LUẬT VAN MỘT CHIỀU
+          </div>
+          <div style={headingStyle}>NÂNG MỨC SỐNG MẤT 1 NGÀY — HẠ XUỐNG MẤT CẢ NĂM</div>
+          <div style={subheadStyle}>Những thói quen xa xỉ rất dễ hình thành nhưng cực kỳ khó từ bỏ</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="100" r="50" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" strokeWidth="4" />
+      <text x="300" y="110" fill="#ef4444" fontSize="36" textAnchor="middle">🔒</text>
+      <text x="300" y="175" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">VAN MỘT CHIỀU CỦA NÃO BỘ</text>
+      <text x="300" y="210" fill="#cbd5e1" fontSize="16" textAnchor="middle">Đòi hỏi ý chí phi thường mới có thể thắt lưng buộc bụng</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S062: LÀM CHỦ CỖ MÁY THÍCH NGHI ĐỂ TỰ DO TÀI CHÍNH ---
+  // =========================================================================
+  if (sc === "S062") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🔑</span> THÔNG ĐIỆP CỐT LÕI
+          </div>
+          <div style={headingStyle}>LÀM CHỦ CỖ MÁY THÍCH NGHI ĐỂ TỰ DO TÀI CHÍNH</div>
+          <div style={subheadStyle}>Nhận diện được cái bẫy này là bước ngoặt đầu tiên để giữ lại tiền</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="300" y="90" fill="#10b981" fontSize="36" textAnchor="middle">🗝️</text>
+      <text x="300" y="135" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">TỈNH THỨC TRƯỚC SỰ TIỆN NGHI</text>
+      <text x="300" y="170" fill="#a7f3d0" fontSize="16" textAnchor="middle">Không để mức sống vượt qua năng lực tích sản</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S064: HIỆU ỨNG ĐI-ĐƠ-RÔ — PHẢN ỨNG MUA SẮM DÂY CHUYỀN ---
+  // =========================================================================
+  if (sc === "S064") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>🧥</span> BẪY TÂM LÝ SỐ 2
+          </div>
+          <div style={headingStyle}>HIỆU ỨNG ĐI-ĐƠ-RÔ — PHẢN ỨNG MUA SẮM DÂY CHUYỀN</div>
+          <div style={subheadStyle}>Một món đồ nhỏ nâng cấp kích hoạt cả một chuỗi chi tiêu thảm họa</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="160" cy="110" r="50" fill="rgba(239, 68, 68, 0.3)" stroke="#ef4444" strokeWidth="3" />
+      <text x="160" y="105" fill="#ffffff" fontSize="24" textAnchor="middle">🧥</text>
+      <text x="160" y="130" fill="#fca5a5" fontSize="13" textAnchor="middle">Áo choàng đỏ</text>
+      <path d="M 220 110 L 270 110" stroke="#f59e0b" strokeWidth="4" />
+      <circle cx="325" cy="110" r="45" fill="rgba(245, 158, 11, 0.3)" stroke="#f59e0b" strokeWidth="3" />
+      <text x="325" y="105" fill="#ffffff" fontSize="24" textAnchor="middle">🪑</text>
+      <text x="325" y="130" fill="#fde68a" fontSize="13" textAnchor="middle">Bàn ghế mới</text>
+      <path d="M 380 110 L 430 110" stroke="#f59e0b" strokeWidth="4" />
+      <circle cx="490" cy="110" r="45" fill="rgba(239, 68, 68, 0.3)" stroke="#ef4444" strokeWidth="3" />
+      <text x="490" y="105" fill="#ffffff" fontSize="24" textAnchor="middle">🏺</text>
+      <text x="490" y="130" fill="#fca5a5" fontSize="13" textAnchor="middle">Thảm & Tượng</text>
+      <text x="325" y="210" fill="#cbd5e1" fontSize="15" textAnchor="middle">Món đồ đầu tiên kéo theo toàn bộ tài sản bốc hơi</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S067: SƠ ĐỒ DOMINO CHI TIÊU KHÔNG ĐÁY ---
+  // =========================================================================
+  if (sc === "S067") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>💥</span> CHUỖI PHẢN ỨNG
+          </div>
+          <div style={headingStyle}>SƠ ĐỒ DOMINO CHI TIÊU KHÔNG ĐÁY</div>
+          <div style={subheadStyle}>Để xứng với chiếc áo, triết gia mua bàn mới, thảm mới và tượng đồng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="60" width="100" height="100" rx="12" fill="#ef4444" />
+      <text x="130" y="105" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">ÁO</text>
+      <text x="130" y="135" fill="#ffffff" fontSize="12" textAnchor="middle">Choàng</text>
+      <text x="205" y="115" fill="#ffffff" fontSize="24">➔</text>
+      <rect x="230" y="60" width="100" height="100" rx="12" fill="#f59e0b" />
+      <text x="280" y="105" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">BÀN</text>
+      <text x="280" y="135" fill="#ffffff" fontSize="12" textAnchor="middle">Gỗ mới</text>
+      <text x="355" y="115" fill="#ffffff" fontSize="24">➔</text>
+      <rect x="380" y="60" width="100" height="100" rx="12" fill="#38bdf8" />
+      <text x="430" y="105" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">THẢM</text>
+      <text x="430" y="135" fill="#ffffff" fontSize="12" textAnchor="middle">Lụa quý</text>
+      <text x="505" y="115" fill="#ffffff" fontSize="24">➔</text>
+      <rect x="530" y="60" width="90" height="100" rx="12" fill="#ef4444" />
+      <text x="575" y="105" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">NỢ</text>
+      <text x="575" y="135" fill="#ffffff" fontSize="12" textAnchor="middle">Cạn tiền</text>
+      <text x="325" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Sự thỏa hiệp ban đầu dẫn tới khủng hoảng tài chính</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S069: NÂNG CẤP ĐỒNG BỘ HỆ SINH THÁI ---
+  // =========================================================================
+  if (sc === "S069") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>📱</span> HIỆN THỰC HIỆN ĐẠI
+          </div>
+          <div style={headingStyle}>NÂNG CẤP ĐỒNG BỘ HỆ SINH THÁI</div>
+          <div style={subheadStyle}>Mua điện thoại mới kéo theo mua ốp lưng, tai nghe và củ sạc đắt tiền</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="490" height="150" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="#38bdf8" strokeWidth="2" />
+      <text x="325" y="80" fill="#38bdf8" fontSize="22" fontWeight="bold" textAnchor="middle">ĐIỆN THOẠI 30 TRIỆU ĐỒNG</text>
+      <text x="325" y="120" fill="#cbd5e1" fontSize="16" textAnchor="middle">Kéo theo: Ốp lưng 500k + Sạc 1tr + Tai nghe 3tr</text>
+      <text x="325" y="160" fill="#ef4444" fontSize="20" fontWeight="bold" textAnchor="middle">+4.500.000 đ CHI PHÍ BẮT BUỘC ĐỒNG BỘ</text>
+      <text x="325" y="225" fill="#cbd5e1" fontSize="15" textAnchor="middle">Hiệu ứng Đi-đơ-rô diễn ra hàng ngày trong vô thức</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S071: BẢNG KÊ CÁC KHOẢN TIỀN KÉO THEO ---
+  // =========================================================================
+  if (sc === "S071") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>📋</span> DANH SÁCH CHI PHÍ PHÁI SINH
+          </div>
+          <div style={headingStyle}>BẢNG KÊ CÁC KHOẢN TIỀN KÉO THEO</div>
+          <div style={subheadStyle}>Ốp lưng 500k, sạc nhanh 1tr, tai nghe 3tr và gói bảo hiểm rơi vỡ</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="60" y="20" width="480" height="180" rx="16" fill="rgba(30, 41, 59, 0.9)" stroke="#ef4444" strokeWidth="2" />
+      <text x="90" y="60" fill="#cbd5e1" fontSize="16">1. Ốp lưng chính hãng:</text>
+      <text x="440" y="60" fill="#ffffff" fontSize="18" fontWeight="bold">500.000 đ</text>
+      <text x="90" y="95" fill="#cbd5e1" fontSize="16">2. Củ sạc nhanh công suất lớn:</text>
+      <text x="440" y="95" fill="#ffffff" fontSize="18" fontWeight="bold">1.000.000 đ</text>
+      <text x="90" y="130" fill="#cbd5e1" fontSize="16">3. Tai nghe không dây cao cấp:</text>
+      <text x="440" y="130" fill="#ffffff" fontSize="18" fontWeight="bold">3.000.000 đ</text>
+      <text x="90" y="165" fill="#cbd5e1" fontSize="16">4. Gói bảo hiểm rơi vỡ màn hình:</text>
+      <text x="440" y="165" fill="#ef4444" fontSize="18" fontWeight="bold">2.500.000 đ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S073: MÓN ĐỒ 20TR KÉO THEO 15TR CHI PHÍ PHÁI SINH ---
+  // =========================================================================
+  if (sc === "S073") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🧨</span> NGÒI NỔ TÀI CHÍNH
+          </div>
+          <div style={headingStyle}>MÓN ĐỒ 20TR KÉO THEO 15TR CHI PHÍ PHÁI SINH</div>
+          <div style={subheadStyle}>Món đồ ban đầu chỉ là ngòi nổ, chuỗi chi tiêu phía sau mới tàn phá túi tiền</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="120" y={190 - animProgress * 80} width="160" height={animProgress * 80} rx="12" fill="#38bdf8" />
+      <text x="200" y="95" fill="#38bdf8" fontSize="20" fontWeight="bold" textAnchor="middle">20 TRIỆU</text>
+      <text x="200" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Món đồ ban đầu</text>
+      <rect x="370" y={190 - animProgress * 140} width="160" height={animProgress * 140} rx="12" fill="#ef4444" />
+      <text x="450" y={180 - animProgress * 140} fill="#ef4444" fontSize="22" fontWeight="900" textAnchor="middle">+15 TRIỆU</text>
+      <text x="450" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Chuỗi chi tiêu phái sinh</text>
+      <text x="325" y="40" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">TỔNG THIỆT HẠI: 35 TRIỆU ĐỒNG!</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S075: DẬP TẮT CHUỖI MUA SẮM TỪ MẮT XÍCH ĐẦU TIÊN ---
+  // =========================================================================
+  if (sc === "S075") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🛡️</span> DẬP TẮT NGÒI NỔ
+          </div>
+          <div style={headingStyle}>DẬP TẮT CHUỖI MUA SẮM TỪ MẮT XÍCH ĐẦU TIÊN</div>
+          <div style={subheadStyle}>Muốn giữ được tiền, phải chặn đứng ý muốn mua sắm ngay từ món đồ đầu tiên</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="100" r="50" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="4" />
+      <text x="300" y="110" fill="#10b981" fontSize="40" textAnchor="middle">🛑</text>
+      <text x="300" y="175" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">CHẶN NGAY TỪ ĐẦU</text>
+      <text x="300" y="210" fill="#a7f3d0" fontSize="16" textAnchor="middle">Không bắt đầu mắt xích thứ nhất = Bảo vệ an toàn 35 triệu</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S078: THIÊN KIẾN HIỆN TẠI VÀ ẢO TƯỞNG THÁNG SAU TIẾT KIỆM ---
+  // =========================================================================
+  if (sc === "S078") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>⏳</span> BẪY TÂM LÝ SỐ 3
+          </div>
+          <div style={headingStyle}>THIÊN KIẾN HIỆN TẠI VÀ ẢO TƯỞNG THÁNG SAU TIẾT KIỆM</div>
+          <div style={subheadStyle}>Bộ não luôn đánh giá phần thưởng hôm nay cao hơn nhiều so với tương lai</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="120" y="50" width="180" height="120" rx="16" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="3" />
+      <text x="210" y="95" fill="#10b981" fontSize="24" fontWeight="bold" textAnchor="middle">HIỆN TẠI</text>
+      <text x="210" y="135" fill="#ffffff" fontSize="16" textAnchor="middle">Sự thỏa mãn ngay</text>
+      <text x="325" y="115" fill="#ffffff" fontSize="28" fontWeight="bold" textAnchor="middle">&gt;&gt;&gt;</text>
+      <rect x="350" y="50" width="180" height="120" rx="16" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="440" y="95" fill="#94a3b8" fontSize="24" fontWeight="bold" textAnchor="middle">TƯƠNG LAI</text>
+      <text x="440" y="135" fill="#64748b" fontSize="16" textAnchor="middle">Coi như người xa lạ</text>
+      <text x="325" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Cơ chế tiến hóa thúc đẩy tiêu xài ngay lập tức</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S080: BẢN THÂN TRONG TƯƠNG LAI BỊ XEM NHƯ NGƯỜI LẠ ---
+  // =========================================================================
+  if (sc === "S080") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #818cf8", boxShadow: "0 0 45px #818cf833" }}>
+          <div style={tagStyle("#818cf8", "#c7d2fe")}>
+            <span>👤</span> THẦN KINH HỌC
+          </div>
+          <div style={headingStyle}>BẢN THÂN TRONG TƯƠNG LAI BỊ XEM NHƯ NGƯỜI LẠ</div>
+          <div style={subheadStyle}>Khi nghĩ về mình sau 10 năm, não bộ xử lý thông tin hệt như nghĩ về người dưng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="200" cy="100" r="45" fill="rgba(16, 185, 129, 0.3)" stroke="#10b981" strokeWidth="3" />
+      <text x="200" y="105" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">Tôi hôm nay</text>
+      <circle cx="400" cy="100" r="45" fill="rgba(100, 116, 139, 0.3)" stroke="#64748b" strokeWidth="3" strokeDasharray="6 6" />
+      <text x="400" y="105" fill="#cbd5e1" fontSize="15" textAnchor="middle">Tôi 10 năm sau</text>
+      <text x="300" y="105" fill="#ef4444" fontSize="28" textAnchor="middle">≠</text>
+      <text x="300" y="180" fill="#ef4444" fontSize="18" fontWeight="bold" textAnchor="middle">SẴN SÀNG TRỪNG PHẠT BẢN THÂN TƯƠNG LAI</text>
+      <text x="300" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Để thỏa mãn cảm giác sung sướng chốc lát ở hiện tại</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S082: THÁNG SAU TIẾT KIỆM LÀ LỜI HỨA SUÔNG NGUY HIỂM ---
+  // =========================================================================
+  if (sc === "S082") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>⚠️</span> LỜI NÓI DỐI TAI HẠI
+          </div>
+          <div style={headingStyle}>THÁNG SAU TIẾT KIỆM LÀ LỜI HỨA SUÔNG NGUY HIỂM</div>
+          <div style={subheadStyle}>Nếu hôm nay có thêm tiền không giữ được, tháng sau chắc chắn cũng không</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="490" height="140" rx="16" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" strokeWidth="3" />
+      <text x="325" y="85" fill="#fca5a5" fontSize="22" fontWeight="bold" textAnchor="middle">"THÁNG SAU MÌNH SẼ BẮT ĐẦU TIẾT KIỆM"</text>
+      <text x="325" y="125" fill="#ffffff" fontSize="18" textAnchor="middle">Khi tháng sau đến, nó lại biến thành hiện tại</text>
+      <text x="325" y="160" fill="#ef4444" fontSize="20" fontWeight="900" textAnchor="middle">VÀ BẠN SẼ TIẾP TỤC TIÊU SẠCH SỐ TIỀN ĐÓ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S084: LOẠI BỎ Ý CHÍ KHỎI QUY TRÌNH GIỮ TIỀN ---
+  // =========================================================================
+  if (sc === "S084") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>⚙️</span> NGUYÊN TẮC THÉP
+          </div>
+          <div style={headingStyle}>LOẠI BỎ Ý CHÍ KHỎI QUY TRÌNH GIỮ TIỀN</div>
+          <div style={subheadStyle}>Cách duy nhất để thắng thiên kiến là tự động hóa trích tiền ngay khi lương về</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="40" width="400" height="150" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="300" y="85" fill="#10b981" fontSize="36" textAnchor="middle">🤖</text>
+      <text x="300" y="130" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">TỰ ĐỘNG HÓA 100%</text>
+      <text x="300" y="165" fill="#a7f3d0" fontSize="16" textAnchor="middle">Không dựa vào sự kiên nhẫn hay ý chí cảm tính</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S086: HAI KỊCH BẢN ĐỐI LẬP CHO 10 TRIỆU LƯƠNG TĂNG ---
+  // =========================================================================
+  if (sc === "S086") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>⚖️</span> BÀI TOÁN CHI PHÍ CƠ HỘI
+          </div>
+          <div style={headingStyle}>HAI KỊCH BẢN ĐỐI LẬP CHO 10 TRIỆU LƯƠNG TĂNG</div>
+          <div style={subheadStyle}>Kịch bản A tiêu hết vào mức sống vs Kịch bản B tích sản 50%</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="50" y="40" width="250" height="150" rx="16" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" strokeWidth="2" />
+      <text x="175" y="80" fill="#ef4444" fontSize="20" fontWeight="bold" textAnchor="middle">KỊCH BẢN A</text>
+      <text x="175" y="120" fill="#ffffff" fontSize="16" textAnchor="middle">Tiêu hết 10 triệu</text>
+      <text x="175" y="155" fill="#fca5a5" fontSize="18" fontWeight="bold" textAnchor="middle">Tích sản: 0 ĐỒNG</text>
+      <rect x="350" y="40" width="250" height="150" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="2" />
+      <text x="475" y="80" fill="#10b981" fontSize="20" fontWeight="bold" textAnchor="middle">KỊCH BẢN B</text>
+      <text x="475" y="120" fill="#ffffff" fontSize="16" textAnchor="middle">Trích 50% tích sản</text>
+      <text x="475" y="155" fill="#10b981" fontSize="18" fontWeight="bold" textAnchor="middle">Tích sản: 5 TR/THÁNG</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S087: 5 TRIỆU/THÁNG — LỢI NHUẬN KỲ VỌNG 10%/NĂM ---
+  // =========================================================================
+  if (sc === "S087") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>📈</span> SỨC MẠNH LÃI KÉP
+          </div>
+          <div style={headingStyle}>5 TRIỆU/THÁNG — LỢI NHUẬN KỲ VỌNG 10%/NĂM</div>
+          <div style={subheadStyle}>Đều đặn tích sản vào chứng chỉ quỹ tăng trưởng dài hạn</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="2" />
+      <text x="300" y="80" fill="#ffffff" fontSize="20" textAnchor="middle">Vốn tích lũy: 5.000.000 đ / tháng</text>
+      <text x="300" y="120" fill="#10b981" fontSize="28" fontWeight="bold" textAnchor="middle">LÃI SUẤT 10% / NĂM</text>
+      <text x="300" y="160" fill="#a7f3d0" fontSize="18" textAnchor="middle">Kỳ quan thứ tám của thế giới tài chính</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S088: SAU 1 NĂM: KỊCH BẢN B ĐẠT 63 TRIỆU ĐỒNG ---
+  // =========================================================================
+  if (sc === "S088") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>1️⃣</span> CỘT MỐC 1 NĂM
+          </div>
+          <div style={headingStyle}>SAU 1 NĂM: KỊCH BẢN B ĐẠT 63 TRIỆU ĐỒNG</div>
+          <div style={subheadStyle}>Kịch bản A có 0 đồng; Kịch bản B có quỹ an toàn 63 triệu tiền mặt</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="150" y={190 - animProgress * 10} width="120" height={animProgress * 10} rx="10" fill="#ef4444" />
+      <text x="210" y="170" fill="#ef4444" fontSize="18" fontWeight="bold" textAnchor="middle">0 ĐỒNG</text>
+      <text x="210" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Kịch bản A</text>
+      <rect x="380" y={190 - animProgress * 110} width="120" height={animProgress * 110} rx="10" fill="#10b981" />
+      <text x="440" y={180 - animProgress * 110} fill="#10b981" fontSize="22" fontWeight="bold" textAnchor="middle">63 TRIỆU</text>
+      <text x="440" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Kịch bản B</text>
+      <text x="325" y="45" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">Đủ chi phí sinh hoạt 6 tháng nếu có biến cố!</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S090: SAU 3 NĂM: KỊCH BẢN B TÍCH LŨY 215 TRIỆU ĐỒNG ---
+  // =========================================================================
+  if (sc === "S090") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>3️⃣</span> CỘT MỐC 3 NĂM
+          </div>
+          <div style={headingStyle}>SAU 3 NĂM: KỊCH BẢN B TÍCH LŨY 215 TRIỆU ĐỒNG</div>
+          <div style={subheadStyle}>Kịch bản A vẫn chật vật; Kịch bản B sở hữu khối tài sản vững chãi</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="150" y={190 - animProgress * 10} width="120" height={animProgress * 10} rx="10" fill="#ef4444" />
+      <text x="210" y="170" fill="#ef4444" fontSize="18" fontWeight="bold" textAnchor="middle">0 ĐỒNG</text>
+      <text x="210" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Kịch bản A</text>
+      <rect x="380" y={190 - animProgress * 140} width="120" height={animProgress * 140} rx="10" fill="#10b981" />
+      <text x="440" y={180 - animProgress * 140} fill="#10b981" fontSize="24" fontWeight="bold" textAnchor="middle">215 TRIỆU</text>
+      <text x="440" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Kịch bản B</text>
+      <text x="325" y="35" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">LÃI KÉP BẮT ĐẦU PHÁT HUY SỨC MẠNH</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S091: SAU 5 NĂM: KỊCH BẢN B CÁN MỐC 410 TRIỆU ĐỒNG ---
+  // =========================================================================
+  if (sc === "S091") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>5️⃣</span> CỘT MỐC 5 NĂM
+          </div>
+          <div style={headingStyle}>SAU 5 NĂM: KỊCH BẢN B CÁN MỐC 410 TRIỆU ĐỒNG</div>
+          <div style={subheadStyle}>Tương đương gần nửa tỷ đồng tích lũy tự do tài chính</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="150" y={190 - animProgress * 10} width="120" height={animProgress * 10} rx="10" fill="#ef4444" />
+      <text x="210" y="170" fill="#ef4444" fontSize="18" fontWeight="bold" textAnchor="middle">0 ĐỒNG</text>
+      <text x="210" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Kịch bản A</text>
+      <rect x="380" y={190 - animProgress * 160} width="120" height={animProgress * 160} rx="10" fill="#10b981" />
+      <text x="440" y={180 - animProgress * 160} fill="#10b981" fontSize="26" fontWeight="900" textAnchor="middle">410 TRIỆU</text>
+      <text x="440" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Kịch bản B</text>
+      <text x="325" y="30" fill="#10b981" fontSize="20" fontWeight="bold" textAnchor="middle">GẦN NỬA TỶ ĐỒNG TÀI SẢN RÒNG!</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S093: SAU 10 NĂM: KỊCH BẢN B CHÍNH THỨC VƯỢT 1.1 TỶ ĐỒNG ---
+  // =========================================================================
+  if (sc === "S093") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🔟</span> CỘT MỐC 10 NĂM
+          </div>
+          <div style={headingStyle}>SAU 10 NĂM: KỊCH BẢN B CHÍNH THỨC VƯỢT 1.1 TỶ ĐỒNG</div>
+          <div style={subheadStyle}>Sức mạnh lãi kép nhân số vốn 5 triệu/tháng thành một gia tài</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="40" width="450" height="150" rx="20" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="4" />
+      <text x="325" y="85" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">KẾT QUẢ SAU 10 NĂM KIÊN TRÌ</text>
+      <text x="325" y="140" fill="#10b981" fontSize="44" fontWeight="900" textAnchor="middle">1.100.000.000 đ</text>
+      <text x="325" y="175" fill="#a7f3d0" fontSize="16" textAnchor="middle">Chỉ từ 5 triệu đồng tiền lương tăng thêm mỗi tháng</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S094: KHOẢNG CÁCH KHỔNG LỒ GIỮA 0 ĐỒNG VÀ 1.1 TỶ ---
+  // =========================================================================
+  if (sc === "S094") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>📊</span> ĐỒ THỊ PHÂN KỲ
+          </div>
+          <div style={headingStyle}>KHOẢNG CÁCH KHỔNG LỒ GIỮA 0 ĐỒNG VÀ 1.1 TỶ</div>
+          <div style={subheadStyle}>Cái giá của việc nâng cấp lối sống bừa bãi là cả một gia tài</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <path d={`M 100 180 Q 300 160 550 50`} fill="none" stroke="#10b981" strokeWidth="6" />
+      <text x="560" y="55" fill="#10b981" fontSize="18" fontWeight="bold">1.1 TỶ</text>
+      <line x1="100" y1="180" x2="550" y2="180" stroke="#ef4444" strokeWidth="4" strokeDasharray="6 6" />
+      <text x="560" y="185" fill="#ef4444" fontSize="18" fontWeight="bold">0 ĐỒNG</text>
+      <text x="325" y="225" fill="#cbd5e1" fontSize="15" textAnchor="middle">Cùng xuất phát điểm tăng lương, hai kết quả hoàn toàn trái ngược</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S096: TĂNG LƯƠNG KHÔNG LÀM BẠN GIÀU ---
+  // =========================================================================
+  if (sc === "S096") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🏆</span> KẾT LUẬN ĐANH THÉP
+          </div>
+          <div style={headingStyle}>TĂNG LƯƠNG KHÔNG LÀM BẠN GIÀU</div>
+          <div style={subheadStyle}>Giữ lại được bao nhiêu tiền từ khoản tăng đó mới quyết định tương lai</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="490" height="150" rx="18" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="325" y="85" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">NĂNG LỰC TÀI CHÍNH THỰC SỰ</text>
+      <text x="325" y="130" fill="#10b981" fontSize="28" fontWeight="900" textAnchor="middle">KHẢ NĂNG KIỂM SOÁT PHẦN TIỀN TĂNG THÊM</text>
+      <text x="325" y="170" fill="#a7f3d0" fontSize="16" textAnchor="middle">Đó là sự khác biệt duy nhất giữa giàu lên và nghèo đi</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S100: BẢNG SO SÁNH VẺ BỀ NGOÀI SAU 3 NĂM ---
+  // =========================================================================
+  if (sc === "S100") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>👥</span> GÓC NHÌN BÊN NGOÀI
+          </div>
+          <div style={headingStyle}>BẢNG SO SÁNH VẺ BỀ NGOÀI SAU 3 NĂM</div>
+          <div style={subheadStyle}>Người A trông như doanh nhân thành đạt; Người B trông như nhân viên bình thường</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="50" y="40" width="250" height="150" rx="16" fill="rgba(30, 41, 59, 0.85)" stroke="#38bdf8" strokeWidth="2" />
+      <text x="175" y="80" fill="#38bdf8" fontSize="20" fontWeight="bold" textAnchor="middle">NGƯỜI A</text>
+      <text x="175" y="115" fill="#ffffff" fontSize="15" textAnchor="middle">Chung cư cao cấp, xe ga</text>
+      <text x="175" y="145" fill="#cbd5e1" fontSize="14" textAnchor="middle">Đồ hiệu, ăn nhà hàng sang</text>
+      <text x="175" y="175" fill="#38bdf8" fontSize="15" fontWeight="bold" textAnchor="middle">Vẻ ngoài thành đạt</text>
+      <rect x="350" y="40" width="250" height="150" rx="16" fill="rgba(30, 41, 59, 0.85)" stroke="#10b981" strokeWidth="2" />
+      <text x="475" y="80" fill="#10b981" fontSize="20" fontWeight="bold" textAnchor="middle">NGƯỜI B</text>
+      <text x="475" y="115" fill="#ffffff" fontSize="15" textAnchor="middle">Phòng trọ cũ, xe máy số</text>
+      <text x="475" y="145" fill="#cbd5e1" fontSize="14" textAnchor="middle">Sơ mi giản dị, cơm nhà</text>
+      <text x="475" y="175" fill="#10b981" fontSize="15" fontWeight="bold" textAnchor="middle">Vẻ ngoài bình dị</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S102: BẢNG SỐ DƯ THỰC TẾ CỦA NGƯỜI A ---
+  // =========================================================================
+  if (sc === "S102") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>📋</span> SỰ THẬT TÀI CHÍNH
+          </div>
+          <div style={headingStyle}>BẢNG SỐ DƯ THỰC TẾ CỦA NGƯỜI A</div>
+          <div style={subheadStyle}>Tài khoản còn 6 triệu, nợ thẻ 20 triệu, chậm lương 10 ngày là khủng hoảng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="30" width="490" height="175" rx="16" fill="rgba(30, 41, 59, 0.9)" stroke="#ef4444" strokeWidth="3" />
+      <text x="120" y="70" fill="#cbd5e1" fontSize="18">Số dư khả dụng tài khoản:</text>
+      <text x="480" y="70" fill="#ffffff" fontSize="20" fontWeight="bold">6.000.000 đ</text>
+      <text x="120" y="110" fill="#cbd5e1" fontSize="18">Dư nợ thẻ tín dụng đến hạn:</text>
+      <text x="480" y="110" fill="#ef4444" fontSize="22" fontWeight="bold">-20.000.000 đ</text>
+      <text x="120" y="150" fill="#cbd5e1" fontSize="18">Chi phí sinh hoạt cố định:</text>
+      <text x="480" y="150" fill="#f59e0b" fontSize="20" fontWeight="bold">19.000.000 đ / tháng</text>
+      <text x="325" y="195" fill="#ef4444" fontSize="16" fontWeight="bold" textAnchor="middle">CHẬM LƯƠNG 10 NGÀY = VỠ TRẬN TÀI CHÍNH</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S104: SỐ NGÀY SỐNG SÓT NẾU MẤT VIỆC ---
+  // =========================================================================
+  if (sc === "S104") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>⚖️</span> CÁN CÂN TỰ DO
+          </div>
+          <div style={headingStyle}>SỐ NGÀY SỐNG SÓT NẾU MẤT VIỆC</div>
+          <div style={subheadStyle}>Người A có 0 ngày sống sót vs Người B có 24 tháng thảnh thơi tự chủ</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="140" y={190 - animProgress * 15} width="140" height={animProgress * 15} rx="10" fill="#ef4444" />
+      <text x="210" y="165" fill="#ef4444" fontSize="18" fontWeight="bold" textAnchor="middle">0 NGÀY</text>
+      <text x="210" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Người A</text>
+      <rect x="370" y={190 - animProgress * 150} width="140" height={animProgress * 150} rx="10" fill="#10b981" />
+      <text x="440" y={180 - animProgress * 150} fill="#10b981" fontSize="24" fontWeight="bold" textAnchor="middle">24 THÁNG</text>
+      <text x="440" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Người B (2 năm)</text>
+      <text x="325" y="35" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">ĐỆM AN TOÀN QUYẾT ĐỊNH SỰ TỰ DO</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S107: ẢO GIÁC GIÀU CÓ VS TỰ DO THỰC SỰ ---
+  // =========================================================================
+  if (sc === "S107") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>💎</span> BẢN CHẤT CỐT LÕI
+          </div>
+          <div style={headingStyle}>ẢO GIÁC GIÀU CÓ VS TỰ DO THỰC SỰ</div>
+          <div style={subheadStyle}>Người A chọn vẻ ngoài giả tạo; người B chọn sự thịnh vượng bền vững</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="220" height="150" rx="16" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" strokeWidth="2" />
+      <text x="190" y="85" fill="#ef4444" fontSize="18" fontWeight="bold" textAnchor="middle">NGƯỜI A</text>
+      <text x="190" y="125" fill="#ffffff" fontSize="15" textAnchor="middle">Nô lệ cho mức sống</text>
+      <text x="190" y="160" fill="#fca5a5" fontSize="15" textAnchor="middle">Bất an thường trực</text>
+      <rect x="350" y="40" width="220" height="150" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="2" />
+      <text x="460" y="85" fill="#10b981" fontSize="18" fontWeight="bold" textAnchor="middle">NGƯỜI B</text>
+      <text x="460" y="125" fill="#ffffff" fontSize="15" textAnchor="middle">Làm chủ tài chính</text>
+      <text x="460" y="160" fill="#a7f3d0" fontSize="15" textAnchor="middle">Tự do trong tâm trí</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S109: NGƯỜI TA KHÔNG NGƯỠNG MỘ CHIẾC XE CỦA BẠN ---
+  // =========================================================================
+  if (sc === "S109") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #818cf8", boxShadow: "0 0 45px #818cf833" }}>
+          <div style={tagStyle("#818cf8", "#c7d2fe")}>
+            <span>👁️</span> NGHỊCH LÝ XÃ HỘI
+          </div>
+          <div style={headingStyle}>NGƯỜI TA KHÔNG NGƯỠNG MỘ CHIẾC XE CỦA BẠN</div>
+          <div style={subheadStyle}>Họ chỉ đang tưởng tượng bản thân họ ngồi trong chiếc xe đó mà thôi</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="100" r="50" fill="rgba(129, 140, 248, 0.2)" stroke="#818cf8" strokeWidth="4" />
+      <text x="300" y="115" fill="#ffffff" fontSize="40" textAnchor="middle">🏎️</text>
+      <text x="300" y="175" fill="#ffffff" fontSize="18" fontWeight="bold" textAnchor="middle">TÂM LÝ HỌC VỀ TIỀN</text>
+      <text x="300" y="210" fill="#c7d2fe" fontSize="15" textAnchor="middle">Không ai ấn tượng với món đồ của bạn nhiều bằng chính bạn</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S111: GIÀU CÓ LÀ NHỮNG GÌ BẠN GIỮ LẠI ĐƯỢC ---
+  // =========================================================================
+  if (sc === "S111") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>💰</span> ĐỊNH NGHĨA SỰ GIÀU CÓ
+          </div>
+          <div style={headingStyle}>GIÀU CÓ LÀ NHỮNG GÌ BẠN GIỮ LẠI ĐƯỢC</div>
+          <div style={subheadStyle}>Chiếc xe bạn không mua, căn hộ bạn không nâng cấp quá đà chính là tài sản</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="300" y="85" fill="#10b981" fontSize="36" textAnchor="middle">💎</text>
+      <text x="300" y="130" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">TÀI SẢN THỰC SỰ LÀ TÀI SẢN VÔ HÌNH</text>
+      <text x="300" y="165" fill="#a7f3d0" fontSize="16" textAnchor="middle">Nó bảo vệ bạn trước mọi cơn bão của cuộc đời</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S113: BẢNG TÓM TẮT HAI CON ĐƯỜNG ---
+  // =========================================================================
+  if (sc === "S113") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>📜</span> TỔNG KẾT TƯƠNG PHẢN
+          </div>
+          <div style={headingStyle}>BẢNG TÓM TẮT HAI CON ĐƯỜNG</div>
+          <div style={subheadStyle}>Lối sống hào nhoáng dẫn tới kiệt quệ vs Kỷ luật dẫn tới bình an</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="60" y="30" width="530" height="170" rx="16" fill="rgba(30, 41, 59, 0.9)" stroke="#38bdf8" strokeWidth="2" />
+      <text x="180" y="70" fill="#ef4444" fontSize="18" fontWeight="bold" textAnchor="middle">HÀO NHOÁNG</text>
+      <text x="470" y="70" fill="#10b981" fontSize="18" fontWeight="bold" textAnchor="middle">KỶ LUẬT THỰC CHIẾN</text>
+      <line x1="325" y1="45" x2="325" y2="185" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+      <text x="180" y="110" fill="#cbd5e1" fontSize="15" textAnchor="middle">Nợ thẻ, cạn tiền cuối tháng</text>
+      <text x="470" y="110" fill="#cbd5e1" fontSize="15" textAnchor="middle">Dòng tiền tích sản đều đặn</text>
+      <text x="180" y="150" fill="#cbd5e1" fontSize="15" textAnchor="middle">Áp lực không dám nghỉ việc</text>
+      <text x="470" y="150" fill="#cbd5e1" fontSize="15" textAnchor="middle">Tự chủ, thảnh thơi lựa chọn</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S115: HỆ THỐNG PHÒNG THỦ BA TẦNG THỰC CHIẾN ---
+  // =========================================================================
+  if (sc === "S115") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🎯</span> CHUYỂN DỊCH CHIẾN LƯỢC
+          </div>
+          <div style={headingStyle}>HỆ THỐNG PHÒNG THỦ BA TẦNG THỰC CHIẾN</div>
+          <div style={subheadStyle}>Từ cạm bẫy tâm lý chuyển dịch sang giải pháp bảo vệ tự động</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="70" width="140" height="80" rx="14" fill="#ef4444" />
+      <text x="150" y="115" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">BẪY TÂM LÝ</text>
+      <path d="M 240 110 L 390 110" stroke="#10b981" strokeWidth="6" strokeDasharray="8 8" />
+      <text x="315" y="95" fill="#10b981" fontSize="20" fontWeight="bold" textAnchor="middle">CHUYỂN DỊCH</text>
+      <rect x="410" y="70" width="160" height="80" rx="14" fill="#10b981" />
+      <text x="490" y="115" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">3 TẦNG BẢO VỆ</text>
+      <text x="325" y="210" fill="#cbd5e1" fontSize="15" textAnchor="middle">Không sống kham khổ cực đoan, mà quản trị bằng hệ thống</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S117: QUY TẮC ĐÓNG BĂNG LỐI SỐNG SÁU THÁNG ---
+  // =========================================================================
+  if (sc === "S117") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>1️⃣</span> TẦNG PHÒNG THỦ SỐ 1
+          </div>
+          <div style={headingStyle}>QUY TẮC ĐÓNG BĂNG LỐI SỐNG SÁU THÁNG</div>
+          <div style={subheadStyle}>Lệnh giới nghiêm chi tiêu trong đúng 180 ngày kể từ khi có quyết định tăng lương</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="95" r="50" fill="rgba(56, 189, 248, 0.2)" stroke="#38bdf8" strokeWidth="4" />
+      <text x="300" y="110" fill="#38bdf8" fontSize="40" textAnchor="middle">🧊</text>
+      <text x="300" y="175" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">ĐÓNG BĂNG 180 NGÀY</text>
+      <text x="300" y="210" fill="#bae6fd" fontSize="16" textAnchor="middle">Giữ nguyên mức sống cũ để cơ thể làm quen với khoản dư</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S119: BIỂN BÁO BA ĐIỀU CẤM TRONG 6 THÁNG ĐẦU ---
+  // =========================================================================
+  if (sc === "S119") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #ef4444", boxShadow: "0 0 45px #ef444433" }}>
+          <div style={tagStyle("#ef4444", "#fca5a5")}>
+            <span>🚫</span> 3 ĐIỀU CẤM KỶ LUẬT
+          </div>
+          <div style={headingStyle}>BIỂN BÁO BA ĐIỀU CẤM TRONG 6 THÁNG ĐẦU</div>
+          <div style={subheadStyle}>1. Cấm chuyển nhà | 2. Cấm đổi xe | 3. Cấm mua đồ công nghệ xa xỉ</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="25" width="490" height="185" rx="16" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" strokeWidth="3" />
+      <text x="120" y="70" fill="#ffffff" fontSize="18" fontWeight="bold">❌ ĐIỀU 1: CẤM CHUYỂN CHỖ Ở</text>
+      <text x="120" y="115" fill="#ffffff" fontSize="18" fontWeight="bold">❌ ĐIỀU 2: CẤM ĐỔI XE MỚI</text>
+      <text x="120" y="160" fill="#ffffff" fontSize="18" fontWeight="bold">❌ ĐIỀU 3: CẤM MUA ĐỒ CÔNG NGHỆ ĐẮT TIỀN</text>
+      <text x="325" y="225" fill="#cbd5e1" fontSize="15" textAnchor="middle">Tránh những quyết định tài chính bốc đồng không thể đảo ngược</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S121: LÀM NGUỘI CƠN HƯNG PHẤN TĂNG LƯƠNG ---
+  // =========================================================================
+  if (sc === "S121") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #818cf8", boxShadow: "0 0 45px #818cf833" }}>
+          <div style={tagStyle("#818cf8", "#c7d2fe")}>
+            <span>🧠</span> LỢI ÍCH TÂM LÝ HỌC
+          </div>
+          <div style={headingStyle}>LÀM NGUỘI CƠN HƯNG PHẤN TĂNG LƯƠNG</div>
+          <div style={subheadStyle}>6 tháng giúp bộ não lấy lại sự tỉnh táo trước khi ra quyết định chi tiêu lớn</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="40" width="400" height="150" rx="16" fill="rgba(129, 140, 248, 0.15)" stroke="#818cf8" strokeWidth="3" />
+      <text x="300" y="85" fill="#818cf8" fontSize="36" textAnchor="middle">🌡️</text>
+      <text x="300" y="130" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">HẠ NHIỆT CẢM XÚC BỐC ĐỒNG</text>
+      <text x="300" y="165" fill="#c7d2fe" fontSize="16" textAnchor="middle">Để lý trí làm việc thay cho cảm xúc nhất thời</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S122: GOM ĐƯỢC 60 TRIỆU ĐỒNG VỐN AN TOÀN ---
+  // =========================================================================
+  if (sc === "S122") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>💰</span> KẾT QUẢ ĐÓNG BĂNG
+          </div>
+          <div style={headingStyle}>GOM ĐƯỢC 60 TRIỆU ĐỒNG VỐN AN TOÀN</div>
+          <div style={subheadStyle}>6 tháng nhân 10 triệu lương tăng bằng 60 triệu quỹ dự phòng nguyên vẹn</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="20" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="4" />
+      <text x="300" y="85" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">6 THÁNG x 10.000.000 đ =</text>
+      <text x="300" y="140" fill="#10b981" fontSize="46" fontWeight="900" textAnchor="middle">60.000.000 đ</text>
+      <text x="300" y="175" fill="#a7f3d0" fontSize="16" textAnchor="middle">Quỹ an toàn được tích lũy nhẹ nhàng mà không cần gồng gánh</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S124: ĐÓNG BĂNG LỐI SỐNG LÀ TẠO KHOẢNG ĐỆM BỨT PHÁ ---
+  // =========================================================================
+  if (sc === "S124") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>🚀</span> BƯỚC CHẠY ĐÀ
+          </div>
+          <div style={headingStyle}>ĐÓNG BĂNG LỐI SỐNG LÀ TẠO KHOẢNG ĐỆM BỨT PHÁ</div>
+          <div style={subheadStyle}>Không phải kìm hãm cuộc sống, mà là thiết lập thế chủ động trước đồng tiền</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <path d={`M 100 170 Q 300 170 500 50`} fill="none" stroke="#38bdf8" strokeWidth="6" strokeLinecap="round" />
+      <circle cx="500" cy="50" r="10" fill="#38bdf8" />
+      <text x="300" y="130" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">KHOẢNG ĐỆM 6 THÁNG</text>
+      <text x="300" y="215" fill="#cbd5e1" fontSize="16" textAnchor="middle">Lấy đà vững chắc trước khi bước sang giai đoạn phân bổ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S126: TỪ ĐÓNG BĂNG BƯỚC SANG CÔNG THỨC 50/50 ---
+  // =========================================================================
+  if (sc === "S126") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>🌉</span> CẦU NỐI CHUYỂN TIẾP
+          </div>
+          <div style={headingStyle}>TỪ ĐÓNG BĂNG BƯỚC SANG CÔNG THỨC 50/50</div>
+          <div style={subheadStyle}>Hết 6 tháng, bạn hoàn toàn được nâng cấp mức sống theo tỷ lệ vàng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="70" width="180" height="80" rx="14" fill="#38bdf8" />
+      <text x="170" y="115" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">6 THÁNG ĐÓNG BĂNG</text>
+      <text x="300" y="120" fill="#ffffff" fontSize="28">➔</text>
+      <rect x="340" y="70" width="180" height="80" rx="14" fill="#10b981" />
+      <text x="430" y="115" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">TỶ LỆ VÀNG 50/50</text>
+      <text x="300" y="210" fill="#cbd5e1" fontSize="15" textAnchor="middle">Nâng cấp mức sống có kế hoạch và bền vững</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S127: QUY TẮC CHIA ĐÔI PHẦN LƯƠNG TĂNG 50/50 ---
+  // =========================================================================
+  if (sc === "S127") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>2️⃣</span> TẦNG PHÒNG THỦ SỐ 2
+          </div>
+          <div style={headingStyle}>QUY TẮC CHIA ĐÔI PHẦN LƯƠNG TĂNG 50/50</div>
+          <div style={subheadStyle}>Bắt buộc chia đôi 10 triệu lương tăng thành hai phần hoàn toàn bằng nhau</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="100" y="40" width="450" height="150" rx="18" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="325" y="85" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">10 TRIỆU LƯƠNG TĂNG THÊM</text>
+      <text x="210" y="145" fill="#10b981" fontSize="24" fontWeight="bold" textAnchor="middle">50% TÍCH SẢN</text>
+      <line x1="325" y1="105" x2="325" y2="175" stroke="#ffffff" strokeWidth="2" />
+      <text x="440" y="145" fill="#38bdf8" fontSize="24" fontWeight="bold" textAnchor="middle">50% NÂNG CẤP</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S128: PHÂN LUỒNG 10 TRIỆU LƯƠNG TĂNG THÊM ---
+  // =========================================================================
+  if (sc === "S128") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>🔀</span> SƠ ĐỒ PHÂN LUỒNG
+          </div>
+          <div style={headingStyle}>PHÂN LUỒNG 10 TRIỆU LƯƠNG TĂNG THÊM</div>
+          <div style={subheadStyle}>5 triệu (50%) vào Quỹ tích sản — 5 triệu (50%) nâng cấp có chủ đích</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="325" cy="50" r="35" fill="#ffffff" />
+      <text x="325" y="55" fill="#0f172a" fontSize="14" fontWeight="bold" textAnchor="middle">+10 TR</text>
+      <path d="M 300 80 L 180 140" stroke="#10b981" strokeWidth="4" />
+      <rect x="90" y="140" width="180" height="70" rx="12" fill="#10b981" />
+      <text x="180" y="170" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">5 TRIỆU (50%)</text>
+      <text x="180" y="195" fill="#ffffff" fontSize="13" textAnchor="middle">Quỹ tích sản</text>
+      <path d="M 350 80 L 470 140" stroke="#38bdf8" strokeWidth="4" />
+      <rect x="380" y="140" width="180" height="70" rx="12" fill="#38bdf8" />
+      <text x="470" y="170" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">5 TRIỆU (50%)</text>
+      <text x="470" y="195" fill="#ffffff" fontSize="13" textAnchor="middle">Nâng cấp cuộc sống</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S129: 5 TRIỆU TỰ ĐỘNG CHUYỂN VÀO TÀI KHOẢN TÍCH SẢN ---
+  // =========================================================================
+  if (sc === "S129") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>📥</span> NHÁNH SỐ 1: TỰ ĐỘNG HÓA
+          </div>
+          <div style={headingStyle}>5 TRIỆU TỰ ĐỘNG CHUYỂN VÀO TÀI KHOẢN TÍCH SẢN</div>
+          <div style={subheadStyle}>Cài đặt lệnh trích tiền tự động lúc 8h sáng ngày nhận lương</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="300" y="85" fill="#10b981" fontSize="36" textAnchor="middle">⏰</text>
+      <text x="300" y="130" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">8:00 SÁNG NGÀY CÓ LƯƠNG</text>
+      <text x="300" y="165" fill="#a7f3d0" fontSize="16" textAnchor="middle">Chuyển thẳng 5 triệu trước khi bạn kịp nhìn thấy</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S131: COI 5 TRIỆU TÍCH SẢN NHƯ MỘT KHOẢN THUẾ BẮT BUỘC ---
+  // =========================================================================
+  if (sc === "S131") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>🏛️</span> TRẢ CHO MÌNH TRƯỚC
+          </div>
+          <div style={headingStyle}>COI 5 TRIỆU TÍCH SẢN NHƯ MỘT KHOẢN THUẾ BẮT BUỘC</div>
+          <div style={subheadStyle}>Khoản tiền chưa từng tồn tại trong ví, phần còn lại mới dùng để sống</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="95" r="50" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" strokeWidth="4" />
+      <text x="300" y="110" fill="#f59e0b" fontSize="40" textAnchor="middle">🛡️</text>
+      <text x="300" y="175" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">TRẢ CHO BẢN THÂN MÌNH TRƯỚC</text>
+      <text x="300" y="210" fill="#fde68a" fontSize="16" textAnchor="middle">Nguyên tắc vàng bất biến của giới tài chính tinh hoa</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S132: 5 TRIỆU CÒN LẠI DÙNG ĐỂ NÂNG CẤP CUỘC SỐNG ---
+  // =========================================================================
+  if (sc === "S132") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>🎁</span> NHÁNH SỐ 2: TẬN HƯỞNG
+          </div>
+          <div style={headingStyle}>5 TRIỆU CÒN LẠI DÙNG ĐỂ NÂNG CẤP CUỘC SỐNG</div>
+          <div style={subheadStyle}>Được phép chi tiêu thoải mái không cần áy náy hay lo âu</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" strokeWidth="3" />
+      <text x="300" y="85" fill="#38bdf8" fontSize="36" textAnchor="middle">✨</text>
+      <text x="300" y="130" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">5.000.000 đ NÂNG CẤP THỰC SỰ</text>
+      <text x="300" y="165" fill="#bae6fd" fontSize="16" textAnchor="middle">Ăn ngon hơn, học khóa mới, phụng dưỡng cha mẹ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S134: VỪA CÓ ĐỘNG LỰC — VỪA GIÀU CÓ TƯƠNG LAI ---
+  // =========================================================================
+  if (sc === "S134") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>⚖️</span> CÂN BẰNG TÂM LÝ
+          </div>
+          <div style={headingStyle}>VỪA CÓ ĐỘNG LỰC — VỪA GIÀU CÓ TƯƠNG LAI</div>
+          <div style={subheadStyle}>Không bị ức chế tâm lý cực đoan, tài sản tương lai vẫn sinh sôi mạnh mẽ</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="300" y="85" fill="#10b981" fontSize="36" textAnchor="middle">🎯</text>
+      <text x="300" y="130" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">HẠNH PHÚC HIỆN TẠI & BỀN VỮNG TƯƠNG LAI</text>
+      <text x="300" y="165" fill="#a7f3d0" fontSize="16" textAnchor="middle">Chi tiêu có chủ đích, tự hào và không bao giờ hối hận</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S136: LŨY KẾ 3 NĂM ÁP DỤNG QUY TẮC 50/50 ---
+  // =========================================================================
+  if (sc === "S136") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>📈</span> LŨY KẾ 3 NĂM
+          </div>
+          <div style={headingStyle}>LŨY KẾ 3 NĂM ÁP DỤNG QUY TẮC 50/50</div>
+          <div style={subheadStyle}>Vừa sống thoải mái hơn 25%, vừa tích lũy được hơn 200 triệu đồng</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="60" y="40" width="240" height="150" rx="16" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" strokeWidth="2" />
+      <text x="180" y="80" fill="#38bdf8" fontSize="18" fontWeight="bold" textAnchor="middle">MỨC SỐNG TĂNG</text>
+      <text x="180" y="130" fill="#ffffff" fontSize="32" fontWeight="900" textAnchor="middle">+25%</text>
+      <text x="180" y="165" fill="#bae6fd" fontSize="14" textAnchor="middle">Tận hưởng trọn vẹn</text>
+      <rect x="350" y="40" width="240" height="150" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="2" />
+      <text x="470" y="80" fill="#10b981" fontSize="18" fontWeight="bold" textAnchor="middle">TÍCH SẢN TĂNG</text>
+      <text x="470" y="130" fill="#10b981" fontSize="32" fontWeight="900" textAnchor="middle">&gt;200 TR</text>
+      <text x="470" y="165" fill="#a7f3d0" fontSize="14" textAnchor="middle">An tâm vững chãi</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S138: MỖI LẦN TĂNG LƯƠNG — TĂNG GẤP ĐÔI TỐC ĐỘ TỰ DO ---
+  // =========================================================================
+  if (sc === "S138") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>⚡</span> TỐC ĐỘ TỰ DO
+          </div>
+          <div style={headingStyle}>MỖI LẦN TĂNG LƯƠNG — TĂNG GẤP ĐÔI TỐC ĐỘ TỰ DO</div>
+          <div style={subheadStyle}>Cứ mỗi nấc thang thu nhập mới, tốc độ tích sản sẽ tăng theo cấp số nhân</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" strokeWidth="3" />
+      <text x="300" y="85" fill="#f59e0b" fontSize="36" textAnchor="middle">⚡</text>
+      <text x="300" y="130" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">BỨT PHÁ TÀI SẢN THEO CẤP SỐ NHÂN</text>
+      <text x="300" y="165" fill="#fde68a" fontSize="16" textAnchor="middle">Thay vì để tiền tăng thêm trôi tuột vào chi phí sinh hoạt</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S139: HỆ THỐNG 3 TÀI KHOẢN SỐ & BỘ LỌC 72 GIỜ ---
+  // =========================================================================
+  if (sc === "S139") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #818cf8", boxShadow: "0 0 45px #818cf833" }}>
+          <div style={tagStyle("#818cf8", "#c7d2fe")}>
+            <span>3️⃣</span> TẦNG PHÒNG THỦ SỐ 3
+          </div>
+          <div style={headingStyle}>HỆ THỐNG 3 TÀI KHOẢN SỐ & BỘ LỌC 72 GIỜ</div>
+          <div style={subheadStyle}>Phân luồng dòng tiền tự động trên ứng dụng điện thoại</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="60" y="60" width="150" height="110" rx="14" fill="#38bdf8" />
+      <text x="135" y="110" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">1. SỐNG</text>
+      <text x="135" y="140" fill="#ffffff" fontSize="13" textAnchor="middle">Cơ bản: 10tr</text>
+      <rect x="250" y="60" width="150" height="110" rx="14" fill="#10b981" />
+      <text x="325" y="110" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">2. KÉT SẮT</text>
+      <text x="325" y="140" fill="#ffffff" fontSize="13" textAnchor="middle">Tích sản: 5tr</text>
+      <rect x="440" y="60" width="150" height="110" rx="14" fill="#f59e0b" />
+      <text x="515" y="110" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">3. HƯỞNG</text>
+      <text x="515" y="140" fill="#ffffff" fontSize="13" textAnchor="middle">Trải nghiệm: 5tr</text>
+      <text x="325" y="215" fill="#cbd5e1" fontSize="15" textAnchor="middle">Không để chung tiền trong một tài khoản duy nhất</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S140: CẤU TRÚC 3 TÀI KHOẢN NGÂN HÀNG SỐ ĐỘC LẬP ---
+  // =========================================================================
+  if (sc === "S140") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>📱</span> MÔ HÌNH 3 TÀI KHOẢN SỐ
+          </div>
+          <div style={headingStyle}>CẤU TRÚC 3 TÀI KHOẢN NGÂN HÀNG SỐ ĐỘC LẬP</div>
+          <div style={subheadStyle}>Tài khoản 1 sinh hoạt | Tài khoản 2 tích sản | Tài khoản 3 trải nghiệm</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="50" y="40" width="170" height="140" rx="14" fill="rgba(56, 189, 248, 0.2)" stroke="#38bdf8" strokeWidth="2" />
+      <text x="135" y="80" fill="#38bdf8" fontSize="18" fontWeight="bold" textAnchor="middle">TK SINH HOẠT</text>
+      <text x="135" y="120" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">10.000.000 đ</text>
+      <text x="135" y="155" fill="#cbd5e1" fontSize="13" textAnchor="middle">Nhà, ăn, hóa đơn</text>
+      <rect x="240" y="40" width="170" height="140" rx="14" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="2" />
+      <text x="325" y="80" fill="#10b981" fontSize="18" fontWeight="bold" textAnchor="middle">KÉT TÍCH SẢN</text>
+      <text x="325" y="120" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">5.000.000 đ</text>
+      <text x="325" y="155" fill="#cbd5e1" fontSize="13" textAnchor="middle">Bất khả xâm phạm</text>
+      <rect x="430" y="40" width="170" height="140" rx="14" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" strokeWidth="2" />
+      <text x="515" y="80" fill="#f59e0b" fontSize="18" fontWeight="bold" textAnchor="middle">TK TRẢI NGHIỆM</text>
+      <text x="515" y="120" fill="#ffffff" fontSize="20" fontWeight="bold" textAnchor="middle">5.000.000 đ</text>
+      <text x="515" y="155" fill="#cbd5e1" fontSize="13" textAnchor="middle">Tiêu hết là dừng</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S141: TÀI KHOẢN SINH HOẠT CƠ BẢN: 10 TRIỆU ---
+  // =========================================================================
+  if (sc === "S141") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>🏠</span> TÀI KHOẢN SỐ 1
+          </div>
+          <div style={headingStyle}>TÀI KHOẢN SINH HOẠT CƠ BẢN: 10 TRIỆU</div>
+          <div style={subheadStyle}>Nhận lương và giữ nguyên 10 triệu cho toàn bộ chi phí thiết yếu</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" strokeWidth="3" />
+      <text x="300" y="85" fill="#38bdf8" fontSize="22" fontWeight="bold" textAnchor="middle">TÀI KHOẢN 1: SINH HOẠT CĂN BẢN</text>
+      <text x="300" y="135" fill="#ffffff" fontSize="36" fontWeight="900" textAnchor="middle">10.000.000 đ</text>
+      <text x="300" y="170" fill="#bae6fd" fontSize="16" textAnchor="middle">Tiền nhà, ăn uống, hóa đơn điện nước thiết yếu</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S142: KÉT SẮT TÍCH SẢN: 5 TRIỆU BẤT KHẢ XÂM PHẠM ---
+  // =========================================================================
+  if (sc === "S142") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🔒</span> TÀI KHOẢN SỐ 2
+          </div>
+          <div style={headingStyle}>KÉT SẮT TÍCH SẢN: 5 TRIỆU BẤT KHẢ XÂM PHẠM</div>
+          <div style={subheadStyle}>Tiền chỉ có một chiều đi vào, tuyệt đối không gắn thẻ rút tiền</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="3" />
+      <text x="300" y="85" fill="#10b981" fontSize="22" fontWeight="bold" textAnchor="middle">TÀI KHOẢN 2: KÉT SẮT TÍCH SẢN</text>
+      <text x="300" y="135" fill="#10b981" fontSize="36" fontWeight="900" textAnchor="middle">5.000.000 đ (MỘT CHIỀU VÀO)</text>
+      <text x="300" y="170" fill="#a7f3d0" fontSize="16" textAnchor="middle">Không gắn thẻ rút tiền, không cài app chuyển tiền trên máy</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S143: TÀI KHOẢN TRẢI NGHIỆM: 5 TRIỆU CÓ HẠN MỨC ---
+  // =========================================================================
+  if (sc === "S143") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>🎉</span> TÀI KHOẢN SỐ 3
+          </div>
+          <div style={headingStyle}>TÀI KHOẢN TRẢI NGHIỆM: 5 TRIỆU CÓ HẠN MỨC</div>
+          <div style={subheadStyle}>Tiêu trọn cho sở thích cá nhân, tiêu hết là dừng, cấm bù trừ</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="440" height="150" rx="18" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" strokeWidth="3" />
+      <text x="300" y="85" fill="#f59e0b" fontSize="22" fontWeight="bold" textAnchor="middle">TÀI KHOẢN 3: TRẢI NGHIỆM TỰ DO</text>
+      <text x="300" y="135" fill="#ffffff" fontSize="36" fontWeight="900" textAnchor="middle">5.000.000 đ / THÁNG</text>
+      <text x="300" y="170" fill="#fde68a" fontSize="16" textAnchor="middle">Tiêu hết là dừng lại, không được phép bù trừ từ tài khoản khác</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S145: QUY TẮC ĐỢI ĐỦ 72 GIỜ TRƯỚC KHI MUA ĐỒ ---
+  // =========================================================================
+  if (sc === "S145") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #818cf8", boxShadow: "0 0 45px #818cf833" }}>
+          <div style={tagStyle("#818cf8", "#c7d2fe")}>
+            <span>⏳</span> BỘ LỌC 72 GIỜ
+          </div>
+          <div style={headingStyle}>QUY TẮC ĐỢI ĐỦ 72 GIỜ TRƯỚC KHI MUA ĐỒ</div>
+          <div style={subheadStyle}>80% ham muốn mua sắm bốc đồng sẽ tự động biến mất sau 3 ngày</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="95" r="50" fill="rgba(129, 140, 248, 0.2)" stroke="#818cf8" strokeWidth="4" />
+      <text x="300" y="110" fill="#818cf8" fontSize="36" textAnchor="middle">⏰</text>
+      <text x="300" y="175" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">BỘ LỌC 72 GIỜ</text>
+      <text x="300" y="210" fill="#c7d2fe" fontSize="16" textAnchor="middle">80% CƠN SỐT MUA SẮM SẼ TỰ ĐỘNG HẠ NHIỆT</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S147: QUY ĐỔI GIÁ TIỀN RA GIỜ LAO ĐỘNG ---
+  // =========================================================================
+  if (sc === "S147") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>⏱️</span> QUY ĐỔI GIÁ TRỊ
+          </div>
+          <div style={headingStyle}>QUY ĐỔI GIÁ TIỀN RA GIỜ LAO ĐỘNG</div>
+          <div style={subheadStyle}>Lương 100k/giờ → Chiếc đồng hồ 6 triệu tương đương 60 giờ làm việc</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="80" y="40" width="490" height="140" rx="16" fill="rgba(30, 41, 59, 0.85)" stroke="#f59e0b" strokeWidth="2" />
+      <text x="325" y="80" fill="#cbd5e1" fontSize="18" textAnchor="middle">Thu nhập: 100.000 đ / giờ làm việc</text>
+      <text x="325" y="125" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">ĐỒNG HỒ 6 TRIỆU = 60 GIỜ LÀM VIỆC VẤT VẢ</text>
+      <text x="325" y="160" fill="#fde68a" fontSize="18" fontWeight="bold" textAnchor="middle">LIỆU MÓN ĐỒ CÓ ĐÁNG GIÁ NỬA THÁNG LÀM VIỆC?</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S149: BA TẦNG PHÒNG THỦ VỮNG CHẮC ---
+  // =========================================================================
+  if (sc === "S149") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🏰</span> BỨC TƯỜNG THÀNH
+          </div>
+          <div style={headingStyle}>BA TẦNG PHÒNG THỦ VỮNG CHẮC</div>
+          <div style={subheadStyle}>Bảo vệ bạn trọn đời trước mọi cám dỗ của lạm phát lối sống</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="60" y="70" width="160" height="80" rx="14" fill="#38bdf8" />
+      <text x="140" y="105" fill="#ffffff" fontSize="15" fontWeight="bold" textAnchor="middle">TẦNG 1</text>
+      <text x="140" y="130" fill="#ffffff" fontSize="13" textAnchor="middle">Đóng băng 6 tháng</text>
+      <rect x="245" y="70" width="160" height="80" rx="14" fill="#10b981" />
+      <text x="325" y="105" fill="#ffffff" fontSize="15" fontWeight="bold" textAnchor="middle">TẦNG 2</text>
+      <text x="325" y="130" fill="#ffffff" fontSize="13" textAnchor="middle">Tỷ lệ vàng 50/50</text>
+      <rect x="430" y="70" width="160" height="80" rx="14" fill="#818cf8" />
+      <text x="510" y="105" fill="#ffffff" fontSize="15" fontWeight="bold" textAnchor="middle">TẦNG 3</text>
+      <text x="510" y="130" fill="#ffffff" fontSize="13" textAnchor="middle">3 Tài khoản số</text>
+      <text x="325" y="210" fill="#cbd5e1" fontSize="15" textAnchor="middle">Hệ thống bảo vệ tài chính tự động hoàn chỉnh</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S150: CÂY TÀI SẢN TỎA BÓNG BÌNH AN ---
+  // =========================================================================
+  if (sc === "S150") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🌳</span> CÂY TÀI SẢN
+          </div>
+          <div style={headingStyle}>CÂY TÀI SẢN TỎA BÓNG BÌNH AN</div>
+          <div style={subheadStyle}>Tài chính không phải là cuộc đua tiêu xài mà là hành trình xây dựng sự bình yên</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 600 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="300" cy="90" r="55" fill="rgba(16, 185, 129, 0.3)" stroke="#10b981" strokeWidth="4" />
+      <text x="300" y="105" fill="#10b981" fontSize="45" textAnchor="middle">🌳</text>
+      <text x="300" y="175" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">TÍCH SẢN CHO SỰ AN NHIÊN</text>
+      <text x="300" y="210" fill="#a7f3d0" fontSize="16" textAnchor="middle">Không còn giật mình thon thót mỗi khi nhận thông báo số dư</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S152: SƠ ĐỒ TỰ DO TÀI CHÍNH BỀN VỮNG ---
+  // =========================================================================
+  if (sc === "S152") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #38bdf8", boxShadow: "0 0 45px #38bdf833" }}>
+          <div style={tagStyle("#38bdf8", "#bae6fd")}>
+            <span>🕊️</span> TỰ DO ĐÍCH THỰC
+          </div>
+          <div style={headingStyle}>SƠ ĐỒ TỰ DO TÀI CHÍNH BỀN VỮNG</div>
+          <div style={subheadStyle}>Kiếm tiền thông minh → Giữ tiền kỷ luật → Tự do lựa chọn cuộc sống</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="50" y="70" width="160" height="70" rx="12" fill="#38bdf8" />
+      <text x="130" y="110" fill="#ffffff" fontSize="15" fontWeight="bold" textAnchor="middle">KIẾM THÔNG MINH</text>
+      <text x="235" y="115" fill="#ffffff" fontSize="24">➔</text>
+      <rect x="255" y="70" width="150" height="70" rx="12" fill="#10b981" />
+      <text x="330" y="110" fill="#ffffff" fontSize="15" fontWeight="bold" textAnchor="middle">GIỮ KỶ LUẬT</text>
+      <text x="430" y="115" fill="#ffffff" fontSize="24">➔</text>
+      <rect x="450" y="70" width="150" height="70" rx="12" fill="#f59e0b" />
+      <text x="525" y="110" fill="#ffffff" fontSize="15" fontWeight="bold" textAnchor="middle">TỰ DO TỰ CHỦ</text>
+      <text x="325" y="200" fill="#cbd5e1" fontSize="16" textAnchor="middle">Quyền được nói không với những điều mình không muốn</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S153: TÀI SẢN LỚN NHẤT LÀ SỰ TỰ DO TRONG TÂM TRÍ ---
+  // =========================================================================
+  if (sc === "S153") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #f59e0b", boxShadow: "0 0 45px #f59e0b33" }}>
+          <div style={tagStyle("#f59e0b", "#fde68a")}>
+            <span>✨</span> CHÂM NGÔN KHẮC GHI
+          </div>
+          <div style={headingStyle}>TÀI SẢN LỚN NHẤT LÀ SỰ TỰ DO TRONG TÂM TRÍ</div>
+          <div style={subheadStyle}>Hãy để mỗi đồng tiền tăng thêm trở thành viên gạch xây dựng tự do</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <rect x="70" y="35" width="510" height="150" rx="20" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" strokeWidth="3" />
+      <text x="325" y="80" fill="#fde68a" fontSize="20" fontWeight="bold" textAnchor="middle">"TÀI SẢN LỚN NHẤT CỦA MỘT CON NGƯỜI"</text>
+      <text x="325" y="125" fill="#ffffff" fontSize="26" fontWeight="900" textAnchor="middle">KHÔNG PHẢI LÀ ĐỒ HIỆU XA XỈ</text>
+      <text x="325" y="160" fill="#10b981" fontSize="22" fontWeight="bold" textAnchor="middle">MÀ LÀ SỰ TỰ DO VÀ BÌNH AN TRONG TÂM TRÍ</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // =========================================================================
+  // --- S156: ĐỒNG HÀNH CÙNG TIỀN THỰC CHIẾN ---
+  // =========================================================================
+  if (sc === "S156") {
+    return (
+      <div style={containerStyle}>
+        <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 1140, border: "2px solid #10b981", boxShadow: "0 0 45px #10b98133" }}>
+          <div style={tagStyle("#10b981", "#a7f3d0")}>
+            <span>🛡️</span> KÊNH TIỀN THỰC CHIẾN
+          </div>
+          <div style={headingStyle}>ĐỒNG HÀNH CÙNG TIỀN THỰC CHIẾN</div>
+          <div style={subheadStyle}>Kiến thức thực chiến — Hành động mỗi ngày — Bình an tài chính</div>
+
+          <div style={{ width: "100%", height: 280, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <svg viewBox="0 0 650 240" style={{ width: "100%", height: "100%" }}>
+      <circle cx="325" cy="80" r="45" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="4" />
+      <text x="325" y="90" fill="#10b981" fontSize="32" fontWeight="900" textAnchor="middle">TTC</text>
+      <text x="325" y="155" fill="#ffffff" fontSize="24" fontWeight="900" textAnchor="middle">KÊNH TIỀN THỰC CHIẾN</text>
+      <text x="325" y="195" fill="#a7f3d0" fontSize="16" textAnchor="middle">Kiến thức thực chiến • Hành động mỗi ngày • Bình an tài chính</text>
+    </svg>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // Default fallback if unknown scene
+  return (
+    <div style={containerStyle}>
+      <div style={{ ...cardStyle, transform: `scale(${scale}) translateY(${translateY}px)`, opacity, maxWidth: 900 }}>
+        <div style={tagStyle("#38bdf8", "#bae6fd")}>TIỀN THỰC CHIẾN</div>
+        <div style={headingStyle}>{cleanTitle}</div>
+      </div>
+    </div>
+  );
+};
+
+const tagStyle = (borderColor: string, textColor: string): React.CSSProperties => ({
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 10,
+  padding: "8px 22px",
+  borderRadius: 999,
+  backgroundColor: "rgba(15, 23, 42, 0.6)",
+  border: `1px solid ${borderColor}`,
+  color: textColor,
+  fontSize: 16,
+  fontWeight: 800,
+  letterSpacing: "0.15em",
+  textTransform: "uppercase",
+  marginBottom: 20,
+  fontFamily: theme.typography.fontFamily,
+});
+
+const headingStyle: React.CSSProperties = {
+  fontSize: 38,
+  fontWeight: 900,
+  color: "#ffffff",
+  lineHeight: 1.3,
+  letterSpacing: "-0.01em",
+  marginBottom: 12,
+  textAlign: "center",
+  fontFamily: theme.typography.fontFamily,
+};
+
+const subheadStyle: React.CSSProperties = {
+  fontSize: 19,
+  color: "#cbd5e1",
+  lineHeight: 1.4,
+  maxWidth: 950,
+  textAlign: "center",
+  marginBottom: 20,
+  fontFamily: theme.typography.fontFamily,
+};
+
+const containerStyle: React.CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
+  backgroundColor: theme.colors.background,
+  background: "radial-gradient(ellipse at center, #0e1726 0%, #05070f 85%)",
+  color: "#ffffff",
+  fontFamily: theme.typography.fontFamily,
+  padding: "40px 60px",
+  position: "relative",
+  overflow: "hidden",
+};
+
+const cardStyle: React.CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  textAlign: "center",
+  padding: "40px 50px",
+  borderRadius: 32,
+  backgroundColor: "rgba(15, 23, 42, 0.85)",
+  border: "1px solid rgba(255, 255, 255, 0.15)",
+  boxShadow: "0 25px 60px rgba(0, 0, 0, 0.6)",
+  backdropFilter: "blur(20px)",
+  width: "100%",
+};
+

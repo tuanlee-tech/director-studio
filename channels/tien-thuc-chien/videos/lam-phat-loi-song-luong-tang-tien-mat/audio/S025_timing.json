@@ -1,0 +1,109 @@
+{
+  "audio_file": "S025_narration.wav",
+  "duration_ms": 4400,
+  "word_count": 20,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hoàn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "mình",
+      "start_ms": 240,
+      "end_ms": 360
+    },
+    {
+      "word": "cấp",
+      "start_ms": 360,
+      "end_ms": 620
+    },
+    {
+      "word": "thứ",
+      "start_ms": 620,
+      "end_ms": 740
+    },
+    {
+      "word": "3",
+      "start_ms": 740,
+      "end_ms": 940
+    },
+    {
+      "word": "thường",
+      "start_ms": 940,
+      "end_ms": 1200
+    },
+    {
+      "word": "xuất",
+      "start_ms": 1200,
+      "end_ms": 1400
+    },
+    {
+      "word": "hiện",
+      "start_ms": 1400,
+      "end_ms": 1560
+    },
+    {
+      "word": "khi",
+      "start_ms": 1560,
+      "end_ms": 1900
+    },
+    {
+      "word": "lương",
+      "start_ms": 1900,
+      "end_ms": 2140
+    },
+    {
+      "word": "tăng",
+      "start_ms": 2140,
+      "end_ms": 2360
+    },
+    {
+      "word": "chính",
+      "start_ms": 2360,
+      "end_ms": 2580
+    },
+    {
+      "word": "là",
+      "start_ms": 2580,
+      "end_ms": 2800
+    },
+    {
+      "word": "phương",
+      "start_ms": 2800,
+      "end_ms": 2980
+    },
+    {
+      "word": "tiện",
+      "start_ms": 2980,
+      "end_ms": 3220
+    },
+    {
+      "word": "và",
+      "start_ms": 3220,
+      "end_ms": 3440
+    },
+    {
+      "word": "các",
+      "start_ms": 3440,
+      "end_ms": 3560
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3560,
+      "end_ms": 3760
+    },
+    {
+      "word": "di",
+      "start_ms": 3760,
+      "end_ms": 3940
+    },
+    {
+      "word": "chuyển.",
+      "start_ms": 3940,
+      "end_ms": 4200
+    }
+  ]
+}

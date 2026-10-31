@@ -1,0 +1,149 @@
+{
+  "audio_file": "S130_narration.wav",
+  "duration_ms": 6000,
+  "word_count": 28,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Hãy",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "cả",
+      "start_ms": 160,
+      "end_ms": 260
+    },
+    {
+      "word": "đảnh",
+      "start_ms": 260,
+      "end_ms": 480
+    },
+    {
+      "word": "lệnh",
+      "start_ms": 480,
+      "end_ms": 620
+    },
+    {
+      "word": "trích",
+      "start_ms": 620,
+      "end_ms": 800
+    },
+    {
+      "word": "tiền",
+      "start_ms": 800,
+      "end_ms": 940
+    },
+    {
+      "word": "từ",
+      "start_ms": 940,
+      "end_ms": 1120
+    },
+    {
+      "word": "đầu",
+      "start_ms": 1120,
+      "end_ms": 1300
+    },
+    {
+      "word": "và",
+      "start_ms": 1300,
+      "end_ms": 1520
+    },
+    {
+      "word": "lúc",
+      "start_ms": 1520,
+      "end_ms": 1720
+    },
+    {
+      "word": "8",
+      "start_ms": 1720,
+      "end_ms": 1980
+    },
+    {
+      "word": "giờ",
+      "start_ms": 1980,
+      "end_ms": 2240
+    },
+    {
+      "word": "sáng",
+      "start_ms": 2240,
+      "end_ms": 2540
+    },
+    {
+      "word": "anh",
+      "start_ms": 2540,
+      "end_ms": 2660
+    },
+    {
+      "word": "nhận",
+      "start_ms": 2660,
+      "end_ms": 2840
+    },
+    {
+      "word": "lượng,",
+      "start_ms": 2840,
+      "end_ms": 3060
+    },
+    {
+      "word": "trước",
+      "start_ms": 3480,
+      "end_ms": 3680
+    },
+    {
+      "word": "khi",
+      "start_ms": 3680,
+      "end_ms": 3820
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3820,
+      "end_ms": 3980
+    },
+    {
+      "word": "kịp",
+      "start_ms": 3980,
+      "end_ms": 4280
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 4280,
+      "end_ms": 4440
+    },
+    {
+      "word": "thấy",
+      "start_ms": 4440,
+      "end_ms": 4640
+    },
+    {
+      "word": "hoặc",
+      "start_ms": 4640,
+      "end_ms": 4940
+    },
+    {
+      "word": "có",
+      "start_ms": 4940,
+      "end_ms": 5040
+    },
+    {
+      "word": "ý",
+      "start_ms": 5040,
+      "end_ms": 5180
+    },
+    {
+      "word": "định",
+      "start_ms": 5180,
+      "end_ms": 5340
+    },
+    {
+      "word": "piêu",
+      "start_ms": 5340,
+      "end_ms": 5560
+    },
+    {
+      "word": "nó.",
+      "start_ms": 5560,
+      "end_ms": 5720
+    }
+  ]
+}

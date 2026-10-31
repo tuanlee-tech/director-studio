@@ -58,6 +58,7 @@ def sync_video_assets(video_slug: str, channel_id: str = "tien-thuc-chien"):
 
     PUB_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     PUB_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+    PUB_BGM_DIR.mkdir(parents=True, exist_ok=True)
 
     asset_count = 0
     if assets_src.exists():
@@ -75,7 +76,19 @@ def sync_video_assets(video_slug: str, channel_id: str = "tien-thuc-chien"):
                 dest = PUB_AUDIO_DIR / f.name
                 if not dest.exists() or dest.stat().st_size != f.stat().st_size:
                     shutil.copyfile(f, dest)
+                # Also copy narration_master.wav to assets/ for Remotion /assets/ access
+                if f.name == "narration_master.wav":
+                    dest_asset = PUB_ASSETS_DIR / f.name
+                    if not dest_asset.exists() or dest_asset.stat().st_size != f.stat().st_size:
+                        shutil.copyfile(f, dest_asset)
                 audio_count += 1
+
+    # Copy BGM if available
+    bgm_src = ROOT_DIR / "channels" / channel_id / "bgm"
+    if bgm_src.exists():
+        for f in bgm_src.glob("*.mp3"):
+            shutil.copyfile(f, PUB_BGM_DIR / f.name)
+            shutil.copyfile(f, PUB_ASSETS_DIR / f.name)
 
     print(f"✅ Synced {asset_count} assets and {audio_count} audio files for '{video_slug}' ({channel_id}) into Remotion public cache.")
 

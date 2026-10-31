@@ -1,0 +1,114 @@
+{
+  "audio_file": "S065_narration.wav",
+  "duration_ms": 4240,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Ông",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "cả",
+      "start_ms": 240,
+      "end_ms": 300
+    },
+    {
+      "word": "đời",
+      "start_ms": 300,
+      "end_ms": 420
+    },
+    {
+      "word": "sống",
+      "start_ms": 420,
+      "end_ms": 600
+    },
+    {
+      "word": "thân",
+      "start_ms": 600,
+      "end_ms": 740
+    },
+    {
+      "word": "bạch",
+      "start_ms": 740,
+      "end_ms": 980
+    },
+    {
+      "word": "cho",
+      "start_ms": 980,
+      "end_ms": 1260
+    },
+    {
+      "word": "đến",
+      "start_ms": 1260,
+      "end_ms": 1360
+    },
+    {
+      "word": "một",
+      "start_ms": 1360,
+      "end_ms": 1520
+    },
+    {
+      "word": "ngày",
+      "start_ms": 1520,
+      "end_ms": 1720
+    },
+    {
+      "word": "được",
+      "start_ms": 1720,
+      "end_ms": 1880
+    },
+    {
+      "word": "tạng",
+      "start_ms": 1880,
+      "end_ms": 2200
+    },
+    {
+      "word": "một",
+      "start_ms": 2200,
+      "end_ms": 2280
+    },
+    {
+      "word": "chiếc",
+      "start_ms": 2280,
+      "end_ms": 2560
+    },
+    {
+      "word": "áo",
+      "start_ms": 2560,
+      "end_ms": 2760
+    },
+    {
+      "word": "tròng",
+      "start_ms": 2760,
+      "end_ms": 3020
+    },
+    {
+      "word": "nyung",
+      "start_ms": 3020,
+      "end_ms": 3200
+    },
+    {
+      "word": "mô",
+      "start_ms": 3200,
+      "end_ms": 3380
+    },
+    {
+      "word": "đỏ",
+      "start_ms": 3380,
+      "end_ms": 3580
+    },
+    {
+      "word": "lộng",
+      "start_ms": 3580,
+      "end_ms": 3860
+    },
+    {
+      "word": "lý.",
+      "start_ms": 3860,
+      "end_ms": 4019
+    }
+  ]
+}

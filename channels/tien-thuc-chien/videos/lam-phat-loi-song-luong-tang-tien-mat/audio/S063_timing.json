@@ -1,0 +1,124 @@
+{
+  "audio_file": "S063_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bấy",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "tâm",
+      "start_ms": 240,
+      "end_ms": 400
+    },
+    {
+      "word": "B2",
+      "start_ms": 400,
+      "end_ms": 720
+    },
+    {
+      "word": "giải",
+      "start_ms": 720,
+      "end_ms": 1040
+    },
+    {
+      "word": "thích",
+      "start_ms": 1040,
+      "end_ms": 1180
+    },
+    {
+      "word": "vì",
+      "start_ms": 1180,
+      "end_ms": 1280
+    },
+    {
+      "word": "sao",
+      "start_ms": 1280,
+      "end_ms": 1520
+    },
+    {
+      "word": "một",
+      "start_ms": 1520,
+      "end_ms": 1840
+    },
+    {
+      "word": "món",
+      "start_ms": 1840,
+      "end_ms": 2040
+    },
+    {
+      "word": "đồ",
+      "start_ms": 2040,
+      "end_ms": 2220
+    },
+    {
+      "word": "nhỏ",
+      "start_ms": 2220,
+      "end_ms": 2480
+    },
+    {
+      "word": "lại",
+      "start_ms": 2480,
+      "end_ms": 2840
+    },
+    {
+      "word": "có",
+      "start_ms": 2840,
+      "end_ms": 2960
+    },
+    {
+      "word": "thể",
+      "start_ms": 2960,
+      "end_ms": 3060
+    },
+    {
+      "word": "kích",
+      "start_ms": 3060,
+      "end_ms": 3260
+    },
+    {
+      "word": "hoặc",
+      "start_ms": 3260,
+      "end_ms": 3540
+    },
+    {
+      "word": "cả",
+      "start_ms": 3540,
+      "end_ms": 3860
+    },
+    {
+      "word": "một",
+      "start_ms": 3860,
+      "end_ms": 4019
+    },
+    {
+      "word": "chúa",
+      "start_ms": 4019,
+      "end_ms": 4240
+    },
+    {
+      "word": "chi",
+      "start_ms": 4240,
+      "end_ms": 4440
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 4440,
+      "end_ms": 4680
+    },
+    {
+      "word": "thảm",
+      "start_ms": 4680,
+      "end_ms": 4900
+    },
+    {
+      "word": "hoạ.",
+      "start_ms": 4900,
+      "end_ms": 5060
+    }
+  ]
+}

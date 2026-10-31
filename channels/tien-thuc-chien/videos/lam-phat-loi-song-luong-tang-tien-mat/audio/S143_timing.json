@@ -1,0 +1,139 @@
+{
+  "audio_file": "S143_narration.wav",
+  "duration_ms": 5600,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tại",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "khoản",
+      "start_ms": 200,
+      "end_ms": 420
+    },
+    {
+      "word": "thứ",
+      "start_ms": 420,
+      "end_ms": 520
+    },
+    {
+      "word": "3",
+      "start_ms": 520,
+      "end_ms": 680
+    },
+    {
+      "word": "là",
+      "start_ms": 680,
+      "end_ms": 800
+    },
+    {
+      "word": "tài",
+      "start_ms": 800,
+      "end_ms": 960
+    },
+    {
+      "word": "khoản",
+      "start_ms": 960,
+      "end_ms": 1220
+    },
+    {
+      "word": "trả",
+      "start_ms": 1220,
+      "end_ms": 1380
+    },
+    {
+      "word": "nhiệm",
+      "start_ms": 1380,
+      "end_ms": 1620
+    },
+    {
+      "word": "5",
+      "start_ms": 1620,
+      "end_ms": 1740
+    },
+    {
+      "word": "chiệu,",
+      "start_ms": 1740,
+      "end_ms": 1980
+    },
+    {
+      "word": "bán",
+      "start_ms": 2420,
+      "end_ms": 2540
+    },
+    {
+      "word": "được",
+      "start_ms": 2540,
+      "end_ms": 2660
+    },
+    {
+      "word": "quyền",
+      "start_ms": 2660,
+      "end_ms": 2940
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 2940,
+      "end_ms": 3220
+    },
+    {
+      "word": "chọn",
+      "start_ms": 3220,
+      "end_ms": 3360
+    },
+    {
+      "word": "khoản",
+      "start_ms": 3360,
+      "end_ms": 3720
+    },
+    {
+      "word": "này",
+      "start_ms": 3720,
+      "end_ms": 3840
+    },
+    {
+      "word": "cho",
+      "start_ms": 3840,
+      "end_ms": 4019
+    },
+    {
+      "word": "sở",
+      "start_ms": 4019,
+      "end_ms": 4180
+    },
+    {
+      "word": "thích",
+      "start_ms": 4180,
+      "end_ms": 4440
+    },
+    {
+      "word": "mà",
+      "start_ms": 4440,
+      "end_ms": 4640
+    },
+    {
+      "word": "không",
+      "start_ms": 4640,
+      "end_ms": 4820
+    },
+    {
+      "word": "cần",
+      "start_ms": 4820,
+      "end_ms": 4980
+    },
+    {
+      "word": "nãy",
+      "start_ms": 4980,
+      "end_ms": 5160
+    },
+    {
+      "word": "nãy.",
+      "start_ms": 5160,
+      "end_ms": 5380
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "audio_file": "S128_narration.wav",
+  "duration_ms": 4640,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Khi",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "bạn",
+      "start_ms": 200,
+      "end_ms": 300
+    },
+    {
+      "word": "được",
+      "start_ms": 300,
+      "end_ms": 420
+    },
+    {
+      "word": "tăng",
+      "start_ms": 420,
+      "end_ms": 680
+    },
+    {
+      "word": "thêm",
+      "start_ms": 680,
+      "end_ms": 900
+    },
+    {
+      "word": "10",
+      "start_ms": 900,
+      "end_ms": 1040
+    },
+    {
+      "word": "triệu",
+      "start_ms": 1040,
+      "end_ms": 1260
+    },
+    {
+      "word": "đồng,",
+      "start_ms": 1260,
+      "end_ms": 1460
+    },
+    {
+      "word": "mắt",
+      "start_ms": 1820,
+      "end_ms": 1920
+    },
+    {
+      "word": "buộc",
+      "start_ms": 1920,
+      "end_ms": 2080
+    },
+    {
+      "word": "chưa",
+      "start_ms": 2080,
+      "end_ms": 2220
+    },
+    {
+      "word": "đôi",
+      "start_ms": 2220,
+      "end_ms": 2360
+    },
+    {
+      "word": "số",
+      "start_ms": 2360,
+      "end_ms": 2460
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2460,
+      "end_ms": 2680
+    },
+    {
+      "word": "này",
+      "start_ms": 2680,
+      "end_ms": 2860
+    },
+    {
+      "word": "thành",
+      "start_ms": 2860,
+      "end_ms": 3120
+    },
+    {
+      "word": "2",
+      "start_ms": 3120,
+      "end_ms": 3340
+    },
+    {
+      "word": "phần",
+      "start_ms": 3340,
+      "end_ms": 3560
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 3560,
+      "end_ms": 3700
+    },
+    {
+      "word": "toàn",
+      "start_ms": 3700,
+      "end_ms": 3980
+    },
+    {
+      "word": "bằng",
+      "start_ms": 3980,
+      "end_ms": 4140
+    },
+    {
+      "word": "nhau.",
+      "start_ms": 4140,
+      "end_ms": 4380
+    }
+  ]
+}

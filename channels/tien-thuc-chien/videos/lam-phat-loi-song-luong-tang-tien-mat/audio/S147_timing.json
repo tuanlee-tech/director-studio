@@ -1,0 +1,139 @@
+{
+  "audio_file": "S147_narration.wav",
+  "duration_ms": 6240,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Nếu",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "bạn",
+      "start_ms": 220,
+      "end_ms": 340
+    },
+    {
+      "word": "kiếm",
+      "start_ms": 340,
+      "end_ms": 580
+    },
+    {
+      "word": "được",
+      "start_ms": 580,
+      "end_ms": 680
+    },
+    {
+      "word": "100",
+      "start_ms": 680,
+      "end_ms": 1020
+    },
+    {
+      "word": ",000,",
+      "start_ms": 1020,
+      "end_ms": 1200
+    },
+    {
+      "word": "1",
+      "start_ms": 1380,
+      "end_ms": 1380
+    },
+    {
+      "word": "giờ,",
+      "start_ms": 1380,
+      "end_ms": 1600
+    },
+    {
+      "word": "chết",
+      "start_ms": 1980,
+      "end_ms": 2100
+    },
+    {
+      "word": "đồng",
+      "start_ms": 2100,
+      "end_ms": 2240
+    },
+    {
+      "word": "hồ",
+      "start_ms": 2240,
+      "end_ms": 2400
+    },
+    {
+      "word": "6",
+      "start_ms": 2400,
+      "end_ms": 2600
+    },
+    {
+      "word": ",000",
+      "start_ms": 2600,
+      "end_ms": 2820
+    },
+    {
+      "word": "đồng",
+      "start_ms": 2820,
+      "end_ms": 3040
+    },
+    {
+      "word": "tương",
+      "start_ms": 3040,
+      "end_ms": 3300
+    },
+    {
+      "word": "đơn",
+      "start_ms": 3300,
+      "end_ms": 3500
+    },
+    {
+      "word": "60",
+      "start_ms": 3500,
+      "end_ms": 3740
+    },
+    {
+      "word": "giờ",
+      "start_ms": 3740,
+      "end_ms": 4019
+    },
+    {
+      "word": "làm",
+      "start_ms": 4019,
+      "end_ms": 4160
+    },
+    {
+      "word": "thịt",
+      "start_ms": 4160,
+      "end_ms": 4400
+    },
+    {
+      "word": "phất",
+      "start_ms": 4400,
+      "end_ms": 4480
+    },
+    {
+      "word": "và",
+      "start_ms": 4480,
+      "end_ms": 4700
+    },
+    {
+      "word": "liệu",
+      "start_ms": 4700,
+      "end_ms": 5300
+    },
+    {
+      "word": "có",
+      "start_ms": 5300,
+      "end_ms": 5520
+    },
+    {
+      "word": "xứng",
+      "start_ms": 5520,
+      "end_ms": 5760
+    },
+    {
+      "word": "đáng.",
+      "start_ms": 5760,
+      "end_ms": 6020
+    }
+  ]
+}

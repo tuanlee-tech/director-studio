@@ -1,0 +1,139 @@
+{
+  "audio_file": "S121_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Quảng",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "thời",
+      "start_ms": 220,
+      "end_ms": 320
+    },
+    {
+      "word": "gian",
+      "start_ms": 320,
+      "end_ms": 500
+    },
+    {
+      "word": "này",
+      "start_ms": 500,
+      "end_ms": 680
+    },
+    {
+      "word": "giúp",
+      "start_ms": 680,
+      "end_ms": 880
+    },
+    {
+      "word": "bạn",
+      "start_ms": 880,
+      "end_ms": 1020
+    },
+    {
+      "word": "làm",
+      "start_ms": 1020,
+      "end_ms": 1180
+    },
+    {
+      "word": "nguyện",
+      "start_ms": 1180,
+      "end_ms": 1460
+    },
+    {
+      "word": "cơn",
+      "start_ms": 1460,
+      "end_ms": 1600
+    },
+    {
+      "word": "hương",
+      "start_ms": 1600,
+      "end_ms": 1820
+    },
+    {
+      "word": "phần",
+      "start_ms": 1820,
+      "end_ms": 2040
+    },
+    {
+      "word": "bán",
+      "start_ms": 2040,
+      "end_ms": 2180
+    },
+    {
+      "word": "đầu",
+      "start_ms": 2180,
+      "end_ms": 2380
+    },
+    {
+      "word": "chánh",
+      "start_ms": 2380,
+      "end_ms": 3020
+    },
+    {
+      "word": "đất",
+      "start_ms": 3020,
+      "end_ms": 3120
+    },
+    {
+      "word": "những",
+      "start_ms": 3120,
+      "end_ms": 3220
+    },
+    {
+      "word": "quyết",
+      "start_ms": 3220,
+      "end_ms": 3460
+    },
+    {
+      "word": "định",
+      "start_ms": 3460,
+      "end_ms": 3580
+    },
+    {
+      "word": "tại",
+      "start_ms": 3580,
+      "end_ms": 3740
+    },
+    {
+      "word": "chính",
+      "start_ms": 3740,
+      "end_ms": 3960
+    },
+    {
+      "word": "bốc",
+      "start_ms": 3960,
+      "end_ms": 4180
+    },
+    {
+      "word": "đồng",
+      "start_ms": 4180,
+      "end_ms": 4340
+    },
+    {
+      "word": "không",
+      "start_ms": 4340,
+      "end_ms": 4580
+    },
+    {
+      "word": "thể",
+      "start_ms": 4580,
+      "end_ms": 4740
+    },
+    {
+      "word": "đảm",
+      "start_ms": 4740,
+      "end_ms": 4960
+    },
+    {
+      "word": "rượt.",
+      "start_ms": 4960,
+      "end_ms": 5200
+    }
+  ]
+}

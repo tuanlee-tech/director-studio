@@ -1,0 +1,114 @@
+{
+  "audio_file": "S137_narration.wav",
+  "duration_ms": 4320,
+  "word_count": 21,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Đó",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "chính",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "là",
+      "start_ms": 340,
+      "end_ms": 500
+    },
+    {
+      "word": "sự",
+      "start_ms": 500,
+      "end_ms": 640
+    },
+    {
+      "word": "cân",
+      "start_ms": 640,
+      "end_ms": 820
+    },
+    {
+      "word": "bằng",
+      "start_ms": 820,
+      "end_ms": 980
+    },
+    {
+      "word": "hoàn",
+      "start_ms": 980,
+      "end_ms": 1180
+    },
+    {
+      "word": "hảo",
+      "start_ms": 1180,
+      "end_ms": 1380
+    },
+    {
+      "word": "giữa",
+      "start_ms": 1380,
+      "end_ms": 1580
+    },
+    {
+      "word": "hạnh",
+      "start_ms": 1580,
+      "end_ms": 1660
+    },
+    {
+      "word": "phúc",
+      "start_ms": 1660,
+      "end_ms": 1940
+    },
+    {
+      "word": "ở",
+      "start_ms": 1940,
+      "end_ms": 2120
+    },
+    {
+      "word": "hiện",
+      "start_ms": 2120,
+      "end_ms": 2220
+    },
+    {
+      "word": "tại",
+      "start_ms": 2220,
+      "end_ms": 2440
+    },
+    {
+      "word": "và",
+      "start_ms": 2440,
+      "end_ms": 2980
+    },
+    {
+      "word": "sự",
+      "start_ms": 2980,
+      "end_ms": 3140
+    },
+    {
+      "word": "thiện",
+      "start_ms": 3140,
+      "end_ms": 3360
+    },
+    {
+      "word": "vượt",
+      "start_ms": 3360,
+      "end_ms": 3580
+    },
+    {
+      "word": "ở",
+      "start_ms": 3580,
+      "end_ms": 3660
+    },
+    {
+      "word": "tương",
+      "start_ms": 3660,
+      "end_ms": 3840
+    },
+    {
+      "word": "lai.",
+      "start_ms": 3840,
+      "end_ms": 4140
+    }
+  ]
+}

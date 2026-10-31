@@ -1,0 +1,139 @@
+{
+  "audio_file": "S108_narration.wav",
+  "duration_ms": 5440,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Thực",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "tế",
+      "start_ms": 200,
+      "end_ms": 300
+    },
+    {
+      "word": "vũ",
+      "start_ms": 300,
+      "end_ms": 480
+    },
+    {
+      "word": "phăng",
+      "start_ms": 480,
+      "end_ms": 640
+    },
+    {
+      "word": "là",
+      "start_ms": 640,
+      "end_ms": 860
+    },
+    {
+      "word": "người",
+      "start_ms": 860,
+      "end_ms": 1080
+    },
+    {
+      "word": "khác",
+      "start_ms": 1080,
+      "end_ms": 1320
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 1320,
+      "end_ms": 1540
+    },
+    {
+      "word": "quan",
+      "start_ms": 1540,
+      "end_ms": 1700
+    },
+    {
+      "word": "tâm",
+      "start_ms": 1700,
+      "end_ms": 1900
+    },
+    {
+      "word": "đến",
+      "start_ms": 1900,
+      "end_ms": 2040
+    },
+    {
+      "word": "những",
+      "start_ms": 2040,
+      "end_ms": 2220
+    },
+    {
+      "word": "gì",
+      "start_ms": 2220,
+      "end_ms": 2360
+    },
+    {
+      "word": "bạn",
+      "start_ms": 2360,
+      "end_ms": 2540
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 2540,
+      "end_ms": 2780
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 2780,
+      "end_ms": 3060
+    },
+    {
+      "word": "trong",
+      "start_ms": 3060,
+      "end_ms": 3200
+    },
+    {
+      "word": "vài",
+      "start_ms": 3200,
+      "end_ms": 3460
+    },
+    {
+      "word": "dây,",
+      "start_ms": 3460,
+      "end_ms": 3660
+    },
+    {
+      "word": "rồi",
+      "start_ms": 4100,
+      "end_ms": 4200
+    },
+    {
+      "word": "họ",
+      "start_ms": 4200,
+      "end_ms": 4360
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 4360,
+      "end_ms": 4520
+    },
+    {
+      "word": "quên",
+      "start_ms": 4520,
+      "end_ms": 4760
+    },
+    {
+      "word": "nghe",
+      "start_ms": 4760,
+      "end_ms": 4920
+    },
+    {
+      "word": "lập",
+      "start_ms": 4920,
+      "end_ms": 5060
+    },
+    {
+      "word": "tức.",
+      "start_ms": 5060,
+      "end_ms": 5240
+    }
+  ]
+}

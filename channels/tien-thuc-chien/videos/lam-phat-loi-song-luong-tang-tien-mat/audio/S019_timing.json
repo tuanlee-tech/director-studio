@@ -1,0 +1,129 @@
+{
+  "audio_file": "S019_narration.wav",
+  "duration_ms": 4960,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Mỗi",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "ngày",
+      "start_ms": 240,
+      "end_ms": 340
+    },
+    {
+      "word": "trình",
+      "start_ms": 340,
+      "end_ms": 560
+    },
+    {
+      "word": "lịch",
+      "start_ms": 560,
+      "end_ms": 740
+    },
+    {
+      "word": "50",
+      "start_ms": 740,
+      "end_ms": 980
+    },
+    {
+      "word": ".000",
+      "start_ms": 980,
+      "end_ms": 1140
+    },
+    {
+      "word": "đồng",
+      "start_ms": 1140,
+      "end_ms": 1400
+    },
+    {
+      "word": "ngay",
+      "start_ms": 1400,
+      "end_ms": 1580
+    },
+    {
+      "word": "có",
+      "start_ms": 1580,
+      "end_ms": 1680
+    },
+    {
+      "word": "vẻ",
+      "start_ms": 1680,
+      "end_ms": 1840
+    },
+    {
+      "word": "vô",
+      "start_ms": 1840,
+      "end_ms": 2040
+    },
+    {
+      "word": "hại,",
+      "start_ms": 2040,
+      "end_ms": 2240
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 2660,
+      "end_ms": 2740
+    },
+    {
+      "word": "một",
+      "start_ms": 2740,
+      "end_ms": 2920
+    },
+    {
+      "word": "tháng",
+      "start_ms": 2920,
+      "end_ms": 3120
+    },
+    {
+      "word": "nó",
+      "start_ms": 3120,
+      "end_ms": 3300
+    },
+    {
+      "word": "lấy",
+      "start_ms": 3300,
+      "end_ms": 3520
+    },
+    {
+      "word": "đi",
+      "start_ms": 3520,
+      "end_ms": 3620
+    },
+    {
+      "word": "của",
+      "start_ms": 3620,
+      "end_ms": 3800
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3800,
+      "end_ms": 3980
+    },
+    {
+      "word": "thêm",
+      "start_ms": 3980,
+      "end_ms": 4200
+    },
+    {
+      "word": "một",
+      "start_ms": 4200,
+      "end_ms": 4340
+    },
+    {
+      "word": "chiều",
+      "start_ms": 4340,
+      "end_ms": 4500
+    },
+    {
+      "word": "dưới.",
+      "start_ms": 4500,
+      "end_ms": 4780
+    }
+  ]
+}

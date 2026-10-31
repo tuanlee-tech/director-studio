@@ -1,0 +1,139 @@
+{
+  "audio_file": "S093_narration.wav",
+  "duration_ms": 6560,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Và",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "nếu",
+      "start_ms": 180,
+      "end_ms": 320
+    },
+    {
+      "word": "kênh",
+      "start_ms": 320,
+      "end_ms": 560
+    },
+    {
+      "word": "chì",
+      "start_ms": 560,
+      "end_ms": 700
+    },
+    {
+      "word": "15,",
+      "start_ms": 700,
+      "end_ms": 860
+    },
+    {
+      "word": "nhờ",
+      "start_ms": 1360,
+      "end_ms": 1540
+    },
+    {
+      "word": "sức",
+      "start_ms": 1540,
+      "end_ms": 1720
+    },
+    {
+      "word": "mạnh",
+      "start_ms": 1720,
+      "end_ms": 1820
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 1820,
+      "end_ms": 2060
+    },
+    {
+      "word": "diệu",
+      "start_ms": 2060,
+      "end_ms": 2240
+    },
+    {
+      "word": "của",
+      "start_ms": 2240,
+      "end_ms": 2380
+    },
+    {
+      "word": "Lái",
+      "start_ms": 2380,
+      "end_ms": 2520
+    },
+    {
+      "word": "Kép,",
+      "start_ms": 2520,
+      "end_ms": 2800
+    },
+    {
+      "word": "số",
+      "start_ms": 3160,
+      "end_ms": 3400
+    },
+    {
+      "word": "tiền",
+      "start_ms": 3400,
+      "end_ms": 3620
+    },
+    {
+      "word": "5",
+      "start_ms": 3620,
+      "end_ms": 3780
+    },
+    {
+      "word": "triệu",
+      "start_ms": 3780,
+      "end_ms": 4059
+    },
+    {
+      "word": "mỗi",
+      "start_ms": 4059,
+      "end_ms": 4220
+    },
+    {
+      "word": "tháng",
+      "start_ms": 4220,
+      "end_ms": 4500
+    },
+    {
+      "word": "đã",
+      "start_ms": 4500,
+      "end_ms": 4680
+    },
+    {
+      "word": "nở",
+      "start_ms": 4680,
+      "end_ms": 4960
+    },
+    {
+      "word": "ra",
+      "start_ms": 4960,
+      "end_ms": 5120
+    },
+    {
+      "word": "hơn",
+      "start_ms": 5120,
+      "end_ms": 5340
+    },
+    {
+      "word": "100",
+      "start_ms": 5340,
+      "end_ms": 5900
+    },
+    {
+      "word": "triệu",
+      "start_ms": 5900,
+      "end_ms": 6180
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 6180,
+      "end_ms": 6360
+    }
+  ]
+}

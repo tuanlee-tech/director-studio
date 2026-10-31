@@ -1,4 +1,5 @@
 import json, re, sys, os
+from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 
 KNOWN_PREFIXES = [
@@ -13,8 +14,21 @@ KNOWN_PREFIXES = [
 
 pattern = re.compile(rf"^({'|'.join(KNOWN_PREFIXES)})(\s+[^\:]+)?:?\s*", re.IGNORECASE)
 
-def check_rules(channel="tien-thuc-chien", video="thoat-bay-no-the-tin-dung"):
+def check_rules(channel="tien-thuc-chien", video=None):
     errors = []
+
+    # If video is not specified, read from config.json or default
+    if not video:
+        cfg_path = f"channels/{channel}/config.json"
+        if os.path.exists(cfg_path):
+            try:
+                with open(cfg_path, "r", encoding="utf-8") as f:
+                    cfg = json.load(f)
+                video = cfg.get("active_video", "thoat-bay-no-the-tin-dung")
+            except Exception:
+                video = "thoat-bay-no-the-tin-dung"
+        else:
+            video = "thoat-bay-no-the-tin-dung"
 
     comp_path = f"channels/{channel}/videos/{video}/assets/remotion-composition.json"
     props_path = "studio/remotion/current_props.json"
@@ -49,9 +63,11 @@ def check_rules(channel="tien-thuc-chien", video="thoat-bay-no-the-tin-dung"):
                 errors.append(f"[RULE 2 VIOLATION] Scene {sid} in props has component prefix in beat: '{beat}'")
 
     # Check 3: Check GFX fallback coverage in DynamicGraphic.tsx
-    if os.path.exists(dg_path) and os.path.exists(comp_path):
-        with open(dg_path, "r", encoding="utf-8") as f:
-            dg_code = f.read()
+    components_dir = Path(f"channels/{channel}/template/components")
+    if components_dir.exists() and os.path.exists(comp_path):
+        dg_code = ""
+        for f in components_dir.glob("DynamicGraphic*.tsx"):
+            dg_code += f.read_text(encoding="utf-8") + "\n"
 
         with open(comp_path, "r", encoding="utf-8") as f:
             cdata = json.load(f)
@@ -85,5 +101,11 @@ def check_rules(channel="tien-thuc-chien", video="thoat-bay-no-the-tin-dung"):
         return True
 
 if __name__ == "__main__":
-    success = check_rules()
+    import argparse
+    parser = argparse.ArgumentParser(description="Audit Remotion GFX rules")
+    parser.add_argument("video", nargs="?", default=None, help="Video slug")
+    parser.add_argument("--channel", default="tien-thuc-chien", help="Channel ID")
+    args = parser.parse_args()
+
+    success = check_rules(channel=args.channel, video=args.video)
     sys.exit(0 if success else 1)

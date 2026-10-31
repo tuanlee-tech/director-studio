@@ -1,0 +1,144 @@
+{
+  "audio_file": "S007_narration.wav",
+  "duration_ms": 6000,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Trong",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "tại",
+      "start_ms": 220,
+      "end_ms": 340
+    },
+    {
+      "word": "chính",
+      "start_ms": 340,
+      "end_ms": 520
+    },
+    {
+      "word": "cá",
+      "start_ms": 520,
+      "end_ms": 740
+    },
+    {
+      "word": "nhân,",
+      "start_ms": 740,
+      "end_ms": 960
+    },
+    {
+      "word": "đây",
+      "start_ms": 1360,
+      "end_ms": 1460
+    },
+    {
+      "word": "được",
+      "start_ms": 1460,
+      "end_ms": 1580
+    },
+    {
+      "word": "gọi",
+      "start_ms": 1580,
+      "end_ms": 1800
+    },
+    {
+      "word": "là",
+      "start_ms": 1800,
+      "end_ms": 2020
+    },
+    {
+      "word": "trước",
+      "start_ms": 2020,
+      "end_ms": 2240
+    },
+    {
+      "word": "bấy",
+      "start_ms": 2240,
+      "end_ms": 2460
+    },
+    {
+      "word": "lạm",
+      "start_ms": 2460,
+      "end_ms": 2680
+    },
+    {
+      "word": "phát",
+      "start_ms": 2680,
+      "end_ms": 2780
+    },
+    {
+      "word": "lôi",
+      "start_ms": 2780,
+      "end_ms": 2960
+    },
+    {
+      "word": "sống",
+      "start_ms": 2960,
+      "end_ms": 3240
+    },
+    {
+      "word": "thứ",
+      "start_ms": 3240,
+      "end_ms": 3780
+    },
+    {
+      "word": "ấm",
+      "start_ms": 3780,
+      "end_ms": 4000
+    },
+    {
+      "word": "thầm",
+      "start_ms": 4000,
+      "end_ms": 4180
+    },
+    {
+      "word": "chia",
+      "start_ms": 4180,
+      "end_ms": 4320
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 4320,
+      "end_ms": 4640
+    },
+    {
+      "word": "mọi",
+      "start_ms": 4640,
+      "end_ms": 4820
+    },
+    {
+      "word": "thành",
+      "start_ms": 4820,
+      "end_ms": 4980
+    },
+    {
+      "word": "quả",
+      "start_ms": 4980,
+      "end_ms": 5200
+    },
+    {
+      "word": "lâu",
+      "start_ms": 5200,
+      "end_ms": 5340
+    },
+    {
+      "word": "động",
+      "start_ms": 5340,
+      "end_ms": 5520
+    },
+    {
+      "word": "của",
+      "start_ms": 5520,
+      "end_ms": 5580
+    },
+    {
+      "word": "bạn.",
+      "start_ms": 5580,
+      "end_ms": 5760
+    }
+  ]
+}

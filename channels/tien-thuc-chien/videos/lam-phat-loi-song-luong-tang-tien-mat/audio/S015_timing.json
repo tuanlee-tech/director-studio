@@ -1,0 +1,109 @@
+{
+  "audio_file": "S015_narration.wav",
+  "duration_ms": 4080,
+  "word_count": 20,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Chí",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "riêng",
+      "start_ms": 180,
+      "end_ms": 460
+    },
+    {
+      "word": "việc",
+      "start_ms": 460,
+      "end_ms": 620
+    },
+    {
+      "word": "nân",
+      "start_ms": 620,
+      "end_ms": 820
+    },
+    {
+      "word": "cấp",
+      "start_ms": 820,
+      "end_ms": 1000
+    },
+    {
+      "word": "chỗ",
+      "start_ms": 1000,
+      "end_ms": 1200
+    },
+    {
+      "word": "ở",
+      "start_ms": 1200,
+      "end_ms": 1360
+    },
+    {
+      "word": "đã",
+      "start_ms": 1360,
+      "end_ms": 1540
+    },
+    {
+      "word": "nút",
+      "start_ms": 1540,
+      "end_ms": 1860
+    },
+    {
+      "word": "chừng",
+      "start_ms": 1860,
+      "end_ms": 2040
+    },
+    {
+      "word": "60",
+      "start_ms": 2040,
+      "end_ms": 2300
+    },
+    {
+      "word": "trộ",
+      "start_ms": 2300,
+      "end_ms": 2520
+    },
+    {
+      "word": "đồng",
+      "start_ms": 2520,
+      "end_ms": 2680
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2680,
+      "end_ms": 2900
+    },
+    {
+      "word": "trình",
+      "start_ms": 2900,
+      "end_ms": 3080
+    },
+    {
+      "word": "lạc",
+      "start_ms": 3080,
+      "end_ms": 3320
+    },
+    {
+      "word": "1",
+      "start_ms": 3320,
+      "end_ms": 3420
+    },
+    {
+      "word": "năm",
+      "start_ms": 3420,
+      "end_ms": 3600
+    },
+    {
+      "word": "của",
+      "start_ms": 3600,
+      "end_ms": 3740
+    },
+    {
+      "word": "bạn.",
+      "start_ms": 3740,
+      "end_ms": 3920
+    }
+  ]
+}

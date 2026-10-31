@@ -1,0 +1,144 @@
+{
+  "audio_file": "S083_narration.wav",
+  "duration_ms": 5840,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bởi",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "vì",
+      "start_ms": 260,
+      "end_ms": 360
+    },
+    {
+      "word": "khi",
+      "start_ms": 360,
+      "end_ms": 520
+    },
+    {
+      "word": "tháng",
+      "start_ms": 520,
+      "end_ms": 660
+    },
+    {
+      "word": "sau",
+      "start_ms": 660,
+      "end_ms": 800
+    },
+    {
+      "word": "tới,",
+      "start_ms": 800,
+      "end_ms": 1120
+    },
+    {
+      "word": "nó",
+      "start_ms": 1460,
+      "end_ms": 1540
+    },
+    {
+      "word": "lại",
+      "start_ms": 1540,
+      "end_ms": 1660
+    },
+    {
+      "word": "biến",
+      "start_ms": 1660,
+      "end_ms": 1880
+    },
+    {
+      "word": "thành",
+      "start_ms": 1880,
+      "end_ms": 2020
+    },
+    {
+      "word": "hiện",
+      "start_ms": 2020,
+      "end_ms": 2160
+    },
+    {
+      "word": "tại",
+      "start_ms": 2160,
+      "end_ms": 2380
+    },
+    {
+      "word": "và",
+      "start_ms": 2380,
+      "end_ms": 2880
+    },
+    {
+      "word": "tiên",
+      "start_ms": 2880,
+      "end_ms": 3060
+    },
+    {
+      "word": "kiến",
+      "start_ms": 3060,
+      "end_ms": 3240
+    },
+    {
+      "word": "này",
+      "start_ms": 3240,
+      "end_ms": 3400
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 3400,
+      "end_ms": 3560
+    },
+    {
+      "word": "tiếp",
+      "start_ms": 3560,
+      "end_ms": 3740
+    },
+    {
+      "word": "tục",
+      "start_ms": 3740,
+      "end_ms": 4000
+    },
+    {
+      "word": "thôi",
+      "start_ms": 4000,
+      "end_ms": 4260
+    },
+    {
+      "word": "thúc",
+      "start_ms": 4260,
+      "end_ms": 4540
+    },
+    {
+      "word": "bạn",
+      "start_ms": 4540,
+      "end_ms": 4720
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 4720,
+      "end_ms": 4900
+    },
+    {
+      "word": "sạch",
+      "start_ms": 4900,
+      "end_ms": 5100
+    },
+    {
+      "word": "xuất",
+      "start_ms": 5100,
+      "end_ms": 5280
+    },
+    {
+      "word": "hiện",
+      "start_ms": 5280,
+      "end_ms": 5380
+    },
+    {
+      "word": "đó.",
+      "start_ms": 5380,
+      "end_ms": 5560
+    }
+  ]
+}

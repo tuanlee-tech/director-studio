@@ -1,0 +1,144 @@
+{
+  "audio_file": "S113_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 27,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "sự",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "bình",
+      "start_ms": 260,
+      "end_ms": 440
+    },
+    {
+      "word": "yên",
+      "start_ms": 440,
+      "end_ms": 620
+    },
+    {
+      "word": "trong",
+      "start_ms": 620,
+      "end_ms": 740
+    },
+    {
+      "word": "tâm",
+      "start_ms": 740,
+      "end_ms": 940
+    },
+    {
+      "word": "hồn",
+      "start_ms": 940,
+      "end_ms": 1140
+    },
+    {
+      "word": "bắt",
+      "start_ms": 1140,
+      "end_ms": 1260
+    },
+    {
+      "word": "đầu",
+      "start_ms": 1260,
+      "end_ms": 1360
+    },
+    {
+      "word": "từ",
+      "start_ms": 1360,
+      "end_ms": 1500
+    },
+    {
+      "word": "dây",
+      "start_ms": 1500,
+      "end_ms": 1680
+    },
+    {
+      "word": "phút",
+      "start_ms": 1680,
+      "end_ms": 1840
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1840,
+      "end_ms": 2080
+    },
+    {
+      "word": "giám",
+      "start_ms": 2080,
+      "end_ms": 2300
+    },
+    {
+      "word": "sông",
+      "start_ms": 2300,
+      "end_ms": 2460
+    },
+    {
+      "word": "giới",
+      "start_ms": 2460,
+      "end_ms": 2700
+    },
+    {
+      "word": "mức",
+      "start_ms": 2700,
+      "end_ms": 2840
+    },
+    {
+      "word": "thu",
+      "start_ms": 2840,
+      "end_ms": 2960
+    },
+    {
+      "word": "nhập",
+      "start_ms": 2960,
+      "end_ms": 3160
+    },
+    {
+      "word": "của",
+      "start_ms": 3160,
+      "end_ms": 3260
+    },
+    {
+      "word": "mình",
+      "start_ms": 3260,
+      "end_ms": 3440
+    },
+    {
+      "word": "mà",
+      "start_ms": 3440,
+      "end_ms": 3960
+    },
+    {
+      "word": "không",
+      "start_ms": 3960,
+      "end_ms": 4180
+    },
+    {
+      "word": "hề",
+      "start_ms": 4180,
+      "end_ms": 4340
+    },
+    {
+      "word": "cảm",
+      "start_ms": 4340,
+      "end_ms": 4480
+    },
+    {
+      "word": "thấy",
+      "start_ms": 4480,
+      "end_ms": 4680
+    },
+    {
+      "word": "xấu",
+      "start_ms": 4680,
+      "end_ms": 4880
+    },
+    {
+      "word": "hộ.",
+      "start_ms": 4880,
+      "end_ms": 5040
+    }
+  ]
+}

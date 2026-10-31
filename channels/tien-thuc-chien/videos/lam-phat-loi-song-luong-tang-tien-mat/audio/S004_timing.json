@@ -1,0 +1,99 @@
+{
+  "audio_file": "S004_narration.wav",
+  "duration_ms": 4160,
+  "word_count": 18,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Thế",
+      "start_ms": 0,
+      "end_ms": 160
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 160,
+      "end_ms": 240
+    },
+    {
+      "word": "cuối",
+      "start_ms": 240,
+      "end_ms": 500
+    },
+    {
+      "word": "tháng",
+      "start_ms": 500,
+      "end_ms": 760
+    },
+    {
+      "word": "mở",
+      "start_ms": 760,
+      "end_ms": 980
+    },
+    {
+      "word": "tài",
+      "start_ms": 980,
+      "end_ms": 1120
+    },
+    {
+      "word": "khoản,",
+      "start_ms": 1120,
+      "end_ms": 1360
+    },
+    {
+      "word": "số",
+      "start_ms": 1700,
+      "end_ms": 1860
+    },
+    {
+      "word": "giữ",
+      "start_ms": 1860,
+      "end_ms": 2080
+    },
+    {
+      "word": "thực",
+      "start_ms": 2080,
+      "end_ms": 2180
+    },
+    {
+      "word": "tế",
+      "start_ms": 2180,
+      "end_ms": 2520
+    },
+    {
+      "word": "vẫn",
+      "start_ms": 2520,
+      "end_ms": 2720
+    },
+    {
+      "word": "là",
+      "start_ms": 2720,
+      "end_ms": 2900
+    },
+    {
+      "word": "con",
+      "start_ms": 2900,
+      "end_ms": 3080
+    },
+    {
+      "word": "số",
+      "start_ms": 3080,
+      "end_ms": 3300
+    },
+    {
+      "word": "không",
+      "start_ms": 3300,
+      "end_ms": 3500
+    },
+    {
+      "word": "chọn",
+      "start_ms": 3500,
+      "end_ms": 3720
+    },
+    {
+      "word": "chính.",
+      "start_ms": 3720,
+      "end_ms": 3920
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "audio_file": "S141_narration.wav",
+  "duration_ms": 5280,
+  "word_count": 23,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Tại",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "khoảng",
+      "start_ms": 180,
+      "end_ms": 380
+    },
+    {
+      "word": "thứ",
+      "start_ms": 380,
+      "end_ms": 500
+    },
+    {
+      "word": "nhất,",
+      "start_ms": 500,
+      "end_ms": 640
+    },
+    {
+      "word": "giữ",
+      "start_ms": 840,
+      "end_ms": 960
+    },
+    {
+      "word": "nguyên",
+      "start_ms": 960,
+      "end_ms": 1200
+    },
+    {
+      "word": "10",
+      "start_ms": 1200,
+      "end_ms": 1340
+    },
+    {
+      "word": "triệu",
+      "start_ms": 1340,
+      "end_ms": 1600
+    },
+    {
+      "word": "cho",
+      "start_ms": 1600,
+      "end_ms": 1740
+    },
+    {
+      "word": "ghi",
+      "start_ms": 1740,
+      "end_ms": 1920
+    },
+    {
+      "word": "phí",
+      "start_ms": 1920,
+      "end_ms": 2120
+    },
+    {
+      "word": "sinh",
+      "start_ms": 2120,
+      "end_ms": 2380
+    },
+    {
+      "word": "hoạt",
+      "start_ms": 2380,
+      "end_ms": 2520
+    },
+    {
+      "word": "căn",
+      "start_ms": 2520,
+      "end_ms": 2700
+    },
+    {
+      "word": "bản,",
+      "start_ms": 2700,
+      "end_ms": 2900
+    },
+    {
+      "word": "tiền",
+      "start_ms": 3260,
+      "end_ms": 3360
+    },
+    {
+      "word": "nhà,",
+      "start_ms": 3360,
+      "end_ms": 3560
+    },
+    {
+      "word": "tiền",
+      "start_ms": 3880,
+      "end_ms": 4000
+    },
+    {
+      "word": "ăn,",
+      "start_ms": 4000,
+      "end_ms": 4160
+    },
+    {
+      "word": "hóa",
+      "start_ms": 4540,
+      "end_ms": 4640
+    },
+    {
+      "word": "đơn",
+      "start_ms": 4640,
+      "end_ms": 4720
+    },
+    {
+      "word": "định",
+      "start_ms": 4720,
+      "end_ms": 4900
+    },
+    {
+      "word": "nước.",
+      "start_ms": 4900,
+      "end_ms": 5020
+    }
+  ]
+}

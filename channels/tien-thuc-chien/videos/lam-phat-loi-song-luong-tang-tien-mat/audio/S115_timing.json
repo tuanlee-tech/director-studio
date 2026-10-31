@@ -1,0 +1,119 @@
+{
+  "audio_file": "S115_narration.wav",
+  "duration_ms": 4800,
+  "word_count": 22,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Câu",
+      "start_ms": 0,
+      "end_ms": 200
+    },
+    {
+      "word": "trở",
+      "start_ms": 200,
+      "end_ms": 340
+    },
+    {
+      "word": "lời",
+      "start_ms": 340,
+      "end_ms": 500
+    },
+    {
+      "word": "không",
+      "start_ms": 500,
+      "end_ms": 600
+    },
+    {
+      "word": "phải",
+      "start_ms": 600,
+      "end_ms": 820
+    },
+    {
+      "word": "là",
+      "start_ms": 820,
+      "end_ms": 1000
+    },
+    {
+      "word": "sống",
+      "start_ms": 1000,
+      "end_ms": 1240
+    },
+    {
+      "word": "khám",
+      "start_ms": 1240,
+      "end_ms": 1500
+    },
+    {
+      "word": "khủ",
+      "start_ms": 1500,
+      "end_ms": 1720
+    },
+    {
+      "word": "cực",
+      "start_ms": 1720,
+      "end_ms": 2060
+    },
+    {
+      "word": "đoán,",
+      "start_ms": 2060,
+      "end_ms": 2340
+    },
+    {
+      "word": "mà",
+      "start_ms": 2740,
+      "end_ms": 2820
+    },
+    {
+      "word": "là",
+      "start_ms": 2820,
+      "end_ms": 2980
+    },
+    {
+      "word": "thiết",
+      "start_ms": 2980,
+      "end_ms": 3220
+    },
+    {
+      "word": "lập",
+      "start_ms": 3220,
+      "end_ms": 3400
+    },
+    {
+      "word": "một",
+      "start_ms": 3400,
+      "end_ms": 3560
+    },
+    {
+      "word": "hệ",
+      "start_ms": 3560,
+      "end_ms": 3660
+    },
+    {
+      "word": "thống",
+      "start_ms": 3660,
+      "end_ms": 3900
+    },
+    {
+      "word": "bảo",
+      "start_ms": 3900,
+      "end_ms": 4100
+    },
+    {
+      "word": "vệ",
+      "start_ms": 4100,
+      "end_ms": 4260
+    },
+    {
+      "word": "tự",
+      "start_ms": 4260,
+      "end_ms": 4440
+    },
+    {
+      "word": "động.",
+      "start_ms": 4440,
+      "end_ms": 4620
+    }
+  ]
+}

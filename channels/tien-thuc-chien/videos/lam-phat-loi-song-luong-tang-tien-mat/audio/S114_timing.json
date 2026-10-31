@@ -1,0 +1,139 @@
+{
+  "audio_file": "S114_narration.wav",
+  "duration_ms": 5040,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Vậy",
+      "start_ms": 0,
+      "end_ms": 220
+    },
+    {
+      "word": "làm",
+      "start_ms": 220,
+      "end_ms": 340
+    },
+    {
+      "word": "thế",
+      "start_ms": 340,
+      "end_ms": 480
+    },
+    {
+      "word": "nào",
+      "start_ms": 480,
+      "end_ms": 660
+    },
+    {
+      "word": "để",
+      "start_ms": 660,
+      "end_ms": 800
+    },
+    {
+      "word": "chúng",
+      "start_ms": 800,
+      "end_ms": 920
+    },
+    {
+      "word": "ta",
+      "start_ms": 920,
+      "end_ms": 1080
+    },
+    {
+      "word": "vừa",
+      "start_ms": 1080,
+      "end_ms": 1320
+    },
+    {
+      "word": "tận",
+      "start_ms": 1320,
+      "end_ms": 1500
+    },
+    {
+      "word": "hưởng",
+      "start_ms": 1500,
+      "end_ms": 1680
+    },
+    {
+      "word": "thành",
+      "start_ms": 1680,
+      "end_ms": 1860
+    },
+    {
+      "word": "quá",
+      "start_ms": 1860,
+      "end_ms": 2040
+    },
+    {
+      "word": "tăng",
+      "start_ms": 2040,
+      "end_ms": 2260
+    },
+    {
+      "word": "lượng",
+      "start_ms": 2260,
+      "end_ms": 2460
+    },
+    {
+      "word": "Vừa",
+      "start_ms": 2460,
+      "end_ms": 3000
+    },
+    {
+      "word": "không",
+      "start_ms": 3000,
+      "end_ms": 3160
+    },
+    {
+      "word": "bị",
+      "start_ms": 3160,
+      "end_ms": 3320
+    },
+    {
+      "word": "cuốn",
+      "start_ms": 3320,
+      "end_ms": 3540
+    },
+    {
+      "word": "vào",
+      "start_ms": 3540,
+      "end_ms": 3700
+    },
+    {
+      "word": "cộng",
+      "start_ms": 3700,
+      "end_ms": 3940
+    },
+    {
+      "word": "máy",
+      "start_ms": 3940,
+      "end_ms": 4080
+    },
+    {
+      "word": "lạm",
+      "start_ms": 4080,
+      "end_ms": 4260
+    },
+    {
+      "word": "phát",
+      "start_ms": 4260,
+      "end_ms": 4380
+    },
+    {
+      "word": "lôi",
+      "start_ms": 4380,
+      "end_ms": 4500
+    },
+    {
+      "word": "sống",
+      "start_ms": 4500,
+      "end_ms": 4680
+    },
+    {
+      "word": "này",
+      "start_ms": 4680,
+      "end_ms": 4840
+    }
+  ]
+}

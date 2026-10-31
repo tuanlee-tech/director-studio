@@ -1,0 +1,129 @@
+{
+  "audio_file": "S064_narration.wav",
+  "duration_ms": 4960,
+  "word_count": 24,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "nó",
+      "start_ms": 0,
+      "end_ms": 180
+    },
+    {
+      "word": "mang",
+      "start_ms": 180,
+      "end_ms": 360
+    },
+    {
+      "word": "tên",
+      "start_ms": 360,
+      "end_ms": 520
+    },
+    {
+      "word": "hiệu",
+      "start_ms": 520,
+      "end_ms": 680
+    },
+    {
+      "word": "ứng",
+      "start_ms": 680,
+      "end_ms": 920
+    },
+    {
+      "word": "đi",
+      "start_ms": 920,
+      "end_ms": 1040
+    },
+    {
+      "word": "đơ",
+      "start_ms": 1040,
+      "end_ms": 1200
+    },
+    {
+      "word": "rồ,",
+      "start_ms": 1200,
+      "end_ms": 1440
+    },
+    {
+      "word": "mắt",
+      "start_ms": 1920,
+      "end_ms": 2060
+    },
+    {
+      "word": "nguồn",
+      "start_ms": 2060,
+      "end_ms": 2280
+    },
+    {
+      "word": "từ",
+      "start_ms": 2280,
+      "end_ms": 2400
+    },
+    {
+      "word": "câu",
+      "start_ms": 2400,
+      "end_ms": 2620
+    },
+    {
+      "word": "chuyện",
+      "start_ms": 2620,
+      "end_ms": 2780
+    },
+    {
+      "word": "có",
+      "start_ms": 2780,
+      "end_ms": 2940
+    },
+    {
+      "word": "thật",
+      "start_ms": 2940,
+      "end_ms": 3100
+    },
+    {
+      "word": "của",
+      "start_ms": 3100,
+      "end_ms": 3200
+    },
+    {
+      "word": "chết",
+      "start_ms": 3200,
+      "end_ms": 3380
+    },
+    {
+      "word": "ra",
+      "start_ms": 3380,
+      "end_ms": 3520
+    },
+    {
+      "word": "người",
+      "start_ms": 3520,
+      "end_ms": 3740
+    },
+    {
+      "word": "pháp",
+      "start_ms": 3740,
+      "end_ms": 4000
+    },
+    {
+      "word": "và",
+      "start_ms": 4000,
+      "end_ms": 4120
+    },
+    {
+      "word": "thế",
+      "start_ms": 4120,
+      "end_ms": 4220
+    },
+    {
+      "word": "kỷ",
+      "start_ms": 4220,
+      "end_ms": 4360
+    },
+    {
+      "word": "18.",
+      "start_ms": 4360,
+      "end_ms": 4620
+    }
+  ]
+}

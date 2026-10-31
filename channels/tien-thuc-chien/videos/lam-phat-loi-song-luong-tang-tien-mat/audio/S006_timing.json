@@ -1,0 +1,164 @@
+{
+  "audio_file": "S006_narration.wav",
+  "duration_ms": 6880,
+  "word_count": 31,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Ngịch",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "lý",
+      "start_ms": 240,
+      "end_ms": 380
+    },
+    {
+      "word": "ở",
+      "start_ms": 380,
+      "end_ms": 520
+    },
+    {
+      "word": "chỗ,",
+      "start_ms": 520,
+      "end_ms": 740
+    },
+    {
+      "word": "khi",
+      "start_ms": 1140,
+      "end_ms": 1340
+    },
+    {
+      "word": "thu",
+      "start_ms": 1340,
+      "end_ms": 1480
+    },
+    {
+      "word": "nhập",
+      "start_ms": 1480,
+      "end_ms": 1660
+    },
+    {
+      "word": "của",
+      "start_ms": 1660,
+      "end_ms": 1780
+    },
+    {
+      "word": "bạn",
+      "start_ms": 1780,
+      "end_ms": 1980
+    },
+    {
+      "word": "tăng",
+      "start_ms": 1980,
+      "end_ms": 2180
+    },
+    {
+      "word": "lý",
+      "start_ms": 2180,
+      "end_ms": 2260
+    },
+    {
+      "word": "một",
+      "start_ms": 2260,
+      "end_ms": 2400
+    },
+    {
+      "word": "bật,",
+      "start_ms": 2400,
+      "end_ms": 2640
+    },
+    {
+      "word": "thì",
+      "start_ms": 3020,
+      "end_ms": 3100
+    },
+    {
+      "word": "mức",
+      "start_ms": 3100,
+      "end_ms": 3300
+    },
+    {
+      "word": "sống",
+      "start_ms": 3300,
+      "end_ms": 3540
+    },
+    {
+      "word": "và",
+      "start_ms": 3540,
+      "end_ms": 3820
+    },
+    {
+      "word": "các",
+      "start_ms": 3820,
+      "end_ms": 4040
+    },
+    {
+      "word": "khoảng",
+      "start_ms": 4040,
+      "end_ms": 4220
+    },
+    {
+      "word": "chi",
+      "start_ms": 4220,
+      "end_ms": 4340
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 4340,
+      "end_ms": 4600
+    },
+    {
+      "word": "cũng",
+      "start_ms": 4600,
+      "end_ms": 4720
+    },
+    {
+      "word": "là",
+      "start_ms": 4720,
+      "end_ms": 4860
+    },
+    {
+      "word": "tức",
+      "start_ms": 4860,
+      "end_ms": 5120
+    },
+    {
+      "word": "tăng",
+      "start_ms": 5120,
+      "end_ms": 5420
+    },
+    {
+      "word": "theo",
+      "start_ms": 5420,
+      "end_ms": 5580
+    },
+    {
+      "word": "đúng",
+      "start_ms": 5580,
+      "end_ms": 5820
+    },
+    {
+      "word": "một",
+      "start_ms": 5820,
+      "end_ms": 6020
+    },
+    {
+      "word": "bật",
+      "start_ms": 6020,
+      "end_ms": 6180
+    },
+    {
+      "word": "tương",
+      "start_ms": 6180,
+      "end_ms": 6380
+    },
+    {
+      "word": "ứng.",
+      "start_ms": 6380,
+      "end_ms": 6600
+    }
+  ]
+}

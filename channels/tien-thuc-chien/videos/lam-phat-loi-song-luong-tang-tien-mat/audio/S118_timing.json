@@ -1,0 +1,134 @@
+{
+  "audio_file": "S118_narration.wav",
+  "duration_ms": 5760,
+  "word_count": 25,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Cây",
+      "start_ms": 0,
+      "end_ms": 140
+    },
+    {
+      "word": "từ",
+      "start_ms": 140,
+      "end_ms": 260
+    },
+    {
+      "word": "ngày",
+      "start_ms": 260,
+      "end_ms": 380
+    },
+    {
+      "word": "bàn",
+      "start_ms": 380,
+      "end_ms": 640
+    },
+    {
+      "word": "nhận",
+      "start_ms": 640,
+      "end_ms": 820
+    },
+    {
+      "word": "được",
+      "start_ms": 820,
+      "end_ms": 920
+    },
+    {
+      "word": "thông",
+      "start_ms": 920,
+      "end_ms": 1140
+    },
+    {
+      "word": "báo",
+      "start_ms": 1140,
+      "end_ms": 1320
+    },
+    {
+      "word": "tăng",
+      "start_ms": 1320,
+      "end_ms": 1540
+    },
+    {
+      "word": "lượng,",
+      "start_ms": 1540,
+      "end_ms": 1780
+    },
+    {
+      "word": "hay",
+      "start_ms": 2160,
+      "end_ms": 2220
+    },
+    {
+      "word": "bán",
+      "start_ms": 2220,
+      "end_ms": 2420
+    },
+    {
+      "word": "hành",
+      "start_ms": 2420,
+      "end_ms": 2580
+    },
+    {
+      "word": "một",
+      "start_ms": 2580,
+      "end_ms": 2720
+    },
+    {
+      "word": "lạnh",
+      "start_ms": 2720,
+      "end_ms": 2880
+    },
+    {
+      "word": "giới",
+      "start_ms": 2880,
+      "end_ms": 3160
+    },
+    {
+      "word": "nghiêm",
+      "start_ms": 3160,
+      "end_ms": 3400
+    },
+    {
+      "word": "chi",
+      "start_ms": 3400,
+      "end_ms": 3540
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 3540,
+      "end_ms": 3820
+    },
+    {
+      "word": "cố",
+      "start_ms": 3820,
+      "end_ms": 4019
+    },
+    {
+      "word": "định",
+      "start_ms": 4019,
+      "end_ms": 4240
+    },
+    {
+      "word": "trong",
+      "start_ms": 4240,
+      "end_ms": 4440
+    },
+    {
+      "word": "đúng",
+      "start_ms": 4440,
+      "end_ms": 4700
+    },
+    {
+      "word": "180",
+      "start_ms": 4700,
+      "end_ms": 5160
+    },
+    {
+      "word": "ngày.",
+      "start_ms": 5160,
+      "end_ms": 5480
+    }
+  ]
+}

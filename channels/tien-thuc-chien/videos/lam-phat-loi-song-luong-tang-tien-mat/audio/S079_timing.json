@@ -1,0 +1,149 @@
+{
+  "audio_file": "S079_narration.wav",
+  "duration_ms": 5680,
+  "word_count": 28,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 260
+    },
+    {
+      "word": "dễ",
+      "start_ms": 260,
+      "end_ms": 440
+    },
+    {
+      "word": "dàng",
+      "start_ms": 440,
+      "end_ms": 640
+    },
+    {
+      "word": "tiêu",
+      "start_ms": 640,
+      "end_ms": 860
+    },
+    {
+      "word": "2",
+      "start_ms": 860,
+      "end_ms": 1020
+    },
+    {
+      "word": "triệu",
+      "start_ms": 1020,
+      "end_ms": 1260
+    },
+    {
+      "word": "cho",
+      "start_ms": 1260,
+      "end_ms": 1440
+    },
+    {
+      "word": "bữa",
+      "start_ms": 1440,
+      "end_ms": 1560
+    },
+    {
+      "word": "tiền",
+      "start_ms": 1560,
+      "end_ms": 1740
+    },
+    {
+      "word": "hôm",
+      "start_ms": 1740,
+      "end_ms": 1840
+    },
+    {
+      "word": "nay,",
+      "start_ms": 1840,
+      "end_ms": 2060
+    },
+    {
+      "word": "và",
+      "start_ms": 2440,
+      "end_ms": 2500
+    },
+    {
+      "word": "tự",
+      "start_ms": 2500,
+      "end_ms": 2700
+    },
+    {
+      "word": "hướng",
+      "start_ms": 2700,
+      "end_ms": 3060
+    },
+    {
+      "word": "với",
+      "start_ms": 3060,
+      "end_ms": 3140
+    },
+    {
+      "word": "bản",
+      "start_ms": 3140,
+      "end_ms": 3320
+    },
+    {
+      "word": "thân",
+      "start_ms": 3320,
+      "end_ms": 3520
+    },
+    {
+      "word": "dàng",
+      "start_ms": 3520,
+      "end_ms": 3760
+    },
+    {
+      "word": "háng",
+      "start_ms": 3760,
+      "end_ms": 4059
+    },
+    {
+      "word": "sau",
+      "start_ms": 4059,
+      "end_ms": 4300
+    },
+    {
+      "word": "mình",
+      "start_ms": 4300,
+      "end_ms": 4480
+    },
+    {
+      "word": "sẽ",
+      "start_ms": 4480,
+      "end_ms": 4620
+    },
+    {
+      "word": "bắt",
+      "start_ms": 4620,
+      "end_ms": 4720
+    },
+    {
+      "word": "đầu",
+      "start_ms": 4720,
+      "end_ms": 4860
+    },
+    {
+      "word": "tiết",
+      "start_ms": 4860,
+      "end_ms": 5100
+    },
+    {
+      "word": "kiệm",
+      "start_ms": 5100,
+      "end_ms": 5260
+    },
+    {
+      "word": "buồn",
+      "start_ms": 5260,
+      "end_ms": 5420
+    },
+    {
+      "word": "lạng.",
+      "start_ms": 5420,
+      "end_ms": 5600
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "audio_file": "S012_narration.wav",
+  "duration_ms": 6240,
+  "word_count": 26,
+  "model": "base",
+  "engine": "faster-whisper",
+  "words": [
+    {
+      "word": "Bạn",
+      "start_ms": 0,
+      "end_ms": 240
+    },
+    {
+      "word": "chuyển",
+      "start_ms": 240,
+      "end_ms": 420
+    },
+    {
+      "word": "sang",
+      "start_ms": 420,
+      "end_ms": 580
+    },
+    {
+      "word": "cân",
+      "start_ms": 580,
+      "end_ms": 760
+    },
+    {
+      "word": "hồ",
+      "start_ms": 760,
+      "end_ms": 900
+    },
+    {
+      "word": "dịch",
+      "start_ms": 900,
+      "end_ms": 1100
+    },
+    {
+      "word": "vụ",
+      "start_ms": 1100,
+      "end_ms": 1220
+    },
+    {
+      "word": "6",
+      "start_ms": 1220,
+      "end_ms": 1460
+    },
+    {
+      "word": "chậu",
+      "start_ms": 1460,
+      "end_ms": 1740
+    },
+    {
+      "word": "đồng,",
+      "start_ms": 1740,
+      "end_ms": 1920
+    },
+    {
+      "word": "công",
+      "start_ms": 2340,
+      "end_ms": 2440
+    },
+    {
+      "word": "thêm",
+      "start_ms": 2440,
+      "end_ms": 2680
+    },
+    {
+      "word": "tiền",
+      "start_ms": 2680,
+      "end_ms": 2880
+    },
+    {
+      "word": "gửi",
+      "start_ms": 2880,
+      "end_ms": 3140
+    },
+    {
+      "word": "xe",
+      "start_ms": 3140,
+      "end_ms": 3380
+    },
+    {
+      "word": "và",
+      "start_ms": 3380,
+      "end_ms": 3520
+    },
+    {
+      "word": "dịch",
+      "start_ms": 3520,
+      "end_ms": 3700
+    },
+    {
+      "word": "vụ,",
+      "start_ms": 3700,
+      "end_ms": 3900
+    },
+    {
+      "word": "mối",
+      "start_ms": 4420,
+      "end_ms": 4520
+    },
+    {
+      "word": "tháng",
+      "start_ms": 4520,
+      "end_ms": 4720
+    },
+    {
+      "word": "piêu",
+      "start_ms": 4720,
+      "end_ms": 4960
+    },
+    {
+      "word": "tốn",
+      "start_ms": 4960,
+      "end_ms": 5220
+    },
+    {
+      "word": "tới",
+      "start_ms": 5220,
+      "end_ms": 5440
+    },
+    {
+      "word": "9",
+      "start_ms": 5440,
+      "end_ms": 5580
+    },
+    {
+      "word": "chậu",
+      "start_ms": 5580,
+      "end_ms": 5780
+    },
+    {
+      "word": "đồng.",
+      "start_ms": 5780,
+      "end_ms": 6000
+    }
+  ]
+}
