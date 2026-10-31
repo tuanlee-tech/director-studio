@@ -1,6 +1,6 @@
 {
   "active_channel": "tien-thuc-chien",
-  "active_video": "thoat-bay-no-the-tin-dung",
+  "active_video": "lam-phat-loi-song-luong-tang-tien-mat",
   "channel_name": "Tiền Thực Chiến",
   "niche": "Tài chính cá nhân / Tích sản & Quản lý chi tiêu",
   "default_voice": "Hải Đăng",
@@ -16,14 +16,18 @@
   "subtitle_group_size": 4,
   "asset_strategy": "hybrid-cost-saver",
   "hook_aiv_duration_seconds": 30,
-  "body_asset_priority": ["GFX", "IMG", "AIV"],
+  "body_asset_priority": [
+    "GFX",
+    "IMG",
+    "AIV"
+  ],
   "remotion_enabled": true,
   "default_bgm": "bgm_calm_lofi.mp3",
-  "default_bgm_volume": 0.10,
+  "default_bgm_volume": 0.1,
   "bgm": {
     "enabled": true,
     "default_track": "bgm_calm_lofi.mp3",
-    "default_volume": 0.10,
+    "default_volume": 0.1,
     "description": "Nhạc nền lo-fi nhẹ nhàng, không lời cho kênh Tiền Thực Chiến"
   },
   "style_locked": true,
