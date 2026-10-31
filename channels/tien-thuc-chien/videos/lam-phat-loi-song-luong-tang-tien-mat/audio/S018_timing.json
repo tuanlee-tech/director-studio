@@ -1,119 +1,154 @@
 {
   "audio_file": "S018_narration.wav",
-  "duration_ms": 5920,
-  "word_count": 22,
+  "duration_ms": 6320,
+  "word_count": 29,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Trước",
+      "word": "Chuyên",
       "start_ms": 0,
-      "end_ms": 200
+      "end_ms": 180
     },
     {
-      "word": "đây,",
-      "start_ms": 200,
-      "end_ms": 360
+      "word": "đây",
+      "start_ms": 180,
+      "end_ms": 280
     },
     {
       "word": "bạn",
-      "start_ms": 660,
-      "end_ms": 740
+      "start_ms": 280,
+      "end_ms": 400
     },
     {
-      "word": "hai",
-      "start_ms": 740,
-      "end_ms": 960
+      "word": "2",
+      "start_ms": 400,
+      "end_ms": 600
     },
     {
       "word": "lòng",
-      "start_ms": 960,
-      "end_ms": 1140
+      "start_ms": 600,
+      "end_ms": 800
     },
     {
       "word": "với",
-      "start_ms": 1140,
-      "end_ms": 1240
+      "start_ms": 800,
+      "end_ms": 920
     },
     {
       "word": "cốc",
-      "start_ms": 1240,
-      "end_ms": 1400
+      "start_ms": 920,
+      "end_ms": 1060
     },
     {
-      "word": "café",
-      "start_ms": 1400,
-      "end_ms": 1700
+      "word": "cà",
+      "start_ms": 1060,
+      "end_ms": 1260
+    },
+    {
+      "word": "phê",
+      "start_ms": 1260,
+      "end_ms": 1420
     },
     {
       "word": "về",
-      "start_ms": 1700,
-      "end_ms": 1960
+      "start_ms": 1420,
+      "end_ms": 1580
     },
     {
-      "word": "25",
-      "start_ms": 1960,
+      "word": "hẹn",
+      "start_ms": 1580,
+      "end_ms": 1940
+    },
+    {
+      "word": "15",
+      "start_ms": 1940,
+      "end_ms": 2080
+    },
+    {
+      "word": "nhìn",
+      "start_ms": 2080,
       "end_ms": 2340
     },
     {
-      "word": ".000.",
+      "word": "đồng",
       "start_ms": 2340,
-      "end_ms": 2640
+      "end_ms": 2520
     },
     {
-      "word": "Này",
-      "start_ms": 3040,
-      "end_ms": 3280
+      "word": "Rồi",
+      "start_ms": 2880,
+      "end_ms": 3240
+    },
+    {
+      "word": "đây",
+      "start_ms": 3240,
+      "end_ms": 3360
     },
     {
       "word": "bạn",
-      "start_ms": 3280,
-      "end_ms": 3400
+      "start_ms": 3360,
+      "end_ms": 3520
     },
     {
-      "word": "chuyển",
-      "start_ms": 3400,
-      "end_ms": 3680
+      "word": "tự",
+      "start_ms": 3520,
+      "end_ms": 3660
     },
     {
-      "word": "sang",
-      "start_ms": 3680,
-      "end_ms": 3900
+      "word": "động",
+      "start_ms": 3660,
+      "end_ms": 3800
     },
     {
-      "word": "café",
-      "start_ms": 3900,
-      "end_ms": 4240
+      "word": "bước",
+      "start_ms": 3800,
+      "end_ms": 4059
     },
     {
-      "word": "tương",
-      "start_ms": 4240,
-      "end_ms": 4500
+      "word": "và",
+      "start_ms": 4059,
+      "end_ms": 4220
+    },
+    {
+      "word": "những",
+      "start_ms": 4220,
+      "end_ms": 4320
+    },
+    {
+      "word": "chối",
+      "start_ms": 4320,
+      "end_ms": 4540
+    },
+    {
+      "word": "cà",
+      "start_ms": 4540,
+      "end_ms": 4740
+    },
+    {
+      "word": "phê",
+      "start_ms": 4740,
+      "end_ms": 4940
+    },
+    {
+      "word": "thương",
+      "start_ms": 4940,
+      "end_ms": 5140
     },
     {
       "word": "hiệu",
-      "start_ms": 4500,
-      "end_ms": 4620
-    },
-    {
-      "word": "65",
-      "start_ms": 4620,
-      "end_ms": 4960
-    },
-    {
-      "word": ".000",
-      "start_ms": 4960,
+      "start_ms": 5140,
       "end_ms": 5280
     },
     {
-      "word": "mỗi",
+      "word": "65",
       "start_ms": 5280,
-      "end_ms": 5480
+      "end_ms": 5720
     },
     {
-      "word": "sáng.",
-      "start_ms": 5480,
-      "end_ms": 5720
+      "word": ".000",
+      "start_ms": 5720,
+      "end_ms": 6080
     }
   ]
 }

@@ -1,119 +1,139 @@
 {
   "audio_file": "S125_narration.wav",
-  "duration_ms": 4720,
-  "word_count": 22,
+  "duration_ms": 6160,
+  "word_count": 26,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Sau",
+      "word": "khi",
       "start_ms": 0,
       "end_ms": 180
     },
     {
-      "word": "khi",
+      "word": "ra",
       "start_ms": 180,
-      "end_ms": 340
-    },
-    {
-      "word": "em",
-      "start_ms": 340,
-      "end_ms": 500
+      "end_ms": 300
     },
     {
       "word": "vượt",
-      "start_ms": 500,
-      "end_ms": 680
+      "start_ms": 300,
+      "end_ms": 520
     },
     {
       "word": "qua",
-      "start_ms": 680,
-      "end_ms": 840
+      "start_ms": 520,
+      "end_ms": 660
     },
     {
-      "word": "6",
-      "start_ms": 840,
-      "end_ms": 1060
+      "word": "được",
+      "start_ms": 660,
+      "end_ms": 760
+    },
+    {
+      "word": "sau",
+      "start_ms": 760,
+      "end_ms": 1000
     },
     {
       "word": "tháng",
-      "start_ms": 1060,
-      "end_ms": 1180
+      "start_ms": 1000,
+      "end_ms": 1280
     },
     {
-      "word": "từ",
-      "start_ms": 1180,
-      "end_ms": 1300
+      "word": "thứ",
+      "start_ms": 1280,
+      "end_ms": 1400
     },
     {
-      "word": "thách,",
-      "start_ms": 1300,
-      "end_ms": 1560
+      "word": "thách",
+      "start_ms": 1400,
+      "end_ms": 1580
     },
     {
-      "word": "chúng",
-      "start_ms": 1960,
-      "end_ms": 2080
+      "word": "đầu",
+      "start_ms": 1580,
+      "end_ms": 1660
     },
     {
-      "word": "ta",
-      "start_ms": 2080,
-      "end_ms": 2260
+      "word": "tiên,",
+      "start_ms": 1660,
+      "end_ms": 1940
     },
     {
-      "word": "sẽ",
-      "start_ms": 2260,
-      "end_ms": 2440
+      "word": "bạn",
+      "start_ms": 2400,
+      "end_ms": 2640
     },
     {
-      "word": "bước",
-      "start_ms": 2440,
-      "end_ms": 2580
+      "word": "đã",
+      "start_ms": 2640,
+      "end_ms": 2840
     },
     {
-      "word": "sàng",
-      "start_ms": 2580,
-      "end_ms": 2760
+      "word": "trên",
+      "start_ms": 2840,
+      "end_ms": 2980
     },
     {
-      "word": "quý",
-      "start_ms": 2760,
-      "end_ms": 2960
+      "word": "tháng",
+      "start_ms": 2980,
+      "end_ms": 3260
     },
     {
-      "word": "tắc",
-      "start_ms": 2960,
-      "end_ms": 3120
+      "word": "80",
+      "start_ms": 3260,
+      "end_ms": 3600
     },
     {
-      "word": "phân",
-      "start_ms": 3120,
-      "end_ms": 3360
+      "word": "%",
+      "start_ms": 3600,
+      "end_ms": 4000
     },
     {
-      "word": "bổ",
-      "start_ms": 3360,
-      "end_ms": 3580
+      "word": "cuộc",
+      "start_ms": 4000,
+      "end_ms": 4260
     },
     {
-      "word": "dòng",
-      "start_ms": 3580,
-      "end_ms": 3840
+      "word": "chiến",
+      "start_ms": 4260,
+      "end_ms": 4560
     },
     {
-      "word": "tiền",
-      "start_ms": 3840,
-      "end_ms": 4059
+      "word": "kiểm",
+      "start_ms": 4560,
+      "end_ms": 4740
     },
     {
-      "word": "bên",
-      "start_ms": 4059,
-      "end_ms": 4240
+      "word": "soát",
+      "start_ms": 4740,
+      "end_ms": 5000
     },
     {
-      "word": "vững.",
-      "start_ms": 4240,
-      "end_ms": 4500
+      "word": "lòng",
+      "start_ms": 5000,
+      "end_ms": 5180
+    },
+    {
+      "word": "thăm",
+      "start_ms": 5180,
+      "end_ms": 5460
+    },
+    {
+      "word": "của",
+      "start_ms": 5460,
+      "end_ms": 5620
+    },
+    {
+      "word": "bản",
+      "start_ms": 5620,
+      "end_ms": 5760
+    },
+    {
+      "word": "thân.",
+      "start_ms": 5760,
+      "end_ms": 5940
     }
   ]
 }

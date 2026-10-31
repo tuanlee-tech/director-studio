@@ -141,23 +141,38 @@ class FlowCDPClient:
 
         time.sleep(0.4)
 
-        # Dispatch Enter key (rawKeyDown + keyUp) đúng 1 lần
-        self.send_cdp("Input.dispatchKeyEvent", {
-            "type": "rawKeyDown",
-            "windowsVirtualKeyCode": 13,
-            "unmodifiedText": "\r",
-            "text": "\r",
-            "key": "Enter",
-            "code": "Enter"
-        })
-        self.send_cdp("Input.dispatchKeyEvent", {
-            "type": "keyUp",
-            "windowsVirtualKeyCode": 13,
-            "unmodifiedText": "\r",
-            "text": "\r",
-            "key": "Enter",
-            "code": "Enter"
-        })
+        # Thử click nút "Start generation" hoặc "Tạo" trước
+        js_click_btn = """
+        (() => {
+            const btn = document.querySelector('button[aria-label*="Start generation" i]') ||
+                        document.querySelector('button.generate-icon-button') ||
+                        document.querySelector('button[aria-label*="Tạo" i]');
+            if (btn && !btn.disabled) {
+                btn.click();
+                return true;
+            }
+            return false;
+        })()
+        """
+        btn_clicked = self.evaluate(js_click_btn)
+        if not btn_clicked:
+            # Fallback: Dispatch Enter key (rawKeyDown + keyUp)
+            self.send_cdp("Input.dispatchKeyEvent", {
+                "type": "rawKeyDown",
+                "windowsVirtualKeyCode": 13,
+                "unmodifiedText": "\r",
+                "text": "\r",
+                "key": "Enter",
+                "code": "Enter"
+            })
+            self.send_cdp("Input.dispatchKeyEvent", {
+                "type": "keyUp",
+                "windowsVirtualKeyCode": 13,
+                "unmodifiedText": "\r",
+                "text": "\r",
+                "key": "Enter",
+                "code": "Enter"
+            })
         return True
 
     def poll_for_new_image(self, baseline_urls, timeout=120):
@@ -478,7 +493,19 @@ def main():
                 print("⚠️ Các cảnh còn lại đều đã thử quá 3 lần. Dừng để kiểm tra.")
                 break
 
-            current_batch = runnable[:args.batch_size]
+            # Đảm bảo mỗi tài khoản chỉ nhận tối đa 1 task trong cùng 1 batch để tránh xung đột CDP
+            current_batch = []
+            used_accs = set()
+            for t in runnable:
+                acc = t.get("assigned_acc") or 1
+                if acc not in used_accs:
+                    current_batch.append(t)
+                    used_accs.add(acc)
+                    if len(current_batch) >= args.batch_size:
+                        break
+
+            if not current_batch:
+                current_batch = runnable[:args.batch_size]
             print(f"\n⚡ ĐANG THỰC THI BATCH TỰ ĐỘNG #{wave_count} ({len(current_batch)} CẢNH)...")
             run_wave(current_batch, assets_dir)
 

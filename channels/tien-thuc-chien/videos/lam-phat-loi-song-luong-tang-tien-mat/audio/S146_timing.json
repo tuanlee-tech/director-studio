@@ -1,144 +1,159 @@
 {
   "audio_file": "S146_narration.wav",
-  "duration_ms": 5520,
-  "word_count": 27,
+  "duration_ms": 6160,
+  "word_count": 30,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Bộ",
       "start_ms": 0,
-      "end_ms": 220
+      "end_ms": 200
     },
     {
       "word": "lọc",
-      "start_ms": 220,
-      "end_ms": 420
+      "start_ms": 200,
+      "end_ms": 380
     },
     {
       "word": "thứ",
-      "start_ms": 420,
-      "end_ms": 500
+      "start_ms": 380,
+      "end_ms": 460
     },
     {
       "word": "2",
-      "start_ms": 500,
-      "end_ms": 780
+      "start_ms": 460,
+      "end_ms": 700
     },
     {
       "word": "là",
-      "start_ms": 780,
-      "end_ms": 1180
+      "start_ms": 700,
+      "end_ms": 860
     },
     {
-      "word": "quy",
-      "start_ms": 1180,
-      "end_ms": 1340
+      "word": "quý",
+      "start_ms": 860,
+      "end_ms": 1120
     },
     {
       "word": "đổi",
-      "start_ms": 1340,
-      "end_ms": 1520
+      "start_ms": 1120,
+      "end_ms": 1300
     },
     {
       "word": "giá",
-      "start_ms": 1520,
-      "end_ms": 1700
+      "start_ms": 1300,
+      "end_ms": 1580
     },
     {
       "word": "chị",
-      "start_ms": 1700,
-      "end_ms": 1880
+      "start_ms": 1580,
+      "end_ms": 1740
     },
     {
-      "word": "giá",
-      "start_ms": 1880,
-      "end_ms": 2040
+      "word": "ra",
+      "start_ms": 1740,
+      "end_ms": 1900
     },
     {
       "word": "giờ",
-      "start_ms": 2040,
-      "end_ms": 2160
+      "start_ms": 1900,
+      "end_ms": 2000
     },
     {
-      "word": "lâu",
-      "start_ms": 2160,
-      "end_ms": 2340
+      "word": "lao",
+      "start_ms": 2000,
+      "end_ms": 2180
     },
     {
-      "word": "đậu,",
-      "start_ms": 2340,
-      "end_ms": 2580
+      "word": "động,",
+      "start_ms": 2180,
+      "end_ms": 2300
     },
     {
-      "word": "lấy",
-      "start_ms": 2840,
-      "end_ms": 2960
+      "word": "đem",
+      "start_ms": 2700,
+      "end_ms": 2840
     },
     {
       "word": "giá",
-      "start_ms": 2960,
-      "end_ms": 3160
+      "start_ms": 2840,
+      "end_ms": 3020
+    },
+    {
+      "word": "tiền",
+      "start_ms": 3020,
+      "end_ms": 3240
     },
     {
       "word": "món",
-      "start_ms": 3160,
-      "end_ms": 3280
+      "start_ms": 3240,
+      "end_ms": 3420
     },
     {
       "word": "đổi",
-      "start_ms": 3280,
-      "end_ms": 3460
+      "start_ms": 3420,
+      "end_ms": 3620
     },
     {
       "word": "chia",
-      "start_ms": 3460,
-      "end_ms": 3700
+      "start_ms": 3620,
+      "end_ms": 3840
     },
     {
       "word": "cho",
-      "start_ms": 3700,
-      "end_ms": 3980
+      "start_ms": 3840,
+      "end_ms": 4019
     },
     {
-      "word": "thu",
-      "start_ms": 3980,
-      "end_ms": 4120
+      "word": "mức",
+      "start_ms": 4019,
+      "end_ms": 4200
     },
     {
-      "word": "nhập",
-      "start_ms": 4120,
-      "end_ms": 4340
+      "word": "lương",
+      "start_ms": 4200,
+      "end_ms": 4360
     },
     {
-      "word": "mới",
-      "start_ms": 4340,
+      "word": "thực",
+      "start_ms": 4360,
       "end_ms": 4500
     },
     {
-      "word": "giờ",
+      "word": "tế",
       "start_ms": 4500,
-      "end_ms": 4660
+      "end_ms": 4840
+    },
+    {
+      "word": "một",
+      "start_ms": 4840,
+      "end_ms": 5000
+    },
+    {
+      "word": "giờ",
+      "start_ms": 5000,
+      "end_ms": 5240
     },
     {
       "word": "làm",
-      "start_ms": 4660,
-      "end_ms": 4780
+      "start_ms": 5240,
+      "end_ms": 5460
     },
     {
       "word": "việc",
-      "start_ms": 4780,
-      "end_ms": 4940
+      "start_ms": 5460,
+      "end_ms": 5600
     },
     {
       "word": "của",
-      "start_ms": 4940,
-      "end_ms": 5100
+      "start_ms": 5600,
+      "end_ms": 5760
     },
     {
       "word": "bạn.",
-      "start_ms": 5100,
-      "end_ms": 5280
+      "start_ms": 5760,
+      "end_ms": 5920
     }
   ]
 }

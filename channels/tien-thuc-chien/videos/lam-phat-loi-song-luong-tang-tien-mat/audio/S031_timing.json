@@ -1,139 +1,164 @@
 {
   "audio_file": "S031_narration.wav",
-  "duration_ms": 5600,
-  "word_count": 26,
+  "duration_ms": 5920,
+  "word_count": 31,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Mỗi",
+      "word": "Bất",
       "start_ms": 0,
-      "end_ms": 240
+      "end_ms": 280
+    },
+    {
+      "word": "kì",
+      "start_ms": 280,
+      "end_ms": 380
+    },
+    {
+      "word": "mấn",
+      "start_ms": 380,
+      "end_ms": 520
     },
     {
       "word": "đồ",
-      "start_ms": 240,
-      "end_ms": 340
+      "start_ms": 520,
+      "end_ms": 620
     },
     {
-      "word": "và",
-      "start_ms": 340,
-      "end_ms": 460
-    },
-    {
-      "word": "nắp",
-      "start_ms": 460,
-      "end_ms": 640
+      "word": "đát",
+      "start_ms": 620,
+      "end_ms": 820
     },
     {
       "word": "tiền",
-      "start_ms": 640,
-      "end_ms": 780
+      "start_ms": 820,
+      "end_ms": 1020
+    },
+    {
+      "word": "nào",
+      "start_ms": 1020,
+      "end_ms": 1220
     },
     {
       "word": "bạn",
-      "start_ms": 780,
-      "end_ms": 940
+      "start_ms": 1220,
+      "end_ms": 1440
     },
     {
-      "word": "sở",
-      "start_ms": 940,
-      "end_ms": 1180
+      "word": "sẽ",
+      "start_ms": 1440,
+      "end_ms": 1600
     },
     {
-      "word": "hữu",
-      "start_ms": 1180,
-      "end_ms": 1400
+      "word": "hiếu",
+      "start_ms": 1600,
+      "end_ms": 1820
     },
     {
-      "word": "đều",
-      "start_ms": 1400,
-      "end_ms": 1540
-    },
-    {
-      "word": "kéo",
-      "start_ms": 1540,
-      "end_ms": 1760
-    },
-    {
-      "word": "theo",
-      "start_ms": 1760,
+      "word": "cũng",
+      "start_ms": 1820,
       "end_ms": 1940
     },
     {
-      "word": "một",
+      "word": "đều",
       "start_ms": 1940,
-      "end_ms": 2120
+      "end_ms": 2140
     },
     {
-      "word": "thể",
-      "start_ms": 2120,
-      "end_ms": 2260
+      "word": "kéo",
+      "start_ms": 2140,
+      "end_ms": 2320
     },
     {
-      "word": "xinh",
-      "start_ms": 2260,
-      "end_ms": 2480
+      "word": "theo",
+      "start_ms": 2320,
+      "end_ms": 2500
+    },
+    {
+      "word": "một",
+      "start_ms": 2500,
+      "end_ms": 2760
+    },
+    {
+      "word": "hệ",
+      "start_ms": 2760,
+      "end_ms": 2940
+    },
+    {
+      "word": "sinh",
+      "start_ms": 2940,
+      "end_ms": 3200
     },
     {
       "word": "thái",
-      "start_ms": 2480,
-      "end_ms": 2700
+      "start_ms": 3200,
+      "end_ms": 3420
+    },
+    {
+      "word": "các",
+      "start_ms": 3420,
+      "end_ms": 3560
     },
     {
       "word": "chi",
-      "start_ms": 2700,
-      "end_ms": 2900
+      "start_ms": 3560,
+      "end_ms": 3760
     },
     {
       "word": "phí",
-      "start_ms": 2900,
-      "end_ms": 3140
+      "start_ms": 3760,
+      "end_ms": 4040
     },
     {
-      "word": "bảo",
-      "start_ms": 3140,
-      "end_ms": 3320
+      "word": "phụ",
+      "start_ms": 4040,
+      "end_ms": 4200
     },
     {
-      "word": "chi",
-      "start_ms": 3320,
-      "end_ms": 3520
+      "word": "chợ",
+      "start_ms": 4200,
+      "end_ms": 4340
     },
     {
-      "word": "và",
-      "start_ms": 3520,
-      "end_ms": 4080
+      "word": "đắt",
+      "start_ms": 4340,
+      "end_ms": 4520
     },
     {
-      "word": "bảo",
-      "start_ms": 4080,
-      "end_ms": 4280
-    },
-    {
-      "word": "dự",
-      "start_ms": 4280,
-      "end_ms": 4480
-    },
-    {
-      "word": "nắp",
-      "start_ms": 4480,
-      "end_ms": 4820
-    },
-    {
-      "word": "tiền",
-      "start_ms": 4820,
-      "end_ms": 5000
+      "word": "đỏ",
+      "start_ms": 4520,
+      "end_ms": 4720
     },
     {
       "word": "đi",
-      "start_ms": 5000,
-      "end_ms": 5140
+      "start_ms": 4720,
+      "end_ms": 4860
     },
     {
-      "word": "kèm.",
-      "start_ms": 5140,
-      "end_ms": 5440
+      "word": "cùng",
+      "start_ms": 4860,
+      "end_ms": 5020
+    },
+    {
+      "word": "để",
+      "start_ms": 5020,
+      "end_ms": 5200
+    },
+    {
+      "word": "duy",
+      "start_ms": 5200,
+      "end_ms": 5320
+    },
+    {
+      "word": "trì",
+      "start_ms": 5320,
+      "end_ms": 5500
+    },
+    {
+      "word": "nó.",
+      "start_ms": 5500,
+      "end_ms": 5660
     }
   ]
 }

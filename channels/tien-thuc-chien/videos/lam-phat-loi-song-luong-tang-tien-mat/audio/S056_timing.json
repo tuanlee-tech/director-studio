@@ -1,53 +1,53 @@
 {
   "audio_file": "S056_narration.wav",
-  "duration_ms": 5680,
-  "word_count": 26,
+  "duration_ms": 6480,
+  "word_count": 29,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Nó",
+      "word": "Huyến",
       "start_ms": 0,
-      "end_ms": 200
+      "end_ms": 220
+    },
+    {
+      "word": "tượng",
+      "start_ms": 220,
+      "end_ms": 380
+    },
+    {
+      "word": "này",
+      "start_ms": 380,
+      "end_ms": 580
     },
     {
       "word": "giống",
-      "start_ms": 200,
-      "end_ms": 360
-    },
-    {
-      "word": "hết",
-      "start_ms": 360,
-      "end_ms": 520
+      "start_ms": 580,
+      "end_ms": 820
     },
     {
       "word": "như",
-      "start_ms": 520,
-      "end_ms": 700
-    },
-    {
-      "word": "việc",
-      "start_ms": 700,
+      "start_ms": 820,
       "end_ms": 900
     },
     {
-      "word": "bạn",
+      "word": "việc",
       "start_ms": 900,
-      "end_ms": 1040
+      "end_ms": 1080
     },
     {
-      "word": "chạy",
-      "start_ms": 1040,
-      "end_ms": 1320
+      "word": "trại",
+      "start_ms": 1080,
+      "end_ms": 1340
     },
     {
       "word": "trên",
-      "start_ms": 1320,
-      "end_ms": 1440
+      "start_ms": 1340,
+      "end_ms": 1480
     },
     {
       "word": "máy",
-      "start_ms": 1440,
+      "start_ms": 1480,
       "end_ms": 1620
     },
     {
@@ -56,84 +56,99 @@
       "end_ms": 1820
     },
     {
-      "word": "trên",
-      "start_ms": 2160,
-      "end_ms": 2200
+      "word": "đôi",
+      "start_ms": 2220,
+      "end_ms": 2300
+    },
+    {
+      "word": "chân",
+      "start_ms": 2300,
+      "end_ms": 2440
     },
     {
       "word": "bạn",
-      "start_ms": 2200,
-      "end_ms": 2380
+      "start_ms": 2440,
+      "end_ms": 2560
     },
     {
       "word": "buồn",
-      "start_ms": 2380,
-      "end_ms": 2680
-    },
-    {
-      "word": "càng",
-      "start_ms": 2680,
+      "start_ms": 2560,
       "end_ms": 2880
     },
     {
-      "word": "nhanh,",
+      "word": "càng",
       "start_ms": 2880,
-      "end_ms": 3280
+      "end_ms": 3080
+    },
+    {
+      "word": "nhanh",
+      "start_ms": 3080,
+      "end_ms": 3460
     },
     {
       "word": "nhưng",
-      "start_ms": 3640,
-      "end_ms": 3660
-    },
-    {
-      "word": "vị",
-      "start_ms": 3660,
-      "end_ms": 3800
-    },
-    {
-      "word": "trí",
-      "start_ms": 3800,
+      "start_ms": 3460,
       "end_ms": 3980
     },
     {
-      "word": "của",
+      "word": "vì",
       "start_ms": 3980,
-      "end_ms": 4100
+      "end_ms": 4160
+    },
+    {
+      "word": "chỉ",
+      "start_ms": 4160,
+      "end_ms": 4320
+    },
+    {
+      "word": "thực",
+      "start_ms": 4320,
+      "end_ms": 4440
+    },
+    {
+      "word": "tế",
+      "start_ms": 4440,
+      "end_ms": 4580
+    },
+    {
+      "word": "của",
+      "start_ms": 4580,
+      "end_ms": 4720
     },
     {
       "word": "bạn",
-      "start_ms": 4100,
-      "end_ms": 4280
-    },
-    {
-      "word": "thì",
-      "start_ms": 4280,
-      "end_ms": 4420
-    },
-    {
-      "word": "vẫn",
-      "start_ms": 4420,
-      "end_ms": 4520
-    },
-    {
-      "word": "giận",
-      "start_ms": 4520,
-      "end_ms": 4780
-    },
-    {
-      "word": "trên",
-      "start_ms": 4780,
+      "start_ms": 4720,
       "end_ms": 4960
     },
     {
-      "word": "tại",
+      "word": "thì",
       "start_ms": 4960,
-      "end_ms": 5160
+      "end_ms": 5240
+    },
+    {
+      "word": "vẫn",
+      "start_ms": 5240,
+      "end_ms": 5340
+    },
+    {
+      "word": "giận",
+      "start_ms": 5340,
+      "end_ms": 5580
+    },
+    {
+      "word": "chân",
+      "start_ms": 5580,
+      "end_ms": 5760
+    },
+    {
+      "word": "tại",
+      "start_ms": 5760,
+      "end_ms": 5940
     },
     {
       "word": "chỗ.",
-      "start_ms": 5160,
-      "end_ms": 5360
+      "start_ms": 5940,
+      "end_ms": 6180
     }
   ]
 }

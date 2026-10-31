@@ -1,134 +1,149 @@
 {
   "audio_file": "S112_narration.wav",
   "duration_ms": 5680,
-  "word_count": 25,
+  "word_count": 28,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Bông",
+      "word": "Chút",
       "start_ms": 0,
-      "end_ms": 240
+      "end_ms": 220
     },
     {
       "word": "bỏ",
-      "start_ms": 240,
-      "end_ms": 460
+      "start_ms": 220,
+      "end_ms": 380
     },
     {
       "word": "được",
-      "start_ms": 460,
-      "end_ms": 600
+      "start_ms": 380,
+      "end_ms": 520
     },
     {
-      "word": "nhu",
-      "start_ms": 600,
-      "end_ms": 760
+      "word": "gánh",
+      "start_ms": 520,
+      "end_ms": 640
     },
     {
-      "word": "cầu",
-      "start_ms": 760,
-      "end_ms": 960
+      "word": "năng",
+      "start_ms": 640,
+      "end_ms": 860
     },
     {
-      "word": "chứng",
-      "start_ms": 960,
-      "end_ms": 1160
+      "word": "si",
+      "start_ms": 860,
+      "end_ms": 980
     },
     {
-      "word": "tỏ",
-      "start_ms": 1160,
-      "end_ms": 1340
+      "word": "diện",
+      "start_ms": 980,
+      "end_ms": 1220
     },
     {
-      "word": "bản",
-      "start_ms": 1340,
-      "end_ms": 1540
+      "word": "háo",
+      "start_ms": 1220,
+      "end_ms": 1440
     },
     {
-      "word": "thân,",
-      "start_ms": 1540,
-      "end_ms": 1800
+      "word": "huyền,",
+      "start_ms": 1440,
+      "end_ms": 1700
     },
     {
       "word": "chính",
-      "start_ms": 2240,
-      "end_ms": 2340
+      "start_ms": 2080,
+      "end_ms": 2200
     },
     {
       "word": "là",
+      "start_ms": 2200,
+      "end_ms": 2340
+    },
+    {
+      "word": "bước",
       "start_ms": 2340,
       "end_ms": 2520
     },
     {
-      "word": "bước",
+      "word": "ngoặt",
       "start_ms": 2520,
-      "end_ms": 2820
+      "end_ms": 2720
     },
     {
-      "word": "nhẹ",
-      "start_ms": 2820,
-      "end_ms": 3220
+      "word": "với",
+      "start_ms": 2720,
+      "end_ms": 2880
     },
     {
-      "word": "vọt",
-      "start_ms": 3220,
-      "end_ms": 3520
-    },
-    {
-      "word": "lớn",
-      "start_ms": 3520,
-      "end_ms": 3740
+      "word": "đại",
+      "start_ms": 2880,
+      "end_ms": 3040
     },
     {
       "word": "nhất",
-      "start_ms": 3740,
-      "end_ms": 3900
+      "start_ms": 3040,
+      "end_ms": 3240
     },
     {
-      "word": "trong",
-      "start_ms": 3900,
-      "end_ms": 4140
+      "word": "mở",
+      "start_ms": 3240,
+      "end_ms": 3480
     },
     {
-      "word": "tư",
-      "start_ms": 4140,
+      "word": "ra",
+      "start_ms": 3480,
+      "end_ms": 3620
+    },
+    {
+      "word": "con",
+      "start_ms": 3620,
+      "end_ms": 3780
+    },
+    {
+      "word": "đường",
+      "start_ms": 3780,
+      "end_ms": 3920
+    },
+    {
+      "word": "tự",
+      "start_ms": 3920,
+      "end_ms": 4160
+    },
+    {
+      "word": "do",
+      "start_ms": 4160,
       "end_ms": 4320
     },
     {
-      "word": "duy",
+      "word": "tại",
       "start_ms": 4320,
-      "end_ms": 4480
-    },
-    {
-      "word": "quản",
-      "start_ms": 4480,
-      "end_ms": 4660
-    },
-    {
-      "word": "lý",
-      "start_ms": 4660,
-      "end_ms": 4740
-    },
-    {
-      "word": "tài",
-      "start_ms": 4740,
-      "end_ms": 4920
+      "end_ms": 4540
     },
     {
       "word": "chính",
-      "start_ms": 4920,
-      "end_ms": 5060
+      "start_ms": 4540,
+      "end_ms": 4800
     },
     {
-      "word": "cá",
-      "start_ms": 5060,
-      "end_ms": 5240
+      "word": "Trung",
+      "start_ms": 4800,
+      "end_ms": 5020
     },
     {
-      "word": "nhân.",
-      "start_ms": 5240,
-      "end_ms": 5400
+      "word": "Quốc",
+      "start_ms": 5020,
+      "end_ms": 5160
+    },
+    {
+      "word": "đời",
+      "start_ms": 5160,
+      "end_ms": 5340
+    },
+    {
+      "word": "bạc.",
+      "start_ms": 5340,
+      "end_ms": 5600
     }
   ]
 }

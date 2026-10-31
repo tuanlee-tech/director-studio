@@ -97,7 +97,7 @@ def check_cdp_status(port):
     # Quick socket probe (tránh chờ timeout HTTP lâu khi port đóng)
     import socket
     try:
-        with socket.create_connection(("127.0.0.1", port), timeout=0.15):
+        with socket.create_connection(("127.0.0.1", port), timeout=0.5):
             pass
     except Exception:
         return False, "Offline", None
@@ -273,12 +273,13 @@ def launch_account(account_id, project_url=None):
     print(f"   • Target URL     : {target_url}")
     print("=" * 72)
 
-    # Spawn Chrome với Win32 Desktop tương tác (Default) trên Windows
+    # Spawn Chrome trên Windows với DETACHED_PROCESS để không bị kill khi process gọi kết thúc
     if sys.platform == "win32":
-        ok, res = _win32_spawn_interactive(cmd)
-        if not ok:
-            print(f"⚠️ Win32 spawn failed ({res}), falling back to subprocess.Popen")
-            subprocess.Popen(cmd, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
+        try:
+            flags = subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS
+            subprocess.Popen(cmd, creationflags=flags, close_fds=True)
+        except Exception as e:
+            subprocess.Popen(cmd)
     else:
         # Linux (Ubuntu, Debian, etc.) & macOS
         env = os.environ.copy()

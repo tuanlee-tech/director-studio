@@ -1,119 +1,164 @@
 {
   "audio_file": "S017_narration.wav",
-  "duration_ms": 4800,
-  "word_count": 22,
+  "duration_ms": 6480,
+  "word_count": 31,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Hạng",
+      "word": "khoảng",
       "start_ms": 0,
-      "end_ms": 260
-    },
-    {
-      "word": "mục",
-      "start_ms": 260,
-      "end_ms": 360
+      "end_ms": 240
     },
     {
       "word": "do",
-      "start_ms": 360,
-      "end_ms": 520
+      "start_ms": 240,
+      "end_ms": 400
     },
     {
       "word": "gì",
-      "start_ms": 520,
-      "end_ms": 720
+      "start_ms": 400,
+      "end_ms": 580
     },
     {
       "word": "thứ",
-      "start_ms": 720,
-      "end_ms": 840
+      "start_ms": 580,
+      "end_ms": 700
     },
     {
-      "word": "2,",
-      "start_ms": 840,
-      "end_ms": 1080
+      "word": "hai,",
+      "start_ms": 700,
+      "end_ms": 940
     },
     {
-      "word": "tình",
-      "start_ms": 1560,
+      "word": "tinh",
+      "start_ms": 1460,
+      "end_ms": 1540
+    },
+    {
+      "word": "vi",
+      "start_ms": 1540,
       "end_ms": 1680
     },
     {
-      "word": "vì",
+      "word": "và",
       "start_ms": 1680,
-      "end_ms": 1820
+      "end_ms": 1860
+    },
+    {
+      "word": "khó",
+      "start_ms": 1860,
+      "end_ms": 2060
+    },
+    {
+      "word": "nhất",
+      "start_ms": 2060,
+      "end_ms": 2200
+    },
+    {
+      "word": "điết",
+      "start_ms": 2200,
+      "end_ms": 2460
     },
     {
       "word": "hơn",
-      "start_ms": 1820,
-      "end_ms": 2000
+      "start_ms": 2460,
+      "end_ms": 2580
     },
     {
       "word": "rất",
-      "start_ms": 2000,
-      "end_ms": 2140
+      "start_ms": 2580,
+      "end_ms": 2740
     },
     {
       "word": "nhiều,",
-      "start_ms": 2140,
-      "end_ms": 2440
+      "start_ms": 2740,
+      "end_ms": 3040
     },
     {
       "word": "chính",
-      "start_ms": 2760,
-      "end_ms": 2820
+      "start_ms": 3620,
+      "end_ms": 3720
     },
     {
       "word": "là",
-      "start_ms": 2820,
-      "end_ms": 2980
+      "start_ms": 3720,
+      "end_ms": 3840
     },
     {
-      "word": "thoải",
-      "start_ms": 2980,
-      "end_ms": 3180
+      "word": "sức",
+      "start_ms": 3840,
+      "end_ms": 4019
     },
     {
-      "word": "quen",
-      "start_ms": 3180,
-      "end_ms": 3340
-    },
-    {
-      "word": "ăn",
-      "start_ms": 3340,
-      "end_ms": 3500
-    },
-    {
-      "word": "uống",
-      "start_ms": 3500,
-      "end_ms": 3780
-    },
-    {
-      "word": "và",
-      "start_ms": 3780,
-      "end_ms": 3900
-    },
-    {
-      "word": "cà",
-      "start_ms": 3900,
-      "end_ms": 4040
-    },
-    {
-      "word": "phê",
-      "start_ms": 4040,
+      "word": "thay",
+      "start_ms": 4019,
       "end_ms": 4200
     },
     {
-      "word": "hàng",
+      "word": "đổi",
       "start_ms": 4200,
-      "end_ms": 4300
+      "end_ms": 4360
     },
     {
-      "word": "ngày.",
-      "start_ms": 4300,
-      "end_ms": 4560
+      "word": "trong",
+      "start_ms": 4360,
+      "end_ms": 4520
+    },
+    {
+      "word": "thời",
+      "start_ms": 4520,
+      "end_ms": 4680
+    },
+    {
+      "word": "quen",
+      "start_ms": 4680,
+      "end_ms": 4820
+    },
+    {
+      "word": "ăn",
+      "start_ms": 4820,
+      "end_ms": 5020
+    },
+    {
+      "word": "uống",
+      "start_ms": 5020,
+      "end_ms": 5280
+    },
+    {
+      "word": "và",
+      "start_ms": 5280,
+      "end_ms": 5420
+    },
+    {
+      "word": "cà",
+      "start_ms": 5420,
+      "end_ms": 5560
+    },
+    {
+      "word": "phê",
+      "start_ms": 5560,
+      "end_ms": 5660
+    },
+    {
+      "word": "hàng",
+      "start_ms": 5660,
+      "end_ms": 5800
+    },
+    {
+      "word": "ngày",
+      "start_ms": 5800,
+      "end_ms": 5940
+    },
+    {
+      "word": "của",
+      "start_ms": 5940,
+      "end_ms": 6080
+    },
+    {
+      "word": "bạn.",
+      "start_ms": 6080,
+      "end_ms": 6280
     }
   ]
 }

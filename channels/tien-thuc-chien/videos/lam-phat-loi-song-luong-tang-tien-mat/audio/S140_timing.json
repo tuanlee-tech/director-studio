@@ -1,124 +1,159 @@
 {
   "audio_file": "S140_narration.wav",
-  "duration_ms": 4560,
-  "word_count": 23,
+  "duration_ms": 6320,
+  "word_count": 30,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Thay",
+      "word": "Đừng",
       "start_ms": 0,
-      "end_ms": 160
+      "end_ms": 240
     },
     {
-      "word": "vì",
-      "start_ms": 160,
-      "end_ms": 280
+      "word": "bao",
+      "start_ms": 240,
+      "end_ms": 360
+    },
+    {
+      "word": "giờ",
+      "start_ms": 360,
+      "end_ms": 480
     },
     {
       "word": "để",
-      "start_ms": 280,
-      "end_ms": 380
+      "start_ms": 480,
+      "end_ms": 620
     },
     {
       "word": "chung",
-      "start_ms": 380,
-      "end_ms": 600
-    },
-    {
-      "word": "tồn",
-      "start_ms": 600,
+      "start_ms": 620,
       "end_ms": 780
     },
     {
-      "word": "bộ",
+      "word": "toàn",
       "start_ms": 780,
-      "end_ms": 900
+      "end_ms": 1000
+    },
+    {
+      "word": "bộ",
+      "start_ms": 1000,
+      "end_ms": 1100
     },
     {
       "word": "tiền",
-      "start_ms": 900,
-      "end_ms": 1140
+      "start_ms": 1100,
+      "end_ms": 1320
     },
     {
-      "word": "trong",
-      "start_ms": 1140,
-      "end_ms": 1300
+      "word": "cho",
+      "start_ms": 1320,
+      "end_ms": 1460
     },
     {
       "word": "một",
-      "start_ms": 1300,
-      "end_ms": 1440
+      "start_ms": 1460,
+      "end_ms": 1600
     },
     {
       "word": "tài",
-      "start_ms": 1440,
-      "end_ms": 1560
-    },
-    {
-      "word": "khoản,",
-      "start_ms": 1560,
-      "end_ms": 1860
-    },
-    {
-      "word": "bạn",
-      "start_ms": 2240,
-      "end_ms": 2360
-    },
-    {
-      "word": "thấy",
-      "start_ms": 2360,
-      "end_ms": 2480
-    },
-    {
-      "word": "mở",
-      "start_ms": 2480,
-      "end_ms": 2700
-    },
-    {
-      "word": "bà",
-      "start_ms": 2700,
-      "end_ms": 2900
-    },
-    {
-      "word": "tài",
-      "start_ms": 2900,
-      "end_ms": 3000
+      "start_ms": 1600,
+      "end_ms": 1700
     },
     {
       "word": "khoản",
+      "start_ms": 1700,
+      "end_ms": 1900
+    },
+    {
+      "word": "duy",
+      "start_ms": 1900,
+      "end_ms": 2060
+    },
+    {
+      "word": "nhất,",
+      "start_ms": 2060,
+      "end_ms": 2320
+    },
+    {
+      "word": "hãy",
+      "start_ms": 2720,
+      "end_ms": 2840
+    },
+    {
+      "word": "chia",
+      "start_ms": 2840,
+      "end_ms": 3000
+    },
+    {
+      "word": "tách",
       "start_ms": 3000,
-      "end_ms": 3180
+      "end_ms": 3200
     },
     {
-      "word": "số",
-      "start_ms": 3180,
-      "end_ms": 3360
+      "word": "dạc",
+      "start_ms": 3200,
+      "end_ms": 3460
     },
     {
-      "word": "riêng",
-      "start_ms": 3360,
-      "end_ms": 3620
+      "word": "giỏi",
+      "start_ms": 3460,
+      "end_ms": 3720
     },
     {
-      "word": "biệt",
-      "start_ms": 3620,
-      "end_ms": 3820
+      "word": "thành",
+      "start_ms": 3720,
+      "end_ms": 4040
     },
     {
-      "word": "trên",
-      "start_ms": 3820,
-      "end_ms": 4000
+      "word": "3",
+      "start_ms": 4040,
+      "end_ms": 4240
     },
     {
-      "word": "liện",
-      "start_ms": 4000,
-      "end_ms": 4160
+      "word": "dòng",
+      "start_ms": 4240,
+      "end_ms": 4440
     },
     {
-      "word": "thoại.",
-      "start_ms": 4160,
-      "end_ms": 4400
+      "word": "tiền",
+      "start_ms": 4440,
+      "end_ms": 4700
+    },
+    {
+      "word": "với",
+      "start_ms": 4700,
+      "end_ms": 4960
+    },
+    {
+      "word": "một",
+      "start_ms": 4960,
+      "end_ms": 5120
+    },
+    {
+      "word": "đích",
+      "start_ms": 5120,
+      "end_ms": 5320
+    },
+    {
+      "word": "khoản",
+      "start_ms": 5320,
+      "end_ms": 5580
+    },
+    {
+      "word": "toàn",
+      "start_ms": 5580,
+      "end_ms": 5820
+    },
+    {
+      "word": "độc",
+      "start_ms": 5820,
+      "end_ms": 6000
+    },
+    {
+      "word": "lập.",
+      "start_ms": 6000,
+      "end_ms": 6180
     }
   ]
 }

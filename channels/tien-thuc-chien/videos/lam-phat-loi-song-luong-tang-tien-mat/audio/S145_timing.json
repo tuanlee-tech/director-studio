@@ -1,149 +1,139 @@
 {
   "audio_file": "S145_narration.wav",
-  "duration_ms": 6320,
-  "word_count": 28,
+  "duration_ms": 6400,
+  "word_count": 26,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Sau",
       "start_ms": 0,
-      "end_ms": 260
+      "end_ms": 240
     },
     {
-      "word": "7",
-      "start_ms": 260,
-      "end_ms": 420
+      "word": "72",
+      "start_ms": 240,
+      "end_ms": 500
     },
     {
-      "word": "-2",
-      "start_ms": 420,
-      "end_ms": 680
+      "word": "giờ",
+      "start_ms": 500,
+      "end_ms": 840
     },
     {
-      "word": "giờ,",
-      "start_ms": 680,
-      "end_ms": 820
+      "word": "suyến",
+      "start_ms": 840,
+      "end_ms": 1100
     },
     {
-      "word": "cơn",
+      "word": "gấm",
+      "start_ms": 1100,
+      "end_ms": 1220
+    },
+    {
+      "word": "tỉnh",
       "start_ms": 1220,
-      "end_ms": 1320
+      "end_ms": 1380
     },
     {
-      "word": "số",
-      "start_ms": 1320,
-      "end_ms": 1440
+      "word": "táo,",
+      "start_ms": 1380,
+      "end_ms": 1600
     },
     {
-      "word": "thương",
-      "start_ms": 1440,
-      "end_ms": 1660
-    },
-    {
-      "word": "phân",
-      "start_ms": 1660,
-      "end_ms": 1820
-    },
-    {
-      "word": "mô",
-      "start_ms": 1820,
-      "end_ms": 2020
-    },
-    {
-      "word": "sám",
-      "start_ms": 2020,
+      "word": "hơn",
+      "start_ms": 2040,
       "end_ms": 2180
     },
     {
-      "word": "sẽ",
-      "start_ms": 2180,
-      "end_ms": 2380
-    },
-    {
-      "word": "hạ",
-      "start_ms": 2380,
-      "end_ms": 2520
-    },
-    {
-      "word": "nhật",
-      "start_ms": 2520,
-      "end_ms": 2760
-    },
-    {
       "word": "80",
-      "start_ms": 2760,
-      "end_ms": 3340
+      "start_ms": 2180,
+      "end_ms": 2500
     },
     {
       "word": "%",
-      "start_ms": 3340,
-      "end_ms": 3660
+      "start_ms": 2500,
+      "end_ms": 2780
     },
     {
-      "word": "trường",
-      "start_ms": 3660,
-      "end_ms": 3920
+      "word": "những",
+      "start_ms": 2780,
+      "end_ms": 2980
     },
     {
-      "word": "hợp",
-      "start_ms": 3920,
-      "end_ms": 4059
+      "word": "cơn",
+      "start_ms": 2980,
+      "end_ms": 3160
     },
     {
-      "word": "bạn",
-      "start_ms": 4059,
-      "end_ms": 4280
+      "word": "bốc",
+      "start_ms": 3160,
+      "end_ms": 3380
+    },
+    {
+      "word": "đồng",
+      "start_ms": 3380,
+      "end_ms": 3540
+    },
+    {
+      "word": "mua",
+      "start_ms": 3540,
+      "end_ms": 3760
+    },
+    {
+      "word": "sắm",
+      "start_ms": 3760,
+      "end_ms": 3980
     },
     {
       "word": "sẽ",
-      "start_ms": 4280,
-      "end_ms": 4420
+      "start_ms": 3980,
+      "end_ms": 4460
     },
     {
-      "word": "nhận",
-      "start_ms": 4420,
-      "end_ms": 4640
+      "word": "từ",
+      "start_ms": 4460,
+      "end_ms": 4600
     },
     {
-      "word": "ra",
-      "start_ms": 4640,
-      "end_ms": 4860
+      "word": "đậm",
+      "start_ms": 4600,
+      "end_ms": 4800
     },
     {
-      "word": "mình",
-      "start_ms": 4860,
-      "end_ms": 5040
+      "word": "nguội",
+      "start_ms": 4800,
+      "end_ms": 4960
     },
     {
-      "word": "không",
-      "start_ms": 5040,
-      "end_ms": 5240
+      "word": "lại",
+      "start_ms": 4960,
+      "end_ms": 5100
     },
     {
-      "word": "hề",
-      "start_ms": 5240,
-      "end_ms": 5400
+      "word": "và",
+      "start_ms": 5100,
+      "end_ms": 5360
     },
     {
-      "word": "cần",
-      "start_ms": 5400,
-      "end_ms": 5520
+      "word": "biến",
+      "start_ms": 5360,
+      "end_ms": 5600
     },
     {
-      "word": "món",
-      "start_ms": 5520,
-      "end_ms": 5700
+      "word": "mất",
+      "start_ms": 5600,
+      "end_ms": 5760
     },
     {
-      "word": "độ",
-      "start_ms": 5700,
-      "end_ms": 5840
+      "word": "hoàn",
+      "start_ms": 5760,
+      "end_ms": 5920
     },
     {
-      "word": "đó.",
-      "start_ms": 5840,
-      "end_ms": 6080
+      "word": "toàn.",
+      "start_ms": 5920,
+      "end_ms": 6220
     }
   ]
 }

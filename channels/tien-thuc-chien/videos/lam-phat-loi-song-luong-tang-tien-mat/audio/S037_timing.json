@@ -1,7 +1,7 @@
 {
   "audio_file": "S037_narration.wav",
-  "duration_ms": 5920,
-  "word_count": 28,
+  "duration_ms": 6960,
+  "word_count": 31,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
@@ -11,139 +11,154 @@
       "end_ms": 260
     },
     {
-      "word": "mua",
+      "word": "mang",
       "start_ms": 260,
-      "end_ms": 380
+      "end_ms": 400
     },
     {
-      "word": "gối",
-      "start_ms": 380,
-      "end_ms": 540
+      "word": "tay",
+      "start_ms": 400,
+      "end_ms": 560
     },
     {
-      "word": "tập",
-      "start_ms": 540,
-      "end_ms": 700
-    },
-    {
-      "word": "thể",
-      "start_ms": 700,
+      "word": "mua",
+      "start_ms": 560,
       "end_ms": 800
     },
     {
-      "word": "hình",
+      "word": "thể",
       "start_ms": 800,
       "end_ms": 920
     },
     {
-      "word": "12",
+      "word": "tập",
       "start_ms": 920,
-      "end_ms": 1220
-    },
-    {
-      "word": "triệu",
-      "start_ms": 1220,
-      "end_ms": 1460
-    },
-    {
-      "word": "1",
-      "start_ms": 1460,
-      "end_ms": 1560
-    },
-    {
-      "word": "năm",
-      "start_ms": 1560,
-      "end_ms": 1680
-    },
-    {
-      "word": "tại",
-      "start_ms": 1680,
-      "end_ms": 1880
-    },
-    {
-      "word": "Trung",
-      "start_ms": 1880,
-      "end_ms": 2020
-    },
-    {
-      "word": "tâm",
-      "start_ms": 2020,
-      "end_ms": 2260
+      "end_ms": 1200
     },
     {
       "word": "thể",
-      "start_ms": 2260,
-      "end_ms": 2380
+      "start_ms": 1200,
+      "end_ms": 1320
     },
     {
-      "word": "thao",
-      "start_ms": 2380,
-      "end_ms": 2560
+      "word": "hình",
+      "start_ms": 1320,
+      "end_ms": 1500
     },
     {
       "word": "cao",
-      "start_ms": 2560,
-      "end_ms": 2740
+      "start_ms": 1500,
+      "end_ms": 1720
     },
     {
-      "word": "cấp,",
-      "start_ms": 2740,
-      "end_ms": 2920
+      "word": "cấp",
+      "start_ms": 1720,
+      "end_ms": 1880
     },
     {
-      "word": "nhưng",
-      "start_ms": 3380,
-      "end_ms": 3600
+      "word": "12",
+      "start_ms": 1880,
+      "end_ms": 2140
     },
     {
-      "word": "sau",
-      "start_ms": 3600,
-      "end_ms": 3780
-    },
-    {
-      "word": "tháng",
-      "start_ms": 3780,
-      "end_ms": 4000
+      "word": "triệu",
+      "start_ms": 2140,
+      "end_ms": 2360
     },
     {
       "word": "đầu",
-      "start_ms": 4000,
-      "end_ms": 4120
+      "start_ms": 2360,
+      "end_ms": 2440
     },
     {
-      "word": "tiên,",
-      "start_ms": 4120,
-      "end_ms": 4400
+      "word": "một",
+      "start_ms": 2440,
+      "end_ms": 2560
+    },
+    {
+      "word": "năm,",
+      "start_ms": 2560,
+      "end_ms": 2820
+    },
+    {
+      "word": "nhưng",
+      "start_ms": 3300,
+      "end_ms": 3480
     },
     {
       "word": "chỉ",
-      "start_ms": 4780,
-      "end_ms": 4860
+      "start_ms": 3480,
+      "end_ms": 3720
     },
     {
-      "word": "ghê",
-      "start_ms": 4860,
-      "end_ms": 5040
+      "word": "sau",
+      "start_ms": 3720,
+      "end_ms": 3940
     },
     {
-      "word": "qua",
-      "start_ms": 5040,
-      "end_ms": 5240
+      "word": "một",
+      "start_ms": 3940,
+      "end_ms": 4100
     },
     {
-      "word": "đúng",
-      "start_ms": 5240,
-      "end_ms": 5400
+      "word": "tháng",
+      "start_ms": 4100,
+      "end_ms": 4280
     },
     {
-      "word": "3",
-      "start_ms": 5400,
+      "word": "đầu",
+      "start_ms": 4280,
+      "end_ms": 4420
+    },
+    {
+      "word": "tiên,",
+      "start_ms": 4420,
+      "end_ms": 4720
+    },
+    {
+      "word": "bạn",
+      "start_ms": 5120,
+      "end_ms": 5200
+    },
+    {
+      "word": "hầu",
+      "start_ms": 5200,
+      "end_ms": 5420
+    },
+    {
+      "word": "như",
+      "start_ms": 5420,
       "end_ms": 5560
     },
     {
-      "word": "lần.",
+      "word": "không",
       "start_ms": 5560,
-      "end_ms": 5760
+      "end_ms": 5780
+    },
+    {
+      "word": "còn",
+      "start_ms": 5780,
+      "end_ms": 5980
+    },
+    {
+      "word": "lui",
+      "start_ms": 5980,
+      "end_ms": 6140
+    },
+    {
+      "word": "tới",
+      "start_ms": 6140,
+      "end_ms": 6300
+    },
+    {
+      "word": "tập",
+      "start_ms": 6300,
+      "end_ms": 6520
+    },
+    {
+      "word": "luyện.",
+      "start_ms": 6520,
+      "end_ms": 6720
     }
   ]
 }

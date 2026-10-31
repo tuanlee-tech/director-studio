@@ -1,149 +1,139 @@
 {
   "audio_file": "S079_narration.wav",
-  "duration_ms": 5680,
-  "word_count": 28,
+  "duration_ms": 5360,
+  "word_count": 26,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Bạn",
+      "word": "Mối",
       "start_ms": 0,
-      "end_ms": 260
+      "end_ms": 240
     },
     {
-      "word": "dễ",
-      "start_ms": 260,
-      "end_ms": 440
+      "word": "khi",
+      "start_ms": 240,
+      "end_ms": 380
     },
     {
-      "word": "dàng",
-      "start_ms": 440,
-      "end_ms": 640
+      "word": "quẹt",
+      "start_ms": 380,
+      "end_ms": 620
+    },
+    {
+      "word": "thể",
+      "start_ms": 620,
+      "end_ms": 700
+    },
+    {
+      "word": "chi",
+      "start_ms": 700,
+      "end_ms": 840
     },
     {
       "word": "tiêu",
-      "start_ms": 640,
-      "end_ms": 860
+      "start_ms": 840,
+      "end_ms": 1060
     },
     {
-      "word": "2",
-      "start_ms": 860,
-      "end_ms": 1020
+      "word": "hoang",
+      "start_ms": 1060,
+      "end_ms": 1240
     },
     {
-      "word": "triệu",
-      "start_ms": 1020,
-      "end_ms": 1260
+      "word": "phí,",
+      "start_ms": 1240,
+      "end_ms": 1460
     },
     {
-      "word": "cho",
-      "start_ms": 1260,
-      "end_ms": 1440
-    },
-    {
-      "word": "bữa",
-      "start_ms": 1440,
-      "end_ms": 1560
-    },
-    {
-      "word": "tiền",
-      "start_ms": 1560,
+      "word": "bạn",
+      "start_ms": 1680,
       "end_ms": 1740
     },
     {
-      "word": "hôm",
+      "word": "lại",
       "start_ms": 1740,
-      "end_ms": 1840
-    },
-    {
-      "word": "nay,",
-      "start_ms": 1840,
-      "end_ms": 2060
-    },
-    {
-      "word": "và",
-      "start_ms": 2440,
-      "end_ms": 2500
+      "end_ms": 1860
     },
     {
       "word": "tự",
-      "start_ms": 2500,
-      "end_ms": 2700
+      "start_ms": 1860,
+      "end_ms": 2000
     },
     {
-      "word": "hướng",
-      "start_ms": 2700,
-      "end_ms": 3060
+      "word": "cho",
+      "start_ms": 2000,
+      "end_ms": 2140
     },
     {
-      "word": "với",
-      "start_ms": 3060,
-      "end_ms": 3140
+      "word": "nên,",
+      "start_ms": 2140,
+      "end_ms": 2340
     },
     {
-      "word": "bản",
-      "start_ms": 3140,
-      "end_ms": 3320
+      "word": "không",
+      "start_ms": 2800,
+      "end_ms": 2880
     },
     {
-      "word": "thân",
-      "start_ms": 3320,
-      "end_ms": 3520
+      "word": "sao",
+      "start_ms": 2880,
+      "end_ms": 3100
     },
     {
-      "word": "dàng",
-      "start_ms": 3520,
-      "end_ms": 3760
-    },
-    {
-      "word": "háng",
-      "start_ms": 3760,
-      "end_ms": 4059
+      "word": "tháng",
+      "start_ms": 3100,
+      "end_ms": 3360
     },
     {
       "word": "sau",
-      "start_ms": 4059,
-      "end_ms": 4300
+      "start_ms": 3360,
+      "end_ms": 3540
     },
     {
       "word": "mình",
-      "start_ms": 4300,
-      "end_ms": 4480
+      "start_ms": 3540,
+      "end_ms": 3740
     },
     {
       "word": "sẽ",
-      "start_ms": 4480,
-      "end_ms": 4620
+      "start_ms": 3740,
+      "end_ms": 3900
     },
     {
-      "word": "bắt",
-      "start_ms": 4620,
+      "word": "tất",
+      "start_ms": 3900,
+      "end_ms": 4040
+    },
+    {
+      "word": "lưng",
+      "start_ms": 4040,
+      "end_ms": 4240
+    },
+    {
+      "word": "buộc",
+      "start_ms": 4240,
+      "end_ms": 4480
+    },
+    {
+      "word": "buộc",
+      "start_ms": 4480,
       "end_ms": 4720
     },
     {
-      "word": "đầu",
+      "word": "để",
       "start_ms": 4720,
-      "end_ms": 4860
+      "end_ms": 4800
     },
     {
-      "word": "tiết",
-      "start_ms": 4860,
-      "end_ms": 5100
+      "word": "buộc",
+      "start_ms": 4800,
+      "end_ms": 4960
     },
     {
-      "word": "kiệm",
-      "start_ms": 5100,
-      "end_ms": 5260
-    },
-    {
-      "word": "buồn",
-      "start_ms": 5260,
-      "end_ms": 5420
-    },
-    {
-      "word": "lạng.",
-      "start_ms": 5420,
-      "end_ms": 5600
+      "word": "lại.",
+      "start_ms": 4960,
+      "end_ms": 5120
     }
   ]
 }

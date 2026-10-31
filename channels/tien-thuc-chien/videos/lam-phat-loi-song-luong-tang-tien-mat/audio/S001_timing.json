@@ -1,94 +1,94 @@
 {
   "audio_file": "S001_narration.wav",
-  "duration_ms": 3840,
+  "duration_ms": 3920,
   "word_count": 17,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Bạn",
+      "word": "bạn",
       "start_ms": 0,
       "end_ms": 280
     },
     {
-      "word": "với",
+      "word": "vào",
       "start_ms": 280,
       "end_ms": 400
     },
     {
-      "word": "đa",
+      "word": "đặt",
       "start_ms": 400,
-      "end_ms": 540
+      "end_ms": 600
     },
     {
-      "word": "cột",
-      "start_ms": 540,
-      "end_ms": 740
+      "word": "cụt",
+      "start_ms": 600,
+      "end_ms": 820
     },
     {
       "word": "mốc",
-      "start_ms": 740,
+      "start_ms": 820,
       "end_ms": 960
     },
     {
-      "word": "đăng",
+      "word": "mới,",
       "start_ms": 960,
-      "end_ms": 1140
-    },
-    {
-      "word": "nhớ",
-      "start_ms": 1140,
-      "end_ms": 1380
+      "end_ms": 1180
     },
     {
       "word": "được",
-      "start_ms": 1380,
-      "end_ms": 1680
+      "start_ms": 1580,
+      "end_ms": 1700
     },
     {
       "word": "tăng",
-      "start_ms": 1680,
-      "end_ms": 1860
+      "start_ms": 1700,
+      "end_ms": 1900
     },
     {
       "word": "lương",
-      "start_ms": 1860,
-      "end_ms": 2060
+      "start_ms": 1900,
+      "end_ms": 2140
     },
     {
       "word": "từ",
-      "start_ms": 2060,
-      "end_ms": 2220
+      "start_ms": 2140,
+      "end_ms": 2280
     },
     {
-      "word": "10",
-      "start_ms": 2220,
-      "end_ms": 2420
+      "word": "mời",
+      "start_ms": 2280,
+      "end_ms": 2460
     },
     {
-      "word": "triệu",
-      "start_ms": 2420,
+      "word": "chậu",
+      "start_ms": 2460,
       "end_ms": 2700
     },
     {
       "word": "lên",
       "start_ms": 2700,
-      "end_ms": 2940
+      "end_ms": 2780
     },
     {
       "word": "20",
-      "start_ms": 2940,
-      "end_ms": 3220
+      "start_ms": 2780,
+      "end_ms": 3040
     },
     {
-      "word": "triệu",
-      "start_ms": 3220,
-      "end_ms": 3460
+      "word": "chậu",
+      "start_ms": 3040,
+      "end_ms": 3320
     },
     {
-      "word": "đồng.",
-      "start_ms": 3460,
-      "end_ms": 3660
+      "word": "mỗi",
+      "start_ms": 3320,
+      "end_ms": 3400
+    },
+    {
+      "word": "tháng.",
+      "start_ms": 3400,
+      "end_ms": 3700
     }
   ]
 }

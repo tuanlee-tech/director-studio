@@ -1,124 +1,129 @@
 {
   "audio_file": "S103_narration.wav",
-  "duration_ms": 5200,
-  "word_count": 23,
+  "duration_ms": 5360,
+  "word_count": 24,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Trong",
+      "word": "Ngược",
       "start_ms": 0,
-      "end_ms": 200
+      "end_ms": 260
     },
     {
-      "word": "khi",
-      "start_ms": 200,
-      "end_ms": 320
-    },
-    {
-      "word": "đó,",
-      "start_ms": 320,
-      "end_ms": 560
+      "word": "lại,",
+      "start_ms": 260,
+      "end_ms": 480
     },
     {
       "word": "Người",
       "start_ms": 840,
-      "end_ms": 1040
+      "end_ms": 980
     },
     {
       "word": "B",
-      "start_ms": 1040,
-      "end_ms": 1160
+      "start_ms": 980,
+      "end_ms": 1100
     },
     {
-      "word": "sở",
-      "start_ms": 1160,
-      "end_ms": 1400
+      "word": "vẫn",
+      "start_ms": 1100,
+      "end_ms": 1320
     },
     {
-      "word": "hiểu",
-      "start_ms": 1400,
-      "end_ms": 1600
+      "word": "thành",
+      "start_ms": 1320,
+      "end_ms": 1500
     },
     {
-      "word": "một",
-      "start_ms": 1600,
-      "end_ms": 1700
+      "word": "thơi",
+      "start_ms": 1500,
+      "end_ms": 1740
     },
     {
-      "word": "quý",
-      "start_ms": 1700,
+      "word": "nhằm",
+      "start_ms": 1740,
       "end_ms": 1900
     },
     {
-      "word": "khẩn",
+      "word": "như",
       "start_ms": 1900,
-      "end_ms": 2140
+      "end_ms": 2020
     },
     {
-      "word": "cấp",
-      "start_ms": 2140,
-      "end_ms": 2360
+      "word": "tách",
+      "start_ms": 2020,
+      "end_ms": 2200
     },
     {
-      "word": "6",
-      "start_ms": 2360,
-      "end_ms": 2580
+      "word": "trả,",
+      "start_ms": 2200,
+      "end_ms": 2520
     },
     {
-      "word": "tháng",
-      "start_ms": 2580,
-      "end_ms": 2940
+      "word": "hoàn",
+      "start_ms": 2900,
+      "end_ms": 3020
     },
     {
-      "word": "và",
-      "start_ms": 2940,
-      "end_ms": 3060
-    },
-    {
-      "word": "một",
-      "start_ms": 3060,
+      "word": "toàn",
+      "start_ms": 3020,
       "end_ms": 3220
     },
     {
-      "word": "dành",
+      "word": "ung",
       "start_ms": 3220,
-      "end_ms": 3400
+      "end_ms": 3340
     },
     {
-      "word": "mục",
-      "start_ms": 3400,
+      "word": "dung",
+      "start_ms": 3340,
       "end_ms": 3520
     },
     {
-      "word": "tích",
+      "word": "trước",
       "start_ms": 3520,
-      "end_ms": 3760
+      "end_ms": 3660
     },
     {
-      "word": "sản",
-      "start_ms": 3760,
-      "end_ms": 4059
+      "word": "mọi",
+      "start_ms": 3660,
+      "end_ms": 3860
     },
     {
-      "word": "hơn",
-      "start_ms": 4059,
-      "end_ms": 4260
+      "word": "thông",
+      "start_ms": 3860,
+      "end_ms": 4080
     },
     {
-      "word": "200",
-      "start_ms": 4260,
+      "word": "tin",
+      "start_ms": 4080,
+      "end_ms": 4220
+    },
+    {
+      "word": "biến",
+      "start_ms": 4220,
+      "end_ms": 4400
+    },
+    {
+      "word": "đậu",
+      "start_ms": 4400,
       "end_ms": 4580
     },
     {
-      "word": "triệu",
+      "word": "của",
       "start_ms": 4580,
-      "end_ms": 4820
+      "end_ms": 4720
     },
     {
-      "word": "đồng.",
-      "start_ms": 4820,
-      "end_ms": 5020
+      "word": "thị",
+      "start_ms": 4720,
+      "end_ms": 4840
+    },
+    {
+      "word": "trường.",
+      "start_ms": 4840,
+      "end_ms": 5140
     }
   ]
 }

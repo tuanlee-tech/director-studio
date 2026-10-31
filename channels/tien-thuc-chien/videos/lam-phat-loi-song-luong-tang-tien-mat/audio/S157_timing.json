@@ -1,134 +1,139 @@
 {
   "audio_file": "S157_narration.wav",
   "duration_ms": 5280,
-  "word_count": 25,
+  "word_count": 26,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Tôi",
       "start_ms": 0,
-      "end_ms": 180
+      "end_ms": 200
     },
     {
       "word": "là",
-      "start_ms": 180,
-      "end_ms": 300
+      "start_ms": 200,
+      "end_ms": 340
     },
     {
       "word": "người",
-      "start_ms": 300,
-      "end_ms": 440
+      "start_ms": 340,
+      "end_ms": 480
     },
     {
       "word": "đồng",
-      "start_ms": 440,
-      "end_ms": 640
+      "start_ms": 480,
+      "end_ms": 660
     },
     {
       "word": "hành",
-      "start_ms": 640,
-      "end_ms": 760
+      "start_ms": 660,
+      "end_ms": 820
     },
     {
       "word": "của",
-      "start_ms": 760,
-      "end_ms": 900
+      "start_ms": 820,
+      "end_ms": 940
     },
     {
       "word": "bạn",
-      "start_ms": 900,
-      "end_ms": 1060
+      "start_ms": 940,
+      "end_ms": 1120
     },
     {
       "word": "tại",
-      "start_ms": 1060,
-      "end_ms": 1240
+      "start_ms": 1120,
+      "end_ms": 1300
     },
     {
-      "word": "tiền",
-      "start_ms": 1240,
-      "end_ms": 1420
+      "word": "tên",
+      "start_ms": 1300,
+      "end_ms": 1500
     },
     {
       "word": "thực",
-      "start_ms": 1420,
-      "end_ms": 1560
+      "start_ms": 1500,
+      "end_ms": 1600
     },
     {
-      "word": "chiến",
-      "start_ms": 1560,
-      "end_ms": 1840
+      "word": "chiến.",
+      "start_ms": 1600,
+      "end_ms": 1920
     },
     {
-      "word": "Cảm",
-      "start_ms": 1840,
-      "end_ms": 2540
+      "word": "Xin",
+      "start_ms": 2320,
+      "end_ms": 2400
     },
     {
-      "word": "ơn",
-      "start_ms": 2540,
-      "end_ms": 2600
-    },
-    {
-      "word": "bạn",
-      "start_ms": 2600,
-      "end_ms": 2800
-    },
-    {
-      "word": "đã",
-      "start_ms": 2800,
-      "end_ms": 2940
-    },
-    {
-      "word": "lắng",
-      "start_ms": 2940,
-      "end_ms": 3160
-    },
-    {
-      "word": "nghe",
-      "start_ms": 3160,
-      "end_ms": 3380
+      "word": "chào",
+      "start_ms": 2400,
+      "end_ms": 2720
     },
     {
       "word": "và",
-      "start_ms": 3380,
-      "end_ms": 3520
+      "start_ms": 2720,
+      "end_ms": 2840
     },
     {
       "word": "hẹn",
-      "start_ms": 3520,
-      "end_ms": 3700
+      "start_ms": 2840,
+      "end_ms": 3020
     },
     {
       "word": "gặp",
-      "start_ms": 3700,
-      "end_ms": 3820
+      "start_ms": 3020,
+      "end_ms": 3080
     },
     {
       "word": "lại",
-      "start_ms": 3820,
-      "end_ms": 3980
+      "start_ms": 3080,
+      "end_ms": 3260
     },
     {
-      "word": "ở",
-      "start_ms": 3980,
-      "end_ms": 4320
+      "word": "bạn",
+      "start_ms": 3260,
+      "end_ms": 3500
     },
     {
-      "word": "video",
-      "start_ms": 4320,
+      "word": "trong",
+      "start_ms": 3500,
+      "end_ms": 3780
+    },
+    {
+      "word": "những",
+      "start_ms": 3780,
+      "end_ms": 3900
+    },
+    {
+      "word": "phân",
+      "start_ms": 3900,
+      "end_ms": 4080
+    },
+    {
+      "word": "tích",
+      "start_ms": 4080,
+      "end_ms": 4260
+    },
+    {
+      "word": "tại",
+      "start_ms": 4260,
+      "end_ms": 4420
+    },
+    {
+      "word": "chính",
+      "start_ms": 4420,
       "end_ms": 4580
     },
     {
-      "word": "tiếp",
+      "word": "kiếp",
       "start_ms": 4580,
-      "end_ms": 4800
+      "end_ms": 4760
     },
     {
-      "word": "theo",
-      "start_ms": 4800,
-      "end_ms": 5040
+      "word": "theo.",
+      "start_ms": 4760,
+      "end_ms": 5000
     }
   ]
 }

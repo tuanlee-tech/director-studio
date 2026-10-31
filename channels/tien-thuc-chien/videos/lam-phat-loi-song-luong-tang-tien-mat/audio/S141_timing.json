@@ -1,18 +1,18 @@
 {
   "audio_file": "S141_narration.wav",
-  "duration_ms": 5280,
-  "word_count": 23,
+  "duration_ms": 6480,
+  "word_count": 30,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Tại",
       "start_ms": 0,
-      "end_ms": 180
+      "end_ms": 200
     },
     {
       "word": "khoảng",
-      "start_ms": 180,
+      "start_ms": 200,
       "end_ms": 380
     },
     {
@@ -21,104 +21,139 @@
       "end_ms": 500
     },
     {
-      "word": "nhất,",
+      "word": "nhất",
       "start_ms": 500,
-      "end_ms": 640
+      "end_ms": 620
     },
     {
-      "word": "giữ",
-      "start_ms": 840,
+      "word": "là",
+      "start_ms": 620,
+      "end_ms": 780
+    },
+    {
+      "word": "tay",
+      "start_ms": 780,
       "end_ms": 960
     },
     {
-      "word": "nguyên",
+      "word": "khoảng",
       "start_ms": 960,
-      "end_ms": 1200
+      "end_ms": 1260
     },
     {
-      "word": "10",
-      "start_ms": 1200,
-      "end_ms": 1340
-    },
-    {
-      "word": "triệu",
-      "start_ms": 1340,
-      "end_ms": 1600
-    },
-    {
-      "word": "cho",
-      "start_ms": 1600,
-      "end_ms": 1740
-    },
-    {
-      "word": "ghi",
-      "start_ms": 1740,
-      "end_ms": 1920
-    },
-    {
-      "word": "phí",
-      "start_ms": 1920,
-      "end_ms": 2120
-    },
-    {
-      "word": "sinh",
-      "start_ms": 2120,
-      "end_ms": 2380
+      "word": "xinh",
+      "start_ms": 1260,
+      "end_ms": 1460
     },
     {
       "word": "hoạt",
-      "start_ms": 2380,
-      "end_ms": 2520
+      "start_ms": 1460,
+      "end_ms": 1600
     },
     {
-      "word": "căn",
-      "start_ms": 2520,
-      "end_ms": 2700
+      "word": "cơ",
+      "start_ms": 1600,
+      "end_ms": 1760
     },
     {
       "word": "bản,",
-      "start_ms": 2700,
-      "end_ms": 2900
+      "start_ms": 1760,
+      "end_ms": 1960
     },
     {
-      "word": "tiền",
-      "start_ms": 3260,
-      "end_ms": 3360
+      "word": "giữ",
+      "start_ms": 2420,
+      "end_ms": 2560
     },
     {
-      "word": "nhà,",
-      "start_ms": 3360,
+      "word": "nguyên",
+      "start_ms": 2560,
+      "end_ms": 2780
+    },
+    {
+      "word": "10",
+      "start_ms": 2780,
+      "end_ms": 2940
+    },
+    {
+      "word": "triệu",
+      "start_ms": 2940,
+      "end_ms": 3140
+    },
+    {
+      "word": "đồng",
+      "start_ms": 3140,
+      "end_ms": 3300
+    },
+    {
+      "word": "để",
+      "start_ms": 3300,
       "end_ms": 3560
     },
     {
-      "word": "tiền",
-      "start_ms": 3880,
-      "end_ms": 4000
+      "word": "chăng",
+      "start_ms": 3560,
+      "end_ms": 3760
     },
     {
-      "word": "ăn,",
-      "start_ms": 4000,
+      "word": "trải",
+      "start_ms": 3760,
+      "end_ms": 3940
+    },
+    {
+      "word": "tiền",
+      "start_ms": 3940,
       "end_ms": 4160
     },
     {
-      "word": "hóa",
-      "start_ms": 4540,
-      "end_ms": 4640
+      "word": "nhà",
+      "start_ms": 4160,
+      "end_ms": 4340
     },
     {
-      "word": "đơn",
-      "start_ms": 4640,
-      "end_ms": 4720
+      "word": "ăn",
+      "start_ms": 4340,
+      "end_ms": 4660
     },
     {
-      "word": "định",
-      "start_ms": 4720,
+      "word": "uống",
+      "start_ms": 4660,
       "end_ms": 4900
     },
     {
-      "word": "nước.",
+      "word": "và",
       "start_ms": 4900,
-      "end_ms": 5020
+      "end_ms": 5120
+    },
+    {
+      "word": "hóa",
+      "start_ms": 5120,
+      "end_ms": 5320
+    },
+    {
+      "word": "đơn",
+      "start_ms": 5320,
+      "end_ms": 5440
+    },
+    {
+      "word": "xinh",
+      "start_ms": 5440,
+      "end_ms": 5680
+    },
+    {
+      "word": "hoạt",
+      "start_ms": 5680,
+      "end_ms": 5780
+    },
+    {
+      "word": "định",
+      "start_ms": 5780,
+      "end_ms": 5960
+    },
+    {
+      "word": "kỳ.",
+      "start_ms": 5960,
+      "end_ms": 6160
     }
   ]
 }

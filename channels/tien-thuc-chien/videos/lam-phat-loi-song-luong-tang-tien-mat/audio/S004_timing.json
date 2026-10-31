@@ -1,6 +1,6 @@
 {
   "audio_file": "S004_narration.wav",
-  "duration_ms": 4160,
+  "duration_ms": 4240,
   "word_count": 18,
   "model": "base",
   "engine": "faster-whisper",
@@ -13,87 +13,87 @@
     {
       "word": "nhưng",
       "start_ms": 160,
-      "end_ms": 240
+      "end_ms": 260
     },
     {
-      "word": "cuối",
-      "start_ms": 240,
-      "end_ms": 500
+      "word": "quý",
+      "start_ms": 260,
+      "end_ms": 460
     },
     {
-      "word": "tháng",
-      "start_ms": 500,
+      "word": "tháng,",
+      "start_ms": 460,
       "end_ms": 760
     },
     {
-      "word": "mở",
-      "start_ms": 760,
-      "end_ms": 980
-    },
-    {
-      "word": "tài",
-      "start_ms": 980,
-      "end_ms": 1120
-    },
-    {
-      "word": "khoản,",
-      "start_ms": 1120,
-      "end_ms": 1360
-    },
-    {
       "word": "số",
-      "start_ms": 1700,
-      "end_ms": 1860
+      "start_ms": 1020,
+      "end_ms": 1240
     },
     {
       "word": "giữ",
-      "start_ms": 1860,
-      "end_ms": 2080
+      "start_ms": 1240,
+      "end_ms": 1360
     },
     {
       "word": "thực",
-      "start_ms": 2080,
-      "end_ms": 2180
+      "start_ms": 1360,
+      "end_ms": 1500
     },
     {
       "word": "tế",
-      "start_ms": 2180,
-      "end_ms": 2520
+      "start_ms": 1500,
+      "end_ms": 1780
+    },
+    {
+      "word": "trong",
+      "start_ms": 1780,
+      "end_ms": 1900
+    },
+    {
+      "word": "tài",
+      "start_ms": 1900,
+      "end_ms": 2040
+    },
+    {
+      "word": "khoảng",
+      "start_ms": 2040,
+      "end_ms": 2340
     },
     {
       "word": "vẫn",
-      "start_ms": 2520,
-      "end_ms": 2720
+      "start_ms": 2340,
+      "end_ms": 2800
     },
     {
       "word": "là",
-      "start_ms": 2720,
-      "end_ms": 2900
+      "start_ms": 2800,
+      "end_ms": 3000
     },
     {
-      "word": "con",
-      "start_ms": 2900,
-      "end_ms": 3080
+      "word": "còn",
+      "start_ms": 3000,
+      "end_ms": 3160
     },
     {
       "word": "số",
-      "start_ms": 3080,
-      "end_ms": 3300
+      "start_ms": 3160,
+      "end_ms": 3400
     },
     {
       "word": "không",
-      "start_ms": 3300,
-      "end_ms": 3500
+      "start_ms": 3400,
+      "end_ms": 3620
     },
     {
-      "word": "chọn",
-      "start_ms": 3500,
-      "end_ms": 3720
+      "word": "rồn",
+      "start_ms": 3620,
+      "end_ms": 3860
     },
     {
       "word": "chính.",
-      "start_ms": 3720,
-      "end_ms": 3920
+      "start_ms": 3860,
+      "end_ms": 4000
     }
   ]
 }

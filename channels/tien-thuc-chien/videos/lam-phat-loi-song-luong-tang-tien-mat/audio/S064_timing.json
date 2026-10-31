@@ -1,129 +1,154 @@
 {
   "audio_file": "S064_narration.wav",
-  "duration_ms": 4960,
-  "word_count": 24,
+  "duration_ms": 6160,
+  "word_count": 29,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "nó",
+      "word": "Trước",
       "start_ms": 0,
-      "end_ms": 180
+      "end_ms": 220
+    },
+    {
+      "word": "bấy",
+      "start_ms": 220,
+      "end_ms": 340
+    },
+    {
+      "word": "này",
+      "start_ms": 340,
+      "end_ms": 460
     },
     {
       "word": "mang",
-      "start_ms": 180,
-      "end_ms": 360
-    },
-    {
-      "word": "tên",
-      "start_ms": 360,
-      "end_ms": 520
-    },
-    {
-      "word": "hiệu",
-      "start_ms": 520,
+      "start_ms": 460,
       "end_ms": 680
     },
     {
-      "word": "ứng",
+      "word": "tên",
       "start_ms": 680,
-      "end_ms": 920
+      "end_ms": 900
     },
     {
-      "word": "đi",
-      "start_ms": 920,
+      "word": "hiệu",
+      "start_ms": 900,
       "end_ms": 1040
     },
     {
-      "word": "đơ",
+      "word": "ứng",
       "start_ms": 1040,
-      "end_ms": 1200
+      "end_ms": 1220
+    },
+    {
+      "word": "đi",
+      "start_ms": 1220,
+      "end_ms": 1340
+    },
+    {
+      "word": "đơ",
+      "start_ms": 1340,
+      "end_ms": 1500
     },
     {
       "word": "rồ,",
-      "start_ms": 1200,
-      "end_ms": 1440
+      "start_ms": 1500,
+      "end_ms": 1740
     },
     {
-      "word": "mắt",
-      "start_ms": 1920,
-      "end_ms": 2060
+      "word": "bắt",
+      "start_ms": 2280,
+      "end_ms": 2380
     },
     {
       "word": "nguồn",
-      "start_ms": 2060,
-      "end_ms": 2280
+      "start_ms": 2380,
+      "end_ms": 2600
     },
     {
       "word": "từ",
-      "start_ms": 2280,
-      "end_ms": 2400
+      "start_ms": 2600,
+      "end_ms": 2740
     },
     {
       "word": "câu",
-      "start_ms": 2400,
-      "end_ms": 2620
-    },
-    {
-      "word": "chuyện",
-      "start_ms": 2620,
-      "end_ms": 2780
-    },
-    {
-      "word": "có",
-      "start_ms": 2780,
+      "start_ms": 2740,
       "end_ms": 2940
     },
     {
-      "word": "thật",
+      "word": "chuyện",
       "start_ms": 2940,
-      "end_ms": 3100
+      "end_ms": 3060
+    },
+    {
+      "word": "có",
+      "start_ms": 3060,
+      "end_ms": 3240
+    },
+    {
+      "word": "thật",
+      "start_ms": 3240,
+      "end_ms": 3480
     },
     {
       "word": "của",
-      "start_ms": 3100,
-      "end_ms": 3200
+      "start_ms": 3480,
+      "end_ms": 3680
+    },
+    {
+      "word": "một",
+      "start_ms": 3680,
+      "end_ms": 3820
     },
     {
       "word": "chết",
-      "start_ms": 3200,
-      "end_ms": 3380
+      "start_ms": 3820,
+      "end_ms": 4040
     },
     {
       "word": "ra",
-      "start_ms": 3380,
-      "end_ms": 3520
-    },
-    {
-      "word": "người",
-      "start_ms": 3520,
-      "end_ms": 3740
-    },
-    {
-      "word": "pháp",
-      "start_ms": 3740,
-      "end_ms": 4000
-    },
-    {
-      "word": "và",
-      "start_ms": 4000,
-      "end_ms": 4120
-    },
-    {
-      "word": "thế",
-      "start_ms": 4120,
+      "start_ms": 4040,
       "end_ms": 4220
     },
     {
-      "word": "kỷ",
+      "word": "người",
       "start_ms": 4220,
-      "end_ms": 4360
+      "end_ms": 4460
+    },
+    {
+      "word": "pháp",
+      "start_ms": 4460,
+      "end_ms": 4780
+    },
+    {
+      "word": "vi",
+      "start_ms": 4780,
+      "end_ms": 4920
+    },
+    {
+      "word": "đại",
+      "start_ms": 4920,
+      "end_ms": 5140
+    },
+    {
+      "word": "vào",
+      "start_ms": 5140,
+      "end_ms": 5260
+    },
+    {
+      "word": "thế",
+      "start_ms": 5260,
+      "end_ms": 5420
+    },
+    {
+      "word": "kỳ",
+      "start_ms": 5420,
+      "end_ms": 5560
     },
     {
       "word": "18.",
-      "start_ms": 4360,
-      "end_ms": 4620
+      "start_ms": 5560,
+      "end_ms": 5800
     }
   ]
 }

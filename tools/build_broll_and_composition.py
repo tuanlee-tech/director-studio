@@ -67,6 +67,37 @@ def build():
     scenes = parse_script()
     print(f"🎬 Đang đồng bộ broll, composition và props cho {len(scenes)} scenes...")
 
+    TOTAL_TARGET_FRAMES = 36000  # Chuẩn 20 phút (1.200s, 36.000 frames @ 30 FPS)
+    aiv_scenes = [s for s in scenes if s["type"] == "AIV"]
+    non_aiv_scenes = [s for s in scenes if s["type"] != "AIV"]
+
+    aiv_frames_total = len(aiv_scenes) * 180  # 7 scenes * 180 frames (6.0s) = 1.260 frames
+    target_non_aiv_frames = TOTAL_TARGET_FRAMES - aiv_frames_total  # 34.740 frames
+
+    # Tính toán chính xác audio frames cho từng cảnh
+    non_aiv_audio_frames = {}
+    for s in non_aiv_scenes:
+        sid = s["scene_id"]
+        wav_f = AUDIO_DIR / f"{sid}_narration.wav"
+        dur_ms = get_audio_duration_ms(wav_f)
+        af = int(round(dur_ms / 1000.0 * FPS))
+        non_aiv_audio_frames[sid] = af
+
+    audio_sum = sum(non_aiv_audio_frames.values())
+    cushion_total = target_non_aiv_frames - audio_sum
+    base_cushion = cushion_total // len(non_aiv_scenes)
+    remainder_cushion = cushion_total % len(non_aiv_scenes)
+
+    # Gán dur_frames chuẩn xác từng scene
+    scene_dur_frames = {}
+    for s in aiv_scenes:
+        scene_dur_frames[s["scene_id"]] = 180
+
+    for idx, s in enumerate(non_aiv_scenes):
+        sid = s["scene_id"]
+        cush = base_cushion + (1 if idx < remainder_cushion else 0)
+        scene_dur_frames[sid] = non_aiv_audio_frames[sid] + cush
+
     broll_scenes = []
     visual_sequences = []
     props_sequences = []
@@ -79,23 +110,23 @@ def build():
         concept = s["concept"]
         narration = s["narration"]
 
-        wav_file = AUDIO_DIR / f"{sid}_narration.wav"
         timing_file = AUDIO_DIR / f"{sid}_timing.json"
 
-        audio_ms = get_audio_duration_ms(wav_file)
-        audio_dur_s = audio_ms / 1000.0
+        dur_frames = scene_dur_frames[sid]
+        dur_s = dur_frames / float(FPS)
 
         if stype == "AIV":
-            dur_s = 6.0
-            dur_frames = 6 * FPS
             asset_filename = f"{sid}-A_6s_AIV.mp4"
+            for f in ASSETS_DIR.glob(f"{sid}-A_*_AIV.mp4"):
+                asset_filename = f.name
+                break
         else:
-            # Calculate frames needed for audio + 2 frames cushion
-            calc_frames = int(round(audio_dur_s * FPS)) + 2
-            # At least the estimated duration
-            dur_frames = max(calc_frames, s["est_duration"] * FPS)
-            dur_s = dur_frames / float(FPS)
-            asset_filename = f"{sid}-A_{int(dur_s)}s_{stype}.png" if stype == "IMG" else None
+            asset_filename = None
+            if stype == "IMG":
+                asset_filename = f"{sid}-A_{int(dur_s)}s_IMG.png"
+                for f in ASSETS_DIR.glob(f"{sid}-A_*_IMG.png"):
+                    asset_filename = f.name
+                    break
 
         # Clean title for viewer
         clean_title = concept
@@ -277,14 +308,38 @@ def build():
     }
     PROPS_FILE.write_text(json.dumps(current_props, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # 5. Write assets/prompts.md
-    write_prompts_file(scenes)
+    # 5. Ghép nối narration_master.wav chuẩn xác 100% khớp từng frame với visual sequences
+    print(f"\n🎧 Đang ghép nối narration_master.wav chuẩn xác {total_frames} frames (36.000f = 1.200s)...")
+    samples_per_frame = 48000 // FPS  # 1600 samples/frame @ 48kHz
+    total_samples = total_frames * samples_per_frame
+    total_bytes = total_samples * 2  # 16-bit mono = 2 bytes/sample
+    master_buffer = bytearray(total_bytes)
 
-    print(f"✅ Đã tạo hoàn tất:")
+    for seq in props_sequences:
+        sid = seq["scene"]
+        start_f = seq["start_frame"]
+        start_sample = start_f * samples_per_frame
+        start_byte = start_sample * 2
+        wav_f = AUDIO_DIR / f"{sid}_narration.wav"
+        if wav_f.exists():
+            with wave.open(str(wav_f), "rb") as wf:
+                data = wf.readframes(wf.getnframes())
+                end_byte = min(start_byte + len(data), total_bytes)
+                master_buffer[start_byte:end_byte] = data[:end_byte - start_byte]
+
+    master_wav_path = AUDIO_DIR / "narration_master.wav"
+    with wave.open(str(master_wav_path), "wb") as out_wf:
+        out_wf.setnchannels(1)
+        out_wf.setsampwidth(2)
+        out_wf.setframerate(48000)
+        out_wf.writeframes(master_buffer)
+    print(f"✅ narration_master.wav đã ghép chuẩn xác: {total_frames} frames ({total_seconds:.2f}s, {master_wav_path.stat().st_size // 1024} KB)")
+
+    print(f"\n🎉 HOÀN TẤT ĐỒNG BỘ TOÀN DIỆN:")
     print(f"  - broll-plan.json & broll-plan.md: {total_seconds/60:.2f} phút ({total_frames} frames)")
     print(f"  - remotion-composition.json ({len(visual_sequences)} visual sequences)")
     print(f"  - studio/remotion/current_props.json")
-    print(f"  - assets/prompts.md")
+    print(f"  - audio/narration_master.wav: đúng chuẩn 20 phút (36.000 frames)!")
 
 
 def write_prompts_file(scenes):

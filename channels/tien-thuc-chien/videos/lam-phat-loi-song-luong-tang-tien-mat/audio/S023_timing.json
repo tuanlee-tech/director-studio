@@ -1,119 +1,164 @@
 {
   "audio_file": "S023_narration.wav",
-  "duration_ms": 4720,
-  "word_count": 22,
+  "duration_ms": 6320,
+  "word_count": 31,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Cộng",
       "start_ms": 0,
-      "end_ms": 260
+      "end_ms": 240
+    },
+    {
+      "word": "dồn",
+      "start_ms": 240,
+      "end_ms": 440
     },
     {
       "word": "tất",
-      "start_ms": 260,
-      "end_ms": 380
+      "start_ms": 440,
+      "end_ms": 560
     },
     {
       "word": "cả",
-      "start_ms": 380,
-      "end_ms": 520
+      "start_ms": 560,
+      "end_ms": 680
     },
     {
       "word": "lại,",
-      "start_ms": 520,
-      "end_ms": 740
+      "start_ms": 680,
+      "end_ms": 920
     },
     {
-      "word": "hoàn",
-      "start_ms": 1020,
-      "end_ms": 1180
+      "word": "tổng",
+      "start_ms": 1300,
+      "end_ms": 1460
     },
     {
-      "word": "tên",
-      "start_ms": 1180,
-      "end_ms": 1260
+      "word": "chi",
+      "start_ms": 1460,
+      "end_ms": 1580
     },
     {
-      "word": "ăn",
-      "start_ms": 1260,
-      "end_ms": 1400
+      "word": "phí",
+      "start_ms": 1580,
+      "end_ms": 1820
     },
     {
-      "word": "uống",
-      "start_ms": 1400,
-      "end_ms": 1660
-    },
-    {
-      "word": "và",
-      "start_ms": 1660,
-      "end_ms": 1840
-    },
-    {
-      "word": "ca",
-      "start_ms": 1840,
+      "word": "dành",
+      "start_ms": 1820,
       "end_ms": 1980
     },
     {
-      "word": "phê",
+      "word": "cho",
       "start_ms": 1980,
-      "end_ms": 2160
+      "end_ms": 2120
+    },
+    {
+      "word": "ăn",
+      "start_ms": 2120,
+      "end_ms": 2260
+    },
+    {
+      "word": "uống",
+      "start_ms": 2260,
+      "end_ms": 2500
+    },
+    {
+      "word": "và",
+      "start_ms": 2500,
+      "end_ms": 2680
+    },
+    {
+      "word": "giải",
+      "start_ms": 2680,
+      "end_ms": 2840
+    },
+    {
+      "word": "chí",
+      "start_ms": 2840,
+      "end_ms": 3000
+    },
+    {
+      "word": "hàng",
+      "start_ms": 3000,
+      "end_ms": 3100
+    },
+    {
+      "word": "tháng",
+      "start_ms": 3100,
+      "end_ms": 3300
     },
     {
       "word": "của",
-      "start_ms": 2160,
-      "end_ms": 2300
+      "start_ms": 3300,
+      "end_ms": 3440
     },
     {
       "word": "bạn",
-      "start_ms": 2300,
-      "end_ms": 2460
-    },
-    {
-      "word": "đã",
-      "start_ms": 2460,
-      "end_ms": 2660
-    },
-    {
-      "word": "tăng",
-      "start_ms": 2660,
-      "end_ms": 2920
-    },
-    {
-      "word": "thêm",
-      "start_ms": 2920,
-      "end_ms": 3180
-    },
-    {
-      "word": "hơn",
-      "start_ms": 3180,
-      "end_ms": 3380
-    },
-    {
-      "word": "4",
-      "start_ms": 3380,
+      "start_ms": 3440,
       "end_ms": 3600
     },
     {
-      "word": "triệu",
+      "word": "đã",
       "start_ms": 3600,
-      "end_ms": 3880
+      "end_ms": 3800
     },
     {
-      "word": "đồng",
-      "start_ms": 3880,
-      "end_ms": 4040
+      "word": "tăng",
+      "start_ms": 3800,
+      "end_ms": 4019
     },
     {
-      "word": "mỗi",
-      "start_ms": 4040,
-      "end_ms": 4220
+      "word": "vọt",
+      "start_ms": 4019,
+      "end_ms": 4260
     },
     {
-      "word": "tháng.",
-      "start_ms": 4220,
-      "end_ms": 4480
+      "word": "từ",
+      "start_ms": 4260,
+      "end_ms": 4340
+    },
+    {
+      "word": "3",
+      "start_ms": 4340,
+      "end_ms": 4560
+    },
+    {
+      "word": "chiệu",
+      "start_ms": 4560,
+      "end_ms": 4840
+    },
+    {
+      "word": "lên",
+      "start_ms": 4840,
+      "end_ms": 5020
+    },
+    {
+      "word": "tới",
+      "start_ms": 5020,
+      "end_ms": 5220
+    },
+    {
+      "word": "hơn",
+      "start_ms": 5220,
+      "end_ms": 5440
+    },
+    {
+      "word": "7",
+      "start_ms": 5440,
+      "end_ms": 5640
+    },
+    {
+      "word": "chiệu",
+      "start_ms": 5640,
+      "end_ms": 5840
+    },
+    {
+      "word": "dưới.",
+      "start_ms": 5840,
+      "end_ms": 6060
     }
   ]
 }

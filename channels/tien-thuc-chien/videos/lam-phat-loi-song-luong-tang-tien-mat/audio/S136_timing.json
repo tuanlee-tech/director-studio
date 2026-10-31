@@ -1,43 +1,43 @@
 {
   "audio_file": "S136_narration.wav",
-  "duration_ms": 6560,
-  "word_count": 25,
+  "duration_ms": 6320,
+  "word_count": 28,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Nhờ",
       "start_ms": 0,
-      "end_ms": 260
+      "end_ms": 240
     },
     {
       "word": "công",
-      "start_ms": 260,
+      "start_ms": 240,
       "end_ms": 380
     },
     {
       "word": "thức",
       "start_ms": 380,
-      "end_ms": 580
+      "end_ms": 540
     },
     {
       "word": "này,",
-      "start_ms": 580,
+      "start_ms": 540,
       "end_ms": 740
     },
     {
       "word": "sau",
-      "start_ms": 1200,
-      "end_ms": 1320
+      "start_ms": 1220,
+      "end_ms": 1380
     },
     {
       "word": "3",
-      "start_ms": 1320,
-      "end_ms": 1520
+      "start_ms": 1380,
+      "end_ms": 1540
     },
     {
       "word": "năm",
-      "start_ms": 1520,
+      "start_ms": 1540,
       "end_ms": 1660
     },
     {
@@ -46,89 +46,104 @@
       "end_ms": 1900
     },
     {
-      "word": "gửi",
+      "word": "vừa",
       "start_ms": 1900,
-      "end_ms": 2120
+      "end_ms": 2100
     },
     {
       "word": "được",
-      "start_ms": 2120,
-      "end_ms": 2260
+      "start_ms": 2100,
+      "end_ms": 2220
     },
     {
-      "word": "nên",
-      "start_ms": 2260,
-      "end_ms": 2420
+      "word": "tận",
+      "start_ms": 2220,
+      "end_ms": 2480
     },
     {
-      "word": "cấp",
-      "start_ms": 2420,
-      "end_ms": 2740
+      "word": "hưởng",
+      "start_ms": 2480,
+      "end_ms": 2680
     },
     {
-      "word": "mức",
-      "start_ms": 2740,
-      "end_ms": 3040
+      "word": "của",
+      "start_ms": 2680,
+      "end_ms": 2860
     },
     {
       "word": "sống",
+      "start_ms": 2860,
+      "end_ms": 3040
+    },
+    {
+      "word": "chất",
       "start_ms": 3040,
-      "end_ms": 3220
+      "end_ms": 3200
     },
     {
-      "word": "lên",
-      "start_ms": 3220,
-      "end_ms": 3340
+      "word": "lượng,",
+      "start_ms": 3200,
+      "end_ms": 3420
     },
     {
-      "word": "25",
-      "start_ms": 3340,
-      "end_ms": 3680
+      "word": "vừa",
+      "start_ms": 3780,
+      "end_ms": 3960
     },
     {
-      "word": "%",
-      "start_ms": 3680,
-      "end_ms": 4180
+      "word": "tích",
+      "start_ms": 3960,
+      "end_ms": 4140
     },
     {
-      "word": "Vừa",
-      "start_ms": 4180,
-      "end_ms": 4880
+      "word": "lý",
+      "start_ms": 4140,
+      "end_ms": 4300
     },
     {
-      "word": "có",
-      "start_ms": 4880,
-      "end_ms": 5000
-    },
-    {
-      "word": "trong",
-      "start_ms": 5000,
-      "end_ms": 5120
-    },
-    {
-      "word": "tay",
-      "start_ms": 5120,
-      "end_ms": 5320
+      "word": "được",
+      "start_ms": 4300,
+      "end_ms": 4480
     },
     {
       "word": "hơn",
-      "start_ms": 5320,
-      "end_ms": 5520
+      "start_ms": 4480,
+      "end_ms": 4640
     },
     {
       "word": "200",
-      "start_ms": 5520,
-      "end_ms": 5860
+      "start_ms": 4640,
+      "end_ms": 4980
     },
     {
       "word": "triệu",
-      "start_ms": 5860,
-      "end_ms": 6140
+      "start_ms": 4980,
+      "end_ms": 5260
     },
     {
-      "word": "đồng.",
-      "start_ms": 6140,
-      "end_ms": 6320
+      "word": "đồng",
+      "start_ms": 5260,
+      "end_ms": 5400
+    },
+    {
+      "word": "tai",
+      "start_ms": 5400,
+      "end_ms": 5540
+    },
+    {
+      "word": "sản",
+      "start_ms": 5540,
+      "end_ms": 5680
+    },
+    {
+      "word": "thực",
+      "start_ms": 5680,
+      "end_ms": 5800
+    },
+    {
+      "word": "tế.",
+      "start_ms": 5800,
+      "end_ms": 6060
     }
   ]
 }

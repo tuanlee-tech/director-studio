@@ -1,12 +1,12 @@
 {
   "channel": "tien-thuc-chien",
   "video_slug": "lam-phat-loi-song-luong-tang-tien-mat",
-  "timestamp": "2026-10-31 13:32:54",
+  "timestamp": "2026-10-31 15:20:23",
   "passed": true,
   "total_checks": 7,
   "passed_checks": 7,
   "failed_checks": 0,
-  "warning_checks": 1,
+  "warning_checks": 2,
   "checks": [
     {
       "category": "Assets",
@@ -20,7 +20,7 @@
       "category": "Naming",
       "name": "File Naming & Anti-Alias Standardization",
       "passed": true,
-      "details": "100% File trong assets/ (76 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
+      "details": "100% File trong assets/ (125 files) tuân thủ nghiêm ngặt chuẩn Sxxx-A_Xs_TYPE.ext",
       "errors": [],
       "warnings": []
     },
@@ -60,10 +60,11 @@
       "category": "Vision QA",
       "name": "Visual Concept Alignment & Anatomy Integrity",
       "passed": true,
-      "details": "100% Phân cảnh (76 assets) khớp ngữ cảnh thị giác Visual Concept & giải phẫu học",
+      "details": "100% Phân cảnh (118 assets) khớp ngữ cảnh thị giác Visual Concept & giải phẫu học",
       "errors": [],
       "warnings": [
-        "Cảnh S081 hiện là file ảnh tĩnh S081-A_7s_IMG.png. Khuyến nghị nâng cấp lên AIV để loại bỏ hoàn toàn dị tật tay đứt lìa."
+        "Cảnh S081 hiện là file ảnh tĩnh S081-A_7s_IMG.png. Khuyến nghị nâng cấp lên AIV để loại bỏ hoàn toàn dị tật tay đứt lìa.",
+        "Cảnh S081 hiện là file ảnh tĩnh S081-A_8s_IMG.png. Khuyến nghị nâng cấp lên AIV để loại bỏ hoàn toàn dị tật tay đứt lìa."
       ]
     }
   ],
@@ -75,8 +76,8 @@
     "img_count": 69,
     "gfx_count": 81,
     "verified_assets_count": 76,
-    "valid_media_files": 76,
+    "valid_media_files": 125,
     "audio_valid_scenes": 157,
-    "vision_qa_verified_assets": 76
+    "vision_qa_verified_assets": 118
   }
 }

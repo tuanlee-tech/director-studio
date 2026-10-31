@@ -6,134 +6,134 @@
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Thực",
+      "word": "Hầu",
       "start_ms": 0,
       "end_ms": 200
     },
     {
-      "word": "tế",
+      "word": "hết",
       "start_ms": 200,
       "end_ms": 300
     },
     {
-      "word": "vũ",
+      "word": "mọi",
       "start_ms": 300,
-      "end_ms": 480
-    },
-    {
-      "word": "phăng",
-      "start_ms": 480,
-      "end_ms": 640
-    },
-    {
-      "word": "là",
-      "start_ms": 640,
-      "end_ms": 860
+      "end_ms": 500
     },
     {
       "word": "người",
-      "start_ms": 860,
-      "end_ms": 1080
+      "start_ms": 500,
+      "end_ms": 700
     },
     {
-      "word": "khác",
-      "start_ms": 1080,
+      "word": "chi",
+      "start_ms": 700,
+      "end_ms": 840
+    },
+    {
+      "word": "tiền",
+      "start_ms": 840,
+      "end_ms": 1120
+    },
+    {
+      "word": "mua",
+      "start_ms": 1120,
       "end_ms": 1320
     },
     {
-      "word": "chỉ",
+      "word": "đồ",
       "start_ms": 1320,
-      "end_ms": 1540
+      "end_ms": 1380
     },
     {
-      "word": "quan",
-      "start_ms": 1540,
-      "end_ms": 1700
+      "word": "đắt",
+      "start_ms": 1380,
+      "end_ms": 1560
     },
     {
-      "word": "tâm",
-      "start_ms": 1700,
-      "end_ms": 1900
-    },
-    {
-      "word": "đến",
-      "start_ms": 1900,
-      "end_ms": 2040
-    },
-    {
-      "word": "những",
-      "start_ms": 2040,
-      "end_ms": 2220
-    },
-    {
-      "word": "gì",
-      "start_ms": 2220,
-      "end_ms": 2360
-    },
-    {
-      "word": "bạn",
-      "start_ms": 2360,
-      "end_ms": 2540
+      "word": "đỏ,",
+      "start_ms": 1560,
+      "end_ms": 1820
     },
     {
       "word": "chỉ",
-      "start_ms": 2540,
-      "end_ms": 2780
+      "start_ms": 2180,
+      "end_ms": 2280
     },
     {
-      "word": "tiêu",
-      "start_ms": 2780,
-      "end_ms": 3060
+      "word": "vì",
+      "start_ms": 2280,
+      "end_ms": 2400
     },
     {
-      "word": "trong",
-      "start_ms": 3060,
-      "end_ms": 3200
+      "word": "muốn",
+      "start_ms": 2400,
+      "end_ms": 2580
     },
     {
-      "word": "vài",
-      "start_ms": 3200,
-      "end_ms": 3460
+      "word": "nhận",
+      "start_ms": 2580,
+      "end_ms": 2800
     },
     {
-      "word": "dây,",
-      "start_ms": 3460,
-      "end_ms": 3660
+      "word": "được",
+      "start_ms": 2800,
+      "end_ms": 2940
     },
     {
-      "word": "rồi",
-      "start_ms": 4100,
-      "end_ms": 4200
+      "word": "sự",
+      "start_ms": 2940,
+      "end_ms": 3120
     },
     {
-      "word": "họ",
-      "start_ms": 4200,
-      "end_ms": 4360
+      "word": "ngưỡng",
+      "start_ms": 3120,
+      "end_ms": 3380
     },
     {
-      "word": "sẽ",
-      "start_ms": 4360,
+      "word": "mộ",
+      "start_ms": 3380,
+      "end_ms": 3520
+    },
+    {
+      "word": "và",
+      "start_ms": 3520,
+      "end_ms": 3820
+    },
+    {
+      "word": "công",
+      "start_ms": 3820,
+      "end_ms": 4000
+    },
+    {
+      "word": "nhận",
+      "start_ms": 4000,
+      "end_ms": 4240
+    },
+    {
+      "word": "từ",
+      "start_ms": 4240,
       "end_ms": 4520
     },
     {
-      "word": "quên",
+      "word": "những",
       "start_ms": 4520,
-      "end_ms": 4760
+      "end_ms": 4620
     },
     {
-      "word": "nghe",
-      "start_ms": 4760,
-      "end_ms": 4920
+      "word": "người",
+      "start_ms": 4620,
+      "end_ms": 4800
     },
     {
-      "word": "lập",
-      "start_ms": 4920,
-      "end_ms": 5060
+      "word": "xuân",
+      "start_ms": 4800,
+      "end_ms": 5000
     },
     {
-      "word": "tức.",
-      "start_ms": 5060,
-      "end_ms": 5240
+      "word": "quanh.",
+      "start_ms": 5000,
+      "end_ms": 5300
     }
   ]
 }

@@ -180,9 +180,10 @@ def main():
             prog_match = progress_pattern.search(line_str)
             if prog_match:
                 curr, total = int(prog_match.group(1)), int(prog_match.group(2))
-                pct = int((curr / total) * 100) if total > 0 else 0
-                bar = "█" * (pct // 5) + "░" * (20 - (pct // 5))
-                print(f"\r  [{bar}] {pct}% ({curr}/{total} frames) ", end="", flush=True)
+                if curr % 50 == 0 or curr == total:
+                    pct = int((curr / total) * 100) if total > 0 else 0
+                    bar = "█" * (pct // 5) + "░" * (20 - (pct // 5))
+                    print(f"\r  [{bar}] {pct}% ({curr}/{total} frames) ", end="", flush=True)
             elif "Rendered" in line_str or ("Bundling" in line_str and "%" in line_str):
                 pass
             else:

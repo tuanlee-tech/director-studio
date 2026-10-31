@@ -1,119 +1,154 @@
 {
   "audio_file": "S052_narration.wav",
-  "duration_ms": 5040,
-  "word_count": 22,
+  "duration_ms": 6240,
+  "word_count": 29,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
       "word": "Khi",
       "start_ms": 0,
-      "end_ms": 200
+      "end_ms": 180
     },
     {
       "word": "bạn",
-      "start_ms": 200,
-      "end_ms": 320
+      "start_ms": 180,
+      "end_ms": 300
     },
     {
       "word": "truyền",
-      "start_ms": 320,
-      "end_ms": 580
+      "start_ms": 300,
+      "end_ms": 540
     },
     {
       "word": "từ",
-      "start_ms": 580,
-      "end_ms": 720
+      "start_ms": 540,
+      "end_ms": 640
     },
     {
       "word": "phòng",
-      "start_ms": 720,
-      "end_ms": 960
+      "start_ms": 640,
+      "end_ms": 860
     },
     {
-      "word": "trọng",
-      "start_ms": 960,
-      "end_ms": 1300
+      "word": "trọ",
+      "start_ms": 860,
+      "end_ms": 1040
     },
     {
-      "word": "sang",
-      "start_ms": 1300,
-      "end_ms": 1400
+      "word": "sáng",
+      "start_ms": 1040,
+      "end_ms": 1280
     },
     {
-      "word": "trung",
-      "start_ms": 1400,
-      "end_ms": 1640
+      "word": "căn",
+      "start_ms": 1280,
+      "end_ms": 1480
     },
     {
-      "word": "cư",
-      "start_ms": 1640,
-      "end_ms": 1860
+      "word": "hộ",
+      "start_ms": 1480,
+      "end_ms": 1540
+    },
+    {
+      "word": "Trung",
+      "start_ms": 1540,
+      "end_ms": 1700
+    },
+    {
+      "word": "Cư",
+      "start_ms": 1700,
+      "end_ms": 1980
     },
     {
       "word": "6",
-      "start_ms": 1860,
-      "end_ms": 2080
+      "start_ms": 1980,
+      "end_ms": 2180
     },
     {
-      "word": "chiệu,",
-      "start_ms": 2080,
-      "end_ms": 2460
+      "word": "triệu",
+      "start_ms": 2180,
+      "end_ms": 2420
     },
     {
-      "word": "tôi",
-      "start_ms": 2900,
-      "end_ms": 3020
-    },
-    {
-      "word": "đầu",
-      "start_ms": 3020,
-      "end_ms": 3120
-    },
-    {
-      "word": "tiên",
-      "start_ms": 3120,
-      "end_ms": 3340
-    },
-    {
-      "word": "bạn",
-      "start_ms": 3340,
-      "end_ms": 3460
-    },
-    {
-      "word": "cảm",
-      "start_ms": 3460,
-      "end_ms": 3640
-    },
-    {
-      "word": "thấy",
-      "start_ms": 3640,
-      "end_ms": 3840
-    },
-    {
-      "word": "ngập",
-      "start_ms": 3840,
-      "end_ms": 4120
-    },
-    {
-      "word": "tràn",
-      "start_ms": 4120,
-      "end_ms": 4340
+      "word": "đồng,",
+      "start_ms": 2420,
+      "end_ms": 2640
     },
     {
       "word": "trong",
-      "start_ms": 4340,
-      "end_ms": 4500
+      "start_ms": 3040,
+      "end_ms": 3240
     },
     {
-      "word": "hạnh",
-      "start_ms": 4500,
-      "end_ms": 4640
+      "word": "tồn",
+      "start_ms": 3240,
+      "end_ms": 3480
     },
     {
-      "word": "phúc.",
-      "start_ms": 4640,
-      "end_ms": 4880
+      "word": "đầu",
+      "start_ms": 3480,
+      "end_ms": 3520
+    },
+    {
+      "word": "tiên",
+      "start_ms": 3520,
+      "end_ms": 3820
+    },
+    {
+      "word": "bạn",
+      "start_ms": 3820,
+      "end_ms": 3980
+    },
+    {
+      "word": "cảm",
+      "start_ms": 3980,
+      "end_ms": 4180
+    },
+    {
+      "word": "thấy",
+      "start_ms": 4180,
+      "end_ms": 4380
+    },
+    {
+      "word": "chàng",
+      "start_ms": 4380,
+      "end_ms": 4700
+    },
+    {
+      "word": "nắp",
+      "start_ms": 4700,
+      "end_ms": 4920
+    },
+    {
+      "word": "xe",
+      "start_ms": 4920,
+      "end_ms": 5020
+    },
+    {
+      "word": "ứng",
+      "start_ms": 5020,
+      "end_ms": 5260
+    },
+    {
+      "word": "khởi",
+      "start_ms": 5260,
+      "end_ms": 5540
+    },
+    {
+      "word": "và",
+      "start_ms": 5540,
+      "end_ms": 5680
+    },
+    {
+      "word": "mãn",
+      "start_ms": 5680,
+      "end_ms": 5880
+    },
+    {
+      "word": "nguyện.",
+      "start_ms": 5880,
+      "end_ms": 6080
     }
   ]
 }

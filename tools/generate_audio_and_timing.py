@@ -145,11 +145,12 @@ def create_master_narration(scenes):
         sid = s["scene_id"]
         wav_file = AUDIO_DIR / f"{sid}_narration.wav"
         dur_ms = get_audio_duration_ms(wav_file)
-        # Pad duration to whole frames (at least duration of wav + 2 frames cushion)
-        frames = max(int(round(dur_ms / 1000.0 * FPS)), 1)
-        # For AIV scenes, duration is fixed to est_duration * FPS
+        # Pad duration to whole frames (duration of wav + 6 frames cushion = 0.2s)
         if s["type"] == "AIV":
             frames = s["est_duration"] * FPS
+        else:
+            audio_frames = int(round(dur_ms / 1000.0 * FPS))
+            frames = max(audio_frames + 6, s.get("est_duration", 8) * FPS if audio_frames == 0 else audio_frames + 6)
         scene_durations.append((s, frames, dur_ms))
         total_frames += frames
 

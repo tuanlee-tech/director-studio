@@ -1,109 +1,144 @@
 {
   "audio_file": "S050_narration.wav",
-  "duration_ms": 4000,
-  "word_count": 20,
+  "duration_ms": 5600,
+  "word_count": 27,
   "model": "base",
   "engine": "faster-whisper",
   "words": [
     {
-      "word": "Cô",
+      "word": "Người",
       "start_ms": 0,
-      "end_ms": 180
+      "end_ms": 240
     },
     {
-      "word": "cho",
-      "start_ms": 180,
-      "end_ms": 280
-    },
-    {
-      "word": "lời",
-      "start_ms": 280,
-      "end_ms": 440
+      "word": "nhân",
+      "start_ms": 240,
+      "end_ms": 400
     },
     {
       "word": "nằm",
-      "start_ms": 440,
-      "end_ms": 700
+      "start_ms": 400,
+      "end_ms": 600
     },
     {
       "word": "ở",
-      "start_ms": 700,
+      "start_ms": 600,
+      "end_ms": 640
+    },
+    {
+      "word": "một",
+      "start_ms": 640,
       "end_ms": 760
     },
     {
-      "word": "hiện",
+      "word": "thiện",
       "start_ms": 760,
-      "end_ms": 880
+      "end_ms": 900
     },
     {
       "word": "tượng",
-      "start_ms": 880,
-      "end_ms": 1080
+      "start_ms": 900,
+      "end_ms": 1100
     },
     {
       "word": "tâm",
-      "start_ms": 1080,
-      "end_ms": 1300
+      "start_ms": 1100,
+      "end_ms": 1340
     },
     {
-      "word": "lý",
-      "start_ms": 1300,
-      "end_ms": 1420
+      "word": "lĩa",
+      "start_ms": 1340,
+      "end_ms": 1480
     },
     {
       "word": "học",
-      "start_ms": 1420,
-      "end_ms": 1520
+      "start_ms": 1480,
+      "end_ms": 1640
     },
     {
-      "word": "ping",
-      "start_ms": 1520,
-      "end_ms": 1740
+      "word": "hành",
+      "start_ms": 1640,
+      "end_ms": 1760
     },
     {
-      "word": "diện",
-      "start_ms": 1740,
+      "word": "vi",
+      "start_ms": 1760,
       "end_ms": 1960
     },
     {
-      "word": "mang",
+      "word": "vô",
       "start_ms": 1960,
-      "end_ms": 2440
+      "end_ms": 2240
+    },
+    {
+      "word": "cùng",
+      "start_ms": 2240,
+      "end_ms": 2380
+    },
+    {
+      "word": "nổi",
+      "start_ms": 2380,
+      "end_ms": 2600
+    },
+    {
+      "word": "tiếng,",
+      "start_ms": 2600,
+      "end_ms": 3000
+    },
+    {
+      "word": "mang",
+      "start_ms": 3400,
+      "end_ms": 3520
     },
     {
       "word": "tên",
-      "start_ms": 2440,
-      "end_ms": 2680
+      "start_ms": 3520,
+      "end_ms": 3740
     },
     {
-      "word": "cô",
-      "start_ms": 2680,
-      "end_ms": 2840
+      "word": "có",
+      "start_ms": 3740,
+      "end_ms": 3960
     },
     {
       "word": "máy",
-      "start_ms": 2840,
-      "end_ms": 3040
+      "start_ms": 3960,
+      "end_ms": 4200
     },
     {
       "word": "thích",
-      "start_ms": 3040,
-      "end_ms": 3180
+      "start_ms": 4200,
+      "end_ms": 4420
     },
     {
-      "word": "nghỉ",
-      "start_ms": 3180,
-      "end_ms": 3380
+      "word": "nghi",
+      "start_ms": 4420,
+      "end_ms": 4520
     },
     {
-      "word": "khóa",
-      "start_ms": 3380,
-      "end_ms": 3540
+      "word": "khoái",
+      "start_ms": 4520,
+      "end_ms": 4740
     },
     {
-      "word": "lạc.",
-      "start_ms": 3540,
-      "end_ms": 3840
+      "word": "lạc",
+      "start_ms": 4740,
+      "end_ms": 4940
+    },
+    {
+      "word": "của",
+      "start_ms": 4940,
+      "end_ms": 5040
+    },
+    {
+      "word": "con",
+      "start_ms": 5040,
+      "end_ms": 5200
+    },
+    {
+      "word": "người.",
+      "start_ms": 5200,
+      "end_ms": 5380
     }
   ]
 }
